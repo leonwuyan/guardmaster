@@ -1,3 +1,4 @@
+from django.utils.translation import ugettext_lazy as _
 from django.db import models, connections
 from django.contrib.auth.models import Group
 from django.shortcuts import get_object_or_404
@@ -48,8 +49,8 @@ class UIMainMenu(models.Model):
 class UISubMenu(models.Model):
     # CATEGORY_LIST is related with views(views.py)
     CATEGORY_LIST = {
-        ('detection:count', 'count'),
-        ('detection:query', 'query'),
+        ('detection:count', _('count')),
+        ('detection:query', _('query')),
     }
     label = models.CharField(max_length=45)
     main_menu = models.ForeignKey(UIMainMenu, blank=True, null=True)
@@ -59,6 +60,7 @@ class UISubMenu(models.Model):
         max_length=45,
         blank=True,
         null=True,
+        help_text=_('Category is required when Main menu is selected'),
         choices=CATEGORY_LIST)
     seqid = models.IntegerField()
 
@@ -92,14 +94,14 @@ class UISubMenu(models.Model):
 class UIColMap(models.Model):
     # COL_TYPE_LIST is related with ValueFormat(value_format.py)
     COL_TYPE_LIST = {
-        ('date', 'date'),
-        ('time', 'time'),
-        ('timestamp_to_date', 'timestamp_to_date'),
-        ('timestamp_to_time', 'timestamp_to_time'),
-        ('float_two', 'float_two'),
-        ('ratio_two', 'ratio_two'),
-        ('channel_list', 'channel_list'),
-        ('zone_list', 'zone_list'),
+        ('date', _('date')),
+        ('time', _('time')),
+        ('timestamp_to_date', _('timestamp to date')),
+        ('timestamp_to_time', _('timestamp to time')),
+        ('float_two', _('float two')),
+        ('ratio_two', _('ratio two')),
+        ('channel_list', _('channel list')),
+        ('zone_list', _('zone list')),
     }
     label = models.CharField(max_length=45)
     sub_menu = models.ForeignKey(UISubMenu)
@@ -139,12 +141,12 @@ class Tabel(object):
     def select_unsafe(self, sub_menu, panel, condition=None):
         cursor = connections[panel.db_aliases].cursor()
         if condition:
-            select_map = sub_menu.get_select_map()
-            select_map['condition'] = condition
-            sql = "SELECT %(cols)s FROM %(table_name)s WHERE %(condition)s" % select_map
+            s = sub_menu.get_select_map()
+            s['condition'] = condition
+            sql = "SELECT %(cols)s FROM %(table_name)s WHERE %(condition)s" % s
         else:
-            select_map = sub_menu.get_select_map()
-            sql = "SELECT %(cols)s FROM %(table_name)s" % select_map
+            s = sub_menu.get_select_map()
+            sql = "SELECT %(cols)s FROM %(table_name)s" % s
         print 'SQL :', sql
         cursor.execute(sql)
         return cursor.fetchall()
