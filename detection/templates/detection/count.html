@@ -1,0 +1,69 @@
+{% extends "detection/base.html" %}
+{% block content %}
+<script type="text/javascript">
+ $(document).ready(function() {
+   $('.input-daterange').datepicker({
+     format: "yyyy-mm-dd",
+     weekStart: 0,
+     language: "zh-CN",
+     autoclose: true,
+     todayHighlight: true
+   });
+ });
+</script>
+<div class="container-fluid white-bg">
+  <div class="row">
+    <!--<h1 class="page-header"></h1>-->
+
+    <form class="form" role="form">
+      <div class="form-group" style="margin-bottom:5px">
+	<label>时间范围</label>
+	<div class="input-daterange input-group" id="datepicker">
+	  <input type="text" class="input-md form-control" name="start">
+	  <span class="input-group-addon">至</span>
+	  <input type="text" class="input-md form-control" name="end">
+	</div>
+      </div>
+      
+      <div class="form-group" style="margin-bottom:5px">
+	<label>区服</label>
+	<ul class="nav nav-pills" role="tablist" id="zone-list">
+	  {% for zone in zones %}
+	  <li role="presentation" id="zone-{{zone.ZoneID}}" value="{{zone.ZoneID}}"><a href="javascript:queryButton.active('#zone-{{zone.ZoneID}}')" style="padding: 5px 8px;">{{zone.ZoneNm}}</a></li>
+	  {% endfor %}
+	</ul>
+      </div>
+      
+      <div class="form-group" style="margin-bottom:5px">
+	<label>渠道</label>
+	<ul class="nav nav-pills" role="tablist" id="channel-list">
+	  {% for channel in channels %}
+	  <li role="presentation" id="channel-{{channel.ChannelID}}" value="{{channel.ChannelID}}"><a href="javascript:queryButton.active('#channel-{{channel.ChannelID}}')" style="padding: 5px 8px;">{{channel.ChNm}}</a></li>
+	  {% endfor %}
+	</ul>
+      </div>
+      
+      <button type="submit" class="btn btn-default btn-sm" onclick="return dataAccess.getJSON()">查询</button>
+    </form>
+    
+    <p class="sub-header"></p>
+    <div class="table-responsive">
+      <table class="table table-bordered table-striped" id="sources">
+	<thead>
+	  <tr>
+	    {% for table in table_head %}
+	    <th>{{table.label}}</th>
+	    {% endfor %}
+	  </tr>
+	</thead>
+      </table>
+    </div>
+  </div>
+  <center style='color: #999; padding-top: 20px; font-family: "arial","NSimSun","SimSun","STSong","AR PL SungtiL GB","TW\-Sung","WenQuanYi Bitmap Song"; font-size: 14px; font-weight: bold;'>{{excuse}}</center>
+</div>
+<script type="text/javascript">
+ $(document).ready(function() {
+   queryButton.initDate();
+ });
+</script>
+{% endblock %}

@@ -1,0 +1,80 @@
+<!DOCTYPE HTML>
+{% load staticfiles %}
+<html>
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <title>{{title|default:"苍翼之刃运维平台"}}</title>
+        <!-- scripts and styles -->
+        <link rel="stylesheet" type="text/css" href="{% static 'detection/css/bootstrap.min.css' %}" />
+        <link rel="stylesheet" type="text/css" href="{% static 'detection/css/bootstrap-theme.min.css' %}" />
+        <link rel="stylesheet" type="text/css" href="{% static 'detection/css/datepicker3.min.css' %}" />
+        <link rel="stylesheet" type="text/css" href="{% static 'detection/css/dataTables.bootstrap.css' %}" />
+        <link rel="stylesheet" type="text/css" href="{% static 'detection/css/dataTables.tableTools.css' %}" />
+        <link rel="stylesheet" type="text/css" href="{% static 'detection/css/bootstrap-datetimepicker.min.css' %}" />
+        <link rel="stylesheet" type="text/css" href="{% static 'detection/css/jquery.fileupload.css' %}" />
+        <link rel="stylesheet" type="text/css" href="{% static 'detection/css/font-awesome.min.css' %}" />
+        <link rel="stylesheet" type="text/css" href="{% static 'detection/css/templatemo_style.css' %}" />
+      
+        <script type="text/javascript"  src="{% static 'detection/js/jquery-2.0.3.min.js' %}"></script>  
+        <script type="text/javascript"  src="{% static 'detection/js/bootstrap.min.js' %}"></script>
+        <script type="text/javascript"  src="{% static 'detection/js/bootstrap-datepicker.min.js' %}"></script>
+        <script type="text/javascript"  src="{% static 'detection/js/bootstrap-datepicker.zh-CN.min.js' %}"></script>
+        <script type="text/javascript"  src="{% static 'detection/js/jquery.dataTables.min.js' %}"></script>
+        <script type="text/javascript"  src="{% static 'detection/js/dataTables.bootstrap.js' %}"></script>
+        <script type="text/javascript"  src="{% static 'detection/js/dataTables.tableTools.min.js' %}"></script>
+        <script type="text/javascript"  src="{% static 'detection/js/emoji.js' %}"></script>
+        <script type="text/javascript"  src="{% static 'detection/js/bootstrap-datetimepicker.min.js' %}"></script>
+        <script type="text/javascript"  src="{% static 'detection/js/bootstrap-datetimepicker.zh-CN.js' %}"></script>
+        <script type="text/javascript"  src="{% static 'detection/js/vendor/jquery.ui.widget.js' %}"></script>
+        <script type="text/javascript"  src="{% static 'detection/js/jquery.iframe-transport.js' %}"></script>
+        <script type="text/javascript"  src="{% static 'detection/js/jquery.fileupload.js' %}"></script>
+        <script type="text/javascript"  src="{% static 'detection/js/data.js' %}"></script>
+    </head>
+    <body class="templatemo-bg-image-2">
+        <div class="container-fluid">
+        {% if panel %}
+        <nav class="navbar navbar-default" role="navigation">
+            <div class="container-fluid">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="{{servlet}}/" title="点击这里，切换面板">{{panel.label|default:"苍翼之刃运维平台"}}</a>
+            </div>
+            <div class="navbar-collapse collapse">
+                <ul class="nav navbar-nav">
+                    {% for menu in menus %}
+                    <li class="dropdown">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">{{menu.label}} <span class="caret"></span></a>
+                    <ul class="dropdown-menu" role="menu">
+                        {% for sub in menu.sub_menu %}
+                        <li {% ifequal page sub.url %} class="active"{%endifequal%}><a href="{% url sub.category panel.id sub.url %}">{{sub.label}}</a></li>
+                        {% endfor %}
+                    </ul>
+                    </li>
+                    {% endfor %}
+                </ul>
+                <div class="btn-group pull-right">
+                <ul class="nav navbar-nav">
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="icon-user"></i>{{user}} <b class="caret"></b></a>
+                        <ul class="dropdown-menu">
+                            <!--<li><a href="{{servlet}}/profile">Profile</a></li>
+                            <li class="divider"></li>-->
+                            <li><a href="{% url 'user_logout' %}">Sign Out</a></li>
+                        </ul>
+                    </li>
+                </ul>
+                </div>
+            </div>
+            </div>
+        </nav>
+        {% endif %}
+        {% block content %}
+        {% endblock %}
+        </div>
+    </body>
+</html>

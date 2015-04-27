@@ -1,0 +1,67 @@
+{% extends "detection/base.html" %}
+{% block content %}
+<div class="container">
+  {% if user.is_authenticated %}
+    <div class="col-md-12">
+    <form class="form-horizontal templatemo-login-form-2" role="form">
+      <div class="row">
+    <div class="col-md-12">
+      <h1>{{title|default:"苍翼之刃运维平台"}}</h1>
+    </div>
+      </div>
+      <div class="row">
+    <div class="col-md-12">
+      {% for panel in panels %}
+      <div class="form-group">
+        <div class="col-md-12">
+        <a href="{% url 'detection:count' panel.id 'total' %}">
+          <input type="button" value="{{panel.label}}" class="btn btn-primary">
+        </a>
+        </div>
+      </div>
+      {% endfor %}
+    </div>
+      </div>
+    </form>
+  </div>
+  {% else %}
+  <div class="col-md-12">
+    <form class="form-horizontal templatemo-login-form-2" role="form" action="{% url 'user_login' %}" method="post">
+      {% csrf_token %}
+      <div class="row">
+	   <div class="col-md-12">
+	     <h1>{{title|default:"苍翼之刃运维平台"}}</h1>
+	   </div>
+      </div>
+      <div class="row">
+	<div class="col-md-12">
+	  <div class="form-group">
+	    <div class="col-md-12">
+	      <label for="username" class="control-label">User ID</label>
+	      <div class="templatemo-input-icon-container">
+		<i class="fa fa-user"></i>
+		<input type="text" class="form-control" id="username" name="username" placeholder="username"/>
+	      </div>
+	    </div>
+	  </div>
+	  <div class="form-group">
+	    <div class="col-md-12">
+	      <label for="password" class="control-label">Password</label>
+	      <div class="templatemo-input-icon-container">
+		<i class="fa fa-lock"></i>
+		<input type="password" class="form-control" id="password" name="password" placeholder="password"/>
+	      </div>
+	    </div>
+	  </div>
+	  <div class="form-group">
+	    <div class="col-md-12">
+	      <input type="submit" value="Login" class="btn btn-warning">
+	    </div>
+	  </div>
+	</div>
+      </div>
+    </form>
+  </div>
+  {% endif %}
+</div>
+{% endblock %}
