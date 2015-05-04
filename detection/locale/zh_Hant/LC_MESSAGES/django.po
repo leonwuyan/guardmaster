@@ -1,0 +1,95 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2015-05-04 15:16+0800\n"
+"PO-Revision-Date: 2015-05-04 15:16+0800\n"
+"Last-Translator: Raynor <raynor41@gmail.com>\n"
+"Language-Team: \n"
+"Language: zh_TW\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"X-Generator: Poedit 1.7.6\n"
+
+#: models.py:52
+msgid "count"
+msgstr "統計頁面"
+
+#: models.py:53
+msgid "query"
+msgstr "查詢頁面"
+
+#: models.py:63
+msgid "Category is required when Main menu is selected"
+msgstr "Main menu選擇時，Category必須選擇"
+
+#: models.py:97
+msgid "date"
+msgstr "日期"
+
+#: models.py:98
+msgid "time"
+msgstr "時間"
+
+#: models.py:99
+msgid "timestamp to date"
+msgstr "時間戳轉換日期"
+
+#: models.py:100
+msgid "timestamp to time"
+msgstr "時間戳轉換時間"
+
+#: models.py:101
+msgid "float two"
+msgstr "保留兩位小數"
+
+#: models.py:102
+msgid "ratio two"
+msgstr "保留兩位小數的百分比"
+
+#: models.py:103
+msgid "channel list"
+msgstr "渠道列表"
+
+#: models.py:104
+msgid "zone list"
+msgstr "區服列表"
+
+#: templates/detection/base.html:4
+msgid "BlazBlue Revolution Reburning GuardMaster Workbench"
+msgstr "蒼翼默示錄運維平台"
+
+#: templates/detection/base.html:5
+msgid "Range of Date"
+msgstr "日期範圍"
+
+#: templates/detection/base.html:6
+msgid "TO"
+msgstr "至"
+
+#: templates/detection/base.html:7
+msgid "Zone"
+msgstr "區服"
+
+#: templates/detection/base.html:8
+msgid "Channel"
+msgstr "渠道"
+
+#: templates/detection/base.html:9
+msgid "Query"
+msgstr "查詢"
+
+#: templates/detection/base.html:10
+msgid "Sign Out"
+msgstr "註銷"
+
+#: templates/detection/base.html:11
+msgid "Translate"
+msgstr "翻譯"

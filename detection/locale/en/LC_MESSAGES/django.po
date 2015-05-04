@@ -1,0 +1,94 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2015-05-04 16:07+0800\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: models.py:52
+msgid "count"
+msgstr ""
+
+#: models.py:53
+msgid "query"
+msgstr ""
+
+#: models.py:63
+msgid "Category is required when Main menu is selected"
+msgstr ""
+
+#: models.py:97
+msgid "date"
+msgstr ""
+
+#: models.py:98
+msgid "time"
+msgstr ""
+
+#: models.py:99
+msgid "timestamp to date"
+msgstr ""
+
+#: models.py:100
+msgid "timestamp to time"
+msgstr ""
+
+#: models.py:101
+msgid "float two"
+msgstr ""
+
+#: models.py:102
+msgid "ratio two"
+msgstr ""
+
+#: models.py:103
+msgid "channel list"
+msgstr ""
+
+#: models.py:104
+msgid "zone list"
+msgstr ""
+
+#: templates/detection/base.html:4
+msgid "BlazBlue Revolution Reburning GuardMaster Workbench"
+msgstr ""
+
+#: templates/detection/base.html:5
+msgid "Range of Date"
+msgstr ""
+
+#: templates/detection/base.html:6
+msgid "TO"
+msgstr ""
+
+#: templates/detection/base.html:7
+msgid "Zone"
+msgstr ""
+
+#: templates/detection/base.html:8
+msgid "Channel"
+msgstr ""
+
+#: templates/detection/base.html:9
+msgid "Query"
+msgstr ""
+
+#: templates/detection/base.html:10
+msgid "Sign Out"
+msgstr ""
+
+#: templates/detection/base.html:11
+msgid "Translate"
+msgstr ""

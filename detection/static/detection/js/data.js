@@ -44,7 +44,7 @@
   	  'aButtons': [ 'csv']
   	},
   	'language': {
-  	  'url': '/static/detection/js/language.json',
+  	  'url': '/static/detection/js/i18n/dataTables.'+gettext('en')+'.json',
   	},
   	'ajax': {
   	  'url': _askData + '.json',
@@ -224,7 +224,7 @@
 		break;
 	    }
           }
-	});	
+	});
       } else {
 	console.log(cannelstr);
       }
@@ -253,7 +253,7 @@
       }
       _queryButton.active('ul#zone-list li:first');
       _queryButton.active('ul#channel-list li:first');
-      $('button[type="submit"]').click();
+      $('#count-button').click();
     }
   };
   var _management = {

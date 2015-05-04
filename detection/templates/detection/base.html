@@ -1,10 +1,19 @@
 <!DOCTYPE HTML>
 {% load staticfiles %}
+{% load i18n %}
+{% trans "BlazBlue Revolution Reburning GuardMaster Workbench" as title_default %}
+{% trans "Range of Date" as range_of_date %}
+{% trans "TO" as trans_to %}
+{% trans "Zone" as trans_zone %}
+{% trans "Channel" as trans_channel %}
+{% trans "Query" as trans_query %}
+{% trans "Sign Out" as trans_sign_out %}
+{% trans "Translate" as trans_translate %}
 <html>
     <head>
         <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-        <title>{{title|default:"苍翼之刃运维平台"}}</title>
+        <title>{{title|default:title_default}}</title>
         <!-- scripts and styles -->
         <link rel="stylesheet" type="text/css" href="{% static 'detection/css/bootstrap.min.css' %}" />
         <link rel="stylesheet" type="text/css" href="{% static 'detection/css/bootstrap-theme.min.css' %}" />
@@ -15,11 +24,12 @@
         <link rel="stylesheet" type="text/css" href="{% static 'detection/css/jquery.fileupload.css' %}" />
         <link rel="stylesheet" type="text/css" href="{% static 'detection/css/font-awesome.min.css' %}" />
         <link rel="stylesheet" type="text/css" href="{% static 'detection/css/templatemo_style.css' %}" />
-      
-        <script type="text/javascript"  src="{% static 'detection/js/jquery-2.0.3.min.js' %}"></script>  
+        <script type="text/javascript" src="{% url 'django.views.i18n.javascript_catalog' %}"></script>
+        <script type="text/javascript"  src="{% static 'detection/js/jquery-2.0.3.min.js' %}"></script>
         <script type="text/javascript"  src="{% static 'detection/js/bootstrap.min.js' %}"></script>
         <script type="text/javascript"  src="{% static 'detection/js/bootstrap-datepicker.min.js' %}"></script>
-        <script type="text/javascript"  src="{% static 'detection/js/bootstrap-datepicker.zh-CN.min.js' %}"></script>
+        <script type="text/javascript"  src="{% static 'detection/js/i18n/bootstrap-datepicker.zh-CN.min.js' %}"></script>
+        <script type="text/javascript"  src="{% static 'detection/js/i18n/bootstrap-datepicker.zh-TW.min.js' %}"></script>
         <script type="text/javascript"  src="{% static 'detection/js/jquery.dataTables.min.js' %}"></script>
         <script type="text/javascript"  src="{% static 'detection/js/dataTables.bootstrap.js' %}"></script>
         <script type="text/javascript"  src="{% static 'detection/js/dataTables.tableTools.min.js' %}"></script>
@@ -42,7 +52,7 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <a class="navbar-brand" href="{{servlet}}/" title="点击这里，切换面板">{{panel.label|default:"苍翼之刃运维平台"}}</a>
+                <a class="navbar-brand" href="{{servlet}}/" title="点击这里，切换面板">{{panel.label|default:title_default}}</a>
             </div>
             <div class="navbar-collapse collapse">
                 <ul class="nav navbar-nav">
@@ -58,13 +68,16 @@
                     {% endfor %}
                 </ul>
                 <div class="btn-group pull-right">
+                {% block i18n %}
+                {% include "detection/i18n.html" %}
+                {% endblock %}
                 <ul class="nav navbar-nav">
                     <li class="dropdown">
                         <a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="icon-user"></i>{{user}} <b class="caret"></b></a>
                         <ul class="dropdown-menu">
                             <!--<li><a href="{{servlet}}/profile">Profile</a></li>
                             <li class="divider"></li>-->
-                            <li><a href="{% url 'user_logout' %}">Sign Out</a></li>
+                            <li><a href="{% url 'user_logout' %}">{{trans_sign_out}}</a></li>
                         </ul>
                     </li>
                 </ul>

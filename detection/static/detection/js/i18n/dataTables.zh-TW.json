@@ -1,0 +1,16 @@
+{
+    "lengthMenu": "每頁顯示 _MENU_ 條記錄",
+    "info": "從第 _START_ 到第 _END_ 條數據/共 _TOTAL_ 條數據",
+    "infoEmpty": "",
+    "infoFiltered": "(從 _MAX_ 條數據中檢索)",
+    "zeroRecords": "沒有檢索到數據",
+    "emptyTable": "沒有檢索到數據",
+    "search": "搜索:",
+    "loadingRecords": "正在加載數據，請耐心等待……",
+    "paginate": {
+        "first": "首頁",
+        "previous": "前一頁",
+        "next": "後一頁",
+        "last": "尾頁"
+    }
+}
