@@ -55,6 +55,8 @@ class ValueFormat(object):
         return x
 
     def _f_v(self, f, v):
+        if f is None:
+            f = ''
         func = getattr(self, '_'+f, self._identity)
         try:
             ret = func(v)
