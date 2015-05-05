@@ -1,0 +1,35 @@
+{% extends "detection/base.html" %}
+{% block content %}
+<div class="container-fluid white-bg">
+  <div class="row">
+    <form role="form" id="queryForm">
+      <div class="form-group" style="margin-bottom:5px">
+      	<label for="g_n">{{trans_gang_name}}</label>
+      	<input type="text" class="form-control" id="g_n" name="g_n">
+      </div>
+      <div class="form-group" style="margin-bottom:5px">
+        <label for="g_l_n">{{trans_gang_leader_name}}</label>
+        <input type="text" class="form-control" id="g_l_n" name="g_l_n">
+      </div>
+      <div class="form-group" style="margin-bottom:5px">
+        <label for="g_i">{{trans_gang_id}}</label>
+        <input type="text" class="form-control" id="g_i" name="g_i">
+      </div>
+      <button type="submit" class="btn btn-default btn-sm" onclick="return dataAccess.queryJSON()">{{trans_query}}</button>
+    </form>
+
+    <p class="sub-header"></p>
+    <div class="table-responsive">
+      <table class="table table-bordered table-striped" id="sources">
+      	<thead>
+      	  <tr>
+            {% for table in table_head %}
+            <th>{{table.label}}</th>
+            {% endfor %}
+      	  </tr>
+      	</thead>
+      </table>
+    </div>
+  </div>
+</div>
+{% endblock %}

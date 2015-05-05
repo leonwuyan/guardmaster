@@ -3,17 +3,21 @@ from . import views, auth_views
 
 urlpatterns = [
     url(
-        r'^(?P<panel_id>[0-9]+)/query/(?P<url>[A-Za-z]+)$',
-        views.query,
-        name='query'),
+        r'^(?P<panel_id>[0-9]+)/user_query/(?P<url>[A-Za-z]+)$',
+        views.user_query,
+        name='user_query'),
     url(
-        r'^(?P<panel_id>[0-9]+)/query/(?P<url>[A-Za-z]+).json$',
-        views.query_json,
-        name='query_json'),
+        r'^(?P<panel_id>[0-9]+)/gang_query/(?P<url>[A-Za-z]+)$',
+        views.gang_query,
+        name='gang_query'),
     url(
-        r'^(?P<panel_id>[0-9]+)/count/(?P<url>[A-Za-z]+).json$',
-        views.count_json,
-        name='count_json'),
+        r'^(?P<panel_id>[0-9]+)/deal_query/(?P<url>[A-Za-z]+)$',
+        views.deal_query,
+        name='deal_query'),
+    url(
+        r'^(?P<panel_id>[0-9]+)/(?P<t_p>[_A-Za-z]+)/(?P<url>[A-Za-z]+).json$',
+        views.json_template,
+        name='json_template'),
     url(
         r'^(?P<panel_id>[0-9]+)/count/(?P<url>[A-Za-z]+)$',
         views.count,

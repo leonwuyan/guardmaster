@@ -1,0 +1,58 @@
+{% extends "detection/base.html" %}
+{% block content %}
+<script type="text/javascript">
+ $(document).ready(function() {
+   $('.input-datepicker').datepicker({
+     format: "yyyy-mm-dd",
+     weekStart: 0,
+     language: gettext('en'),
+     autoclose: true,
+     todayHighlight: true
+   });
+ });
+</script>
+<div class="container-fluid white-bg">
+  <div class="row">
+    <form role="form" id="queryForm">
+      <div class="form-group" style="margin-bottom:5px">
+        <label>{{range_of_date}}</label>
+        <div class="input-daterange input-group input-datepicker" id="datepicker">
+          <input type="text" class="input-md form-control" name="start">
+          <span class="input-group-addon">{{trans_to}}</span>
+          <input type="text" class="input-md form-control" name="end">
+        </div>
+      </div>
+      <div class="form-group" style="margin-bottom:5px">
+        <label>{{range_of_money}}</label>
+        <div class="input-daterange input-group">
+          <input type="text" class="input-md form-control" name="moneys">
+          <span class="input-group-addon">{{trans_to}}</span>
+          <input type="text" class="input-md form-control" name="moneye">
+        </div>
+      </div>
+      <div class="form-group" style="margin-bottom:5px">
+      	<label for="uid">{{trans_player_id}}</label>
+      	<input type="text" class="form-control" id="uin" name="uid">
+      </div>
+      <div class="form-group" style="margin-bottom:5px">
+        <label for="uin">{{trans_user_id}}</label>
+        <input type="text" class="form-control" id="uin" name="uin">
+      </div>
+      <button type="submit" class="btn btn-default btn-sm" onclick="return dataAccess.queryJSON()">{{trans_query}}</button>
+    </form>
+
+    <p class="sub-header"></p>
+    <div class="table-responsive">
+      <table class="table table-bordered table-striped" id="sources">
+      	<thead>
+      	  <tr>
+            {% for table in table_head %}
+            <th>{{table.label}}</th>
+            {% endfor %}
+      	  </tr>
+      	</thead>
+      </table>
+    </div>
+  </div>
+</div>
+{% endblock %}

@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2015-05-04 16:07+0800\n"
+"POT-Creation-Date: 2015-05-05 18:00+0800\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -22,42 +22,50 @@ msgid "count"
 msgstr ""
 
 #: models.py:53
-msgid "query"
+msgid "user_query"
 msgstr ""
 
-#: models.py:63
+#: models.py:54
+msgid "gang_query"
+msgstr ""
+
+#: models.py:55
+msgid "deal_query"
+msgstr ""
+
+#: models.py:65
 msgid "Category is required when Main menu is selected"
 msgstr ""
 
-#: models.py:97
+#: models.py:99
 msgid "date"
 msgstr ""
 
-#: models.py:98
+#: models.py:100
 msgid "time"
 msgstr ""
 
-#: models.py:99
+#: models.py:101
 msgid "timestamp to date"
 msgstr ""
 
-#: models.py:100
+#: models.py:102
 msgid "timestamp to time"
 msgstr ""
 
-#: models.py:101
+#: models.py:103
 msgid "float two"
 msgstr ""
 
-#: models.py:102
+#: models.py:104
 msgid "ratio two"
 msgstr ""
 
-#: models.py:103
+#: models.py:105
 msgid "channel list"
 msgstr ""
 
-#: models.py:104
+#: models.py:106
 msgid "zone list"
 msgstr ""
 
@@ -91,4 +99,32 @@ msgstr ""
 
 #: templates/detection/base.html:11
 msgid "Translate"
+msgstr ""
+
+#: templates/detection/base.html:12
+msgid "Player ID"
+msgstr ""
+
+#: templates/detection/base.html:13
+msgid "Player Name"
+msgstr ""
+
+#: templates/detection/base.html:14
+msgid "User ID"
+msgstr ""
+
+#: templates/detection/base.html:15
+msgid "Gang Name"
+msgstr ""
+
+#: templates/detection/base.html:16
+msgid "Gang Leader Name"
+msgstr ""
+
+#: templates/detection/base.html:17
+msgid "Gang ID"
+msgstr ""
+
+#: templates/detection/base.html:18
+msgid "Range of Money"
 msgstr ""

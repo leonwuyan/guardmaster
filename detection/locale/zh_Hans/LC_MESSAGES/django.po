@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2015-05-04 15:16+0800\n"
-"PO-Revision-Date: 2015-05-04 15:12+0800\n"
+"POT-Creation-Date: 2015-05-05 18:00+0800\n"
+"PO-Revision-Date: 2015-05-05 17:37+0800\n"
 "Last-Translator: Raynor <raynor41@gmail.com>\n"
 "Language-Team: \n"
 "Language: zh_CN\n"
@@ -23,42 +23,50 @@ msgid "count"
 msgstr "统计页面"
 
 #: models.py:53
-msgid "query"
-msgstr "查询页面"
+msgid "user_query"
+msgstr "用户查询页面"
 
-#: models.py:63
+#: models.py:54
+msgid "gang_query"
+msgstr "联盟查询页面"
+
+#: models.py:55
+msgid "deal_query"
+msgstr "充值查询页面"
+
+#: models.py:65
 msgid "Category is required when Main menu is selected"
 msgstr "Main menu选择时，Category必须选择"
 
-#: models.py:97
+#: models.py:99
 msgid "date"
 msgstr "日期"
 
-#: models.py:98
+#: models.py:100
 msgid "time"
 msgstr "时间"
 
-#: models.py:99
+#: models.py:101
 msgid "timestamp to date"
 msgstr "时间戳转换日期"
 
-#: models.py:100
+#: models.py:102
 msgid "timestamp to time"
 msgstr "时间戳转换时间"
 
-#: models.py:101
+#: models.py:103
 msgid "float two"
 msgstr "保留两位小数"
 
-#: models.py:102
+#: models.py:104
 msgid "ratio two"
 msgstr "保留两位小数的百分比"
 
-#: models.py:103
+#: models.py:105
 msgid "channel list"
 msgstr "渠道列表"
 
-#: models.py:104
+#: models.py:106
 msgid "zone list"
 msgstr "区服列表"
 
@@ -93,3 +101,34 @@ msgstr "注销"
 #: templates/detection/base.html:11
 msgid "Translate"
 msgstr "翻译"
+
+#: templates/detection/base.html:12
+msgid "Player ID"
+msgstr "玩家ID"
+
+#: templates/detection/base.html:13
+msgid "Player Name"
+msgstr "玩家名"
+
+#: templates/detection/base.html:14
+msgid "User ID"
+msgstr "用户ID"
+
+#: templates/detection/base.html:15
+msgid "Gang Name"
+msgstr "联盟名称"
+
+#: templates/detection/base.html:16
+msgid "Gang Leader Name"
+msgstr "盟主名称"
+
+#: templates/detection/base.html:17
+msgid "Gang ID"
+msgstr "联盟ID"
+
+#: templates/detection/base.html:18
+msgid "Range of Money"
+msgstr "金额范围"
+
+#~ msgid "query"
+#~ msgstr "查询页面"

@@ -50,7 +50,9 @@ class UISubMenu(models.Model):
     # CATEGORY_LIST is related with views(views.py)
     CATEGORY_LIST = {
         ('detection:count', _('count')),
-        ('detection:query', _('query')),
+        ('detection:user_query', _('user_query')),
+        ('detection:gang_query', _('gang_query')),
+        ('detection:deal_query', _('deal_query')),
     }
     label = models.CharField(max_length=45)
     main_menu = models.ForeignKey(UIMainMenu, blank=True, null=True)
@@ -178,6 +180,64 @@ class Tabel(object):
             r = "ChannelID IN (" + r + ")"
             condition = condition + (r,)
         condition = " AND ".join(condition)
+        ret = self.select(sub_menu, panel, condition)
+        return ret
+
+    @classmethod
+    def user_qeury_select(self, sub_menu, panel, request_get):
+        condition = ()
+        if 'uin' in request_get:
+            r = "Uin = '" + request_get.get('uin') + "'"
+            condition = condition + (r,)
+        if 'name' in request_get:
+            r = "Name like '%" + request_get.get('name') + "%'"
+            condition = condition + (r,)
+        if 'uid' in request_get:
+            r = "UID = " + request_get.get('uid')
+            condition = condition + (r,)
+        condition = " OR ".join(condition)
+        ret = self.select(sub_menu, panel, condition)
+        return ret
+
+    @classmethod
+    def gang_qeury_select(self, sub_menu, panel, request_get):
+        condition = ()
+        if 'g_n' in request_get:
+            r = "GangName like '%" + request_get.get('g_n') + "%'"
+            condition = condition + (r,)
+        if 'g_l_n' in request_get:
+            r = "GangLeaderName like '%" + request_get.get('g_l_n') + "%'"
+            condition = condition + (r,)
+        if 'g_i' in request_get:
+            r = "GangID = " + request_get.get('g_i')
+            condition = condition + (r,)
+        condition = " OR ".join(condition)
+        ret = self.select(sub_menu, panel, condition)
+        return ret
+
+    @classmethod
+    def deal_query_select(self, sub_menu, panel, request_get):
+        condition = ()
+        if 'start' in request_get:
+            r = "StDate >= '" + request_get.get('start') + "'"
+            condition = condition + (r,)
+        if 'end' in request_get:
+            r = "StDate <= '" + request_get.get('end') + "'"
+            condition = condition + (r,)
+        if 'moneys' in request_get:
+            r = "money >= " + request_get.get('moneys')
+            condition = condition + (r,)
+        if 'moneye' in request_get:
+            r = "money <= " + request_get.get('moneye')
+            condition = condition + (r,)
+        condition = (" AND ".join(condition), )
+        if 'uin' in request_get:
+            r = "Uin = '" + request_get.get('uin') + "'"
+            condition = condition + (r,)
+        if 'uid' in request_get:
+            r = "UID = " + request_get.get('uid')
+            condition = condition + (r,)
+        condition = " OR ".join(condition)
         ret = self.select(sub_menu, panel, condition)
         return ret
 

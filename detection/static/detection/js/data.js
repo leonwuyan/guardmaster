@@ -72,7 +72,6 @@
 	      data = $.parseJSON(data);
       }
       //channel id
-      //if ($('#37').hasClass('active')) data['channelid'] = ['37'];
       var tmp = new Array();
       $('ul#channel-list li').each(function(idx, el) {
 	      if ($(el).hasClass('active'))
@@ -233,23 +232,23 @@
   var _queryButton = {
     'active': function(val) {
       if ($(val).length > 0) {
-	if ($(val).hasClass('active')) {
-	  $(val).removeClass('active');
-	} else {
-	  $(val).addClass('active');
-	}
+      	if ($(val).hasClass('active')) {
+      	  $(val).removeClass('active');
+      	} else {
+      	  $(val).addClass('active');
+      	}
       }
     },
     'initDate': function () {
       if ($('input[name="start"]').length > 0) {
-	var d = new Date();
-	var year = d.getFullYear();
-	var month = d.getMonth() + 1;
-	if (month < 10) month = '0' + month;
-	var day = d.getDate();
-	if (day < 10) day = '0' + day;
-	$('input[name="start"]').val(year + '-' + month + '-01');
-	$('input[name="end"]').val(year + '-' + month + '-' + day);
+      	var d = new Date();
+      	var year = d.getFullYear();
+      	var month = d.getMonth() + 1;
+      	if (month < 10) month = '0' + month;
+      	var day = d.getDate();
+      	if (day < 10) day = '0' + day;
+      	$('input[name="start"]').val(year + '-' + month + '-01');
+      	$('input[name="end"]').val(year + '-' + month + '-' + day);
       }
       _queryButton.active('ul#zone-list li:first');
       _queryButton.active('ul#channel-list li:first');
