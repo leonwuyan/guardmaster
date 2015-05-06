@@ -53,6 +53,8 @@ class UISubMenu(models.Model):
         ('detection:user_query', _('user_query')),
         ('detection:gang_query', _('gang_query')),
         ('detection:deal_query', _('deal_query')),
+        ('operating:notify', _('notify')),
+        ('operating:mail', _('mail')),
     }
     label = models.CharField(max_length=45)
     main_menu = models.ForeignKey(UIMainMenu, blank=True, null=True)

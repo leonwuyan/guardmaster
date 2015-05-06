@@ -61,6 +61,7 @@
   };
   var _dataAccess = {
     'getJSON': function() {
+      data = []
       if ($('input[name="start"]').length > 0) {
 	      var start = $('input[name="start"]').val();
 	      var end = $('input[name="end"]').val();

@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2015-05-05 18:00+0800\n"
+"POT-Creation-Date: 2015-05-06 18:03+0800\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -33,39 +33,47 @@ msgstr ""
 msgid "deal_query"
 msgstr ""
 
-#: models.py:65
+#: models.py:56
+msgid "notify"
+msgstr ""
+
+#: models.py:57
+msgid "mail"
+msgstr ""
+
+#: models.py:67
 msgid "Category is required when Main menu is selected"
 msgstr ""
 
-#: models.py:99
+#: models.py:101
 msgid "date"
 msgstr ""
 
-#: models.py:100
+#: models.py:102
 msgid "time"
 msgstr ""
 
-#: models.py:101
+#: models.py:103
 msgid "timestamp to date"
 msgstr ""
 
-#: models.py:102
+#: models.py:104
 msgid "timestamp to time"
 msgstr ""
 
-#: models.py:103
+#: models.py:105
 msgid "float two"
 msgstr ""
 
-#: models.py:104
+#: models.py:106
 msgid "ratio two"
 msgstr ""
 
-#: models.py:105
+#: models.py:107
 msgid "channel list"
 msgstr ""
 
-#: models.py:106
+#: models.py:108
 msgid "zone list"
 msgstr ""
 
@@ -127,4 +135,8 @@ msgstr ""
 
 #: templates/detection/base.html:18
 msgid "Range of Money"
+msgstr ""
+
+#: templates/detection/base.html:19
+msgid "List of Servers"
 msgstr ""

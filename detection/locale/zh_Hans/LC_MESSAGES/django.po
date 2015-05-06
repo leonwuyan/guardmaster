@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2015-05-05 18:00+0800\n"
-"PO-Revision-Date: 2015-05-05 17:37+0800\n"
+"POT-Creation-Date: 2015-05-06 18:03+0800\n"
+"PO-Revision-Date: 2015-05-06 18:04+0800\n"
 "Last-Translator: Raynor <raynor41@gmail.com>\n"
 "Language-Team: \n"
 "Language: zh_CN\n"
@@ -34,39 +34,47 @@ msgstr "联盟查询页面"
 msgid "deal_query"
 msgstr "充值查询页面"
 
-#: models.py:65
+#: models.py:56
+msgid "notify"
+msgstr "系统公告页面"
+
+#: models.py:57
+msgid "mail"
+msgstr "系统邮件页面"
+
+#: models.py:67
 msgid "Category is required when Main menu is selected"
 msgstr "Main menu选择时，Category必须选择"
 
-#: models.py:99
+#: models.py:101
 msgid "date"
 msgstr "日期"
 
-#: models.py:100
+#: models.py:102
 msgid "time"
 msgstr "时间"
 
-#: models.py:101
+#: models.py:103
 msgid "timestamp to date"
 msgstr "时间戳转换日期"
 
-#: models.py:102
+#: models.py:104
 msgid "timestamp to time"
 msgstr "时间戳转换时间"
 
-#: models.py:103
+#: models.py:105
 msgid "float two"
 msgstr "保留两位小数"
 
-#: models.py:104
+#: models.py:106
 msgid "ratio two"
 msgstr "保留两位小数的百分比"
 
-#: models.py:105
+#: models.py:107
 msgid "channel list"
 msgstr "渠道列表"
 
-#: models.py:106
+#: models.py:108
 msgid "zone list"
 msgstr "区服列表"
 
@@ -84,7 +92,7 @@ msgstr "至"
 
 #: templates/detection/base.html:7
 msgid "Zone"
-msgstr "区服列表"
+msgstr "区服"
 
 #: templates/detection/base.html:8
 msgid "Channel"
@@ -129,6 +137,10 @@ msgstr "联盟ID"
 #: templates/detection/base.html:18
 msgid "Range of Money"
 msgstr "金额范围"
+
+#: templates/detection/base.html:19
+msgid "List of Servers"
+msgstr "服务器列表"
 
 #~ msgid "query"
 #~ msgstr "查询页面"

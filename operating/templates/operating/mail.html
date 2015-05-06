@@ -1,0 +1,53 @@
+{% extends "detection/base.html" %}
+{% block content %}
+<div class="container-fluid white-bg">
+  <div class="row">
+    <!--<h1 class="page-header"></h1>-->
+
+    <form class="form" role="form">
+      <div class="form-group" style="margin-bottom: 5px">
+        <label>{{list_of_servers}}</label>
+        <select class="form-control">
+          {% for server in servers %}
+          <option value="{{server.id}}">{{server.label}}</option>
+          {% endfor %}
+        </select>
+      </div>
+
+      <div class="form-group" style="margin-bottom:5px">
+      	<label>{{trans_zone}}</label>
+      	<ul class="nav nav-pills" role="tablist" id="zone-list">
+      	  {% for zone in zones %}
+      	  <li role="presentation" id="zone-{{zone.ZoneID}}" value="{{zone.ZoneID}}"><a href="javascript:queryButton.active('#zone-{{zone.ZoneID}}')" style="padding: 5px 8px;">{{zone.ZoneNm}}</a></li>
+      	  {% endfor %}
+      	</ul>
+      </div>
+
+      <div class="form-group" style="margin-bottom:5px">
+      	<label>{{trans_channel}}</label>
+      	<ul class="nav nav-pills" role="tablist" id="channel-list">
+      	  {% for channel in channels %}
+      	  <li role="presentation" id="channel-{{channel.ChannelID}}" value="{{channel.ChannelID}}"><a href="javascript:queryButton.active('#channel-{{channel.ChannelID}}')" style="padding: 5px 8px;">{{channel.ChNm}}</a></li>
+      	  {% endfor %}
+      	</ul>
+      </div>
+
+      <button type="submit" class="btn btn-default btn-sm" id="count-button"onclick="return dataAccess.getJSON()">{{trans_query}}</button>
+    </form>
+
+    <p class="sub-header"></p>
+    <div class="table-responsive">
+      <table class="table table-bordered table-striped" id="sources">
+	<thead>
+	  <tr>
+	    {% for table in table_head %}
+	    <th>{{table.label}}</th>
+	    {% endfor %}
+	  </tr>
+	</thead>
+      </table>
+    </div>
+  </div>
+  <center style='color: #999; padding-top: 20px; font-family: "arial","NSimSun","SimSun","STSong","AR PL SungtiL GB","TW\-Sung","WenQuanYi Bitmap Song"; font-size: 14px; font-weight: bold;'>{{excuse}}</center>
+</div>
+{% endblock %}
