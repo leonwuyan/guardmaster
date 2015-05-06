@@ -149,7 +149,8 @@ class Tabel(object):
         else:
             s = sub_menu.get_select_map()
             sql = "SELECT %(cols)s FROM %(table_name)s" % s
-        print 'SQL :', sql
+        logger = logging.getLogger(__name__)
+        logger.info(sql)
         cursor.execute(sql)
         return cursor.fetchall()
 
@@ -159,7 +160,8 @@ class Tabel(object):
             ret = self.select_unsafe(sub_menu, panel, condition)
         except Exception as e:
             ret = []
-            print 'Exception :', e
+            logger = logging.getLogger(__name__)
+            logger.error(e)
         return ret
 
     @classmethod
