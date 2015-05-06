@@ -39,6 +39,7 @@ class UIMainMenuAdmin(admin.ModelAdmin):
     inlines = [UISubMenuInline]
     list_display = ('label', 'groups_list', 'seqid')
     search_fields = ['label']
+    list_filter = ['groups']
 
     def groups_list(self, obj):
         groups = ""
@@ -50,6 +51,7 @@ class UIMainMenuAdmin(admin.ModelAdmin):
 class PanelAdmin(admin.ModelAdmin):
     list_display = ('label', 'groups_list', 'db_aliases')
     search_fields = ['label']
+    list_filter = ['groups']
 
     def groups_list(self, obj):
         groups = ""
