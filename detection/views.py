@@ -10,14 +10,7 @@ import json
 
 
 # Create your views here.
-
-
-def home(request):
-    excuse = random.choice(Excuse.objects.all())
-    return render(request, "detection/index.html", {'excuse': excuse})
-
-
-def query_template(request, panel_id, url, template):
+def view_template(request, panel_id, url):
     excuse = random.choice(Excuse.objects.all())
 
     panel = get_object_or_404(Panel, pk=panel_id)
@@ -40,14 +33,15 @@ def query_template(request, panel_id, url, template):
         'zones': zone_list,
     }
 
-    return render(request, template, data)
+    return data
 
 
-@Common.panel_required
+@Common.competence_required
 def json_template(request, panel_id, t_p, url=Common.URL):
     panel = get_object_or_404(Panel, pk=panel_id)
     sub_menu = get_object_or_404(UISubMenu, url=url)
     vf = ValueFormat(sub_menu.get_col_map_vals('col_type'), panel)
+    ret = None
     if t_p == 'count':
         ret = Tabel.count_select(sub_menu, panel, request.GET)
     if t_p == 'user_query':
@@ -56,31 +50,37 @@ def json_template(request, panel_id, t_p, url=Common.URL):
         ret = Tabel.gang_qeury_select(sub_menu, panel, request.GET)
     if t_p == 'deal_query':
         ret = Tabel.deal_query_select(sub_menu, panel, request.GET)
+    if ret is None:
+        ret = Tabel.count_select(sub_menu, panel, request.GET)
     ret = vf.execute(ret)
     ret = {'data': ret}
     ret = json.dumps(ret, ensure_ascii=False)
     return HttpResponse(ret, content_type='application/json')
 
 
-@Common.panel_required
+@Common.competence_required
 def count(request, panel_id, url=Common.URL):
     t = "detection/count.html"
-    return query_template(request, panel_id, url, t)
+    d = view_template(request, panel_id, url)
+    return render(request, t, d)
 
 
-@Common.panel_required
+@Common.competence_required
 def user_query(request, panel_id, url=Common.URL):
     t = "detection/user_query.html"
-    return query_template(request, panel_id, url, t)
+    d = view_template(request, panel_id, url)
+    return render(request, t, d)
 
 
-@Common.panel_required
+@Common.competence_required
 def gang_query(request, panel_id, url=Common.URL):
     t = "detection/gang_query.html"
-    return query_template(request, panel_id, url, t)
+    d = view_template(request, panel_id, url)
+    return render(request, t, d)
 
 
-@Common.panel_required
+@Common.competence_required
 def deal_query(request, panel_id, url=Common.URL):
     t = "detection/deal_query.html"
-    return query_template(request, panel_id, url, t)
+    d = view_template(request, panel_id, url)
+    return render(request, t, d)

@@ -36,22 +36,34 @@ def get_user_menus(user):
     return main_menus
 
 
-def panel_required(function):
+def competence_required(function):
     def wrap(request, *args, **kwargs):
         user = request.user
         if not user.is_authenticated():
             return HttpResponseRedirect('/')
 
-        url = kwargs.get('url', URL)
         panel_id = int(kwargs.get('panel_id'))
         if panel_id is None:
             return HttpResponseRedirect('/')
 
         panels = get_user_panels(user)
+        pt = False
         for p in panels:
             if p.get('id') == panel_id:
-                return function(request, *args, **kwargs)
-        return HttpResponseRedirect('/')
+                pt = True
+        if not pt:
+            return HttpResponseRedirect('/')
+
+        url = kwargs.get('url', URL)
+        menus = get_user_menus(user)
+        mt = False
+        for m in menus:
+            for s in m.get('sub_menu'):
+                if s.get('url') == url:
+                    mt = True
+        if not mt:
+            return HttpResponseRedirect('/')
+        return function(request, *args, **kwargs)
 
     wrap.__doc__ = function.__doc__
     wrap.__name__ = function.__name__
