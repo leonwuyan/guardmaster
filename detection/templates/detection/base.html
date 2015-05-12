@@ -1,27 +1,27 @@
 <!DOCTYPE HTML>
 {% load staticfiles %}
 {% load i18n %}
-{% trans "BlazBlue Revolution Reburning GuardMaster Workbench" as title_default %}
-{% trans "Range of Date" as range_of_date %}
-{% trans "TO" as trans_to %}
-{% trans "Zone" as trans_zone %}
-{% trans "Channel" as trans_channel %}
-{% trans "Query" as trans_query %}
-{% trans "Sign Out" as trans_sign_out %}
-{% trans "Translate" as trans_translate %}
-{% trans "Player ID" as trans_player_id %}
-{% trans "Player Name" as trans_player_name %}
-{% trans "User ID" as trans_user_id %}
-{% trans "Gang Name" as trans_gang_name %}
-{% trans "Gang Leader Name" as trans_gang_leader_name %}
-{% trans "Gang ID" as trans_gang_id %}
-{% trans "Range of Money" as range_of_money %}
-{% trans "List of Servers" as list_of_servers %}
+{% trans "BlazBlue Revolution Reburning GuardMaster Workbench" as t_title %}
+{% trans "Range of Date" as t_range_of_date %}
+{% trans "TO" as t_to %}
+{% trans "Zone" as t_zone %}
+{% trans "Channel" as t_channel %}
+{% trans "Query" as t_query %}
+{% trans "Sign Out" as t_sign_out %}
+{% trans "Translate" as t_translate %}
+{% trans "Player ID" as t_player_id %}
+{% trans "Player Name" as t_player_name %}
+{% trans "User ID" as t_user_id %}
+{% trans "Gang Name" as t_gang_name %}
+{% trans "Gang Leader Name" as t_gang_leader_name %}
+{% trans "Gang ID" as t_gang_id %}
+{% trans "Range of Money" as t_range_of_money %}
+{% trans "List of Servers" as t_list_of_servers %}
 <html>
     <head>
         <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-        <title>{{title|default:title_default}}</title>
+        <title>{{title|default:t_title}}</title>
         <!-- scripts and styles -->
         <link rel="stylesheet" type="text/css" href="{% static 'detection/css/bootstrap.min.css' %}" />
         <link rel="stylesheet" type="text/css" href="{% static 'detection/css/bootstrap-theme.min.css' %}" />
@@ -60,7 +60,7 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <a class="navbar-brand" href="{{servlet}}/" title="点击这里，切换面板">{{panel.label|default:title_default}}</a>
+                <a class="navbar-brand" href="{{servlet}}/" title="点击这里，切换面板">{{panel.label|default:t_title}}</a>
             </div>
             <div class="navbar-collapse collapse">
                 <ul class="nav navbar-nav">
@@ -85,7 +85,7 @@
                         <ul class="dropdown-menu">
                             <!--<li><a href="{{servlet}}/profile">Profile</a></li>
                             <li class="divider"></li>-->
-                            <li><a href="{% url 'user_logout' %}">{{trans_sign_out}}</a></li>
+                            <li><a href="{% url 'user_logout' %}">{{t_sign_out}}</a></li>
                         </ul>
                     </li>
                 </ul>

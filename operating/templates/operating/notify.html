@@ -7,7 +7,7 @@
     <form class="form" role="form">
 
       <div class="form-group" style="margin-bottom:5px">
-      	<label>{{trans_zone}}</label>
+      	<label>{{t_zone}}</label>
       	<ul class="nav nav-pills" role="tablist" id="zone-list">
       	  {% for zone in zones %}
       	  <li role="presentation" id="zone-{{zone.ZoneID}}" value="{{zone.ZoneID}}"><a href="javascript:queryButton.active('#zone-{{zone.ZoneID}}')" style="padding: 5px 8px;">{{zone.ZoneNm}}</a></li>
@@ -16,7 +16,7 @@
       </div>
 
       <div class="form-group" style="margin-bottom:5px">
-      	<label>{{trans_channel}}</label>
+      	<label>{{t_channel}}</label>
       	<ul class="nav nav-pills" role="tablist" id="channel-list">
       	  {% for channel in channels %}
       	  <li role="presentation" id="channel-{{channel.ChannelID}}" value="{{channel.ChannelID}}"><a href="javascript:queryButton.active('#channel-{{channel.ChannelID}}')" style="padding: 5px 8px;">{{channel.ChNm}}</a></li>
@@ -24,7 +24,7 @@
       	</ul>
       </div>
 
-      <button type="submit" class="btn btn-default btn-sm" id="count-button"onclick="return dataAccess.getJSON()">{{trans_query}}</button>
+      <button type="submit" class="btn btn-default btn-sm" id="count-button"onclick="return dataAccess.getJSON()">{{t_query}}</button>
     </form>
 
     <p class="sub-header"></p>

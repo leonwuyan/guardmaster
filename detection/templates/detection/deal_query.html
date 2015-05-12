@@ -15,30 +15,30 @@
   <div class="row">
     <form role="form" id="queryForm">
       <div class="form-group" style="margin-bottom:5px">
-        <label>{{range_of_date}}</label>
+        <label>{{t_range_of_date}}</label>
         <div class="input-daterange input-group input-datepicker" id="datepicker">
           <input type="text" class="input-md form-control" name="start">
-          <span class="input-group-addon">{{trans_to}}</span>
+          <span class="input-group-addon">{{t_to}}</span>
           <input type="text" class="input-md form-control" name="end">
         </div>
       </div>
       <div class="form-group" style="margin-bottom:5px">
-        <label>{{range_of_money}}</label>
+        <label>{{t_range_of_money}}</label>
         <div class="input-daterange input-group">
           <input type="text" class="input-md form-control" name="moneys">
-          <span class="input-group-addon">{{trans_to}}</span>
+          <span class="input-group-addon">{{t_to}}</span>
           <input type="text" class="input-md form-control" name="moneye">
         </div>
       </div>
       <div class="form-group" style="margin-bottom:5px">
-      	<label for="uid">{{trans_player_id}}</label>
+      	<label for="uid">{{t_player_id}}</label>
       	<input type="text" class="form-control" id="uin" name="uid">
       </div>
       <div class="form-group" style="margin-bottom:5px">
-        <label for="uin">{{trans_user_id}}</label>
+        <label for="uin">{{t_user_id}}</label>
         <input type="text" class="form-control" id="uin" name="uin">
       </div>
-      <button type="submit" class="btn btn-default btn-sm" onclick="return dataAccess.queryJSON()">{{trans_query}}</button>
+      <button type="submit" class="btn btn-default btn-sm" onclick="return dataAccess.queryJSON()">{{t_query}}</button>
     </form>
 
     <p class="sub-header"></p>
