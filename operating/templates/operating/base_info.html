@@ -1,0 +1,100 @@
+{% load custom i18n %}
+{% trans "Player Base Info" as t_player_base_info %}
+{% trans "Create Time" as t_create_time %}
+{% trans "Online" as t_online %}
+{% trans "Last Login Time" as t_last_login_time %}
+{% trans "Last Logout Time" as t_last_logout_time %}
+{% trans "Total Online Time" as t_total_online_time %}
+{% trans "Gold" as t_gold %}
+{% trans "Times Of Buy Gold" as t_times_of_buy_gold %}
+{% trans "Crystal" as t_crystal %}
+{% trans "Times Of Buy Crystal" as t_times_of_buy_crystal %}
+{% trans "Money" as t_money %}
+{% trans "Power" as t_power %}
+{% trans "Times Of Buy Power" as t_times_of_buy_power %}
+{% trans "Skill Point" as t_skill_point %}
+{% trans "Times Of Buy Skill Point" as t_times_of_buy_skill_point %}
+{% trans "Endless' Floor" as t_endless_floor %}
+{% trans "Endless' Score" as t_endless_score %}
+{% trans "Score Of Rank Battle" as t_score_of_rank_battle %}
+{% trans "Times Of Growup" as t_times_of_growup %}
+<div class="panel panel-primary">
+  <div class="panel-heading">{{ t_player_base_info }}</div>
+  <!-- Table -->
+  <table class="table table-striped">
+    <tbody>
+      <tr>
+        <td><b>{{ t_player_name }}</b></td>
+        <td>{{ player.name }}</td>
+        <td><b>{{ t_player_id }}</b></td>
+        <td>{{ player.uid }}</td>
+      </tr>
+      <tr>
+        <td><b>{{ t_user_id }}</b></td>
+        <td>{{ player.uin }}</td>
+        <td><b>{{ t_zone }}</b></td>
+        <td>{{ player.world_id }}</td>
+      </tr>
+      <tr>
+        <td><b>{{ t_create_time }}</b></td>
+        <td>{{ player.create_time|ts2time|default_if_none:"" }}</td>
+        <td><b>{{ t_total_online_time }}</b></td>
+        <td>{{ player.total_online_time|second2time }}</td>
+      </tr>
+      <tr>
+        <td><b>{{ t_last_login_time }}</b></td>
+        <td>{{ player.last_login_time|ts2time|default_if_none:"" }}</td>
+        <td><b>{{ t_last_logout_time }}</b></td>
+        <td>{{ player.last_logout_time|ts2time|default_if_none:"" }}</td>
+      </tr>
+      <tr>
+        <td><b>{{ t_gold }}</b></td>
+        <td>{{ player.gold_cnt }}</td>
+        <td><b>{{ t_times_of_buy_gold }}</b></td>
+        <td>{{ player.gold_buy_times }}</td>
+      </tr>
+      <tr>
+        <td><b>{{ t_crystal }}</b></td>
+        <td>{{ player.crystal_cnt }}</td>
+        <td><b>{{ t_times_of_buy_crystal }}</b></td>
+        <td>{{ player.crystal_buy_times }}</td>
+      </tr>
+      <tr>
+        <td><b>{{ t_power }}</b></td>
+        <td>{{ player.power_cnt }}</td>
+        <td><b>{{ t_times_of_buy_power }}</b></td>
+        <td>{{ player.power_buy_times }}</td>
+      </tr>
+      <tr>
+        <td><b>{{ t_skill_point }}</b></td>
+        <td>{{ player.skillpoint_cnt }}</td>
+        <td><b>{{ t_times_of_buy_skill_point }}</b></td>
+        <td>{{ player.skillpoint_buy_times }}</td>
+      </tr>
+      <tr>
+        <td><b>{{ t_money }}</b></td>
+        <td>{{ player.money_cnt }}</td>
+        <td><b>{{ t_times_of_growup }}</b></td>
+        <td>{{ player.growup_cnt }}</td>
+      </tr>
+      <tr>
+        <td><b>{{ t_endless_score }}</b></td>
+        <td>{{ player.endless_score }}</td>
+        <td><b>{{ t_endless_floor }}</b></td>
+        <td>{{ player.endless_floor }}</td>
+      </tr>
+      <tr>
+        <td><b>{{ t_score_of_rank_battle }}</b></td>
+        <td>{{ player.rank_battle_score }}</td>
+        <td><b>{{ t_online }}</b></td>
+        <td>{{ player.is_online|online }}</td>
+      </tr>
+    </tbody>
+  </table>
+  <!-- List -->
+  {% include "operating/hero_info.html" %}
+  {% include "operating/package_info.html" %}
+  {% include "operating/building_info.html" %}
+  {% include "operating/pve_info.html" %}
+  </ul>
+</div>

@@ -15,5 +15,9 @@ urlpatterns = [
         r'^(?P<panel_id>[0-9]+)/mail/(?P<url>[_A-Za-z]+)$',
         operating_views.mail,
         name='mail'),
+    url(
+        r'^(?P<panel_id>[0-9]+)/single/(?P<url>[_A-Za-z]+)$',
+        operating_views.single,
+        name='single'),
     url(r'^$', auth_views.index, name='default_index'),
 ]

@@ -1,0 +1,92 @@
+{% load custom i18n %}
+{% trans "Building Info" as t_building_info %}
+{% trans "Building" as t_building %}
+{% trans "Pvp Gold Gain" as t_pvp_gold_gain %}
+{% trans "Pvp Exp. Item Gain" as t_pvp_exp_item_gain %}
+{% trans "Pvp Money Gain" as t_pvp_money_gain %}
+{% trans "Pvp Crystal Gain" as t_pvp_crystal_gain %}
+{% trans "Resources Type" as t_resources_type %}
+{% trans "Last Born Time" as t_last_born_time %}
+{% trans "Born Speed" as t_born_speed %}
+{% trans "Resources Limit" as t_resources_limit %}
+{% trans "Current Resources Born" as t_current_resources_born %}
+{% trans "Defend Info" as t_defend_info %}
+{% trans "Hero ID" as t_hero_id %}
+{% trans "Hero Level" as t_hero_level %}
+{% trans "Monster ID" as t_monster_id %}
+{% trans "Monster Level" as t_monster_level %}
+{% trans "Trap ID" as t_trap_id %}
+{% trans "Trap Level" as t_trap_level %}
+{% trans "Building ID" as t_building_id %}
+{% trans "Building Level" as t_building_level %}
+{% trans "Level Begin Time" as t_level_begin_time %}
+{% trans "Level Total Time" as t_level_total_time %}
+{% trans "Hero Tower" as t_hero_tower %}
+{% trans "Resources Store" as t_resources_store %}
+<ul class="list-group">
+  {% with island_data=player.building_data.island_data island_gain=player.building_data.island_gain %}
+  <li class="list-group-item"><h4><b>{{ t_building_info }}</b></h4>
+    [<span>{{ t_pvp_gold_gain }} :{{ island_gain.pvp_gain_gold }}</span>
+    <span>{{ t_pvp_exp_item_gain }} :{{ island_gain.pvp_gain_exp_item }}</span>
+    <span>{{ t_pvp_money_gain }} :{{ island_gain.pvp_gain_money }}</span>
+    <span>{{ t_pvp_crystal_gain }} :{{ island_gain.pvp_gain_crystal }}</span>]
+  </li>
+  {% for k in island_data %}
+    <li class="list-group-item">
+      <span>{{ t_resources_type }} :{{ k.res_type }}</span>
+      <span>{{ t_last_born_time }} :{{ k.born_info.last_born_time }}</span>
+      <span>{{ t_born_speed }} :{{ k.born_info.born_speed }}</span>
+      <span>{{ t_resources_limit }} :{{ k.born_info.born_limit }}</span>
+      <span>{{ t_current_resources_born }} :{{ k.born_info.cur_born_res }}</span><br/><b>{{ t_defend_info }}</b>
+      [<span>{{ t_hero_id }} :{{ k.born_info.defend_info.hero_id }}</span>
+      <span>{{ t_hero_level }} :{{ k.born_info.defend_info.hero_lv }}</span>
+      <span>{{ t_monster_id }} :{{ k.born_info.defend_info.monster_id }}</span>
+      <span>{{ t_monster_level }} :{{ k.born_info.defend_info.monster_lv }}</span>
+      <span>{{ t_trap_id }} :{{ k.born_info.defend_info.trap_id }}</span>
+      <span>{{ t_trap_level }} :{{ k.born_info.defend_info.trap_lv }}</span>]
+      <span class="pull-right">
+        <button class="btn-xs btn btn-success" type="button" onclick="javascript:building_show_hide_table('#island-{{k.res_type}}')">{{ t_building }} <span class="badge">{{ k.building_info|length }}</span></button>
+      </span>
+    </li>
+    <table class="table island" id="island-{{k.res_type}}" style="display: none">
+      <tbody>
+      {% for v in k.building_info %}
+        <tr {% cycle 'class="success"' '' %}>
+          <td>{{ t_building_id }} :{{ v.building_id }}</td>
+          <td>{{ t_building_level }} :{{ v.level_beg_time }}</td>
+          <td>{{ t_level_begin_time }} :{{ v.building_lv }}</td>
+          <td>{{ t_level_total_time }} :{{ v.level_total_time }}</td>
+        </tr>
+      {% endfor %}
+      </tbody>
+    </table>
+  {% endfor %}
+  {% endwith %}
+  {% with player.building_data.hero_tower_data as  hero_tower %}
+  <li class="list-group-item"><b>{{ t_hero_tower }}</b>
+    [<span>{{ t_building_id }} :{{ hero_tower.building_id }}</span>
+    <span>{{ t_building_level }} :{{ hero_tower.building_lv }}</span>
+    <span>{{ t_level_begin_time }} :{{ hero_tower.level_beg_time }}</span>
+    <span>{{ t_level_begin_time }} :{{ hero_tower.level_total_time }}</span>]
+  </li>
+  {% endwith %}
+  {% for k in player.building_data.res_store_data %}
+  <li class="list-group-item"><b>{{ t_resources_store }}</b>
+    [<span>{{ t_resources_type }} :{{ k.res_type }}</span>
+    <span>{{ t_building_id }} :{{ k.building_info.building_id }}</span>
+    <span>{{ t_building_level }} :{{ k.building_info.building_lv }}</span>
+    <span>{{ t_level_begin_time }} :{{ k.building_info.level_beg_time }}</span>
+    <span>{{ t_level_begin_time }} :{{ k.building_info.level_total_time }}</span>
+    <span>{{ t_resources_limit }} :{{ k.res_limit }}</span>]
+  </li>
+  {% endfor %}
+</ul>
+<script type="text/javascript">
+function building_show_hide_table(k) {
+  if($(k).is(":hidden")) {
+    $(k).show()
+  } else {
+    $(k).hide()
+  }
+}
+</script>

@@ -1,0 +1,71 @@
+{% load custom i18n %}
+{% trans "Package & Item" as t_package_item %}
+{% trans "Package Info" as t_package_info %}
+{% trans "Item" as t_item %}
+{% trans "Package Pos" as t_package_pos %}
+{% trans "Level" as t_level %}
+{% trans "Count" as t_count %}
+{% trans "Grow Up" as t_grow_up %}
+{% trans "Current Exp." as t_current_exp %}
+{% trans "Binded Hero" as t_binded_hero %}
+{% trans "Equip ID" as t_equip_id %}
+{% trans "Wake Up" as t_wake_up %}
+{% trans "Item Info" as t_item_info %}
+{% trans "Status" as t_status %}
+{% trans "Function Type" as t_function_type %}
+{% trans "Base ID" as t_base_id %}
+{% trans "Type" as t_type %}
+<ul class="list-group">
+  <li class="list-group-item"><h4><b>{{ t_package_item }}</b></h4></li>
+  {% with equip_tab=player.package_data.equip_tab %}
+  <li class="list-group-item"><b>{{ t_package_info }}</b>
+      <span class="pull-right">
+        <button class="btn-xs btn btn-default" type="button" onclick="javascript:package_show_hide_table('#package')">{{ t_item }} <span class="badge">{{ equip_tab.equips|length }}</span></button>
+      </span></li>
+    <table class="table package table-striped table-condensed" id="package" style="display: none">
+      <tbody>
+      {% for v in equip_tab.equips %}
+        <tr>
+          <td>{{ t_package_pos }} :{{ v.package_pos }}</td>
+          <td>{{ t_count }} :{{ v.count }}</td>
+          <td>{{ t_level }} :{{ v.level }}</td>
+          <td>{{ t_grow_up }} :{{ v.growup }}</td>
+          <td>{{ t_current_exp }} :{{ v.cur_exp }}</td>
+          <td>{{ t_binded_hero }} :{{ v.bind_to_hero }}</td>
+          <td>{{ t_equip_id }} :{{ v.equip_id }}</td>
+          <td>{{ t_wake_up }} :{{ v.wakeup }}</td>
+        </tr>
+      {% endfor %}
+      </tbody>
+    </table>
+  {% endwith %}
+  {% with tab_info=player.package_data.tab_info %}
+  <li class="list-group-item"><b>{{ t_item_info }}</b>
+      <span class="pull-right">
+        <button class="btn-xs btn btn-default" type="button" onclick="javascript:package_show_hide_table('#item')">{{ t_item }} <span class="badge">{{ tab_info|tab_join|length }}</span></button>
+      </span></li>
+    <table class="table item table-striped table-condensed" id="item" style="display: none">
+      <tbody>
+      {% for v in tab_info|tab_join %}
+        <tr>
+          <td>{{ t_package_pos }} :{{ v.package_pos }}</td>
+          <td>{{ t_count }} :{{ v.count }}</td>
+          <td>{{ t_status }} :{{ v.stat }}</td>
+          <td>{{ t_function_type }} :{{ v.func_type }}</td>
+          <td>{{ t_base_id }} :{{ v.base_id }}</td>
+          <td>{{ t_type }} :{{ v.type }}</td>
+        </tr>
+      {% endfor %}
+      </tbody>
+    </table>
+  {% endwith %}
+</ul>
+<script type="text/javascript">
+function package_show_hide_table(k) {
+  if($(k).is(":hidden")) {
+    $(k).show()
+  } else {
+    $(k).hide()
+  }
+}
+</script>

@@ -1,0 +1,83 @@
+{% load custom i18n %}
+{% trans "Pve Info" as t_pve_info %}
+{% trans "Dungeon List" as t_dungeon_list %}
+{% trans "Dungeon" as t_dungeon %}
+{% trans "Dungeon ID" as t_dungeon_id %}
+{% trans "Challenge Time" as t_challenge_time %}
+{% trans "Dungeon Level" as t_dungeon_level %}
+{% trans "Best Evaluation" as t_best_evaluation %}
+{% trans "Frequency" as t_frequency %}
+{% trans "Status" as t_status %}
+{% trans "Hero" as t_hero %}
+{% trans "Hero ID" as t_hero_id %}
+{% trans "Hero Grow Up" as t_hero_grow_up %}
+{% trans "Hero Level" as t_hero_level %}
+{% trans "Remain HP" as t_remain_hp %}
+{% trans "Max Score" as t_max_score %}
+{% trans "Max Floor" as t_max_floor %}
+{% trans "Max Score of History" as t_max_score_of_history %}
+{% trans "Max Floor of History" as t_max_floor_of_history %}
+{% trans "Today's Enter" as t_today_enter %}
+{% trans "Today's Wipeout" as t_today_wipeout %}
+<ul class="list-group">
+  <li class="list-group-item"><h4><b>{{ t_pve_info }}</b></h4></li>
+  {% with '123' as pve_type %}
+  {% for k in pve_type %}
+  <li class="list-group-item"><b>{{ t_dungeon_list|filter_dungeon_label:k }}</b>
+    <span class="pull-right">
+      <button class="btn-xs btn btn-warning" type="button" onclick="javascript:pve_show_hide_table('#pve-{{k}}')">{{ t_dungeon }} <span class="badge">{{ player.pve_info|filter_dungeon:k|length }}</span></button>
+    </span>
+  </li>
+  <table class="table pve table-condensed" id="pve-{{k}}" style="display: none">
+    <tbody>
+    {% for v in player.pve_info|filter_dungeon:k %}
+      <tr {% cycle 'class="warning"' '' %}>
+        <td>{{ t_dungeon_id }} :{{ v.dungeon_id }}</td>
+        <td>{{ t_frequency }} :{{ v.challenge_cnt }}</td>
+        <td>{{ t_dungeon_level }} :{{ v.dun_level }}</td>
+        <td>{{ t_best_evaluation }} :{{ v.best_evaluation }}</td>
+        <td>{{ t_challenge_time }} :{{ v.challenge_time|ts2time }}</td>
+        <td>{{ t_status }} :{{ v.stat }}</td>
+      </tr>
+    {% endfor %}
+    </tbody>
+  </table>
+  {% endfor %}
+  {% endwith %}
+  <li class="list-group-item"><b>{{ t_dungeon_list|filter_dungeon_label:'4' }}</b>
+    {% with player.pve_info|filter_dungeon:'4'|first as v %}
+      [<span>{{ t_frequency }} :{{ v.challenge_cnt }}</span>
+      <span>{{ t_challenge_time }} :{{ v.challenge_time|ts2time }}</span>]
+    {% endwith %}
+    <span class="pull-right">
+      <button class="btn-xs btn btn-default" type="button" onclick="javascript:pve_show_hide_table('#pve-{{4}}')">{{ t_hero }} <span class="badge">{{ player.hero_endless_info.hero_hp|length }}</span></button>
+    </span>
+  </li>
+  <table class="table pve table-striped table-condensed" id="pve-{{4}}" style="display: none">
+    <tbody>
+    {% for v in player.hero_endless_info.hero_hp %}
+      <tr>
+        <td>{{ t_hero_id }} :{{ v.hero_id }}</td>
+        <td>{{ t_hero_grow_up }} :{{ v.hero_grow_up }}</td>
+        <td>{{ t_hero_level }} :{{ v.hero_lv }}</td>
+        <td>{{ t_remain_hp }} :{{ v.remain_hp }}</td>
+        <td>{{ t_max_score }} :{{ v.max_score }}</td>
+        <td>{{ t_max_floor }} :{{ v.max_floor }}</td>
+        <td>{{ t_max_score_of_history }} :{{ v.max_score_ever }}</td>
+        <td>{{ t_max_floor_of_history }} :{{ v.max_floor_ever }}</td>
+        <td>{{ t_today_enter }} :{{ v.entered_today }}</td>
+        <td>{{ t_today_wipeout }} :{{ v.wipeout_today }}</td>
+      </tr>
+    {% endfor %}
+    </tbody>
+  </table>
+</ul>
+<script type="text/javascript">
+function pve_show_hide_table(k) {
+  if($(k).is(":hidden")) {
+    $(k).show()
+  } else {
+    $(k).hide()
+  }
+}
+</script>

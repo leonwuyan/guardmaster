@@ -68,3 +68,10 @@ def competence_required(function):
     wrap.__doc__ = function.__doc__
     wrap.__name__ = function.__name__
     return wrap
+
+
+def first(iterable, default=None):
+    if iterable:
+        for item in iterable:
+            return item
+    return default
