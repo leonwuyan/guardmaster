@@ -6,6 +6,7 @@
 {% trans "Pvp Money Gain" as t_pvp_money_gain %}
 {% trans "Pvp Crystal Gain" as t_pvp_crystal_gain %}
 {% trans "Resources Type" as t_resources_type %}
+{% trans "Resources Type Name" as t_resources_type_name %}
 {% trans "Last Born Time" as t_last_born_time %}
 {% trans "Born Speed" as t_born_speed %}
 {% trans "Resources Limit" as t_resources_limit %}
@@ -18,6 +19,7 @@
 {% trans "Trap ID" as t_trap_id %}
 {% trans "Trap Level" as t_trap_level %}
 {% trans "Building ID" as t_building_id %}
+{% trans "Building Name" as t_building_name %}
 {% trans "Building Level" as t_building_level %}
 {% trans "Level Begin Time" as t_level_begin_time %}
 {% trans "Level Total Time" as t_level_total_time %}
@@ -34,6 +36,7 @@
   {% for k in island_data %}
     <li class="list-group-item">
       <span>{{ t_resources_type }} :{{ k.res_type }}</span>
+      <span>{{ t_resources_type_name }} :{{ k.res_type|enum_restype:panel.id }}</span>
       <span>{{ t_last_born_time }} :{{ k.born_info.last_born_time }}</span>
       <span>{{ t_born_speed }} :{{ k.born_info.born_speed }}</span>
       <span>{{ t_resources_limit }} :{{ k.born_info.born_limit }}</span>
@@ -53,9 +56,10 @@
       {% for v in k.building_info %}
         <tr {% cycle 'class="success"' '' %}>
           <td>{{ t_building_id }} :{{ v.building_id }}</td>
-          <td>{{ t_building_level }} :{{ v.level_beg_time }}</td>
-          <td>{{ t_level_begin_time }} :{{ v.building_lv }}</td>
-          <td>{{ t_level_total_time }} :{{ v.level_total_time }}</td>
+          <td>{{ t_building_name }} :{{ v.building_id|enum_building:panel.id }}</td>
+          <td>{{ t_building_level }} :{{ v.building_lv }}</td>
+          <td>{{ t_level_begin_time }} :{{ v.level_beg_time|ts2time }}</td>
+          <td>{{ t_level_total_time }} :{{ v.level_total_time|second2time }}</td>
         </tr>
       {% endfor %}
       </tbody>
@@ -66,13 +70,14 @@
   <li class="list-group-item"><b>{{ t_hero_tower }}</b>
     [<span>{{ t_building_id }} :{{ hero_tower.building_id }}</span>
     <span>{{ t_building_level }} :{{ hero_tower.building_lv }}</span>
-    <span>{{ t_level_begin_time }} :{{ hero_tower.level_beg_time }}</span>
-    <span>{{ t_level_begin_time }} :{{ hero_tower.level_total_time }}</span>]
+    <span>{{ t_level_begin_time }} :{{ hero_tower.level_beg_time|ts2time }}</span>
+    <span>{{ t_level_begin_time }} :{{ hero_tower.level_total_time|second2time }}</span>]
   </li>
   {% endwith %}
   {% for k in player.building_data.res_store_data %}
   <li class="list-group-item"><b>{{ t_resources_store }}</b>
     [<span>{{ t_resources_type }} :{{ k.res_type }}</span>
+    <span>{{ t_resources_type_name }} :{{ k.res_type|enum_restype:panel.id }}</span>
     <span>{{ t_building_id }} :{{ k.building_info.building_id }}</span>
     <span>{{ t_building_level }} :{{ k.building_info.building_lv }}</span>
     <span>{{ t_level_begin_time }} :{{ k.building_info.level_beg_time }}</span>

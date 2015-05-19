@@ -1,0 +1,412 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2015-05-19 21:15+0800\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: templates/operating/base_info.html:2
+msgid "Player Base Info"
+msgstr ""
+
+#: templates/operating/base_info.html:3
+msgid "Create Time"
+msgstr ""
+
+#: templates/operating/base_info.html:4
+msgid "Online"
+msgstr ""
+
+#: templates/operating/base_info.html:5
+msgid "Last Login Time"
+msgstr ""
+
+#: templates/operating/base_info.html:6
+msgid "Last Logout Time"
+msgstr ""
+
+#: templates/operating/base_info.html:7
+msgid "Total Online Time"
+msgstr ""
+
+#: templates/operating/base_info.html:8
+msgid "Gold"
+msgstr ""
+
+#: templates/operating/base_info.html:9
+msgid "Times Of Buy Gold"
+msgstr ""
+
+#: templates/operating/base_info.html:10
+msgid "Crystal"
+msgstr ""
+
+#: templates/operating/base_info.html:11
+msgid "Times Of Buy Crystal"
+msgstr ""
+
+#: templates/operating/base_info.html:12
+msgid "Money"
+msgstr ""
+
+#: templates/operating/base_info.html:13
+msgid "Power"
+msgstr ""
+
+#: templates/operating/base_info.html:14
+msgid "Times Of Buy Power"
+msgstr ""
+
+#: templates/operating/base_info.html:15
+msgid "Skill Point"
+msgstr ""
+
+#: templates/operating/base_info.html:16
+msgid "Times Of Buy Skill Point"
+msgstr ""
+
+#: templates/operating/base_info.html:17
+msgid "Endless' Floor"
+msgstr ""
+
+#: templates/operating/base_info.html:18
+msgid "Endless' Score"
+msgstr ""
+
+#: templates/operating/base_info.html:19
+msgid "Score Of Rank Battle"
+msgstr ""
+
+#: templates/operating/base_info.html:20
+msgid "Times Of Growup"
+msgstr ""
+
+#: templates/operating/building_info.html:2
+msgid "Building Info"
+msgstr ""
+
+#: templates/operating/building_info.html:3
+msgid "Building"
+msgstr ""
+
+#: templates/operating/building_info.html:4
+msgid "Pvp Gold Gain"
+msgstr ""
+
+#: templates/operating/building_info.html:5
+msgid "Pvp Exp. Item Gain"
+msgstr ""
+
+#: templates/operating/building_info.html:6
+msgid "Pvp Money Gain"
+msgstr ""
+
+#: templates/operating/building_info.html:7
+msgid "Pvp Crystal Gain"
+msgstr ""
+
+#: templates/operating/building_info.html:8
+msgid "Resources Type"
+msgstr ""
+
+#: templates/operating/building_info.html:9
+msgid "Resources Type Name"
+msgstr ""
+
+#: templates/operating/building_info.html:10
+msgid "Last Born Time"
+msgstr ""
+
+#: templates/operating/building_info.html:11
+msgid "Born Speed"
+msgstr ""
+
+#: templates/operating/building_info.html:12
+msgid "Resources Limit"
+msgstr ""
+
+#: templates/operating/building_info.html:13
+msgid "Current Resources Born"
+msgstr ""
+
+#: templates/operating/building_info.html:14
+msgid "Defend Info"
+msgstr ""
+
+#: templates/operating/building_info.html:15
+#: templates/operating/hero_info.html:3 templates/operating/pve_info.html:12
+msgid "Hero ID"
+msgstr ""
+
+#: templates/operating/building_info.html:16
+#: templates/operating/pve_info.html:15
+msgid "Hero Level"
+msgstr ""
+
+#: templates/operating/building_info.html:17
+msgid "Monster ID"
+msgstr ""
+
+#: templates/operating/building_info.html:18
+msgid "Monster Level"
+msgstr ""
+
+#: templates/operating/building_info.html:19
+msgid "Trap ID"
+msgstr ""
+
+#: templates/operating/building_info.html:20
+msgid "Trap Level"
+msgstr ""
+
+#: templates/operating/building_info.html:21
+msgid "Building ID"
+msgstr ""
+
+#: templates/operating/building_info.html:22
+msgid "Building Name"
+msgstr ""
+
+#: templates/operating/building_info.html:23
+msgid "Building Level"
+msgstr ""
+
+#: templates/operating/building_info.html:24
+msgid "Level Begin Time"
+msgstr ""
+
+#: templates/operating/building_info.html:25
+msgid "Level Total Time"
+msgstr ""
+
+#: templates/operating/building_info.html:26
+msgid "Hero Tower"
+msgstr ""
+
+#: templates/operating/building_info.html:27
+msgid "Resources Store"
+msgstr ""
+
+#: templates/operating/hero_info.html:2
+msgid "Hero Info"
+msgstr ""
+
+#: templates/operating/hero_info.html:4 templates/operating/pve_info.html:13
+msgid "Hero Name"
+msgstr ""
+
+#: templates/operating/hero_info.html:5
+msgid "Exp."
+msgstr ""
+
+#: templates/operating/hero_info.html:6
+msgid "Emblem"
+msgstr ""
+
+#: templates/operating/hero_info.html:7
+msgid "ID"
+msgstr ""
+
+#: templates/operating/hero_info.html:8
+msgid "Skill"
+msgstr ""
+
+#: templates/operating/hero_info.html:9
+msgid "Equiped"
+msgstr ""
+
+#: templates/operating/hero_info.html:10
+msgid "Item Pos"
+msgstr ""
+
+#: templates/operating/hero_info.html:11
+#: templates/operating/package_info.html:6
+msgid "Level"
+msgstr ""
+
+#: templates/operating/hero_info.html:12
+#: templates/operating/package_info.html:8
+msgid "Grow Up"
+msgstr ""
+
+#: templates/operating/hero_info.html:13
+#: templates/operating/package_info.html:9
+msgid "Current Exp."
+msgstr ""
+
+#: templates/operating/hero_info.html:14
+#: templates/operating/package_info.html:17
+msgid "Base ID"
+msgstr ""
+
+#: templates/operating/hero_info.html:15
+#: templates/operating/package_info.html:12
+msgid "Equip Name"
+msgstr ""
+
+#: templates/operating/hero_info.html:16
+#: templates/operating/package_info.html:13
+msgid "Wake Up"
+msgstr ""
+
+#: templates/operating/package_info.html:2
+msgid "Package & Item"
+msgstr ""
+
+#: templates/operating/package_info.html:3
+msgid "Package Info"
+msgstr ""
+
+#: templates/operating/package_info.html:4
+msgid "Item"
+msgstr ""
+
+#: templates/operating/package_info.html:5
+msgid "Package Pos"
+msgstr ""
+
+#: templates/operating/package_info.html:7
+msgid "Count"
+msgstr ""
+
+#: templates/operating/package_info.html:10
+msgid "Binded Hero"
+msgstr ""
+
+#: templates/operating/package_info.html:11
+msgid "Equip ID"
+msgstr ""
+
+#: templates/operating/package_info.html:14
+msgid "Item Info"
+msgstr ""
+
+#: templates/operating/package_info.html:15
+#: templates/operating/pve_info.html:10
+msgid "Status"
+msgstr ""
+
+#: templates/operating/package_info.html:16
+msgid "Function Type"
+msgstr ""
+
+#: templates/operating/package_info.html:18
+msgid "Item Name"
+msgstr ""
+
+#: templates/operating/package_info.html:19
+msgid "Type"
+msgstr ""
+
+#: templates/operating/pve_info.html:2
+msgid "Pve Info"
+msgstr ""
+
+#: templates/operating/pve_info.html:3
+msgid "Dungeon List"
+msgstr ""
+
+#: templates/operating/pve_info.html:4
+msgid "Dungeon"
+msgstr ""
+
+#: templates/operating/pve_info.html:5
+msgid "Dungeon ID"
+msgstr ""
+
+#: templates/operating/pve_info.html:6
+msgid "Challenge Time"
+msgstr ""
+
+#: templates/operating/pve_info.html:7
+msgid "Dungeon Level"
+msgstr ""
+
+#: templates/operating/pve_info.html:8
+msgid "Best Evaluation"
+msgstr ""
+
+#: templates/operating/pve_info.html:9
+msgid "Frequency"
+msgstr ""
+
+#: templates/operating/pve_info.html:11
+msgid "Hero"
+msgstr ""
+
+#: templates/operating/pve_info.html:14
+msgid "Hero Grow Up"
+msgstr ""
+
+#: templates/operating/pve_info.html:16
+msgid "Remain HP"
+msgstr ""
+
+#: templates/operating/pve_info.html:17
+msgid "Max Score"
+msgstr ""
+
+#: templates/operating/pve_info.html:18
+msgid "Max Floor"
+msgstr ""
+
+#: templates/operating/pve_info.html:19
+msgid "Max Score of History"
+msgstr ""
+
+#: templates/operating/pve_info.html:20
+msgid "Max Floor of History"
+msgstr ""
+
+#: templates/operating/pve_info.html:21
+msgid "Today's Enter"
+msgstr ""
+
+#: templates/operating/pve_info.html:22
+msgid "Today's Wipeout"
+msgstr ""
+
+#: templatetags/custom.py:24
+msgid "Not Time"
+msgstr ""
+
+#: templatetags/custom.py:38
+#, python-format
+msgid "%(hour)s H %(minute)s M %(second)s S"
+msgstr ""
+
+#: templatetags/custom.py:43
+msgid "OFF LINE"
+msgstr ""
+
+#: templatetags/custom.py:45
+msgid "ON LINE"
+msgstr ""
+
+#: templatetags/custom.py:114
+msgid "Novice Dungeon List"
+msgstr ""
+
+#: templatetags/custom.py:116
+msgid "Normal Dungeon List"
+msgstr ""
+
+#: templatetags/custom.py:118
+msgid "Elite Dungeon List"
+msgstr ""
+
+#: templatetags/custom.py:120
+msgid "Endless Dungeon List"
+msgstr ""

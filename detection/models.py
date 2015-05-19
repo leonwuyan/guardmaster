@@ -247,9 +247,11 @@ class Tabel(object):
         return ret
 
     @classmethod
-    def get_list(self, panel, url):
-        ret_list = get_object_or_404(UISubMenu, url=url)
-        ret_keys = ret_list.get_col_map_vals('col_name')
-        ret_list = Tabel.select(ret_list, panel)
-        ret_list = Common.kvs(ret_keys, ret_list)
-        return ret_list
+    def get_enum(self, panel_id, enum_en):
+        panel = get_object_or_404(Panel, pk=panel_id)
+        enum_submenu = get_object_or_404(UISubMenu, url=Common.ENUM)
+        keys = enum_submenu.get_col_map_vals('col_name')
+        condition = "EnumEn = '" + enum_en + "'"
+        enum = Tabel.select(enum_submenu, panel, condition)
+        ret_enum = Common.kvs(keys, enum)
+        return ret_enum

@@ -9,9 +9,25 @@ import random
 import json
 
 
-# Create your views here.
+def view_init():
+    Common.E_BUILDINGID_LIST = None
+    Common.E_CHANNELID_LIST = None
+    Common.E_CHGREASON_LIST = None
+    Common.E_CHGTYPE_LIST = None
+    Common.E_COMPAYCODE_LIST = None
+    Common.E_DUNTYPE_LIST = None
+    Common.E_EQUIPID_LIST = None
+    Common.E_ITEMNAME_LIST = None
+    Common.E_RANKNAME_LIST = None
+    Common.E_RESTYPE_LIST = None
+    Common.E_ROLEID_LIST = None
+    Common.E_SKILLID_LIST = None
+    Common.E_ZONEID_LIST = None
+
+
 def view_template(request, panel_id, url):
     excuse = random.choice(Excuse.objects.all())
+    view_init()
 
     panel = get_object_or_404(Panel, pk=panel_id)
     sub_menu = get_object_or_404(UISubMenu, url=url)
@@ -19,8 +35,8 @@ def view_template(request, panel_id, url):
 
     table_head = sub_menu.get_col_map_dict(['label'])
 
-    channel_list = Tabel.get_list(panel, Common.CHANNEL_LIST)
-    zone_list = Tabel.get_list(panel, Common.ZONE_LIST)
+    channel_list = Tabel.get_enum(panel_id, Common.E_CHANNELID)
+    zone_list = Tabel.get_enum(panel_id, Common.E_ZONEID)
 
     data = {
         'excuse': excuse,
@@ -40,7 +56,7 @@ def view_template(request, panel_id, url):
 def json_template(request, panel_id, t_p, url=Common.URL):
     panel = get_object_or_404(Panel, pk=panel_id)
     sub_menu = get_object_or_404(UISubMenu, url=url)
-    vf = ValueFormat(sub_menu.get_col_map_vals('col_type'), panel)
+    vf = ValueFormat(sub_menu.get_col_map_vals('col_type'), panel_id)
     ret = None
     if t_p == 'count':
         ret = Tabel.count_select(sub_menu, panel, request.GET)

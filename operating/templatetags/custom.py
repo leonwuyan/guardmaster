@@ -20,6 +20,8 @@ def ts2time(timestamp):
         ts = int(timestamp)
     except ValueError:
         return None
+    if ts == 0:
+        return _('Not Time')
     return time.strftime("%Y-%m-%d %H:%M:%S", time.gmtime(ts))
 
 
@@ -119,6 +121,36 @@ def filter_dungeon_label(dungeon_label, k):
     return None
 
 
+def enum_hero(hero_id, panel_id):
+    if Common.E_ROLEID_LIST is None:
+        Common.E_ROLEID_LIST = Tabel.get_enum(panel_id, Common.E_ROLEID)
+    return Common.filter_enum(Common.E_ROLEID_LIST, hero_id)
+
+
+def enum_equip(equip_id, panel_id):
+    if Common.E_EQUIPID_LIST is None:
+        Common.E_EQUIPID_LIST = Tabel.get_enum(panel_id, Common.E_EQUIPID)
+    return Common.filter_enum(Common.E_EQUIPID_LIST, equip_id)
+
+
+def enum_item(item_id, panel_id):
+    if Common.E_ITEMNAME_LIST is None:
+        Common.E_ITEMNAME_LIST = Tabel.get_enum(panel_id, Common.E_ITEMNAME)
+    return Common.filter_enum(Common.E_ITEMNAME_LIST, item_id)
+
+
+def enum_restype(res_type_id, panel_id):
+    if Common.E_RESTYPE_LIST is None:
+        Common.E_RESTYPE_LIST = Tabel.get_enum(panel_id, Common.E_RESTYPE)
+    return Common.filter_enum(Common.E_RESTYPE_LIST, res_type_id)
+
+
+def enum_building(building_id, panel_id):
+    if Common.E_BUILDINGID_LIST is None:
+        Common.E_BUILDINGID_LIST = Tabel.get_enum(panel_id, Common.E_BUILDINGID)
+    return Common.filter_enum(Common.E_BUILDINGID_LIST, building_id)
+
+
 register.filter(ts2date)
 register.filter(ts2time)
 register.filter(second2time)
@@ -127,3 +159,8 @@ register.filter(equiped)
 register.filter(tab_join)
 register.filter(filter_dungeon)
 register.filter(filter_dungeon_label)
+register.filter(enum_hero)
+register.filter(enum_equip)
+register.filter(enum_item)
+register.filter(enum_restype)
+register.filter(enum_building)

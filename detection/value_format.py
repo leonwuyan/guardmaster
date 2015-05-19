@@ -6,9 +6,9 @@ from datetime import date, datetime
 
 
 class ValueFormat(object):
-    def __init__(self, format_list, panel):
+    def __init__(self, format_list, panel_id):
         super(ValueFormat, self).__init__()
-        self.panel = panel
+        self.panel_id = panel_id
         self.format_list = format_list
         self.channel_list = None
         self.zone_list = None
@@ -41,15 +41,13 @@ class ValueFormat(object):
 
     def _channel_list(self, id):
         if self.channel_list is None:
-            self.channel_list = Tabel.get_list(self.panel, Common.CHANNEL_LIST)
-        ret = filter(lambda x: x.get('ChannelID') == id, self.channel_list)
-        return ret[0].get('ChNm', Common.CHANNEL_ERROR)
+            self.channel_list = Tabel.get_enum(self.panel_id, Common.E_CHANNELID)
+        return Common.filter_enum(self.channel_list, id, Common.FORMAT_ERROR)
 
     def _zone_list(self, id):
         if self.zone_list is None:
-            self.zone_list = Tabel.get_list(self.panel, Common.ZONE_LIST)
-        ret = filter(lambda x: x.get('ZoneID') == id, self.zone_list)
-        return ret[0].get('ZoneNm', Common.ZONE_ERROR)
+            self.zone_list = Tabel.get_enum(self.panel_id, Common.E_ZONEID)
+        return Common.filter_enum(self.zone_list, id, Common.FORMAT_ERROR)
 
     def _identity(self, x):
         return x

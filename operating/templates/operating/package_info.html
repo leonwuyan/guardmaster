@@ -9,11 +9,13 @@
 {% trans "Current Exp." as t_current_exp %}
 {% trans "Binded Hero" as t_binded_hero %}
 {% trans "Equip ID" as t_equip_id %}
+{% trans "Equip Name" as t_equip_name %}
 {% trans "Wake Up" as t_wake_up %}
 {% trans "Item Info" as t_item_info %}
 {% trans "Status" as t_status %}
 {% trans "Function Type" as t_function_type %}
 {% trans "Base ID" as t_base_id %}
+{% trans "Item Name" as t_item_name %}
 {% trans "Type" as t_type %}
 <ul class="list-group">
   <li class="list-group-item"><h4><b>{{ t_package_item }}</b></h4></li>
@@ -23,17 +25,31 @@
         <button class="btn-xs btn btn-default" type="button" onclick="javascript:package_show_hide_table('#package')">{{ t_item }} <span class="badge">{{ equip_tab.equips|length }}</span></button>
       </span></li>
     <table class="table package table-striped table-condensed" id="package" style="display: none">
+      <thead>
+        <tr>
+          <th>{{ t_package_pos }}</th>
+          <th>{{ t_equip_id }}</th>
+          <th>{{ t_equip_name }}</th>
+          <th>{{ t_count }}</th>
+          <th>{{ t_level }}</th>
+          <th>{{ t_grow_up }}</th>
+          <th>{{ t_current_exp }}</th>
+          <th>{{ t_binded_hero }}</th>
+          <th>{{ t_wake_up }}</th>
+        </tr>
+      </thead>
       <tbody>
       {% for v in equip_tab.equips %}
         <tr>
-          <td>{{ t_package_pos }} :{{ v.package_pos }}</td>
-          <td>{{ t_count }} :{{ v.count }}</td>
-          <td>{{ t_level }} :{{ v.level }}</td>
-          <td>{{ t_grow_up }} :{{ v.growup }}</td>
-          <td>{{ t_current_exp }} :{{ v.cur_exp }}</td>
-          <td>{{ t_binded_hero }} :{{ v.bind_to_hero }}</td>
-          <td>{{ t_equip_id }} :{{ v.equip_id }}</td>
-          <td>{{ t_wake_up }} :{{ v.wakeup }}</td>
+          <td>{{ v.package_pos }}</td>
+          <td>{{ v.equip_id }}</td>
+          <td>{{ v.equip_id|enum_equip:panel.id }}</td>
+          <td>{{ v.count }}</td>
+          <td>{{ v.level }}</td>
+          <td>{{ v.growup }}</td>
+          <td>{{ v.cur_exp }}</td>
+          <td>{{ v.bind_to_hero }}</td>
+          <td>{{ v.wakeup }}</td>
         </tr>
       {% endfor %}
       </tbody>
@@ -45,15 +61,27 @@
         <button class="btn-xs btn btn-default" type="button" onclick="javascript:package_show_hide_table('#item')">{{ t_item }} <span class="badge">{{ tab_info|tab_join|length }}</span></button>
       </span></li>
     <table class="table item table-striped table-condensed" id="item" style="display: none">
+      <thead>
+        <tr>
+          <th>{{ t_package_pos }}</th>
+          <th>{{ t_base_id }}</th>
+          <th>{{ t_item_name }}</th>
+          <th>{{ t_count }}</th>
+          <th>{{ t_status }}</th>
+          <th>{{ t_function_type }}</th>
+          <th>{{ t_type }}</th>
+        </tr>
+      </thead>
       <tbody>
       {% for v in tab_info|tab_join %}
         <tr>
-          <td>{{ t_package_pos }} :{{ v.package_pos }}</td>
-          <td>{{ t_count }} :{{ v.count }}</td>
-          <td>{{ t_status }} :{{ v.stat }}</td>
-          <td>{{ t_function_type }} :{{ v.func_type }}</td>
-          <td>{{ t_base_id }} :{{ v.base_id }}</td>
-          <td>{{ t_type }} :{{ v.type }}</td>
+          <td>{{ v.package_pos }}</td>
+          <td>{{ v.base_id }}</td>
+          <td>{{ v.base_id|enum_item:panel.id }}</td>
+          <td>{{ v.count }}</td>
+          <td>{{ v.stat }}</td>
+          <td>{{ v.func_type }}</td>
+          <td>{{ v.type }}</td>
         </tr>
       {% endfor %}
       </tbody>

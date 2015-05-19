@@ -29,7 +29,7 @@
       	<label>{{t_zone}}</label>
       	<ul class="nav nav-pills" role="tablist" id="zone-list">
       	  {% for zone in zones %}
-      	  <li role="presentation" id="zone-{{zone.ZoneID}}" value="{{zone.ZoneID}}"><a href="javascript:queryButton.active('#zone-{{zone.ZoneID}}')" style="padding: 5px 8px;">{{zone.ZoneNm}}</a></li>
+      	  <li role="presentation" id="zone-{{zone.EnumCd}}" value="{{zone.EnumCd}}"><a href="javascript:queryButton.active('#zone-{{zone.EnumCd}}')" style="padding: 5px 8px;">{{zone.EnumDes}}</a></li>
       	  {% endfor %}
       	</ul>
       </div>
@@ -38,7 +38,7 @@
       	<label>{{t_channel}}</label>
       	<ul class="nav nav-pills" role="tablist" id="channel-list">
       	  {% for channel in channels %}
-      	  <li role="presentation" id="channel-{{channel.ChannelID}}" value="{{channel.ChannelID}}"><a href="javascript:queryButton.active('#channel-{{channel.ChannelID}}')" style="padding: 5px 8px;">{{channel.ChNm}}</a></li>
+      	  <li role="presentation" id="channel-{{channel.EnumCd}}" value="{{channel.EnumCd}}"><a href="javascript:queryButton.active('#channel-{{channel.EnumCd}}')" style="padding: 5px 8px;">{{channel.EnumDes}}</a></li>
       	  {% endfor %}
       	</ul>
       </div>

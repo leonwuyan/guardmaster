@@ -10,6 +10,7 @@
 {% trans "Status" as t_status %}
 {% trans "Hero" as t_hero %}
 {% trans "Hero ID" as t_hero_id %}
+{% trans "Hero Name" as t_hero_name %}
 {% trans "Hero Grow Up" as t_hero_grow_up %}
 {% trans "Hero Level" as t_hero_level %}
 {% trans "Remain HP" as t_remain_hp %}
@@ -29,15 +30,25 @@
     </span>
   </li>
   <table class="table pve table-condensed" id="pve-{{k}}" style="display: none">
+    <thead>
+      <tr>
+        <th>{{ t_dungeon_id }}</th>
+        <th>{{ t_frequency }}</th>
+        <th>{{ t_dungeon_level }}</th>
+        <th>{{ t_best_evaluation }}</th>
+        <th>{{ t_challenge_time }}</th>
+        <th>{{ t_status }}</th>
+      </tr>
+    </thead>
     <tbody>
     {% for v in player.pve_info|filter_dungeon:k %}
       <tr {% cycle 'class="warning"' '' %}>
-        <td>{{ t_dungeon_id }} :{{ v.dungeon_id }}</td>
-        <td>{{ t_frequency }} :{{ v.challenge_cnt }}</td>
-        <td>{{ t_dungeon_level }} :{{ v.dun_level }}</td>
-        <td>{{ t_best_evaluation }} :{{ v.best_evaluation }}</td>
-        <td>{{ t_challenge_time }} :{{ v.challenge_time|ts2time }}</td>
-        <td>{{ t_status }} :{{ v.stat }}</td>
+        <td>{{ v.dungeon_id }}</td>
+        <td>{{ v.challenge_cnt }}</td>
+        <td>{{ v.dun_level }}</td>
+        <td>{{ v.best_evaluation }}</td>
+        <td>{{ v.challenge_time|ts2time }}</td>
+        <td>{{ v.stat }}</td>
       </tr>
     {% endfor %}
     </tbody>
@@ -58,6 +69,7 @@
     {% for v in player.hero_endless_info.hero_hp %}
       <tr>
         <td>{{ t_hero_id }} :{{ v.hero_id }}</td>
+        <td>{{ t_hero_name }} :{{ v.hero_id|enum_hero:panel.id }}</td>
         <td>{{ t_hero_grow_up }} :{{ v.hero_grow_up }}</td>
         <td>{{ t_hero_level }} :{{ v.hero_lv }}</td>
         <td>{{ t_remain_hp }} :{{ v.remain_hp }}</td>

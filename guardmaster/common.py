@@ -3,10 +3,33 @@ from django.http import HttpResponseRedirect
 
 
 URL = 'total'
-CHANNEL_LIST = 'channel_list'
-ZONE_LIST = 'zone_list'
-CHANNEL_ERROR = 'channel id is error'
-ZONE_ERROR = 'zone id is error'
+ENUM = 'enum'
+E_BUILDINGID = 'BuildingId'
+E_CHANNELID = 'ChannelID'
+E_CHGREASON = 'ChgReason'
+E_CHGTYPE = 'ChgType'
+E_COMPAYCODE = 'CompayCode'
+E_DUNTYPE = 'DunType'
+E_EQUIPID = 'EquipID'
+E_ITEMNAME = 'ItemName'
+E_RANKNAME = 'RankName'
+E_RESTYPE = 'ResType'
+E_ROLEID = 'RoleID'
+E_SKILLID = 'SkillID'
+E_ZONEID = 'ZoneID'
+E_BUILDINGID_LIST = None
+E_CHANNELID_LIST = None
+E_CHGREASON_LIST = None
+E_CHGTYPE_LIST = None
+E_COMPAYCODE_LIST = None
+E_DUNTYPE_LIST = None
+E_EQUIPID_LIST = None
+E_ITEMNAME_LIST = None
+E_RANKNAME_LIST = None
+E_RESTYPE_LIST = None
+E_ROLEID_LIST = None
+E_SKILLID_LIST = None
+E_ZONEID_LIST = None
 DATE_FORMAT_ERROR = 'date format error'
 TIME_FORMAT_ERROR = 'time format error'
 FORMAT_ERROR = 'format error'
@@ -75,3 +98,8 @@ def first(iterable, default=None):
         for item in iterable:
             return item
     return default
+
+
+def filter_enum(iterable, enum_cd, default=None):
+    ret = filter(lambda x: x.get('EnumCd') == enum_cd, iterable)
+    return first(ret, {}).get('EnumDes', default)
