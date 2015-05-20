@@ -24,7 +24,7 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 SECRET_KEY = '15vfylsmt85-daxg$jf1q51csm2p6)&hapg5zp8)c5&(yvl_o3'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = True
 
 ALLOWED_HOSTS = ['*']
 
@@ -41,7 +41,6 @@ INSTALLED_APPS = (
     'django.contrib.staticfiles',
     'detection',
     'operating',
-    'polls',
 )
 
 MIDDLEWARE_CLASSES = (
@@ -113,6 +112,14 @@ DATABASES = {
         'HOST': '192.168.1.76',
         'PORT': '3306',
     },
+    'db_cymsl_statdb': {
+        'ENGINE': 'django.db.backends.mysql',
+        'NAME': 'db_cymsl_statdb',
+        'USER': 'act',
+        'PASSWORD': '123456',
+        'HOST': '192.168.1.76',
+        'PORT': '3307',
+    },
 }
 
 
@@ -140,6 +147,7 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/1.8/howto/static-files/
 
 STATIC_URL = '/static/'
+STATIC_ROOT = '/usr/share/nginx/static/'
 
 # Logging config
 # https://docs.djangoproject.com/en/1.8/topics/logging/
@@ -193,6 +201,11 @@ LOGGING = {
             'handlers': ['info', 'error', 'console'],
             'level': 'INFO',
             'propagate': True
-        }
+        },
+        'detection.value_format': {
+            'handlers': ['info', 'error', 'console'],
+            'level': 'INFO',
+            'propagate': True
+        },
     }
 }

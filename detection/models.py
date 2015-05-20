@@ -107,6 +107,7 @@ class UIColMap(models.Model):
         ('ratio_two', _('ratio two')),
         ('channel_list', _('channel list')),
         ('zone_list', _('zone list')),
+        ('identity_str', _('anything to string')),
     }
     label = models.CharField(max_length=45)
     sub_menu = models.ForeignKey(UISubMenu)

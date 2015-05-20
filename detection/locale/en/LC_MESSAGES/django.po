@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2015-05-19 21:09+0800\n"
+"POT-Creation-Date: 2015-05-20 23:59+0800\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -81,6 +81,10 @@ msgstr ""
 msgid "zone list"
 msgstr ""
 
+#: models.py:110
+msgid "anything to string"
+msgstr ""
+
 #: templates/detection/base.html:4
 msgid "BlazBlue Revolution Reburning GuardMaster Workbench"
 msgstr ""
@@ -143,4 +147,8 @@ msgstr ""
 
 #: templates/detection/base.html:19
 msgid "List of Servers"
+msgstr ""
+
+#: templates/detection/base.html:20
+msgid "Choose The Panel"
 msgstr ""

@@ -1,6 +1,7 @@
 from detection.models import Tabel
 from guardmaster import common as Common
 from datetime import date, datetime
+import logging
 
 # COL_TYPE_LIST is related with ValueFormat(value_format.py)
 
@@ -49,6 +50,9 @@ class ValueFormat(object):
             self.zone_list = Tabel.get_enum(self.panel_id, Common.E_ZONEID)
         return Common.filter_enum(self.zone_list, id, Common.FORMAT_ERROR)
 
+    def _identity_str(self, x):
+        return str(x)
+
     def _identity(self, x):
         return x
 
@@ -60,7 +64,8 @@ class ValueFormat(object):
             ret = func(v)
         except Exception as e:
             ret = Common.FORMAT_ERROR
-            print 'Exception :', e
+            logger = logging.getLogger(__name__)
+            logger.error('[' + func.__name__ + '] ' + str(e))
         return ret
 
     def _fs_vs(self, fs, vs):

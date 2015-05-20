@@ -12,7 +12,6 @@ urlpatterns = [
 
     url(r'^i18n/', include('django.conf.urls.i18n')),
     url(r'^jsi18n/$', javascript_catalog, js_info_dict),
-    url(r'^polls/', include('polls.urls', namespace="polls")),
     url(r'^detection/', include('detection.urls', namespace='detection')),
     url(r'^operating/', include('operating.urls', namespace='operating')),
     url(r'^admin/', include(admin.site.urls)),
