@@ -11,13 +11,11 @@ import random
 
 
 def index(request):
-    excuse = random.choice(Excuse.objects.all())
     panels = None
     if request.user.is_authenticated():
         panels = Common.get_user_panels(request.user)
 
     data = {
-        'title': excuse,
         'panels': panels,
     }
 
