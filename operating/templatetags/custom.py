@@ -11,7 +11,7 @@ def ts2date(timestamp):
     try:
         ts = int(timestamp)
     except ValueError:
-        return None
+        return ""
     return datetime.datetime.fromtimestamp(ts)
 
 
@@ -19,7 +19,7 @@ def ts2time(timestamp):
     try:
         ts = int(timestamp)
     except ValueError:
-        return None
+        return ""
     if ts == 0:
         return _('Not Time')
     return time.strftime("%Y-%m-%d %H:%M:%S", time.gmtime(ts))
@@ -29,7 +29,7 @@ def second2time(second):
     try:
         ss = int(second)
     except ValueError:
-        return None
+        return ""
     t = {
         'hour': ss / 3600,
         'minute': (ss % 3600) / 60,
@@ -41,8 +41,9 @@ def second2time(second):
 def online(is_online):
     if is_online == 0:
         return _("OFF LINE")
-    else:
+    if is_online == 1:
         return _("ON LINE")
+    return ""
 
 
 def is_range(x, r):
@@ -151,6 +152,19 @@ def enum_building(building_id, panel_id):
     return Common.filter_enum(Common.E_BUILDINGID_LIST, building_id)
 
 
+def rank_val(rank_id, pos):
+    val = [
+        ('', '',),
+        ('', '',),
+        (_("PvP Win Times"), _("PvP Total Times"),),
+        (_("Endless Score"), _("Endless Floor"),),
+        (_("Gang Score"), _("Gang History Score"),),
+        (_("Achievement Score"), _("Achievement Times"),),
+        (_("Fight Offline Name"), _("Fight Offline Kill Man"),),
+        (_("Fight Online Score"), _("Fight Online Win Times"),),
+    ]
+    return val[rank_id][pos]
+
 register.filter(ts2date)
 register.filter(ts2time)
 register.filter(second2time)
@@ -164,3 +178,4 @@ register.filter(enum_equip)
 register.filter(enum_item)
 register.filter(enum_restype)
 register.filter(enum_building)
+register.filter(rank_val)

@@ -30,7 +30,7 @@ def view_template(request, panel_id, url):
     view_init()
 
     panel = get_object_or_404(Panel, pk=panel_id)
-    sub_menu = get_object_or_404(UISubMenu, url=url)
+    sub_menu = Common.get_user_sub_menu(request.user, url)
     menus = Common.get_user_menus(request.user)
 
     table_head = sub_menu.get_col_map_dict(['label'])
@@ -55,7 +55,7 @@ def view_template(request, panel_id, url):
 @Common.competence_required
 def json_template(request, panel_id, t_p, url=Common.URL):
     panel = get_object_or_404(Panel, pk=panel_id)
-    sub_menu = get_object_or_404(UISubMenu, url=url)
+    sub_menu = Common.get_user_sub_menu(request.user, url)
     vf = ValueFormat(sub_menu.get_col_map_vals('col_type'), panel_id)
     ret = None
     if t_p == 'count':
@@ -66,6 +66,8 @@ def json_template(request, panel_id, t_p, url=Common.URL):
         ret = Tabel.gang_qeury_select(sub_menu, panel, request.GET)
     if t_p == 'deal_query':
         ret = Tabel.deal_query_select(sub_menu, panel, request.GET)
+    if t_p == 'contact':
+        ret = Tabel.contact_select(sub_menu, panel, request.GET)
     if ret is None:
         ret = Tabel.count_select(sub_menu, panel, request.GET)
     ret = vf.execute(ret)

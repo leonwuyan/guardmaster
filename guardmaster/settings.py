@@ -134,7 +134,7 @@ LANGUAGES = (
     ('en', _('English')),
 )
 
-TIME_ZONE = 'UTC'
+TIME_ZONE = 'Asia/Shanghai'
 
 USE_I18N = True
 

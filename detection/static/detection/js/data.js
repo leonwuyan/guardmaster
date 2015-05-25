@@ -4,17 +4,17 @@
     var tmp = {};
     $(form).each(function(idx, el) {
       if ($(el).val() != '') {
-	if ($(el).attr('type') == 'checkbox') {
-	  //first time create array
-	  if (typeof(tmp[$(el).attr('name')]) == 'undefined')
-	    tmp[$(el).attr('name')] = Array();
-	  //if input is checkbox
-	  if ($(el).prop('checked'))
-	    tmp[$(el).attr('name')].push($(el).val());
-	} else {
-	  //input isn't checkbox
-	  tmp[$(el).attr('name')] = $(el).val();
-	}
+      	if ($(el).attr('type') == 'checkbox') {
+      	  //first time create array
+      	  if (typeof(tmp[$(el).attr('name')]) == 'undefined')
+      	    tmp[$(el).attr('name')] = Array();
+      	  //if input is checkbox
+      	  if ($(el).prop('checked'))
+      	    tmp[$(el).attr('name')].push($(el).val());
+      	} else {
+      	  //input isn't checkbox
+      	  tmp[$(el).attr('name')] = $(el).val();
+      	}
       }
     });
     return tmp;
@@ -97,53 +97,58 @@
       _buildTable(data);
       return false;
     },
+    'contactJSON': function() {
+      var data = _getData('form#contactForm [name]');
+      _buildTable(data);
+      return false;
+    },
     'createEmail': function() {
       var emailData = _getData('form [name]');
       $.ajax({
-	url: '/update/' + _askData,
-	data: emailData,
-	type: 'POST',
-	success: function(msg){
-	  alert( "Data Saved: " + msg );
-	},
-	error: function(e){
-	  switch (e.status) {
-	    case 401:
-	      location.reload();
-	      break;
-	    default:
-	      alert( "添加失败，请检查输入内容" );
-	      $('button.close').click();
-	      break;
-	  }
-	}
+      	url: '/update/' + _askData,
+      	data: emailData,
+      	type: 'POST',
+      	success: function(msg){
+      	  alert( "Data Saved: " + msg );
+      	},
+      	error: function(e){
+      	  switch (e.status) {
+      	    case 401:
+      	      location.reload();
+      	      break;
+      	    default:
+      	      alert( "添加失败，请检查输入内容" );
+      	      $('button.close').click();
+      	      break;
+      	  }
+      	}
       });
     },
     'createNotify': function() {
       var notifyData = _getData('form#notifyform [name]');
       $.ajax({
-	url: '/update/' + _askData,
-	data: notifyData,
-	type: 'POST',
-	success: function(msg){
-	  alert( "添加成功" );
-	  $('button.close').click();
-	  location.reload();
-	},
-	error: function(e){
-	  switch (e.status) {
-	    case 401:
-	      location.reload();
-	      break;
-	    case 405:
-	      alert( "插入数据库失败，请联系管理员" );
-	      $('button.close').click();
-	      break;
-	    default:
-	      alert( "添加失败，请检查输入内容" );
-	      break;
-	  }
-	}
+      	url: '/update/' + _askData,
+      	data: notifyData,
+      	type: 'POST',
+      	success: function(msg){
+      	  alert( "添加成功" );
+      	  $('button.close').click();
+      	  location.reload();
+      	},
+      	error: function(e){
+      	  switch (e.status) {
+      	    case 401:
+      	      location.reload();
+      	      break;
+      	    case 405:
+      	      alert( "插入数据库失败，请联系管理员" );
+      	      $('button.close').click();
+      	      break;
+      	    default:
+      	      alert( "添加失败，请检查输入内容" );
+      	      break;
+      	  }
+      	}
       });
     },
     'updatePermission': function() {
@@ -159,15 +164,15 @@
           location.reload();
         },
         error: function(e){
-	  switch (e.status) {
-	    case 401:
-	      location.reload();
-	      break;
-	    default:
-	      alert( "更新失败" );
-	      $('button.close').click();
-	      break;
-	  }
+      	  switch (e.status) {
+      	    case 401:
+      	      location.reload();
+      	      break;
+      	    default:
+      	      alert( "更新失败" );
+      	      $('button.close').click();
+      	      break;
+      	  }
         }
       });
     },

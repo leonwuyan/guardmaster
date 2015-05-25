@@ -1,23 +1,32 @@
 from django.conf.urls import url
-from . import views as operating_views
-from detection import auth_views, views
+from . import views
+from detection import auth_views
+from detection import views as detection_views
 
 urlpatterns = [
     url(
         r'^(?P<panel_id>[0-9]+)/(?P<t_p>[_A-Za-z]+)/(?P<url>[_A-Za-z]+).json$',
-        views.json_template,
+        detection_views.json_template,
         name='json_template'),
     url(
         r'^(?P<panel_id>[0-9]+)/notify/(?P<url>[_A-Za-z]+)$',
-        operating_views.notify,
+        views.notify,
         name='notify'),
     url(
         r'^(?P<panel_id>[0-9]+)/mail/(?P<url>[_A-Za-z]+)$',
-        operating_views.mail,
+        views.mail,
         name='mail'),
     url(
         r'^(?P<panel_id>[0-9]+)/single/(?P<url>[_A-Za-z]+)$',
-        operating_views.single,
+        views.single,
         name='single'),
+    url(
+        r'^(?P<panel_id>[0-9]+)/contact/(?P<url>[_A-Za-z]+)$',
+        views.contact,
+        name='contact'),
+    url(
+        r'^(?P<panel_id>[0-9]+)/contact/(?P<issue_id>[0-9]+)$',
+        views.contact_reply,
+        name='contact_reply'),
     url(r'^$', auth_views.index, name='default_index'),
 ]

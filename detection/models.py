@@ -56,10 +56,11 @@ class UISubMenu(models.Model):
         ('operating:notify', _('notify')),
         ('operating:mail', _('mail')),
         ('operating:single', _('single')),
+        ('operating:contact', _('contact')),
     }
     label = models.CharField(max_length=45)
     main_menu = models.ForeignKey(UIMainMenu, blank=True, null=True)
-    url = models.CharField(max_length=200, db_index=True, unique=True)
+    url = models.CharField(max_length=200, db_index=True)
     table_name = models.CharField(max_length=45, blank=True, null=True)
     category = models.CharField(
         max_length=45,
@@ -108,6 +109,7 @@ class UIColMap(models.Model):
         ('channel_list', _('channel list')),
         ('zone_list', _('zone list')),
         ('identity_str', _('anything to string')),
+        ('contact_reply', _('contact to reply')),
     }
     label = models.CharField(max_length=45)
     sub_menu = models.ForeignKey(UISubMenu)
@@ -159,9 +161,30 @@ class Tabel(object):
         return cursor.fetchall()
 
     @classmethod
+    def insert_unsafe(self, panel, condition):
+        cursor = connections[panel.db_aliases].cursor()
+        sql = "INSERT INTO %(table_name)s %(cols)s VALUES %(vals)s" % condition
+        logger = logging.getLogger(__name__)
+        logger.info(sql)
+        cursor.execute(sql)
+        return cursor.fetchall()
+
+    @classmethod
     def select(self, sub_menu, panel, condition=None):
         try:
             ret = self.select_unsafe(sub_menu, panel, condition)
+        except Exception as e:
+            ret = []
+            logger = logging.getLogger(__name__)
+            logger.error(e)
+        return ret
+
+    @classmethod
+    def insert(self, panel, condition):
+        if condition is None:
+            return []
+        try:
+            ret = self.insert_unsafe(panel, condition)
         except Exception as e:
             ret = []
             logger = logging.getLogger(__name__)
@@ -245,6 +268,36 @@ class Tabel(object):
             condition = condition + (r,)
         condition = " OR ".join(condition)
         ret = self.select(sub_menu, panel, condition)
+        return ret
+
+    @classmethod
+    def contact_select(self, sub_menu, panel, request_get):
+        condition = None
+        if 'hostname' in request_get:
+            condition = "hostname = '" + request_get.get('hostname') + "'"
+        if 'id' in request_get:
+            condition = "issueid = " + request_get.get('id')
+        ret = self.select(sub_menu, panel, condition)
+        return ret
+
+    @classmethod
+    def contact_insert(self, panel, vals):
+        vals = "', '".join(vals)
+        vals = "('" + vals + "')"
+        condition = {
+            'table_name': 'tbClientResponse',
+            'cols': "(`issueid`, `title`, `content`, `updatetime`, `updateoper`, `emailID`)",
+            'vals': vals,
+        }
+        ret = self.insert(panel, condition)
+
+    @classmethod
+    def contact_reply_select(self, panel, issue_id):
+        sub_menu = get_object_or_404(UISubMenu, url=Common.CONTACT_REPLY)
+        keys = sub_menu.get_col_map_vals('col_name')
+        condition = "issueid = " + issue_id
+        ret = self.select(sub_menu, panel, condition)
+        ret = Common.kvs(keys, ret)
         return ret
 
     @classmethod

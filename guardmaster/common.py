@@ -4,6 +4,7 @@ from django.http import HttpResponseRedirect
 
 URL = 'total'
 ENUM = 'enum'
+CONTACT_REPLY = 'contact_reply'
 E_BUILDINGID = 'BuildingId'
 E_CHANNELID = 'ChannelID'
 E_CHGREASON = 'ChgReason'
@@ -57,6 +58,16 @@ def get_user_menus(user):
     main_menus = apply(chain, main_menus)
     main_menus = map(lambda x: x.get_sub_menu_all(), main_menus)
     return main_menus
+
+
+def get_user_sub_menu(user, url):
+    groups = user.groups.all()
+    main_menus = map(lambda x: x.uimainmenu_set.all(), groups)
+    main_menus = apply(chain, main_menus)
+    sub_menus = map(lambda x: x.uisubmenu_set.all(), main_menus)
+    sub_menus = apply(chain, sub_menus)
+    sub_menu = first(filter(lambda x: x.url == url, sub_menus))
+    return sub_menu
 
 
 def competence_required(function):

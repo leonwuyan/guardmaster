@@ -1,0 +1,144 @@
+{% extends "detection/base.html" %}
+{% block content %}
+{% load custom i18n %}
+{% trans "Issue Info" as t_issue_info %}
+{% trans "Issue ID" as t_issue_id %}
+{% trans "Uid" as t_uid %}
+{% trans "Uin" as t_uin %}
+{% trans "Name" as t_name %}
+{% trans "Hostname" as t_hostname %}
+{% trans "Channel ID" as t_channel_id %}
+{% trans "Platform" as t_platform %}
+{% trans "Version" as t_version %}
+{% trans "Issue Type" as t_issue_type %}
+{% trans "Issue Time" as t_issue_time %}
+{% trans "Issue Content" as t_issue_content %}
+{% trans "History Reply" as t_history_reply %}
+{% trans "Reply Mail" as t_reply_mail %}
+{% trans "Mail Title" as t_mail_title %}
+{% trans "Mail Content" as t_mail_content %}
+{% trans "4 Words Limited" as t_4_words_limited %}
+{% trans "120 Words Limited" as t_120_words_limited %}
+{% trans "Reply" as t_reply %}
+{% trans "Return List" as t_return_list %}
+<script type="text/javascript">
+ $(document).ready(function() {
+   $('.input-datepicker').datepicker({
+     format: "yyyy-mm-dd",
+     weekStart: 0,
+     language: gettext('en'),
+     autoclose: true,
+     todayHighlight: true
+   });
+ });
+</script>
+<div class="container-fluid white-bg">
+  {% if issue %}
+  <div class="panel panel-primary">
+    <div class="panel-heading">{{ t_issue_info }}</div>
+    <!-- Table -->
+    <table class="table table-striped">
+      <tbody>
+        <tr>
+          <td><b>{{ t_issue_id }}</b></td>
+          <td>{{ issue.issueid }}</td>
+          <td><b>{{ t_uid }}</b></td>
+          <td>{{ issue.uid }}</td>
+        </tr>
+        <tr>
+          <td><b>{{ t_uin }}</b></td>
+          <td>{{ issue.uin }}</td>
+          <td><b>{{ t_name }}</b></td>
+          <td>{{ issue.name }}</td>
+        </tr>
+        <tr>
+          <td><b>{{ t_hostname }}</b></td>
+          <td>{{ issue.hostname }}</td>
+          <td><b>{{ t_channel_id }}</b></td>
+          <td>{{ issue.channelid }}</td>
+        </tr>
+        <tr>
+          <td><b>{{ t_platform }}</b></td>
+          <td>{{ issue.platform }}</td>
+          <td><b>{{ t_version }}</b></td>
+          <td>{{ issue.version }}</td>
+        </tr>
+        <tr>
+          <td><b>{{ t_issue_type }}</b></td>
+          <td>{{ issue.issuetype }}</td>
+          <td><b>{{ t_issue_time }}</b></td>
+          <td>{{ issue.opentime }}</td>
+        </tr>
+        <tr>
+          <td><b>{{ t_issue_content }}</b></td>
+          <td colspan="3">{{ issue.issuecontent }}</td>
+        </tr>
+      </tbody>
+    </table>
+    <ul class="list-group">
+      <li class="list-group-item"><b>{{ t_history_reply }}</b></li>
+      {% for r in reply %}
+      <li class="list-group-item">
+        <span>{{ r.title }}</span>
+        <span>[{{ r.updateoper }}]</span>
+        <span>{{ r.updatetime }}</span>
+      </li>
+      <li class="list-group-item">&emsp;&emsp;{{ r.content }}</li>
+      {% endfor %}
+    </ul>
+    <ul class="list-group">
+      <li class="list-group-item"><b>{{ t_reply_mail }}</b></li>
+      <li class="list-group-item">
+        <form class="form" role="form" method="post" action="{% url 'operating:contact_reply' panel.id issue.issueid %}">
+        {% csrf_token %}
+          <div class="form-group">
+            <label for="title">{{ t_mail_title }}</label><span>&emsp;({{ t_4_words_limited }})</span>
+            <input type="text" class="form-control" id="title" name="title">
+          </div>
+          <div class="form-group">
+            <label for="content">{{ t_mail_content }}</label><span>&emsp;({{ t_120_words_limited }})</span>
+            <input type="text" class="form-control" id="content" name="content">
+          </div>
+          <button type="submit" class="btn btn-primary btn-sm">{{t_reply}}</button>
+          <a href="{% url 'operating:contact' panel.id 'contact' %}">{{t_return_list}}</a>
+        </form>
+      </li>
+    </ul>
+  </div>
+  {% else %}
+  <div class="row">
+    <form class="form" role="form" id="contactForm">
+      <div class="form-group" style="margin-bottom: 5px">
+        <label>{{t_list_of_servers}}</label>
+        <select class="form-control" name="hostname">
+          {% for server in servers %}
+          <option value="{{server.hostname}}">{{server.label}}</option>
+          {% endfor %}
+        </select>
+      </div>
+
+      <button type="submit" class="btn btn-default btn-sm" id="count-button"onclick="return dataAccess.contactJSON()">{{t_query}}</button>
+    </form>
+
+    <p class="sub-header"></p>
+    <div class="table-responsive">
+      <table class="table table-bordered table-striped" id="sources">
+    <thead>
+      <tr>
+        {% for table in table_head %}
+        <th>{{table.label}}</th>
+        {% endfor %}
+      </tr>
+    </thead>
+      </table>
+    </div>
+  </div>
+  {% endif %}
+  <center style='color: #999; padding-top: 20px; font-family: "arial","NSimSun","SimSun","STSong","AR PL SungtiL GB","TW\-Sung","WenQuanYi Bitmap Song"; font-size: 14px; font-weight: bold;'>{{excuse}}</center>
+</div>
+<script type="text/javascript">
+ $(document).ready(function() {
+   queryButton.initDate();
+ });
+</script>
+{% endblock %}

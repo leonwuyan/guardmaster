@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2015-05-20 23:59+0800\n"
-"PO-Revision-Date: 2015-05-19 21:48+0800\n"
+"POT-Creation-Date: 2015-05-25 23:04+0800\n"
+"PO-Revision-Date: 2015-05-25 23:17+0800\n"
 "Last-Translator: Raynor <raynor41@gmail.com>\n"
 "Language-Team: \n"
 "Language: zh_TW\n"
@@ -200,6 +200,86 @@ msgstr "英雄塔"
 msgid "Resources Store"
 msgstr "資源倉庫"
 
+#: templates/operating/contact.html:4
+msgid "Issue Info"
+msgstr "問題信息"
+
+#: templates/operating/contact.html:5
+msgid "Issue ID"
+msgstr "問題ID"
+
+#: templates/operating/contact.html:6
+msgid "Uid"
+msgstr "玩家ID"
+
+#: templates/operating/contact.html:7
+msgid "Uin"
+msgstr "用戶ID"
+
+#: templates/operating/contact.html:8
+msgid "Name"
+msgstr "名稱"
+
+#: templates/operating/contact.html:9
+msgid "Hostname"
+msgstr "伺服器域名"
+
+#: templates/operating/contact.html:10
+msgid "Channel ID"
+msgstr "渠道"
+
+#: templates/operating/contact.html:11
+msgid "Platform"
+msgstr "平台"
+
+#: templates/operating/contact.html:12
+msgid "Version"
+msgstr "客戶端版本"
+
+#: templates/operating/contact.html:13
+msgid "Issue Type"
+msgstr "問題類型"
+
+#: templates/operating/contact.html:14
+msgid "Issue Time"
+msgstr "留言時間"
+
+#: templates/operating/contact.html:15
+msgid "Issue Content"
+msgstr "問題內容"
+
+#: templates/operating/contact.html:16
+msgid "History Reply"
+msgstr "歷史回覆列表"
+
+#: templates/operating/contact.html:17
+msgid "Reply Mail"
+msgstr "郵件回覆"
+
+#: templates/operating/contact.html:18
+msgid "Mail Title"
+msgstr "郵件題目"
+
+#: templates/operating/contact.html:19
+msgid "Mail Content"
+msgstr "郵件內容"
+
+#: templates/operating/contact.html:20
+msgid "4 Words Limited"
+msgstr "最多可以4個文字"
+
+#: templates/operating/contact.html:21
+msgid "120 Words Limited"
+msgstr "最多可以120個文字"
+
+#: templates/operating/contact.html:22
+msgid "Reply"
+msgstr "回覆"
+
+#: templates/operating/contact.html:23
+msgid "Return List"
+msgstr "返回問題列表"
+
 #: templates/operating/hero_info.html:2
 msgid "Hero Info"
 msgstr "英雄信息"
@@ -379,6 +459,22 @@ msgstr "今天是否挑戰"
 msgid "Today's Wipeout"
 msgstr "今天是否掃蕩"
 
+#: templates/operating/rank_list.html:2
+msgid "Rank List"
+msgstr "排行榜列表"
+
+#: templates/operating/rank_list.html:3
+msgid "Rank ID"
+msgstr "排行榜ID"
+
+#: templates/operating/rank_list.html:4
+msgid "Rank Name"
+msgstr "排行榜名稱"
+
+#: templates/operating/rank_list.html:5
+msgid "Rank Pos"
+msgstr "排行榜位置"
+
 #: templatetags/custom.py:24
 msgid "Not Time"
 msgstr "無時間"
@@ -396,18 +492,66 @@ msgstr "離線"
 msgid "ON LINE"
 msgstr "在線"
 
-#: templatetags/custom.py:114
+#: templatetags/custom.py:115
 msgid "Novice Dungeon List"
 msgstr "新手關卡"
 
-#: templatetags/custom.py:116
+#: templatetags/custom.py:117
 msgid "Normal Dungeon List"
 msgstr "普通關卡"
 
-#: templatetags/custom.py:118
+#: templatetags/custom.py:119
 msgid "Elite Dungeon List"
 msgstr "精英關卡"
 
-#: templatetags/custom.py:120
+#: templatetags/custom.py:121
 msgid "Endless Dungeon List"
 msgstr "無盡之塔"
+
+#: templatetags/custom.py:159
+msgid "PvP Win Times"
+msgstr "掠奪勝利場次"
+
+#: templatetags/custom.py:159
+msgid "PvP Total Times"
+msgstr "掠奪總場次"
+
+#: templatetags/custom.py:160
+msgid "Endless Score"
+msgstr "無盡之塔積分"
+
+#: templatetags/custom.py:160
+msgid "Endless Floor"
+msgstr "無盡之塔層數"
+
+#: templatetags/custom.py:161
+msgid "Gang Score"
+msgstr "聯盟當前積分"
+
+#: templatetags/custom.py:161
+msgid "Gang History Score"
+msgstr "聯盟歷史最高積分"
+
+#: templatetags/custom.py:162
+msgid "Achievement Score"
+msgstr "成就分數"
+
+#: templatetags/custom.py:162
+msgid "Achievement Times"
+msgstr "成就完成數量"
+
+#: templatetags/custom.py:163
+msgid "Fight Offline Name"
+msgstr "線下堆棧稱號"
+
+#: templatetags/custom.py:163
+msgid "Fight Offline Kill Man"
+msgstr "線下堆棧人頭"
+
+#: templatetags/custom.py:164
+msgid "Fight Online Score"
+msgstr "線上堆棧積分"
+
+#: templatetags/custom.py:164
+msgid "Fight Online Win Times"
+msgstr "線上堆棧勝場"

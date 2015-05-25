@@ -1,7 +1,7 @@
 {% load custom i18n %}
 {% trans "Hero Info" as t_hero_info %}
 {% trans "Hero ID" as t_hero_id %}
-{% trans "Hero Name" as t_hero_Name %}
+{% trans "Hero Name" as t_hero_name %}
 {% trans "Exp." as t_exp %}
 {% trans "Emblem" as t_emblem %}
 {% trans "ID" as t_id %}
@@ -20,7 +20,7 @@
     {% with equiped_info=player.package_data.hero_equiped_info|equiped:k.hero_id %}
     <li class="list-group-item">
       <span>{{ t_hero_id }} :{{ k.hero_id }}</span>
-      <span>{{ t_hero_Name }} :{{ k.hero_id|enum_hero:panel.id }}</span>
+      <span>{{ t_hero_name }} :{{ k.hero_id|enum_hero:panel.id }}</span>
       <span>{{ t_level }} :{{ k.level }}</span>
       <span>{{ t_exp }} :{{ k.exp }}</span>
       <span>{{ t_grow_up }} :{{ k.growup }}</span>

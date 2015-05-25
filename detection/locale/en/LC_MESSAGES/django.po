@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2015-05-20 23:59+0800\n"
+"POT-Creation-Date: 2015-05-25 23:04+0800\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -45,44 +45,52 @@ msgstr ""
 msgid "single"
 msgstr ""
 
-#: models.py:68
+#: models.py:59
+msgid "contact"
+msgstr ""
+
+#: models.py:69
 msgid "Category is required when Main menu is selected"
 msgstr ""
 
-#: models.py:102
+#: models.py:103
 msgid "date"
 msgstr ""
 
-#: models.py:103
+#: models.py:104
 msgid "time"
 msgstr ""
 
-#: models.py:104
+#: models.py:105
 msgid "timestamp to date"
 msgstr ""
 
-#: models.py:105
+#: models.py:106
 msgid "timestamp to time"
 msgstr ""
 
-#: models.py:106
+#: models.py:107
 msgid "float two"
 msgstr ""
 
-#: models.py:107
+#: models.py:108
 msgid "ratio two"
 msgstr ""
 
-#: models.py:108
+#: models.py:109
 msgid "channel list"
 msgstr ""
 
-#: models.py:109
+#: models.py:110
 msgid "zone list"
 msgstr ""
 
-#: models.py:110
+#: models.py:111
 msgid "anything to string"
+msgstr ""
+
+#: models.py:112
+msgid "contact to reply"
 msgstr ""
 
 #: templates/detection/base.html:4
@@ -151,4 +159,8 @@ msgstr ""
 
 #: templates/detection/base.html:20
 msgid "Choose The Panel"
+msgstr ""
+
+#: value_format.py:63
+msgid "reply"
 msgstr ""

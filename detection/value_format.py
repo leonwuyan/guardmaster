@@ -1,3 +1,5 @@
+from django.utils.translation import ugettext as _
+from django.core.urlresolvers import reverse
 from detection.models import Tabel
 from guardmaster import common as Common
 from datetime import date, datetime
@@ -43,18 +45,24 @@ class ValueFormat(object):
     def _channel_list(self, id):
         if self.channel_list is None:
             self.channel_list = Tabel.get_enum(self.panel_id, Common.E_CHANNELID)
-        return Common.filter_enum(self.channel_list, id, Common.FORMAT_ERROR)
+        return Common.filter_enum(self.channel_list, id, id)
 
     def _zone_list(self, id):
         if self.zone_list is None:
             self.zone_list = Tabel.get_enum(self.panel_id, Common.E_ZONEID)
-        return Common.filter_enum(self.zone_list, id, Common.FORMAT_ERROR)
+        return Common.filter_enum(self.zone_list, id, id)
 
     def _identity_str(self, x):
         return str(x)
 
     def _identity(self, x):
         return x
+
+    def _contact_reply(self, x):
+        url = reverse('operating:contact_reply', args=(self.panel_id, x,))
+        reply = _("reply")
+        button = "<a href='" + url + "'>" + reply + "</a>"
+        return button
 
     def _f_v(self, f, v):
         if f is None:

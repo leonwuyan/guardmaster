@@ -12,6 +12,7 @@ import ctypes
 import struct
 import binascii
 import xinge
+from pprint import pprint
 
 # content = u'推送测试,全部设备'
 # title = u'安卓抬头'
@@ -123,7 +124,10 @@ class ServerSocket(object):
         address = (ip, port)
         s = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
         s.settimeout(5.0)
-        s.connect(address)
+        try:
+            s.connect(address)
+        except Exception, e:
+            return {'result': -1}
         ret = s.send(content)
         data = self.recv_pkg(s, self.pkg_head_length)
         if data is None:
@@ -231,11 +235,11 @@ class ServerSocket(object):
         r = {'uid': uid, 'lock_time': lock_time}
         return self._get(p, r)
 
-    def ban_player_chat(self, uid, ban_time, uin):
-        if uid is None or ban_time is None or uin is None:
+    def ban_player_chat(self, uid, ban_time, uin, world_id):
+        if uid is None or ban_time is None or uin is None or world_id is None:
             return self.empty
         p = 'GM_BAN_PLAYER_CHAT_REQ'
-        r = {'uid': uid, 'ban_time': ban_time, 'uin': uin}
+        r = {'uid': uid, 'ban_time': ban_time, 'uin': uin, 'world_id': world_id}
         return self._get(p, r)
 
     def kick_player(self, uid, uin, world_id):
@@ -301,31 +305,3 @@ class ServerSocket(object):
             'unlock_til_dungeon_id': unlock_til_dungeon_id,
         }
         return self._get(p, r)
-
-"""
-#
-ss = ServerSocket('192.168.1.87', 9135)
-pprint(ss.get_player_account(uid=10001))
-pprint(ss.get_player_world_info('421289057'))
-pprint(ss.get_player_base_info(10001, 1))
-pprint(ss.get_rank_list(1, 1, 100, 1))
-pprint(ss.get_rank_pos(10001, 1, 1))
-pprint(ss.get_player_pve_info(10001, 1))
-pprint(ss.get_player_building_and_package(10001, 1))
-pprint(ss.lock_player(10001, 0))
-pprint(ss.ban_player_chat(10001, 0, '421289057'))
-pprint(ss.kick_player(10001, '421289057', 1))
-pprint(ss.send_mail(
-    [10001, 10002],
-    1,
-    {'mail_title': u'蛋蛋是猪', 'mail_content': u'测试内容', 'mail_interval': 7200},
-    [
-        {'res_type': 1, 'res_id': 0, 'res_count': 100},
-        {'res_type': 2, 'res_id': 0, 'res_count': 100}
-    ]
-))
-pprint(ss.change_player_attr(10001, '421289057', 1, 1, 0, 300))
-pprint(ss.change_player_hero_level(10001, '421289057', 1, 1, 10, 100000))
-pprint(ss.change_player_vip_level(10001, 1, 10))
-pprint(ss.change_player_unlock_dungeon(10001, '421289057', 1, 10))
-"""

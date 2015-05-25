@@ -1,0 +1,27 @@
+{% load custom i18n %}
+{% trans "Rank List" as t_rank_list %}
+{% trans "Rank ID" as t_rank_id %}
+{% trans "Rank Name" as t_rank_name %}
+{% trans "Rank Pos" as t_rank_pos %}
+<ul class="list-group">
+  <li class="list-group-item"><h4><b>{{ t_rank_list }}</b></h4></li>
+  {% for k in player.rank_list %}
+    {% if  k.rank_info.rank_pos > 0 %}
+    {% with val0=k.rank_info.rank_info.rank_val|first val1=k.rank_info.rank_info.rank_val|last %}
+    <li class="list-group-item">
+    {% if k.rank_id == 1 %}
+      <span>{{ t_rank_id }} :{{ k.rank_id }}</span>
+      <span>{{ t_rank_name }} :{{ k.rank_name }}</span>
+      <span>{{ t_rank_pos }} :{{ k.rank_info.rank_pos }}</span>
+    {% else %}
+      <span>{{ t_rank_id }} :{{ k.rank_id }}</span>
+      <span>{{ t_rank_name }} :{{ k.rank_name }}</span>
+      <span>{{ t_rank_pos }} :{{ k.rank_info.rank_pos }}</span>
+      <span>{{ k.rank_id|rank_val:0 }} :{{val0.val}}</span>
+      <span>{{ k.rank_id|rank_val:1 }} :{{val1.val}}</span>
+    {% endif %}
+    </li>
+    {% endwith %}
+    {% endif %}
+  {% endfor %}
+</ul>
