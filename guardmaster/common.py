@@ -1,5 +1,6 @@
 from itertools import chain
 from django.http import HttpResponseRedirect
+import time
 
 
 URL = 'total'
@@ -42,6 +43,10 @@ def kv(k, v):
 
 def kvs(k, vs):
     return map(lambda x: kv(k, x), vs)
+
+
+def now():
+    return time.strftime('%Y-%m-%d %H:%M:%S', time.localtime(time.time()))
 
 
 def get_user_panels(user):

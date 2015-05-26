@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2015-05-25 23:04+0800\n"
+"POT-Creation-Date: 2015-05-26 21:44+0800\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -91,6 +91,70 @@ msgstr ""
 
 #: templates/operating/base_info.html:20
 msgid "Times Of Growup"
+msgstr ""
+
+#: templates/operating/base_info.html:21
+msgid "Account Ban Time"
+msgstr ""
+
+#: templates/operating/base_info.html:22
+msgid "Chat Ban Time"
+msgstr ""
+
+#: templates/operating/base_info.html:23
+msgid "Total Recharge (VIP Level)"
+msgstr ""
+
+#: templates/operating/base_info.html:24
+msgid "Add 100k"
+msgstr ""
+
+#: templates/operating/base_info.html:25
+msgid "Add 10k"
+msgstr ""
+
+#: templates/operating/base_info.html:26
+msgid "Kick Player"
+msgstr ""
+
+#: templates/operating/base_info.html:27
+msgid "Account Ban 7 Days"
+msgstr ""
+
+#: templates/operating/base_info.html:28
+msgid "Account Ban 30 Days"
+msgstr ""
+
+#: templates/operating/base_info.html:29
+msgid "Chat Ban 7 Days"
+msgstr ""
+
+#: templates/operating/base_info.html:30
+msgid "Chat Ban 30 Days"
+msgstr ""
+
+#: templates/operating/base_info.html:31
+msgid "Un Ban"
+msgstr ""
+
+#: templates/operating/base_info.html:32
+msgid "Ohter Contorl"
+msgstr ""
+
+#: templates/operating/base_info.html:33
+msgid "Add 100k Exp. Items"
+msgstr ""
+
+#: templates/operating/base_info.html:34
+msgid "Unlock 50 Dungeon"
+msgstr ""
+
+#: templates/operating/base_info.html:35
+msgid "Unlock 100 Dungeon"
+msgstr ""
+
+#: templates/operating/base_info.html:36
+msgid "Unlock 150 Dungeon"
 msgstr ""
 
 #: templates/operating/building_info.html:2
@@ -474,7 +538,7 @@ msgstr ""
 msgid "Rank Pos"
 msgstr ""
 
-#: templatetags/custom.py:24
+#: templatetags/custom.py:24 templatetags/custom.py:171
 msgid "Not Time"
 msgstr ""
 

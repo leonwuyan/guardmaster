@@ -21,17 +21,6 @@
 {% trans "120 Words Limited" as t_120_words_limited %}
 {% trans "Reply" as t_reply %}
 {% trans "Return List" as t_return_list %}
-<script type="text/javascript">
- $(document).ready(function() {
-   $('.input-datepicker').datepicker({
-     format: "yyyy-mm-dd",
-     weekStart: 0,
-     language: gettext('en'),
-     autoclose: true,
-     todayHighlight: true
-   });
- });
-</script>
 <div class="container-fluid white-bg">
   {% if issue %}
   <div class="panel panel-primary">

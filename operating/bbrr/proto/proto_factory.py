@@ -552,6 +552,9 @@ def create_pb(hash):
     if hash == StringHash.calculate_hash('ResTutorialInfo'):
         return getattr(guard_proto_pb2, 'ResTutorialInfo')()
     
+    if hash == StringHash.calculate_hash('ResHeroImageInfo'):
+        return getattr(guard_proto_pb2, 'ResHeroImageInfo')()
+    
     if hash == StringHash.calculate_hash('ST_ACTION_DESC'):
         return getattr(guard_proto_pb2, 'ST_ACTION_DESC')()
     
@@ -2283,6 +2286,9 @@ def get_pb_name(hash):
     if hash == StringHash.calculate_hash('ResTutorialInfo'):
         return 'ResTutorialInfo'
     
+    if hash == StringHash.calculate_hash('ResHeroImageInfo'):
+        return 'ResHeroImageInfo'
+    
     if hash == StringHash.calculate_hash('ST_ACTION_DESC'):
         return 'ST_ACTION_DESC'
     
@@ -3810,7 +3816,7 @@ def res(f, pb):
         return f(pb, attrs)
     
     if p == 'ResMiscInfo':
-        attrs = ['player_max_level', 'monster_max_level', 'init_crystal', 'init_gold', 'init_money', 'init_slot_id', 'init_building_info', 'init_hero_id', 'init_unlock_dun_id', 'endless_limit', 'combo_max_time', 'over_hit_max_time', 'over_hit_max_hp_percent', 'over_hit_add_score_ratio', 'left_time_add_score_ratio', 'over_hit_production', 'create_gang_cost_gold', 'fighting_hprate', 'fighting_atk_rate', 'gang_battle_dun_id', 'gang_battle_round_time_limit', 'endless_chamber_size_factor', 'endless_boss_hp_recover_drop_ratio', 'endless_boss_hp_recover_drop_count', 'rank_battle_dungeon_id', 'rank_battle_round_time_limit', 'rank_battle_base_count', 'rank_battle_buy_count_base_cost', 'rank_battle_unlock_role_cnt', 'daily_reset_time', 'endless_room_cnt', 'steal_battle_money_res_dun_id', 'steal_battle_gold_res_dun_id', 'steal_battle_crystal_res_dun_id', 'steal_battle_exp_res_dun_id', 'endless_limit_cnt', 'endless_refresh_hour', 'endless_refresh_min', 'endless_refresh_sec', 'wipe_out_need_item_id', 'buy_wipe_out_item_info', 'goods_common_count', 'goods_special_count', 'damage_ratio_factor', 'hp_ratio_factor', 'skill_point_display_item_id', 'pve_unlock_info', 'league_battle_small_city_lv', 'league_battle_mid_city_lv', 'league_battle_big_city_lv', 'rank_battle_hero_hide_level1', 'rank_battle_hero_hide_level2', 'rank_battle_hero_hide_level3', 'power_refresh_hour', 'power_refresh_min', 'power_refresh_sec', 'rank_battle_count_refresh_hour', 'rank_battle_count_refresh_min', 'rank_battle_count_refresh_sec', 'shop_count_refresh_hour', 'shop_count_refresh_min', 'shop_count_refresh_sec', 'fail_power', 'money_confirm_threshold', 'endless_monster_type_score', 'gang_battle_small_city_score', 'gang_battle_moderate_city_score', 'gang_battle_big_city_score', 'elite_mode_chances', 'elite_count_refresh_hour', 'elite_count_refresh_min', 'elite_count_refresh_sec', 'assist_fight_times_limit', 'online_battle_dun_id', 're_sign_cost_type', 're_sign_cost_price', 'init_hero_main_task_unlock_dun_id', 'normal_elite_hp_rate', 'normal_elite_st_rate', 'normal_boss_hp_rate', 'normal_boss_st_rate', 'endless_elite_hp_rate', 'endless_elite_st_rate', 'endless_boss_hp_rate', 'endless_boss_st_rate', 'elite_buy_count_cost_type', 'elite_buy_count_cost_id', 'elite_buy_count_cost_count', 'elite_buy_max_count', 'offline_battle_dun_id', 'role_relation_unlock_level', 'rank_battle_goods_common_count', 'rank_battle_goods_special_count', 'online_battle_init_score', 'online_battle_times_perday', 'online_battle_score_calc_ratio_a', 'online_battle_score_calc_ratio_b', 'online_battle_search_score', 'online_battle_match_wait_seconds', 'online_battle_win_point_ratio', 'online_battle_loseer_win_point_ratio', 'endless_wipeout_price_per_floor', 'game_play_mode_damage_rate', 'first_reward_info', 'loading_tip_count', 'vip_goods_common_count', 'vip_goods_special_count', 'vip_draw_all_unlock_level', 'steal_battle_times_limit', 'friend_power_cnt', 'damage_float_up', 'damage_float_down', 'max_recv_power_times_one_day', 'ten_wipeout_viplimit', 'vip_shop_unlock_viplevel']
+        attrs = ['player_max_level', 'monster_max_level', 'init_crystal', 'init_gold', 'init_money', 'init_slot_id', 'init_building_info', 'init_hero_id', 'init_unlock_dun_id', 'endless_limit', 'combo_max_time', 'over_hit_max_time', 'over_hit_max_hp_percent', 'over_hit_add_score_ratio', 'left_time_add_score_ratio', 'over_hit_production', 'create_gang_cost_gold', 'fighting_hprate', 'fighting_atk_rate', 'gang_battle_dun_id', 'gang_battle_round_time_limit', 'endless_chamber_size_factor', 'endless_boss_hp_recover_drop_ratio', 'endless_boss_hp_recover_drop_count', 'rank_battle_dungeon_id', 'rank_battle_round_time_limit', 'rank_battle_base_count', 'rank_battle_buy_count_base_cost', 'rank_battle_unlock_role_cnt', 'daily_reset_time', 'endless_room_cnt', 'endless_floor_cnt_per_milestone', 'steal_battle_money_res_dun_id', 'steal_battle_gold_res_dun_id', 'steal_battle_crystal_res_dun_id', 'steal_battle_exp_res_dun_id', 'endless_refresh_hour', 'endless_refresh_min', 'endless_refresh_sec', 'wipe_out_need_item_id', 'buy_wipe_out_item_info', 'goods_common_count', 'goods_special_count', 'damage_ratio_factor', 'hp_ratio_factor', 'skill_point_display_item_id', 'pve_unlock_info', 'league_battle_small_city_lv', 'league_battle_mid_city_lv', 'league_battle_big_city_lv', 'rank_battle_hero_hide_level1', 'rank_battle_hero_hide_level2', 'rank_battle_hero_hide_level3', 'power_refresh_hour', 'power_refresh_min', 'power_refresh_sec', 'rank_battle_count_refresh_hour', 'rank_battle_count_refresh_min', 'rank_battle_count_refresh_sec', 'shop_count_refresh_hour', 'shop_count_refresh_min', 'shop_count_refresh_sec', 'fail_power', 'money_confirm_threshold', 'endless_monster_type_score', 'gang_battle_small_city_score', 'gang_battle_moderate_city_score', 'gang_battle_big_city_score', 'elite_mode_chances', 'elite_count_refresh_hour', 'elite_count_refresh_min', 'elite_count_refresh_sec', 'assist_fight_times_limit', 'online_battle_dun_id', 're_sign_cost_type', 're_sign_cost_price', 'init_hero_main_task_unlock_dun_id', 'normal_elite_hp_rate', 'normal_elite_st_rate', 'normal_boss_hp_rate', 'normal_boss_st_rate', 'endless_elite_hp_rate', 'endless_elite_st_rate', 'endless_boss_hp_rate', 'endless_boss_st_rate', 'elite_buy_count_cost_type', 'elite_buy_count_cost_id', 'elite_buy_count_cost_count', 'elite_buy_max_count', 'offline_battle_dun_id', 'role_relation_unlock_level', 'rank_battle_goods_common_count', 'rank_battle_goods_special_count', 'online_battle_init_score', 'online_battle_times_perday', 'online_battle_score_calc_ratio_a', 'online_battle_score_calc_ratio_b', 'online_battle_search_score', 'online_battle_match_wait_seconds', 'online_battle_win_point_ratio', 'online_battle_loseer_win_point_ratio', 'endless_wipeout_price_per_floor', 'game_play_mode_damage_rate', 'first_reward_info', 'loading_tip_count', 'vip_goods_common_count', 'vip_goods_special_count', 'vip_draw_all_unlock_level', 'steal_battle_times_limit', 'friend_power_cnt', 'damage_float_up', 'damage_float_down', 'max_recv_power_times_one_day', 'ten_wipeout_viplimit', 'vip_shop_unlock_viplevel']
         return f(pb, attrs)
     
     if p == 'ResHeroEvaluate':
@@ -4195,6 +4201,10 @@ def res(f, pb):
     
     if p == 'ResTutorialInfo':
         attrs = ['tutorial_dugeon_id', 'tutorial_dugeon_hero', 'first_steller_id', 'first_planet_id', 'role_level_skill_upgrade', 'hero_tower_level', 'role_level_hero_tower', 'gold_mine_building_id', 'unlock_dun_item_shop', 'unlock_dun_emblem', 'role_id_emblem', 'unlock_dun_role_upgrade', 'role_level_skill_burst', 'sp_skill_burst', 'sp_skill_ultimatet', 'sp_skill_charge', 'new_hero_steller_id', 'new_hero_planet_id', 'resource_store_type', 'island_id', 'role_level_equip_levelup', 'unlock_dun_join_league', 'exp_mine_building_id', 'money_mine_building_id', 'mall_building_id']
+        return f(pb, attrs)
+    
+    if p == 'ResHeroImageInfo':
+        attrs = ['id', 'share_hero_card_offset_x', 'share_hero_card_offset_y', 'share_hero_card_scale']
         return f(pb, attrs)
     
     if p == 'ST_ACTION_DESC':
@@ -5558,11 +5568,11 @@ def res(f, pb):
         return f(pb, attrs)
     
     if p == 'SSPKG_PURCHASE_FINISH':
-        attrs = ['result', 'uid', 'unique_id', 'http_handle', 'is_firstpurchase', 'product_id', 'trade_code', 'world_id']
+        attrs = ['result', 'uid', 'unique_id', 'http_handle', 'is_firstpurchase', 'product_id', 'trade_code', 'world_id', 'transaction_id', 'platform']
         return f(pb, attrs)
     
     if p == 'SSPKG_PURCHASE_FINISH_DISP':
-        attrs = ['result', 'uid', 'unique_id', 'http_handle', 'product_id', 'trade_code', 'world_id']
+        attrs = ['result', 'uid', 'unique_id', 'http_handle', 'product_id', 'trade_code', 'world_id', 'transaction_id', 'platform']
         return f(pb, attrs)
     
     if p == 'SSPKG_PURCHASE_REQ':
@@ -5578,11 +5588,11 @@ def res(f, pb):
         return f(pb, attrs)
     
     if p == 'SSPKG_PURCHASE_RES':
-        attrs = ['uid', 'unique_id', 'result', 'product_id', 'http_handle', 'is_firstpurchase', 'trade_code', 'cur_cumulate_recharge']
+        attrs = ['uid', 'unique_id', 'result', 'product_id', 'http_handle', 'is_firstpurchase', 'trade_code', 'cur_cumulate_recharge', 'transaction_id', 'platform']
         return f(pb, attrs)
     
     if p == 'SSPKG_PURCHASE_DISP_REQ':
-        attrs = ['uid', 'unique_id', 'server_id', 'transaction_id', 'product_id', 'trade_code', 'coin', 'money', 'time', 'http_handle']
+        attrs = ['uid', 'unique_id', 'server_id', 'transaction_id', 'product_id', 'trade_code', 'coin', 'money', 'time', 'http_handle', 'platform']
         return f(pb, attrs)
     
     if p == 'SSPKG_GET_PURCHASEACTIVITY_REQ':
@@ -5698,7 +5708,7 @@ def res(f, pb):
         return f(pb, attrs)
     
     if p == 'SSDT_FRIEND_RECOMMAND_INFO':
-        attrs = ['base_info']
+        attrs = ['base_info', 'is_applied']
         return f(pb, attrs)
     
     if p == 'SSDT_PLAYER_FRIEND_INFO':
@@ -5718,7 +5728,7 @@ def res(f, pb):
         return f(pb, attrs)
     
     if p == 'SSPKG_LOGIN_FRIEND_SVR_RES':
-        attrs = ['result', 'time', 'friend_info']
+        attrs = ['result', 'recv_power_times_today', 'friend_info']
         return f(pb, attrs)
     
     if p == 'SSPKG_FRIEND_INFO_CHG':

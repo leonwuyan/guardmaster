@@ -21,12 +21,15 @@ urlpatterns = [
         views.single,
         name='single'),
     url(
+        r'^(?P<panel_id>[0-9]+)/single/(?P<url>[_A-Za-z]+)/(?P<type>[_0-9a-zA-Z]+).json$',
+        views.change_single,
+        name='change_single'),
+    url(
         r'^(?P<panel_id>[0-9]+)/contact/(?P<url>[_A-Za-z]+)$',
         views.contact,
         name='contact'),
     url(
         r'^(?P<panel_id>[0-9]+)/contact/(?P<issue_id>[0-9]+)$',
         views.contact_reply,
-        name='contact_reply'),
-    url(r'^$', auth_views.index, name='default_index'),
+        name='contact_reply'),    url(r'^$', auth_views.index, name='default_index'),
 ]

@@ -228,6 +228,13 @@ class ServerSocket(object):
         r = {'uid': uid, 'world_id': world_id}
         return self._get(p, r)
 
+    def get_player_total_recharge(self, uid, world_id):
+        if uid is None or world_id is None:
+            return self.empty
+        p = 'GM_GET_PLAYER_TOTAL_RECHARGE_REQ'
+        r = {'uid': uid, 'world_id': world_id}
+        return self._get(p, r)
+
     def lock_player(self, uid, lock_time):
         if uid is None or lock_time is None:
             return self.empty

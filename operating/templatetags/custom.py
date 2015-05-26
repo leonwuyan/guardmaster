@@ -165,6 +165,13 @@ def rank_val(rank_id, pos):
     ]
     return val[rank_id][pos]
 
+
+def ts2bantime(timestamp):
+    if timestamp < time.time():
+        return _('Not Time')
+    return ts2time(timestamp)
+
+
 register.filter(ts2date)
 register.filter(ts2time)
 register.filter(second2time)
@@ -179,3 +186,4 @@ register.filter(enum_item)
 register.filter(enum_restype)
 register.filter(enum_building)
 register.filter(rank_val)
+register.filter(ts2bantime)

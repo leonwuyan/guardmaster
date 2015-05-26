@@ -19,7 +19,7 @@ _sym_db = _symbol_database.Default()
 DESCRIPTOR = _descriptor.FileDescriptor(
   name='res.proto',
   package='',
-  serialized_pb=_b('\n\tres.proto\"1\n\x15ResServerLocalization\x12\n\n\x02id\x18\x01 \x02(\t\x12\x0c\n\x04text\x18\x02 \x03(\t\"3\n\x0eResDropIndexEx\x12\x0f\n\x07\x64rop_id\x18\x01 \x01(\r\x12\x10\n\x08\x64rop_cnt\x18\x02 \x01(\r\"F\n\x0fResResourceInfo\x12\x10\n\x08res_type\x18\x01 \x01(\r\x12\x0e\n\x06res_id\x18\x02 \x01(\r\x12\x11\n\tres_count\x18\x03 \x01(\r\".\n\nResPreRole\x12\x0f\n\x07role_id\x18\x01 \x01(\r\x12\x0f\n\x07role_lv\x18\x02 \x01(\r\" \n\x0cResInitSkill\x12\x10\n\x08skill_id\x18\x01 \x01(\r\"7\n\rResNewRoleBuf\x12\x0b\n\x03\x63nt\x18\x01 \x02(\r\x12\x0b\n\x03\x61tk\x18\x02 \x02(\r\x12\x0c\n\x04life\x18\x03 \x02(\r\"0\n\x07ResCost\x12\x0c\n\x04type\x18\x01 \x02(\r\x12\n\n\x02id\x18\x02 \x02(\r\x12\x0b\n\x03\x63nt\x18\x03 \x02(\r\"\xce\x05\n\tResRoleGL\x12\x0f\n\x07hero_id\x18\x01 \x01(\r\x12\x11\n\thero_desc\x18\x02 \x01(\t\x12\x11\n\thero_name\x18\x03 \x01(\t\x12\x10\n\x08res_name\x18\x04 \x01(\t\x12\x15\n\rprotrait_name\x18\x05 \x01(\t\x12\x12\n\naudio_name\x18\x06 \x01(\t\x12\x0f\n\x07is_open\x18\x07 \x01(\r\x12\x10\n\x08list_pos\x18\x08 \x01(\r\x12\x14\n\x0c\x62uy_res_type\x18\t \x01(\r\x12\x12\n\npre_dun_id\x18\n \x01(\r\x12\x18\n\x10\x61\x63t_init_grow_up\x18\x0b \x01(\r\x12\x16\n\x0e\x61\x63t_init_level\x18\x0c \x01(\r\x12\x1c\n\x14unlock_emblem_ned_lv\x18\r \x01(\r\x12\x1b\n\x13unlock_emblem_hp_id\x18\x0e \x01(\r\x12\x1f\n\x17unlock_emblem_damage_id\x18\x0f \x01(\r\x12$\n\rinit_skill_id\x18\x10 \x03(\x0b\x32\r.ResInitSkill\x12\x19\n\x11protrait_offset_x\x18\x11 \x01(\x05\x12\x19\n\x11protrait_offset_y\x18\x12 \x01(\x05\x12\x18\n\x10new_role_buf_cnt\x18\x13 \x01(\r\x12\x12\n\nbuy_res_id\x18\x14 \x01(\r\x12\x15\n\rbuy_res_count\x18\x15 \x01(\r\x12\x1e\n\nbuy_reward\x18\x16 \x03(\x0b\x32\n.ResReward\x12\x1d\n\x0bunlock_cost\x18\x17 \x03(\x0b\x32\x08.ResCost\x12\x15\n\rbase_critical\x18\x18 \x01(\r\x12\x1c\n\x14\x62\x61se_critical_effect\x18\x19 \x01(\r\x12\x1d\n\x15\x62\x61se_critical_defence\x18\x1a \x01(\r\x12$\n\x1c\x62\x61se_critical_defence_effect\x18\x1b \x01(\r\x12\x18\n\x10\x62uy_res_discount\x18\x1c \x01(\r\"\x86\x01\n\x07ResChat\x12\x12\n\nchannel_id\x18\x01 \x01(\r\x12\x14\n\x0c\x63ond_city_id\x18\x02 \x01(\r\x12\x10\n\x08interval\x18\x03 \x01(\r\x12\x14\n\x0c\x63ost_restype\x18\x04 \x01(\r\x12\x12\n\ncost_resid\x18\x05 \x01(\r\x12\x15\n\rcost_rescount\x18\x06 \x01(\r\"\xe0\x01\n\x17ResRoleRelationAddition\x12\x18\n\x10receiver_role_id\x18\x01 \x01(\r\x12\x18\n\x10receiver_role_lv\x18\x02 \x01(\r\x12\x15\n\rgiver_role_id\x18\x03 \x01(\r\x12\x1a\n\x12giver_stamina_rate\x18\x04 \x01(\x02\x12\x1f\n\x17\x61\x64\x64_stamina_value_limit\x18\x05 \x01(\r\x12\x1b\n\x13giver_strength_rate\x18\x06 \x01(\x02\x12 \n\x18\x61\x64\x64_strength_value_limit\x18\x07 \x01(\r\"\x84\x01\n\x1aResRoleRelationSubtraction\x12\x18\n\x10receiver_role_id\x18\x01 \x01(\r\x12\x15\n\rgiver_role_id\x18\x02 \x01(\r\x12\x1a\n\x12\x64mg_addition_point\x18\x03 \x01(\r\x12\x19\n\x11\x64mg_addition_rate\x18\x04 \x01(\x02\"3\n\x0eResChipNumInfo\x12\x0f\n\x07\x63hip_id\x18\x01 \x01(\r\x12\x10\n\x08\x63hip_cnt\x18\x02 \x01(\r\"S\n\x16ResEmblemSingleRequest\x12\x18\n\x10lv_up_single_exp\x18\x01 \x01(\r\x12\x1f\n\x17lv_up_single_possiblity\x18\x02 \x01(\r\"\xad\x02\n\tResEmblem\x12\x11\n\tweapon_id\x18\x01 \x01(\r\x12\x11\n\tweapon_lv\x18\x02 \x01(\r\x12\x0c\n\x04icon\x18\x03 \x01(\t\x12\x0c\n\x04name\x18\x04 \x01(\t\x12\x15\n\rattch_hero_id\x18\x05 \x01(\r\x12\x1c\n\x14lv_up_ned_hero_level\x18\x06 \x01(\r\x12\x16\n\x0elv_up_ned_type\x18\x07 \x01(\r\x12\x18\n\x10lv_up_ned_number\x18\x08 \x01(\r\x12\x12\n\nextra_type\x18\t \x01(\r\x12\x13\n\x0b\x65xtra_value\x18\n \x01(\r\x12\x15\n\rlv_up_ned_exp\x18\x0b \x01(\r\x12\x37\n\x16levelup_single_request\x18\x0c \x03(\x0b\x32\x17.ResEmblemSingleRequest\"\"\n\x12ResStringArrayInfo\x12\x0c\n\x04info\x18\x01 \x01(\t\"\xb7\x06\n\x0cResMonsterGL\x12\n\n\x02id\x18\x01 \x01(\r\x12\x11\n\trole_name\x18\x02 \x01(\t\x12\x0c\n\x04name\x18\x03 \x01(\t\x12\x0c\n\x04type\x18\x04 \x01(\x05\x12\x13\n\x0brender_type\x18\x05 \x01(\x05\x12\x16\n\x0erelation_index\x18\x06 \x01(\r\x12\x15\n\rres_file_name\x18\x07 \x01(\t\x12\x14\n\x0c\x62\x65hit_add_sp\x18\x08 \x01(\r\x12\x10\n\x08sp_ratio\x18\t \x01(\x02\x12\x0e\n\x06radius\x18\n \x01(\r\x12\x17\n\x0funlock_name_tag\x18\x0b \x01(\t\x12\x17\n\x0funlock_desc_tag\x18\x0c \x01(\t\x12\x14\n\x0cshadow_scale\x18\r \x01(\r\x12\x12\n\nrole_scale\x18\x0e \x01(\r\x12\x19\n\x11\x63olor_matching_id\x18\x0f \x01(\x05\x12\x10\n\x08head_pic\x18\x10 \x01(\t\x12\x15\n\rmini_head_pic\x18\x11 \x01(\t\x12\x12\n\nemblem_pic\x18\x12 \x01(\t\x12\x11\n\tattri_pic\x18\x13 \x01(\t\x12\x1b\n\x13\x66ull_pic_in_map_tip\x18\x14 \x01(\t\x12\x13\n\x0bhu_name_pic\x18\x15 \x01(\t\x12\x13\n\x0bvu_name_pic\x18\x16 \x01(\t\x12\x10\n\x08\x62ust_pic\x18\x17 \x01(\t\x12\x14\n\x0cportrait_pic\x18\x18 \x01(\t\x12\x0f\n\x07\x61i_type\x18\x19 \x01(\t\x12\x18\n\x10grow_up_head_pic\x18\x1a \x01(\t\x12\x13\n\x0b\x62oss_audios\x18\x1f \x03(\t\x12\r\n\x05param\x18  \x01(\x05\x12\x1a\n\x12\x65ndless_mode_param\x18\" \x01(\r\x12\x14\n\x0c\x62\x61ttle_logic\x18# \x01(\t\x12\x0e\n\x06\x62\x61sehp\x18$ \x01(\r\x12 \n\x18\x62\x61\x63kup_color_matching_id\x18% \x01(\x05\x12\x15\n\rlevel_up_type\x18& \x01(\r\x12\x18\n\x10\x62\x61se_damage_rate\x18\' \x01(\r\x12\x0f\n\x07hostile\x18( \x01(\x05\x12\x13\n\x0bspec_tagert\x18) \x01(\x05\x12\x16\n\x0e\x61\x64\x64_superarmor\x18* \x01(\x05\x12\x18\n\x10hero_damage_rate\x18+ \x01(\r\"7\n\rResPreMonster\x12\x12\n\nmonster_id\x18\x01 \x01(\r\x12\x12\n\nmonster_lv\x18\x02 \x01(\r\"X\n\x0fResGroupMonster\x12\x12\n\nmonster_id\x18\x01 \x01(\r\x12\x13\n\x0bmonster_cnt\x18\x02 \x01(\r\x12\r\n\x05pos_x\x18\x03 \x01(\x05\x12\r\n\x05pos_y\x18\x04 \x01(\x05\"\x8a\x02\n\x0fResMonsterLevel\x12\x1d\n\x15monster_level_up_type\x18\x01 \x01(\r\x12\x12\n\nmonster_lv\x18\x02 \x01(\r\x12\x0e\n\x06max_hp\x18\x03 \x01(\r\x12\x13\n\x0b\x64\x61mage_type\x18\x04 \x01(\r\x12\x10\n\x08strength\x18\x05 \x01(\r\x12\x17\n\x0f\x65x_endure_value\x18\x07 \x01(\r\x12\x17\n\x0f\x63oin_drop_value\x18\x08 \x01(\r\x12\x1d\n\x15\x63oin_drop_possibility\x18\t \x01(\r\x12\x1a\n\x12\x64iamond_drop_value\x18\n \x01(\r\x12 \n\x18\x64iamond_drop_possibility\x18\x0b \x01(\r\"h\n\x14ResMonsterGroupLevel\x12\x10\n\x08group_id\x18\x01 \x01(\r\x12\x10\n\x08group_lv\x18\x02 \x01(\r\x12,\n\x12group_monster_info\x18\x03 \x03(\x0b\x32\x10.ResGroupMonster\"%\n\x0cResGainSkill\x12\x15\n\rgain_skill_id\x18\x01 \x01(\r\":\n\x16ResRoleLevelGrowUpAttr\x12\x0e\n\x06max_hp\x18\x01 \x01(\r\x12\x10\n\x08strength\x18\x02 \x01(\r\"\xad\x01\n\x0cResRoleLevel\x12\x0f\n\x07role_id\x18\x01 \x01(\r\x12\x0f\n\x07role_lv\x18\x02 \x01(\r\x12-\n\x0cgrow_up_attr\x18\x03 \x03(\x0b\x32\x17.ResRoleLevelGrowUpAttr\x12\x0e\n\x06max_sp\x18\x04 \x01(\r\x12\x13\n\x0blv_need_exp\x18\x05 \x01(\r\x12\x17\n\x0flv_reward_power\x18\x06 \x01(\r\x12\x0e\n\x06\x62urden\x18\x07 \x01(\r\"\xfa\x01\n\rResBuildingGL\x12\x13\n\x0b\x62uilding_id\x18\x01 \x01(\r\x12\x15\n\rbuilding_type\x18\x02 \x01(\r\x12\x15\n\rbuilding_desc\x18\x03 \x01(\t\x12\x15\n\rbuilding_name\x18\x04 \x01(\t\x12\x10\n\x08res_name\x18\x05 \x01(\t\x12\x12\n\naudio_name\x18\x06 \x01(\t\x12\x0f\n\x07is_open\x18\x07 \x01(\r\x12\x16\n\x0e\x61\x63t_init_level\x18\x08 \x01(\r\x12\x17\n\x0fis_need_levelup\x18\t \x01(\r\x12\x15\n\rtips_priority\x18\n \x01(\r\x12\x10\n\x08tips_tag\x18\x0b \x01(\t\"3\n\x0cResLevelCost\x12\x11\n\tcost_type\x18\x01 \x01(\r\x12\x10\n\x08\x63ost_cnt\x18\x02 \x01(\r\"(\n\x11ResUnlockBuilding\x12\x13\n\x0b\x62uilding_id\x18\x01 \x01(\r\"\xb7\x01\n\x10ResBuildingLevel\x12\x13\n\x0b\x62uilding_id\x18\x01 \x01(\r\x12\x13\n\x0b\x62uilding_lv\x18\x02 \x01(\r\x12\x14\n\x0c\x62uilding_pic\x18\x03 \x01(\t\x12!\n\nlevel_cost\x18\x04 \x03(\x0b\x32\r.ResLevelCost\x12\x17\n\x0flevel_cost_time\x18\x05 \x01(\r\x12\'\n\x0bunlock_info\x18\x06 \x03(\x0b\x32\x12.ResUnlockBuilding\"\xd6\x01\n\x11ResHeroTowerLevel\x12\x13\n\x0b\x62uilding_id\x18\x01 \x01(\r\x12\x13\n\x0b\x62uilding_lv\x18\x02 \x01(\r\x12\x14\n\x0c\x62uilding_pic\x18\x03 \x01(\t\x12!\n\nlevel_cost\x18\x04 \x03(\x0b\x32\r.ResLevelCost\x12\x17\n\x0flevel_cost_time\x18\x05 \x01(\r\x12\x16\n\x0emax_hero_level\x18\x06 \x01(\r\x12\x15\n\runlock_dun_id\x18\x07 \x01(\r\x12\x16\n\x0elevel_priority\x18\x08 \x01(\r\"n\n\x10ResIslandProduct\x12\x10\n\x08res_type\x18\x01 \x01(\r\x12\x10\n\x08\x62orn_cnt\x18\x02 \x01(\r\x12\x0f\n\x07\x62orn_id\x18\x03 \x01(\r\x12\x11\n\tborn_time\x18\x04 \x01(\r\x12\x12\n\nborn_limit\x18\x05 \x01(\r\"\xd9\x01\n\x0eResIslandLevel\x12\x11\n\tisland_id\x18\x01 \x01(\r\x12\x11\n\tisland_lv\x18\x02 \x01(\r\x12\x12\n\nisland_pic\x18\x03 \x01(\t\x12!\n\nlevel_cost\x18\x04 \x03(\x0b\x32\r.ResLevelCost\x12\x17\n\x0flevel_cost_time\x18\x05 \x01(\r\x12\"\n\x07product\x18\x06 \x01(\x0b\x32\x11.ResIslandProduct\x12\x15\n\runlock_dun_id\x18\x07 \x01(\r\x12\x16\n\x0elevel_priority\x18\x08 \x01(\r\"\x8a\x02\n\x15ResResourceStoreLevel\x12\x14\n\x0cres_store_id\x18\x01 \x01(\r\x12\x14\n\x0cres_store_lv\x18\x02 \x01(\r\x12\x15\n\rres_store_pic\x18\x03 \x01(\t\x12\x16\n\x0eres_store_type\x18\x04 \x01(\r\x12\x11\n\tres_limit\x18\x05 \x01(\r\x12\x18\n\x10recover_interval\x18\x06 \x01(\r\x12!\n\nlevel_cost\x18\x07 \x03(\x0b\x32\r.ResLevelCost\x12\x17\n\x0flevel_cost_time\x18\x08 \x01(\r\x12\x15\n\runlock_dun_id\x18\t \x01(\r\x12\x16\n\x0elevel_priority\x18\x0c \x01(\r\"\xc7\x02\n\x0bResLevelArr\x12\r\n\x05level\x18\x01 \x01(\r\x12%\n\x1dsteal_battle_search_cost_type\x18\x02 \x01(\r\x12#\n\x1bsteal_battle_search_cost_id\x18\x03 \x01(\r\x12&\n\x1esteal_battle_search_cost_count\x18\x04 \x01(\r\x12&\n\x1egang_battle_reward_gold_target\x18\x05 \x01(\r\x12)\n!gang_battle_reward_crystal_target\x18\x06 \x01(\r\x12$\n\x1cgang_battle_reward_gold_self\x18\x07 \x01(\r\x12\'\n\x1fgang_battle_reward_crystal_self\x18\x08 \x01(\r\x12\x13\n\x0bmonster_cnt\x18\t \x01(\r\"\x1e\n\x0bResInitHero\x12\x0f\n\x07hero_id\x18\x01 \x01(\r\"\x1e\n\x0bResInitSlot\x12\x0f\n\x07slot_id\x18\x01 \x01(\r\"c\n\x14ResOverHitProduction\x12\x16\n\x0eover_hit_phase\x18\x01 \x01(\r\x12\x17\n\x0f\x63oin_production\x18\x02 \x01(\r\x12\x1a\n\x12\x64iamond_production\x18\x03 \x01(\r\"@\n\x0eResInitMonster\x12\x16\n\x0emonster_grp_id\x18\x01 \x01(\r\x12\x16\n\x0emonster_grp_lv\x18\x02 \x01(\r\"\"\n\x10ResInitUnlockDun\x12\x0e\n\x06\x64un_id\x18\x01 \x01(\r\"9\n\x12ResUnlockTrainSlot\x12\x0f\n\x07slot_id\x18\x01 \x01(\r\x12\x12\n\ncost_money\x18\x02 \x01(\r\"?\n\x13ResInitBuildingInfo\x12\x13\n\x0b\x62uilding_id\x18\x01 \x01(\r\x12\x13\n\x0b\x62uilding_lv\x18\x02 \x01(\r\"?\n\x15ResBuyWipeoutItemInfo\x12\x12\n\nitem_count\x18\x01 \x01(\r\x12\x12\n\nitem_price\x18\x02 \x01(\r\";\n\x10ResPveUnlockInfo\x12\r\n\x05\x64unid\x18\x01 \x01(\r\x12\x0c\n\x04type\x18\x02 \x01(\r\x12\n\n\x02lv\x18\x03 \x01(\r\"\'\n\x16ResEndlessMonsterScore\x12\r\n\x05score\x18\x01 \x01(\r\"H\n\x19ResGamePlayModeDamageRate\x12\x16\n\x0egame_play_mode\x18\x01 \x01(\r\x12\x13\n\x0b\x64\x61mage_rate\x18\x02 \x01(\x02\"I\n\tResReward\x12\x13\n\x0breward_type\x18\x01 \x01(\r\x12\x11\n\treward_id\x18\x02 \x01(\r\x12\x14\n\x0creward_value\x18\x03 \x01(\r\"\xe3\x1e\n\x0bResMiscInfo\x12\x18\n\x10player_max_level\x18\x01 \x01(\r\x12\x19\n\x11monster_max_level\x18\x02 \x01(\r\x12\x14\n\x0cinit_crystal\x18\x03 \x01(\r\x12\x11\n\tinit_gold\x18\x04 \x01(\r\x12\x12\n\ninit_money\x18\x05 \x01(\r\x12\"\n\x0cinit_slot_id\x18\x06 \x03(\x0b\x32\x0c.ResInitSlot\x12\x30\n\x12init_building_info\x18\x07 \x03(\x0b\x32\x14.ResInitBuildingInfo\x12\"\n\x0cinit_hero_id\x18\x08 \x03(\x0b\x32\x0c.ResInitHero\x12-\n\x12init_unlock_dun_id\x18\t \x03(\x0b\x32\x11.ResInitUnlockDun\x12\x15\n\rendless_limit\x18\n \x01(\r\x12\x16\n\x0e\x63ombo_max_time\x18\x0b \x01(\r\x12\x19\n\x11over_hit_max_time\x18\x0c \x01(\r\x12\x1f\n\x17over_hit_max_hp_percent\x18\r \x01(\r\x12 \n\x18over_hit_add_score_ratio\x18\x0e \x01(\r\x12!\n\x19left_time_add_score_ratio\x18\x0f \x01(\r\x12\x32\n\x13over_hit_production\x18\x10 \x03(\x0b\x32\x15.ResOverHitProduction\x12\x1d\n\x15\x63reate_gang_cost_gold\x18\x11 \x01(\r\x12\x17\n\x0f\x66ighting_hprate\x18\x12 \x01(\r\x12\x19\n\x11\x66ighting_atk_rate\x18\x13 \x01(\r\x12\x1a\n\x12gang_battle_dun_id\x18\x14 \x01(\r\x12$\n\x1cgang_battle_round_time_limit\x18\x15 \x01(\x05\x12#\n\x1b\x65ndless_chamber_size_factor\x18\x16 \x01(\r\x12*\n\"endless_boss_hp_recover_drop_ratio\x18\x17 \x01(\r\x12*\n\"endless_boss_hp_recover_drop_count\x18\x18 \x01(\r\x12\x1e\n\x16rank_battle_dungeon_id\x18\x19 \x01(\r\x12$\n\x1crank_battle_round_time_limit\x18\x1a \x01(\x05\x12\x1e\n\x16rank_battle_base_count\x18\x1b \x01(\r\x12\'\n\x1frank_battle_buy_count_base_cost\x18\x1c \x01(\r\x12#\n\x1brank_battle_unlock_role_cnt\x18\x1d \x01(\r\x12\x18\n\x10\x64\x61ily_reset_time\x18\x1e \x01(\r\x12\x18\n\x10\x65ndless_room_cnt\x18\x1f \x01(\r\x12%\n\x1dsteal_battle_money_res_dun_id\x18! \x01(\r\x12$\n\x1csteal_battle_gold_res_dun_id\x18\" \x01(\r\x12\'\n\x1fsteal_battle_crystal_res_dun_id\x18# \x01(\r\x12#\n\x1bsteal_battle_exp_res_dun_id\x18$ \x01(\r\x12\x19\n\x11\x65ndless_limit_cnt\x18% \x01(\r\x12\x1c\n\x14\x65ndless_refresh_hour\x18& \x01(\r\x12\x1b\n\x13\x65ndless_refresh_min\x18\' \x01(\r\x12\x1b\n\x13\x65ndless_refresh_sec\x18( \x01(\r\x12\x1d\n\x15wipe_out_need_item_id\x18) \x01(\r\x12\x36\n\x16\x62uy_wipe_out_item_info\x18* \x03(\x0b\x32\x16.ResBuyWipeoutItemInfo\x12\x1a\n\x12goods_common_count\x18+ \x01(\r\x12\x1b\n\x13goods_special_count\x18, \x01(\r\x12\x1b\n\x13\x64\x61mage_ratio_factor\x18- \x01(\r\x12\x17\n\x0fhp_ratio_factor\x18. \x01(\r\x12#\n\x1bskill_point_display_item_id\x18/ \x01(\r\x12*\n\x0fpve_unlock_info\x18\x30 \x03(\x0b\x32\x11.ResPveUnlockInfo\x12#\n\x1bleague_battle_small_city_lv\x18\x31 \x03(\r\x12!\n\x19league_battle_mid_city_lv\x18\x32 \x03(\r\x12!\n\x19league_battle_big_city_lv\x18\x33 \x03(\r\x12$\n\x1crank_battle_hero_hide_level1\x18\x34 \x01(\r\x12$\n\x1crank_battle_hero_hide_level2\x18\x35 \x01(\r\x12$\n\x1crank_battle_hero_hide_level3\x18\x36 \x01(\r\x12\x1a\n\x12power_refresh_hour\x18\x37 \x01(\r\x12\x19\n\x11power_refresh_min\x18\x38 \x01(\r\x12\x19\n\x11power_refresh_sec\x18\x39 \x01(\r\x12&\n\x1erank_battle_count_refresh_hour\x18: \x01(\r\x12%\n\x1drank_battle_count_refresh_min\x18; \x01(\r\x12%\n\x1drank_battle_count_refresh_sec\x18< \x01(\r\x12\x1f\n\x17shop_count_refresh_hour\x18= \x01(\r\x12\x1e\n\x16shop_count_refresh_min\x18> \x01(\r\x12\x1e\n\x16shop_count_refresh_sec\x18? \x01(\r\x12\x12\n\nfail_power\x18@ \x01(\x05\x12\x1f\n\x17money_confirm_threshold\x18\x41 \x02(\r\x12;\n\x1a\x65ndless_monster_type_score\x18\x42 \x03(\x0b\x32\x17.ResEndlessMonsterScore\x12$\n\x1cgang_battle_small_city_score\x18\x43 \x01(\r\x12\'\n\x1fgang_battle_moderate_city_score\x18\x44 \x01(\r\x12\"\n\x1agang_battle_big_city_score\x18\x45 \x01(\r\x12\x1a\n\x12\x65lite_mode_chances\x18\x46 \x02(\r\x12 \n\x18\x65lite_count_refresh_hour\x18G \x01(\r\x12\x1f\n\x17\x65lite_count_refresh_min\x18H \x01(\r\x12\x1f\n\x17\x65lite_count_refresh_sec\x18I \x01(\r\x12 \n\x18\x61ssist_fight_times_limit\x18L \x01(\r\x12\x1c\n\x14online_battle_dun_id\x18M \x01(\r\x12\x19\n\x11re_sign_cost_type\x18N \x01(\r\x12\x1a\n\x12re_sign_cost_price\x18O \x01(\r\x12)\n!init_hero_main_task_unlock_dun_id\x18P \x01(\r\x12\x1c\n\x14normal_elite_hp_rate\x18Q \x01(\r\x12\x1c\n\x14normal_elite_st_rate\x18R \x01(\r\x12\x1b\n\x13normal_boss_hp_rate\x18S \x01(\r\x12\x1b\n\x13normal_boss_st_rate\x18T \x01(\r\x12\x1d\n\x15\x65ndless_elite_hp_rate\x18Y \x01(\r\x12\x1d\n\x15\x65ndless_elite_st_rate\x18Z \x01(\r\x12\x1c\n\x14\x65ndless_boss_hp_rate\x18[ \x01(\r\x12\x1c\n\x14\x65ndless_boss_st_rate\x18\\ \x01(\r\x12!\n\x19\x65lite_buy_count_cost_type\x18] \x01(\r\x12\x1f\n\x17\x65lite_buy_count_cost_id\x18^ \x01(\r\x12\"\n\x1a\x65lite_buy_count_cost_count\x18_ \x01(\r\x12\x1b\n\x13\x65lite_buy_max_count\x18` \x01(\r\x12\x1d\n\x15offline_battle_dun_id\x18\x61 \x01(\r\x12\"\n\x1arole_relation_unlock_level\x18\x62 \x01(\r\x12&\n\x1erank_battle_goods_common_count\x18\x63 \x01(\r\x12\'\n\x1frank_battle_goods_special_count\x18\x64 \x01(\r\x12 \n\x18online_battle_init_score\x18\x65 \x01(\r\x12\"\n\x1aonline_battle_times_perday\x18\x66 \x01(\r\x12(\n online_battle_score_calc_ratio_a\x18g \x01(\r\x12(\n online_battle_score_calc_ratio_b\x18h \x01(\r\x12\"\n\x1aonline_battle_search_score\x18i \x01(\r\x12(\n online_battle_match_wait_seconds\x18j \x01(\r\x12%\n\x1donline_battle_win_point_ratio\x18k \x01(\r\x12,\n$online_battle_loseer_win_point_ratio\x18l \x01(\r\x12\'\n\x1f\x65ndless_wipeout_price_per_floor\x18m \x01(\r\x12>\n\x1agame_play_mode_damage_rate\x18n \x03(\x0b\x32\x1a.ResGamePlayModeDamageRate\x12%\n\x11\x66irst_reward_info\x18o \x03(\x0b\x32\n.ResReward\x12\x19\n\x11loading_tip_count\x18p \x01(\r\x12\x1e\n\x16vip_goods_common_count\x18q \x01(\r\x12\x1f\n\x17vip_goods_special_count\x18r \x01(\r\x12!\n\x19vip_draw_all_unlock_level\x18s \x01(\r\x12 \n\x18steal_battle_times_limit\x18t \x01(\r\x12\x18\n\x10\x66riend_power_cnt\x18u \x01(\r\x12\x17\n\x0f\x64\x61mage_float_up\x18v \x01(\r\x12\x19\n\x11\x64\x61mage_float_down\x18w \x01(\r\x12$\n\x1cmax_recv_power_times_one_day\x18z \x01(\r\x12\x1c\n\x14ten_wipeout_viplimit\x18{ \x01(\r\x12 \n\x18vip_shop_unlock_viplevel\x18| \x01(\r\"f\n\x0fResHeroEvaluate\x12\x12\n\nmain_level\x18\x01 \x01(\r\x12\x11\n\tsub_level\x18\x02 \x01(\r\x12\x16\n\x0epvp_score_down\x18\x03 \x01(\r\x12\x14\n\x0cpvp_score_up\x18\x04 \x01(\r\"\xb5\x02\n\x0fResGangMiscInfo\x12$\n\x1csearch_gang_list_low_bounder\x18\x01 \x01(\r\x12#\n\x1bsearch_gang_list_up_bounder\x18\x02 \x01(\r\x12\x1f\n\x17gang_score_calc_ratio_a\x18\x03 \x01(\r\x12\x1f\n\x17gang_score_calc_ratio_b\x18\x04 \x01(\r\x12!\n\x19gang_battle_win_pre_ratio\x18\x05 \x01(\r\x12\"\n\x1agang_battle_lose_pre_ratio\x18\x06 \x01(\r\x12\"\n\x1agang_battle_draw_pre_ratio\x18\x07 \x01(\r\x12*\n\"gang_battle_auto_apply_limit_score\x18\x08 \x01(\r\"\x8e\x02\n\x10ResGangLevelInfo\x12\n\n\x02lv\x18\x01 \x01(\r\x12\x0f\n\x07lv_desc\x18\x02 \x01(\t\x12\x0f\n\x07lv_icon\x18\x03 \x01(\t\x12\x11\n\tlow_score\x18\x04 \x01(\r\x12\x12\n\nhigh_score\x18\x05 \x01(\r\x12\x1a\n\x12gang_mem_max_count\x18\x06 \x01(\r\x12\x1c\n\x14gang_elder_max_count\x18\x07 \x01(\r\x12\"\n\x1asmall_city_strongpoint_num\x18\x08 \x01(\r\x12%\n\x1dmoderate_city_strongpoint_num\x18\t \x01(\r\x12 \n\x18\x62ig_city_strongpoint_num\x18\n \x01(\r\"0\n\x11ResGangBattleTime\x12\x0c\n\x04week\x18\x01 \x01(\r\x12\r\n\x05state\x18\x02 \x01(\r\"\x8f\x01\n\x13ResGangBattleReward\x12\n\n\x02lv\x18\x01 \x01(\r\x12\"\n\nwin_reward\x18\x02 \x03(\x0b\x32\x0e.ST_REWARD_RES\x12#\n\x0blose_reward\x18\x03 \x03(\x0b\x32\x0e.ST_REWARD_RES\x12#\n\x0b\x64raw_reward\x18\x04 \x03(\x0b\x32\x0e.ST_REWARD_RES\"\xe5\x01\n\rResRobotBuild\x12\x10\n\x08res_type\x18\x01 \x01(\r\x12\x14\n\x0c\x63ur_born_res\x18\x02 \x01(\r\x12\x0f\n\x07hero_id\x18\x03 \x01(\r\x12\x0f\n\x07hero_lv\x18\x04 \x01(\r\x12\x13\n\x0bhero_growup\x18\x05 \x01(\r\x12\x15\n\rhero_strength\x18\x06 \x01(\r\x12\x14\n\x0chero_stamina\x18\x07 \x01(\r\x12\x12\n\nmonster_id\x18\x08 \x01(\r\x12\x12\n\nmonster_lv\x18\t \x01(\r\x12\x0f\n\x07trap_id\x18\n \x01(\r\x12\x0f\n\x07trap_lv\x18\x0b \x01(\r\"j\n\x0bResPvpRobot\x12\x0b\n\x03uid\x18\x01 \x01(\r\x12\x0c\n\x04name\x18\x02 \x01(\t\x12\x1a\n\x12max_fight_capacity\x18\x03 \x01(\r\x12$\n\x0cis_land_info\x18\x04 \x03(\x0b\x32\x0e.ResRobotBuild\",\n\x0fResPvpSerchInfo\x12\x0b\n\x03low\x18\x01 \x01(\r\x12\x0c\n\x04high\x18\x02 \x01(\r\"?\n\nResPvpMisc\x12\x19\n\x11steal_res_percent\x18\x01 \x01(\r\x12\x16\n\x0e\x62roken_percent\x18\x02 \x01(\r\"u\n\x10ResPvpSearchSect\x12\x1a\n\x12\x66ight_capacity_low\x18\x01 \x01(\r\x12\x1b\n\x13\x66ight_capacity_high\x18\x02 \x01(\r\x12(\n\x0epvp_serch_info\x18\x03 \x03(\x0b\x32\x10.ResPvpSerchInfo\"]\n\x17ResStealBattlePrizeDraw\x12\x17\n\x0flow_fight_power\x18\x01 \x01(\r\x12\x18\n\x10high_fight_power\x18\x02 \x01(\r\x12\x0f\n\x07\x64rop_id\x18\x03 \x01(\r\"2\n\x0bResDunLimit\x12\x0f\n\x07hero_id\x18\x01 \x01(\r\x12\x12\n\nhero_level\x18\x02 \x01(\r\"L\n\x0eResDunEvaluate\x12\x10\n\x08\x64un_time\x18\x01 \x01(\r\x12\x15\n\rremain_hprate\x18\x02 \x01(\r\x12\x11\n\tmax_combo\x18\x03 \x01(\r\"8\n\rResReliveCost\x12\x12\n\nrelive_cnt\x18\x01 \x01(\r\x12\x13\n\x0brelive_cost\x18\x02 \x01(\r\"*\n\nResPosInfo\x12\r\n\x05pos_x\x18\x01 \x01(\x05\x12\r\n\x05pos_y\x18\x02 \x01(\x05\"\"\n\x0cResDropIndex\x12\x12\n\ndrop_index\x18\x01 \x01(\r\"7\n\x12ResDungeonNeedItem\x12\x0f\n\x07item_id\x18\x01 \x01(\r\x12\x10\n\x08item_num\x18\x02 \x01(\r\" \n\x0bResEvaluate\x12\x11\n\tparameter\x18\x01 \x01(\r\"\xcb\x06\n\x0eResDungeonInfo\x12\x12\n\ndungeon_id\x18\x01 \x01(\r\x12\x14\n\x0c\x64ungeon_name\x18\x02 \x01(\t\x12\x14\n\x0c\x64ungeon_type\x18\x03 \x01(\r\x12\x0c\n\x04mode\x18\x1e \x01(\r\x12\x18\n\x10required_ability\x18\x1f \x01(\r\x12\x12\n\nis_refresh\x18\x04 \x01(\r\x12\x12\n\ncost_power\x18\x05 \x01(\r\x12\x12\n\npre_dun_id\x18\x06 \x01(\r\x12\x16\n\x0eunlock_role_id\x18\x07 \x01(\r\x12\x12\n\ninit_level\x18\x08 \x01(\r\x12\x14\n\x0crelive_limit\x18\n \x01(\r\x12#\n\x0brelive_cost\x18\x0b \x03(\x0b\x32\x0e.ResReliveCost\x12\x11\n\tapperance\x18\x0c \x01(\r\x12\x1a\n\x06reward\x18\r \x03(\x0b\x32\n.ResReward\x12%\n\x0c\x64un_evaluate\x18\x0e \x01(\x0b\x32\x0f.ResDunEvaluate\x12&\n\x0f\x66irst_drop_info\x18\x0f \x03(\x0b\x32\r.ResDropIndex\x12*\n\x13non_first_drop_info\x18\x10 \x03(\x0b\x32\r.ResDropIndex\x12)\n\x12wipe_out_drop_info\x18\x14 \x03(\x0b\x32\r.ResDropIndex\x12&\n\tneed_item\x18\x11 \x03(\x0b\x32\x13.ResDungeonNeedItem\x12+\n\x11\x64rop_display_info\x18\x12 \x03(\x0b\x32\x10.ResResourceInfo\x12#\n\revaluate_info\x18\x13 \x03(\x0b\x32\x0c.ResEvaluate\x12\x12\n\nscene_name\x18\x17 \x01(\t\x12\x0b\n\x03\x62gm\x18\x18 \x01(\t\x12\x15\n\ris_elite_drop\x18\x1a \x01(\r\x12\x16\n\x0e\x64rop_exp_limit\x18\x1b \x01(\r\x12\x14\n\x0c\x64rop_exp_add\x18\x1c \x01(\r\x12\x18\n\x10\x65lite_drop_index\x18\x1d \x01(\r\x12 \n\x18\x64isplay_elite_drop_equip\x18  \x01(\r\x12\x1d\n\x15new_role_buff_stamina\x18! \x01(\r\x12\x1e\n\x16new_role_buff_strength\x18\" \x01(\r\"B\n\x10ResDungeonReward\x12\r\n\x05level\x18\x01 \x01(\r\x12\x1f\n\x0breward_info\x18\x02 \x03(\x0b\x32\n.ResReward\"\x99\x01\n\x0eResDungeonCity\x12\x0f\n\x07\x63ity_id\x18\x01 \x01(\r\x12\x0c\n\x04mode\x18\x02 \x02(\r\x12\x10\n\x08name_tag\x18\x05 \x01(\t\x12\x13\n\x0bpre_city_id\x18\x07 \x01(\r\x12\x16\n\x0eunlock_item_id\x18\x08 \x01(\r\x12\x19\n\x11unlock_item_count\x18\t \x01(\r\x12\x0e\n\x06\x64un_id\x18\x04 \x03(\r\"h\n\rResCityReward\x12\x0f\n\x07\x63ity_id\x18\x01 \x02(\r\x12\x15\n\rcomplete_star\x18\x02 \x02(\r\x12\x13\n\x0breward_desc\x18\x03 \x01(\t\x12\x1a\n\x06reward\x18\x06 \x03(\x0b\x32\n.ResReward\"$\n\x10ResPracticeLimit\x12\x10\n\x08skill_id\x18\x01 \x01(\r\"6\n\x11ResPracticeTarget\x12\x0e\n\x06\x61\x63tion\x18\x01 \x01(\t\x12\x11\n\toperation\x18\x02 \x01(\t\"\x9d\x02\n\x0eResPracticeDun\x12\x0f\n\x07hero_id\x18\x01 \x01(\r\x12\x12\n\nchapter_id\x18\x02 \x01(\r\x12\x12\n\nsection_id\x18\x03 \x01(\r\x12\x0c\n\x04\x64\x65sc\x18\x04 \x01(\t\x12\x0c\n\x04icon\x18\x05 \x01(\t\x12\x10\n\x08quest_id\x18\x06 \x01(\r\x12\x0e\n\x06\x64un_id\x18\x07 \x01(\r\x12\x12\n\npre_dun_id\x18\x08 \x01(\r\x12\x12\n\nhero_level\x18\t \x01(\r\x12$\n\tdun_limit\x18\n \x03(\x0b\x32\x11.ResPracticeLimit\x12\x1e\n\ndun_reward\x18\x0b \x03(\x0b\x32\n.ResReward\x12&\n\ndun_target\x18\x0c \x03(\x0b\x32\x12.ResPracticeTarget\"\"\n\rResTargetInfo\x12\x11\n\tparameter\x18\x01 \x01(\r\"\xc1\x02\n\x0eResAchievement\x12\x16\n\x0e\x61\x63hievement_id\x18\x01 \x01(\r\x12\x13\n\x0btarget_type\x18\x02 \x01(\r\x12\x0e\n\x06sub_id\x18\x03 \x01(\r\x12\x10\n\x08group_id\x18\x04 \x01(\r\x12\x0e\n\x06pre_id\x18\x05 \x01(\r\x12\x14\n\x0c\x64isplay_type\x18\x06 \x01(\r\x12\x18\n\x10\x64isplay_priority\x18\x07 \x01(\r\x12\x19\n\x11\x61\x63hievement_score\x18\x08 \x01(\r\x12\r\n\x05title\x18\t \x01(\t\x12\x0c\n\x04\x64\x65sc\x18\n \x01(\t\x12\x0c\n\x04icon\x18\x0b \x01(\t\x12\x14\n\x0cis_short_cut\x18\x0c \x01(\r\x12\x1f\n\x0breward_info\x18\r \x03(\x0b\x32\n.ResReward\x12#\n\x0btarget_info\x18\x0e \x03(\x0b\x32\x0e.ResTargetInfo\"\xa8\x01\n\x0cResDailyTask\x12\x15\n\rdaily_task_id\x18\x01 \x01(\r\x12\x13\n\x0btarget_type\x18\x02 \x01(\r\x12\x18\n\x10\x64isplay_priority\x18\x03 \x01(\r\x12\x0c\n\x04icon\x18\x04 \x01(\t\x12\x1f\n\x0breward_info\x18\x05 \x03(\x0b\x32\n.ResReward\x12#\n\x0btarget_info\x18\x06 \x03(\x0b\x32\x0e.ResTargetInfo\"\xa5\x01\n\x0bResMainTask\x12\n\n\x02id\x18\x01 \x01(\r\x12\r\n\x05seqid\x18\x02 \x01(\r\x12\x0c\n\x04type\x18\x03 \x01(\r\x12\x10\n\x08group_id\x18\x04 \x01(\r\x12\x15\n\rremind_dun_id\x18\x05 \x01(\r\x12\x1f\n\x0breward_info\x18\x06 \x03(\x0b\x32\n.ResReward\x12#\n\x0btarget_info\x18\x07 \x03(\x0b\x32\x0e.ResTargetInfo\"X\n\x15ResColorMatchingParam\x12\x15\n\rhue_min_angle\x18\x01 \x01(\x05\x12\x15\n\rhue_max_angle\x18\x02 \x01(\x05\x12\x11\n\thue_angle\x18\x03 \x01(\x05\"E\n\x10ResColorMatching\x12\n\n\x02id\x18\x01 \x01(\r\x12%\n\x05param\x18\x02 \x03(\x0b\x32\x16.ResColorMatchingParam\"p\n\x15ResOfflineBattleTitle\x12\x10\n\x08title_id\x18\x01 \x01(\r\x12\x15\n\rrequire_score\x18\x02 \x01(\r\x12\x18\n\x10\x62onus_att_damage\x18\x03 \x01(\r\x12\x14\n\x0c\x62onus_att_hp\x18\x04 \x01(\r\"k\n\x0cResSceneInfo\x12\x12\n\nscene_name\x18\x01 \x01(\t\x12\x10\n\x08in_video\x18\x02 \x01(\r\x12\x11\n\tin_battle\x18\x03 \x01(\r\x12\x12\n\nin_endless\x18\x04 \x01(\r\x12\x0e\n\x06in_pvp\x18\x05 \x01(\r\"\xe3\x02\n\x11ResDungeonMonster\x12\x12\n\ndungeon_id\x18\x01 \x01(\r\x12\x0f\n\x07room_id\x18\x02 \x01(\r\x12\x12\n\nmonster_id\x18\x03 \x01(\r\x12\x17\n\x0fmonster_wave_id\x18\x04 \x01(\r\x12\x13\n\x0bmonster_cnt\x18\x05 \x01(\r\x12\x15\n\rmonster_level\x18\x06 \x01(\x05\x12\x19\n\x11monster_born_type\x18\x07 \x01(\r\x12\x1f\n\x17monster_born_type_param\x18\x08 \x01(\r\x12\x15\n\rmonster_pos_x\x18\t \x01(\x02\x12\x15\n\rmonster_pos_y\x18\n \x01(\x02\x12\x15\n\rmonster_group\x18\x0b \x01(\r\x12\x1b\n\x13monster_born_action\x18\x0c \x01(\t\x12\x19\n\x11monster_born_face\x18\r \x01(\r\x12\x17\n\x0fmonster_hp_rate\x18\x0e \x01(\x05\"\xb9\x03\n\x0eResDungeonRoom\x12\x12\n\ndungeon_id\x18\x01 \x01(\r\x12\x0f\n\x07room_id\x18\x02 \x01(\r\x12\x12\n\ntime_limit\x18\x04 \x01(\x05\x12\x15\n\rpass_add_time\x18\x05 \x01(\x05\x12!\n\x19wave_refresh_monster_type\x18\x06 \x01(\r\x12\"\n\x1awave_refresh_monster_param\x18\x07 \x01(\r\x12\x12\n\nborn_pos_x\x18\t \x01(\x02\x12\x11\n\tgravity_x\x18\n \x01(\x02\x12\x11\n\tgravity_y\x18\x0b \x01(\x02\x12\x13\n\x0b\x62order_left\x18\x0c \x01(\x02\x12\x14\n\x0c\x62order_right\x18\r \x01(\x02\x12\x14\n\x0c\x61\x63tion_limit\x18\x0e \x01(\r\x12\x19\n\x11\x63hamber_objective\x18\x11 \x01(\r\x12\x1a\n\x06reward\x18\x0f \x03(\x0b\x32\n.ResReward\x12 \n\tdrop_info\x18\x10 \x03(\x0b\x32\r.ResDropIndex\x12\x1a\n\x12\x61\x62ility_base_value\x18\x12 \x01(\r\x12 \n\x18\x63omplete_time_base_value\x18\x13 \x01(\r\"_\n\x11ResConLoginReward\x12\x16\n\x0e\x63on_login_days\x18\x01 \x01(\r\x12\x16\n\x0e\x63on_login_type\x18\x02 \x01(\r\x12\x1a\n\x06reward\x18\x03 \x03(\x0b\x32\n.ResReward\"3\n\x0fResHeroDropInfo\x12\x0f\n\x07hero_id\x18\x01 \x01(\r\x12\x0f\n\x07\x64rop_id\x18\x02 \x01(\r\"\xae\x01\n\x12ResScoreToResource\x12\r\n\x05\x66loor\x18\x01 \x01(\r\x12\x1f\n\x0breward_info\x18\x02 \x03(\x0b\x32\n.ResReward\x12#\n\tdrop_info\x18\x03 \x03(\x0b\x32\x10.ResHeroDropInfo\x12\x16\n\x0e\x64rop_box_class\x18\x04 \x01(\r\x12+\n\x11\x64rop_display_info\x18\x05 \x03(\x0b\x32\x10.ResResourceInfo\"i\n\x0eResTimeToMoney\x12\x0f\n\x07sort_id\x18\x01 \x01(\r\x12\x12\n\ndown_limit\x18\x02 \x01(\r\x12\x10\n\x08up_limit\x18\x03 \x01(\r\x12\r\n\x05ratio\x18\x04 \x01(\r\x12\x11\n\tmax_money\x18\x05 \x01(\r\"\xf0\x03\n\x0cResSkillData\x12\x10\n\x08skill_id\x18\x01 \x01(\r\x12\x0e\n\x06job_id\x18\x03 \x01(\r\x12\x10\n\x08tree_pos\x18\x04 \x01(\r\x12\x12\n\nskill_name\x18\x05 \x01(\t\x12\x18\n\x10skill_desc_param\x18\x07 \x01(\t\x12\x13\n\x0bskill_index\x18\x08 \x01(\r\x12\x13\n\x0bskill_level\x18\n \x01(\r\x12\x14\n\x0cskill_damage\x18\x0b \x01(\r\x12\x14\n\x0c\x65ndure_value\x18\x0c \x01(\r\x12\x14\n\x0csub_skill_id\x18\r \x01(\r\x12\x14\n\x0cskill_set_id\x18\x0e \x01(\r\x12\x11\n\toperation\x18\x0f \x01(\t\x12\x12\n\nhit_add_sp\x18\x10 \x01(\r\x12\x17\n\x0f\x64\x61mage_att_rate\x18\x11 \x01(\r\x12\x12\n\nskill_icon\x18\x12 \x01(\r\x12\x17\n\x0flevelup_cost_sp\x18\x13 \x01(\r\x12\x18\n\x10levelup_cost_res\x18\x14 \x01(\r\x12\x13\n\x0blimit_level\x18\x15 \x01(\r\x12\x17\n\x0fpre_skill_index\x18\x16 \x01(\r\x12\x1b\n\x13\x66inal_skill_cost_sp\x18\x17 \x01(\r\x12\x12\n\nskill_meta\x18\x18 \x01(\r\x12\x16\n\x0e\x66ight_capacity\x18\x19 \x01(\r\"\xd6\x01\n\x0cResSkillTree\x12\x0f\n\x07hero_id\x18\x01 \x01(\r\x12\x14\n\x0cskill_set_id\x18\x02 \x01(\r\x12\x19\n\x11relation_sequence\x18\x03 \x01(\t\x12\x1c\n\x14skill_index_sequence\x18\x04 \x01(\t\x12\x11\n\tskill_pos\x18\x05 \x01(\r\x12\x1e\n\x16skill_preview_offset_x\x18\x06 \x01(\x05\x12\x1e\n\x16skill_preview_offset_y\x18\x07 \x01(\x05\x12\x13\n\x0bskill_index\x18\x08 \x01(\x05\"i\n\x0eResRankValInfo\x12\x10\n\x08val_name\x18\x01 \x01(\t\x12\x10\n\x08val_type\x18\x02 \x01(\r\x12\x0f\n\x07min_val\x18\x03 \x01(\r\x12\x0f\n\x07max_val\x18\x04 \x01(\r\x12\x11\n\tsort_type\x18\x05 \x01(\r\"\xbf\x02\n\x0bResRankInfo\x12\x0f\n\x07rank_id\x18\x01 \x01(\r\x12\x11\n\trank_name\x18\x02 \x01(\t\x12\x16\n\x0erank_base_type\x18\x03 \x01(\r\x12\x17\n\x0frank_flush_type\x18\x04 \x01(\r\x12\x15\n\rrank_capacity\x18\x05 \x01(\r\x12\x18\n\x10get_list_max_num\x18\r \x01(\r\x12\x16\n\x0e\x64\x61y_flush_hour\x18\x06 \x01(\r\x12\x15\n\rday_flush_min\x18\x07 \x01(\r\x12\x15\n\rday_flush_sec\x18\x08 \x01(\r\x12\x16\n\x0e\x64\x61y_flush_time\x18\t \x01(\r\x12\x11\n\tmin_level\x18\n \x01(\r\x12\x11\n\tmax_level\x18\x0b \x01(\r\x12&\n\rrank_val_info\x18\x0c \x03(\x0b\x32\x0f.ResRankValInfo\":\n\x15ResRankBattleSectInfo\x12\x0f\n\x07low_val\x18\x01 \x01(\r\x12\x10\n\x08high_val\x18\x02 \x01(\r\"K\n\x11ResRankBattleInfo\x12\n\n\x02id\x18\x01 \x01(\r\x12\x10\n\x08\x63\x61pacity\x18\x02 \x01(\r\x12\x18\n\x10get_list_max_num\x18\x03 \x01(\r\"c\n\x11ResRankBattleSect\x12\x10\n\x08rank_low\x18\x01 \x01(\x05\x12\x11\n\trank_high\x18\x02 \x01(\x05\x12)\n\trank_sect\x18\x03 \x03(\x0b\x32\x16.ResRankBattleSectInfo\"D\n\rST_REWARD_RES\x12\x10\n\x08res_type\x18\x01 \x01(\r\x12\x0e\n\x06res_id\x18\x02 \x01(\r\x12\x11\n\tres_count\x18\x03 \x01(\r\"\x8c\x01\n\x13ResRankBattleReward\x12\x10\n\x08rank_low\x18\x01 \x01(\x05\x12\x11\n\trank_high\x18\x02 \x01(\x05\x12(\n\x10\x65very_day_reward\x18\x03 \x03(\x0b\x32\x0e.ST_REWARD_RES\x12&\n\x0epromote_reward\x18\x04 \x03(\x0b\x32\x0e.ST_REWARD_RES\"\x98\x01\n\x1aResRankBattleRobotHeroInfo\x12\x0f\n\x07hero_id\x18\x01 \x01(\r\x12\x0f\n\x07hero_lv\x18\x02 \x01(\r\x12\x15\n\rhero_strength\x18\x03 \x01(\r\x12\x14\n\x0chero_stamina\x18\x04 \x01(\r\x12\x13\n\x0bhero_growup\x18\x05 \x01(\r\x12\x16\n\x0e\x66ight_capacity\x18\x06 \x01(\r\"e\n\x12ResRankBattleRobot\x12\x0b\n\x03uid\x18\x01 \x01(\r\x12\x12\n\nrobot_name\x18\x02 \x01(\t\x12.\n\thero_info\x18\x03 \x03(\x0b\x32\x1b.ResRankBattleRobotHeroInfo\"t\n\x1cResOnlineBattleRobotHeroInfo\x12\x0f\n\x07hero_id\x18\x01 \x01(\r\x12\x15\n\rhero_strength\x18\x02 \x01(\r\x12\x14\n\x0chero_stamina\x18\x03 \x01(\r\x12\x16\n\x0e\x66ight_capacity\x18\x04 \x01(\r\"x\n\x14ResOnlineBattleRobot\x12\x0b\n\x03uid\x18\x01 \x01(\r\x12\x12\n\nrobot_name\x18\x02 \x01(\t\x12\r\n\x05score\x18\x03 \x01(\r\x12\x30\n\thero_info\x18\x04 \x03(\x0b\x32\x1d.ResOnlineBattleRobotHeroInfo\"X\n\x16ResOnlineBattleShopBox\x12\x0b\n\x03pos\x18\x01 \x01(\r\x12\x0c\n\x04icon\x18\x02 \x01(\t\x12\r\n\x05price\x18\x03 \x01(\r\x12\x14\n\x0c\x62\x61se_drop_id\x18\x04 \x01(\r\"]\n\x12ResGrowUpCondition\x12\x11\n\tcondition\x18\x01 \x01(\r\x12\x19\n\x11\x63ondition_param_1\x18\x02 \x01(\x05\x12\x19\n\x11\x63ondition_param_2\x18\x03 \x01(\x05\"\xbc\x01\n\tResGrowUp\x12\x0f\n\x07hero_id\x18\x01 \x01(\r\x12\x12\n\ngrow_up_id\x18\x02 \x01(\r\x12.\n\x11grow_up_condition\x18\x03 \x03(\x0b\x32\x13.ResGrowUpCondition\x12.\n\x15grow_up_ned_chip_info\x18\x04 \x03(\x0b\x32\x0f.ResChipNumInfo\x12\x14\n\x0cgrow_up_name\x18\x05 \x01(\r\x12\x14\n\x0cgrow_up_icon\x18\x06 \x01(\r\"\xf9\x01\n\x0bResPurchase\x12\x15\n\rproduct_index\x18\x01 \x01(\r\x12\x14\n\x0cproduct_name\x18\x02 \x01(\t\x12\x17\n\x0fproduct_picture\x18\x03 \x01(\t\x12\x12\n\nproduct_id\x18\x04 \x01(\t\x12\r\n\x05price\x18\x05 \x01(\x02\x12\x14\n\x0cproduct_type\x18\x06 \x01(\r\x12\x13\n\x0b\x61\x63tivity_id\x18\x07 \x01(\r\x12\r\n\x05\x63ount\x18\x08 \x01(\r\x12\x15\n\rpromotion_cnt\x18\t \x01(\r\x12\x1f\n\x0breward_info\x18\n \x03(\x0b\x32\n.ResReward\x12\x0f\n\x07\x63hannel\x18\x0b \x01(\r\"`\n\x0cResMonthCard\x12\n\n\x02id\x18\x01 \x01(\r\x12\x0c\n\x04type\x18\x02 \x01(\r\x12\x0c\n\x04name\x18\x03 \x01(\t\x12\x12\n\nvalid_time\x18\x04 \x01(\r\x12\x14\n\x0c\x64\x61ily_reward\x18\x05 \x01(\r\"\xa6\x02\n\x12ResBusinessRefresh\x12\x13\n\x0b\x62usiness_id\x18\x01 \x01(\r\x12\x15\n\rbusiness_name\x18\x02 \x01(\t\x12\x14\n\x0ctrigger_type\x18\x03 \x01(\r\x12\x14\n\x0crefresh_hour\x18\x04 \x01(\r\x12\x16\n\x0erefresh_minute\x18\x05 \x01(\r\x12\x16\n\x0erefresh_second\x18\x06 \x01(\r\x12\x15\n\rbeg_time_year\x18\x07 \x01(\r\x12\x16\n\x0e\x62\x65g_time_month\x18\x08 \x01(\r\x12\x14\n\x0c\x62\x65g_time_day\x18\t \x01(\r\x12\x15\n\rend_time_year\x18\n \x01(\r\x12\x16\n\x0e\x65nd_time_month\x18\x0b \x01(\r\x12\x14\n\x0c\x65nd_time_day\x18\x0c \x01(\r\"\xa7\x01\n\x0bResGroupBuy\x12\x14\n\x0cgroup_buy_id\x18\x01 \x01(\r\x12\x16\n\x0egroup_buy_desc\x18\x02 \x01(\t\x12\x10\n\x08\x62\x65g_time\x18\x03 \x01(\t\x12\x10\n\x08\x65nd_time\x18\x04 \x01(\t\x12\x12\n\ncost_money\x18\x05 \x01(\r\x12\x12\n\nis_refresh\x18\x06 \x01(\r\x12\x1e\n\nbuy_reward\x18\x07 \x03(\x0b\x32\n.ResReward\"S\n\x13ResGrowthFundReward\x12\n\n\x02id\x18\x01 \x01(\r\x12\x14\n\x0ctarget_dunid\x18\x02 \x01(\r\x12\x1a\n\x06reward\x18\x03 \x03(\x0b\x32\n.ResReward\"\xe6\x01\n\x13ResCumulateRecharge\x12\n\n\x02id\x18\x01 \x01(\r\x12\x15\n\rrecharge_name\x18\x02 \x01(\t\x12\x17\n\x0ftarget_recharge\x18\x03 \x01(\r\x12\x1a\n\x06reward\x18\x04 \x03(\x0b\x32\n.ResReward\x12 \n\x0c\x64\x61ily_reward\x18\x05 \x03(\x0b\x32\n.ResReward\x12\x16\n\x0e\x64\x61ily_buy_cost\x18\x06 \x01(\r\x12\x1d\n\tdaily_buy\x18\x07 \x03(\x0b\x32\n.ResReward\x12\x1e\n\ndaily_free\x18\x08 \x03(\x0b\x32\n.ResReward\"2\n\x0bResSlotInfo\x12\x0f\n\x07slot_id\x18\x01 \x01(\r\x12\x12\n\nopen_limit\x18\x02 \x01(\r\"!\n\x0cResParamInfo\x12\x11\n\tparameter\x18\x01 \x01(\r\"m\n\x07ResGift\x12\x0f\n\x07gift_id\x18\x01 \x01(\r\x12\x15\n\rex_change_cnt\x18\x02 \x01(\r\x12\r\n\x05title\x18\x03 \x01(\t\x12\x0f\n\x07\x63ontent\x18\x04 \x01(\t\x12\x1a\n\x06reward\x18\x05 \x03(\x0b\x32\n.ResReward\"\x92\x03\n\x07ResItem\x12\x0f\n\x07item_id\x18\x01 \x01(\r\x12\x11\n\titem_name\x18\x02 \x01(\t\x12\x11\n\titem_desc\x18\x03 \x01(\t\x12\x12\n\nitem_level\x18\x04 \x01(\r\x12\x11\n\titem_type\x18\x05 \x01(\r\x12\x0f\n\x07\x63\x61n_use\x18\x06 \x01(\r\x12\x14\n\x0citem_quality\x18\x07 \x01(\r\x12\x16\n\x0eitem_use_level\x18\x08 \x01(\r\x12\x17\n\x0fitem_page_index\x18\t \x01(\r\x12\x17\n\x0fitem_slot_index\x18\n \x01(\r\x12\x11\n\tsort_type\x18\x0b \x01(\r\x12\x13\n\x0bis_can_drop\x18\x0c \x01(\r\x12\x14\n\x0cpackage_wrap\x18\r \x01(\r\x12\x0e\n\x06pic_id\x18\x0e \x01(\r\x12\x11\n\tfunc_type\x18\x0f \x01(\r\x12\x10\n\x08tab_type\x18\x10 \x01(\r\x12 \n\tparameter\x18\x11 \x03(\x0b\x32\r.ResParamInfo\x12\x13\n\x0b\x64rop_dun_id\x18\x12 \x03(\r\x12\x0e\n\x06output\x18\x13 \x03(\r\"4\n\x11ResEquipAttrRatio\x12\x10\n\x08\x61ttrType\x18\x01 \x02(\r\x12\r\n\x05ratio\x18\x02 \x02(\x02\"C\n\x08HeroAttr\x12\x11\n\tattr_type\x18\x01 \x02(\r\x12\x12\n\nattr_value\x18\x02 \x01(\r\x12\x10\n\x08is_ratio\x18\x03 \x01(\r\"\x7f\n\x0cResEquipAttr\x12\x11\n\tattr_type\x18\x01 \x02(\r\x12\x12\n\nattr_value\x18\x02 \x01(\r\x12\x10\n\x08is_ratio\x18\x03 \x01(\r\x12\x1a\n\x12\x61ttr_str_inc_value\x18\x04 \x01(\r\x12\x1a\n\x12\x61ttr_sta_inc_value\x18\x05 \x01(\r\"\xc5\x04\n\x08ResEquip\x12\x10\n\x08\x65quip_id\x18\x01 \x02(\r\x12\x13\n\x0bpack_pic_id\x18\x02 \x02(\r\x12\x10\n\x08\x65valuate\x18\x03 \x02(\r\x12\r\n\x05\x63olor\x18\x04 \x02(\r\x12\x0e\n\x06weight\x18\x05 \x02(\r\x12\x11\n\tequip_pos\x18\x06 \x02(\r\x12\x10\n\x08\x62\x61se_exp\x18\x07 \x02(\r\x12\x10\n\x08job_type\x18\x08 \x02(\r\x12\x1a\n\x12\x61ttr_base_strength\x18\t \x02(\r\x12\x19\n\x11\x61ttr_base_stamina\x18\n \x02(\r\x12\x16\n\x0eprice_for_sell\x18\x10 \x02(\r\x12\x14\n\x0c\x61wesome_desc\x18\x11 \x02(\r\x12\x1c\n\x14levelup_strength_inc\x18\x0b \x02(\r\x12\x1b\n\x13levelup_stamina_inc\x18\x0c \x02(\r\x12\x19\n\x11levelup_max_level\x18\x1a \x02(\r\x12\x16\n\x0e\x63\x61n_batch_sell\x18\x19 \x02(\x08\x12\x14\n\x0c\x62ind_to_hero\x18\x16 \x02(\x08\x12\x17\n\x0fitem_slot_index\x18\x14 \x01(\r\x12\x18\n\x10return_gem_ratio\x18\x17 \x02(\r\x12!\n\nattr_color\x18\r \x03(\x0b\x32\r.ResEquipAttr\x12\"\n\x0b\x61ttr_wakeup\x18\x0e \x03(\x0b\x32\r.ResEquipAttr\x12\"\n\x0b\x61ttr_growup\x18\x0f \x03(\x0b\x32\r.ResEquipAttr\x12\x13\n\x0b\x64rop_dun_id\x18\x15 \x03(\r\x12\x0e\n\x06output\x18\x18 \x03(\r\"6\n\x0bResMaterial\x12\x0c\n\x04type\x18\x01 \x02(\r\x12\n\n\x02id\x18\x02 \x02(\r\x12\r\n\x05\x63ount\x18\x03 \x02(\r\"\xa3\x01\n\x0eResEquipGrowup\x12\x10\n\x08\x65quip_id\x18\x01 \x02(\r\x12\x14\n\x0cgrowup_level\x18\x02 \x02(\r\x12\x1e\n\x08material\x18\x03 \x03(\x0b\x32\x0c.ResMaterial\x12\x12\n\nextra_gold\x18\x04 \x02(\r\x12\x1b\n\x04\x61ttr\x18\x05 \x03(\x0b\x32\r.ResEquipAttr\x12\x18\n\x10need_equip_level\x18\x06 \x02(\r\"L\n\x17ResEquipWakeupCondition\x12\x0b\n\x03\x63nt\x18\x02 \x02(\r\x12\x11\n\tmin_level\x18\x03 \x02(\r\x12\x11\n\tgold_cost\x18\x04 \x02(\r\"?\n\x17ResEquipGrowupCondition\x12\x11\n\tequip_cnt\x18\x02 \x02(\r\x12\x11\n\tgold_cost\x18\x04 \x02(\r\"\xfa\x01\n\rResEquipColor\x12\r\n\x05\x63olor\x18\x01 \x02(\r\x12\x0b\n\x03pos\x18\x02 \x02(\r\x12\x13\n\x0b\x65xp_to_gold\x18\x04 \x02(\x02\x12\x1d\n\x15\x63hance_to_increase_sp\x18\x05 \x01(\r\x12\x16\n\x0ewakeup_item_id\x18\x06 \x02(\r\x12\x19\n\x11return_item_ratio\x18\t \x02(\x02\x12\x32\n\x10wakeup_condition\x18\x07 \x03(\x0b\x32\x18.ResEquipWakeupCondition\x12\x32\n\x10growup_condition\x18\x08 \x03(\x0b\x32\x18.ResEquipGrowupCondition\"7\n\x14ResEquipColorLevelup\x12\r\n\x05level\x18\x02 \x02(\r\x12\x10\n\x08need_exp\x18\x03 \x03(\r\"f\n\x16ResEquipColorLevelAttr\x12\r\n\x05\x63olor\x18\x01 \x02(\r\x12\x0b\n\x03pos\x18\x02 \x02(\r\x12\r\n\x05level\x18\x03 \x02(\r\x12\x10\n\x08strength\x18\x04 \x02(\r\x12\x0f\n\x07stamina\x18\x05 \x02(\r\"v\n\x11\x43SDT_EQUIPED_INFO\x12\x10\n\x08item_pos\x18\x01 \x02(\r\x12\x0f\n\x07\x62\x61se_id\x18\x02 \x02(\r\x12\x0f\n\x07\x63ur_exp\x18\x03 \x02(\r\x12\r\n\x05level\x18\x04 \x02(\r\x12\x0e\n\x06wakeup\x18\x05 \x02(\r\x12\x0e\n\x06growup\x18\x06 \x02(\r\"j\n\x11ResEquipRecommend\x12\x0f\n\x07hero_id\x18\x01 \x02(\r\x12\x14\n\x0c\x64un_id_start\x18\x02 \x02(\r\x12\x12\n\ndun_id_end\x18\x03 \x02(\r\x12\x1a\n\x12recommend_equip_id\x18\x04 \x03(\r\"{\n\x0bResDropElem\x12\x16\n\x0e\x64rop_item_type\x18\x01 \x01(\r\x12\x14\n\x0c\x64rop_item_id\x18\x02 \x01(\r\x12\x15\n\rdrop_item_num\x18\x03 \x01(\r\x12\x12\n\ndrop_ratio\x18\x04 \x01(\r\x12\x13\n\x0b\x64rop_grp_id\x18\x05 \x01(\r\"?\n\x0bResBaseDrop\x12\x0f\n\x07\x64rop_id\x18\x01 \x01(\r\x12\x1f\n\tdrop_elem\x18\x02 \x03(\x0b\x32\x0c.ResDropElem\"M\n\x0fResRetrieveInfo\x12\n\n\x02id\x18\x01 \x01(\r\x12\x0c\n\x04type\x18\x02 \x01(\r\x12 \n\tparameter\x18\x03 \x03(\x0b\x32\r.ResParamInfo\"\x1d\n\x08ResParam\x12\x11\n\tparametre\x18\x01 \x01(\r\"-\n\x0eResUserTipData\x12\n\n\x02id\x18\x01 \x01(\r\x12\x0f\n\x07tipText\x18\x02 \x01(\t\"\x95\x01\n\x0eResMailContent\x12\n\n\x02id\x18\x01 \x01(\r\x12\r\n\x05title\x18\x02 \x01(\t\x12\x0f\n\x07\x63ontent\x18\x03 \x01(\t\x12\x14\n\x0creward_money\x18\x04 \x01(\r\x12\x13\n\x0breward_gold\x18\x05 \x01(\r\x12\x16\n\x0ereward_crystal\x18\x06 \x01(\r\x12\x14\n\x0cpersist_time\x18\x07 \x01(\r\"\x8a\x05\n\x0cResPrizeDraw\x12\n\n\x02id\x18\x01 \x01(\r\x12\x1c\n\x14prize_draw_cost_type\x18\x02 \x01(\r\x12\x1a\n\x12prize_draw_cost_id\x18\x03 \x01(\r\x12\x1d\n\x15prize_draw_cost_count\x18\x04 \x01(\r\x12\x11\n\tmall_type\x18\x06 \x01(\r\x12\x0f\n\x07mall_id\x18\x07 \x01(\r\x12\x12\n\nmall_count\x18\x08 \x01(\r\x12\x17\n\x0f\x63ounteract_type\x18\t \x01(\r\x12\x15\n\rcounteract_id\x18\n \x01(\r\x12\x18\n\x10\x63ounteract_count\x18\x0b \x01(\r\x12\x16\n\x0e\x66ree_max_count\x18\x0c \x01(\r\x12\x19\n\x11\x66ree_use_interval\x18\r \x01(\r\x12*\n\"free_refresh_time_by_last_use_time\x18\x0e \x01(\r\x12\x33\n+free_refresh_time_by_last_refresh_time_hour\x18\x0f \x01(\r\x12\x32\n*free_refresh_time_by_last_refresh_time_min\x18\x10 \x01(\r\x12\x32\n*free_refresh_time_by_last_refresh_time_sec\x18\x11 \x01(\r\x12\x34\n\x1b\x66irst_prize_draw_drop_index\x18\x12 \x01(\x0b\x32\x0f.ResDropIndexEx\x12.\n\x15prize_draw_drop_index\x18\x13 \x03(\x0b\x32\x0f.ResDropIndexEx\x12\x31\n\x17prize_draw_preview_info\x18\x14 \x03(\x0b\x32\x10.ResResourceInfo\"8\n\x0eResShopRefresh\x12\x0c\n\x04type\x18\x01 \x01(\r\x12\n\n\x02id\x18\x02 \x01(\r\x12\x0c\n\x04time\x18\x03 \x01(\t\"4\n\nResBuyRate\x12\x15\n\rcritical_rate\x18\x01 \x01(\r\x12\x0f\n\x07\x62uy_cnt\x18\x02 \x01(\r\"\xa8\x01\n\x0fResRefreshPrice\x12\x0c\n\x04type\x18\x01 \x01(\r\x12\r\n\x05\x63ount\x18\x02 \x01(\r\x12\x0e\n\x06is_vip\x18\x03 \x01(\r\x12\x10\n\x08res_type\x18\x04 \x01(\r\x12\x0e\n\x06res_id\x18\x05 \x01(\r\x12\x11\n\tres_count\x18\x06 \x01(\r\x12\x14\n\x0conce_buy_cnt\x18\x07 \x01(\r\x12\x1d\n\x08\x62uy_rate\x18\x08 \x03(\x0b\x32\x0b.ResBuyRate\"\xcd\x02\n\x0cResShopGoods\x12\n\n\x02id\x18\x01 \x01(\r\x12\x0c\n\x04type\x18\x02 \x01(\r\x12\x17\n\x0fvip_level_limit\x18\x0e \x01(\r\x12\x16\n\x0eis_first_goods\x18\x03 \x01(\r\x12\x16\n\x0egoods_res_type\x18\x04 \x01(\r\x12\x14\n\x0cgoods_res_id\x18\x05 \x01(\r\x12\x11\n\tgoods_cnt\x18\r \x01(\r\x12\x12\n\nprice_type\x18\x06 \x01(\r\x12\r\n\x05price\x18\x07 \x01(\r\x12\x10\n\x08\x64iscount\x18\x08 \x01(\r\x12\"\n\x1a\x64iscount_begin_time_string\x18\t \x01(\t\x12 \n\x18\x64iscount_end_time_string\x18\n \x01(\t\x12\x1b\n\x13\x64iscount_begin_time\x18\x0b \x01(\r\x12\x19\n\x11\x64iscount_end_time\x18\x0c \x01(\r\"E\n\x16ResShopRandomGoodsInfo\x12\x10\n\x08goods_id\x18\x01 \x01(\r\x12\x19\n\x11goods_probability\x18\x02 \x01(\r\"\x8d\x01\n\rResShopRandom\x12\x0c\n\x04type\x18\x01 \x01(\r\x12\x0f\n\x07hero_id\x18\x02 \x01(\r\x12\x13\n\x0bhero_lv_low\x18\x03 \x01(\r\x12\x14\n\x0chero_lv_high\x18\x04 \x01(\r\x12\x32\n\x11goods_random_info\x18\x05 \x03(\x0b\x32\x17.ResShopRandomGoodsInfo\"Q\n\x0fResTutorialRule\x12\x0e\n\x06\x64un_id\x18\x01 \x02(\r\x12\x0c\n\x04\x64\x65mo\x18\x02 \x02(\t\x12 \n\x07\x61\x63tions\x18\x03 \x03(\x0b\x32\x0f.ST_ACTION_DESC\"M\n\x08ResBible\x12\x13\n\x0b\x63\x61tegory_id\x18\x01 \x02(\r\x12\x15\n\rcategory_name\x18\x02 \x02(\t\x12\x15\n\rpage_contents\x18\x03 \x03(\t\"3\n\x16ResFriendRecommendInfo\x12\x0b\n\x03low\x18\x01 \x01(\r\x12\x0c\n\x04high\x18\x02 \x01(\r\"\x82\x01\n\x16ResFriendRecommendSect\x12\x1a\n\x12\x66ight_capacity_low\x18\x01 \x01(\r\x12\x1b\n\x13\x66ight_capacity_high\x18\x02 \x01(\r\x12/\n\x0erecommend_info\x18\x03 \x03(\x0b\x32\x17.ResFriendRecommendInfo\"\xda\x05\n\x0fResTutorialInfo\x12\x1a\n\x12tutorial_dugeon_id\x18\x01 \x01(\r\x12\x1c\n\x14tutorial_dugeon_hero\x18\x02 \x01(\t\x12\x18\n\x10\x66irst_steller_id\x18\x03 \x01(\r\x12\x17\n\x0f\x66irst_planet_id\x18\x04 \x01(\r\x12 \n\x18role_level_skill_upgrade\x18\x05 \x01(\r\x12\x18\n\x10hero_tower_level\x18\x06 \x01(\r\x12\x1d\n\x15role_level_hero_tower\x18\x07 \x01(\r\x12\x1d\n\x15gold_mine_building_id\x18\x08 \x01(\r\x12\x1c\n\x14unlock_dun_item_shop\x18\t \x01(\r\x12\x19\n\x11unlock_dun_emblem\x18\n \x01(\r\x12\x16\n\x0erole_id_emblem\x18\x0b \x01(\r\x12\x1f\n\x17unlock_dun_role_upgrade\x18\x0c \x01(\r\x12\x1e\n\x16role_level_skill_burst\x18\r \x01(\r\x12\x16\n\x0esp_skill_burst\x18\x0e \x01(\r\x12\x1a\n\x12sp_skill_ultimatet\x18\x0f \x01(\r\x12\x17\n\x0fsp_skill_charge\x18\x10 \x01(\r\x12\x1b\n\x13new_hero_steller_id\x18\x11 \x01(\r\x12\x1a\n\x12new_hero_planet_id\x18\x12 \x01(\r\x12\x1b\n\x13resource_store_type\x18\x13 \x01(\r\x12\x11\n\tisland_id\x18\x14 \x03(\r\x12 \n\x18role_level_equip_levelup\x18\x15 \x01(\r\x12\x1e\n\x16unlock_dun_join_league\x18\x16 \x01(\r\x12\x1c\n\x14\x65xp_mine_building_id\x18\x17 \x01(\r\x12\x1e\n\x16money_mine_building_id\x18\x18 \x01(\r\x12\x18\n\x10mall_building_id\x18\x19 \x01(\r\"F\n\x0eST_ACTION_DESC\x12\x0c\n\x04name\x18\x01 \x02(\t\x12\x10\n\x08tips_tag\x18\x02 \x02(\t\x12\x14\n\x0cguide_effect\x18\x03 \x02(\t\"\x87\x02\n\x12ST_SHOP_GOODS_INFO\x12\x10\n\x08goods_id\x18\x01 \x01(\r\x12\x13\n\x0b\x63\x61n_buy_cnt\x18\x02 \x01(\r\x12\x16\n\x0eis_already_buy\x18\x03 \x01(\r\x12\x16\n\x0egoods_res_type\x18\x04 \x01(\r\x12\x14\n\x0cgoods_res_id\x18\x05 \x01(\r\x12\x12\n\nprice_type\x18\x06 \x01(\r\x12\r\n\x05price\x18\x07 \x01(\r\x12\x10\n\x08\x64iscount\x18\x08 \x01(\r\x12\x1b\n\x13\x64iscount_begin_time\x18\t \x01(\r\x12\x19\n\x11\x64iscount_end_time\x18\n \x01(\r\x12\x17\n\x0fvip_level_limit\x18\x0b \x01(\r\"8\n\rST_SHOP_GOODS\x12\'\n\ngoods_info\x18\x01 \x03(\x0b\x32\x13.ST_SHOP_GOODS_INFO\"r\n#ST_GANG_CITY_STRONG_POINT_HERO_INFO\x12\x0f\n\x07role_id\x18\x01 \x01(\r\x12\x11\n\trole_name\x18\x03 \x01(\t\x12\'\n\thero_info\x18\x02 \x01(\x0b\x32\x14.ST_HERO_BATTLE_INFO\"i\n\x19ST_GANG_CITY_STRONG_POINT\x12\x13\n\x0bpoint_state\x18\x01 \x01(\r\x12\x37\n\thero_info\x18\x02 \x03(\x0b\x32$.ST_GANG_CITY_STRONG_POINT_HERO_INFO\"j\n\x11ST_GANG_CITY_INFO\x12\n\n\x02id\x18\x01 \x01(\r\x12\x12\n\ncity_state\x18\x02 \x01(\r\x12\x35\n\x11strong_point_info\x18\x03 \x03(\x0b\x32\x1a.ST_GANG_CITY_STRONG_POINT\"\x87\x01\n\x0cST_GANG_CITY\x12&\n\nsmall_city\x18\x01 \x03(\x0b\x32\x12.ST_GANG_CITY_INFO\x12)\n\rmoderate_city\x18\x02 \x03(\x0b\x32\x12.ST_GANG_CITY_INFO\x12$\n\x08\x62ig_city\x18\x03 \x03(\x0b\x32\x12.ST_GANG_CITY_INFO\"c\n\x17ST_GANG_BATTLE_MEM_INFO\x12\x13\n\x0bmem_role_id\x18\x01 \x01(\r\x12\x15\n\rmem_role_name\x18\x02 \x01(\t\x12\x1c\n\x14\x63umulate_recharge_id\x18\x03 \x01(\r\"E\n\x17ST_GANG_BATTLE_MEM_LIST\x12*\n\x08mem_info\x18\x01 \x03(\x0b\x32\x18.ST_GANG_BATTLE_MEM_INFO\"O\n ST_GANG_BATTLE_ATTACK_POINT_INFO\x12\x0f\n\x07\x63ity_id\x18\x01 \x01(\r\x12\x1a\n\x12strong_point_index\x18\x02 \x01(\x05\"\xa2\x01\n\x1eST_GANG_BATTLE_MEM_ATTACK_INFO\x12\x13\n\x0bmem_role_id\x18\x01 \x01(\r\x12\x15\n\rmem_role_name\x18\x02 \x01(\t\x12\x1b\n\x13mem_total_fight_cnt\x18\x03 \x01(\r\x12\x19\n\x11mem_win_fight_cnt\x18\x04 \x01(\r\x12\x1c\n\x14\x63umulate_recharge_id\x18\x05 \x01(\r\"S\n\x1eST_GANG_BATTLE_MEM_ATTACK_LIST\x12\x31\n\x08mem_info\x18\x01 \x03(\x0b\x32\x1f.ST_GANG_BATTLE_MEM_ATTACK_INFO\"B\n\x1aST_HERO_BATTLE_EMBLEM_INFO\x12\x11\n\temblem_id\x18\x01 \x01(\r\x12\x11\n\temblem_lv\x18\x02 \x01(\r\"]\n\x19ST_HERO_BATTLE_EQUIP_INFO\x12\x0f\n\x07\x62\x61se_id\x18\x01 \x01(\r\x12\r\n\x05level\x18\x02 \x01(\r\x12\x0f\n\x07wake_up\x18\x03 \x01(\r\x12\x0f\n\x07grow_up\x18\x04 \x01(\r\"\x9d\x02\n\x13ST_HERO_BATTLE_INFO\x12\x0f\n\x07hero_id\x18\x01 \x01(\r\x12\x0f\n\x07hero_lv\x18\x02 \x01(\r\x12\x14\n\x0chero_grow_up\x18\x03 \x01(\r\x12\x1e\n\x16hero_relation_strength\x18\x04 \x01(\r\x12\x1d\n\x15hero_relation_stamina\x18\x05 \x01(\r\x12\x1b\n\x13hero_fight_capacity\x18\x06 \x01(\r\x12\x30\n\x0b\x65mblem_info\x18\x07 \x03(\x0b\x32\x1b.ST_HERO_BATTLE_EMBLEM_INFO\x12.\n\nequip_info\x18\x08 \x03(\x0b\x32\x1a.ST_HERO_BATTLE_EQUIP_INFO\x12\x10\n\x08skill_id\x18\t \x03(\r\"{\n\x14ST_BATTLE_ROBOT_INFO\x12\x0f\n\x07hero_id\x18\x01 \x01(\r\x12\x0f\n\x07hero_lv\x18\x02 \x01(\r\x12\x14\n\x0chero_grow_up\x18\x03 \x01(\r\x12\x15\n\rhero_strength\x18\x04 \x01(\r\x12\x14\n\x0chero_stamina\x18\x05 \x01(\r\"\x9c\x01\n\x18ST_BATTLE_HERO_ATTR_INFO\x12\x0f\n\x07hero_id\x18\x01 \x01(\r\x12\x0f\n\x07grow_up\x18\x02 \x01(\r\x12\r\n\x05level\x18\x03 \x01(\r\x12\x16\n\x0e\x66ight_capacity\x18\x04 \x01(\r\x12\x0e\n\x06max_hp\x18\x05 \x01(\r\x12\r\n\x05skill\x18\x06 \x03(\r\x12\x18\n\x05\x61ttrs\x18\x07 \x03(\x0b\x32\t.HeroAttr*\xfb\x42\n\x08RESCONST\x12\x10\n\x0cRES_ID_ARRAY\x10\x01\x12\x0f\n\x0bRES_VERSION\x10\x04\x12\x11\n\tRES_MAGIC\x10\xcd\xa6\x95\x9a\x05\x12\x1b\n\x17RES_MAX_PREROLEINFO_NUM\x10\x05\x12\x1e\n\x1aRES_MAX_PREMONSTERINFO_NUM\x10\x05\x12 \n\x1cRES_MAX_MONSTER_CNT_ONEGROUP\x10\x05\x12\x1a\n\x16MAX_HERO_GAINSKILL_CNT\x10\n\x12\x13\n\x0fRES_MAX_GRP_CNT\x10\x0f\x12\x1a\n\x16RES_BUILDING_TYPE_MAIN\x10\x01\x12\x1a\n\x16RES_BUILDING_TYPE_HERO\x10\x02\x12\x1b\n\x17RES_BUILDING_TYPE_STORE\x10\x03\x12\x1c\n\x18RES_BUILDING_TYPE_ISLAND\x10\x04\x12\x1a\n\x16RES_BUILDING_TYPE_GANG\x10\x05\x12\x1e\n\x1aRES_BUILDING_TYPE_PRACTICE\x10\x06\x12\x1d\n\x19RES_BUILDING_TYPE_MONSTER\x10\x07\x12\x1c\n\x18RES_BUILDING_TYPE_SCHEME\x10\x08\x12$\n RES_MAX_BUILDING_LEVELCOST_COUNT\x10\x03\x12!\n\x1dRES_MAX_UNLOCK_BUILDING_COUNT\x10\n\x12\x18\n\x14RES_MAX_ISLAND_COUNT\x10\x10\x12\x11\n\x0cMAX_PATH_LEN\x10\x80\x02\x12\x1c\n\x17RES_MAX_PATTERNNAME_LEN\x10\x80\x01\x12\x14\n\x0fRES_MAX_URL_LEN\x10\x80\x08\x12\x10\n\x0cMAX_NAME_LEN\x10@\x12\x13\n\x0eSHORT_DESC_LEN\x10\x80\x02\x12\x17\n\x12MAX_SHORT_DESC_LEN\x10\x80\x01\x12\x19\n\x14RES_MAX_JOB_DESC_LEN\x10\x80\x08\x12\x14\n\x10RES_MAX_NAME_LEN\x10 \x12\x19\n\x15RES_MAX_FILE_NAME_LEN\x10\x30\x12\x1b\n\x16RES_MAX_SKILL_TYPE_NUM\x10\x88\'\x12\x1a\n\x16RES_MAX_RANK_VAL_COUNT\x10\x05\x12%\n!RES_MAX_RANK_BATTLE_RANK_SECT_NUM\x10\x05\x12\x16\n\x12RES_MAX_RANK_COUNT\x10\x14\x12\x1d\n\x18RES_MAX_RANK_ROBOT_COUNT\x10\xc8\x01\x12\x1a\n\x16RES_MAX_PURCHASE_COUNT\x10\x32\x12\x16\n\x12RES_MAX_SLOT_COUNT\x10\x06\x12\x19\n\x14RES_MAX_GROWUP_COUNT\x10\xc8\x01\x12\"\n\x1eRES_MAX_GROWUP_CONDITION_COUNT\x10\n\x12\x1e\n\x1aRES_MAX_ENDLESS_HERO_COUNT\x10\x04\x12%\n!RES_MAX_EMBLEM_LEVELUP_CHIP_COUNT\x10\x06\x12\x1b\n\x17RES_MAX_PVP_SERCH_COUNT\x10\x04\x12\x19\n\x15RES_GIFT_ID_MAX_COUNT\x10\x64\x12\x1c\n\x18RES_GIFT_CODE_LENGTH_MAX\x10\x10\x12\x19\n\x15RES_RANK_VAL_TYPE_DAY\x10\x01\x12\x1a\n\x16RES_RANK_VAL_TYPE_WEEK\x10\x02\x12\x1b\n\x17RES_RANK_VAL_TYPE_MONTH\x10\x03\x12\x13\n\x0fRES_SCRIPT_NAME\x10 \x12\x1a\n\x16MAX_JOB_INIT_SKILL_NUM\x10\x32\x12\x18\n\x14RES_MAX_INITHERO_NUM\x10\x08\x12\x18\n\x14RES_MAX_INITSLOT_NUM\x10\x03\x12\x15\n\x11RES_MAX_ROUND_PVP\x10\x03\x12\x19\n\x15RES_MAX_TRAINSLOT_NUM\x10\x05\x12\x1b\n\x17RES_MAX_INITMONSTER_NUM\x10\x03\x12\x18\n\x14RES_MAX_DUNLIMIT_NUM\x10\x03\x12\x1b\n\x17RES_MAX_REWARD_ITEM_NUM\x10\x05\x12\x1d\n\x19RES_MAX_INITUNLOCKDUN_NUM\x10\x05\x12\x1a\n\x16RES_MAX_ROOMCNT_ONEDUN\x10\x05\x12\x1e\n\x1aRES_MAX_MONSTERCNT_ONEROOM\x10\x1e\x12\x1a\n\x16RES_MAX_RELIVECOST_CNT\x10\x05\x12\x16\n\x12RES_MAX_REWARD_CNT\x10\x05\x12\x1b\n\x17RES_MAX_GIFT_REWARD_CNT\x10\x06\x12\x17\n\x13RES_MAX_DUNCNT_CITY\x10\x0f\x12\x14\n\x10RES_MAX_DROP_NUM\x10\x05\x12\x18\n\x14RES_MAX_EVALUATE_NUM\x10\x03\x12\x1a\n\x16RES_MAX_DUNCNT_ONECITY\x10\x14\x12\x13\n\x0fRES_MAX_POS_CNT\x10\n\x12\x1a\n\x16RES_MAX_BUYPOWER_COUNT\x10\x03\x12\x1f\n\x1bRES_MAX_ITEM_CATEGORY_COUNT\x10\x05\x12\x1e\n\x1aRES_MAX_OVERHIT_PRODUCTION\x10\x05\x12!\n\x1dRES_MAX_PRACTICEDUN_LIMIT_NUM\x10\x05\x12\"\n\x1eRES_MAX_PRACTICEDUN_REWARD_NUM\x10\x05\x12\"\n\x1eRES_MAX_PRACTICEDUN_TARGET_NUM\x10\x14\x12\"\n\x1eRES_MAX_DUNGEONREWARD_TYPE_NUM\x10\x05\x12\x16\n\x12RES_MAX_REWARD_NUM\x10\x05\x12\"\n\x1eRES_MAX_ACHIEVEMENT_TARGET_NUM\x10\n\x12\x1d\n\x19RES_DAILY_TASK_TARGET_NUM\x10\n\x12\x1f\n\x1bRES_MAX_MAIN_TASK_GROUP_NUM\x10\x14\x12\x1b\n\x15RES_MAX_MAIN_TASK_NUM\x10\xa0\x9c\x01\x12\x1c\n\x18RES_PVPSCORE_MAX_SECTION\x10\x32\x12\x1b\n\x17QUEST_REPEAT_PERIOD_DAY\x10\x01\x12\x1c\n\x18QUEST_REPEAT_PERIOD_WEEK\x10\x02\x12\x1d\n\x19QUEST_REPEAT_PERIOD_MONTH\x10\x03\x12\x1f\n\x1bITEM_PERIODLIMIT_PERIOD_DAY\x10\x01\x12 \n\x1cITEM_PERIODLIMIT_PERIOD_WEEK\x10\x02\x12!\n\x1dITEM_PERIODLIMIT_PERIOD_MONTH\x10\x03\x12\x18\n\x14RES_MAX_JOB_TYPE_NUM\x10\n\x12\x1d\n\x18RES_MAX_LEVELUP_TYPE_NUM\x10\xb8\x17\x12 \n\x1bRES_MAX_MONSTERJOB_TYPE_NUM\x10\xf4\x03\x12!\n\x1bRES_MAX_MONSTER_LEVELUP_NUM\x10\xa0\x9c\x01\x12\x1d\n\x19RES_MAX_MONSTER_GROUP_NUM\x10\x32\x12#\n\x1eRES_MAX_MONSTERGRP_LEVELUP_NUM\x10\xb8\x17\x12\x17\n\x13RES_MAX_AUDIO_COUNT\x10\x03\x12\x17\n\x13RES_MAX_ROLE_ACTION\x10\x14\x12\x1d\n\x18RES_MAX_MONSTER_TYPE_NUM\x10\xb8\x17\x12!\n\x1bRES_MAX_MONSTER_DYNAMIC_NUM\x10\xb0\xea\x01\x12\x16\n\x12RES_MAX_CHGOBJ_NUM\x10\x05\x12\x18\n\x14RES_MAX_PVE_DIFF_NUM\x10\n\x12\x1b\n\x17MAX_MST_INIT_STATUS_NUM\x10\x05\x12\x1e\n\x1aRES_MAX_DROPCNT_PERMONSTER\x10\x05\x12\x1d\n\x18RES_MAX_DUNGEON_TYPE_NUM\x10\x90\x03\x12\x1d\n\x19RES_MAX_PARAM_TIME_ACTION\x10\x32\x12 \n\x1cRES_MAX_TIME_ACTION_RULE_NUM\x10\n\x12\x14\n\x10RES_TYPE_TRIGGER\x10\x00\x12\x19\n\x15RES_TYPE_TIME_CONTROL\x10\x01\x12\x19\n\x15RES_TYPE_FUNCTION_NPC\x10\x02\x12\x1e\n\x1aMAX_TIME_ACTION_CONFIG_NUM\x10\x32\x12\x17\n\x13RES_INTER_TYPE_NULL\x10\x00\x12\x17\n\x13RES_INTER_TYPE_TIME\x10\x01\x12\x1c\n\x18RES_INTER_TYPE_WEEK_MASK\x10\x02\x12 \n\x1cRES_INTER_TYPE_TIME_ENDLIMIT\x10\x03\x12\x1d\n\x19RES_INTER_TYPE_TIME_MONTH\x10\x04\x12\x18\n\x14RES_MAX_GS_SKILL_NUM\x10\x1e\x12\x1b\n\x16RES_MAX_RATIO_TYPE_NUM\x10\xd0\x0f\x12#\n\x1eRES_MAX_LEVELTRANSFER_TYPE_NUM\x10\xd0\x0f\x12\x1c\n\x18RES_MAX_PENDANT_TYPE_NUM\x10\x05\x12\x1b\n\x17RES_MAX_LEVEL_QUEST_NUM\x10\x05\x12\x1a\n\x16RES_MAX_AUTO_QUEST_NUM\x10\n\x12\x1a\n\x16RES_MAX_ITEM_PARAM_NUM\x10\x05\x12\x1c\n\x18RES_MAX_ITEM_DROPDUN_NUM\x10\x05\x12\x1e\n\x1aMAX_ITEM_DROPDUNGEON_COUNT\x10\x04\x12\"\n\x1eRES_MAX_ITEM_PERIODLIMIT_COUNT\x10\x14\x12\x1e\n\x19RES_MAX_RETRIEVE_INFO_NUM\x10\xe8\x07\x12\x11\n\rRES_TOKEN_LEN\x10 \x12\x17\n\x13RES_TOKEN_VALUE_LEN\x10@\x12\x11\n\rMAX_TOKEN_NUM\x10\x64\x12$\n RES_ROLE_RELATION_INTERPROMOTING\x10\x01\x12!\n\x1dRES_ROLE_RELATION_RESTRICTION\x10\x02\x12\x16\n\x12RES_MAIL_TITLE_MAX\x10 \x12\x19\n\x14RES_MAIL_CONTENT_MAX\x10\x80\x02\x12#\n\x1fRES_MAX_EQUIP_DROPDUNGEON_COUNT\x10(\x12\x1b\n\x16RES_MAX_EQUIP_TYPE_NUM\x10\x90N\x12\x18\n\x13RES_MAX_EQUIP_LEVEL\x10\xc8\x01\x12\x1f\n\x1bRES_MAX_EQUIP_GROW_UP_LEVEL\x10\x05\x12)\n%RES_MAX_EQUIP_LEVEL_UP_MATERIAL_COUNT\x10\x06\x12!\n\x1dRES_MAX_EQUIP_RECOMMEND_COUNT\x10\x06\x12 \n\x1cRES_MAX_DROPELEM_NUM_PERDROP\x10\x06\x12\x1e\n\x19RES_MAX_BASEDROP_CONF_NUM\x10\xd0\x0f\x12%\n!RES_ACHIEVEMENT_TARGET_HERO_COUNT\x10\x01\x12%\n!RES_ACHIEVEMENT_TARGET_HERO_LEVEL\x10\x02\x12\'\n#RES_ACHIEVEMENT_TARGET_XHERO_YLEVEL\x10\x03\x12/\n+RES_ACHIEVEMENT_TARGET_HERO_ALLSKILL_NLEVEL\x10\x04\x12+\n\'RES_ACHIEVEMENT_TARGET_HERO_EMBLEM_OPEN\x10\x05\x12-\n)RES_ACHIEVEMENT_TARGET_HERO_EMBLEM_NLEVEL\x10\x06\x12)\n%RES_ACHIEVEMENT_TARGET_HERO_JOB_LEVEL\x10\x07\x12\x33\n/RES_ACHIEVEMENT_TARGET_DUNEVALUATE_SLEVEL_COUNT\x10\x08\x12(\n$RES_ACHIEVEMENT_TARGET_DUN_COMPELETE\x10\t\x12(\n$RES_ACHIEVEMENT_TARGET_PVE_WIN_COUNT\x10\n\x12(\n$RES_ACHIEVEMENT_TARGET_PVP_WIN_COUNT\x10\x0b\x12(\n$RES_ACHIEVEMENT_TARGET_PVP_GAIN_GOLD\x10\x0c\x12+\n\'RES_ACHIEVEMENT_TARGET_PVP_GAIN_CRYSTAL\x10\r\x12/\n+RES_ACHIEVEMENT_TARGET_PVPEVALUATE_SSSLEVEL\x10\x0e\x12.\n*RES_ACHIEVEMENT_TARGET_PVP_DEFENDWIN_COUNT\x10\x0f\x12(\n$RES_ACHIEVEMENT_TARGET_ENDLESS_FLOOR\x10\x10\x12\x35\n1RES_ACHIEVEMENT_TARGET_GANGBATTLE_SCORE_NORECOVER\x10\x11\x12\x30\n,RES_ACHIEVEMENT_TARGET_GANGBATTLE_TOTALSCORE\x10\x12\x12$\n RES_ACHIEVEMENT_TARGET_GANG_JOIN\x10\x13\x12$\n RES_ACHIEVEMENT_TARGET_PVP_SCORE\x10\x14\x12#\n\x1fRES_ACHIEVEMENT_TARGET_PVP_RANK\x10\x15\x12.\n*RES_ACHIEVEMENT_TARGET_OFFLINEBATTLE_SCORE\x10\x16\x12\x1e\n\x1aRES_ACHIEVEMENT_TARGET_MAX\x10(\x12\x1b\n\x17RES_DAILY_TASK_TYPE_PVE\x10\x01\x12\"\n\x1eRES_DAILY_TASK_TYPE_RANK_MATCH\x10\x02\x12\"\n\x1eRES_DAILY_TASK_TYPE_CLAN_MATCH\x10\x03\x12 \n\x1cRES_DAILY_TASK_TYPE_PRACTICE\x10\x04\x12\x1f\n\x1bRES_DAILY_TASK_TYPE_ENDLESS\x10\x05\x12\x1b\n\x17RES_DAILY_TASK_TYPE_PVP\x10\x06\x12 \n\x1cRES_DAILY_TASK_TYPE_CLAN_PVE\x10\x07\x12\x1f\n\x1bRES_DAILY_TASK_TYPE_POWER_1\x10\x08\x12\x1f\n\x1bRES_DAILY_TASK_TYPE_POWER_2\x10\t\x12&\n\"RES_DAILY_TASK_TYPE_OFFLINE_BATTLE\x10\n\x12\x1f\n\x1bRES_DAILY_TASK_TYPE_POWER_3\x10\x0b\x12\'\n#RES_MAIN_TASK_ROLE_X_COMPLETE_PVE_Y\x10\x01\x12&\n\"RES_MAIN_TASK_ROLE_X_LEVEL_REACH_Y\x10\x02\x12/\n+RES_MAIN_TASK_ROLE_X_SKILLS_N_LEVLE_REACH_Y\x10\x03\x12\x34\n0RES_MAIN_TASK_ROLE_X_COMPLETE_PRACTICE_CHAPTER_Y\x10\x04\x12-\n)RES_MAIN_TASK_ROLE_X_EMBLEM_LEVEL_REACH_Y\x10\x05\x12\x1c\n\x18RES_MAIN_TASK_GET_ROLE_X\x10\x06\x12/\n+RES_MAIN_TASK_ANY_ROLES_N_JOB_LEVEL_REACH_X\x10\x07\x12*\n&RES_MAIN_TASK_BUILDING_X_LEVEL_REACH_Y\x10\x08\x12)\n%RES_MAIN_TASK_GUARD_TYPE_X_RES_ISLAND\x10\t\x12\x31\n-RES_MAIN_TASK_ROLE_X_COMPLETE_Y_TIMES_ENDLESS\x10\n\x12/\n+RES_MAIN_TASK_COMPLETE_X_TIMES_STEAL_BATTLE\x10\x0b\x12.\n*RES_MAIN_TASK_COMPLETE_X_TIMES_RANK_BATTLE\x10\x0c\x12\x30\n,RES_MAIN_TASK_COMPLETE_X_TIMES_LEAUGE_BATTLE\x10\r\x12.\n*RES_MAIN_TASK_COMPLETE_X_TIMES_WIFI_BATTLE\x10\x0e\x12*\n&RES_MAIN_TASK_ROLE_X_JOB_LEVEL_REACH_Y\x10\x0f\x12.\n*RES_MAIN_TASK_ROLE_X_ENDLESS_SCORE_REACH_Y\x10\x10\x12*\n&RES_MAIN_TASK_ROLE_X_COMPLETE_NEXT_PVE\x10\x11\x12\x37\n3RES_MAIN_TASK_ROLE_X_WEARED_EQUIPMENT_COUNT_REACH_Y\x10\x12\x12H\nDRES_MAIN_TASK_ROLE_X_WEARED_GROWUPED_LEVEL_Y_EQUIPMENT_COUNT_REACH_Z\x10\x13\x12H\nDRES_MAIN_TASK_ROLE_X_WEARED_WAKEUPED_LEVEL_Y_EQUIPMENT_COUNT_REACH_Z\x10\x14\x12I\nERES_MAIN_TASK_ROLE_X_WEARED_LEVELUPED_LEVEL_Y_EQUIPMENT_COUNT_REACH_Z\x10\x15\x12 \n\x1cRES_OFFLINE_BATTLE_TITLE_MAX\x10\x32\x12\x17\n\x13RES_PVE_MODE_NORMAL\x10\x00\x12\x16\n\x12RES_PVE_MODE_ELITE\x10\x01\x12\x16\n\x12RES_PVE_MODE_COUNT\x10\x02\x12$\n RES_PURCHASE_PRODUCT_TYPE_NORMAL\x10\x00\x12+\n\'RES_PURCHASE_PRODUCT_TYPE_FIRSTPURCHASE\x10\x01\x12\'\n#RES_PURCHASE_PRODUCT_TYPE_MONTHCARD\x10\x02\x12(\n$RES_PURCHASE_PRODUCT_TYPE_GROWTHFUND\x10\x03\x12.\n*RES_PURCHASE_PRODUCT_TYPE_CUMULATERECHARGE\x10\x04\x12\x1f\n\x1bRES_REFRESH_PRICE_TYPE_SHOP\x10\x01\x12 \n\x1cRES_REFRESH_PRICE_TYPE_POWER\x10\x02\x12&\n\"RES_REFRESH_PRICE_TYPE_SKILL_POINT\x10\x03\x12*\n&RES_REFRESH_PRICE_TYPE_RANKBATTLE_SHOP\x10\x04\x12\"\n\x1eRES_REFRESH_PRICE_TYPE_CRYSTAL\x10\x05\x12\x1f\n\x1bRES_REFRESH_PRICE_TYPE_GOLD\x10\x06\x12(\n$RES_REFRESH_PRICE_TYPE_ENDLESS_RESET\x10\x07\x12)\n%RES_REFRESH_PRICE_TYPE_RANKBATTLE_BUY\x10\x08\x12#\n\x1fRES_REFRESH_PRICE_TYPE_VIP_SHOP\x10\t\x12\x1e\n\x1aRES_REFRESH_PRICE_TYPE_MAX\x10\n\x12\x19\n\x15RES_GOODS_TYPE_COMMON\x10\x01\x12\x1a\n\x16RES_GOODS_TYPE_SPECIAL\x10\x02\x12\x18\n\x14RES_SHOP_TYPE_NORMAL\x10\x01\x12#\n\x1fRES_SHOP_TYPE_RANK_BATTLE_SCORE\x10\x02\x12\x15\n\x11RES_SHOP_TYPE_VIP\x10\x03\x12\"\n\x1eGANG_SUB_STATE_APPLY_NOT_APPLY\x10\x01\x12!\n\x1dGANG_SUB_STATE_APPLY_APPLYING\x10\x02\x12\"\n\x1eGANG_SUB_STATE_FIGHT_NOT_APPLY\x10\x03\x12)\n%GANG_SUB_STATE_FIGHT_NOT_IN_FIGHTLIST\x10\x04\x12\"\n\x1eGANG_SUB_STATE_FIGHT_NOT_MATCH\x10\x05\x12\x1e\n\x1aGANG_SUB_STATE_FIGHT_MATCH\x10\x06\x12\x1a\n\x16GANG_BATTLE_STATE_NULL\x10\x00\x12\x1a\n\x16GANG_BATTLE_STATE_REST\x10\x01\x12\x1b\n\x17GANG_BATTLE_STATE_APPLY\x10\x02\x12\x1b\n\x17GANG_BATTLE_STATE_FIGHT\x10\x03\x12\x1d\n\x19GANG_BATTLE_STATE_BALANCE\x10\x04\x12)\n%GANG_CITY_STRONG_POINT_STATE_UNATTACK\x10\x01\x12*\n&GANG_CITY_STRONG_POINT_STATE_ATTACKING\x10\x02\x12,\n(GANG_CITY_STRONG_POINT_STATE_ATTACK_LOSE\x10\x03\x12\x33\n/GANG_CITY_STRONG_POINT_STATE_TAKEOVER_ATTACKING\x10\x04\x12)\n%GANG_CITY_STRONG_POINT_STATE_TAKEOVER\x10\x05\x12\x1e\n\x1aGANG_CITY_STATE_UNTAKEOVER\x10\x01\x12\x1c\n\x18GANG_CITY_STATE_TAKEOVER\x10\x02\x12\x14\n\x10MAX_BIG_CITY_NUM\x10\x01\x12\x19\n\x15MAX_MODERATE_CITY_NUM\x10\x04\x12\x16\n\x12MAX_SMALL_CITY_NUM\x10\x08\x12 \n\x1cMAX_BIG_CITY_STRONGPOING_NUM\x10\x14\x12%\n!MAX_MODERATE_CITY_STRONGPOING_NUM\x10\n\x12\"\n\x1eMAX_SMALL_CITY_STRONGPOING_NUM\x10\x05\x12\x1c\n\x18MAX_STRONGPOINT_HERO_NUM\x10\x02\x12\x16\n\x12\x43ITY_POINT_CHG_SET\x10\x01\x12\x19\n\x15\x43ITY_POINT_CHG_CANCEL\x10\x02\x12\x17\n\x13\x43ITY_POINT_CHG_KICK\x10\x03\x12\x1a\n\x16\x43ITY_POINT_HERO_UPDATE\x10\x04\x12\x1a\n\x16RES_PRIZE_DRAW_ID_NONE\x10\x00\x12\x1e\n\x1aRES_PRIZE_DRAW_ID_COIN_ONE\x10\x01\x12\x1f\n\x1bRES_PRIZE_DRAW_ID_COINT_TEN\x10\x02\x12\x1f\n\x1bRES_PRIZE_DRAW_ID_MONEY_ONE\x10\x03\x12\x1f\n\x1bRES_PRIZE_DRAW_ID_MONEY_TEN\x10\x04\x12\x19\n\x15RES_PRIZE_DRAW_ID_MAX\x10\x05\x12%\n!RES_PRIZE_FREE_COUNT_REFRESH_NONE\x10\x00\x12,\n(RES_PRIZE_FREE_COUNT_REFRESH_BY_USE_TIME\x10\x01\x12\x30\n,RES_PRIZE_FREE_COUNT_REFRESH_BY_REFRESH_TIME\x10\x02\x12\'\n!RES_MAX_ONLINE_BATTLE_ROBOT_COUNT\x10\xa0\x8d\x06\x1a\x02\x10\x01*@\n\x18\x45NUM_SERVER_LOCOLIZATION\x12$\n ENUM_SERVER_LOCOLIZATION_CHINESE\x10\x00*\xe0\x01\n\x13ResChamberObjective\x12\x1f\n\x1b\x43HAMBER_OBJECTIVE_KILL_BOSS\x10\x01\x12\"\n\x1e\x43HAMBER_OBJECTIVE_KILL_MONSTER\x10\x02\x12%\n!CHAMBER_OBJECTIVE_REACH_WARPPOINT\x10\x03\x12\x1e\n\x1a\x43HAMBER_OBJECTIVE_SURVIVAL\x10\x04\x12\x1d\n\x19\x43HAMBER_OBJECTIVE_PROTECT\x10\x05\x12\x1e\n\x1a\x43HAMBER_OBJECTIVE_KILL_ALL\x10\x06*\x96\x01\n\x0fResSkillSetType\x12\x11\n\rSKILL_SET_TAP\x10\x01\x12\x16\n\x12SKILL_SET_UP_SLIDE\x10\x02\x12\x13\n\x0fSKILL_SET_SLIDE\x10\x03\x12\x18\n\x14SKILL_SET_DOWN_SLIDE\x10\x04\x12\x12\n\x0eSKILL_SET_DASH\x10\x05\x12\x15\n\x11SKILL_SET_SPECIAL\x10\x06*\xa0\x14\n\x0fResHeroAttrType\x12\x19\n\x15HERO_ATTR_COLOR_START\x10\x01\x12.\n*HERO_ATTR_COLOR_INCREASE_DAMAGE_TO_MONSTER\x10\x01\x12 \n\x1cHERO_ATTR_COLOR_SP_GET_SPEED\x10\x02\x12+\n\'HERO_ATTR_COLOR_INCREASE_DAMAGE_TO_BOSS\x10\x03\x12+\n\'HERO_ATTR_COLOR_INCREASE_DAMAGE_TO_HERO\x10\x04\x12\x1e\n\x1aHERO_ATTR_COLOR_SP_EXVALUE\x10\x05\x12\x32\n.HERO_ATTR_COLOR_INCREASE_DAMAGE_TO_MONSTER_TAP\x10\x0b\x12\x31\n-HERO_ATTR_COLOR_INCREASE_DAMAGE_TO_MONSTER_UP\x10\x0c\x12\x34\n0HERO_ATTR_COLOR_INCREASE_DAMAGE_TO_MONSTER_SLIDE\x10\r\x12\x33\n/HERO_ATTR_COLOR_INCREASE_DAMAGE_TO_MONSTER_DOWN\x10\x0e\x12\x33\n/HERO_ATTR_COLOR_INCREASE_DAMAGE_TO_MONSTER_DASH\x10\x0f\x12\x36\n2HERO_ATTR_COLOR_INCREASE_DAMAGE_TO_MONSTER_SPECIAL\x10\x10\x12$\n HERO_ATTR_COLOR_SP_GET_SPEED_TAP\x10\x15\x12#\n\x1fHERO_ATTR_COLOR_SP_GET_SPEED_UP\x10\x16\x12&\n\"HERO_ATTR_COLOR_SP_GET_SPEED_SLIDE\x10\x17\x12%\n!HERO_ATTR_COLOR_SP_GET_SPEED_DOWN\x10\x18\x12%\n!HERO_ATTR_COLOR_SP_GET_SPEED_DASH\x10\x19\x12(\n$HERO_ATTR_COLOR_SP_GET_SPEED_SPECIAL\x10\x1a\x12/\n+HERO_ATTR_COLOR_INCREASE_DAMAGE_TO_BOSS_TAP\x10\x1f\x12.\n*HERO_ATTR_COLOR_INCREASE_DAMAGE_TO_BOSS_UP\x10 \x12\x31\n-HERO_ATTR_COLOR_INCREASE_DAMAGE_TO_BOSS_SLIDE\x10!\x12\x30\n,HERO_ATTR_COLOR_INCREASE_DAMAGE_TO_BOSS_DOWN\x10\"\x12\x30\n,HERO_ATTR_COLOR_INCREASE_DAMAGE_TO_BOSS_DASH\x10#\x12\x33\n/HERO_ATTR_COLOR_INCREASE_DAMAGE_TO_BOSS_SPECIAL\x10$\x12/\n+HERO_ATTR_COLOR_INCREASE_DAMAGE_TO_HERO_TAP\x10)\x12.\n*HERO_ATTR_COLOR_INCREASE_DAMAGE_TO_HERO_UP\x10*\x12\x31\n-HERO_ATTR_COLOR_INCREASE_DAMAGE_TO_HERO_SLIDE\x10+\x12\x30\n,HERO_ATTR_COLOR_INCREASE_DAMAGE_TO_HERO_DOWN\x10,\x12\x30\n,HERO_ATTR_COLOR_INCREASE_DAMAGE_TO_HERO_DASH\x10-\x12\x33\n/HERO_ATTR_COLOR_INCREASE_DAMAGE_TO_HERO_SPECIAL\x10.\x12,\n(HERO_ATTR_LEVELUP_BURST_SUPER_ARMOR_TIME\x10\x64\x12\x1f\n\x1bHERO_ATTR_LEVELUP_BUFF_MOVE\x10\x65\x12&\n\"HERO_ATTR_LEVELUP_CD_DAMAGE_REDUCE\x10\x66\x12.\n*HERO_ATTR_LEVELUP_DEFENCE_SUPER_ARMOR_BUFF\x10g\x12!\n\x1dHERO_ATTR_LEVELUP_DAMAGE_BUFF\x10h\x12-\n)HERO_ATTR_LEVELUP_ATTACK_SUPER_ARMOR_BUFF\x10i\x12!\n\x1dHERO_ATTR_LEVELUP_INCREASE_SP\x10j\x12&\n\"HERO_ATTR_LEVELUP_MOVE_SUPER_ARMOR\x10k\x12 \n\x1cHERO_ATTR_LEVELUP_LIFE_STEAL\x10l\x12#\n\x1fHERO_ATTR_LEVELUP_DAMAGE_REDUCE\x10m\x12\x1c\n\x18HERO_ATTR_LEVELUP_SUMMON\x10n\x12(\n$HERO_ATTR_LEVELUP_GROUND_SUPER_ARMOR\x10o\x12(\n$HERO_ATTR_LEVELUP_INCREASE_SP_CHANCE\x10p\x12(\n#HERO_ATTR_GROWUP_BASE_ATTR_INCREASE\x10\xc8\x01\x12\x1e\n\x19HERO_ATTR_GROWUP_CRITICAL\x10\xc9\x01\x12&\n!HERO_ATTR_GROWUP_CRITICAL_DEFENCE\x10\xca\x01\x12%\n HERO_ATTR_GROWUP_CRITICAL_EFFECT\x10\xcb\x01\x12-\n(HERO_ATTR_GROWUP_CRITICAL_DEFENCE_EFFECT\x10\xcc\x01\x12\x1c\n\x17HERO_ATTR_BASE_STRENGTH\x10\xac\x02\x12\x1b\n\x16HERO_ATTR_BASE_STAMINA\x10\xad\x02\x12\x1b\n\x16HERO_ATTR_BASE_ABILITY\x10\xb0\x02\x12\'\n\"HERO_ATTR_BASE_STRENGTH_ROLE_LEVEL\x10\xb1\x02\x12&\n!HERO_ATTR_BASE_STAMINA_ROLE_LEVEL\x10\xb2\x02\x12#\n\x1eHERO_ATTR_BASE_STRENGTH_EMBLEM\x10\xb3\x02\x12\"\n\x1dHERO_ATTR_BASE_STAMINA_EMBLEM\x10\xb4\x02\x12%\n HERO_ATTR_BASE_STRENGTH_RELATION\x10\xb5\x02\x12$\n\x1fHERO_ATTR_BASE_STAMINA_RELATION\x10\xb6\x02\x12)\n$HERO_ATTR_BASE_STRENGTH_BATTLE_TITLE\x10\xb7\x02\x12(\n#HERO_ATTR_BASE_STAMINA_BATTLE_TITLE\x10\xb8\x02\x12\"\n\x1dHERO_ATTR_BASE_STRENGTH_EQUIP\x10\xb9\x02\x12!\n\x1cHERO_ATTR_BASE_STAMINA_EQUIP\x10\xba\x02\x1a\x02\x10\x01*\xc4\x01\n\x0fResEquipPosType\x12\x11\n\rEQUIPPOS_HEAD\x10\x00\x12\x11\n\rEQUIPPOS_HAND\x10\x01\x12\x11\n\rEQUIPPOS_NECK\x10\x02\x12\x11\n\rEQUIPPOS_BODY\x10\x03\x12\x10\n\x0c\x45QUIPPOS_LEG\x10\x04\x12\x13\n\x0f\x45QUIPPOS_WEAPON\x10\x05\x12\x16\n\x12\x45QUIPPOS_MAX_COUNT\x10\x06\x12\x11\n\rEQUIPPOS_NONE\x10\x07\x12\x13\n\x0f\x45QUIPPOS_ALLPOS\x10\t*\x96\x01\n\x11ResEquipColorType\x12\x14\n\x10\x45QUIPCOLOR_WHITE\x10\x00\x12\x14\n\x10\x45QUIPCOLOR_GREEN\x10\x01\x12\x13\n\x0f\x45QUIPCOLOR_BLUE\x10\x02\x12\x15\n\x11\x45QUIPCOLOR_PURPLE\x10\x03\x12\x15\n\x11\x45QUIPCOLOR_ORANGE\x10\x04\x12\x12\n\x0e\x45QUIPCOLOR_MAX\x10\x05*\xa7\x01\n\x0e\x45numItemOutput\x12\x13\n\x0fOUTPUT_TREASURE\x10\x01\x12\x0f\n\x0bOUTPUT_SHOP\x10\x02\x12\x16\n\x12OUTPUT_BATTLE_SHOP\x10\x03\x12\x15\n\x11OUTPUT_NORAML_PVE\x10\x04\x12\x14\n\x10OUTPUT_ELITE_PVE\x10\x05\x12\x16\n\x12OUTPUT_VIP_PACKAGE\x10\x06\x12\x12\n\x0eOUTPUT_ENDLESS\x10\x07')
+  serialized_pb=_b('\n\tres.proto\"1\n\x15ResServerLocalization\x12\n\n\x02id\x18\x01 \x02(\t\x12\x0c\n\x04text\x18\x02 \x03(\t\"3\n\x0eResDropIndexEx\x12\x0f\n\x07\x64rop_id\x18\x01 \x01(\r\x12\x10\n\x08\x64rop_cnt\x18\x02 \x01(\r\"F\n\x0fResResourceInfo\x12\x10\n\x08res_type\x18\x01 \x01(\r\x12\x0e\n\x06res_id\x18\x02 \x01(\r\x12\x11\n\tres_count\x18\x03 \x01(\r\".\n\nResPreRole\x12\x0f\n\x07role_id\x18\x01 \x01(\r\x12\x0f\n\x07role_lv\x18\x02 \x01(\r\" \n\x0cResInitSkill\x12\x10\n\x08skill_id\x18\x01 \x01(\r\"7\n\rResNewRoleBuf\x12\x0b\n\x03\x63nt\x18\x01 \x02(\r\x12\x0b\n\x03\x61tk\x18\x02 \x02(\r\x12\x0c\n\x04life\x18\x03 \x02(\r\"0\n\x07ResCost\x12\x0c\n\x04type\x18\x01 \x02(\r\x12\n\n\x02id\x18\x02 \x02(\r\x12\x0b\n\x03\x63nt\x18\x03 \x02(\r\"\xce\x05\n\tResRoleGL\x12\x0f\n\x07hero_id\x18\x01 \x01(\r\x12\x11\n\thero_desc\x18\x02 \x01(\t\x12\x11\n\thero_name\x18\x03 \x01(\t\x12\x10\n\x08res_name\x18\x04 \x01(\t\x12\x15\n\rprotrait_name\x18\x05 \x01(\t\x12\x12\n\naudio_name\x18\x06 \x01(\t\x12\x0f\n\x07is_open\x18\x07 \x01(\r\x12\x10\n\x08list_pos\x18\x08 \x01(\r\x12\x14\n\x0c\x62uy_res_type\x18\t \x01(\r\x12\x12\n\npre_dun_id\x18\n \x01(\r\x12\x18\n\x10\x61\x63t_init_grow_up\x18\x0b \x01(\r\x12\x16\n\x0e\x61\x63t_init_level\x18\x0c \x01(\r\x12\x1c\n\x14unlock_emblem_ned_lv\x18\r \x01(\r\x12\x1b\n\x13unlock_emblem_hp_id\x18\x0e \x01(\r\x12\x1f\n\x17unlock_emblem_damage_id\x18\x0f \x01(\r\x12$\n\rinit_skill_id\x18\x10 \x03(\x0b\x32\r.ResInitSkill\x12\x19\n\x11protrait_offset_x\x18\x11 \x01(\x05\x12\x19\n\x11protrait_offset_y\x18\x12 \x01(\x05\x12\x18\n\x10new_role_buf_cnt\x18\x13 \x01(\r\x12\x12\n\nbuy_res_id\x18\x14 \x01(\r\x12\x15\n\rbuy_res_count\x18\x15 \x01(\r\x12\x1e\n\nbuy_reward\x18\x16 \x03(\x0b\x32\n.ResReward\x12\x1d\n\x0bunlock_cost\x18\x17 \x03(\x0b\x32\x08.ResCost\x12\x15\n\rbase_critical\x18\x18 \x01(\r\x12\x1c\n\x14\x62\x61se_critical_effect\x18\x19 \x01(\r\x12\x1d\n\x15\x62\x61se_critical_defence\x18\x1a \x01(\r\x12$\n\x1c\x62\x61se_critical_defence_effect\x18\x1b \x01(\r\x12\x18\n\x10\x62uy_res_discount\x18\x1c \x01(\r\"\x86\x01\n\x07ResChat\x12\x12\n\nchannel_id\x18\x01 \x01(\r\x12\x14\n\x0c\x63ond_city_id\x18\x02 \x01(\r\x12\x10\n\x08interval\x18\x03 \x01(\r\x12\x14\n\x0c\x63ost_restype\x18\x04 \x01(\r\x12\x12\n\ncost_resid\x18\x05 \x01(\r\x12\x15\n\rcost_rescount\x18\x06 \x01(\r\"\xe0\x01\n\x17ResRoleRelationAddition\x12\x18\n\x10receiver_role_id\x18\x01 \x01(\r\x12\x18\n\x10receiver_role_lv\x18\x02 \x01(\r\x12\x15\n\rgiver_role_id\x18\x03 \x01(\r\x12\x1a\n\x12giver_stamina_rate\x18\x04 \x01(\x02\x12\x1f\n\x17\x61\x64\x64_stamina_value_limit\x18\x05 \x01(\r\x12\x1b\n\x13giver_strength_rate\x18\x06 \x01(\x02\x12 \n\x18\x61\x64\x64_strength_value_limit\x18\x07 \x01(\r\"\x84\x01\n\x1aResRoleRelationSubtraction\x12\x18\n\x10receiver_role_id\x18\x01 \x01(\r\x12\x15\n\rgiver_role_id\x18\x02 \x01(\r\x12\x1a\n\x12\x64mg_addition_point\x18\x03 \x01(\r\x12\x19\n\x11\x64mg_addition_rate\x18\x04 \x01(\x02\"3\n\x0eResChipNumInfo\x12\x0f\n\x07\x63hip_id\x18\x01 \x01(\r\x12\x10\n\x08\x63hip_cnt\x18\x02 \x01(\r\"S\n\x16ResEmblemSingleRequest\x12\x18\n\x10lv_up_single_exp\x18\x01 \x01(\r\x12\x1f\n\x17lv_up_single_possiblity\x18\x02 \x01(\r\"\xad\x02\n\tResEmblem\x12\x11\n\tweapon_id\x18\x01 \x01(\r\x12\x11\n\tweapon_lv\x18\x02 \x01(\r\x12\x0c\n\x04icon\x18\x03 \x01(\t\x12\x0c\n\x04name\x18\x04 \x01(\t\x12\x15\n\rattch_hero_id\x18\x05 \x01(\r\x12\x1c\n\x14lv_up_ned_hero_level\x18\x06 \x01(\r\x12\x16\n\x0elv_up_ned_type\x18\x07 \x01(\r\x12\x18\n\x10lv_up_ned_number\x18\x08 \x01(\r\x12\x12\n\nextra_type\x18\t \x01(\r\x12\x13\n\x0b\x65xtra_value\x18\n \x01(\r\x12\x15\n\rlv_up_ned_exp\x18\x0b \x01(\r\x12\x37\n\x16levelup_single_request\x18\x0c \x03(\x0b\x32\x17.ResEmblemSingleRequest\"\"\n\x12ResStringArrayInfo\x12\x0c\n\x04info\x18\x01 \x01(\t\"\xb7\x06\n\x0cResMonsterGL\x12\n\n\x02id\x18\x01 \x01(\r\x12\x11\n\trole_name\x18\x02 \x01(\t\x12\x0c\n\x04name\x18\x03 \x01(\t\x12\x0c\n\x04type\x18\x04 \x01(\x05\x12\x13\n\x0brender_type\x18\x05 \x01(\x05\x12\x16\n\x0erelation_index\x18\x06 \x01(\r\x12\x15\n\rres_file_name\x18\x07 \x01(\t\x12\x14\n\x0c\x62\x65hit_add_sp\x18\x08 \x01(\r\x12\x10\n\x08sp_ratio\x18\t \x01(\x02\x12\x0e\n\x06radius\x18\n \x01(\r\x12\x17\n\x0funlock_name_tag\x18\x0b \x01(\t\x12\x17\n\x0funlock_desc_tag\x18\x0c \x01(\t\x12\x14\n\x0cshadow_scale\x18\r \x01(\r\x12\x12\n\nrole_scale\x18\x0e \x01(\r\x12\x19\n\x11\x63olor_matching_id\x18\x0f \x01(\x05\x12\x10\n\x08head_pic\x18\x10 \x01(\t\x12\x15\n\rmini_head_pic\x18\x11 \x01(\t\x12\x12\n\nemblem_pic\x18\x12 \x01(\t\x12\x11\n\tattri_pic\x18\x13 \x01(\t\x12\x1b\n\x13\x66ull_pic_in_map_tip\x18\x14 \x01(\t\x12\x13\n\x0bhu_name_pic\x18\x15 \x01(\t\x12\x13\n\x0bvu_name_pic\x18\x16 \x01(\t\x12\x10\n\x08\x62ust_pic\x18\x17 \x01(\t\x12\x14\n\x0cportrait_pic\x18\x18 \x01(\t\x12\x0f\n\x07\x61i_type\x18\x19 \x01(\t\x12\x18\n\x10grow_up_head_pic\x18\x1a \x01(\t\x12\x13\n\x0b\x62oss_audios\x18\x1f \x03(\t\x12\r\n\x05param\x18  \x01(\x05\x12\x1a\n\x12\x65ndless_mode_param\x18\" \x01(\r\x12\x14\n\x0c\x62\x61ttle_logic\x18# \x01(\t\x12\x0e\n\x06\x62\x61sehp\x18$ \x01(\r\x12 \n\x18\x62\x61\x63kup_color_matching_id\x18% \x01(\x05\x12\x15\n\rlevel_up_type\x18& \x01(\r\x12\x18\n\x10\x62\x61se_damage_rate\x18\' \x01(\r\x12\x0f\n\x07hostile\x18( \x01(\x05\x12\x13\n\x0bspec_tagert\x18) \x01(\x05\x12\x16\n\x0e\x61\x64\x64_superarmor\x18* \x01(\x05\x12\x18\n\x10hero_damage_rate\x18+ \x01(\r\"7\n\rResPreMonster\x12\x12\n\nmonster_id\x18\x01 \x01(\r\x12\x12\n\nmonster_lv\x18\x02 \x01(\r\"X\n\x0fResGroupMonster\x12\x12\n\nmonster_id\x18\x01 \x01(\r\x12\x13\n\x0bmonster_cnt\x18\x02 \x01(\r\x12\r\n\x05pos_x\x18\x03 \x01(\x05\x12\r\n\x05pos_y\x18\x04 \x01(\x05\"\x8a\x02\n\x0fResMonsterLevel\x12\x1d\n\x15monster_level_up_type\x18\x01 \x01(\r\x12\x12\n\nmonster_lv\x18\x02 \x01(\r\x12\x0e\n\x06max_hp\x18\x03 \x01(\r\x12\x13\n\x0b\x64\x61mage_type\x18\x04 \x01(\r\x12\x10\n\x08strength\x18\x05 \x01(\r\x12\x17\n\x0f\x65x_endure_value\x18\x07 \x01(\r\x12\x17\n\x0f\x63oin_drop_value\x18\x08 \x01(\r\x12\x1d\n\x15\x63oin_drop_possibility\x18\t \x01(\r\x12\x1a\n\x12\x64iamond_drop_value\x18\n \x01(\r\x12 \n\x18\x64iamond_drop_possibility\x18\x0b \x01(\r\"h\n\x14ResMonsterGroupLevel\x12\x10\n\x08group_id\x18\x01 \x01(\r\x12\x10\n\x08group_lv\x18\x02 \x01(\r\x12,\n\x12group_monster_info\x18\x03 \x03(\x0b\x32\x10.ResGroupMonster\"%\n\x0cResGainSkill\x12\x15\n\rgain_skill_id\x18\x01 \x01(\r\":\n\x16ResRoleLevelGrowUpAttr\x12\x0e\n\x06max_hp\x18\x01 \x01(\r\x12\x10\n\x08strength\x18\x02 \x01(\r\"\xad\x01\n\x0cResRoleLevel\x12\x0f\n\x07role_id\x18\x01 \x01(\r\x12\x0f\n\x07role_lv\x18\x02 \x01(\r\x12-\n\x0cgrow_up_attr\x18\x03 \x03(\x0b\x32\x17.ResRoleLevelGrowUpAttr\x12\x0e\n\x06max_sp\x18\x04 \x01(\r\x12\x13\n\x0blv_need_exp\x18\x05 \x01(\r\x12\x17\n\x0flv_reward_power\x18\x06 \x01(\r\x12\x0e\n\x06\x62urden\x18\x07 \x01(\r\"\xfa\x01\n\rResBuildingGL\x12\x13\n\x0b\x62uilding_id\x18\x01 \x01(\r\x12\x15\n\rbuilding_type\x18\x02 \x01(\r\x12\x15\n\rbuilding_desc\x18\x03 \x01(\t\x12\x15\n\rbuilding_name\x18\x04 \x01(\t\x12\x10\n\x08res_name\x18\x05 \x01(\t\x12\x12\n\naudio_name\x18\x06 \x01(\t\x12\x0f\n\x07is_open\x18\x07 \x01(\r\x12\x16\n\x0e\x61\x63t_init_level\x18\x08 \x01(\r\x12\x17\n\x0fis_need_levelup\x18\t \x01(\r\x12\x15\n\rtips_priority\x18\n \x01(\r\x12\x10\n\x08tips_tag\x18\x0b \x01(\t\"3\n\x0cResLevelCost\x12\x11\n\tcost_type\x18\x01 \x01(\r\x12\x10\n\x08\x63ost_cnt\x18\x02 \x01(\r\"(\n\x11ResUnlockBuilding\x12\x13\n\x0b\x62uilding_id\x18\x01 \x01(\r\"\xb7\x01\n\x10ResBuildingLevel\x12\x13\n\x0b\x62uilding_id\x18\x01 \x01(\r\x12\x13\n\x0b\x62uilding_lv\x18\x02 \x01(\r\x12\x14\n\x0c\x62uilding_pic\x18\x03 \x01(\t\x12!\n\nlevel_cost\x18\x04 \x03(\x0b\x32\r.ResLevelCost\x12\x17\n\x0flevel_cost_time\x18\x05 \x01(\r\x12\'\n\x0bunlock_info\x18\x06 \x03(\x0b\x32\x12.ResUnlockBuilding\"\xd6\x01\n\x11ResHeroTowerLevel\x12\x13\n\x0b\x62uilding_id\x18\x01 \x01(\r\x12\x13\n\x0b\x62uilding_lv\x18\x02 \x01(\r\x12\x14\n\x0c\x62uilding_pic\x18\x03 \x01(\t\x12!\n\nlevel_cost\x18\x04 \x03(\x0b\x32\r.ResLevelCost\x12\x17\n\x0flevel_cost_time\x18\x05 \x01(\r\x12\x16\n\x0emax_hero_level\x18\x06 \x01(\r\x12\x15\n\runlock_dun_id\x18\x07 \x01(\r\x12\x16\n\x0elevel_priority\x18\x08 \x01(\r\"n\n\x10ResIslandProduct\x12\x10\n\x08res_type\x18\x01 \x01(\r\x12\x10\n\x08\x62orn_cnt\x18\x02 \x01(\r\x12\x0f\n\x07\x62orn_id\x18\x03 \x01(\r\x12\x11\n\tborn_time\x18\x04 \x01(\r\x12\x12\n\nborn_limit\x18\x05 \x01(\r\"\xd9\x01\n\x0eResIslandLevel\x12\x11\n\tisland_id\x18\x01 \x01(\r\x12\x11\n\tisland_lv\x18\x02 \x01(\r\x12\x12\n\nisland_pic\x18\x03 \x01(\t\x12!\n\nlevel_cost\x18\x04 \x03(\x0b\x32\r.ResLevelCost\x12\x17\n\x0flevel_cost_time\x18\x05 \x01(\r\x12\"\n\x07product\x18\x06 \x01(\x0b\x32\x11.ResIslandProduct\x12\x15\n\runlock_dun_id\x18\x07 \x01(\r\x12\x16\n\x0elevel_priority\x18\x08 \x01(\r\"\x8a\x02\n\x15ResResourceStoreLevel\x12\x14\n\x0cres_store_id\x18\x01 \x01(\r\x12\x14\n\x0cres_store_lv\x18\x02 \x01(\r\x12\x15\n\rres_store_pic\x18\x03 \x01(\t\x12\x16\n\x0eres_store_type\x18\x04 \x01(\r\x12\x11\n\tres_limit\x18\x05 \x01(\r\x12\x18\n\x10recover_interval\x18\x06 \x01(\r\x12!\n\nlevel_cost\x18\x07 \x03(\x0b\x32\r.ResLevelCost\x12\x17\n\x0flevel_cost_time\x18\x08 \x01(\r\x12\x15\n\runlock_dun_id\x18\t \x01(\r\x12\x16\n\x0elevel_priority\x18\x0c \x01(\r\"\xc7\x02\n\x0bResLevelArr\x12\r\n\x05level\x18\x01 \x01(\r\x12%\n\x1dsteal_battle_search_cost_type\x18\x02 \x01(\r\x12#\n\x1bsteal_battle_search_cost_id\x18\x03 \x01(\r\x12&\n\x1esteal_battle_search_cost_count\x18\x04 \x01(\r\x12&\n\x1egang_battle_reward_gold_target\x18\x05 \x01(\r\x12)\n!gang_battle_reward_crystal_target\x18\x06 \x01(\r\x12$\n\x1cgang_battle_reward_gold_self\x18\x07 \x01(\r\x12\'\n\x1fgang_battle_reward_crystal_self\x18\x08 \x01(\r\x12\x13\n\x0bmonster_cnt\x18\t \x01(\r\"\x1e\n\x0bResInitHero\x12\x0f\n\x07hero_id\x18\x01 \x01(\r\"\x1e\n\x0bResInitSlot\x12\x0f\n\x07slot_id\x18\x01 \x01(\r\"c\n\x14ResOverHitProduction\x12\x16\n\x0eover_hit_phase\x18\x01 \x01(\r\x12\x17\n\x0f\x63oin_production\x18\x02 \x01(\r\x12\x1a\n\x12\x64iamond_production\x18\x03 \x01(\r\"@\n\x0eResInitMonster\x12\x16\n\x0emonster_grp_id\x18\x01 \x01(\r\x12\x16\n\x0emonster_grp_lv\x18\x02 \x01(\r\"\"\n\x10ResInitUnlockDun\x12\x0e\n\x06\x64un_id\x18\x01 \x01(\r\"9\n\x12ResUnlockTrainSlot\x12\x0f\n\x07slot_id\x18\x01 \x01(\r\x12\x12\n\ncost_money\x18\x02 \x01(\r\"?\n\x13ResInitBuildingInfo\x12\x13\n\x0b\x62uilding_id\x18\x01 \x01(\r\x12\x13\n\x0b\x62uilding_lv\x18\x02 \x01(\r\"?\n\x15ResBuyWipeoutItemInfo\x12\x12\n\nitem_count\x18\x01 \x01(\r\x12\x12\n\nitem_price\x18\x02 \x01(\r\";\n\x10ResPveUnlockInfo\x12\r\n\x05\x64unid\x18\x01 \x01(\r\x12\x0c\n\x04type\x18\x02 \x01(\r\x12\n\n\x02lv\x18\x03 \x01(\r\"\'\n\x16ResEndlessMonsterScore\x12\r\n\x05score\x18\x01 \x01(\r\"H\n\x19ResGamePlayModeDamageRate\x12\x16\n\x0egame_play_mode\x18\x01 \x01(\r\x12\x13\n\x0b\x64\x61mage_rate\x18\x02 \x01(\x02\"I\n\tResReward\x12\x13\n\x0breward_type\x18\x01 \x01(\r\x12\x11\n\treward_id\x18\x02 \x01(\r\x12\x14\n\x0creward_value\x18\x03 \x01(\r\"\xf1\x1e\n\x0bResMiscInfo\x12\x18\n\x10player_max_level\x18\x01 \x01(\r\x12\x19\n\x11monster_max_level\x18\x02 \x01(\r\x12\x14\n\x0cinit_crystal\x18\x03 \x01(\r\x12\x11\n\tinit_gold\x18\x04 \x01(\r\x12\x12\n\ninit_money\x18\x05 \x01(\r\x12\"\n\x0cinit_slot_id\x18\x06 \x03(\x0b\x32\x0c.ResInitSlot\x12\x30\n\x12init_building_info\x18\x07 \x03(\x0b\x32\x14.ResInitBuildingInfo\x12\"\n\x0cinit_hero_id\x18\x08 \x03(\x0b\x32\x0c.ResInitHero\x12-\n\x12init_unlock_dun_id\x18\t \x03(\x0b\x32\x11.ResInitUnlockDun\x12\x15\n\rendless_limit\x18\n \x01(\r\x12\x16\n\x0e\x63ombo_max_time\x18\x0b \x01(\r\x12\x19\n\x11over_hit_max_time\x18\x0c \x01(\r\x12\x1f\n\x17over_hit_max_hp_percent\x18\r \x01(\r\x12 \n\x18over_hit_add_score_ratio\x18\x0e \x01(\r\x12!\n\x19left_time_add_score_ratio\x18\x0f \x01(\r\x12\x32\n\x13over_hit_production\x18\x10 \x03(\x0b\x32\x15.ResOverHitProduction\x12\x1d\n\x15\x63reate_gang_cost_gold\x18\x11 \x01(\r\x12\x17\n\x0f\x66ighting_hprate\x18\x12 \x01(\r\x12\x19\n\x11\x66ighting_atk_rate\x18\x13 \x01(\r\x12\x1a\n\x12gang_battle_dun_id\x18\x14 \x01(\r\x12$\n\x1cgang_battle_round_time_limit\x18\x15 \x01(\x05\x12#\n\x1b\x65ndless_chamber_size_factor\x18\x16 \x01(\r\x12*\n\"endless_boss_hp_recover_drop_ratio\x18\x17 \x01(\r\x12*\n\"endless_boss_hp_recover_drop_count\x18\x18 \x01(\r\x12\x1e\n\x16rank_battle_dungeon_id\x18\x19 \x01(\r\x12$\n\x1crank_battle_round_time_limit\x18\x1a \x01(\x05\x12\x1e\n\x16rank_battle_base_count\x18\x1b \x01(\r\x12\'\n\x1frank_battle_buy_count_base_cost\x18\x1c \x01(\r\x12#\n\x1brank_battle_unlock_role_cnt\x18\x1d \x01(\r\x12\x18\n\x10\x64\x61ily_reset_time\x18\x1e \x01(\r\x12\x18\n\x10\x65ndless_room_cnt\x18\x1f \x01(\r\x12\'\n\x1f\x65ndless_floor_cnt_per_milestone\x18  \x01(\r\x12%\n\x1dsteal_battle_money_res_dun_id\x18! \x01(\r\x12$\n\x1csteal_battle_gold_res_dun_id\x18\" \x01(\r\x12\'\n\x1fsteal_battle_crystal_res_dun_id\x18# \x01(\r\x12#\n\x1bsteal_battle_exp_res_dun_id\x18$ \x01(\r\x12\x1c\n\x14\x65ndless_refresh_hour\x18& \x01(\r\x12\x1b\n\x13\x65ndless_refresh_min\x18\' \x01(\r\x12\x1b\n\x13\x65ndless_refresh_sec\x18( \x01(\r\x12\x1d\n\x15wipe_out_need_item_id\x18) \x01(\r\x12\x36\n\x16\x62uy_wipe_out_item_info\x18* \x03(\x0b\x32\x16.ResBuyWipeoutItemInfo\x12\x1a\n\x12goods_common_count\x18+ \x01(\r\x12\x1b\n\x13goods_special_count\x18, \x01(\r\x12\x1b\n\x13\x64\x61mage_ratio_factor\x18- \x01(\r\x12\x17\n\x0fhp_ratio_factor\x18. \x01(\r\x12#\n\x1bskill_point_display_item_id\x18/ \x01(\r\x12*\n\x0fpve_unlock_info\x18\x30 \x03(\x0b\x32\x11.ResPveUnlockInfo\x12#\n\x1bleague_battle_small_city_lv\x18\x31 \x03(\r\x12!\n\x19league_battle_mid_city_lv\x18\x32 \x03(\r\x12!\n\x19league_battle_big_city_lv\x18\x33 \x03(\r\x12$\n\x1crank_battle_hero_hide_level1\x18\x34 \x01(\r\x12$\n\x1crank_battle_hero_hide_level2\x18\x35 \x01(\r\x12$\n\x1crank_battle_hero_hide_level3\x18\x36 \x01(\r\x12\x1a\n\x12power_refresh_hour\x18\x37 \x01(\r\x12\x19\n\x11power_refresh_min\x18\x38 \x01(\r\x12\x19\n\x11power_refresh_sec\x18\x39 \x01(\r\x12&\n\x1erank_battle_count_refresh_hour\x18: \x01(\r\x12%\n\x1drank_battle_count_refresh_min\x18; \x01(\r\x12%\n\x1drank_battle_count_refresh_sec\x18< \x01(\r\x12\x1f\n\x17shop_count_refresh_hour\x18= \x01(\r\x12\x1e\n\x16shop_count_refresh_min\x18> \x01(\r\x12\x1e\n\x16shop_count_refresh_sec\x18? \x01(\r\x12\x12\n\nfail_power\x18@ \x01(\x05\x12\x1f\n\x17money_confirm_threshold\x18\x41 \x02(\r\x12;\n\x1a\x65ndless_monster_type_score\x18\x42 \x03(\x0b\x32\x17.ResEndlessMonsterScore\x12$\n\x1cgang_battle_small_city_score\x18\x43 \x01(\r\x12\'\n\x1fgang_battle_moderate_city_score\x18\x44 \x01(\r\x12\"\n\x1agang_battle_big_city_score\x18\x45 \x01(\r\x12\x1a\n\x12\x65lite_mode_chances\x18\x46 \x02(\r\x12 \n\x18\x65lite_count_refresh_hour\x18G \x01(\r\x12\x1f\n\x17\x65lite_count_refresh_min\x18H \x01(\r\x12\x1f\n\x17\x65lite_count_refresh_sec\x18I \x01(\r\x12 \n\x18\x61ssist_fight_times_limit\x18L \x01(\r\x12\x1c\n\x14online_battle_dun_id\x18M \x01(\r\x12\x19\n\x11re_sign_cost_type\x18N \x01(\r\x12\x1a\n\x12re_sign_cost_price\x18O \x01(\r\x12)\n!init_hero_main_task_unlock_dun_id\x18P \x01(\r\x12\x1c\n\x14normal_elite_hp_rate\x18Q \x01(\r\x12\x1c\n\x14normal_elite_st_rate\x18R \x01(\r\x12\x1b\n\x13normal_boss_hp_rate\x18S \x01(\r\x12\x1b\n\x13normal_boss_st_rate\x18T \x01(\r\x12\x1d\n\x15\x65ndless_elite_hp_rate\x18Y \x01(\r\x12\x1d\n\x15\x65ndless_elite_st_rate\x18Z \x01(\r\x12\x1c\n\x14\x65ndless_boss_hp_rate\x18[ \x01(\r\x12\x1c\n\x14\x65ndless_boss_st_rate\x18\\ \x01(\r\x12!\n\x19\x65lite_buy_count_cost_type\x18] \x01(\r\x12\x1f\n\x17\x65lite_buy_count_cost_id\x18^ \x01(\r\x12\"\n\x1a\x65lite_buy_count_cost_count\x18_ \x01(\r\x12\x1b\n\x13\x65lite_buy_max_count\x18` \x01(\r\x12\x1d\n\x15offline_battle_dun_id\x18\x61 \x01(\r\x12\"\n\x1arole_relation_unlock_level\x18\x62 \x01(\r\x12&\n\x1erank_battle_goods_common_count\x18\x63 \x01(\r\x12\'\n\x1frank_battle_goods_special_count\x18\x64 \x01(\r\x12 \n\x18online_battle_init_score\x18\x65 \x01(\r\x12\"\n\x1aonline_battle_times_perday\x18\x66 \x01(\r\x12(\n online_battle_score_calc_ratio_a\x18g \x01(\r\x12(\n online_battle_score_calc_ratio_b\x18h \x01(\r\x12\"\n\x1aonline_battle_search_score\x18i \x01(\r\x12(\n online_battle_match_wait_seconds\x18j \x01(\r\x12%\n\x1donline_battle_win_point_ratio\x18k \x01(\r\x12,\n$online_battle_loseer_win_point_ratio\x18l \x01(\r\x12\'\n\x1f\x65ndless_wipeout_price_per_floor\x18m \x01(\r\x12>\n\x1agame_play_mode_damage_rate\x18n \x03(\x0b\x32\x1a.ResGamePlayModeDamageRate\x12%\n\x11\x66irst_reward_info\x18o \x03(\x0b\x32\n.ResReward\x12\x19\n\x11loading_tip_count\x18p \x01(\r\x12\x1e\n\x16vip_goods_common_count\x18q \x01(\r\x12\x1f\n\x17vip_goods_special_count\x18r \x01(\r\x12!\n\x19vip_draw_all_unlock_level\x18s \x01(\r\x12 \n\x18steal_battle_times_limit\x18t \x01(\r\x12\x18\n\x10\x66riend_power_cnt\x18u \x01(\r\x12\x17\n\x0f\x64\x61mage_float_up\x18v \x01(\r\x12\x19\n\x11\x64\x61mage_float_down\x18w \x01(\r\x12$\n\x1cmax_recv_power_times_one_day\x18z \x01(\r\x12\x1c\n\x14ten_wipeout_viplimit\x18{ \x01(\r\x12 \n\x18vip_shop_unlock_viplevel\x18| \x01(\r\"f\n\x0fResHeroEvaluate\x12\x12\n\nmain_level\x18\x01 \x01(\r\x12\x11\n\tsub_level\x18\x02 \x01(\r\x12\x16\n\x0epvp_score_down\x18\x03 \x01(\r\x12\x14\n\x0cpvp_score_up\x18\x04 \x01(\r\"\xb5\x02\n\x0fResGangMiscInfo\x12$\n\x1csearch_gang_list_low_bounder\x18\x01 \x01(\r\x12#\n\x1bsearch_gang_list_up_bounder\x18\x02 \x01(\r\x12\x1f\n\x17gang_score_calc_ratio_a\x18\x03 \x01(\r\x12\x1f\n\x17gang_score_calc_ratio_b\x18\x04 \x01(\r\x12!\n\x19gang_battle_win_pre_ratio\x18\x05 \x01(\r\x12\"\n\x1agang_battle_lose_pre_ratio\x18\x06 \x01(\r\x12\"\n\x1agang_battle_draw_pre_ratio\x18\x07 \x01(\r\x12*\n\"gang_battle_auto_apply_limit_score\x18\x08 \x01(\r\"\x8e\x02\n\x10ResGangLevelInfo\x12\n\n\x02lv\x18\x01 \x01(\r\x12\x0f\n\x07lv_desc\x18\x02 \x01(\t\x12\x0f\n\x07lv_icon\x18\x03 \x01(\t\x12\x11\n\tlow_score\x18\x04 \x01(\r\x12\x12\n\nhigh_score\x18\x05 \x01(\r\x12\x1a\n\x12gang_mem_max_count\x18\x06 \x01(\r\x12\x1c\n\x14gang_elder_max_count\x18\x07 \x01(\r\x12\"\n\x1asmall_city_strongpoint_num\x18\x08 \x01(\r\x12%\n\x1dmoderate_city_strongpoint_num\x18\t \x01(\r\x12 \n\x18\x62ig_city_strongpoint_num\x18\n \x01(\r\"0\n\x11ResGangBattleTime\x12\x0c\n\x04week\x18\x01 \x01(\r\x12\r\n\x05state\x18\x02 \x01(\r\"\x8f\x01\n\x13ResGangBattleReward\x12\n\n\x02lv\x18\x01 \x01(\r\x12\"\n\nwin_reward\x18\x02 \x03(\x0b\x32\x0e.ST_REWARD_RES\x12#\n\x0blose_reward\x18\x03 \x03(\x0b\x32\x0e.ST_REWARD_RES\x12#\n\x0b\x64raw_reward\x18\x04 \x03(\x0b\x32\x0e.ST_REWARD_RES\"\xe5\x01\n\rResRobotBuild\x12\x10\n\x08res_type\x18\x01 \x01(\r\x12\x14\n\x0c\x63ur_born_res\x18\x02 \x01(\r\x12\x0f\n\x07hero_id\x18\x03 \x01(\r\x12\x0f\n\x07hero_lv\x18\x04 \x01(\r\x12\x13\n\x0bhero_growup\x18\x05 \x01(\r\x12\x15\n\rhero_strength\x18\x06 \x01(\r\x12\x14\n\x0chero_stamina\x18\x07 \x01(\r\x12\x12\n\nmonster_id\x18\x08 \x01(\r\x12\x12\n\nmonster_lv\x18\t \x01(\r\x12\x0f\n\x07trap_id\x18\n \x01(\r\x12\x0f\n\x07trap_lv\x18\x0b \x01(\r\"j\n\x0bResPvpRobot\x12\x0b\n\x03uid\x18\x01 \x01(\r\x12\x0c\n\x04name\x18\x02 \x01(\t\x12\x1a\n\x12max_fight_capacity\x18\x03 \x01(\r\x12$\n\x0cis_land_info\x18\x04 \x03(\x0b\x32\x0e.ResRobotBuild\",\n\x0fResPvpSerchInfo\x12\x0b\n\x03low\x18\x01 \x01(\r\x12\x0c\n\x04high\x18\x02 \x01(\r\"?\n\nResPvpMisc\x12\x19\n\x11steal_res_percent\x18\x01 \x01(\r\x12\x16\n\x0e\x62roken_percent\x18\x02 \x01(\r\"u\n\x10ResPvpSearchSect\x12\x1a\n\x12\x66ight_capacity_low\x18\x01 \x01(\r\x12\x1b\n\x13\x66ight_capacity_high\x18\x02 \x01(\r\x12(\n\x0epvp_serch_info\x18\x03 \x03(\x0b\x32\x10.ResPvpSerchInfo\"]\n\x17ResStealBattlePrizeDraw\x12\x17\n\x0flow_fight_power\x18\x01 \x01(\r\x12\x18\n\x10high_fight_power\x18\x02 \x01(\r\x12\x0f\n\x07\x64rop_id\x18\x03 \x01(\r\"2\n\x0bResDunLimit\x12\x0f\n\x07hero_id\x18\x01 \x01(\r\x12\x12\n\nhero_level\x18\x02 \x01(\r\"L\n\x0eResDunEvaluate\x12\x10\n\x08\x64un_time\x18\x01 \x01(\r\x12\x15\n\rremain_hprate\x18\x02 \x01(\r\x12\x11\n\tmax_combo\x18\x03 \x01(\r\"8\n\rResReliveCost\x12\x12\n\nrelive_cnt\x18\x01 \x01(\r\x12\x13\n\x0brelive_cost\x18\x02 \x01(\r\"*\n\nResPosInfo\x12\r\n\x05pos_x\x18\x01 \x01(\x05\x12\r\n\x05pos_y\x18\x02 \x01(\x05\"\"\n\x0cResDropIndex\x12\x12\n\ndrop_index\x18\x01 \x01(\r\"7\n\x12ResDungeonNeedItem\x12\x0f\n\x07item_id\x18\x01 \x01(\r\x12\x10\n\x08item_num\x18\x02 \x01(\r\" \n\x0bResEvaluate\x12\x11\n\tparameter\x18\x01 \x01(\r\"\xcb\x06\n\x0eResDungeonInfo\x12\x12\n\ndungeon_id\x18\x01 \x01(\r\x12\x14\n\x0c\x64ungeon_name\x18\x02 \x01(\t\x12\x14\n\x0c\x64ungeon_type\x18\x03 \x01(\r\x12\x0c\n\x04mode\x18\x1e \x01(\r\x12\x18\n\x10required_ability\x18\x1f \x01(\r\x12\x12\n\nis_refresh\x18\x04 \x01(\r\x12\x12\n\ncost_power\x18\x05 \x01(\r\x12\x12\n\npre_dun_id\x18\x06 \x01(\r\x12\x16\n\x0eunlock_role_id\x18\x07 \x01(\r\x12\x12\n\ninit_level\x18\x08 \x01(\r\x12\x14\n\x0crelive_limit\x18\n \x01(\r\x12#\n\x0brelive_cost\x18\x0b \x03(\x0b\x32\x0e.ResReliveCost\x12\x11\n\tapperance\x18\x0c \x01(\r\x12\x1a\n\x06reward\x18\r \x03(\x0b\x32\n.ResReward\x12%\n\x0c\x64un_evaluate\x18\x0e \x01(\x0b\x32\x0f.ResDunEvaluate\x12&\n\x0f\x66irst_drop_info\x18\x0f \x03(\x0b\x32\r.ResDropIndex\x12*\n\x13non_first_drop_info\x18\x10 \x03(\x0b\x32\r.ResDropIndex\x12)\n\x12wipe_out_drop_info\x18\x14 \x03(\x0b\x32\r.ResDropIndex\x12&\n\tneed_item\x18\x11 \x03(\x0b\x32\x13.ResDungeonNeedItem\x12+\n\x11\x64rop_display_info\x18\x12 \x03(\x0b\x32\x10.ResResourceInfo\x12#\n\revaluate_info\x18\x13 \x03(\x0b\x32\x0c.ResEvaluate\x12\x12\n\nscene_name\x18\x17 \x01(\t\x12\x0b\n\x03\x62gm\x18\x18 \x01(\t\x12\x15\n\ris_elite_drop\x18\x1a \x01(\r\x12\x16\n\x0e\x64rop_exp_limit\x18\x1b \x01(\r\x12\x14\n\x0c\x64rop_exp_add\x18\x1c \x01(\r\x12\x18\n\x10\x65lite_drop_index\x18\x1d \x01(\r\x12 \n\x18\x64isplay_elite_drop_equip\x18  \x01(\r\x12\x1d\n\x15new_role_buff_stamina\x18! \x01(\r\x12\x1e\n\x16new_role_buff_strength\x18\" \x01(\r\"B\n\x10ResDungeonReward\x12\r\n\x05level\x18\x01 \x01(\r\x12\x1f\n\x0breward_info\x18\x02 \x03(\x0b\x32\n.ResReward\"\x99\x01\n\x0eResDungeonCity\x12\x0f\n\x07\x63ity_id\x18\x01 \x01(\r\x12\x0c\n\x04mode\x18\x02 \x02(\r\x12\x10\n\x08name_tag\x18\x05 \x01(\t\x12\x13\n\x0bpre_city_id\x18\x07 \x01(\r\x12\x16\n\x0eunlock_item_id\x18\x08 \x01(\r\x12\x19\n\x11unlock_item_count\x18\t \x01(\r\x12\x0e\n\x06\x64un_id\x18\x04 \x03(\r\"h\n\rResCityReward\x12\x0f\n\x07\x63ity_id\x18\x01 \x02(\r\x12\x15\n\rcomplete_star\x18\x02 \x02(\r\x12\x13\n\x0breward_desc\x18\x03 \x01(\t\x12\x1a\n\x06reward\x18\x06 \x03(\x0b\x32\n.ResReward\"$\n\x10ResPracticeLimit\x12\x10\n\x08skill_id\x18\x01 \x01(\r\"6\n\x11ResPracticeTarget\x12\x0e\n\x06\x61\x63tion\x18\x01 \x01(\t\x12\x11\n\toperation\x18\x02 \x01(\t\"\x9d\x02\n\x0eResPracticeDun\x12\x0f\n\x07hero_id\x18\x01 \x01(\r\x12\x12\n\nchapter_id\x18\x02 \x01(\r\x12\x12\n\nsection_id\x18\x03 \x01(\r\x12\x0c\n\x04\x64\x65sc\x18\x04 \x01(\t\x12\x0c\n\x04icon\x18\x05 \x01(\t\x12\x10\n\x08quest_id\x18\x06 \x01(\r\x12\x0e\n\x06\x64un_id\x18\x07 \x01(\r\x12\x12\n\npre_dun_id\x18\x08 \x01(\r\x12\x12\n\nhero_level\x18\t \x01(\r\x12$\n\tdun_limit\x18\n \x03(\x0b\x32\x11.ResPracticeLimit\x12\x1e\n\ndun_reward\x18\x0b \x03(\x0b\x32\n.ResReward\x12&\n\ndun_target\x18\x0c \x03(\x0b\x32\x12.ResPracticeTarget\"\"\n\rResTargetInfo\x12\x11\n\tparameter\x18\x01 \x01(\r\"\xc1\x02\n\x0eResAchievement\x12\x16\n\x0e\x61\x63hievement_id\x18\x01 \x01(\r\x12\x13\n\x0btarget_type\x18\x02 \x01(\r\x12\x0e\n\x06sub_id\x18\x03 \x01(\r\x12\x10\n\x08group_id\x18\x04 \x01(\r\x12\x0e\n\x06pre_id\x18\x05 \x01(\r\x12\x14\n\x0c\x64isplay_type\x18\x06 \x01(\r\x12\x18\n\x10\x64isplay_priority\x18\x07 \x01(\r\x12\x19\n\x11\x61\x63hievement_score\x18\x08 \x01(\r\x12\r\n\x05title\x18\t \x01(\t\x12\x0c\n\x04\x64\x65sc\x18\n \x01(\t\x12\x0c\n\x04icon\x18\x0b \x01(\t\x12\x14\n\x0cis_short_cut\x18\x0c \x01(\r\x12\x1f\n\x0breward_info\x18\r \x03(\x0b\x32\n.ResReward\x12#\n\x0btarget_info\x18\x0e \x03(\x0b\x32\x0e.ResTargetInfo\"\xa8\x01\n\x0cResDailyTask\x12\x15\n\rdaily_task_id\x18\x01 \x01(\r\x12\x13\n\x0btarget_type\x18\x02 \x01(\r\x12\x18\n\x10\x64isplay_priority\x18\x03 \x01(\r\x12\x0c\n\x04icon\x18\x04 \x01(\t\x12\x1f\n\x0breward_info\x18\x05 \x03(\x0b\x32\n.ResReward\x12#\n\x0btarget_info\x18\x06 \x03(\x0b\x32\x0e.ResTargetInfo\"\xa5\x01\n\x0bResMainTask\x12\n\n\x02id\x18\x01 \x01(\r\x12\r\n\x05seqid\x18\x02 \x01(\r\x12\x0c\n\x04type\x18\x03 \x01(\r\x12\x10\n\x08group_id\x18\x04 \x01(\r\x12\x15\n\rremind_dun_id\x18\x05 \x01(\r\x12\x1f\n\x0breward_info\x18\x06 \x03(\x0b\x32\n.ResReward\x12#\n\x0btarget_info\x18\x07 \x03(\x0b\x32\x0e.ResTargetInfo\"X\n\x15ResColorMatchingParam\x12\x15\n\rhue_min_angle\x18\x01 \x01(\x05\x12\x15\n\rhue_max_angle\x18\x02 \x01(\x05\x12\x11\n\thue_angle\x18\x03 \x01(\x05\"E\n\x10ResColorMatching\x12\n\n\x02id\x18\x01 \x01(\r\x12%\n\x05param\x18\x02 \x03(\x0b\x32\x16.ResColorMatchingParam\"p\n\x15ResOfflineBattleTitle\x12\x10\n\x08title_id\x18\x01 \x01(\r\x12\x15\n\rrequire_score\x18\x02 \x01(\r\x12\x18\n\x10\x62onus_att_damage\x18\x03 \x01(\r\x12\x14\n\x0c\x62onus_att_hp\x18\x04 \x01(\r\"k\n\x0cResSceneInfo\x12\x12\n\nscene_name\x18\x01 \x01(\t\x12\x10\n\x08in_video\x18\x02 \x01(\r\x12\x11\n\tin_battle\x18\x03 \x01(\r\x12\x12\n\nin_endless\x18\x04 \x01(\r\x12\x0e\n\x06in_pvp\x18\x05 \x01(\r\"\xe3\x02\n\x11ResDungeonMonster\x12\x12\n\ndungeon_id\x18\x01 \x01(\r\x12\x0f\n\x07room_id\x18\x02 \x01(\r\x12\x12\n\nmonster_id\x18\x03 \x01(\r\x12\x17\n\x0fmonster_wave_id\x18\x04 \x01(\r\x12\x13\n\x0bmonster_cnt\x18\x05 \x01(\r\x12\x15\n\rmonster_level\x18\x06 \x01(\x05\x12\x19\n\x11monster_born_type\x18\x07 \x01(\r\x12\x1f\n\x17monster_born_type_param\x18\x08 \x01(\r\x12\x15\n\rmonster_pos_x\x18\t \x01(\x02\x12\x15\n\rmonster_pos_y\x18\n \x01(\x02\x12\x15\n\rmonster_group\x18\x0b \x01(\r\x12\x1b\n\x13monster_born_action\x18\x0c \x01(\t\x12\x19\n\x11monster_born_face\x18\r \x01(\r\x12\x17\n\x0fmonster_hp_rate\x18\x0e \x01(\x05\"\xb9\x03\n\x0eResDungeonRoom\x12\x12\n\ndungeon_id\x18\x01 \x01(\r\x12\x0f\n\x07room_id\x18\x02 \x01(\r\x12\x12\n\ntime_limit\x18\x04 \x01(\x05\x12\x15\n\rpass_add_time\x18\x05 \x01(\x05\x12!\n\x19wave_refresh_monster_type\x18\x06 \x01(\r\x12\"\n\x1awave_refresh_monster_param\x18\x07 \x01(\r\x12\x12\n\nborn_pos_x\x18\t \x01(\x02\x12\x11\n\tgravity_x\x18\n \x01(\x02\x12\x11\n\tgravity_y\x18\x0b \x01(\x02\x12\x13\n\x0b\x62order_left\x18\x0c \x01(\x02\x12\x14\n\x0c\x62order_right\x18\r \x01(\x02\x12\x14\n\x0c\x61\x63tion_limit\x18\x0e \x01(\r\x12\x19\n\x11\x63hamber_objective\x18\x11 \x01(\r\x12\x1a\n\x06reward\x18\x0f \x03(\x0b\x32\n.ResReward\x12 \n\tdrop_info\x18\x10 \x03(\x0b\x32\r.ResDropIndex\x12\x1a\n\x12\x61\x62ility_base_value\x18\x12 \x01(\r\x12 \n\x18\x63omplete_time_base_value\x18\x13 \x01(\r\"_\n\x11ResConLoginReward\x12\x16\n\x0e\x63on_login_days\x18\x01 \x01(\r\x12\x16\n\x0e\x63on_login_type\x18\x02 \x01(\r\x12\x1a\n\x06reward\x18\x03 \x03(\x0b\x32\n.ResReward\"3\n\x0fResHeroDropInfo\x12\x0f\n\x07hero_id\x18\x01 \x01(\r\x12\x0f\n\x07\x64rop_id\x18\x02 \x01(\r\"\xae\x01\n\x12ResScoreToResource\x12\r\n\x05\x66loor\x18\x01 \x01(\r\x12\x1f\n\x0breward_info\x18\x02 \x03(\x0b\x32\n.ResReward\x12#\n\tdrop_info\x18\x03 \x03(\x0b\x32\x10.ResHeroDropInfo\x12\x16\n\x0e\x64rop_box_class\x18\x04 \x01(\r\x12+\n\x11\x64rop_display_info\x18\x05 \x03(\x0b\x32\x10.ResResourceInfo\"i\n\x0eResTimeToMoney\x12\x0f\n\x07sort_id\x18\x01 \x01(\r\x12\x12\n\ndown_limit\x18\x02 \x01(\r\x12\x10\n\x08up_limit\x18\x03 \x01(\r\x12\r\n\x05ratio\x18\x04 \x01(\r\x12\x11\n\tmax_money\x18\x05 \x01(\r\"\xf0\x03\n\x0cResSkillData\x12\x10\n\x08skill_id\x18\x01 \x01(\r\x12\x0e\n\x06job_id\x18\x03 \x01(\r\x12\x10\n\x08tree_pos\x18\x04 \x01(\r\x12\x12\n\nskill_name\x18\x05 \x01(\t\x12\x18\n\x10skill_desc_param\x18\x07 \x01(\t\x12\x13\n\x0bskill_index\x18\x08 \x01(\r\x12\x13\n\x0bskill_level\x18\n \x01(\r\x12\x14\n\x0cskill_damage\x18\x0b \x01(\r\x12\x14\n\x0c\x65ndure_value\x18\x0c \x01(\r\x12\x14\n\x0csub_skill_id\x18\r \x01(\r\x12\x14\n\x0cskill_set_id\x18\x0e \x01(\r\x12\x11\n\toperation\x18\x0f \x01(\t\x12\x12\n\nhit_add_sp\x18\x10 \x01(\r\x12\x17\n\x0f\x64\x61mage_att_rate\x18\x11 \x01(\r\x12\x12\n\nskill_icon\x18\x12 \x01(\r\x12\x17\n\x0flevelup_cost_sp\x18\x13 \x01(\r\x12\x18\n\x10levelup_cost_res\x18\x14 \x01(\r\x12\x13\n\x0blimit_level\x18\x15 \x01(\r\x12\x17\n\x0fpre_skill_index\x18\x16 \x01(\r\x12\x1b\n\x13\x66inal_skill_cost_sp\x18\x17 \x01(\r\x12\x12\n\nskill_meta\x18\x18 \x01(\r\x12\x16\n\x0e\x66ight_capacity\x18\x19 \x01(\r\"\xd6\x01\n\x0cResSkillTree\x12\x0f\n\x07hero_id\x18\x01 \x01(\r\x12\x14\n\x0cskill_set_id\x18\x02 \x01(\r\x12\x19\n\x11relation_sequence\x18\x03 \x01(\t\x12\x1c\n\x14skill_index_sequence\x18\x04 \x01(\t\x12\x11\n\tskill_pos\x18\x05 \x01(\r\x12\x1e\n\x16skill_preview_offset_x\x18\x06 \x01(\x05\x12\x1e\n\x16skill_preview_offset_y\x18\x07 \x01(\x05\x12\x13\n\x0bskill_index\x18\x08 \x01(\x05\"i\n\x0eResRankValInfo\x12\x10\n\x08val_name\x18\x01 \x01(\t\x12\x10\n\x08val_type\x18\x02 \x01(\r\x12\x0f\n\x07min_val\x18\x03 \x01(\r\x12\x0f\n\x07max_val\x18\x04 \x01(\r\x12\x11\n\tsort_type\x18\x05 \x01(\r\"\xbf\x02\n\x0bResRankInfo\x12\x0f\n\x07rank_id\x18\x01 \x01(\r\x12\x11\n\trank_name\x18\x02 \x01(\t\x12\x16\n\x0erank_base_type\x18\x03 \x01(\r\x12\x17\n\x0frank_flush_type\x18\x04 \x01(\r\x12\x15\n\rrank_capacity\x18\x05 \x01(\r\x12\x18\n\x10get_list_max_num\x18\r \x01(\r\x12\x16\n\x0e\x64\x61y_flush_hour\x18\x06 \x01(\r\x12\x15\n\rday_flush_min\x18\x07 \x01(\r\x12\x15\n\rday_flush_sec\x18\x08 \x01(\r\x12\x16\n\x0e\x64\x61y_flush_time\x18\t \x01(\r\x12\x11\n\tmin_level\x18\n \x01(\r\x12\x11\n\tmax_level\x18\x0b \x01(\r\x12&\n\rrank_val_info\x18\x0c \x03(\x0b\x32\x0f.ResRankValInfo\":\n\x15ResRankBattleSectInfo\x12\x0f\n\x07low_val\x18\x01 \x01(\r\x12\x10\n\x08high_val\x18\x02 \x01(\r\"K\n\x11ResRankBattleInfo\x12\n\n\x02id\x18\x01 \x01(\r\x12\x10\n\x08\x63\x61pacity\x18\x02 \x01(\r\x12\x18\n\x10get_list_max_num\x18\x03 \x01(\r\"c\n\x11ResRankBattleSect\x12\x10\n\x08rank_low\x18\x01 \x01(\x05\x12\x11\n\trank_high\x18\x02 \x01(\x05\x12)\n\trank_sect\x18\x03 \x03(\x0b\x32\x16.ResRankBattleSectInfo\"D\n\rST_REWARD_RES\x12\x10\n\x08res_type\x18\x01 \x01(\r\x12\x0e\n\x06res_id\x18\x02 \x01(\r\x12\x11\n\tres_count\x18\x03 \x01(\r\"\x8c\x01\n\x13ResRankBattleReward\x12\x10\n\x08rank_low\x18\x01 \x01(\x05\x12\x11\n\trank_high\x18\x02 \x01(\x05\x12(\n\x10\x65very_day_reward\x18\x03 \x03(\x0b\x32\x0e.ST_REWARD_RES\x12&\n\x0epromote_reward\x18\x04 \x03(\x0b\x32\x0e.ST_REWARD_RES\"\x98\x01\n\x1aResRankBattleRobotHeroInfo\x12\x0f\n\x07hero_id\x18\x01 \x01(\r\x12\x0f\n\x07hero_lv\x18\x02 \x01(\r\x12\x15\n\rhero_strength\x18\x03 \x01(\r\x12\x14\n\x0chero_stamina\x18\x04 \x01(\r\x12\x13\n\x0bhero_growup\x18\x05 \x01(\r\x12\x16\n\x0e\x66ight_capacity\x18\x06 \x01(\r\"e\n\x12ResRankBattleRobot\x12\x0b\n\x03uid\x18\x01 \x01(\r\x12\x12\n\nrobot_name\x18\x02 \x01(\t\x12.\n\thero_info\x18\x03 \x03(\x0b\x32\x1b.ResRankBattleRobotHeroInfo\"t\n\x1cResOnlineBattleRobotHeroInfo\x12\x0f\n\x07hero_id\x18\x01 \x01(\r\x12\x15\n\rhero_strength\x18\x02 \x01(\r\x12\x14\n\x0chero_stamina\x18\x03 \x01(\r\x12\x16\n\x0e\x66ight_capacity\x18\x04 \x01(\r\"x\n\x14ResOnlineBattleRobot\x12\x0b\n\x03uid\x18\x01 \x01(\r\x12\x12\n\nrobot_name\x18\x02 \x01(\t\x12\r\n\x05score\x18\x03 \x01(\r\x12\x30\n\thero_info\x18\x04 \x03(\x0b\x32\x1d.ResOnlineBattleRobotHeroInfo\"X\n\x16ResOnlineBattleShopBox\x12\x0b\n\x03pos\x18\x01 \x01(\r\x12\x0c\n\x04icon\x18\x02 \x01(\t\x12\r\n\x05price\x18\x03 \x01(\r\x12\x14\n\x0c\x62\x61se_drop_id\x18\x04 \x01(\r\"]\n\x12ResGrowUpCondition\x12\x11\n\tcondition\x18\x01 \x01(\r\x12\x19\n\x11\x63ondition_param_1\x18\x02 \x01(\x05\x12\x19\n\x11\x63ondition_param_2\x18\x03 \x01(\x05\"\xbc\x01\n\tResGrowUp\x12\x0f\n\x07hero_id\x18\x01 \x01(\r\x12\x12\n\ngrow_up_id\x18\x02 \x01(\r\x12.\n\x11grow_up_condition\x18\x03 \x03(\x0b\x32\x13.ResGrowUpCondition\x12.\n\x15grow_up_ned_chip_info\x18\x04 \x03(\x0b\x32\x0f.ResChipNumInfo\x12\x14\n\x0cgrow_up_name\x18\x05 \x01(\r\x12\x14\n\x0cgrow_up_icon\x18\x06 \x01(\r\"\xf9\x01\n\x0bResPurchase\x12\x15\n\rproduct_index\x18\x01 \x01(\r\x12\x14\n\x0cproduct_name\x18\x02 \x01(\t\x12\x17\n\x0fproduct_picture\x18\x03 \x01(\t\x12\x12\n\nproduct_id\x18\x04 \x01(\t\x12\r\n\x05price\x18\x05 \x01(\x02\x12\x14\n\x0cproduct_type\x18\x06 \x01(\r\x12\x13\n\x0b\x61\x63tivity_id\x18\x07 \x01(\r\x12\r\n\x05\x63ount\x18\x08 \x01(\r\x12\x15\n\rpromotion_cnt\x18\t \x01(\r\x12\x1f\n\x0breward_info\x18\n \x03(\x0b\x32\n.ResReward\x12\x0f\n\x07\x63hannel\x18\x0b \x01(\r\"`\n\x0cResMonthCard\x12\n\n\x02id\x18\x01 \x01(\r\x12\x0c\n\x04type\x18\x02 \x01(\r\x12\x0c\n\x04name\x18\x03 \x01(\t\x12\x12\n\nvalid_time\x18\x04 \x01(\r\x12\x14\n\x0c\x64\x61ily_reward\x18\x05 \x01(\r\"\xa6\x02\n\x12ResBusinessRefresh\x12\x13\n\x0b\x62usiness_id\x18\x01 \x01(\r\x12\x15\n\rbusiness_name\x18\x02 \x01(\t\x12\x14\n\x0ctrigger_type\x18\x03 \x01(\r\x12\x14\n\x0crefresh_hour\x18\x04 \x01(\r\x12\x16\n\x0erefresh_minute\x18\x05 \x01(\r\x12\x16\n\x0erefresh_second\x18\x06 \x01(\r\x12\x15\n\rbeg_time_year\x18\x07 \x01(\r\x12\x16\n\x0e\x62\x65g_time_month\x18\x08 \x01(\r\x12\x14\n\x0c\x62\x65g_time_day\x18\t \x01(\r\x12\x15\n\rend_time_year\x18\n \x01(\r\x12\x16\n\x0e\x65nd_time_month\x18\x0b \x01(\r\x12\x14\n\x0c\x65nd_time_day\x18\x0c \x01(\r\"\xa7\x01\n\x0bResGroupBuy\x12\x14\n\x0cgroup_buy_id\x18\x01 \x01(\r\x12\x16\n\x0egroup_buy_desc\x18\x02 \x01(\t\x12\x10\n\x08\x62\x65g_time\x18\x03 \x01(\t\x12\x10\n\x08\x65nd_time\x18\x04 \x01(\t\x12\x12\n\ncost_money\x18\x05 \x01(\r\x12\x12\n\nis_refresh\x18\x06 \x01(\r\x12\x1e\n\nbuy_reward\x18\x07 \x03(\x0b\x32\n.ResReward\"S\n\x13ResGrowthFundReward\x12\n\n\x02id\x18\x01 \x01(\r\x12\x14\n\x0ctarget_dunid\x18\x02 \x01(\r\x12\x1a\n\x06reward\x18\x03 \x03(\x0b\x32\n.ResReward\"\xe6\x01\n\x13ResCumulateRecharge\x12\n\n\x02id\x18\x01 \x01(\r\x12\x15\n\rrecharge_name\x18\x02 \x01(\t\x12\x17\n\x0ftarget_recharge\x18\x03 \x01(\r\x12\x1a\n\x06reward\x18\x04 \x03(\x0b\x32\n.ResReward\x12 \n\x0c\x64\x61ily_reward\x18\x05 \x03(\x0b\x32\n.ResReward\x12\x16\n\x0e\x64\x61ily_buy_cost\x18\x06 \x01(\r\x12\x1d\n\tdaily_buy\x18\x07 \x03(\x0b\x32\n.ResReward\x12\x1e\n\ndaily_free\x18\x08 \x03(\x0b\x32\n.ResReward\"2\n\x0bResSlotInfo\x12\x0f\n\x07slot_id\x18\x01 \x01(\r\x12\x12\n\nopen_limit\x18\x02 \x01(\r\"!\n\x0cResParamInfo\x12\x11\n\tparameter\x18\x01 \x01(\r\"m\n\x07ResGift\x12\x0f\n\x07gift_id\x18\x01 \x01(\r\x12\x15\n\rex_change_cnt\x18\x02 \x01(\r\x12\r\n\x05title\x18\x03 \x01(\t\x12\x0f\n\x07\x63ontent\x18\x04 \x01(\t\x12\x1a\n\x06reward\x18\x05 \x03(\x0b\x32\n.ResReward\"\x92\x03\n\x07ResItem\x12\x0f\n\x07item_id\x18\x01 \x01(\r\x12\x11\n\titem_name\x18\x02 \x01(\t\x12\x11\n\titem_desc\x18\x03 \x01(\t\x12\x12\n\nitem_level\x18\x04 \x01(\r\x12\x11\n\titem_type\x18\x05 \x01(\r\x12\x0f\n\x07\x63\x61n_use\x18\x06 \x01(\r\x12\x14\n\x0citem_quality\x18\x07 \x01(\r\x12\x16\n\x0eitem_use_level\x18\x08 \x01(\r\x12\x17\n\x0fitem_page_index\x18\t \x01(\r\x12\x17\n\x0fitem_slot_index\x18\n \x01(\r\x12\x11\n\tsort_type\x18\x0b \x01(\r\x12\x13\n\x0bis_can_drop\x18\x0c \x01(\r\x12\x14\n\x0cpackage_wrap\x18\r \x01(\r\x12\x0e\n\x06pic_id\x18\x0e \x01(\r\x12\x11\n\tfunc_type\x18\x0f \x01(\r\x12\x10\n\x08tab_type\x18\x10 \x01(\r\x12 \n\tparameter\x18\x11 \x03(\x0b\x32\r.ResParamInfo\x12\x13\n\x0b\x64rop_dun_id\x18\x12 \x03(\r\x12\x0e\n\x06output\x18\x13 \x03(\r\"4\n\x11ResEquipAttrRatio\x12\x10\n\x08\x61ttrType\x18\x01 \x02(\r\x12\r\n\x05ratio\x18\x02 \x02(\x02\"C\n\x08HeroAttr\x12\x11\n\tattr_type\x18\x01 \x02(\r\x12\x12\n\nattr_value\x18\x02 \x01(\r\x12\x10\n\x08is_ratio\x18\x03 \x01(\r\"\x7f\n\x0cResEquipAttr\x12\x11\n\tattr_type\x18\x01 \x02(\r\x12\x12\n\nattr_value\x18\x02 \x01(\r\x12\x10\n\x08is_ratio\x18\x03 \x01(\r\x12\x1a\n\x12\x61ttr_str_inc_value\x18\x04 \x01(\r\x12\x1a\n\x12\x61ttr_sta_inc_value\x18\x05 \x01(\r\"\xc5\x04\n\x08ResEquip\x12\x10\n\x08\x65quip_id\x18\x01 \x02(\r\x12\x13\n\x0bpack_pic_id\x18\x02 \x02(\r\x12\x10\n\x08\x65valuate\x18\x03 \x02(\r\x12\r\n\x05\x63olor\x18\x04 \x02(\r\x12\x0e\n\x06weight\x18\x05 \x02(\r\x12\x11\n\tequip_pos\x18\x06 \x02(\r\x12\x10\n\x08\x62\x61se_exp\x18\x07 \x02(\r\x12\x10\n\x08job_type\x18\x08 \x02(\r\x12\x1a\n\x12\x61ttr_base_strength\x18\t \x02(\r\x12\x19\n\x11\x61ttr_base_stamina\x18\n \x02(\r\x12\x16\n\x0eprice_for_sell\x18\x10 \x02(\r\x12\x14\n\x0c\x61wesome_desc\x18\x11 \x02(\r\x12\x1c\n\x14levelup_strength_inc\x18\x0b \x02(\r\x12\x1b\n\x13levelup_stamina_inc\x18\x0c \x02(\r\x12\x19\n\x11levelup_max_level\x18\x1a \x02(\r\x12\x16\n\x0e\x63\x61n_batch_sell\x18\x19 \x02(\x08\x12\x14\n\x0c\x62ind_to_hero\x18\x16 \x02(\x08\x12\x17\n\x0fitem_slot_index\x18\x14 \x01(\r\x12\x18\n\x10return_gem_ratio\x18\x17 \x02(\r\x12!\n\nattr_color\x18\r \x03(\x0b\x32\r.ResEquipAttr\x12\"\n\x0b\x61ttr_wakeup\x18\x0e \x03(\x0b\x32\r.ResEquipAttr\x12\"\n\x0b\x61ttr_growup\x18\x0f \x03(\x0b\x32\r.ResEquipAttr\x12\x13\n\x0b\x64rop_dun_id\x18\x15 \x03(\r\x12\x0e\n\x06output\x18\x18 \x03(\r\"6\n\x0bResMaterial\x12\x0c\n\x04type\x18\x01 \x02(\r\x12\n\n\x02id\x18\x02 \x02(\r\x12\r\n\x05\x63ount\x18\x03 \x02(\r\"\xa3\x01\n\x0eResEquipGrowup\x12\x10\n\x08\x65quip_id\x18\x01 \x02(\r\x12\x14\n\x0cgrowup_level\x18\x02 \x02(\r\x12\x1e\n\x08material\x18\x03 \x03(\x0b\x32\x0c.ResMaterial\x12\x12\n\nextra_gold\x18\x04 \x02(\r\x12\x1b\n\x04\x61ttr\x18\x05 \x03(\x0b\x32\r.ResEquipAttr\x12\x18\n\x10need_equip_level\x18\x06 \x02(\r\"L\n\x17ResEquipWakeupCondition\x12\x0b\n\x03\x63nt\x18\x02 \x02(\r\x12\x11\n\tmin_level\x18\x03 \x02(\r\x12\x11\n\tgold_cost\x18\x04 \x02(\r\"?\n\x17ResEquipGrowupCondition\x12\x11\n\tequip_cnt\x18\x02 \x02(\r\x12\x11\n\tgold_cost\x18\x04 \x02(\r\"\xfa\x01\n\rResEquipColor\x12\r\n\x05\x63olor\x18\x01 \x02(\r\x12\x0b\n\x03pos\x18\x02 \x02(\r\x12\x13\n\x0b\x65xp_to_gold\x18\x04 \x02(\x02\x12\x1d\n\x15\x63hance_to_increase_sp\x18\x05 \x01(\r\x12\x16\n\x0ewakeup_item_id\x18\x06 \x02(\r\x12\x19\n\x11return_item_ratio\x18\t \x02(\x02\x12\x32\n\x10wakeup_condition\x18\x07 \x03(\x0b\x32\x18.ResEquipWakeupCondition\x12\x32\n\x10growup_condition\x18\x08 \x03(\x0b\x32\x18.ResEquipGrowupCondition\"7\n\x14ResEquipColorLevelup\x12\r\n\x05level\x18\x02 \x02(\r\x12\x10\n\x08need_exp\x18\x03 \x03(\r\"f\n\x16ResEquipColorLevelAttr\x12\r\n\x05\x63olor\x18\x01 \x02(\r\x12\x0b\n\x03pos\x18\x02 \x02(\r\x12\r\n\x05level\x18\x03 \x02(\r\x12\x10\n\x08strength\x18\x04 \x02(\r\x12\x0f\n\x07stamina\x18\x05 \x02(\r\"v\n\x11\x43SDT_EQUIPED_INFO\x12\x10\n\x08item_pos\x18\x01 \x02(\r\x12\x0f\n\x07\x62\x61se_id\x18\x02 \x02(\r\x12\x0f\n\x07\x63ur_exp\x18\x03 \x02(\r\x12\r\n\x05level\x18\x04 \x02(\r\x12\x0e\n\x06wakeup\x18\x05 \x02(\r\x12\x0e\n\x06growup\x18\x06 \x02(\r\"j\n\x11ResEquipRecommend\x12\x0f\n\x07hero_id\x18\x01 \x02(\r\x12\x14\n\x0c\x64un_id_start\x18\x02 \x02(\r\x12\x12\n\ndun_id_end\x18\x03 \x02(\r\x12\x1a\n\x12recommend_equip_id\x18\x04 \x03(\r\"{\n\x0bResDropElem\x12\x16\n\x0e\x64rop_item_type\x18\x01 \x01(\r\x12\x14\n\x0c\x64rop_item_id\x18\x02 \x01(\r\x12\x15\n\rdrop_item_num\x18\x03 \x01(\r\x12\x12\n\ndrop_ratio\x18\x04 \x01(\r\x12\x13\n\x0b\x64rop_grp_id\x18\x05 \x01(\r\"?\n\x0bResBaseDrop\x12\x0f\n\x07\x64rop_id\x18\x01 \x01(\r\x12\x1f\n\tdrop_elem\x18\x02 \x03(\x0b\x32\x0c.ResDropElem\"M\n\x0fResRetrieveInfo\x12\n\n\x02id\x18\x01 \x01(\r\x12\x0c\n\x04type\x18\x02 \x01(\r\x12 \n\tparameter\x18\x03 \x03(\x0b\x32\r.ResParamInfo\"\x1d\n\x08ResParam\x12\x11\n\tparametre\x18\x01 \x01(\r\"-\n\x0eResUserTipData\x12\n\n\x02id\x18\x01 \x01(\r\x12\x0f\n\x07tipText\x18\x02 \x01(\t\"\x95\x01\n\x0eResMailContent\x12\n\n\x02id\x18\x01 \x01(\r\x12\r\n\x05title\x18\x02 \x01(\t\x12\x0f\n\x07\x63ontent\x18\x03 \x01(\t\x12\x14\n\x0creward_money\x18\x04 \x01(\r\x12\x13\n\x0breward_gold\x18\x05 \x01(\r\x12\x16\n\x0ereward_crystal\x18\x06 \x01(\r\x12\x14\n\x0cpersist_time\x18\x07 \x01(\r\"\x8a\x05\n\x0cResPrizeDraw\x12\n\n\x02id\x18\x01 \x01(\r\x12\x1c\n\x14prize_draw_cost_type\x18\x02 \x01(\r\x12\x1a\n\x12prize_draw_cost_id\x18\x03 \x01(\r\x12\x1d\n\x15prize_draw_cost_count\x18\x04 \x01(\r\x12\x11\n\tmall_type\x18\x06 \x01(\r\x12\x0f\n\x07mall_id\x18\x07 \x01(\r\x12\x12\n\nmall_count\x18\x08 \x01(\r\x12\x17\n\x0f\x63ounteract_type\x18\t \x01(\r\x12\x15\n\rcounteract_id\x18\n \x01(\r\x12\x18\n\x10\x63ounteract_count\x18\x0b \x01(\r\x12\x16\n\x0e\x66ree_max_count\x18\x0c \x01(\r\x12\x19\n\x11\x66ree_use_interval\x18\r \x01(\r\x12*\n\"free_refresh_time_by_last_use_time\x18\x0e \x01(\r\x12\x33\n+free_refresh_time_by_last_refresh_time_hour\x18\x0f \x01(\r\x12\x32\n*free_refresh_time_by_last_refresh_time_min\x18\x10 \x01(\r\x12\x32\n*free_refresh_time_by_last_refresh_time_sec\x18\x11 \x01(\r\x12\x34\n\x1b\x66irst_prize_draw_drop_index\x18\x12 \x01(\x0b\x32\x0f.ResDropIndexEx\x12.\n\x15prize_draw_drop_index\x18\x13 \x03(\x0b\x32\x0f.ResDropIndexEx\x12\x31\n\x17prize_draw_preview_info\x18\x14 \x03(\x0b\x32\x10.ResResourceInfo\"8\n\x0eResShopRefresh\x12\x0c\n\x04type\x18\x01 \x01(\r\x12\n\n\x02id\x18\x02 \x01(\r\x12\x0c\n\x04time\x18\x03 \x01(\t\"4\n\nResBuyRate\x12\x15\n\rcritical_rate\x18\x01 \x01(\r\x12\x0f\n\x07\x62uy_cnt\x18\x02 \x01(\r\"\xa8\x01\n\x0fResRefreshPrice\x12\x0c\n\x04type\x18\x01 \x01(\r\x12\r\n\x05\x63ount\x18\x02 \x01(\r\x12\x0e\n\x06is_vip\x18\x03 \x01(\r\x12\x10\n\x08res_type\x18\x04 \x01(\r\x12\x0e\n\x06res_id\x18\x05 \x01(\r\x12\x11\n\tres_count\x18\x06 \x01(\r\x12\x14\n\x0conce_buy_cnt\x18\x07 \x01(\r\x12\x1d\n\x08\x62uy_rate\x18\x08 \x03(\x0b\x32\x0b.ResBuyRate\"\xcd\x02\n\x0cResShopGoods\x12\n\n\x02id\x18\x01 \x01(\r\x12\x0c\n\x04type\x18\x02 \x01(\r\x12\x17\n\x0fvip_level_limit\x18\x0e \x01(\r\x12\x16\n\x0eis_first_goods\x18\x03 \x01(\r\x12\x16\n\x0egoods_res_type\x18\x04 \x01(\r\x12\x14\n\x0cgoods_res_id\x18\x05 \x01(\r\x12\x11\n\tgoods_cnt\x18\r \x01(\r\x12\x12\n\nprice_type\x18\x06 \x01(\r\x12\r\n\x05price\x18\x07 \x01(\r\x12\x10\n\x08\x64iscount\x18\x08 \x01(\r\x12\"\n\x1a\x64iscount_begin_time_string\x18\t \x01(\t\x12 \n\x18\x64iscount_end_time_string\x18\n \x01(\t\x12\x1b\n\x13\x64iscount_begin_time\x18\x0b \x01(\r\x12\x19\n\x11\x64iscount_end_time\x18\x0c \x01(\r\"E\n\x16ResShopRandomGoodsInfo\x12\x10\n\x08goods_id\x18\x01 \x01(\r\x12\x19\n\x11goods_probability\x18\x02 \x01(\r\"\x8d\x01\n\rResShopRandom\x12\x0c\n\x04type\x18\x01 \x01(\r\x12\x0f\n\x07hero_id\x18\x02 \x01(\r\x12\x13\n\x0bhero_lv_low\x18\x03 \x01(\r\x12\x14\n\x0chero_lv_high\x18\x04 \x01(\r\x12\x32\n\x11goods_random_info\x18\x05 \x03(\x0b\x32\x17.ResShopRandomGoodsInfo\"Q\n\x0fResTutorialRule\x12\x0e\n\x06\x64un_id\x18\x01 \x02(\r\x12\x0c\n\x04\x64\x65mo\x18\x02 \x02(\t\x12 \n\x07\x61\x63tions\x18\x03 \x03(\x0b\x32\x0f.ST_ACTION_DESC\"M\n\x08ResBible\x12\x13\n\x0b\x63\x61tegory_id\x18\x01 \x02(\r\x12\x15\n\rcategory_name\x18\x02 \x02(\t\x12\x15\n\rpage_contents\x18\x03 \x03(\t\"3\n\x16ResFriendRecommendInfo\x12\x0b\n\x03low\x18\x01 \x01(\r\x12\x0c\n\x04high\x18\x02 \x01(\r\"\x82\x01\n\x16ResFriendRecommendSect\x12\x1a\n\x12\x66ight_capacity_low\x18\x01 \x01(\r\x12\x1b\n\x13\x66ight_capacity_high\x18\x02 \x01(\r\x12/\n\x0erecommend_info\x18\x03 \x03(\x0b\x32\x17.ResFriendRecommendInfo\"\xda\x05\n\x0fResTutorialInfo\x12\x1a\n\x12tutorial_dugeon_id\x18\x01 \x01(\r\x12\x1c\n\x14tutorial_dugeon_hero\x18\x02 \x01(\t\x12\x18\n\x10\x66irst_steller_id\x18\x03 \x01(\r\x12\x17\n\x0f\x66irst_planet_id\x18\x04 \x01(\r\x12 \n\x18role_level_skill_upgrade\x18\x05 \x01(\r\x12\x18\n\x10hero_tower_level\x18\x06 \x01(\r\x12\x1d\n\x15role_level_hero_tower\x18\x07 \x01(\r\x12\x1d\n\x15gold_mine_building_id\x18\x08 \x01(\r\x12\x1c\n\x14unlock_dun_item_shop\x18\t \x01(\r\x12\x19\n\x11unlock_dun_emblem\x18\n \x01(\r\x12\x16\n\x0erole_id_emblem\x18\x0b \x01(\r\x12\x1f\n\x17unlock_dun_role_upgrade\x18\x0c \x01(\r\x12\x1e\n\x16role_level_skill_burst\x18\r \x01(\r\x12\x16\n\x0esp_skill_burst\x18\x0e \x01(\r\x12\x1a\n\x12sp_skill_ultimatet\x18\x0f \x01(\r\x12\x17\n\x0fsp_skill_charge\x18\x10 \x01(\r\x12\x1b\n\x13new_hero_steller_id\x18\x11 \x01(\r\x12\x1a\n\x12new_hero_planet_id\x18\x12 \x01(\r\x12\x1b\n\x13resource_store_type\x18\x13 \x01(\r\x12\x11\n\tisland_id\x18\x14 \x03(\r\x12 \n\x18role_level_equip_levelup\x18\x15 \x01(\r\x12\x1e\n\x16unlock_dun_join_league\x18\x16 \x01(\r\x12\x1c\n\x14\x65xp_mine_building_id\x18\x17 \x01(\r\x12\x1e\n\x16money_mine_building_id\x18\x18 \x01(\r\x12\x18\n\x10mall_building_id\x18\x19 \x01(\r\"\x81\x01\n\x10ResHeroImageInfo\x12\n\n\x02id\x18\x01 \x01(\r\x12 \n\x18share_hero_card_offset_x\x18\x02 \x01(\x02\x12 \n\x18share_hero_card_offset_y\x18\x03 \x01(\x02\x12\x1d\n\x15share_hero_card_scale\x18\x04 \x01(\x02\"F\n\x0eST_ACTION_DESC\x12\x0c\n\x04name\x18\x01 \x02(\t\x12\x10\n\x08tips_tag\x18\x02 \x02(\t\x12\x14\n\x0cguide_effect\x18\x03 \x02(\t\"\x87\x02\n\x12ST_SHOP_GOODS_INFO\x12\x10\n\x08goods_id\x18\x01 \x01(\r\x12\x13\n\x0b\x63\x61n_buy_cnt\x18\x02 \x01(\r\x12\x16\n\x0eis_already_buy\x18\x03 \x01(\r\x12\x16\n\x0egoods_res_type\x18\x04 \x01(\r\x12\x14\n\x0cgoods_res_id\x18\x05 \x01(\r\x12\x12\n\nprice_type\x18\x06 \x01(\r\x12\r\n\x05price\x18\x07 \x01(\r\x12\x10\n\x08\x64iscount\x18\x08 \x01(\r\x12\x1b\n\x13\x64iscount_begin_time\x18\t \x01(\r\x12\x19\n\x11\x64iscount_end_time\x18\n \x01(\r\x12\x17\n\x0fvip_level_limit\x18\x0b \x01(\r\"8\n\rST_SHOP_GOODS\x12\'\n\ngoods_info\x18\x01 \x03(\x0b\x32\x13.ST_SHOP_GOODS_INFO\"r\n#ST_GANG_CITY_STRONG_POINT_HERO_INFO\x12\x0f\n\x07role_id\x18\x01 \x01(\r\x12\x11\n\trole_name\x18\x03 \x01(\t\x12\'\n\thero_info\x18\x02 \x01(\x0b\x32\x14.ST_HERO_BATTLE_INFO\"i\n\x19ST_GANG_CITY_STRONG_POINT\x12\x13\n\x0bpoint_state\x18\x01 \x01(\r\x12\x37\n\thero_info\x18\x02 \x03(\x0b\x32$.ST_GANG_CITY_STRONG_POINT_HERO_INFO\"j\n\x11ST_GANG_CITY_INFO\x12\n\n\x02id\x18\x01 \x01(\r\x12\x12\n\ncity_state\x18\x02 \x01(\r\x12\x35\n\x11strong_point_info\x18\x03 \x03(\x0b\x32\x1a.ST_GANG_CITY_STRONG_POINT\"\x87\x01\n\x0cST_GANG_CITY\x12&\n\nsmall_city\x18\x01 \x03(\x0b\x32\x12.ST_GANG_CITY_INFO\x12)\n\rmoderate_city\x18\x02 \x03(\x0b\x32\x12.ST_GANG_CITY_INFO\x12$\n\x08\x62ig_city\x18\x03 \x03(\x0b\x32\x12.ST_GANG_CITY_INFO\"c\n\x17ST_GANG_BATTLE_MEM_INFO\x12\x13\n\x0bmem_role_id\x18\x01 \x01(\r\x12\x15\n\rmem_role_name\x18\x02 \x01(\t\x12\x1c\n\x14\x63umulate_recharge_id\x18\x03 \x01(\r\"E\n\x17ST_GANG_BATTLE_MEM_LIST\x12*\n\x08mem_info\x18\x01 \x03(\x0b\x32\x18.ST_GANG_BATTLE_MEM_INFO\"O\n ST_GANG_BATTLE_ATTACK_POINT_INFO\x12\x0f\n\x07\x63ity_id\x18\x01 \x01(\r\x12\x1a\n\x12strong_point_index\x18\x02 \x01(\x05\"\xa2\x01\n\x1eST_GANG_BATTLE_MEM_ATTACK_INFO\x12\x13\n\x0bmem_role_id\x18\x01 \x01(\r\x12\x15\n\rmem_role_name\x18\x02 \x01(\t\x12\x1b\n\x13mem_total_fight_cnt\x18\x03 \x01(\r\x12\x19\n\x11mem_win_fight_cnt\x18\x04 \x01(\r\x12\x1c\n\x14\x63umulate_recharge_id\x18\x05 \x01(\r\"S\n\x1eST_GANG_BATTLE_MEM_ATTACK_LIST\x12\x31\n\x08mem_info\x18\x01 \x03(\x0b\x32\x1f.ST_GANG_BATTLE_MEM_ATTACK_INFO\"B\n\x1aST_HERO_BATTLE_EMBLEM_INFO\x12\x11\n\temblem_id\x18\x01 \x01(\r\x12\x11\n\temblem_lv\x18\x02 \x01(\r\"]\n\x19ST_HERO_BATTLE_EQUIP_INFO\x12\x0f\n\x07\x62\x61se_id\x18\x01 \x01(\r\x12\r\n\x05level\x18\x02 \x01(\r\x12\x0f\n\x07wake_up\x18\x03 \x01(\r\x12\x0f\n\x07grow_up\x18\x04 \x01(\r\"\x9d\x02\n\x13ST_HERO_BATTLE_INFO\x12\x0f\n\x07hero_id\x18\x01 \x01(\r\x12\x0f\n\x07hero_lv\x18\x02 \x01(\r\x12\x14\n\x0chero_grow_up\x18\x03 \x01(\r\x12\x1e\n\x16hero_relation_strength\x18\x04 \x01(\r\x12\x1d\n\x15hero_relation_stamina\x18\x05 \x01(\r\x12\x1b\n\x13hero_fight_capacity\x18\x06 \x01(\r\x12\x30\n\x0b\x65mblem_info\x18\x07 \x03(\x0b\x32\x1b.ST_HERO_BATTLE_EMBLEM_INFO\x12.\n\nequip_info\x18\x08 \x03(\x0b\x32\x1a.ST_HERO_BATTLE_EQUIP_INFO\x12\x10\n\x08skill_id\x18\t \x03(\r\"{\n\x14ST_BATTLE_ROBOT_INFO\x12\x0f\n\x07hero_id\x18\x01 \x01(\r\x12\x0f\n\x07hero_lv\x18\x02 \x01(\r\x12\x14\n\x0chero_grow_up\x18\x03 \x01(\r\x12\x15\n\rhero_strength\x18\x04 \x01(\r\x12\x14\n\x0chero_stamina\x18\x05 \x01(\r\"\x9c\x01\n\x18ST_BATTLE_HERO_ATTR_INFO\x12\x0f\n\x07hero_id\x18\x01 \x01(\r\x12\x0f\n\x07grow_up\x18\x02 \x01(\r\x12\r\n\x05level\x18\x03 \x01(\r\x12\x16\n\x0e\x66ight_capacity\x18\x04 \x01(\r\x12\x0e\n\x06max_hp\x18\x05 \x01(\r\x12\r\n\x05skill\x18\x06 \x03(\r\x12\x18\n\x05\x61ttrs\x18\x07 \x03(\x0b\x32\t.HeroAttr*\xfb\x42\n\x08RESCONST\x12\x10\n\x0cRES_ID_ARRAY\x10\x01\x12\x0f\n\x0bRES_VERSION\x10\x04\x12\x11\n\tRES_MAGIC\x10\xcd\xa6\x95\x9a\x05\x12\x1b\n\x17RES_MAX_PREROLEINFO_NUM\x10\x05\x12\x1e\n\x1aRES_MAX_PREMONSTERINFO_NUM\x10\x05\x12 \n\x1cRES_MAX_MONSTER_CNT_ONEGROUP\x10\x05\x12\x1a\n\x16MAX_HERO_GAINSKILL_CNT\x10\n\x12\x13\n\x0fRES_MAX_GRP_CNT\x10\x0f\x12\x1a\n\x16RES_BUILDING_TYPE_MAIN\x10\x01\x12\x1a\n\x16RES_BUILDING_TYPE_HERO\x10\x02\x12\x1b\n\x17RES_BUILDING_TYPE_STORE\x10\x03\x12\x1c\n\x18RES_BUILDING_TYPE_ISLAND\x10\x04\x12\x1a\n\x16RES_BUILDING_TYPE_GANG\x10\x05\x12\x1e\n\x1aRES_BUILDING_TYPE_PRACTICE\x10\x06\x12\x1d\n\x19RES_BUILDING_TYPE_MONSTER\x10\x07\x12\x1c\n\x18RES_BUILDING_TYPE_SCHEME\x10\x08\x12$\n RES_MAX_BUILDING_LEVELCOST_COUNT\x10\x03\x12!\n\x1dRES_MAX_UNLOCK_BUILDING_COUNT\x10\n\x12\x18\n\x14RES_MAX_ISLAND_COUNT\x10\x10\x12\x11\n\x0cMAX_PATH_LEN\x10\x80\x02\x12\x1c\n\x17RES_MAX_PATTERNNAME_LEN\x10\x80\x01\x12\x14\n\x0fRES_MAX_URL_LEN\x10\x80\x08\x12\x10\n\x0cMAX_NAME_LEN\x10@\x12\x13\n\x0eSHORT_DESC_LEN\x10\x80\x02\x12\x17\n\x12MAX_SHORT_DESC_LEN\x10\x80\x01\x12\x19\n\x14RES_MAX_JOB_DESC_LEN\x10\x80\x08\x12\x14\n\x10RES_MAX_NAME_LEN\x10 \x12\x19\n\x15RES_MAX_FILE_NAME_LEN\x10\x30\x12\x1b\n\x16RES_MAX_SKILL_TYPE_NUM\x10\x88\'\x12\x1a\n\x16RES_MAX_RANK_VAL_COUNT\x10\x05\x12%\n!RES_MAX_RANK_BATTLE_RANK_SECT_NUM\x10\x05\x12\x16\n\x12RES_MAX_RANK_COUNT\x10\x14\x12\x1d\n\x18RES_MAX_RANK_ROBOT_COUNT\x10\xc8\x01\x12\x1a\n\x16RES_MAX_PURCHASE_COUNT\x10\x32\x12\x16\n\x12RES_MAX_SLOT_COUNT\x10\x06\x12\x19\n\x14RES_MAX_GROWUP_COUNT\x10\xc8\x01\x12\"\n\x1eRES_MAX_GROWUP_CONDITION_COUNT\x10\n\x12\x1e\n\x1aRES_MAX_ENDLESS_HERO_COUNT\x10\x04\x12%\n!RES_MAX_EMBLEM_LEVELUP_CHIP_COUNT\x10\x06\x12\x1b\n\x17RES_MAX_PVP_SERCH_COUNT\x10\x04\x12\x19\n\x15RES_GIFT_ID_MAX_COUNT\x10\x64\x12\x1c\n\x18RES_GIFT_CODE_LENGTH_MAX\x10\x10\x12\x19\n\x15RES_RANK_VAL_TYPE_DAY\x10\x01\x12\x1a\n\x16RES_RANK_VAL_TYPE_WEEK\x10\x02\x12\x1b\n\x17RES_RANK_VAL_TYPE_MONTH\x10\x03\x12\x13\n\x0fRES_SCRIPT_NAME\x10 \x12\x1a\n\x16MAX_JOB_INIT_SKILL_NUM\x10\x32\x12\x18\n\x14RES_MAX_INITHERO_NUM\x10\x08\x12\x18\n\x14RES_MAX_INITSLOT_NUM\x10\x03\x12\x15\n\x11RES_MAX_ROUND_PVP\x10\x03\x12\x19\n\x15RES_MAX_TRAINSLOT_NUM\x10\x05\x12\x1b\n\x17RES_MAX_INITMONSTER_NUM\x10\x03\x12\x18\n\x14RES_MAX_DUNLIMIT_NUM\x10\x03\x12\x1b\n\x17RES_MAX_REWARD_ITEM_NUM\x10\x05\x12\x1d\n\x19RES_MAX_INITUNLOCKDUN_NUM\x10\x05\x12\x1a\n\x16RES_MAX_ROOMCNT_ONEDUN\x10\x05\x12\x1e\n\x1aRES_MAX_MONSTERCNT_ONEROOM\x10\x1e\x12\x1a\n\x16RES_MAX_RELIVECOST_CNT\x10\x05\x12\x16\n\x12RES_MAX_REWARD_CNT\x10\x05\x12\x1b\n\x17RES_MAX_GIFT_REWARD_CNT\x10\x06\x12\x17\n\x13RES_MAX_DUNCNT_CITY\x10\x0f\x12\x14\n\x10RES_MAX_DROP_NUM\x10\x05\x12\x18\n\x14RES_MAX_EVALUATE_NUM\x10\x03\x12\x1a\n\x16RES_MAX_DUNCNT_ONECITY\x10\x14\x12\x13\n\x0fRES_MAX_POS_CNT\x10\n\x12\x1a\n\x16RES_MAX_BUYPOWER_COUNT\x10\x03\x12\x1f\n\x1bRES_MAX_ITEM_CATEGORY_COUNT\x10\x05\x12\x1e\n\x1aRES_MAX_OVERHIT_PRODUCTION\x10\x05\x12!\n\x1dRES_MAX_PRACTICEDUN_LIMIT_NUM\x10\x05\x12\"\n\x1eRES_MAX_PRACTICEDUN_REWARD_NUM\x10\x05\x12\"\n\x1eRES_MAX_PRACTICEDUN_TARGET_NUM\x10\x14\x12\"\n\x1eRES_MAX_DUNGEONREWARD_TYPE_NUM\x10\x05\x12\x16\n\x12RES_MAX_REWARD_NUM\x10\x05\x12\"\n\x1eRES_MAX_ACHIEVEMENT_TARGET_NUM\x10\n\x12\x1d\n\x19RES_DAILY_TASK_TARGET_NUM\x10\n\x12\x1f\n\x1bRES_MAX_MAIN_TASK_GROUP_NUM\x10\x14\x12\x1b\n\x15RES_MAX_MAIN_TASK_NUM\x10\xa0\x9c\x01\x12\x1c\n\x18RES_PVPSCORE_MAX_SECTION\x10\x32\x12\x1b\n\x17QUEST_REPEAT_PERIOD_DAY\x10\x01\x12\x1c\n\x18QUEST_REPEAT_PERIOD_WEEK\x10\x02\x12\x1d\n\x19QUEST_REPEAT_PERIOD_MONTH\x10\x03\x12\x1f\n\x1bITEM_PERIODLIMIT_PERIOD_DAY\x10\x01\x12 \n\x1cITEM_PERIODLIMIT_PERIOD_WEEK\x10\x02\x12!\n\x1dITEM_PERIODLIMIT_PERIOD_MONTH\x10\x03\x12\x18\n\x14RES_MAX_JOB_TYPE_NUM\x10\n\x12\x1d\n\x18RES_MAX_LEVELUP_TYPE_NUM\x10\xb8\x17\x12 \n\x1bRES_MAX_MONSTERJOB_TYPE_NUM\x10\xf4\x03\x12!\n\x1bRES_MAX_MONSTER_LEVELUP_NUM\x10\xa0\x9c\x01\x12\x1d\n\x19RES_MAX_MONSTER_GROUP_NUM\x10\x32\x12#\n\x1eRES_MAX_MONSTERGRP_LEVELUP_NUM\x10\xb8\x17\x12\x17\n\x13RES_MAX_AUDIO_COUNT\x10\x03\x12\x17\n\x13RES_MAX_ROLE_ACTION\x10\x14\x12\x1d\n\x18RES_MAX_MONSTER_TYPE_NUM\x10\xb8\x17\x12!\n\x1bRES_MAX_MONSTER_DYNAMIC_NUM\x10\xb0\xea\x01\x12\x16\n\x12RES_MAX_CHGOBJ_NUM\x10\x05\x12\x18\n\x14RES_MAX_PVE_DIFF_NUM\x10\n\x12\x1b\n\x17MAX_MST_INIT_STATUS_NUM\x10\x05\x12\x1e\n\x1aRES_MAX_DROPCNT_PERMONSTER\x10\x05\x12\x1d\n\x18RES_MAX_DUNGEON_TYPE_NUM\x10\x90\x03\x12\x1d\n\x19RES_MAX_PARAM_TIME_ACTION\x10\x32\x12 \n\x1cRES_MAX_TIME_ACTION_RULE_NUM\x10\n\x12\x14\n\x10RES_TYPE_TRIGGER\x10\x00\x12\x19\n\x15RES_TYPE_TIME_CONTROL\x10\x01\x12\x19\n\x15RES_TYPE_FUNCTION_NPC\x10\x02\x12\x1e\n\x1aMAX_TIME_ACTION_CONFIG_NUM\x10\x32\x12\x17\n\x13RES_INTER_TYPE_NULL\x10\x00\x12\x17\n\x13RES_INTER_TYPE_TIME\x10\x01\x12\x1c\n\x18RES_INTER_TYPE_WEEK_MASK\x10\x02\x12 \n\x1cRES_INTER_TYPE_TIME_ENDLIMIT\x10\x03\x12\x1d\n\x19RES_INTER_TYPE_TIME_MONTH\x10\x04\x12\x18\n\x14RES_MAX_GS_SKILL_NUM\x10\x1e\x12\x1b\n\x16RES_MAX_RATIO_TYPE_NUM\x10\xd0\x0f\x12#\n\x1eRES_MAX_LEVELTRANSFER_TYPE_NUM\x10\xd0\x0f\x12\x1c\n\x18RES_MAX_PENDANT_TYPE_NUM\x10\x05\x12\x1b\n\x17RES_MAX_LEVEL_QUEST_NUM\x10\x05\x12\x1a\n\x16RES_MAX_AUTO_QUEST_NUM\x10\n\x12\x1a\n\x16RES_MAX_ITEM_PARAM_NUM\x10\x05\x12\x1c\n\x18RES_MAX_ITEM_DROPDUN_NUM\x10\x05\x12\x1e\n\x1aMAX_ITEM_DROPDUNGEON_COUNT\x10\x04\x12\"\n\x1eRES_MAX_ITEM_PERIODLIMIT_COUNT\x10\x14\x12\x1e\n\x19RES_MAX_RETRIEVE_INFO_NUM\x10\xe8\x07\x12\x11\n\rRES_TOKEN_LEN\x10 \x12\x17\n\x13RES_TOKEN_VALUE_LEN\x10@\x12\x11\n\rMAX_TOKEN_NUM\x10\x64\x12$\n RES_ROLE_RELATION_INTERPROMOTING\x10\x01\x12!\n\x1dRES_ROLE_RELATION_RESTRICTION\x10\x02\x12\x16\n\x12RES_MAIL_TITLE_MAX\x10 \x12\x19\n\x14RES_MAIL_CONTENT_MAX\x10\x80\x02\x12#\n\x1fRES_MAX_EQUIP_DROPDUNGEON_COUNT\x10(\x12\x1b\n\x16RES_MAX_EQUIP_TYPE_NUM\x10\x90N\x12\x18\n\x13RES_MAX_EQUIP_LEVEL\x10\xc8\x01\x12\x1f\n\x1bRES_MAX_EQUIP_GROW_UP_LEVEL\x10\x05\x12)\n%RES_MAX_EQUIP_LEVEL_UP_MATERIAL_COUNT\x10\x06\x12!\n\x1dRES_MAX_EQUIP_RECOMMEND_COUNT\x10\x06\x12 \n\x1cRES_MAX_DROPELEM_NUM_PERDROP\x10\x06\x12\x1e\n\x19RES_MAX_BASEDROP_CONF_NUM\x10\xd0\x0f\x12%\n!RES_ACHIEVEMENT_TARGET_HERO_COUNT\x10\x01\x12%\n!RES_ACHIEVEMENT_TARGET_HERO_LEVEL\x10\x02\x12\'\n#RES_ACHIEVEMENT_TARGET_XHERO_YLEVEL\x10\x03\x12/\n+RES_ACHIEVEMENT_TARGET_HERO_ALLSKILL_NLEVEL\x10\x04\x12+\n\'RES_ACHIEVEMENT_TARGET_HERO_EMBLEM_OPEN\x10\x05\x12-\n)RES_ACHIEVEMENT_TARGET_HERO_EMBLEM_NLEVEL\x10\x06\x12)\n%RES_ACHIEVEMENT_TARGET_HERO_JOB_LEVEL\x10\x07\x12\x33\n/RES_ACHIEVEMENT_TARGET_DUNEVALUATE_SLEVEL_COUNT\x10\x08\x12(\n$RES_ACHIEVEMENT_TARGET_DUN_COMPELETE\x10\t\x12(\n$RES_ACHIEVEMENT_TARGET_PVE_WIN_COUNT\x10\n\x12(\n$RES_ACHIEVEMENT_TARGET_PVP_WIN_COUNT\x10\x0b\x12(\n$RES_ACHIEVEMENT_TARGET_PVP_GAIN_GOLD\x10\x0c\x12+\n\'RES_ACHIEVEMENT_TARGET_PVP_GAIN_CRYSTAL\x10\r\x12/\n+RES_ACHIEVEMENT_TARGET_PVPEVALUATE_SSSLEVEL\x10\x0e\x12.\n*RES_ACHIEVEMENT_TARGET_PVP_DEFENDWIN_COUNT\x10\x0f\x12(\n$RES_ACHIEVEMENT_TARGET_ENDLESS_FLOOR\x10\x10\x12\x35\n1RES_ACHIEVEMENT_TARGET_GANGBATTLE_SCORE_NORECOVER\x10\x11\x12\x30\n,RES_ACHIEVEMENT_TARGET_GANGBATTLE_TOTALSCORE\x10\x12\x12$\n RES_ACHIEVEMENT_TARGET_GANG_JOIN\x10\x13\x12$\n RES_ACHIEVEMENT_TARGET_PVP_SCORE\x10\x14\x12#\n\x1fRES_ACHIEVEMENT_TARGET_PVP_RANK\x10\x15\x12.\n*RES_ACHIEVEMENT_TARGET_OFFLINEBATTLE_SCORE\x10\x16\x12\x1e\n\x1aRES_ACHIEVEMENT_TARGET_MAX\x10(\x12\x1b\n\x17RES_DAILY_TASK_TYPE_PVE\x10\x01\x12\"\n\x1eRES_DAILY_TASK_TYPE_RANK_MATCH\x10\x02\x12\"\n\x1eRES_DAILY_TASK_TYPE_CLAN_MATCH\x10\x03\x12 \n\x1cRES_DAILY_TASK_TYPE_PRACTICE\x10\x04\x12\x1f\n\x1bRES_DAILY_TASK_TYPE_ENDLESS\x10\x05\x12\x1b\n\x17RES_DAILY_TASK_TYPE_PVP\x10\x06\x12 \n\x1cRES_DAILY_TASK_TYPE_CLAN_PVE\x10\x07\x12\x1f\n\x1bRES_DAILY_TASK_TYPE_POWER_1\x10\x08\x12\x1f\n\x1bRES_DAILY_TASK_TYPE_POWER_2\x10\t\x12&\n\"RES_DAILY_TASK_TYPE_OFFLINE_BATTLE\x10\n\x12\x1f\n\x1bRES_DAILY_TASK_TYPE_POWER_3\x10\x0b\x12\'\n#RES_MAIN_TASK_ROLE_X_COMPLETE_PVE_Y\x10\x01\x12&\n\"RES_MAIN_TASK_ROLE_X_LEVEL_REACH_Y\x10\x02\x12/\n+RES_MAIN_TASK_ROLE_X_SKILLS_N_LEVLE_REACH_Y\x10\x03\x12\x34\n0RES_MAIN_TASK_ROLE_X_COMPLETE_PRACTICE_CHAPTER_Y\x10\x04\x12-\n)RES_MAIN_TASK_ROLE_X_EMBLEM_LEVEL_REACH_Y\x10\x05\x12\x1c\n\x18RES_MAIN_TASK_GET_ROLE_X\x10\x06\x12/\n+RES_MAIN_TASK_ANY_ROLES_N_JOB_LEVEL_REACH_X\x10\x07\x12*\n&RES_MAIN_TASK_BUILDING_X_LEVEL_REACH_Y\x10\x08\x12)\n%RES_MAIN_TASK_GUARD_TYPE_X_RES_ISLAND\x10\t\x12\x31\n-RES_MAIN_TASK_ROLE_X_COMPLETE_Y_TIMES_ENDLESS\x10\n\x12/\n+RES_MAIN_TASK_COMPLETE_X_TIMES_STEAL_BATTLE\x10\x0b\x12.\n*RES_MAIN_TASK_COMPLETE_X_TIMES_RANK_BATTLE\x10\x0c\x12\x30\n,RES_MAIN_TASK_COMPLETE_X_TIMES_LEAUGE_BATTLE\x10\r\x12.\n*RES_MAIN_TASK_COMPLETE_X_TIMES_WIFI_BATTLE\x10\x0e\x12*\n&RES_MAIN_TASK_ROLE_X_JOB_LEVEL_REACH_Y\x10\x0f\x12.\n*RES_MAIN_TASK_ROLE_X_ENDLESS_SCORE_REACH_Y\x10\x10\x12*\n&RES_MAIN_TASK_ROLE_X_COMPLETE_NEXT_PVE\x10\x11\x12\x37\n3RES_MAIN_TASK_ROLE_X_WEARED_EQUIPMENT_COUNT_REACH_Y\x10\x12\x12H\nDRES_MAIN_TASK_ROLE_X_WEARED_GROWUPED_LEVEL_Y_EQUIPMENT_COUNT_REACH_Z\x10\x13\x12H\nDRES_MAIN_TASK_ROLE_X_WEARED_WAKEUPED_LEVEL_Y_EQUIPMENT_COUNT_REACH_Z\x10\x14\x12I\nERES_MAIN_TASK_ROLE_X_WEARED_LEVELUPED_LEVEL_Y_EQUIPMENT_COUNT_REACH_Z\x10\x15\x12 \n\x1cRES_OFFLINE_BATTLE_TITLE_MAX\x10\x32\x12\x17\n\x13RES_PVE_MODE_NORMAL\x10\x00\x12\x16\n\x12RES_PVE_MODE_ELITE\x10\x01\x12\x16\n\x12RES_PVE_MODE_COUNT\x10\x02\x12$\n RES_PURCHASE_PRODUCT_TYPE_NORMAL\x10\x00\x12+\n\'RES_PURCHASE_PRODUCT_TYPE_FIRSTPURCHASE\x10\x01\x12\'\n#RES_PURCHASE_PRODUCT_TYPE_MONTHCARD\x10\x02\x12(\n$RES_PURCHASE_PRODUCT_TYPE_GROWTHFUND\x10\x03\x12.\n*RES_PURCHASE_PRODUCT_TYPE_CUMULATERECHARGE\x10\x04\x12\x1f\n\x1bRES_REFRESH_PRICE_TYPE_SHOP\x10\x01\x12 \n\x1cRES_REFRESH_PRICE_TYPE_POWER\x10\x02\x12&\n\"RES_REFRESH_PRICE_TYPE_SKILL_POINT\x10\x03\x12*\n&RES_REFRESH_PRICE_TYPE_RANKBATTLE_SHOP\x10\x04\x12\"\n\x1eRES_REFRESH_PRICE_TYPE_CRYSTAL\x10\x05\x12\x1f\n\x1bRES_REFRESH_PRICE_TYPE_GOLD\x10\x06\x12(\n$RES_REFRESH_PRICE_TYPE_ENDLESS_RESET\x10\x07\x12)\n%RES_REFRESH_PRICE_TYPE_RANKBATTLE_BUY\x10\x08\x12#\n\x1fRES_REFRESH_PRICE_TYPE_VIP_SHOP\x10\t\x12\x1e\n\x1aRES_REFRESH_PRICE_TYPE_MAX\x10\n\x12\x19\n\x15RES_GOODS_TYPE_COMMON\x10\x01\x12\x1a\n\x16RES_GOODS_TYPE_SPECIAL\x10\x02\x12\x18\n\x14RES_SHOP_TYPE_NORMAL\x10\x01\x12#\n\x1fRES_SHOP_TYPE_RANK_BATTLE_SCORE\x10\x02\x12\x15\n\x11RES_SHOP_TYPE_VIP\x10\x03\x12\"\n\x1eGANG_SUB_STATE_APPLY_NOT_APPLY\x10\x01\x12!\n\x1dGANG_SUB_STATE_APPLY_APPLYING\x10\x02\x12\"\n\x1eGANG_SUB_STATE_FIGHT_NOT_APPLY\x10\x03\x12)\n%GANG_SUB_STATE_FIGHT_NOT_IN_FIGHTLIST\x10\x04\x12\"\n\x1eGANG_SUB_STATE_FIGHT_NOT_MATCH\x10\x05\x12\x1e\n\x1aGANG_SUB_STATE_FIGHT_MATCH\x10\x06\x12\x1a\n\x16GANG_BATTLE_STATE_NULL\x10\x00\x12\x1a\n\x16GANG_BATTLE_STATE_REST\x10\x01\x12\x1b\n\x17GANG_BATTLE_STATE_APPLY\x10\x02\x12\x1b\n\x17GANG_BATTLE_STATE_FIGHT\x10\x03\x12\x1d\n\x19GANG_BATTLE_STATE_BALANCE\x10\x04\x12)\n%GANG_CITY_STRONG_POINT_STATE_UNATTACK\x10\x01\x12*\n&GANG_CITY_STRONG_POINT_STATE_ATTACKING\x10\x02\x12,\n(GANG_CITY_STRONG_POINT_STATE_ATTACK_LOSE\x10\x03\x12\x33\n/GANG_CITY_STRONG_POINT_STATE_TAKEOVER_ATTACKING\x10\x04\x12)\n%GANG_CITY_STRONG_POINT_STATE_TAKEOVER\x10\x05\x12\x1e\n\x1aGANG_CITY_STATE_UNTAKEOVER\x10\x01\x12\x1c\n\x18GANG_CITY_STATE_TAKEOVER\x10\x02\x12\x14\n\x10MAX_BIG_CITY_NUM\x10\x01\x12\x19\n\x15MAX_MODERATE_CITY_NUM\x10\x04\x12\x16\n\x12MAX_SMALL_CITY_NUM\x10\x08\x12 \n\x1cMAX_BIG_CITY_STRONGPOING_NUM\x10\x14\x12%\n!MAX_MODERATE_CITY_STRONGPOING_NUM\x10\n\x12\"\n\x1eMAX_SMALL_CITY_STRONGPOING_NUM\x10\x05\x12\x1c\n\x18MAX_STRONGPOINT_HERO_NUM\x10\x02\x12\x16\n\x12\x43ITY_POINT_CHG_SET\x10\x01\x12\x19\n\x15\x43ITY_POINT_CHG_CANCEL\x10\x02\x12\x17\n\x13\x43ITY_POINT_CHG_KICK\x10\x03\x12\x1a\n\x16\x43ITY_POINT_HERO_UPDATE\x10\x04\x12\x1a\n\x16RES_PRIZE_DRAW_ID_NONE\x10\x00\x12\x1e\n\x1aRES_PRIZE_DRAW_ID_COIN_ONE\x10\x01\x12\x1f\n\x1bRES_PRIZE_DRAW_ID_COINT_TEN\x10\x02\x12\x1f\n\x1bRES_PRIZE_DRAW_ID_MONEY_ONE\x10\x03\x12\x1f\n\x1bRES_PRIZE_DRAW_ID_MONEY_TEN\x10\x04\x12\x19\n\x15RES_PRIZE_DRAW_ID_MAX\x10\x05\x12%\n!RES_PRIZE_FREE_COUNT_REFRESH_NONE\x10\x00\x12,\n(RES_PRIZE_FREE_COUNT_REFRESH_BY_USE_TIME\x10\x01\x12\x30\n,RES_PRIZE_FREE_COUNT_REFRESH_BY_REFRESH_TIME\x10\x02\x12\'\n!RES_MAX_ONLINE_BATTLE_ROBOT_COUNT\x10\xa0\x8d\x06\x1a\x02\x10\x01*@\n\x18\x45NUM_SERVER_LOCOLIZATION\x12$\n ENUM_SERVER_LOCOLIZATION_CHINESE\x10\x00*\xe0\x01\n\x13ResChamberObjective\x12\x1f\n\x1b\x43HAMBER_OBJECTIVE_KILL_BOSS\x10\x01\x12\"\n\x1e\x43HAMBER_OBJECTIVE_KILL_MONSTER\x10\x02\x12%\n!CHAMBER_OBJECTIVE_REACH_WARPPOINT\x10\x03\x12\x1e\n\x1a\x43HAMBER_OBJECTIVE_SURVIVAL\x10\x04\x12\x1d\n\x19\x43HAMBER_OBJECTIVE_PROTECT\x10\x05\x12\x1e\n\x1a\x43HAMBER_OBJECTIVE_KILL_ALL\x10\x06*\x96\x01\n\x0fResSkillSetType\x12\x11\n\rSKILL_SET_TAP\x10\x01\x12\x16\n\x12SKILL_SET_UP_SLIDE\x10\x02\x12\x13\n\x0fSKILL_SET_SLIDE\x10\x03\x12\x18\n\x14SKILL_SET_DOWN_SLIDE\x10\x04\x12\x12\n\x0eSKILL_SET_DASH\x10\x05\x12\x15\n\x11SKILL_SET_SPECIAL\x10\x06*\xa0\x14\n\x0fResHeroAttrType\x12\x19\n\x15HERO_ATTR_COLOR_START\x10\x01\x12.\n*HERO_ATTR_COLOR_INCREASE_DAMAGE_TO_MONSTER\x10\x01\x12 \n\x1cHERO_ATTR_COLOR_SP_GET_SPEED\x10\x02\x12+\n\'HERO_ATTR_COLOR_INCREASE_DAMAGE_TO_BOSS\x10\x03\x12+\n\'HERO_ATTR_COLOR_INCREASE_DAMAGE_TO_HERO\x10\x04\x12\x1e\n\x1aHERO_ATTR_COLOR_SP_EXVALUE\x10\x05\x12\x32\n.HERO_ATTR_COLOR_INCREASE_DAMAGE_TO_MONSTER_TAP\x10\x0b\x12\x31\n-HERO_ATTR_COLOR_INCREASE_DAMAGE_TO_MONSTER_UP\x10\x0c\x12\x34\n0HERO_ATTR_COLOR_INCREASE_DAMAGE_TO_MONSTER_SLIDE\x10\r\x12\x33\n/HERO_ATTR_COLOR_INCREASE_DAMAGE_TO_MONSTER_DOWN\x10\x0e\x12\x33\n/HERO_ATTR_COLOR_INCREASE_DAMAGE_TO_MONSTER_DASH\x10\x0f\x12\x36\n2HERO_ATTR_COLOR_INCREASE_DAMAGE_TO_MONSTER_SPECIAL\x10\x10\x12$\n HERO_ATTR_COLOR_SP_GET_SPEED_TAP\x10\x15\x12#\n\x1fHERO_ATTR_COLOR_SP_GET_SPEED_UP\x10\x16\x12&\n\"HERO_ATTR_COLOR_SP_GET_SPEED_SLIDE\x10\x17\x12%\n!HERO_ATTR_COLOR_SP_GET_SPEED_DOWN\x10\x18\x12%\n!HERO_ATTR_COLOR_SP_GET_SPEED_DASH\x10\x19\x12(\n$HERO_ATTR_COLOR_SP_GET_SPEED_SPECIAL\x10\x1a\x12/\n+HERO_ATTR_COLOR_INCREASE_DAMAGE_TO_BOSS_TAP\x10\x1f\x12.\n*HERO_ATTR_COLOR_INCREASE_DAMAGE_TO_BOSS_UP\x10 \x12\x31\n-HERO_ATTR_COLOR_INCREASE_DAMAGE_TO_BOSS_SLIDE\x10!\x12\x30\n,HERO_ATTR_COLOR_INCREASE_DAMAGE_TO_BOSS_DOWN\x10\"\x12\x30\n,HERO_ATTR_COLOR_INCREASE_DAMAGE_TO_BOSS_DASH\x10#\x12\x33\n/HERO_ATTR_COLOR_INCREASE_DAMAGE_TO_BOSS_SPECIAL\x10$\x12/\n+HERO_ATTR_COLOR_INCREASE_DAMAGE_TO_HERO_TAP\x10)\x12.\n*HERO_ATTR_COLOR_INCREASE_DAMAGE_TO_HERO_UP\x10*\x12\x31\n-HERO_ATTR_COLOR_INCREASE_DAMAGE_TO_HERO_SLIDE\x10+\x12\x30\n,HERO_ATTR_COLOR_INCREASE_DAMAGE_TO_HERO_DOWN\x10,\x12\x30\n,HERO_ATTR_COLOR_INCREASE_DAMAGE_TO_HERO_DASH\x10-\x12\x33\n/HERO_ATTR_COLOR_INCREASE_DAMAGE_TO_HERO_SPECIAL\x10.\x12,\n(HERO_ATTR_LEVELUP_BURST_SUPER_ARMOR_TIME\x10\x64\x12\x1f\n\x1bHERO_ATTR_LEVELUP_BUFF_MOVE\x10\x65\x12&\n\"HERO_ATTR_LEVELUP_CD_DAMAGE_REDUCE\x10\x66\x12.\n*HERO_ATTR_LEVELUP_DEFENCE_SUPER_ARMOR_BUFF\x10g\x12!\n\x1dHERO_ATTR_LEVELUP_DAMAGE_BUFF\x10h\x12-\n)HERO_ATTR_LEVELUP_ATTACK_SUPER_ARMOR_BUFF\x10i\x12!\n\x1dHERO_ATTR_LEVELUP_INCREASE_SP\x10j\x12&\n\"HERO_ATTR_LEVELUP_MOVE_SUPER_ARMOR\x10k\x12 \n\x1cHERO_ATTR_LEVELUP_LIFE_STEAL\x10l\x12#\n\x1fHERO_ATTR_LEVELUP_DAMAGE_REDUCE\x10m\x12\x1c\n\x18HERO_ATTR_LEVELUP_SUMMON\x10n\x12(\n$HERO_ATTR_LEVELUP_GROUND_SUPER_ARMOR\x10o\x12(\n$HERO_ATTR_LEVELUP_INCREASE_SP_CHANCE\x10p\x12(\n#HERO_ATTR_GROWUP_BASE_ATTR_INCREASE\x10\xc8\x01\x12\x1e\n\x19HERO_ATTR_GROWUP_CRITICAL\x10\xc9\x01\x12&\n!HERO_ATTR_GROWUP_CRITICAL_DEFENCE\x10\xca\x01\x12%\n HERO_ATTR_GROWUP_CRITICAL_EFFECT\x10\xcb\x01\x12-\n(HERO_ATTR_GROWUP_CRITICAL_DEFENCE_EFFECT\x10\xcc\x01\x12\x1c\n\x17HERO_ATTR_BASE_STRENGTH\x10\xac\x02\x12\x1b\n\x16HERO_ATTR_BASE_STAMINA\x10\xad\x02\x12\x1b\n\x16HERO_ATTR_BASE_ABILITY\x10\xb0\x02\x12\'\n\"HERO_ATTR_BASE_STRENGTH_ROLE_LEVEL\x10\xb1\x02\x12&\n!HERO_ATTR_BASE_STAMINA_ROLE_LEVEL\x10\xb2\x02\x12#\n\x1eHERO_ATTR_BASE_STRENGTH_EMBLEM\x10\xb3\x02\x12\"\n\x1dHERO_ATTR_BASE_STAMINA_EMBLEM\x10\xb4\x02\x12%\n HERO_ATTR_BASE_STRENGTH_RELATION\x10\xb5\x02\x12$\n\x1fHERO_ATTR_BASE_STAMINA_RELATION\x10\xb6\x02\x12)\n$HERO_ATTR_BASE_STRENGTH_BATTLE_TITLE\x10\xb7\x02\x12(\n#HERO_ATTR_BASE_STAMINA_BATTLE_TITLE\x10\xb8\x02\x12\"\n\x1dHERO_ATTR_BASE_STRENGTH_EQUIP\x10\xb9\x02\x12!\n\x1cHERO_ATTR_BASE_STAMINA_EQUIP\x10\xba\x02\x1a\x02\x10\x01*\xc4\x01\n\x0fResEquipPosType\x12\x11\n\rEQUIPPOS_HEAD\x10\x00\x12\x11\n\rEQUIPPOS_HAND\x10\x01\x12\x11\n\rEQUIPPOS_NECK\x10\x02\x12\x11\n\rEQUIPPOS_BODY\x10\x03\x12\x10\n\x0c\x45QUIPPOS_LEG\x10\x04\x12\x13\n\x0f\x45QUIPPOS_WEAPON\x10\x05\x12\x16\n\x12\x45QUIPPOS_MAX_COUNT\x10\x06\x12\x11\n\rEQUIPPOS_NONE\x10\x07\x12\x13\n\x0f\x45QUIPPOS_ALLPOS\x10\t*\x96\x01\n\x11ResEquipColorType\x12\x14\n\x10\x45QUIPCOLOR_WHITE\x10\x00\x12\x14\n\x10\x45QUIPCOLOR_GREEN\x10\x01\x12\x13\n\x0f\x45QUIPCOLOR_BLUE\x10\x02\x12\x15\n\x11\x45QUIPCOLOR_PURPLE\x10\x03\x12\x15\n\x11\x45QUIPCOLOR_ORANGE\x10\x04\x12\x12\n\x0e\x45QUIPCOLOR_MAX\x10\x05*\xa7\x01\n\x0e\x45numItemOutput\x12\x13\n\x0fOUTPUT_TREASURE\x10\x01\x12\x0f\n\x0bOUTPUT_SHOP\x10\x02\x12\x16\n\x12OUTPUT_BATTLE_SHOP\x10\x03\x12\x15\n\x11OUTPUT_NORAML_PVE\x10\x04\x12\x14\n\x10OUTPUT_ELITE_PVE\x10\x05\x12\x16\n\x12OUTPUT_VIP_PACKAGE\x10\x06\x12\x12\n\x0eOUTPUT_ENDLESS\x10\x07')
 )
 _sym_db.RegisterFileDescriptor(DESCRIPTOR)
 
@@ -1048,8 +1048,8 @@ _RESCONST = _descriptor.EnumDescriptor(
   ],
   containing_type=None,
   options=_descriptor._ParseOptions(descriptor_pb2.EnumOptions(), _b('\020\001')),
-  serialized_start=27038,
-  serialized_end=35609,
+  serialized_start=27184,
+  serialized_end=35755,
 )
 _sym_db.RegisterEnumDescriptor(_RESCONST)
 
@@ -1067,8 +1067,8 @@ _ENUM_SERVER_LOCOLIZATION = _descriptor.EnumDescriptor(
   ],
   containing_type=None,
   options=None,
-  serialized_start=35611,
-  serialized_end=35675,
+  serialized_start=35757,
+  serialized_end=35821,
 )
 _sym_db.RegisterEnumDescriptor(_ENUM_SERVER_LOCOLIZATION)
 
@@ -1106,8 +1106,8 @@ _RESCHAMBEROBJECTIVE = _descriptor.EnumDescriptor(
   ],
   containing_type=None,
   options=None,
-  serialized_start=35678,
-  serialized_end=35902,
+  serialized_start=35824,
+  serialized_end=36048,
 )
 _sym_db.RegisterEnumDescriptor(_RESCHAMBEROBJECTIVE)
 
@@ -1145,8 +1145,8 @@ _RESSKILLSETTYPE = _descriptor.EnumDescriptor(
   ],
   containing_type=None,
   options=None,
-  serialized_start=35905,
-  serialized_end=36055,
+  serialized_start=36051,
+  serialized_end=36201,
 )
 _sym_db.RegisterEnumDescriptor(_RESSKILLSETTYPE)
 
@@ -1404,8 +1404,8 @@ _RESHEROATTRTYPE = _descriptor.EnumDescriptor(
   ],
   containing_type=None,
   options=_descriptor._ParseOptions(descriptor_pb2.EnumOptions(), _b('\020\001')),
-  serialized_start=36058,
-  serialized_end=38650,
+  serialized_start=36204,
+  serialized_end=38796,
 )
 _sym_db.RegisterEnumDescriptor(_RESHEROATTRTYPE)
 
@@ -1455,8 +1455,8 @@ _RESEQUIPPOSTYPE = _descriptor.EnumDescriptor(
   ],
   containing_type=None,
   options=None,
-  serialized_start=38653,
-  serialized_end=38849,
+  serialized_start=38799,
+  serialized_end=38995,
 )
 _sym_db.RegisterEnumDescriptor(_RESEQUIPPOSTYPE)
 
@@ -1494,8 +1494,8 @@ _RESEQUIPCOLORTYPE = _descriptor.EnumDescriptor(
   ],
   containing_type=None,
   options=None,
-  serialized_start=38852,
-  serialized_end=39002,
+  serialized_start=38998,
+  serialized_end=39148,
 )
 _sym_db.RegisterEnumDescriptor(_RESEQUIPCOLORTYPE)
 
@@ -1537,8 +1537,8 @@ _ENUMITEMOUTPUT = _descriptor.EnumDescriptor(
   ],
   containing_type=None,
   options=None,
-  serialized_start=39005,
-  serialized_end=39172,
+  serialized_start=39151,
+  serialized_end=39318,
 )
 _sym_db.RegisterEnumDescriptor(_ENUMITEMOUTPUT)
 
@@ -4729,36 +4729,36 @@ _RESMISCINFO = _descriptor.Descriptor(
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
-      name='steal_battle_money_res_dun_id', full_name='ResMiscInfo.steal_battle_money_res_dun_id', index=31,
+      name='endless_floor_cnt_per_milestone', full_name='ResMiscInfo.endless_floor_cnt_per_milestone', index=31,
+      number=32, type=13, cpp_type=3, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    _descriptor.FieldDescriptor(
+      name='steal_battle_money_res_dun_id', full_name='ResMiscInfo.steal_battle_money_res_dun_id', index=32,
       number=33, type=13, cpp_type=3, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
-      name='steal_battle_gold_res_dun_id', full_name='ResMiscInfo.steal_battle_gold_res_dun_id', index=32,
+      name='steal_battle_gold_res_dun_id', full_name='ResMiscInfo.steal_battle_gold_res_dun_id', index=33,
       number=34, type=13, cpp_type=3, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
-      name='steal_battle_crystal_res_dun_id', full_name='ResMiscInfo.steal_battle_crystal_res_dun_id', index=33,
+      name='steal_battle_crystal_res_dun_id', full_name='ResMiscInfo.steal_battle_crystal_res_dun_id', index=34,
       number=35, type=13, cpp_type=3, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
-      name='steal_battle_exp_res_dun_id', full_name='ResMiscInfo.steal_battle_exp_res_dun_id', index=34,
+      name='steal_battle_exp_res_dun_id', full_name='ResMiscInfo.steal_battle_exp_res_dun_id', index=35,
       number=36, type=13, cpp_type=3, label=1,
-      has_default_value=False, default_value=0,
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      options=None),
-    _descriptor.FieldDescriptor(
-      name='endless_limit_cnt', full_name='ResMiscInfo.endless_limit_cnt', index=35,
-      number=37, type=13, cpp_type=3, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
@@ -5328,7 +5328,7 @@ _RESMISCINFO = _descriptor.Descriptor(
   oneofs=[
   ],
   serialized_start=6089,
-  serialized_end=10028,
+  serialized_end=10042,
 )
 
 
@@ -5378,8 +5378,8 @@ _RESHEROEVALUATE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=10030,
-  serialized_end=10132,
+  serialized_start=10044,
+  serialized_end=10146,
 )
 
 
@@ -5457,8 +5457,8 @@ _RESGANGMISCINFO = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=10135,
-  serialized_end=10444,
+  serialized_start=10149,
+  serialized_end=10458,
 )
 
 
@@ -5550,8 +5550,8 @@ _RESGANGLEVELINFO = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=10447,
-  serialized_end=10717,
+  serialized_start=10461,
+  serialized_end=10731,
 )
 
 
@@ -5587,8 +5587,8 @@ _RESGANGBATTLETIME = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=10719,
-  serialized_end=10767,
+  serialized_start=10733,
+  serialized_end=10781,
 )
 
 
@@ -5638,8 +5638,8 @@ _RESGANGBATTLEREWARD = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=10770,
-  serialized_end=10913,
+  serialized_start=10784,
+  serialized_end=10927,
 )
 
 
@@ -5738,8 +5738,8 @@ _RESROBOTBUILD = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=10916,
-  serialized_end=11145,
+  serialized_start=10930,
+  serialized_end=11159,
 )
 
 
@@ -5789,8 +5789,8 @@ _RESPVPROBOT = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=11147,
-  serialized_end=11253,
+  serialized_start=11161,
+  serialized_end=11267,
 )
 
 
@@ -5826,8 +5826,8 @@ _RESPVPSERCHINFO = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=11255,
-  serialized_end=11299,
+  serialized_start=11269,
+  serialized_end=11313,
 )
 
 
@@ -5863,8 +5863,8 @@ _RESPVPMISC = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=11301,
-  serialized_end=11364,
+  serialized_start=11315,
+  serialized_end=11378,
 )
 
 
@@ -5907,8 +5907,8 @@ _RESPVPSEARCHSECT = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=11366,
-  serialized_end=11483,
+  serialized_start=11380,
+  serialized_end=11497,
 )
 
 
@@ -5951,8 +5951,8 @@ _RESSTEALBATTLEPRIZEDRAW = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=11485,
-  serialized_end=11578,
+  serialized_start=11499,
+  serialized_end=11592,
 )
 
 
@@ -5988,8 +5988,8 @@ _RESDUNLIMIT = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=11580,
-  serialized_end=11630,
+  serialized_start=11594,
+  serialized_end=11644,
 )
 
 
@@ -6032,8 +6032,8 @@ _RESDUNEVALUATE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=11632,
-  serialized_end=11708,
+  serialized_start=11646,
+  serialized_end=11722,
 )
 
 
@@ -6069,8 +6069,8 @@ _RESRELIVECOST = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=11710,
-  serialized_end=11766,
+  serialized_start=11724,
+  serialized_end=11780,
 )
 
 
@@ -6106,8 +6106,8 @@ _RESPOSINFO = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=11768,
-  serialized_end=11810,
+  serialized_start=11782,
+  serialized_end=11824,
 )
 
 
@@ -6136,8 +6136,8 @@ _RESDROPINDEX = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=11812,
-  serialized_end=11846,
+  serialized_start=11826,
+  serialized_end=11860,
 )
 
 
@@ -6173,8 +6173,8 @@ _RESDUNGEONNEEDITEM = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=11848,
-  serialized_end=11903,
+  serialized_start=11862,
+  serialized_end=11917,
 )
 
 
@@ -6203,8 +6203,8 @@ _RESEVALUATE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=11905,
-  serialized_end=11937,
+  serialized_start=11919,
+  serialized_end=11951,
 )
 
 
@@ -6436,8 +6436,8 @@ _RESDUNGEONINFO = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=11940,
-  serialized_end=12783,
+  serialized_start=11954,
+  serialized_end=12797,
 )
 
 
@@ -6473,8 +6473,8 @@ _RESDUNGEONREWARD = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=12785,
-  serialized_end=12851,
+  serialized_start=12799,
+  serialized_end=12865,
 )
 
 
@@ -6545,8 +6545,8 @@ _RESDUNGEONCITY = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=12854,
-  serialized_end=13007,
+  serialized_start=12868,
+  serialized_end=13021,
 )
 
 
@@ -6596,8 +6596,8 @@ _RESCITYREWARD = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=13009,
-  serialized_end=13113,
+  serialized_start=13023,
+  serialized_end=13127,
 )
 
 
@@ -6626,8 +6626,8 @@ _RESPRACTICELIMIT = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=13115,
-  serialized_end=13151,
+  serialized_start=13129,
+  serialized_end=13165,
 )
 
 
@@ -6663,8 +6663,8 @@ _RESPRACTICETARGET = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=13153,
-  serialized_end=13207,
+  serialized_start=13167,
+  serialized_end=13221,
 )
 
 
@@ -6770,8 +6770,8 @@ _RESPRACTICEDUN = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=13210,
-  serialized_end=13495,
+  serialized_start=13224,
+  serialized_end=13509,
 )
 
 
@@ -6800,8 +6800,8 @@ _RESTARGETINFO = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=13497,
-  serialized_end=13531,
+  serialized_start=13511,
+  serialized_end=13545,
 )
 
 
@@ -6921,8 +6921,8 @@ _RESACHIEVEMENT = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=13534,
-  serialized_end=13855,
+  serialized_start=13548,
+  serialized_end=13869,
 )
 
 
@@ -6986,8 +6986,8 @@ _RESDAILYTASK = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=13858,
-  serialized_end=14026,
+  serialized_start=13872,
+  serialized_end=14040,
 )
 
 
@@ -7058,8 +7058,8 @@ _RESMAINTASK = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=14029,
-  serialized_end=14194,
+  serialized_start=14043,
+  serialized_end=14208,
 )
 
 
@@ -7102,8 +7102,8 @@ _RESCOLORMATCHINGPARAM = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=14196,
-  serialized_end=14284,
+  serialized_start=14210,
+  serialized_end=14298,
 )
 
 
@@ -7139,8 +7139,8 @@ _RESCOLORMATCHING = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=14286,
-  serialized_end=14355,
+  serialized_start=14300,
+  serialized_end=14369,
 )
 
 
@@ -7190,8 +7190,8 @@ _RESOFFLINEBATTLETITLE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=14357,
-  serialized_end=14469,
+  serialized_start=14371,
+  serialized_end=14483,
 )
 
 
@@ -7248,8 +7248,8 @@ _RESSCENEINFO = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=14471,
-  serialized_end=14578,
+  serialized_start=14485,
+  serialized_end=14592,
 )
 
 
@@ -7369,8 +7369,8 @@ _RESDUNGEONMONSTER = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=14581,
-  serialized_end=14936,
+  serialized_start=14595,
+  serialized_end=14950,
 )
 
 
@@ -7511,8 +7511,8 @@ _RESDUNGEONROOM = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=14939,
-  serialized_end=15380,
+  serialized_start=14953,
+  serialized_end=15394,
 )
 
 
@@ -7555,8 +7555,8 @@ _RESCONLOGINREWARD = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=15382,
-  serialized_end=15477,
+  serialized_start=15396,
+  serialized_end=15491,
 )
 
 
@@ -7592,8 +7592,8 @@ _RESHERODROPINFO = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=15479,
-  serialized_end=15530,
+  serialized_start=15493,
+  serialized_end=15544,
 )
 
 
@@ -7650,8 +7650,8 @@ _RESSCORETORESOURCE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=15533,
-  serialized_end=15707,
+  serialized_start=15547,
+  serialized_end=15721,
 )
 
 
@@ -7708,8 +7708,8 @@ _RESTIMETOMONEY = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=15709,
-  serialized_end=15814,
+  serialized_start=15723,
+  serialized_end=15828,
 )
 
 
@@ -7885,8 +7885,8 @@ _RESSKILLDATA = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=15817,
-  serialized_end=16313,
+  serialized_start=15831,
+  serialized_end=16327,
 )
 
 
@@ -7964,8 +7964,8 @@ _RESSKILLTREE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=16316,
-  serialized_end=16530,
+  serialized_start=16330,
+  serialized_end=16544,
 )
 
 
@@ -8022,8 +8022,8 @@ _RESRANKVALINFO = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=16532,
-  serialized_end=16637,
+  serialized_start=16546,
+  serialized_end=16651,
 )
 
 
@@ -8136,8 +8136,8 @@ _RESRANKINFO = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=16640,
-  serialized_end=16959,
+  serialized_start=16654,
+  serialized_end=16973,
 )
 
 
@@ -8173,8 +8173,8 @@ _RESRANKBATTLESECTINFO = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=16961,
-  serialized_end=17019,
+  serialized_start=16975,
+  serialized_end=17033,
 )
 
 
@@ -8217,8 +8217,8 @@ _RESRANKBATTLEINFO = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=17021,
-  serialized_end=17096,
+  serialized_start=17035,
+  serialized_end=17110,
 )
 
 
@@ -8261,8 +8261,8 @@ _RESRANKBATTLESECT = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=17098,
-  serialized_end=17197,
+  serialized_start=17112,
+  serialized_end=17211,
 )
 
 
@@ -8305,8 +8305,8 @@ _ST_REWARD_RES = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=17199,
-  serialized_end=17267,
+  serialized_start=17213,
+  serialized_end=17281,
 )
 
 
@@ -8356,8 +8356,8 @@ _RESRANKBATTLEREWARD = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=17270,
-  serialized_end=17410,
+  serialized_start=17284,
+  serialized_end=17424,
 )
 
 
@@ -8421,8 +8421,8 @@ _RESRANKBATTLEROBOTHEROINFO = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=17413,
-  serialized_end=17565,
+  serialized_start=17427,
+  serialized_end=17579,
 )
 
 
@@ -8465,8 +8465,8 @@ _RESRANKBATTLEROBOT = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=17567,
-  serialized_end=17668,
+  serialized_start=17581,
+  serialized_end=17682,
 )
 
 
@@ -8516,8 +8516,8 @@ _RESONLINEBATTLEROBOTHEROINFO = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=17670,
-  serialized_end=17786,
+  serialized_start=17684,
+  serialized_end=17800,
 )
 
 
@@ -8567,8 +8567,8 @@ _RESONLINEBATTLEROBOT = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=17788,
-  serialized_end=17908,
+  serialized_start=17802,
+  serialized_end=17922,
 )
 
 
@@ -8618,8 +8618,8 @@ _RESONLINEBATTLESHOPBOX = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=17910,
-  serialized_end=17998,
+  serialized_start=17924,
+  serialized_end=18012,
 )
 
 
@@ -8662,8 +8662,8 @@ _RESGROWUPCONDITION = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=18000,
-  serialized_end=18093,
+  serialized_start=18014,
+  serialized_end=18107,
 )
 
 
@@ -8727,8 +8727,8 @@ _RESGROWUP = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=18096,
-  serialized_end=18284,
+  serialized_start=18110,
+  serialized_end=18298,
 )
 
 
@@ -8827,8 +8827,8 @@ _RESPURCHASE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=18287,
-  serialized_end=18536,
+  serialized_start=18301,
+  serialized_end=18550,
 )
 
 
@@ -8885,8 +8885,8 @@ _RESMONTHCARD = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=18538,
-  serialized_end=18634,
+  serialized_start=18552,
+  serialized_end=18648,
 )
 
 
@@ -8992,8 +8992,8 @@ _RESBUSINESSREFRESH = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=18637,
-  serialized_end=18931,
+  serialized_start=18651,
+  serialized_end=18945,
 )
 
 
@@ -9064,8 +9064,8 @@ _RESGROUPBUY = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=18934,
-  serialized_end=19101,
+  serialized_start=18948,
+  serialized_end=19115,
 )
 
 
@@ -9108,8 +9108,8 @@ _RESGROWTHFUNDREWARD = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=19103,
-  serialized_end=19186,
+  serialized_start=19117,
+  serialized_end=19200,
 )
 
 
@@ -9187,8 +9187,8 @@ _RESCUMULATERECHARGE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=19189,
-  serialized_end=19419,
+  serialized_start=19203,
+  serialized_end=19433,
 )
 
 
@@ -9224,8 +9224,8 @@ _RESSLOTINFO = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=19421,
-  serialized_end=19471,
+  serialized_start=19435,
+  serialized_end=19485,
 )
 
 
@@ -9254,8 +9254,8 @@ _RESPARAMINFO = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=19473,
-  serialized_end=19506,
+  serialized_start=19487,
+  serialized_end=19520,
 )
 
 
@@ -9312,8 +9312,8 @@ _RESGIFT = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=19508,
-  serialized_end=19617,
+  serialized_start=19522,
+  serialized_end=19631,
 )
 
 
@@ -9468,8 +9468,8 @@ _RESITEM = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=19620,
-  serialized_end=20022,
+  serialized_start=19634,
+  serialized_end=20036,
 )
 
 
@@ -9505,8 +9505,8 @@ _RESEQUIPATTRRATIO = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=20024,
-  serialized_end=20076,
+  serialized_start=20038,
+  serialized_end=20090,
 )
 
 
@@ -9549,8 +9549,8 @@ _HEROATTR = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=20078,
-  serialized_end=20145,
+  serialized_start=20092,
+  serialized_end=20159,
 )
 
 
@@ -9607,8 +9607,8 @@ _RESEQUIPATTR = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=20147,
-  serialized_end=20274,
+  serialized_start=20161,
+  serialized_end=20288,
 )
 
 
@@ -9798,8 +9798,8 @@ _RESEQUIP = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=20277,
-  serialized_end=20858,
+  serialized_start=20291,
+  serialized_end=20872,
 )
 
 
@@ -9842,8 +9842,8 @@ _RESMATERIAL = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=20860,
-  serialized_end=20914,
+  serialized_start=20874,
+  serialized_end=20928,
 )
 
 
@@ -9907,8 +9907,8 @@ _RESEQUIPGROWUP = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=20917,
-  serialized_end=21080,
+  serialized_start=20931,
+  serialized_end=21094,
 )
 
 
@@ -9951,8 +9951,8 @@ _RESEQUIPWAKEUPCONDITION = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=21082,
-  serialized_end=21158,
+  serialized_start=21096,
+  serialized_end=21172,
 )
 
 
@@ -9988,8 +9988,8 @@ _RESEQUIPGROWUPCONDITION = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=21160,
-  serialized_end=21223,
+  serialized_start=21174,
+  serialized_end=21237,
 )
 
 
@@ -10067,8 +10067,8 @@ _RESEQUIPCOLOR = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=21226,
-  serialized_end=21476,
+  serialized_start=21240,
+  serialized_end=21490,
 )
 
 
@@ -10104,8 +10104,8 @@ _RESEQUIPCOLORLEVELUP = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=21478,
-  serialized_end=21533,
+  serialized_start=21492,
+  serialized_end=21547,
 )
 
 
@@ -10162,8 +10162,8 @@ _RESEQUIPCOLORLEVELATTR = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=21535,
-  serialized_end=21637,
+  serialized_start=21549,
+  serialized_end=21651,
 )
 
 
@@ -10227,8 +10227,8 @@ _CSDT_EQUIPED_INFO = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=21639,
-  serialized_end=21757,
+  serialized_start=21653,
+  serialized_end=21771,
 )
 
 
@@ -10278,8 +10278,8 @@ _RESEQUIPRECOMMEND = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=21759,
-  serialized_end=21865,
+  serialized_start=21773,
+  serialized_end=21879,
 )
 
 
@@ -10336,8 +10336,8 @@ _RESDROPELEM = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=21867,
-  serialized_end=21990,
+  serialized_start=21881,
+  serialized_end=22004,
 )
 
 
@@ -10373,8 +10373,8 @@ _RESBASEDROP = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=21992,
-  serialized_end=22055,
+  serialized_start=22006,
+  serialized_end=22069,
 )
 
 
@@ -10417,8 +10417,8 @@ _RESRETRIEVEINFO = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=22057,
-  serialized_end=22134,
+  serialized_start=22071,
+  serialized_end=22148,
 )
 
 
@@ -10447,8 +10447,8 @@ _RESPARAM = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=22136,
-  serialized_end=22165,
+  serialized_start=22150,
+  serialized_end=22179,
 )
 
 
@@ -10484,8 +10484,8 @@ _RESUSERTIPDATA = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=22167,
-  serialized_end=22212,
+  serialized_start=22181,
+  serialized_end=22226,
 )
 
 
@@ -10556,8 +10556,8 @@ _RESMAILCONTENT = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=22215,
-  serialized_end=22364,
+  serialized_start=22229,
+  serialized_end=22378,
 )
 
 
@@ -10712,8 +10712,8 @@ _RESPRIZEDRAW = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=22367,
-  serialized_end=23017,
+  serialized_start=22381,
+  serialized_end=23031,
 )
 
 
@@ -10756,8 +10756,8 @@ _RESSHOPREFRESH = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=23019,
-  serialized_end=23075,
+  serialized_start=23033,
+  serialized_end=23089,
 )
 
 
@@ -10793,8 +10793,8 @@ _RESBUYRATE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=23077,
-  serialized_end=23129,
+  serialized_start=23091,
+  serialized_end=23143,
 )
 
 
@@ -10872,8 +10872,8 @@ _RESREFRESHPRICE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=23132,
-  serialized_end=23300,
+  serialized_start=23146,
+  serialized_end=23314,
 )
 
 
@@ -10993,8 +10993,8 @@ _RESSHOPGOODS = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=23303,
-  serialized_end=23636,
+  serialized_start=23317,
+  serialized_end=23650,
 )
 
 
@@ -11030,8 +11030,8 @@ _RESSHOPRANDOMGOODSINFO = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=23638,
-  serialized_end=23707,
+  serialized_start=23652,
+  serialized_end=23721,
 )
 
 
@@ -11088,8 +11088,8 @@ _RESSHOPRANDOM = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=23710,
-  serialized_end=23851,
+  serialized_start=23724,
+  serialized_end=23865,
 )
 
 
@@ -11132,8 +11132,8 @@ _RESTUTORIALRULE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=23853,
-  serialized_end=23934,
+  serialized_start=23867,
+  serialized_end=23948,
 )
 
 
@@ -11176,8 +11176,8 @@ _RESBIBLE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=23936,
-  serialized_end=24013,
+  serialized_start=23950,
+  serialized_end=24027,
 )
 
 
@@ -11213,8 +11213,8 @@ _RESFRIENDRECOMMENDINFO = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=24015,
-  serialized_end=24066,
+  serialized_start=24029,
+  serialized_end=24080,
 )
 
 
@@ -11257,8 +11257,8 @@ _RESFRIENDRECOMMENDSECT = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=24069,
-  serialized_end=24199,
+  serialized_start=24083,
+  serialized_end=24213,
 )
 
 
@@ -11455,8 +11455,59 @@ _RESTUTORIALINFO = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=24202,
-  serialized_end=24932,
+  serialized_start=24216,
+  serialized_end=24946,
+)
+
+
+_RESHEROIMAGEINFO = _descriptor.Descriptor(
+  name='ResHeroImageInfo',
+  full_name='ResHeroImageInfo',
+  filename=None,
+  file=DESCRIPTOR,
+  containing_type=None,
+  fields=[
+    _descriptor.FieldDescriptor(
+      name='id', full_name='ResHeroImageInfo.id', index=0,
+      number=1, type=13, cpp_type=3, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    _descriptor.FieldDescriptor(
+      name='share_hero_card_offset_x', full_name='ResHeroImageInfo.share_hero_card_offset_x', index=1,
+      number=2, type=2, cpp_type=6, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    _descriptor.FieldDescriptor(
+      name='share_hero_card_offset_y', full_name='ResHeroImageInfo.share_hero_card_offset_y', index=2,
+      number=3, type=2, cpp_type=6, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    _descriptor.FieldDescriptor(
+      name='share_hero_card_scale', full_name='ResHeroImageInfo.share_hero_card_scale', index=3,
+      number=4, type=2, cpp_type=6, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+  ],
+  extensions=[
+  ],
+  nested_types=[],
+  enum_types=[
+  ],
+  options=None,
+  is_extendable=False,
+  extension_ranges=[],
+  oneofs=[
+  ],
+  serialized_start=24949,
+  serialized_end=25078,
 )
 
 
@@ -11499,8 +11550,8 @@ _ST_ACTION_DESC = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=24934,
-  serialized_end=25004,
+  serialized_start=25080,
+  serialized_end=25150,
 )
 
 
@@ -11599,8 +11650,8 @@ _ST_SHOP_GOODS_INFO = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=25007,
-  serialized_end=25270,
+  serialized_start=25153,
+  serialized_end=25416,
 )
 
 
@@ -11629,8 +11680,8 @@ _ST_SHOP_GOODS = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=25272,
-  serialized_end=25328,
+  serialized_start=25418,
+  serialized_end=25474,
 )
 
 
@@ -11673,8 +11724,8 @@ _ST_GANG_CITY_STRONG_POINT_HERO_INFO = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=25330,
-  serialized_end=25444,
+  serialized_start=25476,
+  serialized_end=25590,
 )
 
 
@@ -11710,8 +11761,8 @@ _ST_GANG_CITY_STRONG_POINT = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=25446,
-  serialized_end=25551,
+  serialized_start=25592,
+  serialized_end=25697,
 )
 
 
@@ -11754,8 +11805,8 @@ _ST_GANG_CITY_INFO = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=25553,
-  serialized_end=25659,
+  serialized_start=25699,
+  serialized_end=25805,
 )
 
 
@@ -11798,8 +11849,8 @@ _ST_GANG_CITY = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=25662,
-  serialized_end=25797,
+  serialized_start=25808,
+  serialized_end=25943,
 )
 
 
@@ -11842,8 +11893,8 @@ _ST_GANG_BATTLE_MEM_INFO = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=25799,
-  serialized_end=25898,
+  serialized_start=25945,
+  serialized_end=26044,
 )
 
 
@@ -11872,8 +11923,8 @@ _ST_GANG_BATTLE_MEM_LIST = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=25900,
-  serialized_end=25969,
+  serialized_start=26046,
+  serialized_end=26115,
 )
 
 
@@ -11909,8 +11960,8 @@ _ST_GANG_BATTLE_ATTACK_POINT_INFO = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=25971,
-  serialized_end=26050,
+  serialized_start=26117,
+  serialized_end=26196,
 )
 
 
@@ -11967,8 +12018,8 @@ _ST_GANG_BATTLE_MEM_ATTACK_INFO = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=26053,
-  serialized_end=26215,
+  serialized_start=26199,
+  serialized_end=26361,
 )
 
 
@@ -11997,8 +12048,8 @@ _ST_GANG_BATTLE_MEM_ATTACK_LIST = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=26217,
-  serialized_end=26300,
+  serialized_start=26363,
+  serialized_end=26446,
 )
 
 
@@ -12034,8 +12085,8 @@ _ST_HERO_BATTLE_EMBLEM_INFO = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=26302,
-  serialized_end=26368,
+  serialized_start=26448,
+  serialized_end=26514,
 )
 
 
@@ -12085,8 +12136,8 @@ _ST_HERO_BATTLE_EQUIP_INFO = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=26370,
-  serialized_end=26463,
+  serialized_start=26516,
+  serialized_end=26609,
 )
 
 
@@ -12171,8 +12222,8 @@ _ST_HERO_BATTLE_INFO = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=26466,
-  serialized_end=26751,
+  serialized_start=26612,
+  serialized_end=26897,
 )
 
 
@@ -12229,8 +12280,8 @@ _ST_BATTLE_ROBOT_INFO = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=26753,
-  serialized_end=26876,
+  serialized_start=26899,
+  serialized_end=27022,
 )
 
 
@@ -12301,8 +12352,8 @@ _ST_BATTLE_HERO_ATTR_INFO = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=26879,
-  serialized_end=27035,
+  serialized_start=27025,
+  serialized_end=27181,
 )
 
 _RESROLEGL.fields_by_name['init_skill_id'].message_type = _RESINITSKILL
@@ -12545,6 +12596,7 @@ DESCRIPTOR.message_types_by_name['ResBible'] = _RESBIBLE
 DESCRIPTOR.message_types_by_name['ResFriendRecommendInfo'] = _RESFRIENDRECOMMENDINFO
 DESCRIPTOR.message_types_by_name['ResFriendRecommendSect'] = _RESFRIENDRECOMMENDSECT
 DESCRIPTOR.message_types_by_name['ResTutorialInfo'] = _RESTUTORIALINFO
+DESCRIPTOR.message_types_by_name['ResHeroImageInfo'] = _RESHEROIMAGEINFO
 DESCRIPTOR.message_types_by_name['ST_ACTION_DESC'] = _ST_ACTION_DESC
 DESCRIPTOR.message_types_by_name['ST_SHOP_GOODS_INFO'] = _ST_SHOP_GOODS_INFO
 DESCRIPTOR.message_types_by_name['ST_SHOP_GOODS'] = _ST_SHOP_GOODS
@@ -13557,6 +13609,13 @@ ResTutorialInfo = _reflection.GeneratedProtocolMessageType('ResTutorialInfo', (_
   # @@protoc_insertion_point(class_scope:ResTutorialInfo)
   ))
 _sym_db.RegisterMessage(ResTutorialInfo)
+
+ResHeroImageInfo = _reflection.GeneratedProtocolMessageType('ResHeroImageInfo', (_message.Message,), dict(
+  DESCRIPTOR = _RESHEROIMAGEINFO,
+  __module__ = 'res_pb2'
+  # @@protoc_insertion_point(class_scope:ResHeroImageInfo)
+  ))
+_sym_db.RegisterMessage(ResHeroImageInfo)
 
 ST_ACTION_DESC = _reflection.GeneratedProtocolMessageType('ST_ACTION_DESC', (_message.Message,), dict(
   DESCRIPTOR = _ST_ACTION_DESC,

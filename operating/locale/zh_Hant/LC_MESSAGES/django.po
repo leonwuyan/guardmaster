@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2015-05-25 23:04+0800\n"
-"PO-Revision-Date: 2015-05-25 23:17+0800\n"
+"POT-Creation-Date: 2015-05-26 21:44+0800\n"
+"PO-Revision-Date: 2015-05-26 21:48+0800\n"
 "Last-Translator: Raynor <raynor41@gmail.com>\n"
 "Language-Team: \n"
 "Language: zh_TW\n"
@@ -93,6 +93,70 @@ msgstr "排行榜積分"
 #: templates/operating/base_info.html:20
 msgid "Times Of Growup"
 msgstr "升階次數"
+
+#: templates/operating/base_info.html:21
+msgid "Account Ban Time"
+msgstr "賬戶鎖定到期時間"
+
+#: templates/operating/base_info.html:22
+msgid "Chat Ban Time"
+msgstr "玩家禁言到期時間"
+
+#: templates/operating/base_info.html:23
+msgid "Total Recharge (VIP Level)"
+msgstr "總充值數（VIP等級）"
+
+#: templates/operating/base_info.html:24
+msgid "Add 100k"
+msgstr "增加 100k"
+
+#: templates/operating/base_info.html:25
+msgid "Add 10k"
+msgstr "增加 10k"
+
+#: templates/operating/base_info.html:26
+msgid "Kick Player"
+msgstr "踢玩家下線"
+
+#: templates/operating/base_info.html:27
+msgid "Account Ban 7 Days"
+msgstr "鎖定賬戶7天"
+
+#: templates/operating/base_info.html:28
+msgid "Account Ban 30 Days"
+msgstr "鎖定賬戶30天"
+
+#: templates/operating/base_info.html:29
+msgid "Chat Ban 7 Days"
+msgstr "禁言玩家7天"
+
+#: templates/operating/base_info.html:30
+msgid "Chat Ban 30 Days"
+msgstr "禁言玩家30天"
+
+#: templates/operating/base_info.html:31
+msgid "Un Ban"
+msgstr "解除"
+
+#: templates/operating/base_info.html:32
+msgid "Ohter Contorl"
+msgstr "其他操作"
+
+#: templates/operating/base_info.html:33
+msgid "Add 100k Exp. Items"
+msgstr "增加 100k 經驗神水"
+
+#: templates/operating/base_info.html:34
+msgid "Unlock 50 Dungeon"
+msgstr "解鎖到50關"
+
+#: templates/operating/base_info.html:35
+msgid "Unlock 100 Dungeon"
+msgstr "解鎖到100關"
+
+#: templates/operating/base_info.html:36
+msgid "Unlock 150 Dungeon"
+msgstr "解鎖到150關"
 
 #: templates/operating/building_info.html:2
 msgid "Building Info"
@@ -475,7 +539,7 @@ msgstr "排行榜名稱"
 msgid "Rank Pos"
 msgstr "排行榜位置"
 
-#: templatetags/custom.py:24
+#: templatetags/custom.py:24 templatetags/custom.py:171
 msgid "Not Time"
 msgstr "無時間"
 

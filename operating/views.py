@@ -1,5 +1,7 @@
 from detection.models import Excuse, Panel, UISubMenu, UIMainMenu, Tabel
+from django.views.decorators.http import require_http_methods
 from django.shortcuts import render, get_object_or_404
+from django.http import HttpResponse
 from detection.views import view_template
 from guardmaster import common as Common
 from operating.bbrr.api import ServerSocket
@@ -7,7 +9,7 @@ from detection.value_format import ValueFormat
 from django.http import HttpResponseRedirect
 from operating.models import Server
 from pprint import pprint
-import time
+import json
 
 # Create your views here.
 
@@ -28,18 +30,22 @@ def params_by_uid(server, uid):
     world_info = ret['world_info']
     if len(world_info) == 0:
         return None, None, None
-    world_id = filter(lambda x: x['uid'] == uid, world_info)
-    world_id = Common.first(world_id)['world_id']
-    return ss, uin, world_id
+    world_info = Common.first(filter(lambda x: x['uid'] == uid, world_info))
+    world_id = world_info['world_id']
+    return ss, uin, world_id, world_info
 
 
 def get_player_base_info(server, panel_id, uid):
-    (ss, uin, world_id) = params_by_uid(server, uid)
+    (ss, uin, world_id, world_info) = params_by_uid(server, uid)
     if ss is None:
         return None
     ret = ss.get_player_base_info(uid, world_id)
     ret['uin'] = uin
     ret['world_id'] = world_id
+    ret['world_info'] = world_info
+    recharge = ss.get_player_total_recharge(uid, world_id)
+    if recharge['result'] == 0:
+        ret['total_recharge'] = recharge['total_recharge']
     building_info = ss.get_player_building_and_package(uid, world_id)
     if building_info['result'] != 0:
         return ret
@@ -62,7 +68,7 @@ def get_player_base_info(server, panel_id, uid):
 
 
 def send_mail(server, uid, title, content):
-    (ss, uin, world_id) = params_by_uid(server, uid)
+    (ss, uin, world_id, world_info) = params_by_uid(server, uid)
     if ss is None:
         return None
     ret = ss.send_mail(
@@ -75,6 +81,54 @@ def send_mail(server, uid, title, content):
         },
         []
     )
+    return ret
+
+
+def add_attr(server, uid, type_id, res_id=46, count=100000):
+    (ss, uin, world_id, world_info) = params_by_uid(server, uid)
+    if ss is None:
+        return {'result': -1}
+    ret = ss.change_player_attr(uid, uin, world_id, type_id, res_id, count)
+    return ret
+
+
+def add_vip_level(server, uid, count=10000):
+    (ss, uin, world_id, world_info) = params_by_uid(server, uid)
+    if ss is None:
+        return {'result': -1}
+    ret = ss.change_player_vip_level(uid, world_id, count)
+    return ret
+
+
+def unlock_dungeon(server, uid, dungeon_id):
+    (ss, uin, world_id, world_info) = params_by_uid(server, uid)
+    if ss is None:
+        return {'result': -1}
+    ret = ss.change_player_unlock_dungeon(uid, uin, world_id, dungeon_id)
+    return ret
+
+
+def kick(server, uid):
+    (ss, uin, world_id, world_info) = params_by_uid(server, uid)
+    if ss is None:
+        return {'result': -1}
+    ret = ss.kick_player(uid, uin, world_id)
+    return ret
+
+
+def chat_ban(server, uid, time):
+    (ss, uin, world_id, world_info) = params_by_uid(server, uid)
+    if ss is None:
+        return {'result': -1}
+    ret = ss.ban_player_chat(uid, time, uin, world_id)
+    return ret
+
+
+def account_ban(server, uid, time):
+    (ss, uin, world_id, world_info) = params_by_uid(server, uid)
+    if ss is None:
+        return {'result': -1}
+    ret = ss.lock_player(uid, time)
     return ret
 
 
@@ -148,7 +202,7 @@ def contact_reply(request, panel_id, issue_id):
                 issue_id,
                 title,
                 content,
-                time.strftime('%Y-%m-%d %H:%M:%S', time.localtime(time.time())),
+                Common.now(),
                 request.user.username,
                 '0'
             )
@@ -157,3 +211,31 @@ def contact_reply(request, panel_id, issue_id):
     reply = Tabel.contact_reply_select(panel, issue_id)
     d['reply'] = reply
     return render(request, t, d)
+
+
+@require_http_methods(["POST"])
+@Common.competence_required
+def change_single(request, panel_id, url, type):
+    uid = int(request.POST['uid'])
+    server_id = int(request.POST['server_id'])
+    server = get_object_or_404(Server, pk=server_id)
+    ret = {}
+    if type == 'add':
+        type_id = int(request.POST['type_id'])
+        ret = add_attr(server, uid, type_id)
+    if type == 'recharge':
+        ret = add_vip_level(server, uid)
+    if type == 'dungeon':
+        dungeon_id = int(request.POST['dungeon_id'])
+        ret = unlock_dungeon(server, uid, dungeon_id)
+    if type == 'kick':
+        ret = kick(server, uid)
+    if type == 'chat_ban':
+        time = int(request.POST['time'])
+        ret = chat_ban(server, uid, time)
+    if type == 'account_ban':
+        time = int(request.POST['time'])
+        ret = account_ban(server, uid, time)
+    ret = {'result': ret['result']}
+    ret = json.dumps(ret, ensure_ascii=False)
+    return HttpResponse(ret, content_type='application/json')

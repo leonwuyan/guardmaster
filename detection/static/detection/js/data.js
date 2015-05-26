@@ -1,5 +1,23 @@
 (function () {
   var _askData = window.location.pathname;
+  var _getCookie = function getCookie(name) {
+    var cookieValue = null;
+    if (document.cookie && document.cookie != '') {
+      var cookies = document.cookie.split(';');
+      for (var i = 0; i < cookies.length; i++) {
+        var cookie = jQuery.trim(cookies[i]);
+        if (cookie.substring(0, name.length + 1) == (name + '=')) {
+          cookieValue = decodeURIComponent(cookie.substring(name.length + 1));
+          break;
+        }
+      }
+    }
+    return cookieValue;
+  };
+  var _csrfSafeMethod = function csrfSafeMethod(method) {
+    // these HTTP methods do not require CSRF protection
+    return (/^(GET|HEAD|OPTIONS|TRACE)$/.test(method));
+  };
   var _getData = function(form) {
     var tmp = {};
     $(form).each(function(idx, el) {
@@ -15,18 +33,6 @@
       	  //input isn't checkbox
       	  tmp[$(el).attr('name')] = $(el).val();
       	}
-      }
-    });
-    return tmp;
-  };
-  var _getPermission = function (modal) {
-    var tmp = {};
-    tmp['permission'] = Array();
-    $(modal).each(function(idx, el) {
-      if ($(el).attr('role') == 'permission') {
-        if ($(el).hasClass('active')) {
-          tmp['permission'].push($(el).attr('value'));
-        }
       }
     });
     return tmp;
@@ -102,137 +108,88 @@
       _buildTable(data);
       return false;
     },
-    'createEmail': function() {
-      var emailData = _getData('form [name]');
+    'addJSON': function(server_id, uid, type, type_id) {
+      if (uid == 0 || server_id == 0) {
+        return false
+      }
+      var addData = {};
+      var p = '';
+      switch (type) {
+        case 'add':
+          addData = {
+            'server_id': server_id,
+            'type_id': type_id,
+            'uid': uid
+          };
+          p = '/add.json';
+          break;
+        case 'recharge':
+          addData = {
+            'server_id': server_id,
+            'uid': uid
+          };
+          p = '/recharge.json';
+          break;
+        case 'dungeon':
+          addData = {
+            'server_id': server_id,
+            'dungeon_id': type_id,
+            'uid': uid
+          };
+          p = '/dungeon.json';
+          break;
+        case 'kick':
+          addData = {
+            'server_id': server_id,
+            'uid': uid
+          };
+          p = '/kick.json';
+          break;
+        case 'chat_ban':
+          addData = {
+            'server_id': server_id,
+            'time': type_id*24*60*60,
+            'uid': uid
+          };
+          p = '/chat_ban.json';
+          break;
+        case 'account_ban':
+          addData = {
+            'server_id': server_id,
+            'time': type_id*24*60*60,
+            'uid': uid
+          };
+          p = '/account_ban.json';
+          break;
+      }
       $.ajax({
-      	url: '/update/' + _askData,
-      	data: emailData,
-      	type: 'POST',
-      	success: function(msg){
-      	  alert( "Data Saved: " + msg );
-      	},
-      	error: function(e){
-      	  switch (e.status) {
-      	    case 401:
-      	      location.reload();
-      	      break;
-      	    default:
-      	      alert( "添加失败，请检查输入内容" );
-      	      $('button.close').click();
-      	      break;
-      	  }
-      	}
-      });
-    },
-    'createNotify': function() {
-      var notifyData = _getData('form#notifyform [name]');
-      $.ajax({
-      	url: '/update/' + _askData,
-      	data: notifyData,
-      	type: 'POST',
-      	success: function(msg){
-      	  alert( "添加成功" );
-      	  $('button.close').click();
-      	  location.reload();
-      	},
-      	error: function(e){
-      	  switch (e.status) {
-      	    case 401:
-      	      location.reload();
-      	      break;
-      	    case 405:
-      	      alert( "插入数据库失败，请联系管理员" );
-      	      $('button.close').click();
-      	      break;
-      	    default:
-      	      alert( "添加失败，请检查输入内容" );
-      	      break;
-      	  }
-      	}
-      });
-    },
-    'updatePermission': function() {
-      var permissionData = _getPermission('form [role]');
-      permissionData['userID'] = window.user_id;
-      $.ajax({
-        url: '/update/' + _askData,
-        data: permissionData,
+        url: _askData + p,
+        data: addData,
         type: 'POST',
+        beforeSend: function(xhr, settings) {
+          if (!_csrfSafeMethod(settings.type) && !this.crossDomain) {
+            xhr.setRequestHeader("X-CSRFToken", _getCookie('csrftoken'));
+          }
+        },
         success: function(msg){
-          alert( "更新权限成功！" );
-          $('#permissionList').modal('hide');
-          location.reload();
+          if (msg.result == '0'){
+            location.reload();
+            return false;
+          }
+          alert('Error Code : ' + msg.result);
         },
         error: function(e){
-      	  switch (e.status) {
-      	    case 401:
-      	      location.reload();
-      	      break;
-      	    default:
-      	      alert( "更新失败" );
-      	      $('button.close').click();
-      	      break;
-      	  }
+          switch (e.status) {
+            case 401:
+              //location.reload();
+              break;
+            default:
+              //location.reload();
+              break;
+          }
         }
       });
-    },
-    'sendButton': function(){
-      var str = "确定需要分发所有待发布的公告?";
-      var cannelstr = "取消了分发操作";
-      if (confirm(str)) {
-	$.ajax({
-          url: '/update/' + 'send' + _askData,
-          type: 'POST',
-          success: function(msg){
-            alert("分发成功！");
-	    //console.log(msg);
-            location.reload();
-          },
-          error: function(e){
-	    switch (e.status) {
-	      case 401:
-		location.reload();
-		break;
-	      default:
-		alert( "分发失败，请删除不合法的待发布公告，谢谢。" );
-		break;
-	    }
-          }
-	});
-      } else {
-	console.log(cannelstr);
-      }
-    },
-    'deleteButton': function(p) {
-      var id = p;
-      var str = "确定需要删除ID为" + id + "的内容?如果此公告已经分发过，则会撤回在对应游戏服务器上面的公告内容";
-      var cannelstr = "取消了删除ID为" + id + "内容的操作";
-      if (confirm(str)) {
-	var deleteData = {};
-	deleteData['NotifyID'] = id;
-	$.ajax({
-          url: '/update/' + 'delete' + _askData,
-          data: deleteData,
-          type: 'POST',
-          success: function(msg){
-            alert( "删除成功！" );
-	    //console.log(msg);
-            location.reload();
-          },
-          error: function(e){
-	    switch (e.status) {
-	      case 401:
-		location.reload();
-		break;
-	    default:
-		alert( "删除失败" );
-		break;
-	    }
-          }
-	});
-      } else {
-	console.log(cannelstr);
-      }
+      return false;
     }
   };
   var _queryButton = {

@@ -1,8 +1,6 @@
 from django.shortcuts import render, get_object_or_404
-from django.http import HttpResponse, Http404
+from django.http import HttpResponse
 from detection.models import Excuse, Panel, UISubMenu, UIMainMenu, Tabel
-from django.contrib.auth.decorators import login_required
-from pprint import pprint
 from guardmaster import common as Common
 from detection.value_format import ValueFormat
 import random
