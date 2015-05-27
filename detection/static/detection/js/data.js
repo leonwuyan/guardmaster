@@ -58,7 +58,8 @@
   	},
   	'autoWidth': false,
   	'scrollX': true,
-  	'destroy': true
+  	'destroy': true,
+    'order': [[0, "desc"]]
   });
     //add Emoji by every draw
     $('#sources').on('draw.dt', function () {

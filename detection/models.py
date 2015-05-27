@@ -272,9 +272,17 @@ class Tabel(object):
 
     @classmethod
     def contact_select(self, sub_menu, panel, request_get):
-        condition = None
+        condition = ()
+        if 'start' in request_get:
+            r = "opentime >= '" + request_get.get('start') + "'"
+            condition = condition + (r,)
+        if 'end' in request_get:
+            r = "opentime <= '" + request_get.get('end') + " 24:00:00'"
+            condition = condition + (r,)
         if 'hostname' in request_get:
-            condition = "hostname = '" + request_get.get('hostname') + "'"
+            r = "hostname = '" + request_get.get('hostname') + "'"
+            condition = condition + (r,)
+        condition = " AND ".join(condition)
         if 'id' in request_get:
             condition = "issueid = " + request_get.get('id')
         ret = self.select(sub_menu, panel, condition)

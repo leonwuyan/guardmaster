@@ -72,7 +72,7 @@
         <span>[{{ r.updateoper }}]</span>
         <span>{{ r.updatetime }}</span>
       </li>
-      <li class="list-group-item">&emsp;&emsp;{{ r.content }}</li>
+      <li class="list-group-item gray">&emsp;&emsp;{{ r.content }}</li>
       {% endfor %}
     </ul>
     <ul class="list-group">
@@ -95,8 +95,27 @@
     </ul>
   </div>
   {% else %}
+  <script type="text/javascript">
+   $(document).ready(function() {
+     $('.input-datepicker').datepicker({
+       format: "yyyy-mm-dd",
+       weekStart: 0,
+       language: gettext('en'),
+       autoclose: true,
+       todayHighlight: true
+     });
+   });
+  </script>
   <div class="row">
     <form class="form" role="form" id="contactForm">
+      <div class="form-group" style="margin-bottom:5px">
+        <label>{{ t_range_of_date }}</label>
+        <div class="input-daterange input-group input-datepicker" id="datepicker">
+          <input type="text" class="input-md form-control" name="start">
+          <span class="input-group-addon">{{ t_to }}</span>
+          <input type="text" class="input-md form-control" name="end">
+        </div>
+      </div>
       <div class="form-group" style="margin-bottom: 5px">
         <label>{{t_list_of_servers}}</label>
         <select class="form-control" name="hostname">
