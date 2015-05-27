@@ -207,5 +207,10 @@ LOGGING = {
             'level': 'INFO',
             'propagate': True
         },
+        'operating.singlecontrol': {
+            'handlers': ['info', 'error', 'console'],
+            'level': 'INFO',
+            'propagate': True
+        },
     }
 }
