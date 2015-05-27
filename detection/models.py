@@ -50,6 +50,8 @@ class UISubMenu(models.Model):
     # CATEGORY_LIST is related with views(views.py)
     CATEGORY_LIST = {
         ('detection:count', _('count')),
+        ('detection:count_without_time', _('count_without_time')),
+        ('detection:count_only_time', _('count_only_time')),
         ('detection:user_query', _('user_query')),
         ('detection:gang_query', _('gang_query')),
         ('detection:deal_query', _('deal_query')),
@@ -208,7 +210,38 @@ class Tabel(object):
             r = ",".join(request_get.getlist('channel_id[]'))
             r = "ChannelID IN (" + r + ")"
             condition = condition + (r,)
-        condition = " AND ".join(condition)
+        if len(condition) > 0:
+            condition = " AND ".join(condition)
+        ret = self.select(sub_menu, panel, condition)
+        return ret
+
+    @classmethod
+    def count_only_time_select(self, sub_menu, panel, request_get):
+        condition = ()
+        if 'start' in request_get:
+            r = "StDate >= '" + request_get.get('start') + "'"
+            condition = condition + (r,)
+        if 'end' in request_get:
+            r = "StDate <= '" + request_get.get('end') + " 24:00:00'"
+            condition = condition + (r,)
+        if len(condition) > 0:
+            condition = " AND ".join(condition)
+        ret = self.select(sub_menu, panel, condition)
+        return ret
+
+    @classmethod
+    def count_without_time_select(self, sub_menu, panel, request_get):
+        condition = ()
+        if 'zone_id[]' in request_get:
+            r = ",".join(request_get.getlist('zone_id[]'))
+            r = "ZoneID IN (" + r + ")"
+            condition = condition + (r,)
+        if 'channel_id[]' in request_get:
+            r = ",".join(request_get.getlist('channel_id[]'))
+            r = "ChannelID IN (" + r + ")"
+            condition = condition + (r,)
+        if len(condition) > 0:
+            condition = " AND ".join(condition)
         ret = self.select(sub_menu, panel, condition)
         return ret
 
@@ -224,7 +257,8 @@ class Tabel(object):
         if 'uid' in request_get:
             r = "UID = " + request_get.get('uid')
             condition = condition + (r,)
-        condition = " OR ".join(condition)
+        if len(condition) > 0:
+            condition = " OR ".join(condition)
         ret = self.select(sub_menu, panel, condition)
         return ret
 
@@ -240,7 +274,8 @@ class Tabel(object):
         if 'g_i' in request_get:
             r = "GangID = " + request_get.get('g_i')
             condition = condition + (r,)
-        condition = " OR ".join(condition)
+        if len(condition) > 0:
+            condition = " OR ".join(condition)
         ret = self.select(sub_menu, panel, condition)
         return ret
 
@@ -259,14 +294,16 @@ class Tabel(object):
         if 'moneye' in request_get:
             r = "money <= " + request_get.get('moneye')
             condition = condition + (r,)
-        condition = (" AND ".join(condition), )
+        if len(condition) > 0:
+            condition = (" AND ".join(condition), )
         if 'uin' in request_get:
             r = "Uin = '" + request_get.get('uin') + "'"
             condition = condition + (r,)
         if 'uid' in request_get:
             r = "UID = " + request_get.get('uid')
             condition = condition + (r,)
-        condition = " OR ".join(condition)
+        if len(condition) > 0:
+            condition = " OR ".join(condition)
         ret = self.select(sub_menu, panel, condition)
         return ret
 
@@ -282,7 +319,8 @@ class Tabel(object):
         if 'hostname' in request_get:
             r = "hostname = '" + request_get.get('hostname') + "'"
             condition = condition + (r,)
-        condition = " AND ".join(condition)
+        if len(condition) > 0:
+            condition = " AND ".join(condition)
         if 'id' in request_get:
             condition = "issueid = " + request_get.get('id')
         ret = self.select(sub_menu, panel, condition)

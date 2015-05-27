@@ -58,6 +58,10 @@ def json_template(request, panel_id, t_p, url=Common.URL):
     ret = None
     if t_p == 'count':
         ret = Tabel.count_select(sub_menu, panel, request.GET)
+    if t_p == 'count_without_time':
+        ret = Tabel.count_without_time_select(sub_menu, panel, request.GET)
+    if t_p == 'count_only_time':
+        ret = Tabel.count_only_time_select(sub_menu, panel, request.GET)
     if t_p == 'user_query':
         ret = Tabel.user_qeury_select(sub_menu, panel, request.GET)
     if t_p == 'gang_query':
@@ -77,6 +81,20 @@ def json_template(request, panel_id, t_p, url=Common.URL):
 @Common.competence_required
 def count(request, panel_id, url=Common.URL):
     t = "detection/count.html"
+    d = view_template(request, panel_id, url)
+    return render(request, t, d)
+
+
+@Common.competence_required
+def count_without_time(request, panel_id, url=Common.URL):
+    t = "detection/count_without_time.html"
+    d = view_template(request, panel_id, url)
+    return render(request, t, d)
+
+
+@Common.competence_required
+def count_only_time(request, panel_id, url=Common.URL):
+    t = "detection/count_only_time.html"
     d = view_template(request, panel_id, url)
     return render(request, t, d)
 

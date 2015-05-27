@@ -70,31 +70,63 @@
     'getJSON': function() {
       data = []
       if ($('input[name="start"]').length > 0) {
-	      var start = $('input[name="start"]').val();
-	      var end = $('input[name="end"]').val();
-	      if (start == '' || end == '') {
-	        alert('请填写起始日期和结束日期。');
-	        return false;
-	      }
-	      var data = '{"start":"' + start + '","end":"' + end + '"}';
-	      data = $.parseJSON(data);
+        var start = $('input[name="start"]').val();
+        var end = $('input[name="end"]').val();
+        if (start == '' || end == '') {
+          alert('请填写起始日期和结束日期。');
+          return false;
+        }
+        var data = '{"start":"' + start + '","end":"' + end + '"}';
+        data = $.parseJSON(data);
       }
       //channel id
       var tmp = new Array();
       $('ul#channel-list li').each(function(idx, el) {
-	      if ($(el).hasClass('active'))
-	        tmp.push($(el).attr('value'));
+        if ($(el).hasClass('active'))
+          tmp.push($(el).attr('value'));
       });
       if (tmp.length > 0) data['channel_id'] = tmp;
       tmp = new Array();
       $('ul#zone-list li').each(function(idx, el) {
-	      if ($(el).hasClass('active'))
-	        tmp.push($(el).attr('value'));
+        if ($(el).hasClass('active'))
+          tmp.push($(el).attr('value'));
       });
       if (tmp.length > 0) data['zone_id'] = tmp;
-      //theme value
-      if ($('#theme').length > 0)
-	      if ($('#theme').val().length > 0) data['theme'] = $('#theme').val();
+      //end build data
+      _buildTable(data);
+      return false;
+    },
+    'onlytimeJSON': function() {
+      data = []
+      if ($('input[name="start"]').length > 0) {
+        var start = $('input[name="start"]').val();
+        var end = $('input[name="end"]').val();
+        if (start == '' || end == '') {
+          alert('请填写起始日期和结束日期。');
+          return false;
+        }
+        var data = '{"start":"' + start + '","end":"' + end + '"}';
+        data = $.parseJSON(data);
+      }
+      //end build data
+      _buildTable(data);
+      return false;
+    },
+    'withouttimeJSON': function() {
+      data = []
+      //channel id
+      var tmp = new Array();
+      $('ul#channel-list li').each(function(idx, el) {
+        if ($(el).hasClass('active'))
+          tmp.push($(el).attr('value'));
+      });
+      if (tmp.length > 0) data['channel_id'] = tmp;
+      tmp = new Array();
+      $('ul#zone-list li').each(function(idx, el) {
+        if ($(el).hasClass('active'))
+          tmp.push($(el).attr('value'));
+      });
+      if (tmp.length > 0) data['zone_id'] = tmp;
       //end build data
       _buildTable(data);
       return false;
@@ -227,4 +259,5 @@
   window.dataAccess = _dataAccess;
   window.queryButton = _queryButton;
   window.management = _management;
+  window.getData = _getData;
 })();

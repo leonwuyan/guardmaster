@@ -22,5 +22,13 @@ urlpatterns = [
         r'^(?P<panel_id>[0-9]+)/count/(?P<url>[_A-Za-z]+)$',
         views.count,
         name='count'),
+    url(
+        r'^(?P<panel_id>[0-9]+)/count_without_time/(?P<url>[_A-Za-z]+)$',
+        views.count_without_time,
+        name='count_without_time'),
+    url(
+        r'^(?P<panel_id>[0-9]+)/count_only_time/(?P<url>[_A-Za-z]+)$',
+        views.count_only_time,
+        name='count_only_time'),
     url(r'^$', auth_views.index, name='default_index'),
 ]
