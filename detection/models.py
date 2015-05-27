@@ -198,7 +198,7 @@ class Tabel(object):
             r = "StDate >= '" + request_get.get('start') + "'"
             condition = condition + (r,)
         if 'end' in request_get:
-            r = "StDate <= '" + request_get.get('end') + "'"
+            r = "StDate <= '" + request_get.get('end') + " 24:00:00'"
             condition = condition + (r,)
         if 'zone_id[]' in request_get:
             r = ",".join(request_get.getlist('zone_id[]'))
