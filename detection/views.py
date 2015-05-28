@@ -5,6 +5,7 @@ from guardmaster import common as Common
 from detection.value_format import ValueFormat
 import random
 import json
+import decimal
 
 
 def view_init():
@@ -50,6 +51,13 @@ def view_template(request, panel_id, url):
     return data
 
 
+class DecimalJSONEncoder(json.JSONEncoder):
+    def default(self, o):
+        if isinstance(o, decimal.Decimal):
+            return str(o)
+        return super(DecimalJSONEncoder, self).default(o)
+
+
 @Common.competence_required
 def json_template(request, panel_id, t_p, url=Common.URL):
     panel = get_object_or_404(Panel, pk=panel_id)
@@ -74,7 +82,7 @@ def json_template(request, panel_id, t_p, url=Common.URL):
         ret = Tabel.count_select(sub_menu, panel, request.GET)
     ret = vf.execute(ret)
     ret = {'data': ret}
-    ret = json.dumps(ret, ensure_ascii=False)
+    ret = json.dumps(ret, ensure_ascii=False, cls=DecimalJSONEncoder)
     return HttpResponse(ret, content_type='application/json')
 
 
