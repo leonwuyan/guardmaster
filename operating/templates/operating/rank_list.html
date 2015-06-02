@@ -11,14 +11,14 @@
     <li class="list-group-item">
     {% if k.rank_id == 1 %}
       <!--<span class="label label-default">{{ t_rank_id }} :{{ k.rank_id }}</span>-->
-      <span class="label label-primary">{{ t_rank_name }} :{{ k.rank_name }}</span>
-      <span class="label label-success">{{ t_rank_pos }} :{{ k.rank_info.rank_pos }}</span>
+      <b>{{ k.rank_name }}</b>
+      <span class="label label-info">{{ t_rank_pos }} :{{ k.rank_info.rank_pos }}</span>
     {% else %}
       <!--<span class="label label-default">{{ t_rank_id }} :{{ k.rank_id }}</span>-->
-      <span class="label label-primary">{{ t_rank_name }} :{{ k.rank_name }}</span>
-      <span class="label label-success">{{ t_rank_pos }} :{{ k.rank_info.rank_pos }}</span>
-      <span class="label label-danger">{{ k.rank_id|rank_val:0 }} :{{val0.val}}</span>
-      <span class="label label-danger">{{ k.rank_id|rank_val:1 }} :{{val1.val}}</span>
+      <b>{{ k.rank_name }}</b>
+      <span class="label label-info">{{ t_rank_pos }} :{{ k.rank_info.rank_pos }}</span>
+      <span class="label label-default">{{ k.rank_id|rank_val:0 }} :{{val0.val}}</span>
+      <span class="label label-default">{{ k.rank_id|rank_val:1 }} :{{val1.val}}</span>
     {% endif %}
     </li>
     {% endwith %}
