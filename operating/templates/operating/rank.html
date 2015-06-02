@@ -39,7 +39,7 @@
         </select>
       </div>
       <div class="form-group" style="margin-bottom:5px">
-        <label>{{t_range_of_rank}} <span>({{ t_max_range_in_100 }})</span></label>
+        <label>{{t_range_of_rank}}&emsp;<span class="label label-danger">{{ t_max_range_in_100 }}</span></label>
         <div class="input-daterange input-group">
           <input type="text" class="input-md form-control" name="rank_start" value="{{ rank_start|default:1 }}">
           <span class="input-group-addon">{{t_to}}</span>
@@ -53,7 +53,7 @@
     <div class="table-responsive">
       <div class="panel panel-primary">
         <div class="panel-heading">{{ t_real_rank_info }}
-          <span class="pull-right">{{ t_total_number }} [ {{ rank.total_count}} ]</span>
+          <span class="pull-right">{{ t_total_number }}<span class="badge">{{ rank.total_count|default:0}}</span></span>
         </div>
         {% if rank.rank_id == 4 %}
         <table class="table table-striped table-condensed">

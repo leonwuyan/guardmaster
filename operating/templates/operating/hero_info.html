@@ -19,22 +19,22 @@
   {% for k in player.hero_info|dictsort:"hero_id" %}
     {% with equiped_info=player.package_data.hero_equiped_info|equiped:k.hero_id %}
     <li class="list-group-item">
-      <span>{{ t_hero_id }} :{{ k.hero_id }}</span>
-      <span>{{ t_hero_name }} :{{ k.hero_id|enum_hero:panel.id }}</span>
-      <span>{{ t_level }} :{{ k.level }}</span>
-      <span>{{ t_exp }} :{{ k.exp }}</span>
-      <span>{{ t_grow_up }} :{{ k.growup }}</span>
+      <!--<span class="label label-default">{{ t_hero_id }} :{{ k.hero_id }}</span>-->
+      <span class="label label-primary">{{ t_hero_name }} :{{ k.hero_id|enum_hero:panel.id }}</span>
+      <span class="label label-success">{{ t_level }} :{{ k.level }}</span>
+      <span class="label label-info">{{ t_exp }} :{{ k.exp }}</span>
+      <span class="label label-warning">{{ t_grow_up }} :{{ k.growup }}</span>
       {% with k.emblem_info|first as f %}
-      <span>{{ t_emblem }}
-        [<span>{{ t_id }} :{{ f.emblem_id }}</span>
+      <span class="label label-danger">{{ t_emblem }}
+        <span>{{ t_id }} :{{ f.emblem_id }}</span>
         <span>{{ t_level }} :{{ f.emblem_lv }}</span>
-        <span>{{ t_exp }} :{{ f.emblem_exp }}</span>]</span>
+        <span>{{ t_exp }} :{{ f.emblem_exp }}</span></span>
       {% endwith %}
       {% with k.emblem_info|last as f %}
-      <span>{{ t_emblem }}
-        [<span>{{ t_id }} :{{ f.emblem_id }}</span>
+      <span class="label label-danger">{{ t_emblem }}
+        <span>{{ t_id }} :{{ f.emblem_id }}</span>
         <span>{{ t_level }} :{{ f.emblem_lv }}</span>
-        <span>{{ t_exp }} :{{ f.emblem_exp }}</span>]</span>
+        <span>{{ t_exp }} :{{ f.emblem_exp }}</span></span>
       {% endwith %}
       <span class="pull-right">
         <span>{{ t_skill }} [ {{ k.skill|length }} ] </span>

@@ -73,8 +73,8 @@
       {% for r in reply %}
       <li class="list-group-item">
         <span>{{ r.title }}</span>
-        <span>[{{ r.updateoper }}]</span>
-        <span>{{ r.updatetime }}</span>
+        <span class="label label-info">{{ r.updateoper }}</span>
+        <span class="label label-default">{{ r.updatetime }}</span>
       </li>
       <li class="list-group-item"><p class="text-success">&emsp;&emsp;{{ r.content }}</p></li>
       {% endfor %}
@@ -85,11 +85,11 @@
         <form class="form" role="form" method="post" action="{% url 'operating:contact_reply' panel.id issue.issueid %}">
         {% csrf_token %}
           <div class="form-group">
-            <label for="title">{{ t_mail_title }}</label><span>&emsp;({{ t_4_words_limited }})</span>
+            <label for="title">{{ t_mail_title }}</label>&emsp;<span class="label label-danger">{{ t_4_words_limited }}</span>
             <input type="text" class="form-control" id="title" name="title">
           </div>
           <div class="form-group">
-            <label for="content">{{ t_mail_content }}</label><span>&emsp;({{ t_120_words_limited }})</span>
+            <label for="content">{{ t_mail_content }}</label>&emsp;<span class="label label-danger">{{ t_120_words_limited }}</span>
             <input type="text" class="form-control" id="content" name="content">
           </div>
           <button type="submit" class="btn btn-primary btn-sm">{{t_reply}}</button>

@@ -56,29 +56,40 @@
   {% endfor %}
   {% endwith %}
   <li class="list-group-item"><b>{{ t_dungeon_list|filter_dungeon_label:'4' }}</b>
-    {% with player.pve_info|filter_dungeon:'4'|first as v %}
-      [<span>{{ t_frequency }} :{{ v.challenge_cnt }}</span>
-      <span>{{ t_challenge_time }} :{{ v.challenge_time|ts2time }}</span>]
-    {% endwith %}
     <span class="pull-right">
       <button class="btn-xs btn btn-default" type="button" onclick="javascript:pve_show_hide_table('#pve-{{4}}')">{{ t_hero }} <span class="badge">{{ player.hero_endless_info.hero_hp|length }}</span></button>
     </span>
   </li>
   <table class="table pve table-striped table-condensed" id="pve-{{4}}" style="display: none">
+    <thead>
+      <tr>
+        <th>{{ t_hero_id }}</th>
+        <th>{{ t_hero_name }}</th>
+        <th>{{ t_hero_grow_up }}</th>
+        <th>{{ t_hero_level }}</th>
+        <th>{{ t_remain_hp }}</th>
+        <th>{{ t_max_score }}</th>
+        <th>{{ t_max_floor }}</th>
+        <th>{{ t_max_score_of_history }}</th>
+        <th>{{ t_max_floor_of_history }}</th>
+        <th>{{ t_today_enter }}</th>
+        <th>{{ t_today_wipeout }}</th>
+      </tr>
+    </thead>
     <tbody>
     {% for v in player.hero_endless_info.hero_hp %}
       <tr>
-        <td>{{ t_hero_id }} :{{ v.hero_id }}</td>
-        <td>{{ t_hero_name }} :{{ v.hero_id|enum_hero:panel.id }}</td>
-        <td>{{ t_hero_grow_up }} :{{ v.hero_grow_up }}</td>
-        <td>{{ t_hero_level }} :{{ v.hero_lv }}</td>
-        <td>{{ t_remain_hp }} :{{ v.remain_hp }}</td>
-        <td>{{ t_max_score }} :{{ v.max_score }}</td>
-        <td>{{ t_max_floor }} :{{ v.max_floor }}</td>
-        <td>{{ t_max_score_of_history }} :{{ v.max_score_ever }}</td>
-        <td>{{ t_max_floor_of_history }} :{{ v.max_floor_ever }}</td>
-        <td>{{ t_today_enter }} :{{ v.entered_today }}</td>
-        <td>{{ t_today_wipeout }} :{{ v.wipeout_today }}</td>
+        <td>{{ v.hero_id }}</td>
+        <td>{{ v.hero_id|enum_hero:panel.id }}</td>
+        <td>{{ v.hero_grow_up }}</td>
+        <td>{{ v.hero_lv }}</td>
+        <td>{{ v.remain_hp }}</td>
+        <td>{{ v.max_score }}</td>
+        <td>{{ v.max_floor }}</td>
+        <td>{{ v.max_score_ever }}</td>
+        <td>{{ v.max_floor_ever }}</td>
+        <td>{{ v.entered_today }}</td>
+        <td>{{ v.wipeout_today }}</td>
       </tr>
     {% endfor %}
     </tbody>
