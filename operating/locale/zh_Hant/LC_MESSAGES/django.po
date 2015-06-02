@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2015-05-28 16:16+0800\n"
-"PO-Revision-Date: 2015-05-26 21:48+0800\n"
+"POT-Creation-Date: 2015-06-02 14:20+0800\n"
+"PO-Revision-Date: 2015-06-02 14:24+0800\n"
 "Last-Translator: Raynor <raynor41@gmail.com>\n"
 "Language-Team: \n"
 "Language: zh_TW\n"
@@ -523,9 +523,57 @@ msgstr "今天是否挑戰"
 msgid "Today's Wipeout"
 msgstr "今天是否掃蕩"
 
-#: templates/operating/rank_list.html:2
+#: templates/operating/rank.html:4
+msgid "Real Rank Info"
+msgstr "實時排行榜信息"
+
+#: templates/operating/rank.html:5 templates/operating/rank_list.html:2
 msgid "Rank List"
 msgstr "排行榜列表"
+
+#: templates/operating/rank.html:6
+msgid "Range Of Rank"
+msgstr "排名範圍"
+
+#: templates/operating/rank.html:7
+msgid "Max Range In 100"
+msgstr "範圍相差最大為100"
+
+#: templates/operating/rank.html:8
+msgid "Total Number"
+msgstr "總數"
+
+#: templates/operating/rank.html:9 templates/operating/rank_list.html:5
+msgid "Rank Pos"
+msgstr "排行榜位置"
+
+#: templates/operating/rank.html:10
+msgid "Player ID"
+msgstr "玩家ID"
+
+#: templates/operating/rank.html:11
+msgid "Player Name"
+msgstr "玩家名"
+
+#: templates/operating/rank.html:12
+msgid "Is Robot"
+msgstr "是否為機器人"
+
+#: templates/operating/rank.html:13
+msgid "Recharge ID"
+msgstr "VIP等級"
+
+#: templates/operating/rank.html:14
+msgid "Gang ID"
+msgstr "聯盟ID"
+
+#: templates/operating/rank.html:15
+msgid "Gang Name"
+msgstr "聯盟名稱"
+
+#: templates/operating/rank.html:16
+msgid "Gang Level"
+msgstr "聯盟等級"
 
 #: templates/operating/rank_list.html:3
 msgid "Rank ID"
@@ -534,10 +582,6 @@ msgstr "排行榜ID"
 #: templates/operating/rank_list.html:4
 msgid "Rank Name"
 msgstr "排行榜名稱"
-
-#: templates/operating/rank_list.html:5
-msgid "Rank Pos"
-msgstr "排行榜位置"
 
 #: templatetags/custom.py:24 templatetags/custom.py:171
 msgid "Not Time"

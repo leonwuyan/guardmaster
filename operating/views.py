@@ -2,7 +2,8 @@ from detection.models import Excuse, Panel, UISubMenu, UIMainMenu, Tabel
 from django.views.decorators.http import require_http_methods
 from django.http import HttpResponse, HttpResponseRedirect
 from django.shortcuts import render, get_object_or_404
-from operating.singlecontrol import SingleControl
+from django.utils.translation import ugettext as _
+from operating.servercontrol import ServerControl
 from detection.value_format import ValueFormat
 from detection.views import view_template
 from guardmaster import common as Common
@@ -33,18 +34,15 @@ def single(request, panel_id, url=Common.URL):
     d = view_template(request, panel_id, url)
     panel = get_object_or_404(Panel, pk=panel_id)
     d['servers'] = panel.server_set.all()
-    if request.method == 'GET':
-        return render(request, t, d)
     if request.method == 'POST':
         server_id = int(request.POST['server'])
         uid = int(request.POST['uid'])
         server = get_object_or_404(Server, pk=server_id)
-        sc = SingleControl(server, uid, panel_id, request.user.username)
+        sc = ServerControl(server, uid, panel_id, request.user.username)
         ret = sc.base_info()
         d['player'] = ret
         d['server_id'] = server_id
         d['uid'] = uid
-        return render(request, t, d)
     return render(request, t, d)
 
 
@@ -77,7 +75,7 @@ def contact_reply(request, panel_id, issue_id):
         content = request.POST['content']
         server = get_object_or_404(Server, hostname=issue['hostname'])
         if title and len(title) < 30 and content and len(content) < 256:
-            sc = SingleControl(server, issue['uid'], panel_id, request.user.username)
+            sc = ServerControl(server, issue['uid'], panel_id, request.user.username)
             ret = sc.send_mail(title, content)
             vals = (
                 issue_id,
@@ -100,7 +98,7 @@ def change_single(request, panel_id, url, type):
     uid = int(request.POST['uid'])
     server_id = int(request.POST['server_id'])
     server = get_object_or_404(Server, pk=server_id)
-    sc = SingleControl(server, uid, panel_id, request.user.username)
+    sc = ServerControl(server, uid, panel_id, request.user.username)
     ret = {}
     second_param = 0
     if type == 'add':
@@ -125,3 +123,28 @@ def change_single(request, panel_id, url, type):
     ret = {'result': ret['result']}
     ret = json.dumps(ret, ensure_ascii=False)
     return HttpResponse(ret, content_type='application/json')
+
+
+@Common.competence_required
+def rank(request, panel_id, url=Common.URL):
+    t = "operating/rank.html"
+    d = view_template(request, panel_id, url)
+    panel = get_object_or_404(Panel, pk=panel_id)
+    d['servers'] = panel.server_set.all()
+    rank_sc = ServerControl(0, 0, panel_id, request.user.username)
+    d['ranks'] = rank_sc.ranks()
+    if request.method == 'POST':
+        server_id = int(request.POST['server'])
+        rank_id = int(request.POST['rank'])
+        rank_start = int(request.POST['rank_start'])
+        rank_end = int(request.POST['rank_end'])
+        rank_count = rank_end - rank_start + 1
+        server = get_object_or_404(Server, pk=server_id)
+        sc = ServerControl(server, 0, panel_id, request.user.username)
+        ret = sc.all_rank(rank_id, rank_start, rank_count)
+        d['rank'] = ret
+        d['server_id'] = server_id
+        d['rank_id'] = rank_id
+        d['rank_start'] = rank_start
+        d['rank_end'] = rank_end
+    return render(request, t, d)

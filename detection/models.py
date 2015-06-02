@@ -58,6 +58,7 @@ class UISubMenu(models.Model):
         ('operating:notify', _('notify')),
         ('operating:mail', _('mail')),
         ('operating:single', _('single')),
+        ('operating:rank', _('rank')),
         ('operating:contact', _('contact')),
     }
     label = models.CharField(max_length=45)

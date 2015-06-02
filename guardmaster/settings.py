@@ -120,6 +120,14 @@ DATABASES = {
         'HOST': '192.168.1.76',
         'PORT': '3307',
     },
+    'db_sszw_statdb': {
+        'ENGINE': 'django.db.backends.mysql',
+        'NAME': 'db_sszw_statdb',
+        'USER': 'act',
+        'PASSWORD': '123456',
+        'HOST': '192.168.1.76',
+        'PORT': '3308',
+    },
 }
 
 
@@ -190,6 +198,14 @@ LOGGING = {
             'backupCount': 5,
             'formatter': 'simple',
         },
+        'guardmaster': {
+            'level': 'INFO',
+            'class': 'logging.handlers.RotatingFileHandler',
+            'filename': os.path.join(BASE_DIR, 'log/guardmaster.log'),
+            'maxBytes': 1024*1024*5,
+            'backupCount': 5,
+            'formatter': 'simple',
+        },
         'console': {
             'level': 'DEBUG',
             'class': 'logging.StreamHandler',
@@ -207,8 +223,8 @@ LOGGING = {
             'level': 'INFO',
             'propagate': True
         },
-        'operating.singlecontrol': {
-            'handlers': ['info', 'error', 'console'],
+        'operating.servercontrol': {
+            'handlers': ['guardmaster', 'error', 'console'],
             'level': 'INFO',
             'propagate': True
         },

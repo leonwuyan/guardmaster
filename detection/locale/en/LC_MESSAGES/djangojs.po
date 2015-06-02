@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2015-05-05 17:35+0800\n"
+"POT-Creation-Date: 2015-06-01 16:15+0800\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -17,6 +17,30 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 
-#: static/detection/js/data.js:47
+#: static/detection/js/data.js:53
 msgid "en"
+msgstr ""
+
+#: static/detection/js/data.js:152
+msgid "Confirm Adding 100K?"
+msgstr ""
+
+#: static/detection/js/data.js:163
+msgid "Confirm Adding 10K?"
+msgstr ""
+
+#: static/detection/js/data.js:173
+msgid "Confirm Unlocking Dungeon To %(type_id)s ?"
+msgstr ""
+
+#: static/detection/js/data.js:186
+msgid "Confirm Kicking Player UID %(uid)s ?"
+msgstr ""
+
+#: static/detection/js/data.js:198
+msgid "Confirm Chat Ban Player %(type_id)s Day?"
+msgstr ""
+
+#: static/detection/js/data.js:211
+msgid "Confirm Account Ban Player %(type_id)s Day?"
 msgstr ""

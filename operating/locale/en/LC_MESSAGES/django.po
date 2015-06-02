@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2015-05-28 16:16+0800\n"
+"POT-Creation-Date: 2015-06-02 14:20+0800\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -522,8 +522,56 @@ msgstr ""
 msgid "Today's Wipeout"
 msgstr ""
 
-#: templates/operating/rank_list.html:2
+#: templates/operating/rank.html:4
+msgid "Real Rank Info"
+msgstr ""
+
+#: templates/operating/rank.html:5 templates/operating/rank_list.html:2
 msgid "Rank List"
+msgstr ""
+
+#: templates/operating/rank.html:6
+msgid "Range Of Rank"
+msgstr ""
+
+#: templates/operating/rank.html:7
+msgid "Max Range In 100"
+msgstr ""
+
+#: templates/operating/rank.html:8
+msgid "Total Number"
+msgstr ""
+
+#: templates/operating/rank.html:9 templates/operating/rank_list.html:5
+msgid "Rank Pos"
+msgstr ""
+
+#: templates/operating/rank.html:10
+msgid "Player ID"
+msgstr ""
+
+#: templates/operating/rank.html:11
+msgid "Player Name"
+msgstr ""
+
+#: templates/operating/rank.html:12
+msgid "Is Robot"
+msgstr ""
+
+#: templates/operating/rank.html:13
+msgid "Recharge ID"
+msgstr ""
+
+#: templates/operating/rank.html:14
+msgid "Gang ID"
+msgstr ""
+
+#: templates/operating/rank.html:15
+msgid "Gang Name"
+msgstr ""
+
+#: templates/operating/rank.html:16
+msgid "Gang Level"
 msgstr ""
 
 #: templates/operating/rank_list.html:3
@@ -532,10 +580,6 @@ msgstr ""
 
 #: templates/operating/rank_list.html:4
 msgid "Rank Name"
-msgstr ""
-
-#: templates/operating/rank_list.html:5
-msgid "Rank Pos"
 msgstr ""
 
 #: templatetags/custom.py:24 templatetags/custom.py:171

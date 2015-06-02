@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2015-05-05 17:35+0800\n"
-"PO-Revision-Date: 2015-05-04 16:16+0800\n"
+"POT-Creation-Date: 2015-06-01 16:15+0800\n"
+"PO-Revision-Date: 2015-06-01 16:16+0800\n"
 "Last-Translator: Raynor <raynor41@gmail.com>\n"
 "Language-Team: \n"
 "Language: zh_TW\n"
@@ -18,6 +18,30 @@ msgstr ""
 "Plural-Forms: nplurals=1; plural=0;\n"
 "X-Generator: Poedit 1.7.6\n"
 
-#: static/detection/js/data.js:47
+#: static/detection/js/data.js:53
 msgid "en"
 msgstr "zh-TW"
+
+#: static/detection/js/data.js:152
+msgid "Confirm Adding 100K?"
+msgstr "確認增加100k？"
+
+#: static/detection/js/data.js:163
+msgid "Confirm Adding 10K?"
+msgstr "確認增加10k？"
+
+#: static/detection/js/data.js:173
+msgid "Confirm Unlocking Dungeon To %(type_id)s ?"
+msgstr "確認解鎖地下城到 %(type_id)s 層?"
+
+#: static/detection/js/data.js:186
+msgid "Confirm Kicking Player UID %(uid)s ?"
+msgstr "確認踢掉玩家 UID %(uid)s 下線?"
+
+#: static/detection/js/data.js:198
+msgid "Confirm Chat Ban Player %(type_id)s Day?"
+msgstr "確認禁言玩家 %(type_id)s 天?"
+
+#: static/detection/js/data.js:211
+msgid "Confirm Account Ban Player %(type_id)s Day?"
+msgstr "確認鎖定玩家 %(type_id)s 天?"

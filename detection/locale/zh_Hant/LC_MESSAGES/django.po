@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2015-05-28 16:16+0800\n"
-"PO-Revision-Date: 2015-05-27 22:26+0800\n"
+"POT-Creation-Date: 2015-06-02 14:20+0800\n"
+"PO-Revision-Date: 2015-06-02 14:20+0800\n"
 "Last-Translator: Raynor <raynor41@gmail.com>\n"
 "Language-Team: \n"
 "Language: zh_TW\n"
@@ -55,56 +55,60 @@ msgid "single"
 msgstr "單一用戶"
 
 #: models.py:61
+msgid "rank"
+msgstr "排行榜頁面"
+
+#: models.py:62
 msgid "contact"
 msgstr "玩家聯繫客服頁面"
 
-#: models.py:71
+#: models.py:72
 msgid "Category is required when Main menu is selected"
 msgstr "Main menu選擇時，Category必須選擇"
 
-#: models.py:105
+#: models.py:106
 msgid "date"
 msgstr "日期"
 
-#: models.py:106
+#: models.py:107
 msgid "time"
 msgstr "時間"
 
-#: models.py:107
+#: models.py:108
 msgid "timestamp to date"
 msgstr "時間戳轉換日期"
 
-#: models.py:108
+#: models.py:109
 msgid "timestamp to time"
 msgstr "時間戳轉換時間"
 
-#: models.py:109
+#: models.py:110
 msgid "float two"
 msgstr "保留兩位小數"
 
-#: models.py:110
+#: models.py:111
 msgid "ratio two"
 msgstr "保留兩位小數的百分比"
 
-#: models.py:111
+#: models.py:112
 msgid "channel list"
 msgstr "渠道列表"
 
-#: models.py:112
+#: models.py:113
 msgid "zone list"
 msgstr "區服列表"
 
-#: models.py:113
+#: models.py:114
 msgid "anything to string"
 msgstr "強行轉換字符串"
 
-#: models.py:114
+#: models.py:115
 msgid "contact to reply"
 msgstr "玩家聯繫客服回覆連接"
 
 #: templates/detection/base.html:4
 msgid "BlazBlue Revolution Reburning GuardMaster Workbench"
-msgstr "蒼翼默示錄運維平台"
+msgstr "BlazBlue運維平台"
 
 #: templates/detection/base.html:5
 msgid "Range of Date"

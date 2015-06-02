@@ -23,6 +23,10 @@
 {% trans "Return List" as t_return_list %}
 <div class="container-fluid white-bg">
   {% if issue %}
+  <ol class="breadcrumb">
+    <li><a href="{{servlet}}/">{{panel.label}}</a></li>
+    <li class="active">{{ title }}</li>
+  </ol>
   <div class="panel panel-primary">
     <div class="panel-heading">{{ t_issue_info }}</div>
     <!-- Table -->
@@ -60,7 +64,7 @@
         </tr>
         <tr>
           <td><b>{{ t_issue_content }}</b></td>
-          <td colspan="3">{{ issue.issuecontent }}</td>
+          <td colspan="3"><p class="text-danger">{{ issue.issuecontent }}<p></td>
         </tr>
       </tbody>
     </table>
@@ -72,7 +76,7 @@
         <span>[{{ r.updateoper }}]</span>
         <span>{{ r.updatetime }}</span>
       </li>
-      <li class="list-group-item gray">&emsp;&emsp;{{ r.content }}</li>
+      <li class="list-group-item"><p class="text-success">&emsp;&emsp;{{ r.content }}</p></li>
       {% endfor %}
     </ul>
     <ul class="list-group">
@@ -107,6 +111,10 @@
    });
   </script>
   <div class="row">
+    <ol class="breadcrumb">
+      <li><a href="{{servlet}}/">{{panel.label}}</a></li>
+      <li class="active">{{ title }}</li>
+    </ol>
     <form class="form" role="form" id="contactForm">
       <div class="form-group" style="margin-bottom:5px">
         <label>{{ t_range_of_date }}</label>

@@ -149,6 +149,9 @@
       var p = '';
       switch (type) {
         case 'add':
+          if (!confirm(gettext('Confirm Adding 100K?'))) {
+            return false;
+          }
           addData = {
             'server_id': server_id,
             'type_id': type_id,
@@ -157,6 +160,9 @@
           p = '/add.json';
           break;
         case 'recharge':
+          if (!confirm(gettext('Confirm Adding 10K?'))) {
+            return false;
+          }
           addData = {
             'server_id': server_id,
             'uid': uid
@@ -164,6 +170,11 @@
           p = '/recharge.json';
           break;
         case 'dungeon':
+          fmts = gettext('Confirm Unlocking Dungeon To %(type_id)s ?');
+          s = interpolate(fmts, {'type_id':type_id}, true);
+          if (!confirm(s)) {
+            return false;
+          }
           addData = {
             'server_id': server_id,
             'dungeon_id': type_id,
@@ -172,6 +183,11 @@
           p = '/dungeon.json';
           break;
         case 'kick':
+          fmts = gettext('Confirm Kicking Player UID %(uid)s ?');
+          s = interpolate(fmts, {'uid':uid}, true);
+          if (!confirm(s)) {
+            return false;
+          }
           addData = {
             'server_id': server_id,
             'uid': uid
@@ -179,6 +195,11 @@
           p = '/kick.json';
           break;
         case 'chat_ban':
+          fmts = gettext('Confirm Chat Ban Player %(type_id)s Day?');
+          s = interpolate(fmts, {'type_id':type_id}, true);
+          if (!confirm(s)) {
+            return false;
+          }
           addData = {
             'server_id': server_id,
             'time': type_id*24*60*60,
@@ -187,6 +208,11 @@
           p = '/chat_ban.json';
           break;
         case 'account_ban':
+          fmts = gettext('Confirm Account Ban Player %(type_id)s Day?');
+          s = interpolate(fmts, {'type_id':type_id}, true);
+          if (!confirm(s)) {
+            return false;
+          }
           addData = {
             'server_id': server_id,
             'time': type_id*24*60*60,

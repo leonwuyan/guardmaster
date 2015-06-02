@@ -22,7 +22,7 @@
     <head>
         <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-        <title>{{ t_title }}</title>
+        <title>{{ title|default:t_title }}</title>
         <!-- scripts and styles -->
         <link rel="stylesheet" type="text/css" href="{% static 'detection/css/bootstrap.min.css' %}" />
         <link rel="stylesheet" type="text/css" href="{% static 'detection/css/bootstrap-theme.min.css' %}" />
@@ -61,7 +61,7 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <a class="navbar-brand" href="{{servlet}}/" title="点击这里，切换面板">{{panel.label|default:t_title}}</a>
+                <a class="navbar-brand" href="{{servlet}}/">{{panel.label}}</a>
             </div>
             <div class="navbar-collapse collapse">
                 <ul class="nav navbar-nav">
