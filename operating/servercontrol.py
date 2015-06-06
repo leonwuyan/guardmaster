@@ -85,7 +85,7 @@ class ServerControl(object):
         ret['rank_list'] = rank_list
         return ret
 
-    def send_mail(self, title, content):
+    def _send_mail(self, title, content, acc=[]):
         (ss, uin, world_id, world_info) = self._params()
         if ss is None:
             return None
@@ -97,9 +97,41 @@ class ServerControl(object):
                 'mail_content': content,
                 'mail_interval': 60*60*24*7,
             },
-            []
+            acc
         )
         return ret
+
+    def send_mail(self, title=None, content=None, post=None):
+        if post is None:
+            return self._send_mail(title, content)
+        title = post['title']
+        content = post['content']
+        acc = []
+        if post.get('crystal', None):
+            crystal = int(post.get('crystal'))
+            acc.append({'res_type': 1, 'res_id': 0, 'res_count': crystal})
+        if post.get('gold', None):
+            gold = int(post.get('gold'))
+            acc.append({'res_type': 2, 'res_id': 0, 'res_count': gold})
+        if post.get('money', None):
+            money = int(post.get('money'))
+            acc.append({'res_type': 3, 'res_id': 0, 'res_count': money})
+        if post.get('skillpoint', None):
+            skillpoint = int(post.get('skillpoint'))
+            acc.append({'res_type': 4, 'res_id': 0, 'res_count': skillpoint})
+        if post.get('power', None):
+            power = int(post.get('power'))
+            acc.append({'res_type': 6, 'res_id': 0, 'res_count': power})
+        if post.get('score', None):
+            score = int(post.get('score'))
+            acc.append({'res_type': 11, 'res_id': 0, 'res_count': score})
+        if len(post.getlist('acc', [])) > 0:
+            for k in post.getlist('acc'):
+                if len(acc) < 6:
+                    t = k.split("|")
+                    (a, b, c) = (int(t[0]), int(t[1]), int(t[2]))
+                    acc.append({'res_type': a, 'res_id': b, 'res_count': c})
+        return self._send_mail(title, content, acc)
 
     def add_attr(self, type_id, res_id=46, count=100000):
         (ss, uin, world_id, world_info) = self._params()

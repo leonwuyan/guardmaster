@@ -278,8 +278,28 @@
     }
   };
   var _management = {
-    'initPermission': function() {
-      _buildTable();
+    'numberOnly': function(obj) {
+      $(obj).keyup(function(){
+              $(this).val($(this).val().replace(/\D|^0/g,''));
+          }).bind("paste",function(){
+              $(this).val($(this).val().replace(/\D|^0/g,''));
+          }).css("ime-mode", "disabled");
+    },
+    'addObject': function(ul, obj, count, k) {
+      if ($(obj).val() == '-1') {
+        return false;
+      }
+      if ($(count).val() == '') {
+        return false;
+      }
+      val = $(obj).val()
+      text = $(obj).find("option:selected").text()
+      t = $(count).val()
+      html = '<li class="list-group-item"><span class="badge">'
+      html += t + '</span>'
+      html += '<input name="acc" type="hidden" value="' + k + '|' + val + '|' + t + '" />'
+      html += text + '</li>'
+      $(ul).append(html)
     }
   };
   window.dataAccess = _dataAccess;

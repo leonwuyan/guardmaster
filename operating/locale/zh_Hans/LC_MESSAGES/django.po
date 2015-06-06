@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2015-06-02 14:20+0800\n"
-"PO-Revision-Date: 2015-06-02 14:23+0800\n"
+"POT-Creation-Date: 2015-06-06 19:36+0800\n"
+"PO-Revision-Date: 2015-06-06 19:31+0800\n"
 "Last-Translator: Raynor <raynor41@gmail.com>\n"
 "Language-Team: \n"
 "Language: zh_CN\n"
@@ -42,7 +42,7 @@ msgstr "上次注销时间"
 msgid "Total Online Time"
 msgstr "总在线时间"
 
-#: templates/operating/base_info.html:8
+#: templates/operating/base_info.html:8 templates/operating/mail.html:10
 msgid "Gold"
 msgstr "金币"
 
@@ -50,7 +50,7 @@ msgstr "金币"
 msgid "Times Of Buy Gold"
 msgstr "购买金币次数"
 
-#: templates/operating/base_info.html:10
+#: templates/operating/base_info.html:10 templates/operating/mail.html:9
 msgid "Crystal"
 msgstr "魔素"
 
@@ -58,11 +58,11 @@ msgstr "魔素"
 msgid "Times Of Buy Crystal"
 msgstr "购买魔素次数"
 
-#: templates/operating/base_info.html:12
+#: templates/operating/base_info.html:12 templates/operating/mail.html:11
 msgid "Money"
 msgstr "宝石"
 
-#: templates/operating/base_info.html:13
+#: templates/operating/base_info.html:13 templates/operating/mail.html:13
 msgid "Power"
 msgstr "体力"
 
@@ -70,7 +70,7 @@ msgstr "体力"
 msgid "Times Of Buy Power"
 msgstr "购买体力次数"
 
-#: templates/operating/base_info.html:15
+#: templates/operating/base_info.html:15 templates/operating/mail.html:12
 msgid "Skill Point"
 msgstr "技能点数"
 
@@ -86,7 +86,7 @@ msgstr "无尽之塔层数"
 msgid "Endless' Score"
 msgstr "无尽之塔积分"
 
-#: templates/operating/base_info.html:19
+#: templates/operating/base_info.html:19 templates/operating/mail.html:14
 msgid "Score Of Rank Battle"
 msgstr "排位赛积分"
 
@@ -211,9 +211,9 @@ msgid "Defend Info"
 msgstr "防守信息"
 
 #: templates/operating/building_info.html:15
-#: templates/operating/hero_info.html:3 templates/operating/pve_info.html:12
-msgid "Hero ID"
-msgstr "英雄ID"
+#: templates/operating/hero_info.html:4 templates/operating/pve_info.html:13
+msgid "Hero Name"
+msgstr "英雄名称"
 
 #: templates/operating/building_info.html:16
 #: templates/operating/pve_info.html:15
@@ -320,19 +320,19 @@ msgstr "历史回复列表"
 msgid "Reply Mail"
 msgstr "邮件回复"
 
-#: templates/operating/contact.html:18
+#: templates/operating/contact.html:18 templates/operating/mail.html:4
 msgid "Mail Title"
 msgstr "邮件题目"
 
-#: templates/operating/contact.html:19
+#: templates/operating/contact.html:19 templates/operating/mail.html:5
 msgid "Mail Content"
 msgstr "邮件内容"
 
-#: templates/operating/contact.html:20
+#: templates/operating/contact.html:20 templates/operating/mail.html:6
 msgid "4 Words Limited"
 msgstr "最多可写4个文字"
 
-#: templates/operating/contact.html:21
+#: templates/operating/contact.html:21 templates/operating/mail.html:7
 msgid "120 Words Limited"
 msgstr "最多可写120个文字"
 
@@ -348,9 +348,9 @@ msgstr "返回问题列表"
 msgid "Hero Info"
 msgstr "英雄信息"
 
-#: templates/operating/hero_info.html:4 templates/operating/pve_info.html:13
-msgid "Hero Name"
-msgstr "英雄名称"
+#: templates/operating/hero_info.html:3 templates/operating/pve_info.html:12
+msgid "Hero ID"
+msgstr "英雄ID"
 
 #: templates/operating/hero_info.html:5
 msgid "Exp."
@@ -406,6 +406,50 @@ msgstr "装备名称"
 msgid "Wake Up"
 msgstr "觉醒"
 
+#: templates/operating/mail.html:8
+msgid "Accessory"
+msgstr "附件"
+
+#: templates/operating/mail.html:15 templates/operating/package_info.html:4
+msgid "Item"
+msgstr "道具"
+
+#: templates/operating/mail.html:16
+msgid "Equip"
+msgstr "装备"
+
+#: templates/operating/mail.html:17 templates/operating/package_info.html:7
+msgid "Count"
+msgstr "数量"
+
+#: templates/operating/mail.html:18
+msgid "Add"
+msgstr "添加"
+
+#: templates/operating/mail.html:19
+msgid "None"
+msgstr "无"
+
+#: templates/operating/mail.html:20
+msgid "Limited 6 Kind Of Accessory"
+msgstr "最多只能添加6种附件"
+
+#: templates/operating/mail.html:21
+msgid "Accessory Include Item And Equip"
+msgstr "附件包含物品和装备"
+
+#: templates/operating/mail.html:22
+msgid "Success"
+msgstr "成功"
+
+#: templates/operating/mail.html:23
+msgid "Please Check The Response Of Sending Mail"
+msgstr "请检查发送邮件的回执状态"
+
+#: templates/operating/mail.html:24
+msgid "Send"
+msgstr "发送"
+
 #: templates/operating/package_info.html:2
 msgid "Package & Item"
 msgstr "背包 & 道具"
@@ -414,17 +458,9 @@ msgstr "背包 & 道具"
 msgid "Package Info"
 msgstr "背包信息"
 
-#: templates/operating/package_info.html:4
-msgid "Item"
-msgstr "道具"
-
 #: templates/operating/package_info.html:5
 msgid "Package Pos"
 msgstr "背包位置"
-
-#: templates/operating/package_info.html:7
-msgid "Count"
-msgstr "数量"
 
 #: templates/operating/package_info.html:10
 msgid "Binded Hero"

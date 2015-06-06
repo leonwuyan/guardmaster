@@ -82,7 +82,7 @@
     <ul class="list-group">
       <li class="list-group-item"><b>{{ t_reply_mail }}</b></li>
       <li class="list-group-item">
-        <form class="form" role="form" method="post" action="{% url 'operating:contact_reply' panel.id issue.issueid %}">
+        <form class="form" role="form" method="post">
         {% csrf_token %}
           <div class="form-group">
             <label for="title">{{ t_mail_title }}</label>&emsp;<span class="label label-danger">{{ t_4_words_limited }}</span>

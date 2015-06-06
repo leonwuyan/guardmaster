@@ -1,5 +1,27 @@
 {% extends "detection/base.html" %}
 {% block content %}
+{% load custom i18n %}
+{% trans "Mail Title" as t_mail_title %}
+{% trans "Mail Content" as t_mail_content %}
+{% trans "4 Words Limited" as t_4_words_limited %}
+{% trans "120 Words Limited" as t_120_words_limited %}
+{% trans "Accessory" as t_accessory %}
+{% trans "Crystal" as t_crystal %}
+{% trans "Gold" as t_gold %}
+{% trans "Money" as t_money %}
+{% trans "Skill Point" as t_skill_point %}
+{% trans "Power" as t_power %}
+{% trans "Score Of Rank Battle" as t_score_of_rank_battle %}
+{% trans "Item" as t_item %}
+{% trans "Equip" as t_equip %}
+{% trans "Count" as t_count %}
+{% trans "Add" as t_add %}
+{% trans "None" as t_none %}
+{% trans "Limited 6 Kind Of Accessory" as t_limited_6_kind_of_accessory %}
+{% trans "Accessory Include Item And Equip" as t_accessory_include_item_and_equip %}
+{% trans "Success" as t_success %}
+{% trans "Please Check The Response Of Sending Mail" as t_p_c_t_r_o_s_m %}
+{% trans "Send" as t_send %}
 <div class="container-fluid white-bg">
   <div class="row">
     <ol class="breadcrumb">
@@ -7,35 +29,123 @@
       <li class="active">{{ title }}</li>
     </ol>
 
-    <form class="form" role="form">
+    {% if message %}
+      <div class="alert alert-success alert-dismissible" role="alert">
+        <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <strong>{{t_success}}!</strong>&emsp;{{t_p_c_t_r_o_s_m}}
+      </div>
+    {% endif %}
+
+    <form class="form" role="form" method="post">
+    {% csrf_token %}
       <div class="form-group" style="margin-bottom: 5px">
         <label>{{t_list_of_servers}}</label>
-        <select class="form-control">
+        <select class="form-control" name="server">
           {% for server in servers %}
           <option value="{{server.id}}">{{server.label}}</option>
           {% endfor %}
         </select>
       </div>
-
       <div class="form-group" style="margin-bottom:5px">
-      	<label>{{t_zone}}</label>
-      	<ul class="nav nav-pills" role="tablist" id="zone-list">
-      	  {% for zone in zones %}
-      	  <li role="presentation" id="zone-{{zone.EnumCd}}" value="{{zone.EnumCd}}"><a href="javascript:queryButton.active('#zone-{{zone.EnumCd}}')" style="padding: 5px 8px;">{{zone.EnumDes}}</a></li>
-      	  {% endfor %}
-      	</ul>
+        <label for="uid">{{t_player_id}}</label>
+        <input type="text" class="form-control" id="uid" name="uid" value="{{ uid|default:10001 }}">
       </div>
-
       <div class="form-group" style="margin-bottom:5px">
-      	<label>{{t_channel}}</label>
-      	<ul class="nav nav-pills" role="tablist" id="channel-list">
-      	  {% for channel in channels %}
-      	  <li role="presentation" id="channel-{{channel.EnumCd}}" value="{{channel.EnumCd}}"><a href="javascript:queryButton.active('#channel-{{channel.EnumCd}}')" style="padding: 5px 8px;">{{channel.EnumDes}}</a></li>
-      	  {% endfor %}
-      	</ul>
+        <label for="title">{{ t_mail_title }}</label>&emsp;<span class="label label-danger">{{ t_4_words_limited }}</span>
+        <input type="text" class="form-control" id="title" name="title">
       </div>
-
-      <button type="submit" class="btn btn-default btn-sm" id="count-button"onclick="return dataAccess.getJSON()">{{t_query}}</button>
+      <div class="form-group" style="margin-bottom:5px">
+        <label for="content">{{ t_mail_content }}</label>&emsp;<span class="label label-danger">{{ t_120_words_limited }}</span>
+        <input type="text" class="form-control" id="content" name="content">
+      </div>
+      <div class="form-group" style="margin-bottom:5px">
+        <label for="uid">{{t_accessory}}</label>&emsp;<span class="label label-danger">{{ t_limited_6_kind_of_accessory }}&emsp;|&emsp;{{ t_accessory_include_item_and_equip }}</span>
+        <div class="row">
+          <div class="col-md-2">
+            <div class="input-group">
+              <span class="input-group-addon" id="crystal-addon">{{t_crystal}}</span>
+              <input type="text" class="form-control" placeholder="0" aria-describedby="crystal-addon" name="crystal">
+            </div>
+          </div>
+          <div class="col-md-2">
+            <div class="input-group">
+              <span class="input-group-addon" id="gold-addon">{{t_gold}}</span>
+              <input type="text" class="form-control" placeholder="0" aria-describedby="gold-addon" name="gold">
+            </div>
+          </div>
+          <div class="col-md-2">
+            <div class="input-group">
+              <span class="input-group-addon" id="money-addon">{{t_money}}</span>
+              <input type="text" class="form-control" placeholder="0" aria-describedby="money-addon" name="money">
+            </div>
+          </div>
+          <div class="col-md-2">
+            <div class="input-group">
+              <span class="input-group-addon" id="skillpoint-addon">{{t_skill_point}}</span>
+              <input type="text" class="form-control" placeholder="0" aria-describedby="skillpoint-addon" name="skillpoint">
+            </div>
+          </div>
+          <div class="col-md-2">
+            <div class="input-group">
+              <span class="input-group-addon" id="power-addon">{{t_power}}</span>
+              <input type="text" class="form-control" placeholder="0" aria-describedby="power-addon" name="power">
+            </div>
+          </div>
+          <div class="col-md-2">
+            <div class="input-group">
+              <span class="input-group-addon" id="score-addon">{{t_score_of_rank_battle}}</span>
+              <input type="text" class="form-control" placeholder="0" aria-describedby="score-addon" name="score">
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="form-group" style="margin-bottom:5px">
+        <div class="row">
+          <div class="col-md-6">
+            <label for="uid">{{t_item}}</label>
+            <div class="form-group">
+              <div class="col-md-8">
+                <select class="form-control" id="items-select">
+                  <option value="-1" selected="selected">{{t_none}}</option>
+                  {% for item in items %}
+                  <option value="{{item.EnumCd}}">{{item.EnumCd}}&emsp;|&emsp;{{item.EnumDes}}</option>
+                  {% endfor %}
+                </select>
+              </div>
+              <div class="input-group col-md-4">
+                <span class="input-group-addon" id="item-count-addon">{{t_count}}</span>
+                <input type="text" class="form-control" placeholder="0" aria-describedby="item-count-addon" id="item-count">
+                <div class="input-group-btn">
+                  <button type="button" class="btn btn-info" onclick="management.addObject('#items', '#items-select', '#item-count', '5')">{{t_add}}</button>
+                </div>
+              </div>
+            </div>
+            <ul class="list-group" id="items"></ul>
+          </div>
+          <div class="col-md-6">
+            <label for="uid">{{t_equip}}</label>
+            <div class="form-group">
+              <div class="col-md-8">
+                <select class="form-control" id="equips-select">
+                  <option value="-1" selected="selected">{{t_none}}</option>
+                  {% for equip in equips %}
+                  <option value="{{equip.EnumCd}}">{{equip.EnumCd}}&emsp;|&emsp;{{equip.EnumDes}}</option>
+                  {% endfor %}
+                </select>
+              </div>
+              <div class="input-group col-md-4">
+                <span class="input-group-addon" id="equip-count-addon">{{t_count}}</span>
+                <input type="text" class="form-control" placeholder="0" aria-describedby="equip-count-addon" id="equip-count">
+                <div class="input-group-btn">
+                  <button type="button" class="btn btn-info" onclick="management.addObject('#equips', '#equips-select', '#equip-count', '10')">{{t_add}}</button>
+                </div>
+              </div>
+            </div>
+            <ul class="list-group" id="equips"></ul>
+          </div>
+        </div>
+      </div>
+      <button type="submit" class="btn btn-primary btn-sm">{{t_send}}</button>
     </form>
 
     <p class="sub-header"></p>
@@ -53,4 +163,17 @@
   </div>
   <center style='color: #999; padding-top: 20px; font-family: "arial","NSimSun","SimSun","STSong","AR PL SungtiL GB","TW\-Sung","WenQuanYi Bitmap Song"; font-size: 14px; font-weight: bold;'>{{excuse}}</center>
 </div>
+<script type="text/javascript">
+ $(document).ready(function() {
+  management.numberOnly("input[name='equip-count']");
+  management.numberOnly("input[name='item-count']");
+  management.numberOnly("input[name='score']");
+  management.numberOnly("input[name='power']");
+  management.numberOnly("input[name='skillpoint']");
+  management.numberOnly("input[name='money']");
+  management.numberOnly("input[name='gold']");
+  management.numberOnly("input[name='crystal']");
+  management.numberOnly("input[name='uid']");
+ });
+</script>
 {% endblock %}

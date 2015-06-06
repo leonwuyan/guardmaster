@@ -12,6 +12,18 @@ from pprint import pprint
 import json
 
 
+def enum_equip_list(panel_id):
+    if Common.E_EQUIPID_LIST is None:
+        Common.E_EQUIPID_LIST = Tabel.get_enum(panel_id, Common.E_EQUIPID)
+    return Common.E_EQUIPID_LIST
+
+
+def enum_item_list(panel_id):
+    if Common.E_ITEMNAME_LIST is None:
+        Common.E_ITEMNAME_LIST = Tabel.get_enum(panel_id, Common.E_ITEMNAME)
+    return Common.E_ITEMNAME_LIST
+
+
 @Common.competence_required
 def notify(request, panel_id, url=Common.URL):
     t = "operating/notify.html"
@@ -25,6 +37,15 @@ def mail(request, panel_id, url=Common.URL):
     d = view_template(request, panel_id, url)
     panel = get_object_or_404(Panel, pk=panel_id)
     d['servers'] = panel.server_set.all()
+    d['equips'] = enum_equip_list(panel_id)
+    d['items'] = enum_item_list(panel_id)
+    if request.method == 'POST':
+        server_id = int(request.POST['server'])
+        uid = int(request.POST['uid'])
+        server = get_object_or_404(Server, pk=server_id)
+        sc = ServerControl(server, uid, panel_id, request.user.username)
+        ret = sc.send_mail(post=request.POST)
+        d['message'] = '1'
     return render(request, t, d)
 
 
