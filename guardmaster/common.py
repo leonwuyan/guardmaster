@@ -75,6 +75,13 @@ def get_user_sub_menu(user, url):
     return sub_menu
 
 
+def get_panel_response_mail(panel):
+    servers = panel.server_set.all()
+    responsemails = map(lambda x: x.responsemail_set.all()[:20], servers)
+    responsemails = apply(chain, responsemails)
+    return responsemails
+
+
 def competence_required(function):
     def wrap(request, *args, **kwargs):
         user = request.user

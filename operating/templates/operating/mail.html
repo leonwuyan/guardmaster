@@ -22,6 +22,10 @@
 {% trans "Success" as t_success %}
 {% trans "Please Check The Response Of Sending Mail" as t_p_c_t_r_o_s_m %}
 {% trans "Send" as t_send %}
+{% trans "The Response Of Sending Mail" as t_t_r_o_s_m %}
+{% trans "GuardMaster" as t_guardmaster %}
+{% trans "Pub Date" as t_pub_date %}
+{% trans "Lastest 20 Mails By Every Server" as t_l_20_m_b_e_s %}
 <div class="container-fluid white-bg">
   <div class="row">
     <ol class="breadcrumb">
@@ -148,17 +152,36 @@
       <button type="submit" class="btn btn-primary btn-sm">{{t_send}}</button>
     </form>
 
-    <p class="sub-header"></p>
-    <div class="table-responsive">
-      <table class="table table-bordered table-striped" id="sources">
-	<thead>
-	  <tr>
-	    {% for table in table_head %}
-	    <th>{{table.label}}</th>
-	    {% endfor %}
-	  </tr>
-	</thead>
-      </table>
+    <div class="panel panel-default" style="margin-top: 50px">
+      <div class="panel-heading">{{t_t_r_o_s_m}}&emsp;<span class="label label-default">{{ t_l_20_m_b_e_s }}</span></div>
+      <div class="table-responsive">
+        <table class="table table-bordered table-striped table-condensed">
+        	<thead>
+        	  <tr>
+              <th>{{t_mail_title}}</th>
+              <th>{{t_mail_content}}</th>
+              <th>{{t_server}}</th>
+              <th>{{t_player_id}}</th>
+              <th>{{t_accessory}}</th>
+              <th>{{t_guardmaster}}</th>
+              <th>{{t_pub_date}}</th>
+        	  </tr>
+        	</thead>
+          <tbody>
+          {% for r in responsemails %}
+            <tr>
+              <td>{{r.title}}</td>
+              <td>{{r.content}}</td>
+              <td>{{r.server}}</td>
+              <td>{{r.uid}}</td>
+              <td>{{r.accessory}}</td>
+              <td>{{r.guardmaster}}</td>
+              <td>{{r.pub_date}}</td>
+            </tr>
+          {% endfor %}
+          </tbody>
+        </table>
+      </div>
     </div>
   </div>
   <center style='color: #999; padding-top: 20px; font-family: "arial","NSimSun","SimSun","STSong","AR PL SungtiL GB","TW\-Sung","WenQuanYi Bitmap Song"; font-size: 14px; font-weight: bold;'>{{excuse}}</center>

@@ -2,6 +2,8 @@ from detection.models import Excuse, Panel, UISubMenu, UIMainMenu, Tabel
 from operating.models import Server
 from guardmaster import common as Common
 from operating.bbrr.api import ServerSocket
+from operating.models import ResponseMail
+from django.utils import timezone
 import logging
 from pprint import pprint
 
@@ -13,6 +15,7 @@ class ServerControl(object):
         self.uid = uid
         self.panel_id = panel_id
         self.socketerror = {'result': -1}
+        self.success = {'result': 0}
         self.username = username
 
     def log(self, e):
@@ -131,7 +134,20 @@ class ServerControl(object):
                     t = k.split("|")
                     (a, b, c) = (int(t[0]), int(t[1]), int(t[2]))
                     acc.append({'res_type': a, 'res_id': b, 'res_count': c})
-        return self._send_mail(title, content, acc)
+        ret = self._send_mail(title, content, acc)
+        if ret == self.success:
+            r = ResponseMail(
+                    title=title,
+                    content=content,
+                    server=self.server,
+                    guardmaster=self.username,
+                    uid=self.uid,
+                    accessory=str(acc),
+                    response_id=0,
+                    pub_date=timezone.now()
+                )
+            r.save()
+        return ret
 
     def add_attr(self, type_id, res_id=46, count=100000):
         (ss, uin, world_id, world_info) = self._params()

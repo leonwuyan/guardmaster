@@ -19,3 +19,20 @@ class Server(models.Model):
 
     class Meta:
         db_table = 'config_server'
+
+
+class ResponseMail(models.Model):
+    title = models.CharField(max_length=45)
+    content = models.CharField(max_length=256)
+    server = models.ForeignKey(Server)
+    guardmaster = models.CharField(max_length=45)
+    uid = models.IntegerField()
+    accessory = models.TextField()
+    response_id = models.IntegerField()
+    pub_date = models.DateTimeField()
+
+    def __unicode__(self):
+        return self.title
+
+    class Meta:
+        ordering = ['-pub_date']

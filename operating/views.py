@@ -7,7 +7,7 @@ from operating.servercontrol import ServerControl
 from detection.value_format import ValueFormat
 from detection.views import view_template
 from guardmaster import common as Common
-from operating.models import Server
+from operating.models import Server, ResponseMail
 from pprint import pprint
 import json
 
@@ -39,6 +39,7 @@ def mail(request, panel_id, url=Common.URL):
     d['servers'] = panel.server_set.all()
     d['equips'] = enum_equip_list(panel_id)
     d['items'] = enum_item_list(panel_id)
+    d['responsemails'] = Common.get_panel_response_mail(panel)
     if request.method == 'POST':
         server_id = int(request.POST['server'])
         uid = int(request.POST['uid'])
