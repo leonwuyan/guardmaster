@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2015-06-06 19:36+0800\n"
-"PO-Revision-Date: 2015-06-06 19:37+0800\n"
+"POT-Creation-Date: 2015-06-08 15:39+0800\n"
+"PO-Revision-Date: 2015-06-08 15:39+0800\n"
 "Last-Translator: Raynor <raynor41@gmail.com>\n"
 "Language-Team: \n"
 "Language: zh_TW\n"
@@ -449,6 +449,22 @@ msgstr "請檢查發送郵件的回執狀態"
 #: templates/operating/mail.html:24
 msgid "Send"
 msgstr "發送"
+
+#: templates/operating/mail.html:25
+msgid "The Response Of Sending Mail"
+msgstr "郵件回執狀態"
+
+#: templates/operating/mail.html:26
+msgid "GuardMaster"
+msgstr "操作員"
+
+#: templates/operating/mail.html:27
+msgid "Pub Date"
+msgstr "發送日期"
+
+#: templates/operating/mail.html:28
+msgid "Lastest 20 Mails By Every Server"
+msgstr "每個服務器顯示最後20條郵件"
 
 #: templates/operating/package_info.html:2
 msgid "Package & Item"

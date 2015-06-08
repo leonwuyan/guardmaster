@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2015-06-06 19:36+0800\n"
-"PO-Revision-Date: 2015-06-06 19:31+0800\n"
+"POT-Creation-Date: 2015-06-08 15:39+0800\n"
+"PO-Revision-Date: 2015-06-08 15:40+0800\n"
 "Last-Translator: Raynor <raynor41@gmail.com>\n"
 "Language-Team: \n"
 "Language: zh_CN\n"
@@ -449,6 +449,22 @@ msgstr "请检查发送邮件的回执状态"
 #: templates/operating/mail.html:24
 msgid "Send"
 msgstr "发送"
+
+#: templates/operating/mail.html:25
+msgid "The Response Of Sending Mail"
+msgstr "邮件回执状态"
+
+#: templates/operating/mail.html:26
+msgid "GuardMaster"
+msgstr "操作员"
+
+#: templates/operating/mail.html:27
+msgid "Pub Date"
+msgstr "发送日期"
+
+#: templates/operating/mail.html:28
+msgid "Lastest 20 Mails By Every Server"
+msgstr "每个服务器显示最后20条邮件"
 
 #: templates/operating/package_info.html:2
 msgid "Package & Item"
