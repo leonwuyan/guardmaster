@@ -1,5 +1,28 @@
 {% extends "detection/base.html" %}
 {% block content %}
+{% load custom i18n %}
+{% trans "4 Words Limited" as t_4_words_limited %}
+{% trans "Notify Info" as t_notify_info %}
+{% trans "Notify Title" as t_notify_title %}
+{% trans "Notify Content" as t_notify_content %}
+{% trans "Is Display" as t_is_display %}
+{% trans "Picture Link" as t_picture_link %}
+{% trans "Hostname" as t_hostname %}
+{% trans "Channel" as t_channel %}
+{% trans "Platform" as t_platform %}
+{% trans "Zone" as t_zone %}
+{% trans "Seq ID" as t_seqid %}
+{% trans "Other Options" as t_other_options %}
+{% trans "Add" as t_add %}
+{% trans "Success" as t_success %}
+{% trans "Please Check The Notify Info" as t_p_c_t_n_i %}
+{% trans "Fail" as t_fail %}
+{% trans "Please Check The Input Is Right" as t_p_c_t_i_i_r %}
+{% trans "The Will Be DIR Notify When The Zone Is All Zone" as t_w_b_d_n_w_t_z_i_a_z %}
+{% trans "Add Notify Without Synchronization" as t_a_n_w_s %}
+{% trans "Synchronize Notify" as t_synchronize_notify %}
+{% trans "Delete" as t_delete %}
+{% trans "Operate" as t_operate %}
 <div class="container-fluid white-bg">
   <div class="row">
     <ol class="breadcrumb">
@@ -7,47 +30,147 @@
       <li class="active">{{ title }}</li>
     </ol>
 
-    <form class="form" role="form">
-
-      <div class="form-group" style="margin-bottom:5px">
-      	<label>{{t_zone}}</label>
-      	<ul class="nav nav-pills" role="tablist" id="zone-list">
-      	  {% for zone in zones %}
-      	  <li role="presentation" id="zone-{{zone.EnumCd}}" value="{{zone.EnumCd}}"><a href="javascript:queryButton.active('#zone-{{zone.EnumCd}}')" style="padding: 5px 8px;">{{zone.EnumDes}}</a></li>
-      	  {% endfor %}
-      	</ul>
+    {% if message == 1 %}
+      <div class="alert alert-success alert-dismissible" role="alert">
+        <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <strong>{{t_success}}!</strong>&emsp;{{t_p_c_t_n_i}}
       </div>
-
-      <div class="form-group" style="margin-bottom:5px">
-      	<label>{{t_channel}}</label>
-      	<ul class="nav nav-pills" role="tablist" id="channel-list">
-      	  {% for channel in channels %}
-      	  <li role="presentation" id="channel-{{channel.EnumCd}}" value="{{channel.EnumCd}}"><a href="javascript:queryButton.active('#channel-{{channel.EnumCd}}')" style="padding: 5px 8px;">{{channel.EnumDes}}</a></li>
-      	  {% endfor %}
-      	</ul>
+    {% endif %}
+    {% if message == 2 %}
+      <div class="alert alert-danger alert-dismissible" role="alert">
+        <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <strong>{{t_fail}}!</strong>&emsp;{{t_p_c_t_i_i_r}}
       </div>
+    {% endif %}
 
-      <button type="submit" class="btn btn-default btn-sm" id="count-button"onclick="return dataAccess.getJSON()">{{t_query}}</button>
+    <form class="form" role="form" method="post">
+    {% csrf_token %}
+      <div class="form-group" style="margin-bottom: 5px">
+        <label>{{t_list_of_servers}}</label>
+        <select class="form-control" name="hostname">
+          {% for server in servers %}
+          <option value="{{server.hostname}}">{{server.label}}</option>
+          {% endfor %}
+        </select>
+      </div>
+      <div class="form-group" style="margin-bottom:5px">
+        <label for="title">{{ t_notify_title }}</label>&emsp;<span class="label label-danger">{{ t_4_words_limited }}</span>
+        <input type="text" class="form-control" id="title" name="title">
+      </div>
+      <div class="form-group" style="margin-bottom:5px">
+        <label for="content">{{ t_notify_content }}</label>
+        <textarea class="form-control" id="content" name="content" rows="5"></textarea>
+      </div>
+      <div class="form-group" style="margin-bottom:5px">
+        <label for="link">{{ t_picture_link }}</label>
+        <input type="text" class="form-control" id="link" name="link">
+      </div>
+      <div class="form-group">
+        <label>{{t_other_options}}</label>&emsp;<span class="label label-danger">{{ t_w_b_d_n_w_t_z_i_a_z }}</span>
+        <div class="row">
+          <div class="col-md-3">
+            <div class="input-group">
+              <span class="input-group-addon">{{t_channel}}</span>
+              <select class="form-control" name="channel">
+                {% for channel in channels %}
+                {% if channel.EnumCd != 0 %}
+                <option value="{{channel.EnumCd}}">{{channel.EnumDes}}</option>
+                {% endif %}
+                {% endfor %}
+              </select>
+            </div>
+          </div>
+          <div class="col-md-2">
+            <div class="input-group">
+              <span class="input-group-addon">{{t_platform}}</span>
+              <select class="form-control" name="platform">
+                <option value="ios">iOS</option>
+                <option value="android">Android</option>
+              </select>
+            </div>
+          </div>
+          <div class="col-md-3">
+            <div class="input-group">
+              <span class="input-group-addon">{{t_zone}}</span>
+              <select class="form-control" name="zone">
+                {% for zone in zones %}
+                <option value="{{zone.EnumCd}}">{{zone.EnumDes}}</option>
+                {% endfor %}
+              </select>
+            </div>
+          </div>
+          <div class="col-md-2">
+            <div class="input-group">
+              <span class="input-group-addon">{{t_is_display}}</span>
+              <select class="form-control" name="is_display">
+                <option value="1">Yes</option>
+                <option value="0">No</option>
+              </select>
+            </div>
+          </div>
+          <div class="col-md-2">
+            <div class="input-group">
+              <span class="input-group-addon" id="seqid-addon">{{t_seqid}}</span>
+              <input type="text" class="form-control" value="0" aria-describedby="seqid-addon" name="seqid">
+            </div>
+          </div>
+        </div>
+      </div>
+      <button type="submit" class="btn btn-primary btn-sm">{{t_add}}</button>
+      &emsp;<span class="text-success">{{t_a_n_w_s}}</span>
     </form>
 
-    <p class="sub-header"></p>
-    <div class="table-responsive">
-      <table class="table table-bordered table-striped" id="sources">
-	<thead>
-	  <tr>
-	    {% for table in table_head %}
-	    <th>{{table.label}}</th>
-	    {% endfor %}
-	  </tr>
-	</thead>
-      </table>
+    <div class="panel panel-default" style="margin-top: 50px">
+      <div class="panel-heading">{{t_notify_info}}
+      <span class="pull-right">
+        <form  method="post">
+          {% csrf_token %}
+          <input type="hidden" value="synchronization" name="synchronization">
+          <button class="btn-xs btn btn-warning" type="submit" onclick="return dataAccess.synchronization()">{{t_synchronize_notify}}</button>
+        </form>
+      </span>
+      </div>
+      <div class="table-responsive">
+        <table class="table table-bordered table-striped table-condensed">
+          <thead>
+            <tr>
+              <th style="width: 10%">{{t_notify_title}}</th>
+              <th style="width: 35%">{{t_notify_content}}</th>
+              <th style="width: 10%">{{t_picture_link}}</th>
+              <th style="width: 10%">{{t_hostname}}</th>
+              <th style="width: 6%">{{t_channel}}</th>
+              <th style="width: 6%">{{t_platform}}</th>
+              <th style="width: 6%">{{t_zone}}</th>
+              <th style="width: 6%">{{t_is_display}}</th>
+              <th style="width: 6%">{{t_seqid}}</th>
+              <th style="width: 5%">{{t_operate}}</th>
+            </tr>
+          </thead>
+          <tbody>
+          {% for r in notifys %}
+            <tr>
+              <td>{{r.title}}</td>
+              <td>{{r.content}}</td>
+              <td>{{r.link}}</td>
+              <td>{{r.hostname}}</td>
+              <td>{{r.channel}}</td>
+              <td>{{r.platform}}</td>
+              <td>{{r.world_id}}</td>
+              <td>{{r.is_display}}</td>
+              <td>{{r.seqid}}</td>
+              <td><button class="btn-xs btn btn-danger" type="button" onclick="dataAccess.notifyJSON({{r.id}}, '{{r.title}}')">{{t_delete}}</button></td>
+            </tr>
+          {% endfor %}
+          </tbody>
+        </table>
+      </div>
     </div>
   </div>
   <center style='color: #999; padding-top: 20px; font-family: "arial","NSimSun","SimSun","STSong","AR PL SungtiL GB","TW\-Sung","WenQuanYi Bitmap Song"; font-size: 14px; font-weight: bold;'>{{excuse}}</center>
 </div>
 <script type="text/javascript">
  $(document).ready(function() {
-   queryButton.initDate();
+  management.numberOnly("input[name='seqid']");
  });
 </script>
 {% endblock %}

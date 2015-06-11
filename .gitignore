@@ -73,6 +73,3 @@ build
 
 # sqlite:
 *.sqlite3
-
-# django:
-/polls

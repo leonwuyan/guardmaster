@@ -1,4 +1,4 @@
-from detection.models import Excuse, Panel, UISubMenu, UIMainMenu, Tabel
+from detection.models import Tabel
 from operating.models import Server
 from guardmaster import common as Common
 from operating.bbrr.api import ServerSocket
@@ -107,8 +107,8 @@ class ServerControl(object):
     def send_mail(self, title=None, content=None, post=None):
         if post is None:
             return self._send_mail(title, content)
-        title = post['title']
-        content = post['content']
+        title = post.get('title', 'Title')
+        content = post.get('content', 'Content')
         acc = []
         if post.get('crystal', None):
             crystal = int(post.get('crystal'))
@@ -147,6 +147,8 @@ class ServerControl(object):
                     pub_date=timezone.now()
                 )
             r.save()
+            s = 'mail|' + str(r.id)
+            self.log(s)
         return ret
 
     def add_attr(self, type_id, res_id=46, count=100000):

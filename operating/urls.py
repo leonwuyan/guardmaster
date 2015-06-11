@@ -13,6 +13,10 @@ urlpatterns = [
         views.notify,
         name='notify'),
     url(
+        r'^(?P<panel_id>[0-9]+)/notify/(?P<id>[0-9]+)$',
+        views.delete_notify,
+        name='delete_notify'),
+    url(
         r'^(?P<panel_id>[0-9]+)/mail/(?P<url>[_A-Za-z]+)$',
         views.mail,
         name='mail'),

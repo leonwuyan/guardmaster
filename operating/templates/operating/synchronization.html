@@ -1,0 +1,36 @@
+{% extends "detection/base.html" %}
+{% block content %}
+{% load custom i18n %}
+{% trans "Notify CDN Url List" as t_notify_cdn_url_list %}
+{% trans "Copy This List To CDN Controler" as t_copy_this_list_to_cdn_controler %}
+{% trans "Return Notify List" as t_return_notify_list %}
+<div class="container-fluid white-bg">
+  <div class="row">
+    <ol class="breadcrumb">
+      <li><a href="{{servlet}}/">{{panel.label}}</a></li>
+      <li class="active">{{ title }}</li>
+    </ol>
+
+    <div class="panel panel-default" style="margin-top: 50px">
+      <div class="panel-heading">{{t_notify_cdn_url_list}}&emsp;<span class="label label-success">{{ t_copy_this_list_to_cdn_controler }}</span>
+      <span class="pull-right">
+        <a href="{% url 'operating:notify' panel.id 'notify' %}">
+          <button class="btn-xs btn btn-info" type="submit">{{t_return_notify_list}}</button>
+        </a>
+      </span></div>
+      <div class="table-responsive">
+        <table class="table table-bordered table-striped table-condensed">
+          <tbody>
+          {% for cdn_url in cdn_urls %}
+            <tr>
+              <td>{{cdn_url}}</td>
+            </tr>
+          {% endfor %}
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+  <center style='color: #999; padding-top: 20px; font-family: "arial","NSimSun","SimSun","STSong","AR PL SungtiL GB","TW\-Sung","WenQuanYi Bitmap Song"; font-size: 14px; font-weight: bold;'>{{excuse}}</center>
+</div>
+{% endblock %}

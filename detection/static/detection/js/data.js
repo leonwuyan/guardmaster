@@ -249,6 +249,48 @@
         }
       });
       return false;
+    },
+    'notifyJSON': function(id, title) {
+      fmts = gettext('Confirm To Delete This Notify %(title)s?');
+      s = interpolate(fmts, {'title':title}, true);
+      if (!confirm(s)) {
+        return false;
+      }
+      _url = _askData.substring(0, _askData.lastIndexOf('/')) + '/' + id
+      $.ajax({
+        url: _url,
+        type: 'POST',
+        beforeSend: function(xhr, settings) {
+          if (!_csrfSafeMethod(settings.type) && !this.crossDomain) {
+            xhr.setRequestHeader("X-CSRFToken", _getCookie('csrftoken'));
+          }
+        },
+        success: function(msg){
+          if (msg.result == '0'){
+            location.reload();
+            return false;
+          }
+          alert('Error Code : ' + msg.result);
+        },
+        error: function(e){
+          switch (e.status) {
+            case 401:
+              //location.reload();
+              break;
+            default:
+              //location.reload();
+              break;
+          }
+          alert('Page Error Code : ' + e.status);
+        }
+      });
+      return false;
+    },
+    'synchronization': function() {
+      s = gettext('Confirm To Synchronize All The Noitfy To The CDNServer?');
+      if (!confirm(s)) {
+        return false;
+      }
     }
   };
   var _queryButton = {
@@ -265,12 +307,18 @@
       if ($('input[name="start"]').length > 0) {
       	var d = new Date();
       	var year = d.getFullYear();
-      	var month = d.getMonth() + 1;
-      	if (month < 10) month = '0' + month;
+      	var month_start = d.getMonth();
+        if (month_start == 0) {
+          month_start = 12;
+          year -= 1;
+        }
+        var month_end = d.getMonth() + 1;
+        if (month_start < 10) month_start = '0' + month_start;
+        if (month_end < 10) month_end = '0' + month_end;
       	var day = d.getDate();
       	if (day < 10) day = '0' + day;
-      	$('input[name="start"]').val(year + '-' + month + '-01');
-      	$('input[name="end"]').val(year + '-' + month + '-' + day);
+      	$('input[name="start"]').val(year + '-' + month_start + '-01');
+      	$('input[name="end"]').val(year + '-' + month_end + '-' + day);
       }
       _queryButton.active('ul#zone-list li:first');
       _queryButton.active('ul#channel-list li:first');

@@ -4,10 +4,12 @@ from django.http import HttpResponse, HttpResponseRedirect
 from django.shortcuts import render, get_object_or_404
 from django.utils.translation import ugettext as _
 from operating.servercontrol import ServerControl
+from operating.notifydeployment import NotifyDeployment
 from detection.value_format import ValueFormat
 from detection.views import view_template
 from guardmaster import common as Common
 from operating.models import Server, ResponseMail
+from operating.models import Notify
 from pprint import pprint
 import json
 
@@ -24,11 +26,50 @@ def enum_item_list(panel_id):
     return Common.E_ITEMNAME_LIST
 
 
+def enum_channel_list(panel_id):
+    if Common.E_CHANNELID_LIST is None:
+        Common.E_CHANNELID_LIST = Tabel.get_enum(panel_id, Common.E_CHANNELID)
+    return Common.E_CHANNELID_LIST
+
+
+def enum_zone_list(panel_id):
+    if Common.E_ZONEID_LIST is None:
+        Common.E_ZONEID_LIST = Tabel.get_enum(panel_id, Common.E_ZONEID)
+    return Common.E_ZONEID_LIST
+
+
 @Common.competence_required
 def notify(request, panel_id, url=Common.URL):
+    if 'synchronization' in request.POST:
+        t = "operating/synchronization.html"
+        d = view_template(request, panel_id, url)
+        nd = NotifyDeployment(panel_id, request.user.username)
+        d['cdn_urls'] = nd.tojson()
+        return render(request, t, d)
     t = "operating/notify.html"
     d = view_template(request, panel_id, url)
+    panel = get_object_or_404(Panel, pk=panel_id)
+    d['servers'] = panel.server_set.all()
+    d['notifys'] = panel.notify_set.all()
+    d['channels'] = enum_channel_list(panel_id)
+    d['zones'] = enum_zone_list(panel_id)
+    if request.method == 'POST':
+        nd = NotifyDeployment(panel_id, request.user.username)
+        ret = nd.add(request.POST)
+        print ret
+        d['message'] = ret
     return render(request, t, d)
+
+
+@require_http_methods(["POST"])
+@Common.competence_required
+def delete_notify(request, panel_id, id):
+    notify = get_object_or_404(Notify, pk=id)
+    notify.delete()
+    ret = 0
+    ret = {'result': ret}
+    ret = json.dumps(ret, ensure_ascii=False)
+    return HttpResponse(ret, content_type='application/json')
 
 
 @Common.competence_required
