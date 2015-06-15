@@ -26,7 +26,7 @@ from pprint import pprint
 class ServerSocket(object):
     def __init__(self, ip, port):
         super(ServerSocket, self).__init__()
-        self.pkg_head_length = 76
+        self.pkg_head_length = 32
         self.ip = ip
         self.port = port
         self.empty = {'result': 3}
@@ -63,7 +63,7 @@ class ServerSocket(object):
         type_h = socket.htonl(phash)
         seq_no = socket.htonl(0)
         pkg = ('DD', length, uid, type_h, seq_no, data)
-        st = struct.Struct('60sIIII' + str(len(data)) + 's')
+        st = struct.Struct('16sIIII' + str(len(data)) + 's')
 
         pkg_data = st.pack(*pkg)
         un_pkg_data = st.unpack(pkg_data)
@@ -77,7 +77,7 @@ class ServerSocket(object):
         return body
 
     def parse_pkg_head(self, data):
-        st = struct.Struct('60sIIII')
+        st = struct.Struct('16sIIII')
         head = st.unpack(data)
         head_safe = (
             head[0],
