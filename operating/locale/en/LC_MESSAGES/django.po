@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2015-06-11 21:19+0800\n"
+"POT-Creation-Date: 2015-06-18 23:15+0800\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -113,47 +113,56 @@ msgstr ""
 msgid "Add 10k"
 msgstr ""
 
-#: templates/operating/base_info.html:26
-msgid "Kick Player"
+#: templates/operating/base_info.html:26 templates/operating/mail.html:18
+#: templates/operating/notify.html:16
+msgid "Add"
 msgstr ""
 
 #: templates/operating/base_info.html:27
-msgid "Account Ban 7 Days"
+msgid "Change"
 msgstr ""
 
 #: templates/operating/base_info.html:28
-msgid "Account Ban 30 Days"
+msgid "Kick Player"
 msgstr ""
 
 #: templates/operating/base_info.html:29
-msgid "Chat Ban 7 Days"
+msgid "Account Ban 7 Days"
 msgstr ""
 
 #: templates/operating/base_info.html:30
-msgid "Chat Ban 30 Days"
+msgid "Account Ban 30 Days"
 msgstr ""
 
 #: templates/operating/base_info.html:31
-msgid "Un Ban"
+msgid "Chat Ban 7 Days"
 msgstr ""
 
 #: templates/operating/base_info.html:32
-msgid "Ohter Contorl"
+msgid "Chat Ban 30 Days"
 msgstr ""
 
 #: templates/operating/base_info.html:33
-msgid "Add 100k Exp. Items"
+msgid "Un Ban"
 msgstr ""
 
 #: templates/operating/base_info.html:34
-msgid "Unlock 50 Dungeon"
+msgid "Ohter Contorl"
 msgstr ""
 
 #: templates/operating/base_info.html:35
-msgid "Unlock 100 Dungeon"
+msgid "Add 100k Exp. Items"
 msgstr ""
 
 #: templates/operating/base_info.html:36
+msgid "Unlock 50 Dungeon"
+msgstr ""
+
+#: templates/operating/base_info.html:37
+msgid "Unlock 100 Dungeon"
+msgstr ""
+
+#: templates/operating/base_info.html:38
 msgid "Unlock 150 Dungeon"
 msgstr ""
 
@@ -420,10 +429,6 @@ msgstr ""
 
 #: templates/operating/mail.html:17 templates/operating/package_info.html:7
 msgid "Count"
-msgstr ""
-
-#: templates/operating/mail.html:18 templates/operating/notify.html:16
-msgid "Add"
 msgstr ""
 
 #: templates/operating/mail.html:19

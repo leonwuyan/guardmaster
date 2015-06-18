@@ -1,6 +1,7 @@
 from django.utils.translation import ugettext as _
+from django.shortcuts import get_object_or_404
 from django.core.urlresolvers import reverse
-from detection.models import Tabel
+from detection.models import Tabel, Panel
 from guardmaster import common as Common
 from datetime import date, datetime
 import logging
@@ -63,6 +64,11 @@ class ValueFormat(object):
         reply = _("reply")
         button = "<a href='" + url + "'>" + reply + "</a>"
         return button
+
+    def _ip_to_server(self, x):
+        panel = get_object_or_404(Panel, pk=self.panel_id)
+        Server = panel.server_set.get(ip=x)
+        return Server.label
 
     def _f_v(self, f, v):
         if f is None:

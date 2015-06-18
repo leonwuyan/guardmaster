@@ -49,7 +49,7 @@ class UIMainMenuAdmin(admin.ModelAdmin):
 
 
 class PanelAdmin(admin.ModelAdmin):
-    list_display = ('label', 'groups_list', 'db_aliases')
+    list_display = ('label', 'groups_list', 'db_aliases', 'symbol')
     search_fields = ['label']
     list_filter = ['groups']
 

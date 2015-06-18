@@ -3,6 +3,7 @@ from django.http import HttpResponse
 from detection.models import Excuse, Panel, UISubMenu, UIMainMenu, Tabel
 from guardmaster import common as Common
 from detection.value_format import ValueFormat
+import subprocess
 import random
 import json
 import decimal
@@ -22,6 +23,32 @@ def view_init():
     Common.E_ROLEID_LIST = None
     Common.E_SKILLID_LIST = None
     Common.E_ZONEID_LIST = None
+
+
+def sh_remote_log(panel, request_get):
+    if 'start' not in request_get:
+        return
+    if 'end' not in request_get:
+        return
+    if 'server' not in request_get:
+        return
+    if 'uid' not in request_get:
+        return
+    path = '/root/bbc_statdb/tools/shells/'
+    server = panel.server_set.get(ip=request_get.get('server'))
+    cmd = [
+        './remote_getuidlog.sh',
+        panel.symbol,
+        request_get.get('server'),
+        server.home,
+        server.user,
+        request_get.get('start'),
+        request_get.get('end'),
+        request_get.get('uid')
+    ]
+    cmd = ' '.join(cmd)
+    s = subprocess.Popen(cmd, shell=True, cwd=path)
+    s.wait()
 
 
 def view_template(request, panel_id, url):
@@ -76,6 +103,9 @@ def json_template(request, panel_id, t_p, url=Common.URL):
         ret = Tabel.gang_qeury_select(sub_menu, panel, request.GET)
     if t_p == 'deal_query':
         ret = Tabel.deal_query_select(sub_menu, panel, request.GET)
+    if t_p == 'history_query':
+        sh_remote_log(panel, request.GET)
+        ret = Tabel.history_query_select(sub_menu, panel, request.GET)
     if t_p == 'contact':
         ret = Tabel.contact_select(sub_menu, panel, request.GET)
     if ret is None:
@@ -125,4 +155,13 @@ def gang_query(request, panel_id, url=Common.URL):
 def deal_query(request, panel_id, url=Common.URL):
     t = "detection/deal_query.html"
     d = view_template(request, panel_id, url)
+    return render(request, t, d)
+
+
+@Common.competence_required
+def history_query(request, panel_id, url=Common.URL):
+    t = "detection/history_query.html"
+    d = view_template(request, panel_id, url)
+    panel = get_object_or_404(Panel, pk=panel_id)
+    d['servers'] = panel.server_set.all()
     return render(request, t, d)

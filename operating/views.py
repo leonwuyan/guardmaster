@@ -56,7 +56,6 @@ def notify(request, panel_id, url=Common.URL):
     if request.method == 'POST':
         nd = NotifyDeployment(panel_id, request.user.username)
         ret = nd.add(request.POST)
-        print ret
         d['message'] = ret
     return render(request, t, d)
 
@@ -146,7 +145,7 @@ def contact_reply(request, panel_id, issue_id):
                 content,
                 Common.now(),
                 request.user.username,
-                '0'
+                Common.first(ret['sucess_result'])['mail_id']
             )
             if ret['result'] == 0:
                 Tabel.contact_insert(panel, vals)
@@ -165,10 +164,12 @@ def change_single(request, panel_id, url, type):
     ret = {}
     second_param = 0
     if type == 'add':
-        second_param = int(request.POST['type_id'])
-        ret = sc.add_attr(second_param)
+        type_id = int(request.POST['type_id'])
+        count = int(request.POST['count'])
+        ret = sc.add_attr(type_id=type_id, count=count)
     if type == 'recharge':
-        ret = sc.add_vip_level()
+        count = int(request.POST['count'])
+        ret = sc.add_vip_level(count)
     if type == 'dungeon':
         second_param = int(request.POST['dungeon_id'])
         ret = sc.unlock_dungeon(second_param)

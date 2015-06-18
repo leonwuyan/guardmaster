@@ -46,7 +46,7 @@ class ServerSocket(object):
 
     def res(self, pb):
         p = pb.__class__.__name__
-        if p == 'int' or p == 'unicode' or p == 'bool':
+        if p == 'int' or p == 'unicode' or p == 'bool' or p == 'long':
             return pb
         if p == 'RepeatedCompositeFieldContainer':
             return map(lambda x: self.res(x), pb)
@@ -265,7 +265,9 @@ class ServerSocket(object):
         if pb.__class__ is dict:
             return self.timeout
         if len(pb.failed_uid) == 0:
-            return self.success
+            ret = self.success
+            ret['sucess_result'] = self.res(pb.sucess_result)
+            return ret
         return {'result': 1, 'failed_uid': self.res(pb.failed_uid)}
 
     def change_player_attr(self, uid, uin, world_id, res_type, res_id, chg_count):

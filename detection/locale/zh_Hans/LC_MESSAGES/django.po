@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2015-06-11 21:19+0800\n"
-"PO-Revision-Date: 2015-06-02 14:20+0800\n"
+"POT-Creation-Date: 2015-06-18 23:16+0800\n"
+"PO-Revision-Date: 2015-06-18 23:16+0800\n"
 "Last-Translator: Raynor <raynor41@gmail.com>\n"
 "Language-Team: \n"
 "Language: zh_CN\n"
@@ -43,68 +43,76 @@ msgid "deal_query"
 msgstr "充值查询页面"
 
 #: models.py:58
+msgid "history_query"
+msgstr "历程查询页面"
+
+#: models.py:59
 msgid "notify"
 msgstr "系统公告页面"
 
-#: models.py:59
+#: models.py:60
 msgid "mail"
 msgstr "系统邮件页面"
 
-#: models.py:60
+#: models.py:61
 msgid "single"
 msgstr "单一用户"
 
-#: models.py:61
+#: models.py:62
 msgid "rank"
 msgstr "排行榜页面"
 
-#: models.py:62
+#: models.py:63
 msgid "contact"
 msgstr "玩家联系客服页面"
 
-#: models.py:72
+#: models.py:73
 msgid "Category is required when Main menu is selected"
 msgstr "Main menu选择时，Category必须选择"
 
-#: models.py:106
+#: models.py:107
 msgid "date"
 msgstr "日期"
 
-#: models.py:107
+#: models.py:108
 msgid "time"
 msgstr "时间"
 
-#: models.py:108
+#: models.py:109
 msgid "timestamp to date"
 msgstr "时间戳转换日期"
 
-#: models.py:109
+#: models.py:110
 msgid "timestamp to time"
 msgstr "时间戳转换时间"
 
-#: models.py:110
+#: models.py:111
 msgid "float two"
 msgstr "保留两位小数"
 
-#: models.py:111
+#: models.py:112
 msgid "ratio two"
 msgstr "保留两位小数的百分比"
 
-#: models.py:112
+#: models.py:113
 msgid "channel list"
 msgstr "渠道列表"
 
-#: models.py:113
+#: models.py:114
 msgid "zone list"
 msgstr "区服列表"
 
-#: models.py:114
+#: models.py:115
 msgid "anything to string"
 msgstr "强行转换字符串"
 
-#: models.py:115
+#: models.py:116
 msgid "contact to reply"
 msgstr "玩家联系客服回复连接"
+
+#: models.py:117
+msgid "ip to server"
+msgstr "IP地址转换DIR大区"
 
 #: templates/detection/base.html:4
 msgid "BlazBlue Revolution Reburning GuardMaster Workbench"
@@ -174,7 +182,7 @@ msgstr "服务器列表"
 msgid "Choose The Panel"
 msgstr "请选择游戏面板"
 
-#: value_format.py:63
+#: value_format.py:64
 msgid "reply"
 msgstr "回复"
 

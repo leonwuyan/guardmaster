@@ -13,6 +13,7 @@ class Server(models.Model):
     port = models.IntegerField()
     hostname = models.CharField(max_length=45)
     home = models.CharField(max_length=60)
+    user = models.CharField(max_length=45)
 
     def __unicode__(self):
         return self.label
@@ -44,7 +45,7 @@ class ResponseMail(models.Model):
     guardmaster = models.CharField(max_length=45)
     uid = models.IntegerField()
     accessory = models.TextField()
-    response_id = models.IntegerField()
+    response_id = models.BigIntegerField()
     pub_date = models.DateTimeField()
 
     def __unicode__(self):

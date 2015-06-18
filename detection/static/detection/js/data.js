@@ -132,7 +132,7 @@
       return false;
     },
     'queryJSON': function() {
-      var data = _getData('form#queryForm input[type="text"]');
+      var data = _getData('form#queryForm [name]');
       _buildTable(data);
       return false;
     },
@@ -149,22 +149,34 @@
       var p = '';
       switch (type) {
         case 'add':
-          if (!confirm(gettext('Confirm Adding 100K?'))) {
+          iname = type + type_id;
+          count = $('input[name='+iname+']').val() || 100000;
+          $('input[name='+iname+']').val(count);
+          fmts = gettext('Confirm Adding %(count)s ?');
+          s = interpolate(fmts, {'count':count}, true);
+          if (!confirm(s)) {
             return false;
           }
           addData = {
             'server_id': server_id,
             'type_id': type_id,
+            'count': count,
             'uid': uid
           };
           p = '/add.json';
           break;
         case 'recharge':
-          if (!confirm(gettext('Confirm Adding 10K?'))) {
+          iname = type + type_id;
+          count = $('input[name='+iname+']').val() || 10000;
+          $('input[name='+iname+']').val(count);
+          fmts = gettext('Confirm Change To %(count)s ?');
+          s = interpolate(fmts, {'count':count}, true);
+          if (!confirm(s)) {
             return false;
           }
           addData = {
             'server_id': server_id,
+            'count': count,
             'uid': uid
           };
           p = '/recharge.json';

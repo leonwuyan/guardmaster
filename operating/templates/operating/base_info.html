@@ -23,6 +23,8 @@
 {% trans "Total Recharge (VIP Level)" as t_total_recharge_vip_level %}
 {% trans "Add 100k" as t_add_100k %}
 {% trans "Add 10k" as t_add_10k %}
+{% trans "Add" as t_add %}
+{% trans "Change" as t_change %}
 {% trans "Kick Player" as t_kick_player %}
 {% trans "Account Ban 7 Days" as t_account_ban_7_days %}
 {% trans "Account Ban 30 Days" as t_account_ban_30_days %}
@@ -41,94 +43,101 @@
     <tbody>
       <tr>
         <td><b>{{ t_player_name }}</b></td>
-        <td>{{ player.name }}</td>
+        <td colspan="2">{{ player.name }}</td>
         <td><b>{{ t_player_id }}</b></td>
         <td>{{ player.uid }}</td>
       </tr>
       <tr>
         <td><b>{{ t_user_id }}</b></td>
-        <td>{{ player.uin }}</td>
+        <td colspan="2">{{ player.uin }}</td>
         <td><b>{{ t_zone }}</b></td>
         <td>{{ player.world_id }}</td>
       </tr>
       <tr>
         <td><b>{{ t_create_time }}</b></td>
-        <td>{{ player.create_time|ts2time|default_if_none:"" }}</td>
+        <td colspan="2">{{ player.create_time|ts2time|default_if_none:"" }}</td>
         <td><b>{{ t_total_online_time }}</b></td>
         <td>{{ player.total_online_time|second2time }}</td>
       </tr>
       <tr>
         <td><b>{{ t_last_login_time }}</b></td>
-        <td>{{ player.last_login_time|ts2time|default_if_none:"" }}</td>
+        <td colspan="2">{{ player.last_login_time|ts2time|default_if_none:"" }}</td>
         <td><b>{{ t_last_logout_time }}</b></td>
         <td>{{ player.last_logout_time|ts2time|default_if_none:"" }}</td>
       </tr>
       <tr>
         <td><b>{{ t_gold }}</b></td>
-        <td>{{ player.gold_cnt }}
-          <span class="pull-right">
-          <button type="submit" class="btn btn-default btn-xs" onclick="dataAccess.addJSON({{server_id}},{{player.uid|default:0}},'add',2)">{{t_add_100k}}</button></span>
+        <td>{{ player.gold_cnt }}</td>
+        <td width="150px">
+          <input type="text" style="width: 80px;" value="100000" name="add2">
+          <button type="submit" class="btn btn-default btn-xs" onclick="dataAccess.addJSON({{server_id}},{{player.uid|default:0}},'add',2)">{{t_add}}</button>
         </td>
         <td><b>{{ t_times_of_buy_gold }}</b></td>
         <td>{{ player.gold_buy_times }}</td>
       </tr>
       <tr>
         <td><b>{{ t_crystal }}</b></td>
-        <td>{{ player.crystal_cnt }}
-          <span class="pull-right">
-          <button type="submit" class="btn btn-default btn-xs" onclick="dataAccess.addJSON({{server_id}},{{player.uid|default:0}},'add',1)">{{t_add_100k}}</button></span>
+        <td>{{ player.crystal_cnt }}</td>
+        <td>
+          <input type="text" style="width: 80px;" value="100000" name="add1">
+          <button type="submit" class="btn btn-default btn-xs" onclick="dataAccess.addJSON({{server_id}},{{player.uid|default:0}},'add',1)">{{t_add}}</button>
         </td>
         <td><b>{{ t_times_of_buy_crystal }}</b></td>
         <td>{{ player.crystal_buy_times }}</td>
       </tr>
       <tr>
         <td><b>{{ t_power }}</b></td>
-        <td>{{ player.power_cnt }}
-          <span class="pull-right">
-          <button type="submit" class="btn btn-default btn-xs" onclick="dataAccess.addJSON({{server_id}},{{player.uid|default:0}},'add',6)">{{t_add_100k}}</button></span>
+        <td>{{ player.power_cnt }}</td>
+        <td>
+          <input type="text" style="width: 80px;" value="100000" name="add6">
+          <button type="submit" class="btn btn-default btn-xs" onclick="dataAccess.addJSON({{server_id}},{{player.uid|default:0}},'add',6)">{{t_add}}</button>
         </td>
         <td><b>{{ t_times_of_buy_power }}</b></td>
         <td>{{ player.power_buy_times }}</td>
       </tr>
       <tr>
         <td><b>{{ t_skill_point }}</b></td>
-        <td>{{ player.skillpoint_cnt }}
-          <span class="pull-right">
-          <button type="submit" class="btn btn-default btn-xs" onclick="dataAccess.addJSON({{server_id}},{{player.uid|default:0}},'add',4)">{{t_add_100k}}</button></span>
+        <td>{{ player.skillpoint_cnt }}</td>
+        <td>
+          <input type="text" style="width: 80px;" value="100000" name="add4">
+          <button type="submit" class="btn btn-default btn-xs" onclick="dataAccess.addJSON({{server_id}},{{player.uid|default:0}},'add',4)">{{t_add}}</button>
         </td>
         <td><b>{{ t_times_of_buy_skill_point }}</b></td>
         <td>{{ player.skillpoint_buy_times }}</td>
       </tr>
       <tr>
         <td><b>{{ t_money }}</b></td>
-        <td>{{ player.money_cnt }}
-          <span class="pull-right">
-          <button type="submit" class="btn btn-default btn-xs" onclick="dataAccess.addJSON({{server_id}},{{player.uid|default:0}},'add',3)">{{t_add_100k}}</button></span>
+        <td>{{ player.money_cnt }}</td>
+        <td>
+          <input type="text" style="width: 80px;" value="100000" name="add3">
+          <button type="submit" class="btn btn-default btn-xs" onclick="dataAccess.addJSON({{server_id}},{{player.uid|default:0}},'add',3)">{{t_add}}</button>
         </td>
         <td><b>{{ t_times_of_growup }}</b></td>
         <td>{{ player.growup_cnt }}</td>
       </tr>
       <tr>
         <td><b>{{ t_score_of_rank_battle }}</b></td>
-        <td>{{ player.rank_battle_score }}
-          <span class="pull-right">
-          <button type="submit" class="btn btn-default btn-xs" onclick="dataAccess.addJSON({{server_id}},{{player.uid|default:0}},'add',11)">{{t_add_100k}}</button></span>
+        <td>{{ player.rank_battle_score }}</td>
+        <td>
+          <input type="text" style="width: 80px;" value="100000" name="add11">
+          <button type="submit" class="btn btn-default btn-xs" onclick="dataAccess.addJSON({{server_id}},{{player.uid|default:0}},'add',11)">{{t_add}}</button>
         </td>
         <td><b>{{ t_endless_score }}</b></td>
         <td>{{ player.endless_score }}</td>
       </tr>
       <tr>
         <td><b>{{ t_total_recharge_vip_level }}</b></td>
-        <td>{{ player.total_recharge }}
-          <span class="pull-right">
-          <button type="submit" class="btn btn-default btn-xs" onclick="dataAccess.addJSON({{server_id}},{{player.uid|default:0}},'recharge',0)">{{t_add_10k}}</button></span>
+        <td>{{ player.total_recharge }}</td>
+        <td>
+          <input type="text" style="width: 80px;" value="10000" name="recharge0">
+          <button type="submit" class="btn btn-default btn-xs" onclick="dataAccess.addJSON({{server_id}},{{player.uid|default:0}},'recharge',0)">{{t_change}}</button>
         </td>
         <td><b>{{ t_endless_floor }}</b></td>
         <td>{{ player.endless_floor }}</td>
       </tr>
       <tr>
         <td><b>{{ t_chat_ban_time }}</b></td>
-        <td colspan="3">{{ player.world_info.chat_ban_time|ts2bantime }}
+        <td colspan="4">{{ player.world_info.chat_ban_time|ts2bantime }}
           <span class="pull-right">
             <button type="submit" class="btn btn-info btn-xs" onclick="dataAccess.addJSON({{server_id}},{{player.uid|default:0}},'chat_ban',0)">{{t_un_ban}}</button>
             <button type="submit" class="btn btn-warning btn-xs" onclick="dataAccess.addJSON({{server_id}},{{player.uid|default:0}},'chat_ban',7)">{{t_chat_ban_7_days}}</button>
@@ -138,7 +147,7 @@
       </tr>
       <tr>
         <td><b>{{ t_account_ban_time }}</b></td>
-        <td colspan="3">{{ player.world_info.account_ban_time|ts2bantime }}
+        <td colspan="4">{{ player.world_info.account_ban_time|ts2bantime }}
           <span class="pull-right">
             <button type="submit" class="btn btn-info btn-xs" onclick="dataAccess.addJSON({{server_id}},{{player.uid|default:0}},'account_ban',0)">{{t_un_ban}}</button>
             <button type="submit" class="btn btn-warning btn-xs" onclick="dataAccess.addJSON({{server_id}},{{player.uid|default:0}},'account_ban',7)">{{t_account_ban_7_days}}</button>
@@ -148,14 +157,14 @@
       </tr>
       <tr>
         <td><b>{{ t_online }}</b></td>
-        <td colspan="3">{{ player.is_online|online }}
+        <td colspan="4">{{ player.is_online|online }}
           <span class="pull-right">
           <button type="submit" class="btn btn-danger btn-xs" onclick="dataAccess.addJSON({{server_id}},{{player.uid|default:0}},'kick',0)">{{t_kick_player}}</button></span>
         </td>
       </tr>
       <tr>
         <td><b>{{ t_other_contorl }}</b></td>
-        <td colspan="3"><span class="pull-right">
+        <td colspan="4"><span class="pull-right">
           <button type="submit" class="btn btn-default btn-xs" onclick="dataAccess.addJSON({{server_id}},{{player.uid|default:0}},'add',5)">{{t_add_100k_exp_items}}</button>
           <button type="submit" class="btn btn-default btn-xs" onclick="dataAccess.addJSON({{server_id}},{{player.uid|default:0}},'dungeon',50)">{{t_unlock_50_dungeon}}</button>
           <button type="submit" class="btn btn-default btn-xs" onclick="dataAccess.addJSON({{server_id}},{{player.uid|default:0}},'dungeon',100)">{{t_unlock_100_dungeon}}</button>
@@ -171,3 +180,14 @@
   {% include "operating/pve_info.html" %}
   {% include "operating/rank_list.html" %}
 </div>
+<script type="text/javascript">
+ $(document).ready(function() {
+  management.numberOnly("input[name='add2']");
+  management.numberOnly("input[name='add1']");
+  management.numberOnly("input[name='add6']");
+  management.numberOnly("input[name='add4']");
+  management.numberOnly("input[name='add3']");
+  management.numberOnly("input[name='add11']");
+  management.numberOnly("input[name='recharge0']");
+ });
+</script>

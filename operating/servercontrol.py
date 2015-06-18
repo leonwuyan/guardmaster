@@ -19,7 +19,6 @@ class ServerControl(object):
         self.username = username
 
     def log(self, e):
-        print __name__
         logger = logging.getLogger(__name__)
         d = {
             'username': self.username,
@@ -135,7 +134,8 @@ class ServerControl(object):
                     (a, b, c) = (int(t[0]), int(t[1]), int(t[2]))
                     acc.append({'res_type': a, 'res_id': b, 'res_count': c})
         ret = self._send_mail(title, content, acc)
-        if ret == self.success:
+        if ret['result'] == self.success['result']:
+            response_id = Common.first(ret['sucess_result'])['mail_id']
             r = ResponseMail(
                     title=title,
                     content=content,
@@ -143,7 +143,7 @@ class ServerControl(object):
                     guardmaster=self.username,
                     uid=self.uid,
                     accessory=str(acc),
-                    response_id=0,
+                    response_id=response_id,
                     pub_date=timezone.now()
                 )
             r.save()

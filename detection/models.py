@@ -55,6 +55,7 @@ class UISubMenu(models.Model):
         ('detection:user_query', _('user_query')),
         ('detection:gang_query', _('gang_query')),
         ('detection:deal_query', _('deal_query')),
+        ('detection:history_query', _('history_query')),
         ('operating:notify', _('notify')),
         ('operating:mail', _('mail')),
         ('operating:single', _('single')),
@@ -113,6 +114,7 @@ class UIColMap(models.Model):
         ('zone_list', _('zone list')),
         ('identity_str', _('anything to string')),
         ('contact_reply', _('contact to reply')),
+        ('ip_to_server', _('ip to server')),
     }
     label = models.CharField(max_length=45)
     sub_menu = models.ForeignKey(UISubMenu)
@@ -135,6 +137,7 @@ class Panel(models.Model):
     label = models.CharField(max_length=45, unique=True)
     groups = models.ManyToManyField(Group)
     db_aliases = models.CharField(max_length=45)
+    symbol = models.CharField(max_length=45)
 
     def __unicode__(self):
         return self.label
@@ -305,6 +308,28 @@ class Tabel(object):
             condition = condition + (r,)
         if len(condition) > 0:
             condition = " OR ".join(condition)
+        ret = self.select(sub_menu, panel, condition)
+        return ret
+
+    @classmethod
+    def history_query_select(self, sub_menu, panel, request_get):
+        print request_get
+        condition = ()
+        if 'start' in request_get:
+            r = "LogDt >= '" + request_get.get('start') + "'"
+            condition = condition + (r,)
+        if 'end' in request_get:
+            r = "LogDt <= '" + request_get.get('end') + "'"
+            condition = condition + (r,)
+        if 'server' in request_get:
+            r = "Server = '" + request_get.get('server') + "'"
+            condition = condition + (r,)
+        if 'uid' in request_get:
+            r = "UID = " + request_get.get('uid')
+            condition = condition + (r,)
+        if len(condition) > 0:
+            condition = " AND ".join(condition)
+            condition += " ORDER BY Server, UID, LogDt, LogTime, EventTyp"
         ret = self.select(sub_menu, panel, condition)
         return ret
 

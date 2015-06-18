@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2015-06-11 21:19+0800\n"
+"POT-Creation-Date: 2015-06-18 23:16+0800\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -42,67 +42,75 @@ msgid "deal_query"
 msgstr ""
 
 #: models.py:58
-msgid "notify"
+msgid "history_query"
 msgstr ""
 
 #: models.py:59
-msgid "mail"
+msgid "notify"
 msgstr ""
 
 #: models.py:60
-msgid "single"
+msgid "mail"
 msgstr ""
 
 #: models.py:61
-msgid "rank"
+msgid "single"
 msgstr ""
 
 #: models.py:62
+msgid "rank"
+msgstr ""
+
+#: models.py:63
 msgid "contact"
 msgstr ""
 
-#: models.py:72
+#: models.py:73
 msgid "Category is required when Main menu is selected"
 msgstr ""
 
-#: models.py:106
+#: models.py:107
 msgid "date"
 msgstr ""
 
-#: models.py:107
+#: models.py:108
 msgid "time"
 msgstr ""
 
-#: models.py:108
+#: models.py:109
 msgid "timestamp to date"
 msgstr ""
 
-#: models.py:109
+#: models.py:110
 msgid "timestamp to time"
 msgstr ""
 
-#: models.py:110
+#: models.py:111
 msgid "float two"
 msgstr ""
 
-#: models.py:111
+#: models.py:112
 msgid "ratio two"
 msgstr ""
 
-#: models.py:112
+#: models.py:113
 msgid "channel list"
 msgstr ""
 
-#: models.py:113
+#: models.py:114
 msgid "zone list"
 msgstr ""
 
-#: models.py:114
+#: models.py:115
 msgid "anything to string"
 msgstr ""
 
-#: models.py:115
+#: models.py:116
 msgid "contact to reply"
+msgstr ""
+
+#: models.py:117
+msgid "ip to server"
 msgstr ""
 
 #: templates/detection/base.html:4
@@ -173,6 +181,6 @@ msgstr ""
 msgid "Choose The Panel"
 msgstr ""
 
-#: value_format.py:63
+#: value_format.py:64
 msgid "reply"
 msgstr ""

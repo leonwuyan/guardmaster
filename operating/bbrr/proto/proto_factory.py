@@ -9,6 +9,9 @@ def create_pb(hash):
     if hash == StringHash.calculate_hash('GM_GET_PLAYER_ACCOUNT_BY_NAME_REQ'):
         return getattr(guard_proto_pb2, 'GM_GET_PLAYER_ACCOUNT_BY_NAME_REQ')()
     
+    if hash == StringHash.calculate_hash('PLAYER_ACCOUNT_NAME_INFO'):
+        return getattr(guard_proto_pb2, 'PLAYER_ACCOUNT_NAME_INFO')()
+    
     if hash == StringHash.calculate_hash('GM_GET_PLAYER_ACCOUNT_BY_NAME_RES'):
         return getattr(guard_proto_pb2, 'GM_GET_PLAYER_ACCOUNT_BY_NAME_RES')()
     
@@ -99,6 +102,9 @@ def create_pb(hash):
     if hash == StringHash.calculate_hash('GM_SEND_MAIL_REQ'):
         return getattr(guard_proto_pb2, 'GM_SEND_MAIL_REQ')()
     
+    if hash == StringHash.calculate_hash('GM_MAIL_RES_INFO'):
+        return getattr(guard_proto_pb2, 'GM_MAIL_RES_INFO')()
+    
     if hash == StringHash.calculate_hash('GM_SEND_MAIL_RES'):
         return getattr(guard_proto_pb2, 'GM_SEND_MAIL_RES')()
     
@@ -149,6 +155,9 @@ def create_pb(hash):
     
     if hash == StringHash.calculate_hash('ResCost'):
         return getattr(guard_proto_pb2, 'ResCost')()
+    
+    if hash == StringHash.calculate_hash('ResHeadPhoto'):
+        return getattr(guard_proto_pb2, 'ResHeadPhoto')()
     
     if hash == StringHash.calculate_hash('ResRoleGL'):
         return getattr(guard_proto_pb2, 'ResRoleGL')()
@@ -321,6 +330,9 @@ def create_pb(hash):
     if hash == StringHash.calculate_hash('ResDungeonInfo'):
         return getattr(guard_proto_pb2, 'ResDungeonInfo')()
     
+    if hash == StringHash.calculate_hash('ResDungeonFightCapacityFix'):
+        return getattr(guard_proto_pb2, 'ResDungeonFightCapacityFix')()
+    
     if hash == StringHash.calculate_hash('ResDungeonReward'):
         return getattr(guard_proto_pb2, 'ResDungeonReward')()
     
@@ -351,11 +363,20 @@ def create_pb(hash):
     if hash == StringHash.calculate_hash('ResMainTask'):
         return getattr(guard_proto_pb2, 'ResMainTask')()
     
+    if hash == StringHash.calculate_hash('ResLoadingPicParam'):
+        return getattr(guard_proto_pb2, 'ResLoadingPicParam')()
+    
+    if hash == StringHash.calculate_hash('ResLoadingPic'):
+        return getattr(guard_proto_pb2, 'ResLoadingPic')()
+    
     if hash == StringHash.calculate_hash('ResColorMatchingParam'):
         return getattr(guard_proto_pb2, 'ResColorMatchingParam')()
     
     if hash == StringHash.calculate_hash('ResColorMatching'):
         return getattr(guard_proto_pb2, 'ResColorMatching')()
+    
+    if hash == StringHash.calculate_hash('ResOnlineBattleTitle'):
+        return getattr(guard_proto_pb2, 'ResOnlineBattleTitle')()
     
     if hash == StringHash.calculate_hash('ResOfflineBattleTitle'):
         return getattr(guard_proto_pb2, 'ResOfflineBattleTitle')()
@@ -452,6 +473,9 @@ def create_pb(hash):
     
     if hash == StringHash.calculate_hash('ResParamInfo'):
         return getattr(guard_proto_pb2, 'ResParamInfo')()
+    
+    if hash == StringHash.calculate_hash('ResGiftGroup'):
+        return getattr(guard_proto_pb2, 'ResGiftGroup')()
     
     if hash == StringHash.calculate_hash('ResGift'):
         return getattr(guard_proto_pb2, 'ResGift')()
@@ -605,6 +629,21 @@ def create_pb(hash):
     
     if hash == StringHash.calculate_hash('ST_BATTLE_HERO_ATTR_INFO'):
         return getattr(guard_proto_pb2, 'ST_BATTLE_HERO_ATTR_INFO')()
+    
+    if hash == StringHash.calculate_hash('ResRoleCommandList'):
+        return getattr(guard_proto_pb2, 'ResRoleCommandList')()
+    
+    if hash == StringHash.calculate_hash('ResDailyTime'):
+        return getattr(guard_proto_pb2, 'ResDailyTime')()
+    
+    if hash == StringHash.calculate_hash('ResActivity'):
+        return getattr(guard_proto_pb2, 'ResActivity')()
+    
+    if hash == StringHash.calculate_hash('ResNameExtra'):
+        return getattr(guard_proto_pb2, 'ResNameExtra')()
+    
+    if hash == StringHash.calculate_hash('SCDT_FRIEND_BASE_INFO'):
+        return getattr(guard_proto_pb2, 'SCDT_FRIEND_BASE_INFO')()
     
     if hash == StringHash.calculate_hash('SSDT_NOTIFY_MSG'):
         return getattr(guard_proto_pb2, 'SSDT_NOTIFY_MSG')()
@@ -876,6 +915,15 @@ def create_pb(hash):
     if hash == StringHash.calculate_hash('DBBLOB_BUSINESS_INFO'):
         return getattr(guard_proto_pb2, 'DBBLOB_BUSINESS_INFO')()
     
+    if hash == StringHash.calculate_hash('SSDT_PRIVATE_CHAT_INFO'):
+        return getattr(guard_proto_pb2, 'SSDT_PRIVATE_CHAT_INFO')()
+    
+    if hash == StringHash.calculate_hash('SSPKG_OFFLINE_PRIVATE_CHAT_MSG'):
+        return getattr(guard_proto_pb2, 'SSPKG_OFFLINE_PRIVATE_CHAT_MSG')()
+    
+    if hash == StringHash.calculate_hash('DBBLOB_OFFLIEN_PRIVATE_CHAT'):
+        return getattr(guard_proto_pb2, 'DBBLOB_OFFLIEN_PRIVATE_CHAT')()
+    
     if hash == StringHash.calculate_hash('DBBLOB_MISC_DATA'):
         return getattr(guard_proto_pb2, 'DBBLOB_MISC_DATA')()
     
@@ -978,8 +1026,17 @@ def create_pb(hash):
     if hash == StringHash.calculate_hash('PKG_CREATE_NAME'):
         return getattr(guard_proto_pb2, 'PKG_CREATE_NAME')()
     
+    if hash == StringHash.calculate_hash('SSDT_RECOMMAND_NAME'):
+        return getattr(guard_proto_pb2, 'SSDT_RECOMMAND_NAME')()
+    
     if hash == StringHash.calculate_hash('PKG_CREATE_NAME_RES'):
         return getattr(guard_proto_pb2, 'PKG_CREATE_NAME_RES')()
+    
+    if hash == StringHash.calculate_hash('PKG_RANDOM_NAME_REQ'):
+        return getattr(guard_proto_pb2, 'PKG_RANDOM_NAME_REQ')()
+    
+    if hash == StringHash.calculate_hash('PKG_RANDOM_NAME_RES'):
+        return getattr(guard_proto_pb2, 'PKG_RANDOM_NAME_RES')()
     
     if hash == StringHash.calculate_hash('PKG_VERIFY_NAME'):
         return getattr(guard_proto_pb2, 'PKG_VERIFY_NAME')()
@@ -1233,17 +1290,29 @@ def create_pb(hash):
     if hash == StringHash.calculate_hash('PKG_GANGLIST_RES'):
         return getattr(guard_proto_pb2, 'PKG_GANGLIST_RES')()
     
+    if hash == StringHash.calculate_hash('PKG_CMD_SEARCH_GANG_REQ'):
+        return getattr(guard_proto_pb2, 'PKG_CMD_SEARCH_GANG_REQ')()
+    
+    if hash == StringHash.calculate_hash('PKG_CMD_SEARCH_GANG_RES'):
+        return getattr(guard_proto_pb2, 'PKG_CMD_SEARCH_GANG_RES')()
+    
     if hash == StringHash.calculate_hash('PKG_ROLELOGIN_GANG_REQ'):
         return getattr(guard_proto_pb2, 'PKG_ROLELOGIN_GANG_REQ')()
     
     if hash == StringHash.calculate_hash('PKG_ROLELOGIN_GANG_RES'):
         return getattr(guard_proto_pb2, 'PKG_ROLELOGIN_GANG_RES')()
     
+    if hash == StringHash.calculate_hash('SSDT_CREATE_GANG_INFO'):
+        return getattr(guard_proto_pb2, 'SSDT_CREATE_GANG_INFO')()
+    
     if hash == StringHash.calculate_hash('PKG_CREATE_GANG_REQ'):
         return getattr(guard_proto_pb2, 'PKG_CREATE_GANG_REQ')()
     
-    if hash == StringHash.calculate_hash('PKG_CREATE_GANG_NAME_RSP'):
-        return getattr(guard_proto_pb2, 'PKG_CREATE_GANG_NAME_RSP')()
+    if hash == StringHash.calculate_hash('PKG_CREATE_GANG_NAME_RSP_FROM_NAME_SVR'):
+        return getattr(guard_proto_pb2, 'PKG_CREATE_GANG_NAME_RSP_FROM_NAME_SVR')()
+    
+    if hash == StringHash.calculate_hash('PKG_CREATE_GANG_NAME_RSP_FROM_ACCOUNT_SVR'):
+        return getattr(guard_proto_pb2, 'PKG_CREATE_GANG_NAME_RSP_FROM_ACCOUNT_SVR')()
     
     if hash == StringHash.calculate_hash('PKG_CREATE_GANG_RES'):
         return getattr(guard_proto_pb2, 'PKG_CREATE_GANG_RES')()
@@ -1416,6 +1485,12 @@ def create_pb(hash):
     if hash == StringHash.calculate_hash('PKG_GET_GANG_BATTLE_MEM_ATTACK_INFO_RES'):
         return getattr(guard_proto_pb2, 'PKG_GET_GANG_BATTLE_MEM_ATTACK_INFO_RES')()
     
+    if hash == StringHash.calculate_hash('PKG_GET_GANG_BATTLE_STATE_INFO_REQ'):
+        return getattr(guard_proto_pb2, 'PKG_GET_GANG_BATTLE_STATE_INFO_REQ')()
+    
+    if hash == StringHash.calculate_hash('PKG_GET_GANG_BATTLE_STATE_INFO_RES'):
+        return getattr(guard_proto_pb2, 'PKG_GET_GANG_BATTLE_STATE_INFO_RES')()
+    
     if hash == StringHash.calculate_hash('GANG_BROADCAST_DETAIL'):
         return getattr(guard_proto_pb2, 'GANG_BROADCAST_DETAIL')()
     
@@ -1503,6 +1578,9 @@ def create_pb(hash):
     if hash == StringHash.calculate_hash('SSPKG_UPDATE_ENDLESS_REQ'):
         return getattr(guard_proto_pb2, 'SSPKG_UPDATE_ENDLESS_REQ')()
     
+    if hash == StringHash.calculate_hash('SSPKG_UPDATE_PVE_EVALUATE_STATS_REQ'):
+        return getattr(guard_proto_pb2, 'SSPKG_UPDATE_PVE_EVALUATE_STATS_REQ')()
+    
     if hash == StringHash.calculate_hash('SSDT_RANK_ONE_UPDATE'):
         return getattr(guard_proto_pb2, 'SSDT_RANK_ONE_UPDATE')()
     
@@ -1584,8 +1662,14 @@ def create_pb(hash):
     if hash == StringHash.calculate_hash('SSPKG_PURCHASE_REQ'):
         return getattr(guard_proto_pb2, 'SSPKG_PURCHASE_REQ')()
     
+    if hash == StringHash.calculate_hash('SSPKG_PURCHASE_INFO'):
+        return getattr(guard_proto_pb2, 'SSPKG_PURCHASE_INFO')()
+    
     if hash == StringHash.calculate_hash('SSPKG_PURCHASE_REQUEST_DELIVERY'):
         return getattr(guard_proto_pb2, 'SSPKG_PURCHASE_REQUEST_DELIVERY')()
+    
+    if hash == StringHash.calculate_hash('SSPKG_PURCHASE_REQUEST_DELIVERY_DEAL'):
+        return getattr(guard_proto_pb2, 'SSPKG_PURCHASE_REQUEST_DELIVERY_DEAL')()
     
     if hash == StringHash.calculate_hash('SSPKG_PURCHASE_DONE'):
         return getattr(guard_proto_pb2, 'SSPKG_PURCHASE_DONE')()
@@ -1671,11 +1755,71 @@ def create_pb(hash):
     if hash == StringHash.calculate_hash('SS_SHOP_PLAYER_BUY_GOODS_FAILE_ROLLBACK_REQ'):
         return getattr(guard_proto_pb2, 'SS_SHOP_PLAYER_BUY_GOODS_FAILE_ROLLBACK_REQ')()
     
-    if hash == StringHash.calculate_hash('SSDT_FRIEND_BASE_INFO'):
-        return getattr(guard_proto_pb2, 'SSDT_FRIEND_BASE_INFO')()
+    if hash == StringHash.calculate_hash('SSDT_FRIEND_CROSS_INFO'):
+        return getattr(guard_proto_pb2, 'SSDT_FRIEND_CROSS_INFO')()
+    
+    if hash == StringHash.calculate_hash('SSPKG_BIND_3RD_PLATFORM_ID'):
+        return getattr(guard_proto_pb2, 'SSPKG_BIND_3RD_PLATFORM_ID')()
+    
+    if hash == StringHash.calculate_hash('SSPKG_BIND_3RD_PLATFORM_ID_TO_FRIEND'):
+        return getattr(guard_proto_pb2, 'SSPKG_BIND_3RD_PLATFORM_ID_TO_FRIEND')()
+    
+    if hash == StringHash.calculate_hash('SSDT_REQUEST_SOCIAL_FRIEND'):
+        return getattr(guard_proto_pb2, 'SSDT_REQUEST_SOCIAL_FRIEND')()
+    
+    if hash == StringHash.calculate_hash('SSPKG_REQUEST_SOCIAL_FRIEND'):
+        return getattr(guard_proto_pb2, 'SSPKG_REQUEST_SOCIAL_FRIEND')()
+    
+    if hash == StringHash.calculate_hash('SSPKG_REQUEST_SOCIAL_FRIEND_CROSS'):
+        return getattr(guard_proto_pb2, 'SSPKG_REQUEST_SOCIAL_FRIEND_CROSS')()
     
     if hash == StringHash.calculate_hash('SSDT_FRIEND_INFO'):
         return getattr(guard_proto_pb2, 'SSDT_FRIEND_INFO')()
+    
+    if hash == StringHash.calculate_hash('SSDT_SOCIAL_FRIEND_INFO'):
+        return getattr(guard_proto_pb2, 'SSDT_SOCIAL_FRIEND_INFO')()
+    
+    if hash == StringHash.calculate_hash('SSDT_FRIEND_INFO_CROSS'):
+        return getattr(guard_proto_pb2, 'SSDT_FRIEND_INFO_CROSS')()
+    
+    if hash == StringHash.calculate_hash('SSPKG_NOTIFY_SOCIAL_FRIEND_ERROR'):
+        return getattr(guard_proto_pb2, 'SSPKG_NOTIFY_SOCIAL_FRIEND_ERROR')()
+    
+    if hash == StringHash.calculate_hash('SSDT_SOCIAL_FRIEND_ID'):
+        return getattr(guard_proto_pb2, 'SSDT_SOCIAL_FRIEND_ID')()
+    
+    if hash == StringHash.calculate_hash('SSPKG_SEND_POWER_TO_SOCIAL_FRIEND'):
+        return getattr(guard_proto_pb2, 'SSPKG_SEND_POWER_TO_SOCIAL_FRIEND')()
+    
+    if hash == StringHash.calculate_hash('SSPKG_SEND_POWER_TO_SOCIAL_FRIEND_FROM_CROSS'):
+        return getattr(guard_proto_pb2, 'SSPKG_SEND_POWER_TO_SOCIAL_FRIEND_FROM_CROSS')()
+    
+    if hash == StringHash.calculate_hash('SSPKG_SEND_POWER_TO_SOCIAL_FRIEND_CROSS'):
+        return getattr(guard_proto_pb2, 'SSPKG_SEND_POWER_TO_SOCIAL_FRIEND_CROSS')()
+    
+    if hash == StringHash.calculate_hash('SSPKG_SOCIAL_FRIEND_POWER_ADD'):
+        return getattr(guard_proto_pb2, 'SSPKG_SOCIAL_FRIEND_POWER_ADD')()
+    
+    if hash == StringHash.calculate_hash('SSDT_SEND_POSER_TO_SOCIAL_FRIEND'):
+        return getattr(guard_proto_pb2, 'SSDT_SEND_POSER_TO_SOCIAL_FRIEND')()
+    
+    if hash == StringHash.calculate_hash('SSPKG_RECV_POWER_FROM_SOCIAL_FRIEND'):
+        return getattr(guard_proto_pb2, 'SSPKG_RECV_POWER_FROM_SOCIAL_FRIEND')()
+    
+    if hash == StringHash.calculate_hash('SSPKG_SOCIAL_FRIEND_INFO_CHANGE'):
+        return getattr(guard_proto_pb2, 'SSPKG_SOCIAL_FRIEND_INFO_CHANGE')()
+    
+    if hash == StringHash.calculate_hash('SSPKG_FRIEND_INFO_REQUEST'):
+        return getattr(guard_proto_pb2, 'SSPKG_FRIEND_INFO_REQUEST')()
+    
+    if hash == StringHash.calculate_hash('SSPKG_FRIEND_CROSS_INFO_RESPONSE_TO_CROSS'):
+        return getattr(guard_proto_pb2, 'SSPKG_FRIEND_CROSS_INFO_RESPONSE_TO_CROSS')()
+    
+    if hash == StringHash.calculate_hash('SSPKG_FRIEND_CROSS_INFO_RESPONSE_TO_CROSS_TO_FRIEND'):
+        return getattr(guard_proto_pb2, 'SSPKG_FRIEND_CROSS_INFO_RESPONSE_TO_CROSS_TO_FRIEND')()
+    
+    if hash == StringHash.calculate_hash('SSPKG_FRIEND_CROSS_INFO_RESPONSE'):
+        return getattr(guard_proto_pb2, 'SSPKG_FRIEND_CROSS_INFO_RESPONSE')()
     
     if hash == StringHash.calculate_hash('SSDT_FRIEND_APPLY_INFO'):
         return getattr(guard_proto_pb2, 'SSDT_FRIEND_APPLY_INFO')()
@@ -1704,6 +1848,12 @@ def create_pb(hash):
     if hash == StringHash.calculate_hash('SSDT_RELATION_INFO'):
         return getattr(guard_proto_pb2, 'SSDT_RELATION_INFO')()
     
+    if hash == StringHash.calculate_hash('SSDT_SOCIAL_RELATION_INFO'):
+        return getattr(guard_proto_pb2, 'SSDT_SOCIAL_RELATION_INFO')()
+    
+    if hash == StringHash.calculate_hash('SSDT_SEND_POWER_RECORD'):
+        return getattr(guard_proto_pb2, 'SSDT_SEND_POWER_RECORD')()
+    
     if hash == StringHash.calculate_hash('DB_FRIEND_BLOB'):
         return getattr(guard_proto_pb2, 'DB_FRIEND_BLOB')()
     
@@ -1721,6 +1871,18 @@ def create_pb(hash):
     
     if hash == StringHash.calculate_hash('SSPKG_FRIEND_NOTIFY_POWER_REFRESH_CROSS_DAY'):
         return getattr(guard_proto_pb2, 'SSPKG_FRIEND_NOTIFY_POWER_REFRESH_CROSS_DAY')()
+    
+    if hash == StringHash.calculate_hash('SSPKG_FRIEND_RECV_POWER_ALL_REQ'):
+        return getattr(guard_proto_pb2, 'SSPKG_FRIEND_RECV_POWER_ALL_REQ')()
+    
+    if hash == StringHash.calculate_hash('SSPKG_FRIEND_RECV_POWER_ALL_RES'):
+        return getattr(guard_proto_pb2, 'SSPKG_FRIEND_RECV_POWER_ALL_RES')()
+    
+    if hash == StringHash.calculate_hash('SSPKG_FRIEND_SEND_POWER_ALL_REQ'):
+        return getattr(guard_proto_pb2, 'SSPKG_FRIEND_SEND_POWER_ALL_REQ')()
+    
+    if hash == StringHash.calculate_hash('SSPKG_FRIEND_SEND_POWER_ALL_RES'):
+        return getattr(guard_proto_pb2, 'SSPKG_FRIEND_SEND_POWER_ALL_RES')()
     
     if hash == StringHash.calculate_hash('PKG_FRIEND_DISP_INFO_CHG'):
         return getattr(guard_proto_pb2, 'PKG_FRIEND_DISP_INFO_CHG')()
@@ -1742,6 +1904,9 @@ def create_pb(hash):
 def get_pb_name(hash):
     if hash == StringHash.calculate_hash('GM_GET_PLAYER_ACCOUNT_BY_NAME_REQ'):
         return 'GM_GET_PLAYER_ACCOUNT_BY_NAME_REQ'
+    
+    if hash == StringHash.calculate_hash('PLAYER_ACCOUNT_NAME_INFO'):
+        return 'PLAYER_ACCOUNT_NAME_INFO'
     
     if hash == StringHash.calculate_hash('GM_GET_PLAYER_ACCOUNT_BY_NAME_RES'):
         return 'GM_GET_PLAYER_ACCOUNT_BY_NAME_RES'
@@ -1833,6 +1998,9 @@ def get_pb_name(hash):
     if hash == StringHash.calculate_hash('GM_SEND_MAIL_REQ'):
         return 'GM_SEND_MAIL_REQ'
     
+    if hash == StringHash.calculate_hash('GM_MAIL_RES_INFO'):
+        return 'GM_MAIL_RES_INFO'
+    
     if hash == StringHash.calculate_hash('GM_SEND_MAIL_RES'):
         return 'GM_SEND_MAIL_RES'
     
@@ -1883,6 +2051,9 @@ def get_pb_name(hash):
     
     if hash == StringHash.calculate_hash('ResCost'):
         return 'ResCost'
+    
+    if hash == StringHash.calculate_hash('ResHeadPhoto'):
+        return 'ResHeadPhoto'
     
     if hash == StringHash.calculate_hash('ResRoleGL'):
         return 'ResRoleGL'
@@ -2055,6 +2226,9 @@ def get_pb_name(hash):
     if hash == StringHash.calculate_hash('ResDungeonInfo'):
         return 'ResDungeonInfo'
     
+    if hash == StringHash.calculate_hash('ResDungeonFightCapacityFix'):
+        return 'ResDungeonFightCapacityFix'
+    
     if hash == StringHash.calculate_hash('ResDungeonReward'):
         return 'ResDungeonReward'
     
@@ -2085,11 +2259,20 @@ def get_pb_name(hash):
     if hash == StringHash.calculate_hash('ResMainTask'):
         return 'ResMainTask'
     
+    if hash == StringHash.calculate_hash('ResLoadingPicParam'):
+        return 'ResLoadingPicParam'
+    
+    if hash == StringHash.calculate_hash('ResLoadingPic'):
+        return 'ResLoadingPic'
+    
     if hash == StringHash.calculate_hash('ResColorMatchingParam'):
         return 'ResColorMatchingParam'
     
     if hash == StringHash.calculate_hash('ResColorMatching'):
         return 'ResColorMatching'
+    
+    if hash == StringHash.calculate_hash('ResOnlineBattleTitle'):
+        return 'ResOnlineBattleTitle'
     
     if hash == StringHash.calculate_hash('ResOfflineBattleTitle'):
         return 'ResOfflineBattleTitle'
@@ -2186,6 +2369,9 @@ def get_pb_name(hash):
     
     if hash == StringHash.calculate_hash('ResParamInfo'):
         return 'ResParamInfo'
+    
+    if hash == StringHash.calculate_hash('ResGiftGroup'):
+        return 'ResGiftGroup'
     
     if hash == StringHash.calculate_hash('ResGift'):
         return 'ResGift'
@@ -2339,6 +2525,21 @@ def get_pb_name(hash):
     
     if hash == StringHash.calculate_hash('ST_BATTLE_HERO_ATTR_INFO'):
         return 'ST_BATTLE_HERO_ATTR_INFO'
+    
+    if hash == StringHash.calculate_hash('ResRoleCommandList'):
+        return 'ResRoleCommandList'
+    
+    if hash == StringHash.calculate_hash('ResDailyTime'):
+        return 'ResDailyTime'
+    
+    if hash == StringHash.calculate_hash('ResActivity'):
+        return 'ResActivity'
+    
+    if hash == StringHash.calculate_hash('ResNameExtra'):
+        return 'ResNameExtra'
+    
+    if hash == StringHash.calculate_hash('SCDT_FRIEND_BASE_INFO'):
+        return 'SCDT_FRIEND_BASE_INFO'
     
     if hash == StringHash.calculate_hash('SSDT_NOTIFY_MSG'):
         return 'SSDT_NOTIFY_MSG'
@@ -2610,6 +2811,15 @@ def get_pb_name(hash):
     if hash == StringHash.calculate_hash('DBBLOB_BUSINESS_INFO'):
         return 'DBBLOB_BUSINESS_INFO'
     
+    if hash == StringHash.calculate_hash('SSDT_PRIVATE_CHAT_INFO'):
+        return 'SSDT_PRIVATE_CHAT_INFO'
+    
+    if hash == StringHash.calculate_hash('SSPKG_OFFLINE_PRIVATE_CHAT_MSG'):
+        return 'SSPKG_OFFLINE_PRIVATE_CHAT_MSG'
+    
+    if hash == StringHash.calculate_hash('DBBLOB_OFFLIEN_PRIVATE_CHAT'):
+        return 'DBBLOB_OFFLIEN_PRIVATE_CHAT'
+    
     if hash == StringHash.calculate_hash('DBBLOB_MISC_DATA'):
         return 'DBBLOB_MISC_DATA'
     
@@ -2712,8 +2922,17 @@ def get_pb_name(hash):
     if hash == StringHash.calculate_hash('PKG_CREATE_NAME'):
         return 'PKG_CREATE_NAME'
     
+    if hash == StringHash.calculate_hash('SSDT_RECOMMAND_NAME'):
+        return 'SSDT_RECOMMAND_NAME'
+    
     if hash == StringHash.calculate_hash('PKG_CREATE_NAME_RES'):
         return 'PKG_CREATE_NAME_RES'
+    
+    if hash == StringHash.calculate_hash('PKG_RANDOM_NAME_REQ'):
+        return 'PKG_RANDOM_NAME_REQ'
+    
+    if hash == StringHash.calculate_hash('PKG_RANDOM_NAME_RES'):
+        return 'PKG_RANDOM_NAME_RES'
     
     if hash == StringHash.calculate_hash('PKG_VERIFY_NAME'):
         return 'PKG_VERIFY_NAME'
@@ -2967,17 +3186,29 @@ def get_pb_name(hash):
     if hash == StringHash.calculate_hash('PKG_GANGLIST_RES'):
         return 'PKG_GANGLIST_RES'
     
+    if hash == StringHash.calculate_hash('PKG_CMD_SEARCH_GANG_REQ'):
+        return 'PKG_CMD_SEARCH_GANG_REQ'
+    
+    if hash == StringHash.calculate_hash('PKG_CMD_SEARCH_GANG_RES'):
+        return 'PKG_CMD_SEARCH_GANG_RES'
+    
     if hash == StringHash.calculate_hash('PKG_ROLELOGIN_GANG_REQ'):
         return 'PKG_ROLELOGIN_GANG_REQ'
     
     if hash == StringHash.calculate_hash('PKG_ROLELOGIN_GANG_RES'):
         return 'PKG_ROLELOGIN_GANG_RES'
     
+    if hash == StringHash.calculate_hash('SSDT_CREATE_GANG_INFO'):
+        return 'SSDT_CREATE_GANG_INFO'
+    
     if hash == StringHash.calculate_hash('PKG_CREATE_GANG_REQ'):
         return 'PKG_CREATE_GANG_REQ'
     
-    if hash == StringHash.calculate_hash('PKG_CREATE_GANG_NAME_RSP'):
-        return 'PKG_CREATE_GANG_NAME_RSP'
+    if hash == StringHash.calculate_hash('PKG_CREATE_GANG_NAME_RSP_FROM_NAME_SVR'):
+        return 'PKG_CREATE_GANG_NAME_RSP_FROM_NAME_SVR'
+    
+    if hash == StringHash.calculate_hash('PKG_CREATE_GANG_NAME_RSP_FROM_ACCOUNT_SVR'):
+        return 'PKG_CREATE_GANG_NAME_RSP_FROM_ACCOUNT_SVR'
     
     if hash == StringHash.calculate_hash('PKG_CREATE_GANG_RES'):
         return 'PKG_CREATE_GANG_RES'
@@ -3150,6 +3381,12 @@ def get_pb_name(hash):
     if hash == StringHash.calculate_hash('PKG_GET_GANG_BATTLE_MEM_ATTACK_INFO_RES'):
         return 'PKG_GET_GANG_BATTLE_MEM_ATTACK_INFO_RES'
     
+    if hash == StringHash.calculate_hash('PKG_GET_GANG_BATTLE_STATE_INFO_REQ'):
+        return 'PKG_GET_GANG_BATTLE_STATE_INFO_REQ'
+    
+    if hash == StringHash.calculate_hash('PKG_GET_GANG_BATTLE_STATE_INFO_RES'):
+        return 'PKG_GET_GANG_BATTLE_STATE_INFO_RES'
+    
     if hash == StringHash.calculate_hash('GANG_BROADCAST_DETAIL'):
         return 'GANG_BROADCAST_DETAIL'
     
@@ -3237,6 +3474,9 @@ def get_pb_name(hash):
     if hash == StringHash.calculate_hash('SSPKG_UPDATE_ENDLESS_REQ'):
         return 'SSPKG_UPDATE_ENDLESS_REQ'
     
+    if hash == StringHash.calculate_hash('SSPKG_UPDATE_PVE_EVALUATE_STATS_REQ'):
+        return 'SSPKG_UPDATE_PVE_EVALUATE_STATS_REQ'
+    
     if hash == StringHash.calculate_hash('SSDT_RANK_ONE_UPDATE'):
         return 'SSDT_RANK_ONE_UPDATE'
     
@@ -3318,8 +3558,14 @@ def get_pb_name(hash):
     if hash == StringHash.calculate_hash('SSPKG_PURCHASE_REQ'):
         return 'SSPKG_PURCHASE_REQ'
     
+    if hash == StringHash.calculate_hash('SSPKG_PURCHASE_INFO'):
+        return 'SSPKG_PURCHASE_INFO'
+    
     if hash == StringHash.calculate_hash('SSPKG_PURCHASE_REQUEST_DELIVERY'):
         return 'SSPKG_PURCHASE_REQUEST_DELIVERY'
+    
+    if hash == StringHash.calculate_hash('SSPKG_PURCHASE_REQUEST_DELIVERY_DEAL'):
+        return 'SSPKG_PURCHASE_REQUEST_DELIVERY_DEAL'
     
     if hash == StringHash.calculate_hash('SSPKG_PURCHASE_DONE'):
         return 'SSPKG_PURCHASE_DONE'
@@ -3405,11 +3651,71 @@ def get_pb_name(hash):
     if hash == StringHash.calculate_hash('SS_SHOP_PLAYER_BUY_GOODS_FAILE_ROLLBACK_REQ'):
         return 'SS_SHOP_PLAYER_BUY_GOODS_FAILE_ROLLBACK_REQ'
     
-    if hash == StringHash.calculate_hash('SSDT_FRIEND_BASE_INFO'):
-        return 'SSDT_FRIEND_BASE_INFO'
+    if hash == StringHash.calculate_hash('SSDT_FRIEND_CROSS_INFO'):
+        return 'SSDT_FRIEND_CROSS_INFO'
+    
+    if hash == StringHash.calculate_hash('SSPKG_BIND_3RD_PLATFORM_ID'):
+        return 'SSPKG_BIND_3RD_PLATFORM_ID'
+    
+    if hash == StringHash.calculate_hash('SSPKG_BIND_3RD_PLATFORM_ID_TO_FRIEND'):
+        return 'SSPKG_BIND_3RD_PLATFORM_ID_TO_FRIEND'
+    
+    if hash == StringHash.calculate_hash('SSDT_REQUEST_SOCIAL_FRIEND'):
+        return 'SSDT_REQUEST_SOCIAL_FRIEND'
+    
+    if hash == StringHash.calculate_hash('SSPKG_REQUEST_SOCIAL_FRIEND'):
+        return 'SSPKG_REQUEST_SOCIAL_FRIEND'
+    
+    if hash == StringHash.calculate_hash('SSPKG_REQUEST_SOCIAL_FRIEND_CROSS'):
+        return 'SSPKG_REQUEST_SOCIAL_FRIEND_CROSS'
     
     if hash == StringHash.calculate_hash('SSDT_FRIEND_INFO'):
         return 'SSDT_FRIEND_INFO'
+    
+    if hash == StringHash.calculate_hash('SSDT_SOCIAL_FRIEND_INFO'):
+        return 'SSDT_SOCIAL_FRIEND_INFO'
+    
+    if hash == StringHash.calculate_hash('SSDT_FRIEND_INFO_CROSS'):
+        return 'SSDT_FRIEND_INFO_CROSS'
+    
+    if hash == StringHash.calculate_hash('SSPKG_NOTIFY_SOCIAL_FRIEND_ERROR'):
+        return 'SSPKG_NOTIFY_SOCIAL_FRIEND_ERROR'
+    
+    if hash == StringHash.calculate_hash('SSDT_SOCIAL_FRIEND_ID'):
+        return 'SSDT_SOCIAL_FRIEND_ID'
+    
+    if hash == StringHash.calculate_hash('SSPKG_SEND_POWER_TO_SOCIAL_FRIEND'):
+        return 'SSPKG_SEND_POWER_TO_SOCIAL_FRIEND'
+    
+    if hash == StringHash.calculate_hash('SSPKG_SEND_POWER_TO_SOCIAL_FRIEND_FROM_CROSS'):
+        return 'SSPKG_SEND_POWER_TO_SOCIAL_FRIEND_FROM_CROSS'
+    
+    if hash == StringHash.calculate_hash('SSPKG_SEND_POWER_TO_SOCIAL_FRIEND_CROSS'):
+        return 'SSPKG_SEND_POWER_TO_SOCIAL_FRIEND_CROSS'
+    
+    if hash == StringHash.calculate_hash('SSPKG_SOCIAL_FRIEND_POWER_ADD'):
+        return 'SSPKG_SOCIAL_FRIEND_POWER_ADD'
+    
+    if hash == StringHash.calculate_hash('SSDT_SEND_POSER_TO_SOCIAL_FRIEND'):
+        return 'SSDT_SEND_POSER_TO_SOCIAL_FRIEND'
+    
+    if hash == StringHash.calculate_hash('SSPKG_RECV_POWER_FROM_SOCIAL_FRIEND'):
+        return 'SSPKG_RECV_POWER_FROM_SOCIAL_FRIEND'
+    
+    if hash == StringHash.calculate_hash('SSPKG_SOCIAL_FRIEND_INFO_CHANGE'):
+        return 'SSPKG_SOCIAL_FRIEND_INFO_CHANGE'
+    
+    if hash == StringHash.calculate_hash('SSPKG_FRIEND_INFO_REQUEST'):
+        return 'SSPKG_FRIEND_INFO_REQUEST'
+    
+    if hash == StringHash.calculate_hash('SSPKG_FRIEND_CROSS_INFO_RESPONSE_TO_CROSS'):
+        return 'SSPKG_FRIEND_CROSS_INFO_RESPONSE_TO_CROSS'
+    
+    if hash == StringHash.calculate_hash('SSPKG_FRIEND_CROSS_INFO_RESPONSE_TO_CROSS_TO_FRIEND'):
+        return 'SSPKG_FRIEND_CROSS_INFO_RESPONSE_TO_CROSS_TO_FRIEND'
+    
+    if hash == StringHash.calculate_hash('SSPKG_FRIEND_CROSS_INFO_RESPONSE'):
+        return 'SSPKG_FRIEND_CROSS_INFO_RESPONSE'
     
     if hash == StringHash.calculate_hash('SSDT_FRIEND_APPLY_INFO'):
         return 'SSDT_FRIEND_APPLY_INFO'
@@ -3438,6 +3744,12 @@ def get_pb_name(hash):
     if hash == StringHash.calculate_hash('SSDT_RELATION_INFO'):
         return 'SSDT_RELATION_INFO'
     
+    if hash == StringHash.calculate_hash('SSDT_SOCIAL_RELATION_INFO'):
+        return 'SSDT_SOCIAL_RELATION_INFO'
+    
+    if hash == StringHash.calculate_hash('SSDT_SEND_POWER_RECORD'):
+        return 'SSDT_SEND_POWER_RECORD'
+    
     if hash == StringHash.calculate_hash('DB_FRIEND_BLOB'):
         return 'DB_FRIEND_BLOB'
     
@@ -3455,6 +3767,18 @@ def get_pb_name(hash):
     
     if hash == StringHash.calculate_hash('SSPKG_FRIEND_NOTIFY_POWER_REFRESH_CROSS_DAY'):
         return 'SSPKG_FRIEND_NOTIFY_POWER_REFRESH_CROSS_DAY'
+    
+    if hash == StringHash.calculate_hash('SSPKG_FRIEND_RECV_POWER_ALL_REQ'):
+        return 'SSPKG_FRIEND_RECV_POWER_ALL_REQ'
+    
+    if hash == StringHash.calculate_hash('SSPKG_FRIEND_RECV_POWER_ALL_RES'):
+        return 'SSPKG_FRIEND_RECV_POWER_ALL_RES'
+    
+    if hash == StringHash.calculate_hash('SSPKG_FRIEND_SEND_POWER_ALL_REQ'):
+        return 'SSPKG_FRIEND_SEND_POWER_ALL_REQ'
+    
+    if hash == StringHash.calculate_hash('SSPKG_FRIEND_SEND_POWER_ALL_RES'):
+        return 'SSPKG_FRIEND_SEND_POWER_ALL_RES'
     
     if hash == StringHash.calculate_hash('PKG_FRIEND_DISP_INFO_CHG'):
         return 'PKG_FRIEND_DISP_INFO_CHG'
@@ -3479,8 +3803,12 @@ def res(f, pb):
         attrs = ['role_name']
         return f(pb, attrs)
     
+    if p == 'PLAYER_ACCOUNT_NAME_INFO':
+        attrs = ['role_name', 'uid', 'uin']
+        return f(pb, attrs)
+    
     if p == 'GM_GET_PLAYER_ACCOUNT_BY_NAME_RES':
-        attrs = ['role_name', 'uid', 'uin', 'result']
+        attrs = ['name_info', 'result']
         return f(pb, attrs)
     
     if p == 'GM_GET_PLAYER_ACCOUNT_BY_UID_REQ':
@@ -3599,8 +3927,12 @@ def res(f, pb):
         attrs = ['world_id', 'uid', 'mail_info']
         return f(pb, attrs)
     
+    if p == 'GM_MAIL_RES_INFO':
+        attrs = ['uid', 'mail_id']
+        return f(pb, attrs)
+    
     if p == 'GM_SEND_MAIL_RES':
-        attrs = ['failed_uid']
+        attrs = ['failed_uid', 'sucess_result']
         return f(pb, attrs)
     
     if p == 'GM_CHG_PLAYER_ATTR_REQ':
@@ -3667,8 +3999,12 @@ def res(f, pb):
         attrs = ['type', 'id', 'cnt']
         return f(pb, attrs)
     
+    if p == 'ResHeadPhoto':
+        attrs = ['id', 'pic', 'hero_num_limit', 'vip_level_limit', 'pve_dun_id_limit']
+        return f(pb, attrs)
+    
     if p == 'ResRoleGL':
-        attrs = ['hero_id', 'hero_desc', 'hero_name', 'res_name', 'protrait_name', 'audio_name', 'is_open', 'list_pos', 'buy_res_type', 'pre_dun_id', 'act_init_grow_up', 'act_init_level', 'unlock_emblem_ned_lv', 'unlock_emblem_hp_id', 'unlock_emblem_damage_id', 'init_skill_id', 'protrait_offset_x', 'protrait_offset_y', 'new_role_buf_cnt', 'buy_res_id', 'buy_res_count', 'buy_reward', 'unlock_cost', 'base_critical', 'base_critical_effect', 'base_critical_defence', 'base_critical_defence_effect', 'buy_res_discount']
+        attrs = ['hero_id', 'string', 'hero_name', 'res_name', 'protrait_name', 'audio_name', 'is_open', 'list_pos', 'buy_res_type', 'pre_dun_id', 'act_init_grow_up', 'act_init_level', 'unlock_emblem_ned_lv', 'unlock_emblem_hp_id', 'unlock_emblem_damage_id', 'init_skill_id', 'protrait_offset_x', 'protrait_offset_y', 'new_role_buf_cnt', 'buy_res_id', 'buy_res_count', 'buy_reward', 'unlock_cost', 'base_critical', 'base_critical_effect', 'base_critical_defence', 'base_critical_defence_effect', 'buy_res_discount']
         return f(pb, attrs)
     
     if p == 'ResChat':
@@ -3700,7 +4036,7 @@ def res(f, pb):
         return f(pb, attrs)
     
     if p == 'ResMonsterGL':
-        attrs = ['id', 'role_name', 'name', 'type', 'render_type', 'relation_index', 'res_file_name', 'behit_add_sp', 'sp_ratio', 'radius', 'unlock_name_tag', 'unlock_desc_tag', 'shadow_scale', 'role_scale', 'color_matching_id', 'head_pic', 'mini_head_pic', 'emblem_pic', 'attri_pic', 'full_pic_in_map_tip', 'hu_name_pic', 'vu_name_pic', 'bust_pic', 'portrait_pic', 'ai_type', 'grow_up_head_pic', 'string', 'string', 'string', 'string', 'boss_audios', 'param', 'endless_mode_param', 'battle_logic', 'basehp', 'backup_color_matching_id', 'level_up_type', 'base_damage_rate', 'hostile', 'spec_tagert', 'add_superarmor', 'hero_damage_rate']
+        attrs = ['id', 'string', 'name', 'type', 'render_type', 'relation_index', 'res_file_name', 'behit_add_sp', 'sp_ratio', 'radius', 'unlock_name_tag', 'unlock_desc_tag', 'shadow_scale', 'role_scale', 'color_matching_id', 'head_pic', 'mini_head_pic', 'emblem_pic', 'attri_pic', 'full_pic_in_map_tip', 'hu_name_pic', 'vu_name_pic', 'bust_pic', 'portrait_pic', 'ai_type', 'grow_up_head_pic', 'string', 'string', 'string', 'string', 'boss_audios', 'param', 'endless_mode_param', 'battle_logic', 'basehp', 'backup_color_matching_id', 'level_up_type', 'base_damage_rate', 'hostile', 'spec_tagert', 'add_superarmor', 'hero_damage_rate']
         return f(pb, attrs)
     
     if p == 'ResPreMonster':
@@ -3816,7 +4152,7 @@ def res(f, pb):
         return f(pb, attrs)
     
     if p == 'ResMiscInfo':
-        attrs = ['player_max_level', 'monster_max_level', 'init_crystal', 'init_gold', 'init_money', 'init_slot_id', 'init_building_info', 'init_hero_id', 'init_unlock_dun_id', 'endless_limit', 'combo_max_time', 'over_hit_max_time', 'over_hit_max_hp_percent', 'over_hit_add_score_ratio', 'left_time_add_score_ratio', 'over_hit_production', 'create_gang_cost_gold', 'fighting_hprate', 'fighting_atk_rate', 'gang_battle_dun_id', 'gang_battle_round_time_limit', 'endless_chamber_size_factor', 'endless_boss_hp_recover_drop_ratio', 'endless_boss_hp_recover_drop_count', 'rank_battle_dungeon_id', 'rank_battle_round_time_limit', 'rank_battle_base_count', 'rank_battle_buy_count_base_cost', 'rank_battle_unlock_role_cnt', 'daily_reset_time', 'endless_room_cnt', 'endless_floor_cnt_per_milestone', 'steal_battle_money_res_dun_id', 'steal_battle_gold_res_dun_id', 'steal_battle_crystal_res_dun_id', 'steal_battle_exp_res_dun_id', 'endless_refresh_hour', 'endless_refresh_min', 'endless_refresh_sec', 'wipe_out_need_item_id', 'buy_wipe_out_item_info', 'goods_common_count', 'goods_special_count', 'damage_ratio_factor', 'hp_ratio_factor', 'skill_point_display_item_id', 'pve_unlock_info', 'league_battle_small_city_lv', 'league_battle_mid_city_lv', 'league_battle_big_city_lv', 'rank_battle_hero_hide_level1', 'rank_battle_hero_hide_level2', 'rank_battle_hero_hide_level3', 'power_refresh_hour', 'power_refresh_min', 'power_refresh_sec', 'rank_battle_count_refresh_hour', 'rank_battle_count_refresh_min', 'rank_battle_count_refresh_sec', 'shop_count_refresh_hour', 'shop_count_refresh_min', 'shop_count_refresh_sec', 'fail_power', 'money_confirm_threshold', 'endless_monster_type_score', 'gang_battle_small_city_score', 'gang_battle_moderate_city_score', 'gang_battle_big_city_score', 'elite_mode_chances', 'elite_count_refresh_hour', 'elite_count_refresh_min', 'elite_count_refresh_sec', 'assist_fight_times_limit', 'online_battle_dun_id', 're_sign_cost_type', 're_sign_cost_price', 'init_hero_main_task_unlock_dun_id', 'normal_elite_hp_rate', 'normal_elite_st_rate', 'normal_boss_hp_rate', 'normal_boss_st_rate', 'endless_elite_hp_rate', 'endless_elite_st_rate', 'endless_boss_hp_rate', 'endless_boss_st_rate', 'elite_buy_count_cost_type', 'elite_buy_count_cost_id', 'elite_buy_count_cost_count', 'elite_buy_max_count', 'offline_battle_dun_id', 'role_relation_unlock_level', 'rank_battle_goods_common_count', 'rank_battle_goods_special_count', 'online_battle_init_score', 'online_battle_times_perday', 'online_battle_score_calc_ratio_a', 'online_battle_score_calc_ratio_b', 'online_battle_search_score', 'online_battle_match_wait_seconds', 'online_battle_win_point_ratio', 'online_battle_loseer_win_point_ratio', 'endless_wipeout_price_per_floor', 'game_play_mode_damage_rate', 'first_reward_info', 'loading_tip_count', 'vip_goods_common_count', 'vip_goods_special_count', 'vip_draw_all_unlock_level', 'steal_battle_times_limit', 'friend_power_cnt', 'damage_float_up', 'damage_float_down', 'max_recv_power_times_one_day', 'ten_wipeout_viplimit', 'vip_shop_unlock_viplevel']
+        attrs = ['player_max_level', 'monster_max_level', 'init_crystal', 'init_gold', 'init_money', 'init_slot_id', 'init_building_info', 'init_hero_id', 'init_unlock_dun_id', 'endless_limit', 'combo_max_time', 'over_hit_max_time', 'over_hit_max_hp_percent', 'over_hit_add_score_ratio', 'left_time_add_score_ratio', 'over_hit_production', 'create_gang_cost_gold', 'fighting_hprate', 'fighting_atk_rate', 'gang_battle_dun_id', 'gang_battle_round_time_limit', 'endless_chamber_size_factor', 'endless_boss_hp_recover_drop_ratio', 'endless_boss_hp_recover_drop_count', 'rank_battle_dungeon_id', 'rank_battle_round_time_limit', 'rank_battle_base_count', 'rank_battle_buy_count_base_cost', 'rank_battle_unlock_role_cnt', 'daily_reset_time', 'endless_room_cnt', 'endless_floor_cnt_per_milestone', 'steal_battle_money_res_dun_id', 'steal_battle_gold_res_dun_id', 'steal_battle_crystal_res_dun_id', 'steal_battle_exp_res_dun_id', 'endless_refresh_hour', 'endless_refresh_min', 'endless_refresh_sec', 'wipe_out_need_item_id', 'buy_wipe_out_item_info', 'goods_common_count', 'goods_special_count', 'damage_ratio_factor', 'hp_ratio_factor', 'skill_point_display_item_id', 'pve_unlock_info', 'league_battle_small_city_lv', 'league_battle_mid_city_lv', 'league_battle_big_city_lv', 'rank_battle_hero_hide_level1', 'rank_battle_hero_hide_level2', 'rank_battle_hero_hide_level3', 'power_refresh_hour', 'power_refresh_min', 'power_refresh_sec', 'rank_battle_count_refresh_hour', 'rank_battle_count_refresh_min', 'rank_battle_count_refresh_sec', 'shop_count_refresh_hour', 'shop_count_refresh_min', 'shop_count_refresh_sec', 'fail_power', 'money_confirm_threshold', 'endless_monster_type_score', 'gang_battle_small_city_score', 'gang_battle_moderate_city_score', 'gang_battle_big_city_score', 'elite_mode_chances', 'elite_count_refresh_hour', 'elite_count_refresh_min', 'elite_count_refresh_sec', 'assist_fight_times_limit', 'online_battle_dun_id', 're_sign_cost_type', 're_sign_cost_price', 'init_hero_main_task_unlock_dun_id', 'normal_elite_hp_rate', 'normal_elite_st_rate', 'normal_boss_hp_rate', 'normal_boss_st_rate', 'endless_elite_hp_rate', 'endless_elite_st_rate', 'endless_boss_hp_rate', 'endless_boss_st_rate', 'elite_buy_count_cost_type', 'elite_buy_count_cost_id', 'elite_buy_count_cost_count', 'elite_buy_max_count', 'offline_battle_dun_id', 'role_relation_unlock_level', 'rank_battle_goods_common_count', 'rank_battle_goods_special_count', 'online_battle_init_score', 'online_battle_times_perday', 'online_battle_score_calc_ratio_a', 'online_battle_score_calc_ratio_b', 'online_battle_search_score', 'online_battle_match_wait_seconds', 'online_battle_win_point_ratio', 'online_battle_loseer_win_point_ratio', 'endless_wipeout_price_per_floor', 'game_play_mode_damage_rate', 'first_reward_info', 'loading_tip_count', 'vip_goods_common_count', 'vip_goods_special_count', 'vip_draw_all_unlock_level', 'steal_battle_times_limit', 'friend_power_cnt', 'damage_float_up', 'damage_float_down', 'max_recv_power_times_one_day', 'ten_wipeout_viplimit', 'vip_shop_unlock_viplevel', 'max_send_power_times_one_day', 'pve_autofight_unlock_viplevel', 'friend_max_recommend_num', 'pve_autofight_unlock_dungoen_id', 'vip_wipeout_count', 'chat_unlock_dun_id', 'eventtip_unlock_dun_id']
         return f(pb, attrs)
     
     if p == 'ResHeroEvaluate':
@@ -3840,11 +4176,11 @@ def res(f, pb):
         return f(pb, attrs)
     
     if p == 'ResRobotBuild':
-        attrs = ['res_type', 'cur_born_res', 'hero_id', 'hero_lv', 'hero_growup', 'hero_strength', 'hero_stamina', 'monster_id', 'monster_lv', 'trap_id', 'trap_lv']
+        attrs = ['res_type', 'cur_born_res_low', 'cur_born_res_high', 'hero_lv_low', 'hero_lv_high', 'hero_strength_low', 'hero_strength_high', 'hero_stamina_low', 'hero_stamina_high', 'monster_id', 'monster_lv', 'trap_id', 'trap_lv']
         return f(pb, attrs)
     
     if p == 'ResPvpRobot':
-        attrs = ['uid', 'name', 'max_fight_capacity', 'is_land_info']
+        attrs = ['uid', 'max_fight_capacity', 'name']
         return f(pb, attrs)
     
     if p == 'ResPvpSerchInfo':
@@ -3852,11 +4188,11 @@ def res(f, pb):
         return f(pb, attrs)
     
     if p == 'ResPvpMisc':
-        attrs = ['steal_res_percent', 'broken_percent']
+        attrs = ['steal_res_percent', 'broken_percent', 'search_result_max', 'search_sect_max']
         return f(pb, attrs)
     
     if p == 'ResPvpSearchSect':
-        attrs = ['fight_capacity_low', 'fight_capacity_high', 'pvp_serch_info']
+        attrs = ['fight_capacity_low', 'fight_capacity_high', 'pvp_serch_info', 'pvp_robot_build_info']
         return f(pb, attrs)
     
     if p == 'ResStealBattlePrizeDraw':
@@ -3893,6 +4229,10 @@ def res(f, pb):
     
     if p == 'ResDungeonInfo':
         attrs = ['dungeon_id', 'dungeon_name', 'dungeon_type', 'mode', 'required_ability', 'is_refresh', 'cost_power', 'pre_dun_id', 'unlock_role_id', 'init_level', 'relive_limit', 'relive_cost', 'apperance', 'reward', 'dun_evaluate', 'first_drop_info', 'non_first_drop_info', 'wipe_out_drop_info', 'need_item', 'drop_display_info', 'evaluate_info', 'scene_name', 'bgm', 'is_elite_drop', 'drop_exp_limit', 'drop_exp_add', 'elite_drop_index', 'display_elite_drop_equip', 'new_role_buff_stamina', 'new_role_buff_strength']
+        return f(pb, attrs)
+    
+    if p == 'ResDungeonFightCapacityFix':
+        attrs = ['id', 'ability_low', 'ability_min_diff', 'atk_fix', 'life_fix', 'super_armor_fix']
         return f(pb, attrs)
     
     if p == 'ResDungeonReward':
@@ -3935,12 +4275,24 @@ def res(f, pb):
         attrs = ['id', 'seqid', 'type', 'group_id', 'remind_dun_id', 'reward_info', 'target_info']
         return f(pb, attrs)
     
+    if p == 'ResLoadingPicParam':
+        attrs = ['pic_index', 'tips_index']
+        return f(pb, attrs)
+    
+    if p == 'ResLoadingPic':
+        attrs = ['dun_id_start', 'loading_param']
+        return f(pb, attrs)
+    
     if p == 'ResColorMatchingParam':
         attrs = ['hue_min_angle', 'hue_max_angle', 'hue_angle']
         return f(pb, attrs)
     
     if p == 'ResColorMatching':
         attrs = ['id', 'param']
+        return f(pb, attrs)
+    
+    if p == 'ResOnlineBattleTitle':
+        attrs = ['score', 'title_id', 'level_id']
         return f(pb, attrs)
     
     if p == 'ResOfflineBattleTitle':
@@ -3976,7 +4328,7 @@ def res(f, pb):
         return f(pb, attrs)
     
     if p == 'ResSkillData':
-        attrs = ['skill_id', 'job_id', 'tree_pos', 'skill_name', 'skill_desc_param', 'skill_index', 'skill_level', 'skill_damage', 'endure_value', 'sub_skill_id', 'skill_set_id', 'operation', 'hit_add_sp', 'damage_att_rate', 'skill_icon', 'levelup_cost_sp', 'levelup_cost_res', 'limit_level', 'pre_skill_index', 'final_skill_cost_sp', 'skill_meta', 'fight_capacity']
+        attrs = ['skill_id', 'job_id', 'tree_pos', 'skill_name', 'skill_desc_param', 'skill_index', 'skill_level', 'skill_damage', 'endure_value', 'sub_skill_id', 'skill_set_id', 'operation', 'hit_add_sp', 'damage_att_rate', 'skill_icon', 'levelup_cost_sp', 'levelup_cost_res', 'limit_level', 'pre_skill_index', 'final_skill_cost_sp', 'skill_meta', 'fight_capacity', 'show_golden_frame']
         return f(pb, attrs)
     
     if p == 'ResSkillTree':
@@ -4016,7 +4368,7 @@ def res(f, pb):
         return f(pb, attrs)
     
     if p == 'ResRankBattleRobot':
-        attrs = ['uid', 'robot_name', 'hero_info']
+        attrs = ['uid', 'robot_name', 'head_photo', 'hero_info']
         return f(pb, attrs)
     
     if p == 'ResOnlineBattleRobotHeroInfo':
@@ -4040,7 +4392,7 @@ def res(f, pb):
         return f(pb, attrs)
     
     if p == 'ResPurchase':
-        attrs = ['product_index', 'product_name', 'product_picture', 'product_id', 'price', 'product_type', 'activity_id', 'count', 'promotion_cnt', 'reward_info', 'channel']
+        attrs = ['product_index', 'product_name', 'product_picture', 'product_id', 'price', 'product_type', 'activity_id', 'count', 'promotion_cnt', 'reward_info', 'channel', 'additional']
         return f(pb, attrs)
     
     if p == 'ResMonthCard':
@@ -4071,8 +4423,12 @@ def res(f, pb):
         attrs = ['parameter']
         return f(pb, attrs)
     
+    if p == 'ResGiftGroup':
+        attrs = ['gift_group_id', 'ex_change_cnt']
+        return f(pb, attrs)
+    
     if p == 'ResGift':
-        attrs = ['gift_id', 'ex_change_cnt', 'title', 'content', 'reward']
+        attrs = ['gift_id', 'gift_group_id', 'title', 'content', 'reward', 'enabled']
         return f(pb, attrs)
     
     if p == 'ResItem':
@@ -4092,7 +4448,7 @@ def res(f, pb):
         return f(pb, attrs)
     
     if p == 'ResEquip':
-        attrs = ['equip_id', 'pack_pic_id', 'evaluate', 'color', 'weight', 'equip_pos', 'base_exp', 'job_type', 'attr_base_strength', 'attr_base_stamina', 'price_for_sell', 'awesome_desc', 'levelup_strength_inc', 'levelup_stamina_inc', 'levelup_max_level', 'can_batch_sell', 'bind_to_hero', 'item_slot_index', 'return_gem_ratio', 'attr_color', 'attr_wakeup', 'attr_growup', 'drop_dun_id', 'output']
+        attrs = ['equip_id', 'pack_pic_id', 'evaluate', 'color', 'weight', 'equip_pos', 'base_exp', 'job_type', 'attr_base_strength', 'attr_base_stamina', 'price_for_sell', 'awesome_desc', 'levelup_strength_inc', 'levelup_stamina_inc', 'levelup_max_level', 'can_batch_sell', 'bind_to_hero', 'item_slot_index', 'return_gem_ratio', 'attr_color', 'attr_wakeup', 'attr_growup', 'drop_dun_id', 'output', 'is_retrieve']
         return f(pb, attrs)
     
     if p == 'ResMaterial':
@@ -4204,7 +4560,7 @@ def res(f, pb):
         return f(pb, attrs)
     
     if p == 'ResHeroImageInfo':
-        attrs = ['id', 'share_hero_card_offset_x', 'share_hero_card_offset_y', 'share_hero_card_scale']
+        attrs = ['id', 'share_hero_card_offset_x', 'share_hero_card_offset_y', 'share_hero_card_scale', 'share_hero_pve_offset_x', 'share_hero_pve_offset_y', 'share_hero_pve_scale']
         return f(pb, attrs)
     
     if p == 'ST_ACTION_DESC':
@@ -4275,12 +4631,32 @@ def res(f, pb):
         attrs = ['hero_id', 'grow_up', 'level', 'fight_capacity', 'max_hp', 'skill', 'attrs']
         return f(pb, attrs)
     
+    if p == 'ResRoleCommandList':
+        attrs = ['hero_id', 'item_number', 'skill_name_id', 'command', 'is_special']
+        return f(pb, attrs)
+    
+    if p == 'ResDailyTime':
+        attrs = ['hour', 'minute', 'second']
+        return f(pb, attrs)
+    
+    if p == 'ResActivity':
+        attrs = ['activity_id', 'activity_name', 'activity_type', 'trigger_type', 'beg_time', 'end_time', 'daily_beg_time', 'daily_end_time']
+        return f(pb, attrs)
+    
+    if p == 'ResNameExtra':
+        attrs = ['id', 'type', 'prefix', 'postfix']
+        return f(pb, attrs)
+    
+    if p == 'SCDT_FRIEND_BASE_INFO':
+        attrs = ['uid', 'name', 'head_photo', 'vip_level', 'last_logout_time', 'fighting_capacity', 'agree_time', 'endless_score', 'greatest_pve_dun_id']
+        return f(pb, attrs)
+    
     if p == 'SSDT_NOTIFY_MSG':
         attrs = ['msg_id', 'send_time', 'msg_type', 'sender']
         return f(pb, attrs)
     
     if p == 'SSDT_ROLE_ONLINE':
-        attrs = ['grow_up', 'level', 'money', 'cur_power', 'power_recover_beg_time', 'power_recover_total_time', 'power_last_refresh_time', 'buy_power_times', 'cur_achi_point', 'cur_crystal', 'cur_gold', 'cur_sp', 'cur_spborn_beg_time', 'cur_spborn_total_time', 'buy_sp_times', 'max_end_less_score', 'max_end_less_floor', 'cur_notify_beg_time', 'bit_mark', 'clt_bit_mark', 'grow_up_cnt', 'last_quit_gang_time', 'last_login_time', 'last_leave_time', 'last_logout_time', 'last_gang_battle_time', 'total_online_time', 'create_time', 'cur_rank_battle_score', 'buy_crystal_times', 'buy_gold_times']
+        attrs = ['grow_up', 'level', 'money', 'cur_power', 'power_recover_beg_time', 'power_recover_total_time', 'power_last_refresh_time', 'buy_power_times', 'cur_achi_point', 'cur_crystal', 'cur_gold', 'cur_sp', 'cur_spborn_beg_time', 'cur_spborn_total_time', 'buy_sp_times', 'max_end_less_score', 'max_end_less_floor', 'cur_notify_beg_time', 'bit_mark', 'clt_bit_mark', 'grow_up_cnt', 'last_quit_gang_time', 'last_login_time', 'last_leave_time', 'last_logout_time', 'last_gang_battle_time', 'total_online_time', 'create_time', 'cur_rank_battle_score', 'buy_crystal_times', 'buy_gold_times', 'head_photo']
         return f(pb, attrs)
     
     if p == 'SSDT_ROLE_QUEST':
@@ -4512,7 +4888,7 @@ def res(f, pb):
         return f(pb, attrs)
     
     if p == 'DBBLOB_TOWER_CHALLENGE_DATA':
-        attrs = ['balance_last_time', 'cur_score', 'cur_room_id', 'reset_cnt', 'hero_info']
+        attrs = ['reset_cnt', 'hero_info']
         return f(pb, attrs)
     
     if p == 'DBBLOB_SELFDUN_HERO_INFO':
@@ -4635,8 +5011,20 @@ def res(f, pb):
         attrs = ['month_card_info', 'con_login_7days_info', 'month_login_info', 'open_cumulate_login_info', 'growth_fund_info', 'cumulate_recharge_info', 'group_buy_info', 'first_purchase_info', 'first_reward_info']
         return f(pb, attrs)
     
+    if p == 'SSDT_PRIVATE_CHAT_INFO':
+        attrs = ['msg_data', 'msg_time', 'from_name', 'from_role_id', 'from_vip_level', 'to_role_id']
+        return f(pb, attrs)
+    
+    if p == 'SSPKG_OFFLINE_PRIVATE_CHAT_MSG':
+        attrs = ['to_role_id', 'msg_target_role_id', 'msg_info']
+        return f(pb, attrs)
+    
+    if p == 'DBBLOB_OFFLIEN_PRIVATE_CHAT':
+        attrs = ['offline_private_chat_info']
+        return f(pb, attrs)
+    
     if p == 'DBBLOB_MISC_DATA':
-        attrs = ['quest_info', 'gift_accept_info', 'shop_info', 'behaviour_info', 'offline_battle_info', 'online_battle_info', 'business_info', 'prize_draw_info']
+        attrs = ['quest_info', 'gift_accept_info', 'shop_info', 'behaviour_info', 'offline_battle_info', 'online_battle_info', 'business_info', 'prize_draw_info', 'offline_private_chat_info']
         return f(pb, attrs)
     
     if p == 'DBBLOB_NOTIFY_DATA':
@@ -4720,23 +5108,23 @@ def res(f, pb):
         return f(pb, attrs)
     
     if p == 'PKG_VIEW_PLAYER_INFO_REQ':
-        attrs = ['view_role_id', 'is_from_gang']
+        attrs = ['view_role_id', 'is_from_gang', 'vip_level']
         return f(pb, attrs)
     
     if p == 'PKG_VIEW_PLAYER_INFO_RSP_FROM_GANG_SVR':
-        attrs = ['result', 'view_role_id', 'is_from_gang', 'gang_name']
+        attrs = ['result', 'view_role_id', 'is_from_gang', 'gang_name', 'vip_level']
         return f(pb, attrs)
     
     if p == 'PKG_VIEW_PLAYER_INFO_RSP_FROM_RANK_BATTLE_SVR':
-        attrs = ['result', 'view_role_id', 'is_from_gang', 'gang_name', 'rank_battle_pos']
+        attrs = ['result', 'view_role_id', 'is_from_gang', 'gang_name', 'rank_battle_pos', 'vip_level']
         return f(pb, attrs)
     
     if p == 'PKG_VIEW_PLAYER_INFO_RSP_FROM_RANK_SVR':
-        attrs = ['result', 'view_role_id', 'is_from_gang', 'gang_name', 'rank_battle_pos', 'achievement_rank_pos']
+        attrs = ['result', 'view_role_id', 'is_from_gang', 'gang_name', 'rank_battle_pos', 'achievement_rank_pos', 'vip_level']
         return f(pb, attrs)
     
     if p == 'PKG_VIEW_PLAYER_INFO_RSP_FROM_ROLE_SVR':
-        attrs = ['result', 'view_role_id', 'is_from_gang', 'gang_name', 'rank_battle_pos', 'achievement_rank_pos', 'role_name', 'endless_max_floor', 'dun_data_info', 'hero_info', 'misc_data', 'hero_equiped_info']
+        attrs = ['result', 'view_role_id', 'is_from_gang', 'gang_name', 'rank_battle_pos', 'achievement_rank_pos', 'role_name', 'endless_max_floor', 'dun_data_info', 'hero_info', 'misc_data', 'hero_equiped_info', 'vip_level', 'head_photo']
         return f(pb, attrs)
     
     if p == 'PKG_ROLE_LOGOUT_REQ':
@@ -4768,19 +5156,31 @@ def res(f, pb):
         return f(pb, attrs)
     
     if p == 'PKG_CREATE_NAME':
-        attrs = ['result', 'unique_id', 'role_name', 'uid', 'zone_id', 'world_id', 'create_time']
+        attrs = ['result', 'unique_id', 'role_name', 'uid', 'zone_id', 'world_id', 'create_time', 'head_photo']
+        return f(pb, attrs)
+    
+    if p == 'SSDT_RECOMMAND_NAME':
+        attrs = ['name']
         return f(pb, attrs)
     
     if p == 'PKG_CREATE_NAME_RES':
-        attrs = ['result', 'unique_id', 'role_name', 'photo_head', 'uid', 'zone_id', 'world_id']
+        attrs = ['result', 'unique_id', 'role_name', 'head_photo', 'uid', 'zone_id', 'world_id', 'recommand_name']
+        return f(pb, attrs)
+    
+    if p == 'PKG_RANDOM_NAME_REQ':
+        attrs = ['uid']
+        return f(pb, attrs)
+    
+    if p == 'PKG_RANDOM_NAME_RES':
+        attrs = ['uid', 'name']
         return f(pb, attrs)
     
     if p == 'PKG_VERIFY_NAME':
-        attrs = ['result', 'unique_id', 'role_name', 'uid', 'zone_id', 'world_id', 'create_time']
+        attrs = ['result', 'unique_id', 'role_name', 'uid', 'zone_id', 'world_id', 'create_time', 'head_photo', 'recommand_name']
         return f(pb, attrs)
     
     if p == 'PKG_CREATE_WORLDROLE':
-        attrs = ['result', 'unique_id', 'role_name', 'uid', 'world_id', 'create_time']
+        attrs = ['result', 'unique_id', 'role_name', 'uid', 'world_id', 'create_time', 'head_photo']
         return f(pb, attrs)
     
     if p == 'PKG_BIND_PLATACCOUNT_REQ':
@@ -5111,6 +5511,14 @@ def res(f, pb):
         attrs = ['gang_list']
         return f(pb, attrs)
     
+    if p == 'PKG_CMD_SEARCH_GANG_REQ':
+        attrs = ['gang_id', 'role_id']
+        return f(pb, attrs)
+    
+    if p == 'PKG_CMD_SEARCH_GANG_RES':
+        attrs = ['result', 'gang_id', 'gang_info']
+        return f(pb, attrs)
+    
     if p == 'PKG_ROLELOGIN_GANG_REQ':
         attrs = ['role_id', 'gang_battle_win_score', 'zone_id', 'cumulate_recharge_id']
         return f(pb, attrs)
@@ -5119,16 +5527,24 @@ def res(f, pb):
         attrs = ['gang_simple_info', 'self_info', 'apply_list_count', 'is_have_gang']
         return f(pb, attrs)
     
-    if p == 'PKG_CREATE_GANG_REQ':
-        attrs = ['gang_name', 'gang_id_gen_by_cluster', 'gang_creator_name', 'gang_notify', 'gang_creator_unique_id', 'gang_creator_role_id', 'is_auto_apply', 'cond_rank_pos', 'gang_create_time', 'gang_name_equal_role', 'cumulate_recharge_id']
+    if p == 'SSDT_CREATE_GANG_INFO':
+        attrs = ['gang_name', 'gang_creator_name', 'gang_notify', 'gang_creator_role_id', 'is_auto_apply', 'cond_rank_pos', 'gang_create_time', 'cumulate_recharge_id']
         return f(pb, attrs)
     
-    if p == 'PKG_CREATE_GANG_NAME_RSP':
-        attrs = ['gang_name', 'gang_id_gen_by_cluster', 'gang_creator_name', 'gang_notify', 'gang_creator_unique_id', 'gang_creator_role_id', 'is_auto_apply', 'cond_rank_pos', 'gang_create_time', 'gang_name_equal_role', 'cumulate_recharge_id']
+    if p == 'PKG_CREATE_GANG_REQ':
+        attrs = ['create_gang_info']
+        return f(pb, attrs)
+    
+    if p == 'PKG_CREATE_GANG_NAME_RSP_FROM_NAME_SVR':
+        attrs = ['is_gang_name_exist', 'create_gang_info']
+        return f(pb, attrs)
+    
+    if p == 'PKG_CREATE_GANG_NAME_RSP_FROM_ACCOUNT_SVR':
+        attrs = ['result', 'gang_id_generate', 'create_gang_info']
         return f(pb, attrs)
     
     if p == 'PKG_CREATE_GANG_RES':
-        attrs = ['result', 'creator_role_id', 'creator_unique_id', 'gang_simple_info', 'self_info']
+        attrs = ['result', 'gang_name']
         return f(pb, attrs)
     
     if p == 'PKG_GANG_UPDATE_BASIC_INFO_REQ':
@@ -5355,6 +5771,14 @@ def res(f, pb):
         attrs = ['result', 'mem_attck_info']
         return f(pb, attrs)
     
+    if p == 'PKG_GET_GANG_BATTLE_STATE_INFO_REQ':
+        attrs = ['role_id', 'gang_id', 'hero_id']
+        return f(pb, attrs)
+    
+    if p == 'PKG_GET_GANG_BATTLE_STATE_INFO_RES':
+        attrs = ['is_battle_start', 'has_can_attack_hero', 'has_can_attack_point']
+        return f(pb, attrs)
+    
     if p == 'GANG_BROADCAST_DETAIL':
         attrs = ['gang_simple_info_chg', 'gang_mem_list_chg', 'gang_chat_msg', 'gang_city_chg', 'gang_auto_apply_battle_chg', 'gang_battle_state', 'gang_battle_point_state']
         return f(pb, attrs)
@@ -5416,7 +5840,7 @@ def res(f, pb):
         return f(pb, attrs)
     
     if p == 'SSDT_RANK_BATTLE_HERO_BRIEF':
-        attrs = ['hero_id', 'hero_lv', 'grow_up']
+        attrs = ['hero_id', 'hero_lv', 'fighting_capacity']
         return f(pb, attrs)
     
     if p == 'SSDT_PLAYER_BASE_INFO':
@@ -5471,6 +5895,10 @@ def res(f, pb):
         attrs = ['uid', 'role_name', 'role_level', 'cumulate_recharge_id', 'end_less_score', 'end_less_floor']
         return f(pb, attrs)
     
+    if p == 'SSPKG_UPDATE_PVE_EVALUATE_STATS_REQ':
+        attrs = ['uid', 'role_name', 'role_level', 'cumulate_recharge_id', 'pve_evaluate_stars']
+        return f(pb, attrs)
+    
     if p == 'SSDT_RANK_ONE_UPDATE':
         attrs = ['rank_id', 'flush_day_time', 'next_flush_day_time', 'flush_week_time', 'next_flush_week_time', 'flush_month_time', 'next_flush_month_time']
         return f(pb, attrs)
@@ -5496,7 +5924,7 @@ def res(f, pb):
         return f(pb, attrs)
     
     if p == 'SSPKG_RANK_BATTLE_ROLELOGIN_REQ':
-        attrs = ['role_id', 'can_join_rank_battle', 'role_name', 'cumulate_recharge_id', 'defense_hero_info']
+        attrs = ['role_id', 'can_join_rank_battle', 'role_name', 'cumulate_recharge_id', 'defense_hero_info', 'head_photo']
         return f(pb, attrs)
     
     if p == 'SSPKG_RANK_BATTLE_ROLELOGIN_RES':
@@ -5508,7 +5936,7 @@ def res(f, pb):
         return f(pb, attrs)
     
     if p == 'SSDT_RANK_BATTLE_FIGHT_TARGET_INFO':
-        attrs = ['role_id', 'role_name', 'rank_pos', 'defense_hero_info']
+        attrs = ['role_id', 'role_name', 'rank_pos', 'defense_hero_info', 'head_photo']
         return f(pb, attrs)
     
     if p == 'SSPKG_RANK_BATTLE_GET_FIGHT_TARGET_RES':
@@ -5528,7 +5956,7 @@ def res(f, pb):
         return f(pb, attrs)
     
     if p == 'SSPKG_RANK_BATTLE_BALANCE_REQ':
-        attrs = ['attacker_mem_role_id', 'attacker_mem_name', 'attacker_cumulate_recharge_id', 'attacker_mem_defense_hero_info', 'defense_mem_role_id', 'battle_result']
+        attrs = ['attacker_mem_role_id', 'attacker_mem_name', 'attacker_cumulate_recharge_id', 'attacker_mem_defense_hero_info', 'attacker_head_photo', 'defense_mem_role_id', 'battle_result']
         return f(pb, attrs)
     
     if p == 'SSPKG_RANK_BATTLE_BALANCE_RES':
@@ -5579,8 +6007,16 @@ def res(f, pb):
         attrs = ['transaction_id', 'uid', 'unique_id', 'praram', 'product_id', 'receipt']
         return f(pb, attrs)
     
+    if p == 'SSPKG_PURCHASE_INFO':
+        attrs = ['product_id', 'trade_code', 'transaction_id', 'server_id', 'uid', 'unique_id', 'money', 'coin', 'time']
+        return f(pb, attrs)
+    
     if p == 'SSPKG_PURCHASE_REQUEST_DELIVERY':
-        attrs = ['product_id', 'trade_code', 'sn', 'server_id', 'uid', 'unique_id', 'money', 'coin', 'time']
+        attrs = ['info']
+        return f(pb, attrs)
+    
+    if p == 'SSPKG_PURCHASE_REQUEST_DELIVERY_DEAL':
+        attrs = ['info']
         return f(pb, attrs)
     
     if p == 'SSPKG_PURCHASE_DONE':
@@ -5695,12 +6131,92 @@ def res(f, pb):
         attrs = ['role_id', 'shop_type', 'goods_id']
         return f(pb, attrs)
     
-    if p == 'SSDT_FRIEND_BASE_INFO':
-        attrs = ['uid', 'name', 'head_photo', 'vip_level', 'last_logout_time', 'fighting_capacity']
+    if p == 'SSDT_FRIEND_CROSS_INFO':
+        attrs = ['uid', 'uin', 'uin3rd', 'world_id', 'platform']
+        return f(pb, attrs)
+    
+    if p == 'SSPKG_BIND_3RD_PLATFORM_ID':
+        attrs = ['bind_info']
+        return f(pb, attrs)
+    
+    if p == 'SSPKG_BIND_3RD_PLATFORM_ID_TO_FRIEND':
+        attrs = ['bind_info']
+        return f(pb, attrs)
+    
+    if p == 'SSDT_REQUEST_SOCIAL_FRIEND':
+        attrs = ['time_stamp', 'uid', 'platform', 'world_id', 'uid_3rd']
+        return f(pb, attrs)
+    
+    if p == 'SSPKG_REQUEST_SOCIAL_FRIEND':
+        attrs = ['data']
+        return f(pb, attrs)
+    
+    if p == 'SSPKG_REQUEST_SOCIAL_FRIEND_CROSS':
+        attrs = ['data']
         return f(pb, attrs)
     
     if p == 'SSDT_FRIEND_INFO':
-        attrs = ['base_info', 'can_receive_power', 'has_send_power', 'hero_info']
+        attrs = ['base_info', 'receive_power_state', 'has_send_power']
+        return f(pb, attrs)
+    
+    if p == 'SSDT_SOCIAL_FRIEND_INFO':
+        attrs = ['cross_info', 'friend_info']
+        return f(pb, attrs)
+    
+    if p == 'SSDT_FRIEND_INFO_CROSS':
+        attrs = ['time_stamp', 'uid', 'world_id', 'social_friend_info']
+        return f(pb, attrs)
+    
+    if p == 'SSPKG_NOTIFY_SOCIAL_FRIEND_ERROR':
+        attrs = ['error_code']
+        return f(pb, attrs)
+    
+    if p == 'SSDT_SOCIAL_FRIEND_ID':
+        attrs = ['uid', 'uid_3rd', 'world_id']
+        return f(pb, attrs)
+    
+    if p == 'SSPKG_SEND_POWER_TO_SOCIAL_FRIEND':
+        attrs = ['from', 'uid_3rd']
+        return f(pb, attrs)
+    
+    if p == 'SSPKG_SEND_POWER_TO_SOCIAL_FRIEND_FROM_CROSS':
+        attrs = ['from', 'to']
+        return f(pb, attrs)
+    
+    if p == 'SSPKG_SEND_POWER_TO_SOCIAL_FRIEND_CROSS':
+        attrs = ['from', 'to']
+        return f(pb, attrs)
+    
+    if p == 'SSPKG_SOCIAL_FRIEND_POWER_ADD':
+        attrs = ['uid', 'zone_id', 'uid_3rd_from']
+        return f(pb, attrs)
+    
+    if p == 'SSDT_SEND_POSER_TO_SOCIAL_FRIEND':
+        attrs = ['uid_from', 'uid_3rd_from', 'world_id_to', 'uid_3rd_to', 'uid_to']
+        return f(pb, attrs)
+    
+    if p == 'SSPKG_RECV_POWER_FROM_SOCIAL_FRIEND':
+        attrs = ['uid', 'uid_3rd']
+        return f(pb, attrs)
+    
+    if p == 'SSPKG_SOCIAL_FRIEND_INFO_CHANGE':
+        attrs = ['uid', 'zone_id', 'social_friend']
+        return f(pb, attrs)
+    
+    if p == 'SSPKG_FRIEND_INFO_REQUEST':
+        attrs = ['data']
+        return f(pb, attrs)
+    
+    if p == 'SSPKG_FRIEND_CROSS_INFO_RESPONSE_TO_CROSS':
+        attrs = ['data']
+        return f(pb, attrs)
+    
+    if p == 'SSPKG_FRIEND_CROSS_INFO_RESPONSE_TO_CROSS_TO_FRIEND':
+        attrs = ['data']
+        return f(pb, attrs)
+    
+    if p == 'SSPKG_FRIEND_CROSS_INFO_RESPONSE':
+        attrs = ['zone_id', 'data']
         return f(pb, attrs)
     
     if p == 'SSDT_FRIEND_APPLY_INFO':
@@ -5724,11 +6240,11 @@ def res(f, pb):
         return f(pb, attrs)
     
     if p == 'SSPKG_LOGIN_FRIEND_SVR_REQ':
-        attrs = ['uid', 'uin', 'hero_info', 'role_name', 'vip_level', 'head_photo', 'zone_id']
+        attrs = ['uid', 'uin', 'hero_info', 'role_name', 'vip_level', 'head_photo', 'zone_id', 'endless_score', 'greatest_pve_dun_id']
         return f(pb, attrs)
     
     if p == 'SSPKG_LOGIN_FRIEND_SVR_RES':
-        attrs = ['result', 'recv_power_times_today', 'friend_info']
+        attrs = ['result', 'recv_power_times_today', 'friend_info', 'self_info']
         return f(pb, attrs)
     
     if p == 'SSPKG_FRIEND_INFO_CHG':
@@ -5736,11 +6252,19 @@ def res(f, pb):
         return f(pb, attrs)
     
     if p == 'SSDT_RELATION_INFO':
-        attrs = ['role_id', 'can_recv_power_from_this_friend', 'has_send_power_to_this_friend']
+        attrs = ['role_id', 'recv_power_from_this_friend_state', 'has_send_power_to_this_friend', 'agree_time']
+        return f(pb, attrs)
+    
+    if p == 'SSDT_SOCIAL_RELATION_INFO':
+        attrs = ['uid_3rd', 'recv_power_from_this_friend_state', 'has_send_power_to_this_friend']
+        return f(pb, attrs)
+    
+    if p == 'SSDT_SEND_POWER_RECORD':
+        attrs = ['role_id']
         return f(pb, attrs)
     
     if p == 'DB_FRIEND_BLOB':
-        attrs = ['apply_info', 'hero_info', 'relation_info']
+        attrs = ['apply_info', 'hero_info', 'relation_info', 'social_relation_info', 'send_power_record']
         return f(pb, attrs)
     
     if p == 'SSPKG_FRIEND_NOTIFY_APPLYLIST_CHG':
@@ -5763,8 +6287,24 @@ def res(f, pb):
         attrs = ['uid', 'zone_id']
         return f(pb, attrs)
     
+    if p == 'SSPKG_FRIEND_RECV_POWER_ALL_REQ':
+        attrs = ['uid', 'recv_power_friend_uid']
+        return f(pb, attrs)
+    
+    if p == 'SSPKG_FRIEND_RECV_POWER_ALL_RES':
+        attrs = ['recv_power_success_friend_uid', 'recv_power_faild_friend_uid', 'recv_power_times_today']
+        return f(pb, attrs)
+    
+    if p == 'SSPKG_FRIEND_SEND_POWER_ALL_REQ':
+        attrs = ['uid', 'send_power_friend_uid']
+        return f(pb, attrs)
+    
+    if p == 'SSPKG_FRIEND_SEND_POWER_ALL_RES':
+        attrs = ['send_power_success_friend_uid', 'send_power_faild_friend_uid']
+        return f(pb, attrs)
+    
     if p == 'PKG_FRIEND_DISP_INFO_CHG':
-        attrs = ['uid', 'last_logout_time', 'vip_level', 'head_photo', 'fighting_capacity']
+        attrs = ['uid', 'last_logout_time', 'vip_level', 'head_photo', 'fighting_capacity', 'endless_score', 'greatest_pve_dun_id']
         return f(pb, attrs)
     
     if p == 'FRIEND_BROADCAST_DETAIL':
