@@ -313,7 +313,6 @@ class Tabel(object):
 
     @classmethod
     def history_query_select(self, sub_menu, panel, request_get):
-        print request_get
         condition = ()
         if 'start' in request_get:
             r = "LogDt >= '" + request_get.get('start') + "'"

@@ -11,8 +11,10 @@
      startDate: "-3d",
      endDate: "0d"
    });
+  management.numberOnly("input[name='uid']");
   management.numberOnly("input[name='moneys']");
   management.numberOnly("input[name='moneye']");
+  queryButton.initQuery();
  });
 </script>
 <div class="container-fluid white-bg">
@@ -59,9 +61,4 @@
     </div>
   </div>
 </div>
-<script type="text/javascript">
- $(document).ready(function() {
-  management.numberOnly("input[name='uid']");
- });
-</script>
 {% endblock %}

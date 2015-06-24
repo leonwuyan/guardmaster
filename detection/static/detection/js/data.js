@@ -335,6 +335,18 @@
       _queryButton.active('ul#zone-list li:first');
       _queryButton.active('ul#channel-list li:first');
       $('#count-button').click();
+    },
+    'initQuery': function () {
+      if ($('input[name="start"]').length > 0) {
+        var d = new Date();
+        var year = d.getFullYear();
+        var month = d.getMonth() + 1;
+        if (month < 10) month_end = '0' + month;
+        var day = d.getDate();
+        if (day < 10) day = '0' + day;
+        $('input[name="start"]').val(year + '-' + month + '-' + day);
+        $('input[name="end"]').val(year + '-' + month + '-' + day);
+      }
     }
   };
   var _management = {
