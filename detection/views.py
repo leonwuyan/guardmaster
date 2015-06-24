@@ -7,6 +7,7 @@ import subprocess
 import random
 import json
 import decimal
+import logging
 
 
 def view_init():
@@ -47,8 +48,15 @@ def sh_remote_log(panel, request_get):
         request_get.get('uid')
     ]
     cmd = ' '.join(cmd)
-    s = subprocess.Popen(cmd, shell=True, cwd=path)
-    s.wait()
+    cmd = 'ls -la'
+    path = '/'
+    s = subprocess.Popen(cmd, shell=True, cwd=path, stdout=subprocess.PIPE)
+    retcode = s.wait()
+    output = s.communicate()
+    logger = logging.getLogger(__name__)
+    logger.info(cmd + '|' + str(retcode))
+    logger.info('STDOUT------------------------------\n' + str(output[0]))
+    logger.info('STDERR------------------------------\n' + str(output[1]))
 
 
 def view_template(request, panel_id, url):

@@ -206,6 +206,14 @@ LOGGING = {
             'backupCount': 5,
             'formatter': 'simple',
         },
+        'shell': {
+            'level': 'INFO',
+            'class': 'logging.handlers.RotatingFileHandler',
+            'filename': os.path.join(BASE_DIR, 'log/shell.log'),
+            'maxBytes': 1024*1024*5,
+            'backupCount': 5,
+            'formatter': 'simple',
+        },
         'console': {
             'level': 'DEBUG',
             'class': 'logging.StreamHandler',
@@ -225,6 +233,11 @@ LOGGING = {
         },
         'operating.servercontrol': {
             'handlers': ['guardmaster', 'error', 'console'],
+            'level': 'INFO',
+            'propagate': True
+        },
+        'detection.views': {
+            'handlers': ['shell', 'error', 'console'],
             'level': 'INFO',
             'propagate': True
         },
