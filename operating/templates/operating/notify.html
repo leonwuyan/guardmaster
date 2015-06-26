@@ -19,10 +19,14 @@
 {% trans "Fail" as t_fail %}
 {% trans "Please Check The Input Is Right" as t_p_c_t_i_i_r %}
 {% trans "The Will Be DIR Notify When The Zone Is All Zone" as t_w_b_d_n_w_t_z_i_a_z %}
-{% trans "Add Notify Without Synchronization" as t_a_n_w_s %}
+{% trans "Add Or Edit Notify Without Synchronization" as t_a_r_e_n_w_s %}
 {% trans "Synchronize Notify" as t_synchronize_notify %}
 {% trans "Delete" as t_delete %}
+{% trans "Edit" as t_edit %}
 {% trans "Operate" as t_operate %}
+{% trans "Attention" as t_attention %}
+{% trans "Please Edit The Notify" as t_p_e_t_n %}
+{% trans "Back" as t_back %}
 <div class="container-fluid white-bg">
   <div class="row">
     <ol class="breadcrumb">
@@ -42,28 +46,37 @@
         <strong>{{t_fail}}!</strong>&emsp;{{t_p_c_t_i_i_r}}
       </div>
     {% endif %}
+    {% if notify %}
+      <div class="alert alert-warning alert-dismissible" role="alert">
+        <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <strong>{{t_attention}}!</strong>&emsp;{{t_p_e_t_n}}&emsp;{{notify.title}}
+      </div>
+    {% endif %}
 
-    <form class="form" role="form" method="post">
+    <form class="form" role="form" method="post" action="{% url 'operating:notify' panel.id url %}">
     {% csrf_token %}
+    {% if notify %}
+      <input type="hidden" name="id" value="{{notify.id}}">
+    {% endif %}
       <div class="form-group" style="margin-bottom: 5px">
         <label>{{t_list_of_servers}}</label>
         <select class="form-control" name="hostname">
           {% for server in servers %}
-          <option value="{{server.hostname}}">{{server.label}}</option>
+          <option value="{{server.hostname}}" {% ifequal notify.hostname server.hostname %}selected{% endifequal %}>{{server.label}}</option>
           {% endfor %}
         </select>
       </div>
       <div class="form-group" style="margin-bottom:5px">
         <label for="title">{{ t_notify_title }}</label>&emsp;<span class="label label-danger">{{ t_4_words_limited }}</span>
-        <input type="text" class="form-control" id="title" name="title">
+        <input type="text" class="form-control" id="title" name="title" value="{{ notify.title }}">
       </div>
       <div class="form-group" style="margin-bottom:5px">
         <label for="content">{{ t_notify_content }}</label>
-        <textarea class="form-control" id="content" name="content" rows="5"></textarea>
+        <textarea class="form-control" id="content" name="content" rows="5">{{ notify.content }}</textarea>
       </div>
       <div class="form-group" style="margin-bottom:5px">
         <label for="link">{{ t_picture_link }}</label>
-        <input type="text" class="form-control" id="link" name="link">
+        <input type="text" class="form-control" id="link" name="link" value="{{ notify.link }}">
       </div>
       <div class="form-group">
         <label>{{t_other_options}}</label>&emsp;<span class="label label-danger">{{ t_w_b_d_n_w_t_z_i_a_z }}</span>
@@ -74,7 +87,7 @@
               <select class="form-control" name="channel">
                 {% for channel in channels %}
                 {% if channel.EnumCd != 0 %}
-                <option value="{{channel.EnumCd}}">{{channel.EnumDes}}</option>
+                <option value="{{channel.EnumCd}}" {% ifequal notify.channel channel.EnumCd %}selected{% endifequal %}>{{channel.EnumDes}}</option>
                 {% endif %}
                 {% endfor %}
               </select>
@@ -84,8 +97,8 @@
             <div class="input-group">
               <span class="input-group-addon">{{t_platform}}</span>
               <select class="form-control" name="platform">
-                <option value="ios">iOS</option>
-                <option value="android">Android</option>
+                <option value="ios" {% ifequal notify.platform 'ios' %}selected{% endifequal %}>iOS</option>
+                <option value="android" {% ifequal notify.platform 'android' %}selected{% endifequal %}>Android</option>
               </select>
             </div>
           </div>
@@ -94,7 +107,7 @@
               <span class="input-group-addon">{{t_zone}}</span>
               <select class="form-control" name="zone">
                 {% for zone in zones %}
-                <option value="{{zone.EnumCd}}">{{zone.EnumDes}}</option>
+                <option value="{{zone.EnumCd}}" {% ifequal notify.world_id zone.EnumCd %}selected{% endifequal %}>{{zone.EnumDes}}</option>
                 {% endfor %}
               </select>
             </div>
@@ -103,23 +116,28 @@
             <div class="input-group">
               <span class="input-group-addon">{{t_is_display}}</span>
               <select class="form-control" name="is_display">
-                <option value="1">Yes</option>
-                <option value="0">No</option>
+                <option value="1" {% ifequal notify.is_display '1' %}selected{% endifequal %}>Yes</option>
+                <option value="0" {% ifequal notify.is_display '0' %}selected{% endifequal %}>No</option>
               </select>
             </div>
           </div>
           <div class="col-md-2">
             <div class="input-group">
               <span class="input-group-addon" id="seqid-addon">{{t_seqid}}</span>
-              <input type="text" class="form-control" value="0" aria-describedby="seqid-addon" name="seqid">
+              <input type="text" class="form-control" value="{{ notify.seqid|default:0}}" aria-describedby="seqid-addon" name="seqid">
             </div>
           </div>
         </div>
       </div>
-      <button type="submit" class="btn btn-primary btn-sm">{{t_add}}</button>
-      &emsp;<span class="text-success">{{t_a_n_w_s}}</span>
+      {% if notify %}
+      <button type="submit" class="btn btn-primary btn-sm">{{ t_edit }}</button>
+      <a href="{% url 'operating:notify' panel.id url %}">{{ t_back}}</a>
+      {% else %}
+      <button type="submit" class="btn btn-primary btn-sm">{{ t_add }}</button>
+      {% endif %}
+      &emsp;<span class="text-success">{{ t_a_r_e_n_w_s }}</span>
     </form>
-
+  {% if not notify %}
     <div class="panel panel-default" style="margin-top: 50px">
       <div class="panel-heading">{{t_notify_info}}
       <span class="pull-right">
@@ -158,19 +176,33 @@
               <td>{{r.world_id}}</td>
               <td>{{r.is_display}}</td>
               <td>{{r.seqid}}</td>
-              <td><button class="btn-xs btn btn-danger" type="button" onclick="dataAccess.notifyJSON({{r.id}}, '{{r.title}}')">{{t_delete}}</button></td>
+              <td><a href="{% url 'operating:edit_notify' panel.id r.id %}"><button class="btn-xs btn btn-primary" type="button">{{t_edit}}</button></a><br><br><button class="btn-xs btn btn-danger" type="button" onclick="dataAccess.notifyJSON({{r.id}}, '{{r.title}}')">{{t_delete}}</button></td>
             </tr>
           {% endfor %}
           </tbody>
         </table>
       </div>
     </div>
+  {% endif %}
   </div>
   <center style='color: #999; padding-top: 20px; font-family: "arial","NSimSun","SimSun","STSong","AR PL SungtiL GB","TW\-Sung","WenQuanYi Bitmap Song"; font-size: 14px; font-weight: bold;'>{{excuse}}</center>
 </div>
 <script type="text/javascript">
  $(document).ready(function() {
   management.numberOnly("input[name='seqid']");
+  var toolbar = ['bold', 'color', '|', 'link'];
+  var allowedtags = ['br', 'a', 'b', 'font'];
+  var allowedattributes = {
+    'a': ['url'],
+    'font': ['color']
+  }
+  var editor = new Simditor({
+    textarea: $('#content'),
+    toolbar: toolbar,
+    allowedTags: allowedtags,
+    allowedAttributes: allowedattributes,
+    tabIndent: false
+  });
  });
 </script>
 {% endblock %}

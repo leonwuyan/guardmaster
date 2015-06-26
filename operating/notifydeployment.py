@@ -2,6 +2,7 @@ from operating.models import Notify, CDNServer
 from django.shortcuts import get_object_or_404
 from detection.models import Panel
 import subprocess
+import logging
 import json
 import os
 
@@ -53,10 +54,13 @@ class NotifyDeployment(object):
         BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
         OPERATING_DIR = '/operating/notify/'
         list_cdn = panel.cdnserver_set.all()
+        logger = logging.getLogger(__name__)
+        print __name__
         for cdn in list_cdn:
             cmd = 'scp -P ' + str(cdn.port) + ' -r ' + BASE_DIR + OPERATING_DIR
             cmd += ' ' + cdn.ip + ':' + cdn.home
-            ret = subprocess.Popen(cmd, shell=True)
+            ret = subprocess.Popen(cmd, shell=True, stdout=subprocess.PIPE)
+            logger.info(cmd)
         self.cdn_url = map(lambda x: cdn.cdn_url + 'notify/' + x, self.cdn_url)
 
     def tojson(self):
@@ -71,7 +75,7 @@ class NotifyDeployment(object):
 
     def _get(self, post, k):
         if post.get(k):
-            return post.get(k)
+            return post.get(k).replace('"', "'").replace('#', '').replace('&nbsp;', ' ')
         return None
 
     def add(self, post):
@@ -83,19 +87,32 @@ class NotifyDeployment(object):
             post.get('zone'),
             'n.json'
         ])
-        n = Notify(
-            title=self._get(post, 'title'),
-            content=self._get(post, 'content'),
-            panel=panel,
-            is_display=post.get('is_display'),
-            link=post.get('link'),
-            hostname=post.get('hostname'),
-            channel=post.get('channel'),
-            platform=post.get('platform'),
-            world_id=post.get('zone'),
-            notify_url=notify_url,
-            seqid=self._get(post, 'seqid')
-        )
+        if 'id' in post:
+            n = get_object_or_404(Notify, pk=post.get('id'))
+            n.title = self._get(post, 'title')
+            n.content = self._get(post, 'content')
+            n.is_display = post.get('is_display')
+            n.link = post.get('link')
+            n.hostname = post.get('hostname')
+            n.channel = post.get('channel')
+            n.platform = post.get('platform')
+            n.world_id = post.get('zone')
+            n.notify_url = notify_url
+            n.seqid = self._get(post, 'seqid')
+        else:
+            n = Notify(
+                title=self._get(post, 'title'),
+                content=self._get(post, 'content'),
+                panel=panel,
+                is_display=post.get('is_display'),
+                link=post.get('link'),
+                hostname=post.get('hostname'),
+                channel=post.get('channel'),
+                platform=post.get('platform'),
+                world_id=post.get('zone'),
+                notify_url=notify_url,
+                seqid=self._get(post, 'seqid')
+            )
         ret = 1
         try:
             n.save()

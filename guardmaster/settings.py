@@ -128,6 +128,14 @@ DATABASES = {
         'HOST': '192.168.1.76',
         'PORT': '3308',
     },
+    'db_flty_statdb': {
+        'ENGINE': 'django.db.backends.mysql',
+        'NAME': 'db_flty_statdb',
+        'USER': 'act',
+        'PASSWORD': '123456',
+        'HOST': '192.168.1.76',
+        'PORT': '3309',
+    },
 }
 
 
@@ -233,6 +241,11 @@ LOGGING = {
         },
         'operating.servercontrol': {
             'handlers': ['guardmaster', 'error', 'console'],
+            'level': 'INFO',
+            'propagate': True
+        },
+        'operating.notifydeployment': {
+            'handlers': ['shell', 'error', 'console'],
             'level': 'INFO',
             'propagate': True
         },

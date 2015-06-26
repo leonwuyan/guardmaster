@@ -53,6 +53,7 @@ def notify(request, panel_id, url=Common.URL):
     d['notifys'] = panel.notify_set.all()
     d['channels'] = enum_channel_list(panel_id)
     d['zones'] = enum_zone_list(panel_id)
+    d['url'] = url
     if request.method == 'POST':
         nd = NotifyDeployment(panel_id, request.user.username)
         ret = nd.add(request.POST)
@@ -60,15 +61,28 @@ def notify(request, panel_id, url=Common.URL):
     return render(request, t, d)
 
 
-@require_http_methods(["POST"])
 @Common.competence_required
-def delete_notify(request, panel_id, id):
-    notify = get_object_or_404(Notify, pk=id)
-    notify.delete()
-    ret = 0
-    ret = {'result': ret}
-    ret = json.dumps(ret, ensure_ascii=False)
-    return HttpResponse(ret, content_type='application/json')
+def edit_notify(request, panel_id, id):
+    if request.method == 'GET':
+        t = "operating/notify.html"
+        url = 'notify'
+        d = view_template(request, panel_id, url)
+        panel = get_object_or_404(Panel, pk=panel_id)
+        notify = get_object_or_404(Notify, pk=id)
+        d['servers'] = panel.server_set.all()
+        d['notifys'] = panel.notify_set.all()
+        d['channels'] = enum_channel_list(panel_id)
+        d['zones'] = enum_zone_list(panel_id)
+        d['url'] = url
+        d['notify'] = notify
+        return render(request, t, d)
+    if request.method == 'POST':
+        notify = get_object_or_404(Notify, pk=id)
+        notify.delete()
+        ret = 0
+        ret = {'result': ret}
+        ret = json.dumps(ret, ensure_ascii=False)
+        return HttpResponse(ret, content_type='application/json')
 
 
 @Common.competence_required
