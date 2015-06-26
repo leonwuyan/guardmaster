@@ -40,13 +40,16 @@ class NotifyDeployment(object):
     def _writejson(self):
         BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
         OPERATING_DIR = '/operating/notify/'
-        path = BASE_DIR + OPERATING_DIR
-        cmd = 'rm -rf *'
-        s = subprocess.Popen(cmd, shell=True, cwd=path, stdout=subprocess.PIPE)
-        retcode = s.wait()
-        logger = logging.getLogger(__name__)
-        logger.info(path + '|' + cmd + '|' + str(retcode))
         self.cdn_url = []
+        panel = get_object_or_404(Panel, pk=self.panel_id)
+        servers = panel.server_set.all()
+        for server in servers:
+            path = BASE_DIR + OPERATING_DIR + server.hostname + '/'
+            cmd = 'rm -rf *'
+            s = subprocess.Popen(cmd, shell=True, cwd=path, stdout=subprocess.PIPE)
+            retcode = s.wait()
+            logger = logging.getLogger(__name__)
+            logger.info(path + '|' + cmd + '|' + str(retcode))
         for k in self.json.keys():
             path = BASE_DIR + OPERATING_DIR + k
             if not os.path.exists(path):
