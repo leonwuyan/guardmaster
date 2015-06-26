@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2015-06-18 23:15+0800\n"
+"POT-Creation-Date: 2015-06-26 17:18+0800\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -528,7 +528,7 @@ msgid "The Will Be DIR Notify When The Zone Is All Zone"
 msgstr ""
 
 #: templates/operating/notify.html:22
-msgid "Add Notify Without Synchronization"
+msgid "Add Or Edit Notify Without Synchronization"
 msgstr ""
 
 #: templates/operating/notify.html:23
@@ -540,7 +540,23 @@ msgid "Delete"
 msgstr ""
 
 #: templates/operating/notify.html:25
+msgid "Edit"
+msgstr ""
+
+#: templates/operating/notify.html:26
 msgid "Operate"
+msgstr ""
+
+#: templates/operating/notify.html:27
+msgid "Attention"
+msgstr ""
+
+#: templates/operating/notify.html:28
+msgid "Please Edit The Notify"
+msgstr ""
+
+#: templates/operating/notify.html:29
+msgid "Back"
 msgstr ""
 
 #: templates/operating/package_info.html:2

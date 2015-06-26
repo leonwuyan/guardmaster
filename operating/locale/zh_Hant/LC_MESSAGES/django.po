@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2015-06-18 23:15+0800\n"
-"PO-Revision-Date: 2015-06-11 21:26+0800\n"
+"POT-Creation-Date: 2015-06-26 17:18+0800\n"
+"PO-Revision-Date: 2015-06-26 17:21+0800\n"
 "Last-Translator: Raynor <raynor41@gmail.com>\n"
 "Language-Team: \n"
 "Language: zh_TW\n"
@@ -120,10 +120,8 @@ msgid "Add"
 msgstr "添加"
 
 #: templates/operating/base_info.html:27
-#, fuzzy
-#| msgid "Channel"
 msgid "Change"
-msgstr "渠道"
+msgstr "變更"
 
 #: templates/operating/base_info.html:28
 msgid "Kick Player"
@@ -531,8 +529,8 @@ msgid "The Will Be DIR Notify When The Zone Is All Zone"
 msgstr "檔區服選擇全部區服時講會是一個DIR公告"
 
 #: templates/operating/notify.html:22
-msgid "Add Notify Without Synchronization"
-msgstr "添加公告不會同步到外網"
+msgid "Add Or Edit Notify Without Synchronization"
+msgstr "添加或者修改公告不會同步到外網"
 
 #: templates/operating/notify.html:23
 msgid "Synchronize Notify"
@@ -543,8 +541,24 @@ msgid "Delete"
 msgstr "刪除"
 
 #: templates/operating/notify.html:25
+msgid "Edit"
+msgstr "修改"
+
+#: templates/operating/notify.html:26
 msgid "Operate"
 msgstr "操作"
+
+#: templates/operating/notify.html:27
+msgid "Attention"
+msgstr "注意"
+
+#: templates/operating/notify.html:28
+msgid "Please Edit The Notify"
+msgstr "請修改公告"
+
+#: templates/operating/notify.html:29
+msgid "Back"
+msgstr "返回"
 
 #: templates/operating/package_info.html:2
 msgid "Package & Item"

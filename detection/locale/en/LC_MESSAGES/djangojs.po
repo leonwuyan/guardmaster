@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2015-06-11 21:19+0800\n"
+"POT-Creation-Date: 2015-06-26 17:21+0800\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -21,34 +21,34 @@ msgstr ""
 msgid "en"
 msgstr ""
 
-#: static/detection/js/data.js:152
-msgid "Confirm Adding 100K?"
+#: static/detection/js/data.js:155
+msgid "Confirm Adding %(count)s ?"
 msgstr ""
 
-#: static/detection/js/data.js:163
-msgid "Confirm Adding 10K?"
+#: static/detection/js/data.js:172
+msgid "Confirm Change To %(count)s ?"
 msgstr ""
 
-#: static/detection/js/data.js:173
+#: static/detection/js/data.js:185
 msgid "Confirm Unlocking Dungeon To %(type_id)s ?"
 msgstr ""
 
-#: static/detection/js/data.js:186
+#: static/detection/js/data.js:198
 msgid "Confirm Kicking Player UID %(uid)s ?"
 msgstr ""
 
-#: static/detection/js/data.js:198
+#: static/detection/js/data.js:210
 msgid "Confirm Chat Ban Player %(type_id)s Day?"
 msgstr ""
 
-#: static/detection/js/data.js:211
+#: static/detection/js/data.js:223
 msgid "Confirm Account Ban Player %(type_id)s Day?"
 msgstr ""
 
-#: static/detection/js/data.js:254
+#: static/detection/js/data.js:266
 msgid "Confirm To Delete This Notify %(title)s?"
 msgstr ""
 
-#: static/detection/js/data.js:290
+#: static/detection/js/data.js:302
 msgid "Confirm To Synchronize All The Noitfy To The CDNServer?"
 msgstr ""

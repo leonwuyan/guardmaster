@@ -52,7 +52,7 @@ def sh_remote_log(panel, request_get):
     retcode = s.wait()
     output = s.communicate()
     logger = logging.getLogger(__name__)
-    logger.info(cmd + '|' + str(retcode))
+    logger.info(path + '|' + cmd + '|' + str(retcode))
     # logger.info('STDOUT------------------------------\n' + str(output[0]))
     # logger.info('STDERR------------------------------\n' + str(output[1]))
 

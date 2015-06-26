@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2015-06-11 21:19+0800\n"
-"PO-Revision-Date: 2015-06-11 21:28+0800\n"
+"POT-Creation-Date: 2015-06-26 17:21+0800\n"
+"PO-Revision-Date: 2015-06-26 17:24+0800\n"
 "Last-Translator: Raynor <raynor41@gmail.com>\n"
 "Language-Team: \n"
 "Language: zh_TW\n"
@@ -22,34 +22,37 @@ msgstr ""
 msgid "en"
 msgstr "zh-TW"
 
-#: static/detection/js/data.js:152
-msgid "Confirm Adding 100K?"
-msgstr "確認增加100k？"
+#: static/detection/js/data.js:155
+msgid "Confirm Adding %(count)s ?"
+msgstr "確認增加 %(count)s ?"
 
-#: static/detection/js/data.js:163
-msgid "Confirm Adding 10K?"
-msgstr "確認增加10k？"
+#: static/detection/js/data.js:172
+msgid "Confirm Change To %(count)s ?"
+msgstr "確認變更到 %(type_id)s ?"
 
-#: static/detection/js/data.js:173
+#: static/detection/js/data.js:185
 msgid "Confirm Unlocking Dungeon To %(type_id)s ?"
 msgstr "確認解鎖地下城到 %(type_id)s 層?"
 
-#: static/detection/js/data.js:186
+#: static/detection/js/data.js:198
 msgid "Confirm Kicking Player UID %(uid)s ?"
 msgstr "確認踢掉玩家 UID %(uid)s 下線?"
 
-#: static/detection/js/data.js:198
+#: static/detection/js/data.js:210
 msgid "Confirm Chat Ban Player %(type_id)s Day?"
 msgstr "確認禁言玩家 %(type_id)s 天?"
 
-#: static/detection/js/data.js:211
+#: static/detection/js/data.js:223
 msgid "Confirm Account Ban Player %(type_id)s Day?"
 msgstr "確認鎖定玩家 %(type_id)s 天?"
 
-#: static/detection/js/data.js:254
+#: static/detection/js/data.js:266
 msgid "Confirm To Delete This Notify %(title)s?"
 msgstr "確認刪除公告 %(title)s?"
 
-#: static/detection/js/data.js:290
+#: static/detection/js/data.js:302
 msgid "Confirm To Synchronize All The Noitfy To The CDNServer?"
 msgstr "確認將所有公告同步到CDN服務器?"
+
+#~ msgid "Confirm Adding 100K?"
+#~ msgstr "確認增加100k？"

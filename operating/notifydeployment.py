@@ -40,6 +40,12 @@ class NotifyDeployment(object):
     def _writejson(self):
         BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
         OPERATING_DIR = '/operating/notify/'
+        path = BASE_DIR + OPERATING_DIR
+        cmd = 'rm -rf *'
+        s = subprocess.Popen(cmd, shell=True, cwd=path, stdout=subprocess.PIPE)
+        retcode = s.wait()
+        logger = logging.getLogger(__name__)
+        logger.info(path + '|' + cmd + '|' + str(retcode))
         self.cdn_url = []
         for k in self.json.keys():
             path = BASE_DIR + OPERATING_DIR + k
@@ -55,7 +61,6 @@ class NotifyDeployment(object):
         OPERATING_DIR = '/operating/notify/'
         list_cdn = panel.cdnserver_set.all()
         logger = logging.getLogger(__name__)
-        print __name__
         for cdn in list_cdn:
             cmd = 'scp -P ' + str(cdn.port) + ' -r ' + BASE_DIR + OPERATING_DIR
             cmd += ' ' + cdn.ip + ':' + cdn.home
