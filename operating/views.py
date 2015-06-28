@@ -159,7 +159,7 @@ def contact_reply(request, panel_id, issue_id):
                 content,
                 Common.now(),
                 request.user.username,
-                Common.first(ret['sucess_result'])['mail_id']
+                str(Common.first(ret['sucess_result'])['mail_id'])
             )
             if ret['result'] == 0:
                 Tabel.contact_insert(panel, vals)

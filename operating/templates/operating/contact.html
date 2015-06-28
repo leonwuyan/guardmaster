@@ -92,7 +92,7 @@
             <label for="content">{{ t_mail_content }}</label>&emsp;<span class="label label-danger">{{ t_120_words_limited }}</span>
             <input type="text" class="form-control" id="content" name="content">
           </div>
-          <button type="submit" class="btn btn-primary btn-sm">{{t_reply}}</button>
+          <button type="submit" class="btn btn-primary btn-sm" onclick="return queryButton.mailConfirm()">{{t_reply}}</button>
           <a href="{% url 'operating:contact' panel.id 'contact' %}">{{t_return_list}}</a>
         </form>
       </li>

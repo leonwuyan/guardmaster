@@ -46,12 +46,12 @@ class ValueFormat(object):
     def _channel_list(self, id):
         if self.channel_list is None:
             self.channel_list = Tabel.get_enum(self.panel_id, Common.E_CHANNELID)
-        return Common.filter_enum(self.channel_list, id, id)
+        return Common.filter_enum(self.channel_list, int(id), id)
 
     def _zone_list(self, id):
         if self.zone_list is None:
             self.zone_list = Tabel.get_enum(self.panel_id, Common.E_ZONEID)
-        return Common.filter_enum(self.zone_list, id, id)
+        return Common.filter_enum(self.zone_list, int(id), id)
 
     def _identity_str(self, x):
         return str(x)

@@ -83,7 +83,7 @@ class NotifyDeployment(object):
 
     def _get(self, post, k):
         if post.get(k):
-            return post.get(k).replace('"', "'").replace('#', '').replace('&nbsp;', ' ')
+            return post.get(k).replace('"', "'").replace('#', '').replace('&nbsp;', ' ').replace('&lt;br&gt;', '<br>')
         return None
 
     def add(self, post):

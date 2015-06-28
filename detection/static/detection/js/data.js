@@ -329,7 +329,7 @@
         if (month_end < 10) month_end = '0' + month_end;
       	var day = d.getDate();
       	if (day < 10) day = '0' + day;
-      	$('input[name="start"]').val(year + '-' + month_start + '-01');
+      	$('input[name="start"]').val(year + '-' + '06-27');
       	$('input[name="end"]').val(year + '-' + month_end + '-' + day);
       }
       _queryButton.active('ul#zone-list li:first');
@@ -341,11 +341,22 @@
         var d = new Date();
         var year = d.getFullYear();
         var month = d.getMonth() + 1;
-        if (month < 10) month_end = '0' + month;
+        if (month < 10) month = '0' + month;
         var day = d.getDate();
         if (day < 10) day = '0' + day;
         $('input[name="start"]').val(year + '-' + month + '-' + day);
         $('input[name="end"]').val(year + '-' + month + '-' + day);
+      }
+    },
+    'mailConfirm': function () {
+      if ($('#title').val() == "" || $('#content').val() == ""){
+        alert(gettext('Title And Content Is Required'));
+        return false;
+      }
+      fmts = gettext('Please Confirm This:\nTitle :%(t)s\nContent :%(c)s');
+      s = interpolate(fmts, {'t':$('#title').val(), 'c':$('#content').val()}, true);
+      if (!confirm(s)) {
+        return false;
       }
     }
   };

@@ -298,16 +298,18 @@ class Tabel(object):
         if 'moneye' in request_get:
             r = "money <= " + request_get.get('moneye')
             condition = condition + (r,)
-        if len(condition) > 0:
-            condition = (" AND ".join(condition), )
+        tmp = ()
         if 'uin' in request_get:
             r = "Uin = '" + request_get.get('uin') + "'"
-            condition = condition + (r,)
+            tmp = tmp + (r,)
         if 'uid' in request_get:
             r = "UID = " + request_get.get('uid')
-            condition = condition + (r,)
+            tmp = tmp + (r,)
+        if len(tmp) > 0:
+            tmp = " OR ".join(tmp)
+            condition = condition + (tmp,)
         if len(condition) > 0:
-            condition = " OR ".join(condition)
+            condition = " AND ".join(condition)
         ret = self.select(sub_menu, panel, condition)
         return ret
 

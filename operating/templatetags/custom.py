@@ -22,7 +22,7 @@ def ts2time(timestamp):
         return ""
     if ts == 0:
         return _('Not Time')
-    return time.strftime("%Y-%m-%d %H:%M:%S", time.gmtime(ts))
+    return time.strftime("%Y-%m-%d %H:%M:%S", time.localtime(ts))
 
 
 def second2time(second):
