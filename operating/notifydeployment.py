@@ -45,11 +45,12 @@ class NotifyDeployment(object):
         servers = panel.server_set.all()
         for server in servers:
             path = BASE_DIR + OPERATING_DIR + server.hostname + '/'
-            cmd = 'rm -rf *'
-            s = subprocess.Popen(cmd, shell=True, cwd=path, stdout=subprocess.PIPE)
-            retcode = s.wait()
-            logger = logging.getLogger(__name__)
-            logger.info(path + '|' + cmd + '|' + str(retcode))
+            if os.path.exists(path):
+                cmd = 'rm -rf *'
+                s = subprocess.Popen(cmd, shell=True, cwd=path, stdout=subprocess.PIPE)
+                retcode = s.wait()
+                logger = logging.getLogger(__name__)
+                logger.info(path + '|' + cmd + '|' + str(retcode))
         for k in self.json.keys():
             path = BASE_DIR + OPERATING_DIR + k
             if not os.path.exists(path):

@@ -252,6 +252,7 @@ class Tabel(object):
     @classmethod
     def user_qeury_select(self, sub_menu, panel, request_get):
         condition = ()
+        ret = []
         if 'uin' in request_get:
             r = "Uin = '" + request_get.get('uin') + "'"
             condition = condition + (r,)
@@ -263,12 +264,13 @@ class Tabel(object):
             condition = condition + (r,)
         if len(condition) > 0:
             condition = " OR ".join(condition)
-        ret = self.select(sub_menu, panel, condition)
+            ret = self.select(sub_menu, panel, condition)
         return ret
 
     @classmethod
     def gang_qeury_select(self, sub_menu, panel, request_get):
         condition = ()
+        ret = []
         if 'g_n' in request_get:
             r = "GangName like '%" + request_get.get('g_n') + "%'"
             condition = condition + (r,)
@@ -280,7 +282,7 @@ class Tabel(object):
             condition = condition + (r,)
         if len(condition) > 0:
             condition = " OR ".join(condition)
-        ret = self.select(sub_menu, panel, condition)
+            ret = self.select(sub_menu, panel, condition)
         return ret
 
     @classmethod

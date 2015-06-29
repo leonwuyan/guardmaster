@@ -193,9 +193,8 @@ class ServerControl(object):
         ret = ss.lock_player(self.uid, time)
         return ret
 
-    def all_rank(self, rank_id, rank_start, rank_count):
+    def all_rank(self, world_id, rank_id, rank_start, rank_count):
         ss = ServerSocket(self.server.ip, self.server.port)
-        world_id = 1
         if rank_count <= 0:
             rank_count = 1
         rank = ss.get_rank_list(world_id, rank_id, rank_start, rank_count)

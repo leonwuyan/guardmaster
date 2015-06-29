@@ -38,7 +38,7 @@ def sh_remote_log(panel, request_get):
     path = '/root/bbc_statdb/tools/shells/'
     server = panel.server_set.get(ip=request_get.get('server'))
     cmd = [
-        './remote_getuidlog.sh',
+        './remote_getuidlog_multi.sh',
         panel.symbol,
         request_get.get('server'),
         server.home,

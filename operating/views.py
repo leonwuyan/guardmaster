@@ -209,6 +209,7 @@ def rank(request, panel_id, url=Common.URL):
     d = view_template(request, panel_id, url)
     panel = get_object_or_404(Panel, pk=panel_id)
     d['servers'] = panel.server_set.all()
+    d['zones'] = enum_zone_list(panel_id)
     rank_sc = ServerControl(0, 0, panel_id, request.user.username)
     d['ranks'] = rank_sc.ranks()
     if request.method == 'POST':
@@ -216,10 +217,11 @@ def rank(request, panel_id, url=Common.URL):
         rank_id = int(request.POST['rank'])
         rank_start = int(request.POST['rank_start'])
         rank_end = int(request.POST['rank_end'])
+        world_id = int(request.POST['zone'])
         rank_count = rank_end - rank_start + 1
         server = get_object_or_404(Server, pk=server_id)
         sc = ServerControl(server, 0, panel_id, request.user.username)
-        ret = sc.all_rank(rank_id, rank_start, rank_count)
+        ret = sc.all_rank(world_id, rank_id, rank_start, rank_count)
         d['rank'] = ret
         d['server_id'] = server_id
         d['rank_id'] = rank_id
