@@ -178,12 +178,12 @@ def change_single(request, panel_id, url, type):
     ret = {}
     second_param = 0
     if type == 'add':
-        type_id = int(request.POST['type_id'])
+        second_param = int(request.POST['type_id'])
         count = int(request.POST['count'])
-        ret = sc.add_attr(type_id=type_id, count=count)
+        ret = sc.add_attr(type_id=second_param, count=count)
     if type == 'recharge':
-        count = int(request.POST['count'])
-        ret = sc.add_vip_level(count)
+        second_param = int(request.POST['count'])
+        ret = sc.add_vip_level(second_param)
     if type == 'dungeon':
         second_param = int(request.POST['dungeon_id'])
         ret = sc.unlock_dungeon(second_param)
