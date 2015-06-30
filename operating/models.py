@@ -7,13 +7,21 @@ from django.db import models
 
 
 class Server(models.Model):
+    SERVER_TYPE_LIST = {
+        ('dir', _('Dir Server')),
+        ('cdn', _('CDN Server')),
+        ('normal', _('Normal Server')),
+    }
     label = models.CharField(max_length=45, unique=True)
     panel = models.ForeignKey(Panel)
+    server_type = models.CharField(max_length=45, choices=SERVER_TYPE_LIST)
     ip = models.GenericIPAddressField()
-    port = models.IntegerField()
+    port = models.IntegerField(help_text=_('GM Port, Usually Is 9135'))
+    ssh_port = models.IntegerField(help_text=_('SSH Port, Usually Is 22'))
     hostname = models.CharField(max_length=45)
     home = models.CharField(max_length=60)
     user = models.CharField(max_length=45)
+    cdn_url = models.CharField(max_length=256, blank=True, null=True)
 
     def __unicode__(self):
         return self.label

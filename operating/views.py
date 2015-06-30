@@ -49,7 +49,7 @@ def notify(request, panel_id, url=Common.URL):
     t = "operating/notify.html"
     d = view_template(request, panel_id, url)
     panel = get_object_or_404(Panel, pk=panel_id)
-    d['servers'] = panel.server_set.all()
+    d['servers'] = panel.server_set.filter(server_type='dir')
     d['notifys'] = panel.notify_set.all()
     d['channels'] = enum_channel_list(panel_id)
     d['zones'] = enum_zone_list(panel_id)
@@ -69,7 +69,7 @@ def edit_notify(request, panel_id, id):
         d = view_template(request, panel_id, url)
         panel = get_object_or_404(Panel, pk=panel_id)
         notify = get_object_or_404(Notify, pk=id)
-        d['servers'] = panel.server_set.all()
+        d['servers'] = panel.server_set.filter(server_type='dir')
         d['notifys'] = panel.notify_set.all()
         d['channels'] = enum_channel_list(panel_id)
         d['zones'] = enum_zone_list(panel_id)
@@ -90,7 +90,7 @@ def mail(request, panel_id, url=Common.URL):
     t = "operating/mail.html"
     d = view_template(request, panel_id, url)
     panel = get_object_or_404(Panel, pk=panel_id)
-    d['servers'] = panel.server_set.all()
+    d['servers'] = panel.server_set.filter(server_type='dir')
     d['equips'] = enum_equip_list(panel_id)
     d['items'] = enum_item_list(panel_id)
     d['responsemails'] = Common.get_panel_response_mail(panel)
@@ -109,7 +109,7 @@ def single(request, panel_id, url=Common.URL):
     t = "operating/single.html"
     d = view_template(request, panel_id, url)
     panel = get_object_or_404(Panel, pk=panel_id)
-    d['servers'] = panel.server_set.all()
+    d['servers'] = panel.server_set.filter(server_type='dir')
     if request.method == 'POST':
         server_id = int(request.POST['server'])
         uid = int(request.POST['uid'])
@@ -127,7 +127,7 @@ def contact(request, panel_id, url=Common.URL):
     t = "operating/contact.html"
     d = view_template(request, panel_id, url)
     panel = get_object_or_404(Panel, pk=panel_id)
-    d['servers'] = panel.server_set.all()
+    d['servers'] = panel.server_set.filter(server_type='dir')
     return render(request, t, d)
 
 
@@ -138,7 +138,7 @@ def contact_reply(request, panel_id, issue_id):
     d = view_template(request, panel_id, url)
     panel = get_object_or_404(Panel, pk=panel_id)
     sub_menu = Common.get_user_sub_menu(request.user, url)
-    d['servers'] = panel.server_set.all()
+    d['servers'] = panel.server_set.filter(server_type='dir')
     issue = Tabel.contact_select(sub_menu, panel, {'id': issue_id})
     if not issue:
         return HttpResponseRedirect('/')
@@ -208,7 +208,7 @@ def rank(request, panel_id, url=Common.URL):
     t = "operating/rank.html"
     d = view_template(request, panel_id, url)
     panel = get_object_or_404(Panel, pk=panel_id)
-    d['servers'] = panel.server_set.all()
+    d['servers'] = panel.server_set.filter(server_type='dir')
     d['zones'] = enum_zone_list(panel_id)
     rank_sc = ServerControl(0, 0, panel_id, request.user.username)
     d['ranks'] = rank_sc.ranks()

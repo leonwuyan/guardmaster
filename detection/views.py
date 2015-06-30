@@ -169,5 +169,5 @@ def history_query(request, panel_id, url=Common.URL):
     t = "detection/history_query.html"
     d = view_template(request, panel_id, url)
     panel = get_object_or_404(Panel, pk=panel_id)
-    d['servers'] = panel.server_set.all()
+    d['servers'] = panel.server_set.filter(server_type='dir')
     return render(request, t, d)

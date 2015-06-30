@@ -1,4 +1,4 @@
-from operating.models import Notify, CDNServer
+from operating.models import Notify
 from django.shortcuts import get_object_or_404
 from detection.models import Panel
 import subprocess
@@ -63,10 +63,11 @@ class NotifyDeployment(object):
     def _scpjson(self, panel):
         BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
         OPERATING_DIR = '/operating/notify/'
-        list_cdn = panel.cdnserver_set.all()
+        list_cdn = panel.server_set.filter(server_type='cdn')
         logger = logging.getLogger(__name__)
         for cdn in list_cdn:
-            cmd = 'scp -P ' + str(cdn.port) + ' -r ' + BASE_DIR + OPERATING_DIR
+            cmd = 'scp -P ' + str(cdn.ssh_port) + ' -r '
+            cmd += BASE_DIR + OPERATING_DIR
             cmd += ' ' + cdn.ip + ':' + cdn.home
             ret = subprocess.Popen(cmd, shell=True, stdout=subprocess.PIPE)
             logger.info(cmd)

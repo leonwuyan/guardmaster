@@ -5,9 +5,9 @@ from operating.models import Server, ResponseMail, CDNServer, Notify
 
 
 class ServerAdmin(admin.ModelAdmin):
-    list_display = ('label', 'panel', 'ip', 'port', 'hostname', 'home', 'user')
+    list_display = ('label', 'panel', 'server_type', 'ip', 'hostname')
     search_fields = ['label']
-    list_filter = ['panel']
+    list_filter = ['panel', 'server_type']
 
 
 class CDNServerAdmin(admin.ModelAdmin):
