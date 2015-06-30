@@ -1,5 +1,5 @@
 from django.contrib import admin
-from operating.models import Server, ResponseMail, CDNServer, Notify
+from operating.models import Server, ResponseMail, Notify
 
 # Register your models here.
 
@@ -8,12 +8,6 @@ class ServerAdmin(admin.ModelAdmin):
     list_display = ('label', 'panel', 'server_type', 'ip', 'hostname')
     search_fields = ['label']
     list_filter = ['panel', 'server_type']
-
-
-class CDNServerAdmin(admin.ModelAdmin):
-    list_display = ('label', 'panel', 'ip', 'port', 'hostname', 'home', 'cdn_url')
-    search_fields = ['label']
-    list_filter = ['panel']
 
 
 class ResponseMailAdmin(admin.ModelAdmin):
@@ -28,6 +22,5 @@ class NotifyAdmin(admin.ModelAdmin):
     list_filter = ['panel', 'hostname', 'channel', 'platform', 'world_id']
 
 admin.site.register(Server, ServerAdmin)
-admin.site.register(CDNServer, CDNServerAdmin)
 admin.site.register(ResponseMail, ResponseMailAdmin)
 admin.site.register(Notify, NotifyAdmin)

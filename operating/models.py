@@ -30,22 +30,6 @@ class Server(models.Model):
         db_table = 'config_server'
 
 
-class CDNServer(models.Model):
-    label = models.CharField(max_length=45, unique=True)
-    panel = models.ForeignKey(Panel)
-    ip = models.GenericIPAddressField()
-    port = models.IntegerField()
-    hostname = models.CharField(max_length=45)
-    home = models.CharField(max_length=60)
-    cdn_url = models.CharField(max_length=256)
-
-    def __unicode__(self):
-        return self.label
-
-    class Meta:
-        db_table = 'config_cdn_server'
-
-
 class ResponseMail(models.Model):
     title = models.CharField(max_length=45)
     content = models.CharField(max_length=256)
