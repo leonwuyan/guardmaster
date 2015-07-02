@@ -8,6 +8,7 @@ import random
 import json
 import decimal
 import logging
+import time
 
 
 def view_init():
@@ -47,12 +48,14 @@ def sh_remote_log(panel, request_get):
         request_get.get('end').split(' ')[0],
         request_get.get('uid')
     ]
+    spend_time = time.time()
     cmd = ' '.join(cmd)
     s = subprocess.Popen(cmd, shell=True, cwd=path, stdout=subprocess.PIPE)
     retcode = s.wait()
     output = s.communicate()
+    spend_time = str(time.time() - spend_time)
     logger = logging.getLogger(__name__)
-    logger.info(path + '|' + cmd + '|' + str(retcode))
+    logger.info(path + '|' + cmd + '|' + str(retcode) + '|' + spend_time)
     # logger.info('STDOUT------------------------------\n' + str(output[0]))
     # logger.info('STDERR------------------------------\n' + str(output[1]))
 

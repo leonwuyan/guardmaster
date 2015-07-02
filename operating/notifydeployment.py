@@ -66,7 +66,7 @@ class NotifyDeployment(object):
         list_cdn = panel.server_set.filter(server_type='cdn')
         logger = logging.getLogger(__name__)
         for cdn in list_cdn:
-            cmd = 'scp -P ' + str(cdn.ssh_port) + ' -r '
+            cmd = 'rsync -e "ssh -P ' + str(cdn.ssh_port) + '" -zr '
             cmd += BASE_DIR + OPERATING_DIR
             cmd += ' ' + cdn.ip + ':' + cdn.home
             ret = subprocess.Popen(cmd, shell=True, stdout=subprocess.PIPE)
