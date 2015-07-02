@@ -11,6 +11,7 @@ class Server(models.Model):
         ('dir', _('Dir Server')),
         ('cdn', _('CDN Server')),
         ('normal', _('Normal Server')),
+        ('update', _('Update Server')),
     }
     label = models.CharField(max_length=45, unique=True)
     panel = models.ForeignKey(Panel)

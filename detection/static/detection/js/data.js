@@ -66,6 +66,27 @@
       _addEmoji();
     });
   };
+  var _getTime = function (t) {
+    var d = new Date();
+    var year = d.getFullYear();
+    var month = d.getMonth() + 1;
+    if (month < 10) month = '0' + month;
+    var day = d.getDate();
+    if (day < 10) day = '0' + day;
+    var hour = d.getHours();
+    if (hour < 10) hour = '0' + hour;
+    var minute = d.getMinutes();
+    if (minute < 10) minute = '0' + minute;
+    var second = d.getSeconds();
+    if (second < 10) second = '0' + second;
+    date = year + '-' + month + '-' + day
+    time = hour + ':' + minute + ':' + second
+    if (t){
+      return date + ' ' + time
+    } else {
+      return date
+    }
+  };
   var _dataAccess = {
     'getJSON': function() {
       data = []
@@ -338,14 +359,17 @@
     },
     'initQuery': function () {
       if ($('input[name="start"]').length > 0) {
-        var d = new Date();
-        var year = d.getFullYear();
-        var month = d.getMonth() + 1;
-        if (month < 10) month = '0' + month;
-        var day = d.getDate();
-        if (day < 10) day = '0' + day;
-        $('input[name="start"]').val(year + '-' + month + '-' + day);
-        $('input[name="end"]').val(year + '-' + month + '-' + day);
+        time = _getTime(false);
+        $('input[name="start"]').val(time);
+        $('input[name="end"]').val(time);
+      }
+    },
+    'initHistoryQuery': function () {
+      if ($('input[name="start"]').length > 0) {
+        end_time = _getTime(true);
+        start_time = end_time.replace(/ (\w+):(\w+):(\w+)/, " 00:00:00");
+        $('input[name="start"]').val(start_time);
+        $('input[name="end"]').val(end_time);
       }
     },
     'mailConfirm': function () {
@@ -389,4 +413,5 @@
   window.queryButton = _queryButton;
   window.management = _management;
   window.getData = _getData;
+  window.getTime = _getTime;
 })();

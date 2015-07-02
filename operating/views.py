@@ -176,27 +176,32 @@ def change_single(request, panel_id, url, type):
     server = get_object_or_404(Server, pk=server_id)
     sc = ServerControl(server, uid, panel_id, request.user.username)
     ret = {}
-    second_param = 0
+    log_str = ""
     if type == 'add':
-        second_param = int(request.POST['type_id'])
+        type_id = int(request.POST['type_id'])
         count = int(request.POST['count'])
-        ret = sc.add_attr(type_id=second_param, count=count)
+        ret = sc.add_attr(type_id=type_id, count=count)
+        log_str = str(type_id) + "|" + str(count)
     if type == 'recharge':
-        second_param = int(request.POST['count'])
-        ret = sc.add_vip_level(second_param)
+        count = int(request.POST['count'])
+        ret = sc.add_vip_level(count)
+        log_str = str(count)
     if type == 'dungeon':
-        second_param = int(request.POST['dungeon_id'])
-        ret = sc.unlock_dungeon(second_param)
+        dungeon_id = int(request.POST['dungeon_id'])
+        ret = sc.unlock_dungeon(dungeon_id)
+        log_str = str(dungeon_id)
     if type == 'kick':
         ret = sc.kick()
     if type == 'chat_ban':
-        second_param = int(request.POST['time'])
-        ret = sc.chat_ban(second_param)
+        time = int(request.POST['time'])
+        ret = sc.chat_ban(time)
+        log_str = str(time)
     if type == 'account_ban':
-        second_param = int(request.POST['time'])
-        ret = sc.account_ban(second_param)
+        time = int(request.POST['time'])
+        ret = sc.account_ban(time)
+        log_str = str(time)
     if ret['result'] == 0:
-        s = type + "|" + str(second_param)
+        s = type + "|" + log_str
         sc.log(s)
     ret = {'result': ret['result']}
     ret = json.dumps(ret, ensure_ascii=False)

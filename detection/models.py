@@ -319,10 +319,14 @@ class Tabel(object):
     def history_query_select(self, sub_menu, panel, request_get):
         condition = ()
         if 'start' in request_get:
-            r = "LogDt >= '" + request_get.get('start') + "'"
+            r = "LogDt >= '" + request_get.get('start').split(' ')[0] + "'"
+            condition = condition + (r,)
+            r = "LogTime >= '" + request_get.get('start').split(' ')[1] + "'"
             condition = condition + (r,)
         if 'end' in request_get:
-            r = "LogDt <= '" + request_get.get('end') + "'"
+            r = "LogDt <= '" + request_get.get('end').split(' ')[0] + "'"
+            condition = condition + (r,)
+            r = "LogDt <= '" + request_get.get('end').split(' ')[1] + "'"
             condition = condition + (r,)
         if 'server' in request_get:
             r = "Server = '" + request_get.get('server') + "'"

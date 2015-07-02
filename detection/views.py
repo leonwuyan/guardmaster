@@ -43,8 +43,8 @@ def sh_remote_log(panel, request_get):
         request_get.get('server'),
         server.home,
         server.user,
-        request_get.get('start'),
-        request_get.get('end'),
+        request_get.get('start').split(' ')[0],
+        request_get.get('end').split(' ')[0],
         request_get.get('uid')
     ]
     cmd = ' '.join(cmd)
