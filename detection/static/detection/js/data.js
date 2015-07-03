@@ -153,6 +153,14 @@
       return false;
     },
     'queryJSON': function() {
+      if ($('input[name="start"]').length > 0) {
+        var start = $('input[name="start"]').val();
+        var end = $('input[name="end"]').val();
+        if (start == '' || end == '') {
+          alert('请填写起始日期和结束日期。');
+          return false;
+        }
+      }
       var data = _getData('form#queryForm [name]');
       _buildTable(data);
       return false;
