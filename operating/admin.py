@@ -17,7 +17,7 @@ class ResponseMailAdmin(admin.ModelAdmin):
 
 
 class NotifyAdmin(admin.ModelAdmin):
-    list_display = ('title', 'panel', 'notify_url', 'hostname', 'channel', 'world_id', 'seqid')
+    list_display = ('title', 'panel', 'notify_url', 'hostname', 'channel', 'image_width', 'image_height', 'world_id', 'seqid')
     search_fields = ['title']
     list_filter = ['panel', 'hostname', 'channel', 'platform', 'world_id']
 

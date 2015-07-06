@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2015-06-26 17:18+0800\n"
+"POT-Creation-Date: 2015-07-06 17:29+0800\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -16,6 +16,30 @@ msgstr ""
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+
+#: models.py:11
+msgid "Dir Server"
+msgstr ""
+
+#: models.py:12
+msgid "CDN Server"
+msgstr ""
+
+#: models.py:13
+msgid "Normal Server"
+msgstr ""
+
+#: models.py:14
+msgid "Update Server"
+msgstr ""
+
+#: models.py:20
+msgid "GM Port, Usually Is 9135"
+msgstr ""
+
+#: models.py:21
+msgid "SSH Port, Usually Is 22"
+msgstr ""
 
 #: templates/operating/base_info.html:2
 msgid "Player Base Info"
@@ -114,7 +138,7 @@ msgid "Add 10k"
 msgstr ""
 
 #: templates/operating/base_info.html:26 templates/operating/mail.html:18
-#: templates/operating/notify.html:16
+#: templates/operating/notify.html:19
 msgid "Add"
 msgstr ""
 
@@ -292,7 +316,7 @@ msgstr ""
 msgid "Name"
 msgstr ""
 
-#: templates/operating/contact.html:9 templates/operating/notify.html:10
+#: templates/operating/contact.html:9 templates/operating/notify.html:13
 msgid "Hostname"
 msgstr ""
 
@@ -300,7 +324,7 @@ msgstr ""
 msgid "Channel ID"
 msgstr ""
 
-#: templates/operating/contact.html:11 templates/operating/notify.html:12
+#: templates/operating/contact.html:11 templates/operating/notify.html:15
 msgid "Platform"
 msgstr ""
 
@@ -443,7 +467,7 @@ msgstr ""
 msgid "Accessory Include Item And Equip"
 msgstr ""
 
-#: templates/operating/mail.html:22 templates/operating/notify.html:17
+#: templates/operating/mail.html:22 templates/operating/notify.html:20
 msgid "Success"
 msgstr ""
 
@@ -492,70 +516,82 @@ msgid "Is Display"
 msgstr ""
 
 #: templates/operating/notify.html:9
+msgid "Picture Info"
+msgstr ""
+
+#: templates/operating/notify.html:10
 msgid "Picture Link"
 msgstr ""
 
 #: templates/operating/notify.html:11
-msgid "Channel"
+msgid "Picture Width"
 msgstr ""
 
-#: templates/operating/notify.html:13
-msgid "Zone"
+#: templates/operating/notify.html:12
+msgid "Picture Height"
 msgstr ""
 
 #: templates/operating/notify.html:14
+msgid "Channel"
+msgstr ""
+
+#: templates/operating/notify.html:16
+msgid "Zone"
+msgstr ""
+
+#: templates/operating/notify.html:17
 msgid "Seq ID"
 msgstr ""
 
-#: templates/operating/notify.html:15
+#: templates/operating/notify.html:18
 msgid "Other Options"
 msgstr ""
 
-#: templates/operating/notify.html:18
+#: templates/operating/notify.html:21
 msgid "Please Check The Notify Info"
 msgstr ""
 
-#: templates/operating/notify.html:19
+#: templates/operating/notify.html:22
 msgid "Fail"
 msgstr ""
 
-#: templates/operating/notify.html:20
+#: templates/operating/notify.html:23
 msgid "Please Check The Input Is Right"
 msgstr ""
 
-#: templates/operating/notify.html:21
+#: templates/operating/notify.html:24
 msgid "The Will Be DIR Notify When The Zone Is All Zone"
 msgstr ""
 
-#: templates/operating/notify.html:22
+#: templates/operating/notify.html:25
 msgid "Add Or Edit Notify Without Synchronization"
 msgstr ""
 
-#: templates/operating/notify.html:23
+#: templates/operating/notify.html:26
 msgid "Synchronize Notify"
 msgstr ""
 
-#: templates/operating/notify.html:24
+#: templates/operating/notify.html:27
 msgid "Delete"
 msgstr ""
 
-#: templates/operating/notify.html:25
+#: templates/operating/notify.html:28
 msgid "Edit"
 msgstr ""
 
-#: templates/operating/notify.html:26
+#: templates/operating/notify.html:29
 msgid "Operate"
 msgstr ""
 
-#: templates/operating/notify.html:27
+#: templates/operating/notify.html:30
 msgid "Attention"
 msgstr ""
 
-#: templates/operating/notify.html:28
+#: templates/operating/notify.html:31
 msgid "Please Edit The Notify"
 msgstr ""
 
-#: templates/operating/notify.html:29
+#: templates/operating/notify.html:32
 msgid "Back"
 msgstr ""
 

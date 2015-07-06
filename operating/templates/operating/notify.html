@@ -6,7 +6,10 @@
 {% trans "Notify Title" as t_notify_title %}
 {% trans "Notify Content" as t_notify_content %}
 {% trans "Is Display" as t_is_display %}
+{% trans "Picture Info" as t_picture_info %}
 {% trans "Picture Link" as t_picture_link %}
+{% trans "Picture Width" as t_picture_width %}
+{% trans "Picture Height" as t_picture_height %}
 {% trans "Hostname" as t_hostname %}
 {% trans "Channel" as t_channel %}
 {% trans "Platform" as t_platform %}
@@ -75,8 +78,27 @@
         <textarea class="form-control" id="content" name="content" rows="5">{{ notify.content }}</textarea>
       </div>
       <div class="form-group" style="margin-bottom:5px">
-        <label for="link">{{ t_picture_link }}</label>
-        <input type="text" class="form-control" id="link" name="link" value="{{ notify.link }}">
+        <label for="link">{{ t_picture_info }}</label>
+        <div class="row">
+          <div class="col-md-8">
+            <div class="input-group">
+            <span class="input-group-addon" id="link-addon">{{t_picture_link}}</span>
+            <input type="text" class="form-control" id="link" name="link" value="{{ notify.link }}" aria-describedby="link-addon">
+            </div>
+          </div>
+          <div class="col-md-2">
+            <div class="input-group">
+              <span class="input-group-addon" id="width-addon">{{t_picture_width}}</span>
+              <input type="text" class="form-control" value="{{ notify.image_width|default:0}}" aria-describedby="width-addon" name="width">
+            </div>
+          </div>
+          <div class="col-md-2">
+            <div class="input-group">
+              <span class="input-group-addon" id="height-addon">{{t_picture_height}}</span>
+              <input type="text" class="form-control" value="{{ notify.image_height|default:0}}" aria-describedby="height-addon" name="height">
+            </div>
+          </div>
+        </div>
       </div>
       <div class="form-group">
         <label>{{t_other_options}}</label>&emsp;<span class="label label-danger">{{ t_w_b_d_n_w_t_z_i_a_z }}</span>
@@ -153,15 +175,17 @@
           <thead>
             <tr>
               <th style="width: 10%">{{t_notify_title}}</th>
-              <th style="width: 35%">{{t_notify_content}}</th>
+              <th style="width: 30%">{{t_notify_content}}</th>
               <th style="width: 10%">{{t_picture_link}}</th>
+              <th style="width: 4%">{{t_picture_width}}</th>
+              <th style="width: 4%">{{t_picture_height}}</th>
               <th style="width: 10%">{{t_hostname}}</th>
               <th style="width: 6%">{{t_channel}}</th>
               <th style="width: 6%">{{t_platform}}</th>
               <th style="width: 6%">{{t_zone}}</th>
-              <th style="width: 6%">{{t_is_display}}</th>
+              <th style="width: 4%">{{t_is_display}}</th>
               <th style="width: 6%">{{t_seqid}}</th>
-              <th style="width: 5%">{{t_operate}}</th>
+              <th style="width: 4%">{{t_operate}}</th>
             </tr>
           </thead>
           <tbody>
@@ -170,6 +194,8 @@
               <td>{{r.title}}</td>
               <td>{{r.content}}</td>
               <td>{{r.link}}</td>
+              <td>{{r.image_width}}</td>
+              <td>{{r.image_height}}</td>
               <td>{{r.hostname}}</td>
               <td>{{r.channel}}</td>
               <td>{{r.platform}}</td>
@@ -190,6 +216,8 @@
 <script type="text/javascript">
  $(document).ready(function() {
   management.numberOnly("input[name='seqid']");
+  management.numberOnly("input[name='width']");
+  management.numberOnly("input[name='height']");
   var toolbar = ['bold', 'color', '|', 'link'];
   var allowedtags = ['br', 'a', 'b', 'font'];
   var allowedattributes = {

@@ -27,6 +27,8 @@ class NotifyDeployment(object):
             'Name': str(n.id),
             'Title': n.title,
             'Link': n.link,
+            'ImageWidth': n.image_width,
+            'ImageHeight': n.image_height,
             'Content': n.content,
             'IsDisplay': n.is_display,
         })
@@ -103,6 +105,8 @@ class NotifyDeployment(object):
             n.content = self._get(post, 'content')
             n.is_display = post.get('is_display')
             n.link = post.get('link')
+            n.image_width = post.get('width')
+            n.image_height = post.get('height')
             n.hostname = post.get('hostname')
             n.channel = post.get('channel')
             n.platform = post.get('platform')
@@ -116,6 +120,8 @@ class NotifyDeployment(object):
                 panel=panel,
                 is_display=post.get('is_display'),
                 link=post.get('link'),
+                image_width=post.get('width'),
+                image_height=post.get('height'),
                 hostname=post.get('hostname'),
                 channel=post.get('channel'),
                 platform=post.get('platform'),

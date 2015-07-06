@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2015-06-26 17:18+0800\n"
-"PO-Revision-Date: 2015-06-26 17:21+0800\n"
+"POT-Creation-Date: 2015-07-06 17:29+0800\n"
+"PO-Revision-Date: 2015-07-06 17:32+0800\n"
 "Last-Translator: Raynor <raynor41@gmail.com>\n"
 "Language-Team: \n"
 "Language: zh_TW\n"
@@ -17,6 +17,30 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
 "X-Generator: Poedit 1.7.6\n"
+
+#: models.py:11
+msgid "Dir Server"
+msgstr "Dir 伺服器"
+
+#: models.py:12
+msgid "CDN Server"
+msgstr "CDN 伺服器"
+
+#: models.py:13
+msgid "Normal Server"
+msgstr "普通伺服器"
+
+#: models.py:14
+msgid "Update Server"
+msgstr "更新伺服器"
+
+#: models.py:20
+msgid "GM Port, Usually Is 9135"
+msgstr "GM指令端口,通常為9135"
+
+#: models.py:21
+msgid "SSH Port, Usually Is 22"
+msgstr "SSH指令端口,通常為22"
 
 #: templates/operating/base_info.html:2
 msgid "Player Base Info"
@@ -115,7 +139,7 @@ msgid "Add 10k"
 msgstr "增加 10k"
 
 #: templates/operating/base_info.html:26 templates/operating/mail.html:18
-#: templates/operating/notify.html:16
+#: templates/operating/notify.html:19
 msgid "Add"
 msgstr "添加"
 
@@ -293,7 +317,7 @@ msgstr "用戶ID"
 msgid "Name"
 msgstr "名稱"
 
-#: templates/operating/contact.html:9 templates/operating/notify.html:10
+#: templates/operating/contact.html:9 templates/operating/notify.html:13
 msgid "Hostname"
 msgstr "伺服器域名"
 
@@ -301,7 +325,7 @@ msgstr "伺服器域名"
 msgid "Channel ID"
 msgstr "渠道"
 
-#: templates/operating/contact.html:11 templates/operating/notify.html:12
+#: templates/operating/contact.html:11 templates/operating/notify.html:15
 msgid "Platform"
 msgstr "平台"
 
@@ -444,7 +468,7 @@ msgstr "最多可以添加6種附件"
 msgid "Accessory Include Item And Equip"
 msgstr "附件包含物品和裝備"
 
-#: templates/operating/mail.html:22 templates/operating/notify.html:17
+#: templates/operating/mail.html:22 templates/operating/notify.html:20
 msgid "Success"
 msgstr "成功"
 
@@ -493,70 +517,82 @@ msgid "Is Display"
 msgstr "是否顯示"
 
 #: templates/operating/notify.html:9
+msgid "Picture Info"
+msgstr "圖片信息"
+
+#: templates/operating/notify.html:10
 msgid "Picture Link"
 msgstr "圖片鏈接"
 
 #: templates/operating/notify.html:11
+msgid "Picture Width"
+msgstr "圖片寬度"
+
+#: templates/operating/notify.html:12
+msgid "Picture Height"
+msgstr "圖片高度"
+
+#: templates/operating/notify.html:14
 msgid "Channel"
 msgstr "渠道"
 
-#: templates/operating/notify.html:13
+#: templates/operating/notify.html:16
 msgid "Zone"
 msgstr "區服"
 
-#: templates/operating/notify.html:14
+#: templates/operating/notify.html:17
 msgid "Seq ID"
 msgstr "順序號"
 
-#: templates/operating/notify.html:15
+#: templates/operating/notify.html:18
 msgid "Other Options"
 msgstr "其他設置"
 
-#: templates/operating/notify.html:18
+#: templates/operating/notify.html:21
 msgid "Please Check The Notify Info"
 msgstr "請檢查公告信息"
 
-#: templates/operating/notify.html:19
+#: templates/operating/notify.html:22
 msgid "Fail"
 msgstr "失敗"
 
-#: templates/operating/notify.html:20
+#: templates/operating/notify.html:23
 msgid "Please Check The Input Is Right"
 msgstr "請檢查輸入內容是否都是正確的"
 
-#: templates/operating/notify.html:21
+#: templates/operating/notify.html:24
 msgid "The Will Be DIR Notify When The Zone Is All Zone"
 msgstr "檔區服選擇全部區服時講會是一個DIR公告"
 
-#: templates/operating/notify.html:22
+#: templates/operating/notify.html:25
 msgid "Add Or Edit Notify Without Synchronization"
 msgstr "添加或者修改公告不會同步到外網"
 
-#: templates/operating/notify.html:23
+#: templates/operating/notify.html:26
 msgid "Synchronize Notify"
 msgstr "同步公告"
 
-#: templates/operating/notify.html:24
+#: templates/operating/notify.html:27
 msgid "Delete"
 msgstr "刪除"
 
-#: templates/operating/notify.html:25
+#: templates/operating/notify.html:28
 msgid "Edit"
 msgstr "修改"
 
-#: templates/operating/notify.html:26
+#: templates/operating/notify.html:29
 msgid "Operate"
 msgstr "操作"
 
-#: templates/operating/notify.html:27
+#: templates/operating/notify.html:30
 msgid "Attention"
 msgstr "注意"
 
-#: templates/operating/notify.html:28
+#: templates/operating/notify.html:31
 msgid "Please Edit The Notify"
 msgstr "請修改公告"
 
-#: templates/operating/notify.html:29
+#: templates/operating/notify.html:32
 msgid "Back"
 msgstr "返回"
 
