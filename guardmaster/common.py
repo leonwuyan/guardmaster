@@ -57,10 +57,13 @@ def get_user_panels(user):
     return panels
 
 
-def get_user_menus(user):
+def get_user_menus(user, panel_id):
     groups = user.groups.all()
     main_menus = map(lambda x: x.uimainmenu_set.all(), groups)
     main_menus = apply(chain, main_menus)
+    print main_menus
+    main_menus = filter(lambda x: x.is_in_panels(panel_id), main_menus)
+    print main_menus
     main_menus = map(lambda x: x.get_sub_menu_all(), main_menus)
     return main_menus
 
@@ -101,7 +104,7 @@ def competence_required(function):
             return HttpResponseRedirect('/')
 
         url = kwargs.get('url', URL)
-        menus = get_user_menus(user)
+        menus = get_user_menus(user, panel_id)
         mt = False
         for m in menus:
             for s in m.get('sub_menu'):

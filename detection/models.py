@@ -18,9 +18,27 @@ class Excuse(models.Model):
         managed = False
 
 
+class Panel(models.Model):
+    label = models.CharField(max_length=45, unique=True)
+    groups = models.ManyToManyField(Group)
+    db_aliases = models.CharField(max_length=45)
+    symbol = models.CharField(max_length=45)
+
+    def __unicode__(self):
+        return self.label
+
+    def get_id_label(self):
+        ret = {
+            'id': self.id,
+            'label': self.label,
+        }
+        return ret
+
+
 class UIMainMenu(models.Model):
     label = models.CharField(max_length=45)
-    groups = models.ManyToManyField(Group)
+    group = models.ForeignKey(Group)
+    panels = models.ManyToManyField(Panel)
     seqid = models.IntegerField()
 
     def __unicode__(self):
@@ -40,6 +58,13 @@ class UIMainMenu(models.Model):
             'sub_menu': self.get_sub_menu_dict(['label', 'url', 'category'])
         }
         return ret
+
+    def is_in_panels(self, panel_id):
+        panels = self.panels.all()
+        for panel in panels:
+            if panel.id == panel_id:
+                return True
+        return False
 
     class Meta:
         db_table = 'ui_main_menu'
@@ -131,23 +156,6 @@ class UIColMap(models.Model):
     class Meta:
         db_table = 'ui_col_map'
         ordering = ['sub_menu', 'seqid']
-
-
-class Panel(models.Model):
-    label = models.CharField(max_length=45, unique=True)
-    groups = models.ManyToManyField(Group)
-    db_aliases = models.CharField(max_length=45)
-    symbol = models.CharField(max_length=45)
-
-    def __unicode__(self):
-        return self.label
-
-    def get_id_label(self):
-        ret = {
-            'id': self.id,
-            'label': self.label,
-        }
-        return ret
 
 
 class Tabel(object):

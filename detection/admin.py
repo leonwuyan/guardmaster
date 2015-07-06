@@ -37,15 +37,15 @@ class UISubMenuAdmin(admin.ModelAdmin):
 
 class UIMainMenuAdmin(admin.ModelAdmin):
     inlines = [UISubMenuInline]
-    list_display = ('label', 'groups_list', 'seqid')
+    list_display = ('label', 'group', 'panels_list', 'seqid')
     search_fields = ['label']
-    list_filter = ['groups']
+    list_filter = ['group', 'panels']
 
-    def groups_list(self, obj):
-        groups = ""
-        for group in obj.groups.all():
-            groups += group.name + ' | '
-        return groups
+    def panels_list(self, obj):
+        panels = ""
+        for panel in obj.panels.all():
+            panels += panel.label + ' | '
+        return panels
 
 
 class PanelAdmin(admin.ModelAdmin):

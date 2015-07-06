@@ -137,6 +137,14 @@ DATABASES = {
         'HOST': '192.168.1.76',
         'PORT': '3309',
     },
+    'db_act_statdb': {
+        'ENGINE': 'django.db.backends.mysql',
+        'NAME': 'db_act_statdb',
+        'USER': 'root',
+        'PASSWORD': '',
+        'HOST': '192.168.1.90',
+        'PORT': '3306',
+    },
 }
 
 

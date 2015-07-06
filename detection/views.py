@@ -66,7 +66,7 @@ def view_template(request, panel_id, url):
 
     panel = get_object_or_404(Panel, pk=panel_id)
     sub_menu = Common.get_user_sub_menu(request.user, url)
-    menus = Common.get_user_menus(request.user)
+    menus = Common.get_user_menus(request.user, int(panel_id))
 
     table_head = sub_menu.get_col_map_dict(['label'])
 

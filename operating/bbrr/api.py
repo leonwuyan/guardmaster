@@ -314,3 +314,10 @@ class ServerSocket(object):
             'unlock_til_dungeon_id': unlock_til_dungeon_id,
         }
         return self._get(p, r)
+
+    def get_player_first_purchase(self, world_id, uid, channel):
+        if world_id is None or uid is None or channel is None:
+            return self.empty
+        p = 'GM_GET_PLAYER_FIRST_PURCHASE'
+        r = {'world_id': world_id, 'uid': uid, 'channel': channel}
+        return self._get(p, r)
