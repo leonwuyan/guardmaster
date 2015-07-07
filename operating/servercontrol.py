@@ -38,7 +38,7 @@ class ServerControl(object):
         rank_list = self._rank_list()
         ranks = map(lambda x: {
                 'label': x['EnumDes'],
-                'id': x['EnumCd'],
+                'id': int(x['EnumCd']),
             }, rank_list)
         return ranks
 
@@ -81,8 +81,8 @@ class ServerControl(object):
         rank_list = self._rank_list()
         rank_list = map(lambda x: {
                 'rank_name': x['EnumDes'],
-                'rank_id': x['EnumCd'],
-                'rank_info': ss.get_rank_pos(self.uid, world_id, x['EnumCd']),
+                'rank_id': int(x['EnumCd']),
+                'rank_info': ss.get_rank_pos(self.uid, world_id, int(x['EnumCd'])),
             }, rank_list)
         ret['rank_list'] = rank_list
         return ret

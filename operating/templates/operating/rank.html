@@ -42,7 +42,7 @@
         <label>{{t_zone}}</label>
         <select class="form-control" name="zone">
           {% for zone in zones %}
-          {% if zone.EnumCd != 0 %}
+          {% if zone.EnumCd != '0' %}
           <option value="{{zone.EnumCd}}" {% ifequal notify.world_id zone.EnumCd %}selected{% endifequal %}>{{zone.EnumDes}}</option>
           {% endif %}
           {% endfor %}

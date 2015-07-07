@@ -108,7 +108,7 @@
               <span class="input-group-addon">{{t_channel}}</span>
               <select class="form-control" name="channel">
                 {% for channel in channels %}
-                {% if channel.EnumCd != 0 %}
+                {% if channel.EnumCd != '0' %}
                 <option value="{{channel.EnumCd}}" {% ifequal notify.channel channel.EnumCd %}selected{% endifequal %}>{{channel.EnumDes}}</option>
                 {% endif %}
                 {% endfor %}

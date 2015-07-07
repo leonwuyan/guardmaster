@@ -125,5 +125,12 @@ def first(iterable, default=None):
 
 
 def filter_enum(iterable, enum_cd, default=None):
-    ret = filter(lambda x: x.get('EnumCd') == enum_cd, iterable)
+    ret = filter(lambda x: x.get('EnumCd') == str(enum_cd), iterable)
     return first(ret, {}).get('EnumDes', default)
+
+
+def get_client_ip(request):
+    if 'HTTP_X_FORWARDED_FOR' in request.META:
+        return request.META['HTTP_X_FORWARDED_FOR']
+    else:
+        return request.META['REMOTE_ADDR']

@@ -396,3 +396,25 @@ class Tabel(object):
         enum = Tabel.select(enum_submenu, panel, condition)
         ret_enum = Common.kvs(keys, enum)
         return ret_enum
+
+    @classmethod
+    def gm_log(self, panel, vals):
+        vals = "', '".join(vals)
+        vals = "('" + vals + "')"
+        condition = {
+            'table_name': 'tbGMLog',
+            'cols': "(`actDt`, `actDtSec`, `actUser`, `actIP`, `gmSrvIP`, `UID`, `ZoneID`, `ChannelID`, `actType`, `actObj`, `actRest`, `title`, `actStatus`, `doneDt`, `doneDtSec`)",
+            'vals': vals,
+        }
+        ret = self.insert(panel, condition)
+
+    @classmethod
+    def gm_res_log(self, panel, vals):
+        vals = "', '".join(vals)
+        vals = "('" + vals + "')"
+        condition = {
+            'table_name': 'tbGMResLog',
+            'cols': "(`actDt`, `actDtSec`, `actUser`, `actIP`, `gmSrvIP`, `UID`, `ZoneID`, `ChannelID`, `actType`, `emailID`, `chgType`, `chgValue`, `actStatus`, `doneDt`, `doneDtSec`)",
+            'vals': vals,
+        }
+        ret = self.insert(panel, condition)
