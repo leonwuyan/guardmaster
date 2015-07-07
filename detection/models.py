@@ -398,7 +398,8 @@ class Tabel(object):
         return ret_enum
 
     @classmethod
-    def gm_log(self, panel, vals):
+    def gm_log(self, panel_id, vals):
+        panel = get_object_or_404(Panel, pk=panel_id)
         vals = "', '".join(vals)
         vals = "('" + vals + "')"
         condition = {
@@ -409,7 +410,8 @@ class Tabel(object):
         ret = self.insert(panel, condition)
 
     @classmethod
-    def gm_res_log(self, panel, vals):
+    def gm_res_log(self, panel_id, vals):
+        panel = get_object_or_404(Panel, pk=panel_id)
         vals = "', '".join(vals)
         vals = "('" + vals + "')"
         condition = {

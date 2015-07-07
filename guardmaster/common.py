@@ -45,8 +45,12 @@ def kvs(k, vs):
     return map(lambda x: kv(k, x), vs)
 
 
-def now():
-    return time.strftime('%Y-%m-%d %H:%M:%S', time.localtime(time.time()))
+def now(t=None):
+    if t:
+        return time.strftime('%Y-%m-%d %H:%M:%S', time.localtime(time.time()))
+    else:
+        return time.strftime('%Y-%m-%d %H:%M:%S', time.localtime(t))
+
 
 
 def get_user_panels(user):

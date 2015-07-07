@@ -4,12 +4,13 @@ from guardmaster import common as Common
 from operating.bbrr.api import ServerSocket
 from operating.models import ResponseMail
 from django.utils import timezone
-import logging
 from pprint import pprint
+import logging
+import time
 
 
 class ServerControl(object):
-    def __init__(self, server, uid, panel_id, username):
+    def __init__(self, server, uid, panel_id, username, userip):
         super(ServerControl, self).__init__()
         self.server = server
         self.uid = uid
@@ -17,6 +18,9 @@ class ServerControl(object):
         self.socketerror = {'result': -1}
         self.success = {'result': 0}
         self.username = username
+        self.userip = userip
+        self.zone = 0
+        self.channel = 0
 
     def log(self, e):
         logger = logging.getLogger(__name__)
@@ -28,6 +32,55 @@ class ServerControl(object):
         s = "%(username)s|%(server_name)s|%(uid)s|" % d
         s = s + e
         logger.info(s)
+
+    def db_log(self, obj):
+        print obj
+        Res = ['add', 'recharge', 'mail_acc']
+        if 'type' not in obj:
+            return False
+        actDt = Common.now(obj['start_time'])
+        actDtSec = int(obj['start_time'] * 1000 % 1000)
+        doneDt = Common.now(obj['done_time'])
+        doneDtSec = int(obj['done_time'] * 1000 % 1000)
+        if obj['type'] in Res:
+            vals = (
+                actDt,
+                str(actDtSec),
+                self.username,
+                self.userip,
+                self.server.ip,
+                str(self.uid),
+                str(self.zone),
+                str(self.channel),
+                obj['type'],
+                str(obj['post'].get('emailID')),
+                str(obj['post'].get('type_id') or obj['post'].get('chgType')),
+                str(obj['post'].get('count') or obj['post'].get('chgValue')),
+                str(obj['ret']['result']),
+                doneDt,
+                str(doneDtSec))
+            Tabel.gm_res_log(self.panel_id, vals)
+        else:
+            vals = (
+                actDt,
+                str(actDtSec),
+                self.username,
+                self.userip,
+                self.server.ip,
+                str(self.uid),
+                str(self.zone),
+                str(self.channel),
+                obj['type'],
+                str(obj['post'].get('actObj')),
+                str(obj['post'].get('time') or
+                    obj['post'].get('dungeon_id') or
+                    obj['post'].get('actRest')),
+                obj['post'].get('title'),
+                str(obj['ret']['result']),
+                doneDt,
+                str(doneDtSec))
+            Tabel.gm_log(self.panel_id, vals)
+        return True
 
     def _rank_list(self):
         if Common.E_RANKNAME_LIST is None:
@@ -54,6 +107,8 @@ class ServerControl(object):
             return None, None, None, None
         world_info = Common.first(filter(lambda x: x['uid'] == self.uid, world_info))
         world_id = world_info['world_id']
+        self.zone = world_id
+        self.channel = world_info['channel_id']
         return ss, uin, world_id, world_info
 
     def base_info(self):
@@ -91,6 +146,7 @@ class ServerControl(object):
         (ss, uin, world_id, world_info) = self._params()
         if ss is None:
             return None
+        start_time = time.time()
         ret = ss.send_mail(
             [self.uid],
             world_id,
@@ -104,8 +160,20 @@ class ServerControl(object):
         return ret
 
     def send_mail(self, title=None, content=None, post=None):
+        start_time = time.time()
         if post is None:
-            return self._send_mail(title, content)
+            ret = self._send_mail(title, content)
+            response_id = Common.first(ret['sucess_result'])['mail_id']
+            self.db_log({
+                'type': 'contact',
+                'post': {
+                    'title': title,
+                    'actRest': response_id},
+                'ret': ret,
+                'start_time': start_time,
+                'done_time': time.time(),
+            })
+            return ret
         title = post.get('title', 'Title')
         content = post.get('content', 'Content')
         acc = []
@@ -149,6 +217,29 @@ class ServerControl(object):
             r.save()
             s = 'mail|' + str(r.id)
             self.log(s)
+        if len(acc) > 0:
+            for a in acc:
+                self.db_log({
+                    'type': 'mail_acc',
+                    'post': {
+                        'emailID': response_id,
+                        'chgType': a['res_type'],
+                        'chgValue': a['res_count']},
+                    'ret': ret,
+                    'start_time': start_time,
+                    'done_time': time.time(),
+                })
+        else:
+            self.db_log({
+                'type': 'mail',
+                'post': {
+                    'title': title,
+                    'actObj': r.id,
+                    'actRest': response_id},
+                'ret': ret,
+                'start_time': start_time,
+                'done_time': time.time(),
+            })
         return ret
 
     def add_attr(self, type_id, res_id=46, count=100000):

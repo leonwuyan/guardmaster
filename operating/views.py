@@ -12,6 +12,7 @@ from operating.models import Server, ResponseMail
 from operating.models import Notify
 from pprint import pprint
 import json
+import time
 
 
 def enum_equip_list(panel_id):
@@ -98,7 +99,12 @@ def mail(request, panel_id, url=Common.URL):
         server_id = int(request.POST['server'])
         uid = int(request.POST['uid'])
         server = get_object_or_404(Server, pk=server_id)
-        sc = ServerControl(server, uid, panel_id, request.user.username)
+        sc = ServerControl(
+            server,
+            uid,
+            panel_id,
+            request.user.username,
+            Common.get_client_ip(request))
         ret = sc.send_mail(post=request.POST)
         d['message'] = '1'
     return render(request, t, d)
@@ -114,7 +120,12 @@ def single(request, panel_id, url=Common.URL):
         server_id = int(request.POST['server'])
         uid = int(request.POST['uid'])
         server = get_object_or_404(Server, pk=server_id)
-        sc = ServerControl(server, uid, panel_id, request.user.username)
+        sc = ServerControl(
+            server,
+            uid,
+            panel_id,
+            request.user.username,
+            Common.get_client_ip(request))
         ret = sc.base_info()
         d['player'] = ret
         d['server_id'] = server_id
@@ -151,7 +162,13 @@ def contact_reply(request, panel_id, issue_id):
         content = request.POST['content']
         server = get_object_or_404(Server, hostname=issue['hostname'])
         if title and len(title) < 30 and content and len(content) < 256:
-            sc = ServerControl(server, issue['uid'], panel_id, request.user.username)
+            start_time = time.time()
+            sc = ServerControl(
+                server,
+                issue['uid'],
+                panel_id,
+                request.user.username,
+                Common.get_client_ip(request))
             ret = sc.send_mail(title, content)
             vals = (
                 issue_id,
@@ -174,9 +191,15 @@ def change_single(request, panel_id, url, type):
     uid = int(request.POST['uid'])
     server_id = int(request.POST['server_id'])
     server = get_object_or_404(Server, pk=server_id)
-    sc = ServerControl(server, uid, panel_id, request.user.username)
+    sc = ServerControl(
+        server,
+        uid,
+        panel_id,
+        request.user.username,
+        Common.get_client_ip(request))
     ret = {}
     log_str = ""
+    start_time = time.time()
     if type == 'add':
         type_id = int(request.POST['type_id'])
         count = int(request.POST['count'])
@@ -193,16 +216,23 @@ def change_single(request, panel_id, url, type):
     if type == 'kick':
         ret = sc.kick()
     if type == 'chat_ban':
-        time = int(request.POST['time'])
-        ret = sc.chat_ban(time)
-        log_str = str(time)
+        spend_time = int(request.POST['time'])
+        ret = sc.chat_ban(spend_time)
+        log_str = str(spend_time)
     if type == 'account_ban':
-        time = int(request.POST['time'])
-        ret = sc.account_ban(time)
-        log_str = str(time)
+        spend_time = int(request.POST['time'])
+        ret = sc.account_ban(spend_time)
+        log_str = str(spend_time)
     if ret['result'] == 0:
         s = type + "|" + log_str
         sc.log(s)
+    sc.db_log({
+        'type': type,
+        'post': request.POST,
+        'ret': ret,
+        'start_time': start_time,
+        'done_time': time.time(),
+    })
     ret = {'result': ret['result']}
     ret = json.dumps(ret, ensure_ascii=False)
     return HttpResponse(ret, content_type='application/json')
@@ -215,7 +245,7 @@ def rank(request, panel_id, url=Common.URL):
     panel = get_object_or_404(Panel, pk=panel_id)
     d['servers'] = panel.server_set.filter(server_type='dir')
     d['zones'] = enum_zone_list(panel_id)
-    rank_sc = ServerControl(0, 0, panel_id, request.user.username)
+    rank_sc = ServerControl(0, 0, panel_id, request.user.username, 0)
     d['ranks'] = rank_sc.ranks()
     if request.method == 'POST':
         server_id = int(request.POST['server'])
@@ -225,7 +255,7 @@ def rank(request, panel_id, url=Common.URL):
         world_id = int(request.POST['zone'])
         rank_count = rank_end - rank_start + 1
         server = get_object_or_404(Server, pk=server_id)
-        sc = ServerControl(server, 0, panel_id, request.user.username)
+        sc = ServerControl(server, 0, panel_id, request.user.username, 0)
         ret = sc.all_rank(world_id, rank_id, rank_start, rank_count)
         d['rank'] = ret
         d['server_id'] = server_id
