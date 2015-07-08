@@ -336,8 +336,9 @@ class Tabel(object):
         if 'end' in request_get:
             r = "LogDt <= '" + request_get.get('end').split(' ')[0] + "'"
             condition = condition + (r,)
-            r = "LogTime <= '" + request_get.get('end').split(' ')[1] + "'"
-            condition = condition + (r,)
+            if request_get.get('end').split(' ')[1] > '00:00:00':
+                r = "LogTime <= '" + request_get.get('end').split(' ')[1] + "'"
+                condition = condition + (r,)
         if 'server' in request_get:
             r = "Server = '" + request_get.get('server') + "'"
             condition = condition + (r,)

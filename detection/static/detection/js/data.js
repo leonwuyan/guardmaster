@@ -179,8 +179,17 @@
         }
         var start_date = new Date(Date.parse(start.replace(/-/g, "/")));
         var end_date = new Date(Date.parse(end.replace(/-/g, "/")));
-        if (start_date.getDate() != end_date.getDate()){
+        s_d = start_date.getDate();
+        e_d = end_date.getDate();
+        if (end_date.getHours() == 0 && end_date.getMinutes() == 0 && end_date.getSeconds() == 0){
+          e_d -= 1;
+        }
+        if (s_d != e_d){
           alert('日期范围请在一个自然天')
+          return false;
+        }
+        if ($('#uid').val() == ''){
+          alert('请输入玩家ID');
           return false;
         }
       }
