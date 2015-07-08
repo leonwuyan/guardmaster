@@ -27,27 +27,8 @@ def view_init():
     Common.E_ZONEID_LIST = None
 
 
-def sh_remote_log(panel, request_get):
-    if 'start' not in request_get:
-        return
-    if 'end' not in request_get:
-        return
-    if 'server' not in request_get:
-        return
-    if 'uid' not in request_get:
-        return
+def _sh(cmd):
     path = '/root/bbc_statdb/tools/shells/'
-    server = panel.server_set.get(ip=request_get.get('server'))
-    cmd = [
-        './remote_getuidlog_multi.sh',
-        panel.symbol,
-        request_get.get('server'),
-        server.home,
-        server.user,
-        request_get.get('start').split(' ')[0],
-        request_get.get('end').split(' ')[0],
-        request_get.get('uid')
-    ]
     spend_time = time.time()
     cmd = ' '.join(cmd)
     s = subprocess.Popen(cmd, shell=True, cwd=path, stdout=subprocess.PIPE)
@@ -56,8 +37,47 @@ def sh_remote_log(panel, request_get):
     spend_time = str(time.time() - spend_time)
     logger = logging.getLogger(__name__)
     logger.info(path + '|' + cmd + '|' + str(retcode) + '|' + spend_time)
-    # logger.info('STDOUT------------------------------\n' + str(output[0]))
-    # logger.info('STDERR------------------------------\n' + str(output[1]))
+
+
+def sh_remote_log(panel, t_p, request_get):
+    if 'start' not in request_get:
+        return
+    if 'end' not in request_get:
+        return
+    if 'server' not in request_get:
+        return
+    if 'uid' not in request_get:
+        return
+    server = panel.server_set.get(ip=request_get.get('server'))
+    if t_p == 'history_query':
+        cmd = [
+            './remote_getuidlog_multi.sh',
+            panel.symbol,
+            request_get.get('server'),
+            server.home,
+            server.user,
+            request_get.get('start').split(' ')[0],
+            request_get.get('end').split(' ')[0],
+            request_get.get('uid')
+        ]
+        _sh(cmd)
+    if t_p == 'everyday_history_query':
+        cmd = [
+            './remote_getuidlog_his.sh',
+            panel.symbol,
+            request_get.get('uid'),
+            request_get.get('start').split(' ')[0],
+            'dm'
+        ]
+        _sh(cmd)
+        cmd = [
+            './remote_getuidlog_his.sh',
+            panel.symbol,
+            request_get.get('uid'),
+            request_get.get('start').split(' ')[0],
+            'gm'
+        ]
+        _sh(cmd)
 
 
 def view_template(request, panel_id, url):
@@ -110,10 +130,10 @@ def json_template(request, panel_id, t_p, url=Common.URL):
         ret = Tabel.user_qeury_select(sub_menu, panel, request.GET)
     if t_p == 'gang_query':
         ret = Tabel.gang_qeury_select(sub_menu, panel, request.GET)
-    if t_p == 'deal_query':
+    if t_p == 'deal_query' or t_p == 'everyday_deal_query':
         ret = Tabel.deal_query_select(sub_menu, panel, request.GET)
-    if t_p == 'history_query':
-        sh_remote_log(panel, request.GET)
+    if t_p == 'history_query' or t_p == 'everyday_history_query':
+        sh_remote_log(panel, t_p, request.GET)
         ret = Tabel.history_query_select(sub_menu, panel, request.GET)
     if t_p == 'contact':
         ret = Tabel.contact_select(sub_menu, panel, request.GET)
@@ -168,8 +188,24 @@ def deal_query(request, panel_id, url=Common.URL):
 
 
 @Common.competence_required
+def everyday_deal_query(request, panel_id, url=Common.URL):
+    t = "detection/everyday_deal_query.html"
+    d = view_template(request, panel_id, url)
+    return render(request, t, d)
+
+
+@Common.competence_required
 def history_query(request, panel_id, url=Common.URL):
     t = "detection/history_query.html"
+    d = view_template(request, panel_id, url)
+    panel = get_object_or_404(Panel, pk=panel_id)
+    d['servers'] = panel.server_set.filter(server_type='dir')
+    return render(request, t, d)
+
+
+@Common.competence_required
+def everyday_history_query(request, panel_id, url=Common.URL):
+    t = "detection/everyday_history_query.html"
     d = view_template(request, panel_id, url)
     panel = get_object_or_404(Panel, pk=panel_id)
     d['servers'] = panel.server_set.filter(server_type='dir')

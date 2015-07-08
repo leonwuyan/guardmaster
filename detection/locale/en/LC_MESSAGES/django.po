@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2015-06-28 15:06+0800\n"
+"POT-Creation-Date: 2015-07-08 15:39+0800\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -17,99 +17,107 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 
-#: models.py:52
+#: models.py:77
 msgid "count"
 msgstr ""
 
-#: models.py:53
+#: models.py:78
 msgid "count_without_time"
 msgstr ""
 
-#: models.py:54
+#: models.py:79
 msgid "count_only_time"
 msgstr ""
 
-#: models.py:55
+#: models.py:80
 msgid "user_query"
 msgstr ""
 
-#: models.py:56
+#: models.py:81
 msgid "gang_query"
 msgstr ""
 
-#: models.py:57
+#: models.py:82
 msgid "deal_query"
 msgstr ""
 
-#: models.py:58
+#: models.py:83
 msgid "history_query"
 msgstr ""
 
-#: models.py:59
+#: models.py:84
+msgid "everyday_history_query"
+msgstr ""
+
+#: models.py:85
+msgid "everyday_deal_query"
+msgstr ""
+
+#: models.py:86
 msgid "notify"
 msgstr ""
 
-#: models.py:60
+#: models.py:87
 msgid "mail"
 msgstr ""
 
-#: models.py:61
+#: models.py:88
 msgid "single"
 msgstr ""
 
-#: models.py:62
+#: models.py:89
 msgid "rank"
 msgstr ""
 
-#: models.py:63
+#: models.py:90
 msgid "contact"
 msgstr ""
 
-#: models.py:73
+#: models.py:100
 msgid "Category is required when Main menu is selected"
 msgstr ""
 
-#: models.py:107
+#: models.py:134
 msgid "date"
 msgstr ""
 
-#: models.py:108
+#: models.py:135
 msgid "time"
 msgstr ""
 
-#: models.py:109
+#: models.py:136
 msgid "timestamp to date"
 msgstr ""
 
-#: models.py:110
+#: models.py:137
 msgid "timestamp to time"
 msgstr ""
 
-#: models.py:111
+#: models.py:138
 msgid "float two"
 msgstr ""
 
-#: models.py:112
+#: models.py:139
 msgid "ratio two"
 msgstr ""
 
-#: models.py:113
+#: models.py:140
 msgid "channel list"
 msgstr ""
 
-#: models.py:114
+#: models.py:141
 msgid "zone list"
 msgstr ""
 
-#: models.py:115
+#: models.py:142
 msgid "anything to string"
 msgstr ""
 
-#: models.py:116
+#: models.py:143
 msgid "contact to reply"
 msgstr ""
 
-#: models.py:117
+#: models.py:144
 msgid "ip to server"
 msgstr ""
 

@@ -15,9 +15,17 @@ urlpatterns = [
         views.deal_query,
         name='deal_query'),
     url(
+        r'^(?P<panel_id>[0-9]+)/everyday_deal_query/(?P<url>[_A-Za-z]+)$',
+        views.everyday_deal_query,
+        name='everyday_deal_query'),
+    url(
         r'^(?P<panel_id>[0-9]+)/history_query/(?P<url>[_A-Za-z]+)$',
         views.history_query,
         name='history_query'),
+    url(
+        r'^(?P<panel_id>[0-9]+)/everyday_history_query/(?P<url>[_A-Za-z]+)$',
+        views.everyday_history_query,
+        name='everyday_history_query'),
     url(
         r'^(?P<panel_id>[0-9]+)/(?P<t_p>[_A-Za-z]+)/(?P<url>[_A-Za-z]+).json$',
         views.json_template,

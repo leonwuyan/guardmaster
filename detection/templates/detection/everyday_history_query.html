@@ -10,12 +10,11 @@
     todayBtn: true,
     weekStart: 0,
     language: gettext('en'),
-    startDate: start_time,
-    endDate: end_time,
+    endDate: start_time,
     pickerPosition: "bottom-left"
   });
   management.numberOnly("input[name='uid']");
-  queryButton.initHistoryQuery();
+  queryButton.initEveryDayHistoryQuery();
  });
 </script>
 <div class="container-fluid white-bg">

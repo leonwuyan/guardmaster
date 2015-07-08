@@ -34,7 +34,6 @@ class ServerControl(object):
         logger.info(s)
 
     def db_log(self, obj):
-        print obj
         Res = ['add', 'recharge', 'mail_acc']
         if 'type' not in obj:
             return False

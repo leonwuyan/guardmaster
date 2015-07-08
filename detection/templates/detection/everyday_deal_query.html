@@ -2,20 +2,18 @@
 {% block content %}
 <script type="text/javascript">
  $(document).ready(function() {
-  end_time = getTime(true);
-  start_time = end_time.replace(/ (\w+):(\w+):(\w+)/, " 00:00:00");
-   $('.input-datepicker > input').datetimepicker({
-    format: "yyyy-mm-dd hh:ii:ss",
-    autoclose: true,
-    todayBtn: true,
-    weekStart: 0,
-    language: gettext('en'),
-    startDate: start_time,
-    endDate: end_time,
-    pickerPosition: "bottom-left"
-  });
+   $('.input-datepicker').datepicker({
+     format: "yyyy-mm-dd",
+     weekStart: 0,
+     language: gettext('en'),
+     autoclose: true,
+     todayHighlight: true,
+     endDate: "-1d"
+   });
   management.numberOnly("input[name='uid']");
-  queryButton.initHistoryQuery();
+  management.numberOnly("input[name='moneys']");
+  management.numberOnly("input[name='moneye']");
+  queryButton.initQuery();
  });
 </script>
 <div class="container-fluid white-bg">
@@ -34,18 +32,22 @@
         </div>
       </div>
       <div class="form-group" style="margin-bottom:5px">
-        <label>{{t_list_of_servers}}</label>
-        <select class="form-control" name="server">
-          {% for server in servers %}
-          <option value="{{server.ip}}" {% ifequal server_id server.id %}selected{% endifequal %}>{{server.label}}</option>
-          {% endfor %}
-        </select>
+        <label>{{t_range_of_money}}</label>
+        <div class="input-daterange input-group">
+          <input type="text" class="input-md form-control" name="moneys">
+          <span class="input-group-addon">{{t_to}}</span>
+          <input type="text" class="input-md form-control" name="moneye">
+        </div>
       </div>
       <div class="form-group" style="margin-bottom:5px">
         <label for="uid">{{t_player_id}}</label>
         <input type="text" class="form-control" id="uin" name="uid">
       </div>
-      <button type="submit" class="btn btn-default btn-sm" onclick="return dataAccess.history_queryJSON()">{{t_query}}</button>
+      <div class="form-group" style="margin-bottom:5px">
+        <label for="uin">{{t_user_id}}</label>
+        <input type="text" class="form-control" id="uin" name="uin">
+      </div>
+      <button type="submit" class="btn btn-default btn-sm" onclick="return dataAccess.queryJSON()">{{t_query}}</button>
     </form>
 
     <p class="sub-header"></p>

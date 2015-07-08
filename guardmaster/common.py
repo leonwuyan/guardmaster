@@ -52,7 +52,6 @@ def now(t=None):
         return time.strftime('%Y-%m-%d %H:%M:%S', time.localtime(t))
 
 
-
 def get_user_panels(user):
     groups = user.groups.all()
     panels = map(lambda x: x.panel_set.all(), groups)
@@ -134,7 +133,9 @@ def filter_enum(iterable, enum_cd, default=None):
 
 
 def get_client_ip(request):
-    if 'HTTP_X_FORWARDED_FOR' in request.META:
-        return request.META['HTTP_X_FORWARDED_FOR']
+    x_forwarded_for = request.META.get('HTTP_X_FORWARDED_FOR')
+    if x_forwarded_for:
+        ip = x_forwarded_for.split(',')[0]
     else:
-        return request.META['REMOTE_ADDR']
+        ip = request.META.get('REMOTE_ADDR')
+    return ip

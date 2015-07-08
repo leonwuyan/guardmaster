@@ -81,6 +81,8 @@ class UISubMenu(models.Model):
         ('detection:gang_query', _('gang_query')),
         ('detection:deal_query', _('deal_query')),
         ('detection:history_query', _('history_query')),
+        ('detection:everyday_history_query', _('everyday_history_query')),
+        ('detection:everyday_deal_query', _('everyday_deal_query')),
         ('operating:notify', _('notify')),
         ('operating:mail', _('mail')),
         ('operating:single', _('single')),

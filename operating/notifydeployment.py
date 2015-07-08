@@ -52,7 +52,7 @@ class NotifyDeployment(object):
                 s = subprocess.Popen(cmd, shell=True, cwd=path, stdout=subprocess.PIPE)
                 retcode = s.wait()
                 logger = logging.getLogger(__name__)
-                logger.info(path + '|' + cmd + '|' + str(retcode))
+                logger.info(self.username + '|' + path + '|' + cmd + '|' + str(retcode))
         for k in self.json.keys():
             path = BASE_DIR + OPERATING_DIR + k
             if not os.path.exists(path):
@@ -72,7 +72,7 @@ class NotifyDeployment(object):
             cmd += BASE_DIR + OPERATING_DIR
             cmd += ' ' + cdn.ip + ':' + cdn.home
             ret = subprocess.Popen(cmd, shell=True, stdout=subprocess.PIPE)
-            logger.info(cmd)
+            logger.info(self.username + '|' + cmd)
         self.cdn_url = map(lambda x: cdn.cdn_url + 'notify/' + x, self.cdn_url)
 
     def tojson(self):

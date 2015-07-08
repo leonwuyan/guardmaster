@@ -165,6 +165,29 @@
       _buildTable(data);
       return false;
     },
+    'history_queryJSON': function() {
+      if ($('input[name="start"]').length > 0) {
+        var start = $('input[name="start"]').val();
+        var end = $('input[name="end"]').val();
+        if (start == '' || end == '') {
+          alert('请填写起始日期和结束日期。');
+          return false;
+        }
+        if (start > end) {
+          alert('起始日期请小于结束日期');
+          return false;
+        }
+        var start_date = new Date(Date.parse(start.replace(/-/g, "/")));
+        var end_date = new Date(Date.parse(end.replace(/-/g, "/")));
+        if (start_date.getDate() != end_date.getDate()){
+          alert('日期范围请在一个自然天')
+          return false;
+        }
+      }
+      var data = _getData('form#queryForm [name]');
+      _buildTable(data);
+      return false;
+    },
     'contactJSON': function() {
       var data = _getData('form#contactForm [name]');
       _buildTable(data);
@@ -378,6 +401,14 @@
         start_time = end_time.replace(/ (\w+):(\w+):(\w+)/, " 00:00:00");
         $('input[name="start"]').val(start_time);
         $('input[name="end"]').val(end_time);
+      }
+    },
+    'initEveryDayHistoryQuery': function () {
+      if ($('input[name="start"]').length > 0) {
+        end_time = _getTime(true);
+        start_time = end_time.replace(/ (\w+):(\w+):(\w+)/, " 00:00:00");
+        $('input[name="start"]').val(start_time);
+        $('input[name="end"]').val(start_time);
       }
     },
     'mailConfirm': function () {
