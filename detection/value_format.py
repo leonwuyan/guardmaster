@@ -70,6 +70,11 @@ class ValueFormat(object):
         Server = panel.server_set.get(ip=x)
         return Server.label
 
+    def _pay_channel_list(self, id):
+        if self.pay_channel_list is None:
+            self.pay_channel_list = Tabel.get_enum(self.panel_id, Common.E_PAYCHANNEL)
+        return Common.filter_enum(self.pay_channel_list, int(id), id)
+
     def _f_v(self, f, v):
         if f is None:
             f = ''

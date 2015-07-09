@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2015-07-08 15:39+0800\n"
+"POT-Creation-Date: 2015-07-09 22:20+0800\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -22,103 +22,111 @@ msgid "count"
 msgstr ""
 
 #: models.py:78
-msgid "count_without_time"
+msgid "count_with_pay_channel"
 msgstr ""
 
 #: models.py:79
-msgid "count_only_time"
+msgid "count_without_time"
 msgstr ""
 
 #: models.py:80
-msgid "user_query"
+msgid "count_only_time"
 msgstr ""
 
 #: models.py:81
-msgid "gang_query"
+msgid "user_query"
 msgstr ""
 
 #: models.py:82
-msgid "deal_query"
+msgid "gang_query"
 msgstr ""
 
 #: models.py:83
-msgid "history_query"
+msgid "deal_query"
 msgstr ""
 
 #: models.py:84
-msgid "everyday_history_query"
+msgid "history_query"
 msgstr ""
 
 #: models.py:85
-msgid "everyday_deal_query"
+msgid "everyday_history_query"
 msgstr ""
 
 #: models.py:86
-msgid "notify"
+msgid "everyday_deal_query"
 msgstr ""
 
 #: models.py:87
-msgid "mail"
+msgid "notify"
 msgstr ""
 
 #: models.py:88
-msgid "single"
+msgid "mail"
 msgstr ""
 
 #: models.py:89
-msgid "rank"
+msgid "single"
 msgstr ""
 
 #: models.py:90
+msgid "rank"
+msgstr ""
+
+#: models.py:91
 msgid "contact"
 msgstr ""
 
-#: models.py:100
+#: models.py:101
 msgid "Category is required when Main menu is selected"
 msgstr ""
 
-#: models.py:134
+#: models.py:135
 msgid "date"
 msgstr ""
 
-#: models.py:135
+#: models.py:136
 msgid "time"
 msgstr ""
 
-#: models.py:136
+#: models.py:137
 msgid "timestamp to date"
 msgstr ""
 
-#: models.py:137
+#: models.py:138
 msgid "timestamp to time"
 msgstr ""
 
-#: models.py:138
+#: models.py:139
 msgid "float two"
 msgstr ""
 
-#: models.py:139
+#: models.py:140
 msgid "ratio two"
 msgstr ""
 
-#: models.py:140
+#: models.py:141
 msgid "channel list"
 msgstr ""
 
-#: models.py:141
+#: models.py:142
 msgid "zone list"
 msgstr ""
 
-#: models.py:142
+#: models.py:143
 msgid "anything to string"
 msgstr ""
 
-#: models.py:143
+#: models.py:144
 msgid "contact to reply"
 msgstr ""
 
-#: models.py:144
+#: models.py:145
 msgid "ip to server"
+msgstr ""
+
+#: models.py:146
+msgid "pay channel list"
 msgstr ""
 
 #: templates/detection/base.html:4

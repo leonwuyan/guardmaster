@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2015-07-08 15:39+0800\n"
-"PO-Revision-Date: 2015-07-08 15:40+0800\n"
+"POT-Creation-Date: 2015-07-09 22:20+0800\n"
+"PO-Revision-Date: 2015-07-09 22:20+0800\n"
 "Last-Translator: Raynor <raynor41@gmail.com>\n"
 "Language-Team: \n"
 "Language: zh_TW\n"
@@ -23,104 +23,112 @@ msgid "count"
 msgstr "統計頁面"
 
 #: models.py:78
+msgid "count_with_pay_channel"
+msgstr "統計頁面（支付渠道）"
+
+#: models.py:79
 msgid "count_without_time"
 msgstr "統計頁面（沒有日期選擇）"
 
-#: models.py:79
+#: models.py:80
 msgid "count_only_time"
 msgstr "統計頁面（只有日期選擇）"
 
-#: models.py:80
+#: models.py:81
 msgid "user_query"
 msgstr "用戶查詢頁面"
 
-#: models.py:81
+#: models.py:82
 msgid "gang_query"
 msgstr "聯盟查詢頁面"
 
-#: models.py:82
+#: models.py:83
 msgid "deal_query"
 msgstr "充值查詢頁面"
 
-#: models.py:83
+#: models.py:84
 msgid "history_query"
 msgstr "歷程查詢頁面"
 
-#: models.py:84
+#: models.py:85
 msgid "everyday_history_query"
 msgstr "每日歷程查詢頁面"
 
-#: models.py:85
+#: models.py:86
 msgid "everyday_deal_query"
 msgstr "每日充值查詢頁面"
 
-#: models.py:86
+#: models.py:87
 msgid "notify"
 msgstr "系統公告頁面"
 
-#: models.py:87
+#: models.py:88
 msgid "mail"
 msgstr "系統郵件頁面"
 
-#: models.py:88
+#: models.py:89
 msgid "single"
 msgstr "單一用戶"
 
-#: models.py:89
+#: models.py:90
 msgid "rank"
 msgstr "排行榜頁面"
 
-#: models.py:90
+#: models.py:91
 msgid "contact"
 msgstr "玩家聯繫客服頁面"
 
-#: models.py:100
+#: models.py:101
 msgid "Category is required when Main menu is selected"
 msgstr "Main menu選擇時，Category必須選擇"
 
-#: models.py:134
+#: models.py:135
 msgid "date"
 msgstr "日期"
 
-#: models.py:135
+#: models.py:136
 msgid "time"
 msgstr "時間"
 
-#: models.py:136
+#: models.py:137
 msgid "timestamp to date"
 msgstr "時間戳轉換日期"
 
-#: models.py:137
+#: models.py:138
 msgid "timestamp to time"
 msgstr "時間戳轉換時間"
 
-#: models.py:138
+#: models.py:139
 msgid "float two"
 msgstr "保留兩位小數"
 
-#: models.py:139
+#: models.py:140
 msgid "ratio two"
 msgstr "保留兩位小數的百分比"
 
-#: models.py:140
+#: models.py:141
 msgid "channel list"
 msgstr "渠道列表"
 
-#: models.py:141
+#: models.py:142
 msgid "zone list"
 msgstr "區服列表"
 
-#: models.py:142
+#: models.py:143
 msgid "anything to string"
 msgstr "強行轉換字符串"
 
-#: models.py:143
+#: models.py:144
 msgid "contact to reply"
 msgstr "玩家聯繫客服回覆連接"
 
-#: models.py:144
+#: models.py:145
 msgid "ip to server"
 msgstr "IP地址轉換成DIR大區"
+
+#: models.py:146
+msgid "pay channel list"
+msgstr "支付渠道列表"
 
 #: templates/detection/base.html:4
 msgid "BlazBlue Revolution Reburning GuardMaster Workbench"

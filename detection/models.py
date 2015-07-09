@@ -75,6 +75,7 @@ class UISubMenu(models.Model):
     # CATEGORY_LIST is related with views(views.py)
     CATEGORY_LIST = {
         ('detection:count', _('count')),
+        ('detection:count_with_pay_channel', _('count_with_pay_channel')),
         ('detection:count_without_time', _('count_without_time')),
         ('detection:count_only_time', _('count_only_time')),
         ('detection:user_query', _('user_query')),
@@ -142,6 +143,7 @@ class UIColMap(models.Model):
         ('identity_str', _('anything to string')),
         ('contact_reply', _('contact to reply')),
         ('ip_to_server', _('ip to server')),
+        ('pay_channel_list', _('pay channel list')),
     }
     label = models.CharField(max_length=45)
     sub_menu = models.ForeignKey(UISubMenu)

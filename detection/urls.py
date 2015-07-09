@@ -35,6 +35,10 @@ urlpatterns = [
         views.count,
         name='count'),
     url(
+        r'^(?P<panel_id>[0-9]+)/count_with_pay_channel/(?P<url>[_A-Za-z]+)$',
+        views.count_with_pay_channel,
+        name='count_with_pay_channel'),
+    url(
         r'^(?P<panel_id>[0-9]+)/count_without_time/(?P<url>[_A-Za-z]+)$',
         views.count_without_time,
         name='count_without_time'),

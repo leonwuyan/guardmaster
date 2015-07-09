@@ -25,6 +25,7 @@ def view_init():
     Common.E_ROLEID_LIST = None
     Common.E_SKILLID_LIST = None
     Common.E_ZONEID_LIST = None
+    Common.E_PAYCHANNEL_LIST = None
 
 
 def _sh(cmd):
@@ -91,6 +92,7 @@ def view_template(request, panel_id, url):
     table_head = sub_menu.get_col_map_dict(['label'])
 
     channel_list = Tabel.get_enum(panel_id, Common.E_CHANNELID)
+    pay_channel_list = Tabel.get_enum(panel_id, Common.E_PAYCHANNEL)
     zone_list = Tabel.get_enum(panel_id, Common.E_ZONEID)
 
     data = {
@@ -101,6 +103,7 @@ def view_template(request, panel_id, url):
         'panel': panel,
         'table_head': table_head,
         'channels': channel_list,
+        'pay_channels': pay_channel_list,
         'zones': zone_list,
     }
 
@@ -148,6 +151,13 @@ def json_template(request, panel_id, t_p, url=Common.URL):
 @Common.competence_required
 def count(request, panel_id, url=Common.URL):
     t = "detection/count.html"
+    d = view_template(request, panel_id, url)
+    return render(request, t, d)
+
+
+@Common.competence_required
+def count_with_pay_channel(request, panel_id, url=Common.URL):
+    t = "detection/count_with_pay_channel.html"
     d = view_template(request, panel_id, url)
     return render(request, t, d)
 
