@@ -16,6 +16,7 @@ class ValueFormat(object):
         self.format_list = format_list
         self.channel_list = None
         self.zone_list = None
+        self.pay_channel_list = None
 
     def _date(self, d):
         if d.__class__ is date:
