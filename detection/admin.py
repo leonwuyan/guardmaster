@@ -33,6 +33,7 @@ class UISubMenuAdmin(admin.ModelAdmin):
         'category',
         'seqid')
     search_fields = ['label']
+    list_filter = ['main_menu', 'category']
 
 
 class UIMainMenuAdmin(admin.ModelAdmin):

@@ -1,5 +1,6 @@
 from itertools import chain
 from django.http import HttpResponseRedirect
+from datetime import *
 import time
 
 
@@ -49,9 +50,19 @@ def kvs(k, vs):
 
 def now(t=None):
     if t:
-        return time.strftime('%Y-%m-%d %H:%M:%S', time.localtime(time.time()))
+        return time.strftime('%Y-%m-%d %H:%M:%S', time.localtime())
     else:
         return time.strftime('%Y-%m-%d %H:%M:%S', time.localtime(t))
+
+
+def datetime2string(t, tz=0):
+    ts = time.mktime(t.timetuple()) + tz
+    return time.strftime('%Y-%m-%d %H:%M:%S', time.localtime(ts))
+
+
+def datetime2ts(t, tz=0):
+    ts = time.mktime(t.timetuple()) + tz
+    return int(ts)
 
 
 def get_user_panels(user):

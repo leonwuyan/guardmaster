@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2015-07-09 22:20+0800\n"
+"POT-Creation-Date: 2015-07-15 00:34+0800\n"
 "PO-Revision-Date: 2015-07-09 22:20+0800\n"
 "Last-Translator: Raynor <raynor41@gmail.com>\n"
 "Language-Team: \n"
@@ -198,7 +198,7 @@ msgstr "伺服器列表"
 msgid "Choose The Panel"
 msgstr "請選擇遊戲面板"
 
-#: value_format.py:64
+#: value_format.py:65
 msgid "reply"
 msgstr "回覆"
 
