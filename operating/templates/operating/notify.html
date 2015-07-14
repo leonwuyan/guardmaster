@@ -5,6 +5,8 @@
 {% trans "Notify Info" as t_notify_info %}
 {% trans "Notify Title" as t_notify_title %}
 {% trans "Notify Content" as t_notify_content %}
+{% trans "Start Date" as t_notify_start %}
+{% trans "End Date" as t_notify_end %}
 {% trans "Is Display" as t_is_display %}
 {% trans "Picture Info" as t_picture_info %}
 {% trans "Picture Link" as t_picture_link %}
@@ -30,6 +32,18 @@
 {% trans "Attention" as t_attention %}
 {% trans "Please Edit The Notify" as t_p_e_t_n %}
 {% trans "Back" as t_back %}
+<script type="text/javascript">
+ $(document).ready(function() {
+   $('.input-datepicker > input').datetimepicker({
+    format: "yyyy-mm-dd hh:ii:ss",
+    autoclose: true,
+    todayBtn: true,
+    weekStart: 0,
+    language: gettext('en'),
+    pickerPosition: "bottom-left"
+  });
+ });
+</script>
 <div class="container-fluid white-bg">
   <div class="row">
     <ol class="breadcrumb">
@@ -68,6 +82,14 @@
           <option value="{{server.hostname}}" {% ifequal notify.hostname server.hostname %}selected{% endifequal %}>{{server.label}}</option>
           {% endfor %}
         </select>
+      </div>
+      <div class="form-group" style="margin-bottom:5px">
+        <label>{{ t_range_of_date }}</label>
+        <div class="input-daterange input-group input-datepicker" id="datepicker">
+          <input type="text" class="input-md form-control" name="start" value="{{ notify.start }}">
+          <span class="input-group-addon">{{ t_to }}</span>
+          <input type="text" class="input-md form-control" name="end" value="{{ notify.end }}">
+        </div>
       </div>
       <div class="form-group" style="margin-bottom:5px">
         <label for="title">{{ t_notify_title }}</label>&emsp;<span class="label label-danger">{{ t_4_words_limited }}</span>
@@ -176,15 +198,17 @@
             <tr>
               <th style="width: 10%">{{t_notify_title}}</th>
               <th style="width: 30%">{{t_notify_content}}</th>
-              <th style="width: 10%">{{t_picture_link}}</th>
+              <th style="width: 5%">{{t_notify_start}}</th>
+              <th style="width: 5%">{{t_notify_end}}</th>
+              <th style="width: 6%">{{t_picture_link}}</th>
               <th style="width: 4%">{{t_picture_width}}</th>
               <th style="width: 4%">{{t_picture_height}}</th>
-              <th style="width: 10%">{{t_hostname}}</th>
+              <th style="width: 6%">{{t_hostname}}</th>
               <th style="width: 6%">{{t_channel}}</th>
-              <th style="width: 6%">{{t_platform}}</th>
-              <th style="width: 6%">{{t_zone}}</th>
+              <th style="width: 5%">{{t_platform}}</th>
+              <th style="width: 5%">{{t_zone}}</th>
               <th style="width: 4%">{{t_is_display}}</th>
-              <th style="width: 6%">{{t_seqid}}</th>
+              <th style="width: 5%">{{t_seqid}}</th>
               <th style="width: 4%">{{t_operate}}</th>
             </tr>
           </thead>
@@ -193,6 +217,8 @@
             <tr>
               <td>{{r.title}}</td>
               <td>{{r.content}}</td>
+              <td>{{r.start|datetime2string}}</td>
+              <td>{{r.end|datetime2string}}</td>
               <td>{{r.link}}</td>
               <td>{{r.image_width}}</td>
               <td>{{r.image_height}}</td>
@@ -227,8 +253,8 @@
   var editor = new Simditor({
     textarea: $('#content'),
     toolbar: toolbar,
-    allowedTags: allowedtags,
-    allowedAttributes: allowedattributes,
+    //allowedTags: allowedtags,
+    //allowedAttributes: allowedattributes,
     tabIndent: false
   });
  });

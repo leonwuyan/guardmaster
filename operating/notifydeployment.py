@@ -1,5 +1,6 @@
 from operating.models import Notify
 from django.shortcuts import get_object_or_404
+from guardmaster import common as Common
 from detection.models import Panel
 import subprocess
 import logging
@@ -29,6 +30,8 @@ class NotifyDeployment(object):
             'Link': n.link,
             'ImageWidth': n.image_width,
             'ImageHeight': n.image_height,
+            'Start': Common.datetime2ts(n.start, 28800),
+            'End': Common.datetime2ts(n.end, 28800),
             'Content': n.content,
             'IsDisplay': n.is_display,
         })
@@ -112,6 +115,8 @@ class NotifyDeployment(object):
             n.platform = post.get('platform')
             n.world_id = post.get('zone')
             n.notify_url = notify_url
+            n.start = post.get('start')
+            n.end = post.get('end')
             n.seqid = self._get(post, 'seqid')
         else:
             n = Notify(
@@ -127,6 +132,8 @@ class NotifyDeployment(object):
                 platform=post.get('platform'),
                 world_id=post.get('zone'),
                 notify_url=notify_url,
+                start=post.get('start'),
+                end=post.get('end'),
                 seqid=self._get(post, 'seqid')
             )
         ret = 1

@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2015-07-09 22:20+0800\n"
+"POT-Creation-Date: 2015-07-15 00:34+0800\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -138,7 +138,7 @@ msgid "Add 10k"
 msgstr ""
 
 #: templates/operating/base_info.html:26 templates/operating/mail.html:18
-#: templates/operating/notify.html:19
+#: templates/operating/notify.html:21
 msgid "Add"
 msgstr ""
 
@@ -316,7 +316,7 @@ msgstr ""
 msgid "Name"
 msgstr ""
 
-#: templates/operating/contact.html:9 templates/operating/notify.html:13
+#: templates/operating/contact.html:9 templates/operating/notify.html:15
 msgid "Hostname"
 msgstr ""
 
@@ -324,7 +324,7 @@ msgstr ""
 msgid "Channel ID"
 msgstr ""
 
-#: templates/operating/contact.html:11 templates/operating/notify.html:15
+#: templates/operating/contact.html:11 templates/operating/notify.html:17
 msgid "Platform"
 msgstr ""
 
@@ -467,7 +467,7 @@ msgstr ""
 msgid "Accessory Include Item And Equip"
 msgstr ""
 
-#: templates/operating/mail.html:22 templates/operating/notify.html:20
+#: templates/operating/mail.html:22 templates/operating/notify.html:22
 msgid "Success"
 msgstr ""
 
@@ -512,86 +512,94 @@ msgid "Notify Content"
 msgstr ""
 
 #: templates/operating/notify.html:8
-msgid "Is Display"
+msgid "Start Date"
 msgstr ""
 
 #: templates/operating/notify.html:9
-msgid "Picture Info"
+msgid "End Date"
 msgstr ""
 
 #: templates/operating/notify.html:10
-msgid "Picture Link"
+msgid "Is Display"
 msgstr ""
 
 #: templates/operating/notify.html:11
-msgid "Picture Width"
+msgid "Picture Info"
 msgstr ""
 
 #: templates/operating/notify.html:12
-msgid "Picture Height"
+msgid "Picture Link"
+msgstr ""
+
+#: templates/operating/notify.html:13
+msgid "Picture Width"
 msgstr ""
 
 #: templates/operating/notify.html:14
-msgid "Channel"
+msgid "Picture Height"
 msgstr ""
 
 #: templates/operating/notify.html:16
-msgid "Zone"
-msgstr ""
-
-#: templates/operating/notify.html:17
-msgid "Seq ID"
+msgid "Channel"
 msgstr ""
 
 #: templates/operating/notify.html:18
+msgid "Zone"
+msgstr ""
+
+#: templates/operating/notify.html:19
+msgid "Seq ID"
+msgstr ""
+
+#: templates/operating/notify.html:20
 msgid "Other Options"
 msgstr ""
 
-#: templates/operating/notify.html:21
+#: templates/operating/notify.html:23
 msgid "Please Check The Notify Info"
 msgstr ""
 
-#: templates/operating/notify.html:22
+#: templates/operating/notify.html:24
 msgid "Fail"
 msgstr ""
 
-#: templates/operating/notify.html:23
+#: templates/operating/notify.html:25
 msgid "Please Check The Input Is Right"
 msgstr ""
 
-#: templates/operating/notify.html:24
+#: templates/operating/notify.html:26
 msgid "The Will Be DIR Notify When The Zone Is All Zone"
 msgstr ""
 
-#: templates/operating/notify.html:25
+#: templates/operating/notify.html:27
 msgid "Add Or Edit Notify Without Synchronization"
 msgstr ""
 
-#: templates/operating/notify.html:26
+#: templates/operating/notify.html:28
 msgid "Synchronize Notify"
 msgstr ""
 
-#: templates/operating/notify.html:27
+#: templates/operating/notify.html:29
 msgid "Delete"
 msgstr ""
 
-#: templates/operating/notify.html:28
+#: templates/operating/notify.html:30
 msgid "Edit"
 msgstr ""
 
-#: templates/operating/notify.html:29
+#: templates/operating/notify.html:31
 msgid "Operate"
 msgstr ""
 
-#: templates/operating/notify.html:30
+#: templates/operating/notify.html:32
 msgid "Attention"
 msgstr ""
 
-#: templates/operating/notify.html:31
+#: templates/operating/notify.html:33
 msgid "Please Edit The Notify"
 msgstr ""
 
-#: templates/operating/notify.html:32
+#: templates/operating/notify.html:34
 msgid "Back"
 msgstr ""
 
@@ -776,83 +784,83 @@ msgstr ""
 msgid "Return Notify List"
 msgstr ""
 
-#: templatetags/custom.py:24 templatetags/custom.py:171
+#: templatetags/custom.py:24 templatetags/custom.py:175
 msgid "Not Time"
 msgstr ""
 
-#: templatetags/custom.py:38
+#: templatetags/custom.py:42
 #, python-format
 msgid "%(hour)s H %(minute)s M %(second)s S"
 msgstr ""
 
-#: templatetags/custom.py:43
+#: templatetags/custom.py:47
 msgid "OFF LINE"
 msgstr ""
 
-#: templatetags/custom.py:45
+#: templatetags/custom.py:49
 msgid "ON LINE"
 msgstr ""
 
-#: templatetags/custom.py:115
+#: templatetags/custom.py:119
 msgid "Novice Dungeon List"
 msgstr ""
 
-#: templatetags/custom.py:117
+#: templatetags/custom.py:121
 msgid "Normal Dungeon List"
 msgstr ""
 
-#: templatetags/custom.py:119
+#: templatetags/custom.py:123
 msgid "Elite Dungeon List"
 msgstr ""
 
-#: templatetags/custom.py:121
+#: templatetags/custom.py:125
 msgid "Endless Dungeon List"
 msgstr ""
 
-#: templatetags/custom.py:159
+#: templatetags/custom.py:163
 msgid "PvP Win Times"
 msgstr ""
 
-#: templatetags/custom.py:159
+#: templatetags/custom.py:163
 msgid "PvP Total Times"
 msgstr ""
 
-#: templatetags/custom.py:160
+#: templatetags/custom.py:164
 msgid "Endless Score"
 msgstr ""
 
-#: templatetags/custom.py:160
+#: templatetags/custom.py:164
 msgid "Endless Floor"
 msgstr ""
 
-#: templatetags/custom.py:161
+#: templatetags/custom.py:165
 msgid "Gang Score"
 msgstr ""
 
-#: templatetags/custom.py:161
+#: templatetags/custom.py:165
 msgid "Gang History Score"
 msgstr ""
 
-#: templatetags/custom.py:162
+#: templatetags/custom.py:166
 msgid "Achievement Score"
 msgstr ""
 
-#: templatetags/custom.py:162
+#: templatetags/custom.py:166
 msgid "Achievement Times"
 msgstr ""
 
-#: templatetags/custom.py:163
+#: templatetags/custom.py:167
 msgid "Fight Offline Name"
 msgstr ""
 
-#: templatetags/custom.py:163
+#: templatetags/custom.py:167
 msgid "Fight Offline Kill Man"
 msgstr ""
 
-#: templatetags/custom.py:164
+#: templatetags/custom.py:168
 msgid "Fight Online Score"
 msgstr ""
 
-#: templatetags/custom.py:164
+#: templatetags/custom.py:168
 msgid "Fight Online Win Times"
 msgstr ""

@@ -25,6 +25,10 @@ def ts2time(timestamp):
     return time.strftime("%Y-%m-%d %H:%M:%S", time.localtime(ts))
 
 
+def datetime2string(dt):
+    return Common.datetime2string(dt, 28800)
+
+
 def second2time(second):
     try:
         ss = int(second)
@@ -187,3 +191,4 @@ register.filter(enum_restype)
 register.filter(enum_building)
 register.filter(rank_val)
 register.filter(ts2bantime)
+register.filter(datetime2string)

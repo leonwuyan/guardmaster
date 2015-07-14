@@ -75,6 +75,8 @@ def edit_notify(request, panel_id, id):
         d['channels'] = enum_channel_list(panel_id)
         d['zones'] = enum_zone_list(panel_id)
         d['url'] = url
+        notify.start = Common.datetime2string(notify.start, 28800)
+        notify.end = Common.datetime2string(notify.end, 28800)
         d['notify'] = notify
         return render(request, t, d)
     if request.method == 'POST':

@@ -61,6 +61,8 @@ class Notify(models.Model):
     image_width = models.IntegerField()
     image_height = models.IntegerField()
     notify_url = models.CharField(max_length=256)
+    start = models.DateTimeField()
+    end = models.DateTimeField()
     seqid = models.IntegerField()
 
     def __unicode__(self):
