@@ -193,42 +193,44 @@
       </span>
       </div>
       <div class="table-responsive">
-        <table class="table table-bordered table-striped table-condensed">
+        <table class="table table-bordered table-striped table-condensed" style="table-layout: fixed">
           <thead>
             <tr>
-              <th style="width: 10%">{{t_notify_title}}</th>
-              <th style="width: 30%">{{t_notify_content}}</th>
-              <th style="width: 5%">{{t_notify_start}}</th>
-              <th style="width: 5%">{{t_notify_end}}</th>
-              <th style="width: 6%">{{t_picture_link}}</th>
-              <th style="width: 4%">{{t_picture_width}}</th>
-              <th style="width: 4%">{{t_picture_height}}</th>
-              <th style="width: 6%">{{t_hostname}}</th>
-              <th style="width: 6%">{{t_channel}}</th>
+              <th style="width: 14%">{{t_notify_title}}</th>
+              <th style="width: 7%">{{t_notify_start}}</th>
+              <th style="width: 7%">{{t_notify_end}}</th>
+              <th style="width: 10%">{{t_picture_link}}</th>
+              <th style="width: 6%">{{t_picture_width}}</th>
+              <th style="width: 6%">{{t_picture_height}}</th>
+              <th style="width: 12%">{{t_hostname}}</th>
+              <th style="width: 5%">{{t_channel}}</th>
               <th style="width: 5%">{{t_platform}}</th>
               <th style="width: 5%">{{t_zone}}</th>
-              <th style="width: 4%">{{t_is_display}}</th>
-              <th style="width: 5%">{{t_seqid}}</th>
-              <th style="width: 4%">{{t_operate}}</th>
+              <th style="width: 6%">{{t_is_display}}</th>
+              <th style="width: 6%">{{t_seqid}}</th>
+              <th style="width: 6%">{{t_operate}}</th>
             </tr>
           </thead>
           <tbody>
           {% for r in notifys %}
             <tr>
               <td>{{r.title}}</td>
-              <td>{{r.content}}</td>
               <td>{{r.start|datetime2string}}</td>
               <td>{{r.end|datetime2string}}</td>
-              <td>{{r.link}}</td>
+              <td style="word-wrap:break-word;word-break:break-all">{{r.link}}</td>
               <td>{{r.image_width}}</td>
               <td>{{r.image_height}}</td>
-              <td>{{r.hostname}}</td>
+              <td style="word-wrap:break-word;word-break:break-all">{{r.hostname}}</td>
               <td>{{r.channel}}</td>
               <td>{{r.platform}}</td>
               <td>{{r.world_id}}</td>
               <td>{{r.is_display}}</td>
               <td>{{r.seqid}}</td>
               <td><a href="{% url 'operating:edit_notify' panel.id r.id %}"><button class="btn-xs btn btn-primary" type="button">{{t_edit}}</button></a><br><br><button class="btn-xs btn btn-danger" type="button" onclick="dataAccess.notifyJSON({{r.id}}, '{{r.title}}')">{{t_delete}}</button></td>
+            </tr>
+            <tr>
+              <td colspan="13"><div>
+              <textarea class="form-control notifycontent" rows="2" readonly="readonly">{{r.content}}</textarea></div></td>
             </tr>
           {% endfor %}
           </tbody>
@@ -255,6 +257,11 @@
     toolbar: toolbar,
     //allowedTags: allowedtags,
     //allowedAttributes: allowedattributes,
+    tabIndent: false
+  });
+  var readonly = new Simditor({
+    textarea: $('.notifycontent'),
+    toolbar: [],
     tabIndent: false
   });
  });

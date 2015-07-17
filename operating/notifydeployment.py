@@ -15,6 +15,11 @@ class NotifyDeployment(object):
         self.username = username
         self.cdn_url = []
 
+    def _tiitle(self, t):
+        before = "<stroke size=2 color='0x0000417'><gradient direction=y start_color='0xFFFFFF' end_color='0xFFB300'>"
+        after = "</gradient></stroke>"
+        return before + t + after
+
     def _n(self, n):
         path = '/'.join([
             n.hostname,
@@ -26,7 +31,7 @@ class NotifyDeployment(object):
             self.json[path] = []
         self.json[path].append({
             'Name': str(n.id),
-            'Title': n.title,
+            'Title': self._tiitle(n.title),
             'Link': n.link,
             'ImageWidth': n.image_width,
             'ImageHeight': n.image_height,
