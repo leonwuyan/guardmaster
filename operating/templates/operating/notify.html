@@ -229,8 +229,8 @@
               <td><a href="{% url 'operating:edit_notify' panel.id r.id %}"><button class="btn-xs btn btn-primary" type="button">{{t_edit}}</button></a><br><br><button class="btn-xs btn btn-danger" type="button" onclick="dataAccess.notifyJSON({{r.id}}, '{{r.title}}')">{{t_delete}}</button></td>
             </tr>
             <tr>
-              <td colspan="13"><div>
-              <textarea class="form-control notifycontent" rows="2" readonly="readonly">{{r.content}}</textarea></div></td>
+              <td colspan="13">
+              <textarea class="form-control notifycontent" id="notify-{{r.id}}" rows="2" readonly="readonly">{{r.content}}</textarea></td>
             </tr>
           {% endfor %}
           </tbody>
@@ -259,11 +259,13 @@
     //allowedAttributes: allowedattributes,
     tabIndent: false
   });
-  var readonly = new Simditor({
-    textarea: $('.notifycontent'),
-    toolbar: [],
-    tabIndent: false
-  });
+  $('.notifycontent').each(function(index, element){
+    var readonly = new Simditor({
+      textarea: $('#'+element.id),
+      toolbar: [],
+      tabIndent: false
+    });
+  })
  });
 </script>
 {% endblock %}
