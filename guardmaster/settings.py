@@ -145,6 +145,14 @@ DATABASES = {
         'HOST': '192.168.1.90',
         'PORT': '3306',
     },
+    'db_cymsl_statdb_91': {
+        'ENGINE': 'django.db.backends.mysql',
+        'NAME': 'db_cymsl_statdb',
+        'USER': 'act',
+        'PASSWORD': '91act@b7',
+        'HOST': '203.69.246.91',
+        'PORT': '3307',
+    },
 }
 
 

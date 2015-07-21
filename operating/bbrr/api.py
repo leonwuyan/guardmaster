@@ -123,7 +123,7 @@ class ServerSocket(object):
     def connect_server(self, ip, port, content):
         address = (ip, port)
         s = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
-        s.settimeout(5.0)
+        s.settimeout(30.0)
         try:
             s.connect(address)
         except Exception, e:
