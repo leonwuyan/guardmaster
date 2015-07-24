@@ -2,7 +2,11 @@ from itertools import chain
 from django.http import HttpResponseRedirect
 from datetime import *
 import time
-
+import hotshot
+import os
+import time
+import settings
+import tempfile
 
 URL = 'total'
 ENUM = 'enum'
@@ -38,6 +42,11 @@ E_PAYCHANNEL_LIST = None
 DATE_FORMAT_ERROR = 'date format error'
 TIME_FORMAT_ERROR = 'time format error'
 FORMAT_ERROR = 'format error'
+
+try:
+    PROFILE_LOG_BASE = settings.BASE_DIR
+except:
+    PROFILE_LOG_BASE = tempfile.gettempdir()
 
 
 def kv(k, v):
@@ -152,3 +161,24 @@ def get_client_ip(request):
     else:
         ip = request.META.get('REMOTE_ADDR')
     return ip
+
+
+def profile(log_file):
+    if not os.path.isabs(log_file):
+        log_file = os.path.join(PROFILE_LOG_BASE, 'log/' + log_file)
+
+    def _outer(f):
+        def _inner(*args, **kwargs):
+            (base, ext) = os.path.splitext(log_file)
+            base = base + "-" + time.strftime("%Y%m%dT%H%M%S", time.gmtime())
+            final_log_file = base + ext
+
+            prof = hotshot.Profile(final_log_file)
+            try:
+                ret = prof.runcall(f, *args, **kwargs)
+            finally:
+                prof.close()
+            return ret
+
+        return _inner
+    return _outer
