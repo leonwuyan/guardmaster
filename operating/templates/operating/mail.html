@@ -5,6 +5,8 @@
 {% trans "Mail Content" as t_mail_content %}
 {% trans "4 Words Limited" as t_4_words_limited %}
 {% trans "120 Words Limited" as t_120_words_limited %}
+{% trans "1000 Uids Limited" as t_1000_uids_limited %}
+{% trans "Split By ," as t_split_by %}
 {% trans "Accessory" as t_accessory %}
 {% trans "Crystal" as t_crystal %}
 {% trans "Gold" as t_gold %}
@@ -21,6 +23,8 @@
 {% trans "Accessory Include Item And Equip" as t_accessory_include_item_and_equip %}
 {% trans "Success" as t_success %}
 {% trans "Please Check The Response Of Sending Mail" as t_p_c_t_r_o_s_m %}
+{% trans "Fail" as t_fail %}
+{% trans "Please Check The Input Is Correct" as t_p_c_t_i_i_c %}
 {% trans "Send" as t_send %}
 {% trans "The Response Of Sending Mail" as t_t_r_o_s_m %}
 {% trans "Server" as t_server %}
@@ -34,10 +38,16 @@
       <li class="active">{{ title }}</li>
     </ol>
 
-    {% if message %}
+    {% if message == 1 %}
       <div class="alert alert-success alert-dismissible" role="alert">
         <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
         <strong>{{t_success}}!</strong>&emsp;{{t_p_c_t_r_o_s_m}}
+      </div>
+    {% endif %}
+    {% if message == 2 %}
+      <div class="alert alert-danger alert-dismissible" role="alert">
+        <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <strong>{{t_fail}}!</strong>&emsp;{{t_p_c_t_i_i_c}}
       </div>
     {% endif %}
 
@@ -52,7 +62,7 @@
         </select>
       </div>
       <div class="form-group" style="margin-bottom:5px">
-        <label for="uid">{{t_player_id}}</label>
+        <label for="uid">{{t_player_id}}</label>&emsp;<span class="label label-danger">{{ t_1000_uids_limited }}&emsp;|&emsp;{{ t_split_by }}</span>
         <input type="text" class="form-control" id="uid" name="uid" value="{{ uid|default:10001 }}">
       </div>
       <div class="form-group" style="margin-bottom:5px">
@@ -197,7 +207,6 @@
   management.numberOnly("input[name='money']");
   management.numberOnly("input[name='gold']");
   management.numberOnly("input[name='crystal']");
-  management.numberOnly("input[name='uid']");
  });
 </script>
 {% endblock %}

@@ -13,7 +13,6 @@ class ServerControl(object):
     def __init__(self, server, uid, panel_id, username, userip):
         super(ServerControl, self).__init__()
         self.server = server
-        self.uid = uid
         self.panel_id = panel_id
         self.socketerror = {'result': -1}
         self.success = {'result': 0}
@@ -21,19 +20,27 @@ class ServerControl(object):
         self.userip = userip
         self.zone = 0
         self.channel = 0
+        if uid.__class__.__name__ == 'int':
+            self.uid = uid
+            self.uids = [uid]
+        else:
+            self.uids = uid
+            self.uid = uid[0]
 
-    def log(self, e):
+    def log(self, e, uid=0):
+        if uid == 0:
+            uid = self.uid
         logger = logging.getLogger(__name__)
         d = {
             'username': self.username,
-            'uid': self.uid,
+            'uid': uid,
             'server_name': self.server.label
         }
         s = "%(username)s|%(server_name)s|%(uid)s|" % d
         s = s + e
         logger.info(s)
 
-    def db_log(self, obj):
+    def db_log(self, obj, uid=0):
         Res = ['add', 'recharge', 'mail_acc']
         if 'type' not in obj:
             return False
@@ -41,6 +48,8 @@ class ServerControl(object):
         actDtSec = int(obj['start_time'] * 1000 % 1000)
         doneDt = Common.now(obj['done_time'])
         doneDtSec = int(obj['done_time'] * 1000 % 1000)
+        if uid == 0:
+            uid = self.uid
         if obj['type'] in Res:
             vals = (
                 actDt,
@@ -48,7 +57,7 @@ class ServerControl(object):
                 self.username,
                 self.userip,
                 self.server.ip,
-                str(self.uid),
+                str(uid),
                 str(self.zone),
                 str(self.channel),
                 obj['type'],
@@ -66,7 +75,7 @@ class ServerControl(object):
                 self.username,
                 self.userip,
                 self.server.ip,
-                str(self.uid),
+                str(uid),
                 str(self.zone),
                 str(self.channel),
                 obj['type'],
@@ -74,7 +83,7 @@ class ServerControl(object):
                 str(obj['post'].get('time') or
                     obj['post'].get('dungeon_id') or
                     obj['post'].get('actRest')),
-                obj['post'].get('title'),
+                obj['post'].get('title', 'None'),
                 str(obj['ret']['result']),
                 doneDt,
                 str(doneDtSec))
@@ -147,7 +156,7 @@ class ServerControl(object):
             return None
         start_time = time.time()
         ret = ss.send_mail(
-            [self.uid],
+            self.uids,
             world_id,
             {
                 'mail_title': title,
@@ -201,44 +210,44 @@ class ServerControl(object):
                     (a, b, c) = (int(t[0]), int(t[1]), int(t[2]))
                     acc.append({'res_type': a, 'res_id': b, 'res_count': c})
         ret = self._send_mail(title, content, acc)
-        if ret['result'] == self.success['result']:
-            response_id = Common.first(ret['sucess_result'])['mail_id']
-            r = ResponseMail(
-                    title=title,
-                    content=content,
-                    server=self.server,
-                    guardmaster=self.username,
-                    uid=self.uid,
-                    accessory=str(acc),
-                    response_id=response_id,
-                    pub_date=timezone.now()
-                )
-            r.save()
-            s = 'mail|' + str(r.id)
-            self.log(s)
-        if len(acc) > 0:
-            for a in acc:
+        for p in ret['sucess_result']:
+            if ret['result'] == self.success['result']:
+                r = ResponseMail(
+                        title=title,
+                        content=content,
+                        server=self.server,
+                        guardmaster=self.username,
+                        uid=p['uid'],
+                        accessory=str(acc),
+                        response_id=p['mail_id'],
+                        pub_date=timezone.now()
+                    )
+                r.save()
+                s = 'mail|' + str(r.id)
+                self.log(s, p['uid'])
+            if len(acc) > 0:
+                for a in acc:
+                    self.db_log({
+                        'type': 'mail_acc',
+                        'post': {
+                            'emailID': p['mail_id'],
+                            'chgType': a['res_type'],
+                            'chgValue': a['res_count']},
+                        'ret': ret,
+                        'start_time': start_time,
+                        'done_time': time.time(),
+                    }, p['uid'])
+            else:
                 self.db_log({
-                    'type': 'mail_acc',
+                    'type': 'mail',
                     'post': {
-                        'emailID': response_id,
-                        'chgType': a['res_type'],
-                        'chgValue': a['res_count']},
+                        'title': title,
+                        'actObj': r.id,
+                        'actRest': p['mail_id']},
                     'ret': ret,
                     'start_time': start_time,
                     'done_time': time.time(),
-                })
-        else:
-            self.db_log({
-                'type': 'mail',
-                'post': {
-                    'title': title,
-                    'actObj': r.id,
-                    'actRest': response_id},
-                'ret': ret,
-                'start_time': start_time,
-                'done_time': time.time(),
-            })
+                }, p['uid'])
         return ret
 
     def add_attr(self, type_id, res_id=46, count=100000):

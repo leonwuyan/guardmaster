@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2015-07-15 00:34+0800\n"
+"POT-Creation-Date: 2015-08-03 16:30+0800\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -65,7 +65,7 @@ msgstr ""
 msgid "Total Online Time"
 msgstr ""
 
-#: templates/operating/base_info.html:8 templates/operating/mail.html:10
+#: templates/operating/base_info.html:8 templates/operating/mail.html:12
 msgid "Gold"
 msgstr ""
 
@@ -73,7 +73,7 @@ msgstr ""
 msgid "Times Of Buy Gold"
 msgstr ""
 
-#: templates/operating/base_info.html:10 templates/operating/mail.html:9
+#: templates/operating/base_info.html:10 templates/operating/mail.html:11
 msgid "Crystal"
 msgstr ""
 
@@ -81,11 +81,11 @@ msgstr ""
 msgid "Times Of Buy Crystal"
 msgstr ""
 
-#: templates/operating/base_info.html:12 templates/operating/mail.html:11
+#: templates/operating/base_info.html:12 templates/operating/mail.html:13
 msgid "Money"
 msgstr ""
 
-#: templates/operating/base_info.html:13 templates/operating/mail.html:13
+#: templates/operating/base_info.html:13 templates/operating/mail.html:15
 msgid "Power"
 msgstr ""
 
@@ -93,7 +93,7 @@ msgstr ""
 msgid "Times Of Buy Power"
 msgstr ""
 
-#: templates/operating/base_info.html:15 templates/operating/mail.html:12
+#: templates/operating/base_info.html:15 templates/operating/mail.html:14
 msgid "Skill Point"
 msgstr ""
 
@@ -109,7 +109,7 @@ msgstr ""
 msgid "Endless' Score"
 msgstr ""
 
-#: templates/operating/base_info.html:19 templates/operating/mail.html:14
+#: templates/operating/base_info.html:19 templates/operating/mail.html:16
 msgid "Score Of Rank Battle"
 msgstr ""
 
@@ -137,7 +137,7 @@ msgstr ""
 msgid "Add 10k"
 msgstr ""
 
-#: templates/operating/base_info.html:26 templates/operating/mail.html:18
+#: templates/operating/base_info.html:26 templates/operating/mail.html:20
 #: templates/operating/notify.html:21
 msgid "Add"
 msgstr ""
@@ -440,62 +440,78 @@ msgid "Wake Up"
 msgstr ""
 
 #: templates/operating/mail.html:8
+msgid "1000 Uids Limited"
+msgstr ""
+
+#: templates/operating/mail.html:9
+msgid "Split By ,"
+msgstr ""
+
+#: templates/operating/mail.html:10
 msgid "Accessory"
 msgstr ""
 
-#: templates/operating/mail.html:15 templates/operating/package_info.html:4
+#: templates/operating/mail.html:17 templates/operating/package_info.html:4
 msgid "Item"
 msgstr ""
 
-#: templates/operating/mail.html:16
+#: templates/operating/mail.html:18
 msgid "Equip"
 msgstr ""
 
-#: templates/operating/mail.html:17 templates/operating/package_info.html:7
+#: templates/operating/mail.html:19 templates/operating/package_info.html:7
 msgid "Count"
 msgstr ""
 
-#: templates/operating/mail.html:19
+#: templates/operating/mail.html:21
 msgid "None"
 msgstr ""
 
-#: templates/operating/mail.html:20
+#: templates/operating/mail.html:22
 msgid "Limited 6 Kind Of Accessory"
 msgstr ""
 
-#: templates/operating/mail.html:21
+#: templates/operating/mail.html:23
 msgid "Accessory Include Item And Equip"
 msgstr ""
 
-#: templates/operating/mail.html:22 templates/operating/notify.html:22
+#: templates/operating/mail.html:24 templates/operating/notify.html:22
 msgid "Success"
 msgstr ""
 
-#: templates/operating/mail.html:23
+#: templates/operating/mail.html:25
 msgid "Please Check The Response Of Sending Mail"
 msgstr ""
 
-#: templates/operating/mail.html:24
-msgid "Send"
+#: templates/operating/mail.html:26 templates/operating/notify.html:24
+msgid "Fail"
 msgstr ""
 
-#: templates/operating/mail.html:25
-msgid "The Response Of Sending Mail"
-msgstr ""
-
-#: templates/operating/mail.html:26
-msgid "Server"
-msgstr ""
-
-#: templates/operating/mail.html:27
-msgid "GuardMaster"
+#: templates/operating/mail.html:27 templates/operating/notify.html:25
+msgid "Please Check The Input Is Correct"
 msgstr ""
 
 #: templates/operating/mail.html:28
-msgid "Pub Date"
+msgid "Send"
 msgstr ""
 
 #: templates/operating/mail.html:29
+msgid "The Response Of Sending Mail"
+msgstr ""
+
+#: templates/operating/mail.html:30
+msgid "Server"
+msgstr ""
+
+#: templates/operating/mail.html:31
+msgid "GuardMaster"
+msgstr ""
+
+#: templates/operating/mail.html:32
+msgid "Pub Date"
+msgstr ""
+
+#: templates/operating/mail.html:33
 msgid "Lastest 20 Mails By Every Server"
 msgstr ""
 
@@ -557,14 +573,6 @@ msgstr ""
 
 #: templates/operating/notify.html:23
 msgid "Please Check The Notify Info"
-msgstr ""
-
-#: templates/operating/notify.html:24
-msgid "Fail"
-msgstr ""
-
-#: templates/operating/notify.html:25
-msgid "Please Check The Input Is Right"
 msgstr ""
 
 #: templates/operating/notify.html:26

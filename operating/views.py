@@ -99,7 +99,20 @@ def mail(request, panel_id, url=Common.URL):
     d['responsemails'] = Common.get_panel_response_mail(panel)
     if request.method == 'POST':
         server_id = int(request.POST['server'])
-        uid = int(request.POST['uid'])
+        try:
+            u = request.POST['uid'].split(',')
+            u = map(lambda x: int(x), u)
+            if len(u) == 1:
+                uid = u[0]
+            if len(u) > 1 and len(u) <= 1000:
+                uid = u
+            if len(u) > 1000:
+                d['message'] = 2
+                return render(request, t, d)
+        except Exception as e:
+            d['message'] = 2
+            return render(request, t, d)
+
         server = get_object_or_404(Server, pk=server_id)
         sc = ServerControl(
             server,
@@ -108,7 +121,7 @@ def mail(request, panel_id, url=Common.URL):
             request.user.username,
             Common.get_client_ip(request))
         ret = sc.send_mail(post=request.POST)
-        d['message'] = '1'
+        d['message'] = 1
     return render(request, t, d)
 
 
@@ -228,13 +241,16 @@ def change_single(request, panel_id, url, type):
     if ret['result'] == 0:
         s = type + "|" + log_str
         sc.log(s)
-    sc.db_log({
-        'type': type,
-        'post': request.POST,
-        'ret': ret,
-        'start_time': start_time,
-        'done_time': time.time(),
-    })
+    try:
+        db_bool = sc.db_log({
+            'type': type,
+            'post': request.POST,
+            'ret': ret,
+            'start_time': start_time,
+            'done_time': time.time(),
+        })
+    except Exception as e:
+        print 'e :', e
     ret = {'result': ret['result']}
     ret = json.dumps(ret, ensure_ascii=False)
     return HttpResponse(ret, content_type='application/json')
