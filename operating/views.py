@@ -180,7 +180,7 @@ def contact_reply(request, panel_id, issue_id):
             start_time = time.time()
             sc = ServerControl(
                 server,
-                issue['uid'],
+                int(issue['uid']),
                 panel_id,
                 request.user.username,
                 Common.get_client_ip(request))
