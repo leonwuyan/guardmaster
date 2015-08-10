@@ -21,25 +21,26 @@ class NotifyDeployment(object):
         return before + t + after
 
     def _n(self, n):
-        path = '/'.join([
-            n.hostname,
-            str(n.channel),
-            n.platform,
-            str(n.world_id)
-        ])
-        if self.json.get(path, None) is None:
-            self.json[path] = []
-        self.json[path].append({
-            'Name': str(n.id),
-            'Title': self._tiitle(n.title),
-            'Link': n.link,
-            'ImageWidth': n.image_width,
-            'ImageHeight': n.image_height,
-            'Start': Common.datetime2ts(n.start, 28800),
-            'End': Common.datetime2ts(n.end, 28800),
-            'Content': n.content,
-            'IsDisplay': n.is_display,
-        })
+        channel = n.channel.split(',')
+        world_id = n.world_id.split(',')
+        platform = n.platform.split(',')
+        for i in channel:
+            for j in world_id:
+                for k in platform:
+                    path = '/'.join([n.hostname, str(i), k, str(j)])
+                    if self.json.get(path, None) is None:
+                        self.json[path] = []
+                    self.json[path].append({
+                        'Name': str(n.id),
+                        'Title': self._tiitle(n.title),
+                        'Link': n.link,
+                        'ImageWidth': n.image_width,
+                        'ImageHeight': n.image_height,
+                        'Start': Common.datetime2ts(n.start, 28800),
+                        'End': Common.datetime2ts(n.end, 28800),
+                        'Content': n.content,
+                        'IsDisplay': n.is_display,
+                    })
 
     def _json(self):
         for k in self.json.keys():
@@ -100,13 +101,9 @@ class NotifyDeployment(object):
 
     def add(self, post):
         panel = get_object_or_404(Panel, pk=self.panel_id)
-        notify_url = '/'.join([
-            post.get('hostname'),
-            post.get('channel'),
-            post.get('platform'),
-            post.get('zone'),
-            'n.json'
-        ])
+        channel = ','.join(post.getlist('channel'))
+        platform = ','.join(post.getlist('platform'))
+        zone = ','.join(post.getlist('zone'))
         if 'id' in post:
             n = get_object_or_404(Notify, pk=post.get('id'))
             n.title = self._get(post, 'title')
@@ -116,10 +113,9 @@ class NotifyDeployment(object):
             n.image_width = post.get('width')
             n.image_height = post.get('height')
             n.hostname = post.get('hostname')
-            n.channel = post.get('channel')
-            n.platform = post.get('platform')
-            n.world_id = post.get('zone')
-            n.notify_url = notify_url
+            n.channel = channel
+            n.platform = platform
+            n.world_id = zone
             n.start = post.get('start')
             n.end = post.get('end')
             n.seqid = self._get(post, 'seqid')
@@ -133,10 +129,9 @@ class NotifyDeployment(object):
                 image_width=post.get('width'),
                 image_height=post.get('height'),
                 hostname=post.get('hostname'),
-                channel=post.get('channel'),
-                platform=post.get('platform'),
-                world_id=post.get('zone'),
-                notify_url=notify_url,
+                channel=channel,
+                platform=platform,
+                world_id=zone,
                 start=post.get('start'),
                 end=post.get('end'),
                 seqid=self._get(post, 'seqid')

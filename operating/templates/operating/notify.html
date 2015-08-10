@@ -72,6 +72,8 @@
 
     <form class="form" role="form" method="post" action="{% url 'operating:notify' panel.id url %}">
     {% csrf_token %}
+      <input type="hidden" name="platform" value="android">
+      <input type="hidden" name="platform" value="ios">
     {% if notify %}
       <input type="hidden" name="id" value="{{notify.id}}">
     {% endif %}
@@ -99,7 +101,7 @@
         <label for="content">{{ t_notify_content }}</label>
         <textarea class="form-control" id="content" name="content" rows="5">{{ notify.content }}</textarea>
       </div>
-      <div class="form-group" style="margin-bottom:5px">
+      <div class="form-group">
         <label for="link">{{ t_picture_info }}</label>
         <div class="row">
           <div class="col-md-8">
@@ -123,39 +125,26 @@
         </div>
       </div>
       <div class="form-group">
-        <label>{{t_other_options}}</label>&emsp;<span class="label label-danger">{{ t_w_b_d_n_w_t_z_i_a_z }}</span>
+        <label>{{ t_zone }}</label>&emsp;<span class="label label-danger">{{ t_w_b_d_n_w_t_z_i_a_z }}</span>
+          {% for zone in zones %}
+          <label class="checkbox-inline">
+            <input type="checkbox" id="zone-{{zone.EnumCd}}" value="{{zone.EnumCd}}" name="zone" {% if zone.EnumCd|list_find:notify.world_id  %} checked{% endif %}> {{zone.EnumDes}}
+          </label>
+          {% endfor %}
+      </div>
+      <div class="form-group">
+        <label>{{ t_channel }}</label>&emsp;
+          {% for channel in channels %}
+          {% if channel.EnumCd != '0' %}
+          <label class="checkbox-inline">
+            <input type="checkbox" id="channel-{{channel.EnumCd}}" value="{{channel.EnumCd}}" name="channel" {% if channel.EnumCd|list_find:notify.channel %} checked{% endif %}> {{channel.EnumDes}}
+          </label>
+          {% endif %}
+          {% endfor %}
+      </div>
+      <div class="form-group">
+        <label>{{t_other_options}}</label>
         <div class="row">
-          <div class="col-md-3">
-            <div class="input-group">
-              <span class="input-group-addon">{{t_channel}}</span>
-              <select class="form-control" name="channel">
-                {% for channel in channels %}
-                {% if channel.EnumCd != '0' %}
-                <option value="{{channel.EnumCd}}" {% ifequal notify.channel channel.EnumCd %}selected{% endifequal %}>{{channel.EnumDes}}</option>
-                {% endif %}
-                {% endfor %}
-              </select>
-            </div>
-          </div>
-          <div class="col-md-2">
-            <div class="input-group">
-              <span class="input-group-addon">{{t_platform}}</span>
-              <select class="form-control" name="platform">
-                <option value="ios" {% ifequal notify.platform 'ios' %}selected{% endifequal %}>iOS</option>
-                <option value="android" {% ifequal notify.platform 'android' %}selected{% endifequal %}>Android</option>
-              </select>
-            </div>
-          </div>
-          <div class="col-md-3">
-            <div class="input-group">
-              <span class="input-group-addon">{{t_zone}}</span>
-              <select class="form-control" name="zone">
-                {% for zone in zones %}
-                <option value="{{zone.EnumCd}}" {% ifequal notify.world_id zone.EnumCd %}selected{% endifequal %}>{{zone.EnumDes}}</option>
-                {% endfor %}
-              </select>
-            </div>
-          </div>
           <div class="col-md-2">
             <div class="input-group">
               <span class="input-group-addon">{{t_is_display}}</span>
@@ -203,9 +192,8 @@
               <th style="width: 6%">{{t_picture_width}}</th>
               <th style="width: 6%">{{t_picture_height}}</th>
               <th style="width: 12%">{{t_hostname}}</th>
-              <th style="width: 5%">{{t_channel}}</th>
-              <th style="width: 5%">{{t_platform}}</th>
-              <th style="width: 5%">{{t_zone}}</th>
+              <th style="width: 12%">{{t_channel}}</th>
+              <th style="width: 6%">{{t_zone}}</th>
               <th style="width: 6%">{{t_is_display}}</th>
               <th style="width: 6%">{{t_seqid}}</th>
               <th style="width: 6%">{{t_operate}}</th>
@@ -221,9 +209,8 @@
               <td>{{r.image_width}}</td>
               <td>{{r.image_height}}</td>
               <td style="word-wrap:break-word;word-break:break-all">{{r.hostname}}</td>
-              <td>{{r.channel}}</td>
-              <td>{{r.platform}}</td>
-              <td>{{r.world_id}}</td>
+              <td style="word-wrap:break-word;word-break:break-all">{{r.channel}}</td>
+              <td style="word-wrap:break-word;word-break:break-all">{{r.world_id}}</td>
               <td>{{r.is_display}}</td>
               <td>{{r.seqid}}</td>
               <td><a href="{% url 'operating:edit_notify' panel.id r.id %}"><button class="btn-xs btn btn-primary" type="button">{{t_edit}}</button></a><br><br><button class="btn-xs btn btn-danger" type="button" onclick="dataAccess.notifyJSON({{r.id}}, '{{r.title}}')">{{t_delete}}</button></td>

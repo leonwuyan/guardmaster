@@ -176,6 +176,14 @@ def ts2bantime(timestamp):
     return ts2time(timestamp)
 
 
+def list_find(x, stringlsit):
+    sl = stringlsit.split(',')
+    if x in sl:
+        return True
+    else:
+        return False
+
+
 register.filter(ts2date)
 register.filter(ts2time)
 register.filter(second2time)
@@ -192,3 +200,4 @@ register.filter(enum_building)
 register.filter(rank_val)
 register.filter(ts2bantime)
 register.filter(datetime2string)
+register.filter(list_find)
