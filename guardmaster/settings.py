@@ -13,6 +13,14 @@ https://docs.djangoproject.com/en/1.8/ref/settings/
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 import os
 from django.utils.translation import ugettext_lazy as _
+import djcelery
+djcelery.setup_loader()
+
+BROKER_HOST = "192.168.1.77"
+BROKER_PORT = 5672
+BROKER_USER = "guest"
+BROKER_PASSWORD = "guest"
+BROKER_VHOST = "/"
 
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
@@ -42,6 +50,7 @@ INSTALLED_APPS = (
     'detection',
     'operating',
     'deployment',
+    'djcelery',
 )
 
 MIDDLEWARE_CLASSES = (
