@@ -20,10 +20,24 @@ class NotifyDeployment(object):
         after = "</gradient></stroke>"
         return before + t + after
 
+    def _channel_plus(self, channel):
+        channel_plus = {
+            '20015': ['20016'],
+            '20025': ['20035'],
+            '20026': ['20036'],
+            '20028': ['20038'],
+        }
+        for k in channel_plus.keys():
+            if k in channel:
+                for i in channel_plus[k]:
+                    channel.append(i)
+        return channel
+
     def _n(self, n):
         channel = n.channel.split(',')
         world_id = n.world_id.split(',')
         platform = n.platform.split(',')
+        channel = self._channel_plus(channel)
         for i in channel:
             for j in world_id:
                 for k in platform:
