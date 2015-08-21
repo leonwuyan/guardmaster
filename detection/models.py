@@ -3,6 +3,7 @@ from django.db import models, connections
 from django.contrib.auth.models import Group
 from django.shortcuts import get_object_or_404
 from guardmaster import common as Common
+from celery.task import task
 import logging
 
 # Create your models here.
@@ -198,6 +199,7 @@ class Tabel(object):
         return ret
 
     @classmethod
+    @task
     def insert(self, panel, condition):
         if condition is None:
             return []
@@ -373,6 +375,7 @@ class Tabel(object):
         return ret
 
     @classmethod
+    @task
     def contact_insert(self, panel, vals):
         vals = "', '".join(vals)
         vals = "('" + vals + "')"
@@ -403,6 +406,7 @@ class Tabel(object):
         return ret_enum
 
     @classmethod
+    @task
     def gm_log(self, panel_id, vals):
         panel = get_object_or_404(Panel, pk=panel_id)
         vals = "', '".join(vals)
@@ -415,6 +419,7 @@ class Tabel(object):
         ret = self.insert(panel, condition)
 
     @classmethod
+    @task
     def gm_res_log(self, panel_id, vals):
         panel = get_object_or_404(Panel, pk=panel_id)
         vals = "', '".join(vals)

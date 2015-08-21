@@ -177,7 +177,6 @@ def contact_reply(request, panel_id, issue_id):
         content = request.POST['content']
         server = get_object_or_404(Server, hostname=issue['hostname'])
         if title and len(title) < 30 and content and len(content) < 256:
-            start_time = time.time()
             sc = ServerControl(
                 server,
                 int(issue['uid']),
