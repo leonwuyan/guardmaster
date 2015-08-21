@@ -375,7 +375,6 @@ class Tabel(object):
         return ret
 
     @classmethod
-    @task
     def contact_insert(self, panel, vals):
         vals = "', '".join(vals)
         vals = "('" + vals + "')"
@@ -406,7 +405,6 @@ class Tabel(object):
         return ret_enum
 
     @classmethod
-    @task
     def gm_log(self, panel_id, vals):
         panel = get_object_or_404(Panel, pk=panel_id)
         vals = "', '".join(vals)
@@ -416,10 +414,9 @@ class Tabel(object):
             'cols': "(`actDt`, `actDtSec`, `actUser`, `actIP`, `gmSrvIP`, `UID`, `ZoneID`, `ChannelID`, `actType`, `actObj`, `actRest`, `title`, `actStatus`, `doneDt`, `doneDtSec`)",
             'vals': vals,
         }
-        ret = self.insert(panel, condition)
+        ret = self.insert.delay(self, panel, condition)
 
     @classmethod
-    @task
     def gm_res_log(self, panel_id, vals):
         panel = get_object_or_404(Panel, pk=panel_id)
         vals = "', '".join(vals)
@@ -429,4 +426,4 @@ class Tabel(object):
             'cols': "(`actDt`, `actDtSec`, `actUser`, `actIP`, `gmSrvIP`, `UID`, `ZoneID`, `ChannelID`, `actType`, `emailID`, `chgType`, `chgValue`, `actStatus`, `doneDt`, `doneDtSec`)",
             'vals': vals,
         }
-        ret = self.insert(panel, condition)
+        ret = self.insert.delay(self, panel, condition)
