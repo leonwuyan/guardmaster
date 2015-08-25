@@ -16,11 +16,13 @@ from django.utils.translation import ugettext_lazy as _
 import djcelery
 djcelery.setup_loader()
 
-BROKER_HOST = "192.168.1.77"
+BROKER_HOST = '192.168.1.77'
 BROKER_PORT = 5672
-BROKER_USER = "guest"
-BROKER_PASSWORD = "guest"
-BROKER_VHOST = "/"
+BROKER_USER = 'guest'
+BROKER_PASSWORD = 'guest'
+BROKER_VHOST = '/'
+CELERY_TIMEZONE = 'Asia/Shanghai'
+CELERYBEAT_SCHEDULER = 'djcelery.schedulers.DatabaseScheduler'
 
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
@@ -47,10 +49,10 @@ INSTALLED_APPS = (
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'djcelery',
     'detection',
     'operating',
     'deployment',
-    'djcelery',
 )
 
 MIDDLEWARE_CLASSES = (

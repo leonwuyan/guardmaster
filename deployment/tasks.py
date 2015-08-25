@@ -1,5 +1,6 @@
-import time
+from __future__ import absolute_import
 from celery.task import task
+import time
 
 
 @task
