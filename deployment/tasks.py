@@ -13,9 +13,9 @@ def _do_kground_work(name):
 
 
 def print_output(output):
-    logger = logging.getLogger(__name__)
-    for k in output:
-        logger.info(k)
+    if output.__class__ is tuple:
+        for k in output:
+            print k
 
 
 def _sh(path, cmd):
@@ -26,14 +26,15 @@ def _sh(path, cmd):
     output = s.communicate()
     spend_time = str(time.time() - spend_time)
     logger = logging.getLogger(__name__)
-    logger.info(path + '|' + cmd + '|' + str(retcode) + '|' + spend_time)
+    loginfo = '{0}|{1}|{2}|{3}'.format(path, cmd, str(retcode), spend_time)
+    logger.info(loginfo)
+    print loginfo
     print_output(output)
 
 
 @task
 def _do_sh(*cmds):
-    logger = logging.getLogger(__name__)
-    logger.info('CMDS START')
+    print '---------- CMDS START ----------'
     for cmd in cmds:
         _sh(cmd[0], cmd[1:])
-    logger.info('CMDS END')
+    print '---------- CMDS END ----------'
