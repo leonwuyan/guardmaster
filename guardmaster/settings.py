@@ -282,5 +282,10 @@ LOGGING = {
             'level': 'INFO',
             'propagate': True
         },
+        'deployment.tasks': {
+            'handlers': ['shell', 'error', 'console'],
+            'level': 'INFO',
+            'propagate': True
+        },
     }
 }
