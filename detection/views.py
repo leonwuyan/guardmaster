@@ -81,7 +81,7 @@ def sh_remote_log(panel, t_p, request_get):
         _sh(cmd)
 
 
-def view_template(request, panel_id, url):
+def view_template_base(request, panel_id, url):
     excuse = random.choice(Excuse.objects.all())
     view_init()
 
@@ -91,10 +91,6 @@ def view_template(request, panel_id, url):
 
     table_head = sub_menu.get_col_map_dict(['label'])
 
-    channel_list = Tabel.get_enum(panel_id, Common.E_CHANNELID)
-    pay_channel_list = Tabel.get_enum(panel_id, Common.E_PAYCHANNEL)
-    zone_list = Tabel.get_enum(panel_id, Common.E_ZONEID)
-
     data = {
         'excuse': excuse,
         'title': sub_menu.label,
@@ -102,10 +98,21 @@ def view_template(request, panel_id, url):
         'page': url,
         'panel': panel,
         'table_head': table_head,
-        'channels': channel_list,
-        'pay_channels': pay_channel_list,
-        'zones': zone_list,
     }
+
+    return data
+
+
+def view_template(request, panel_id, url):
+    data = view_template_base(request, panel_id, url)
+
+    channel_list = Tabel.get_enum(panel_id, Common.E_CHANNELID)
+    pay_channel_list = Tabel.get_enum(panel_id, Common.E_PAYCHANNEL)
+    zone_list = Tabel.get_enum(panel_id, Common.E_ZONEID)
+
+    data['channels'] = channel_list
+    data['pay_channels'] = pay_channel_list
+    data['zones'] = zone_list
 
     return data
 

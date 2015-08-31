@@ -14,6 +14,17 @@ def index(request):
     panels = None
     if request.user.is_authenticated():
         panels = Common.get_user_panels(request.user)
+        for p in panels:
+            menus = Common.get_user_menus(request.user, p.get('id'))
+            sub_menu = None
+            p['url'] = 'total'
+            p['category'] = 'detection:count'
+            if menus:
+                sub_menu = sub_menu = menus[0]['sub_menu']
+            if sub_menu:
+                sub_menu = sub_menu[0]
+                p['url'] = sub_menu['url']
+                p['category'] = sub_menu['category']
 
     data = {
         'panels': panels,

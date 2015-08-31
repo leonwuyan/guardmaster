@@ -1,0 +1,874 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2015-08-03 16:30+0800\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: models.py:11
+msgid "Dir Server"
+msgstr ""
+
+#: models.py:12
+msgid "CDN Server"
+msgstr ""
+
+#: models.py:13
+msgid "Normal Server"
+msgstr ""
+
+#: models.py:14
+msgid "Update Server"
+msgstr ""
+
+#: models.py:20
+msgid "GM Port, Usually Is 9135"
+msgstr ""
+
+#: models.py:21
+msgid "SSH Port, Usually Is 22"
+msgstr ""
+
+#: templates/operating/base_info.html:2
+msgid "Player Base Info"
+msgstr ""
+
+#: templates/operating/base_info.html:3
+msgid "Create Time"
+msgstr ""
+
+#: templates/operating/base_info.html:4
+msgid "Online"
+msgstr ""
+
+#: templates/operating/base_info.html:5
+msgid "Last Login Time"
+msgstr ""
+
+#: templates/operating/base_info.html:6
+msgid "Last Logout Time"
+msgstr ""
+
+#: templates/operating/base_info.html:7
+msgid "Total Online Time"
+msgstr ""
+
+#: templates/operating/base_info.html:8 templates/operating/mail.html:12
+msgid "Gold"
+msgstr ""
+
+#: templates/operating/base_info.html:9
+msgid "Times Of Buy Gold"
+msgstr ""
+
+#: templates/operating/base_info.html:10 templates/operating/mail.html:11
+msgid "Crystal"
+msgstr ""
+
+#: templates/operating/base_info.html:11
+msgid "Times Of Buy Crystal"
+msgstr ""
+
+#: templates/operating/base_info.html:12 templates/operating/mail.html:13
+msgid "Money"
+msgstr ""
+
+#: templates/operating/base_info.html:13 templates/operating/mail.html:15
+msgid "Power"
+msgstr ""
+
+#: templates/operating/base_info.html:14
+msgid "Times Of Buy Power"
+msgstr ""
+
+#: templates/operating/base_info.html:15 templates/operating/mail.html:14
+msgid "Skill Point"
+msgstr ""
+
+#: templates/operating/base_info.html:16
+msgid "Times Of Buy Skill Point"
+msgstr ""
+
+#: templates/operating/base_info.html:17
+msgid "Endless' Floor"
+msgstr ""
+
+#: templates/operating/base_info.html:18
+msgid "Endless' Score"
+msgstr ""
+
+#: templates/operating/base_info.html:19 templates/operating/mail.html:16
+msgid "Score Of Rank Battle"
+msgstr ""
+
+#: templates/operating/base_info.html:20
+msgid "Times Of Growup"
+msgstr ""
+
+#: templates/operating/base_info.html:21
+msgid "Account Ban Time"
+msgstr ""
+
+#: templates/operating/base_info.html:22
+msgid "Chat Ban Time"
+msgstr ""
+
+#: templates/operating/base_info.html:23
+msgid "Total Recharge (VIP Level)"
+msgstr ""
+
+#: templates/operating/base_info.html:24
+msgid "Add 100k"
+msgstr ""
+
+#: templates/operating/base_info.html:25
+msgid "Add 10k"
+msgstr ""
+
+#: templates/operating/base_info.html:26 templates/operating/mail.html:20
+#: templates/operating/notify.html:21
+msgid "Add"
+msgstr ""
+
+#: templates/operating/base_info.html:27
+msgid "Change"
+msgstr ""
+
+#: templates/operating/base_info.html:28
+msgid "Kick Player"
+msgstr ""
+
+#: templates/operating/base_info.html:29
+msgid "Account Ban 7 Days"
+msgstr ""
+
+#: templates/operating/base_info.html:30
+msgid "Account Ban 30 Days"
+msgstr ""
+
+#: templates/operating/base_info.html:31
+msgid "Chat Ban 7 Days"
+msgstr ""
+
+#: templates/operating/base_info.html:32
+msgid "Chat Ban 30 Days"
+msgstr ""
+
+#: templates/operating/base_info.html:33
+msgid "Un Ban"
+msgstr ""
+
+#: templates/operating/base_info.html:34
+msgid "Ohter Contorl"
+msgstr ""
+
+#: templates/operating/base_info.html:35
+msgid "Add 100k Exp. Items"
+msgstr ""
+
+#: templates/operating/base_info.html:36
+msgid "Unlock 50 Dungeon"
+msgstr ""
+
+#: templates/operating/base_info.html:37
+msgid "Unlock 100 Dungeon"
+msgstr ""
+
+#: templates/operating/base_info.html:38
+msgid "Unlock 150 Dungeon"
+msgstr ""
+
+#: templates/operating/building_info.html:2
+msgid "Building Info"
+msgstr ""
+
+#: templates/operating/building_info.html:3
+msgid "Building"
+msgstr ""
+
+#: templates/operating/building_info.html:4
+msgid "Pvp Gold Gain"
+msgstr ""
+
+#: templates/operating/building_info.html:5
+msgid "Pvp Exp. Item Gain"
+msgstr ""
+
+#: templates/operating/building_info.html:6
+msgid "Pvp Money Gain"
+msgstr ""
+
+#: templates/operating/building_info.html:7
+msgid "Pvp Crystal Gain"
+msgstr ""
+
+#: templates/operating/building_info.html:8
+msgid "Resources Type"
+msgstr ""
+
+#: templates/operating/building_info.html:9
+msgid "Resources Type Name"
+msgstr ""
+
+#: templates/operating/building_info.html:10
+msgid "Last Born Time"
+msgstr ""
+
+#: templates/operating/building_info.html:11
+msgid "Born Speed"
+msgstr ""
+
+#: templates/operating/building_info.html:12
+msgid "Resources Limit"
+msgstr ""
+
+#: templates/operating/building_info.html:13
+msgid "Current Resources Born"
+msgstr ""
+
+#: templates/operating/building_info.html:14
+msgid "Defend Info"
+msgstr ""
+
+#: templates/operating/building_info.html:15
+#: templates/operating/hero_info.html:4 templates/operating/pve_info.html:13
+msgid "Hero Name"
+msgstr ""
+
+#: templates/operating/building_info.html:16
+#: templates/operating/pve_info.html:15
+msgid "Hero Level"
+msgstr ""
+
+#: templates/operating/building_info.html:17
+msgid "Monster ID"
+msgstr ""
+
+#: templates/operating/building_info.html:18
+msgid "Monster Level"
+msgstr ""
+
+#: templates/operating/building_info.html:19
+msgid "Trap ID"
+msgstr ""
+
+#: templates/operating/building_info.html:20
+msgid "Trap Level"
+msgstr ""
+
+#: templates/operating/building_info.html:21
+msgid "Building ID"
+msgstr ""
+
+#: templates/operating/building_info.html:22
+msgid "Building Name"
+msgstr ""
+
+#: templates/operating/building_info.html:23
+msgid "Building Level"
+msgstr ""
+
+#: templates/operating/building_info.html:24
+msgid "Level Begin Time"
+msgstr ""
+
+#: templates/operating/building_info.html:25
+msgid "Level Total Time"
+msgstr ""
+
+#: templates/operating/building_info.html:26
+msgid "Hero Tower"
+msgstr ""
+
+#: templates/operating/building_info.html:27
+msgid "Resources Store"
+msgstr ""
+
+#: templates/operating/contact.html:4
+msgid "Issue Info"
+msgstr ""
+
+#: templates/operating/contact.html:5
+msgid "Issue ID"
+msgstr ""
+
+#: templates/operating/contact.html:6
+msgid "Uid"
+msgstr ""
+
+#: templates/operating/contact.html:7
+msgid "Uin"
+msgstr ""
+
+#: templates/operating/contact.html:8
+msgid "Name"
+msgstr ""
+
+#: templates/operating/contact.html:9 templates/operating/notify.html:15
+msgid "Hostname"
+msgstr ""
+
+#: templates/operating/contact.html:10
+msgid "Channel ID"
+msgstr ""
+
+#: templates/operating/contact.html:11 templates/operating/notify.html:17
+msgid "Platform"
+msgstr ""
+
+#: templates/operating/contact.html:12
+msgid "Version"
+msgstr ""
+
+#: templates/operating/contact.html:13
+msgid "Issue Type"
+msgstr ""
+
+#: templates/operating/contact.html:14
+msgid "Issue Time"
+msgstr ""
+
+#: templates/operating/contact.html:15
+msgid "Issue Content"
+msgstr ""
+
+#: templates/operating/contact.html:16
+msgid "History Reply"
+msgstr ""
+
+#: templates/operating/contact.html:17
+msgid "Reply Mail"
+msgstr ""
+
+#: templates/operating/contact.html:18 templates/operating/mail.html:4
+msgid "Mail Title"
+msgstr ""
+
+#: templates/operating/contact.html:19 templates/operating/mail.html:5
+msgid "Mail Content"
+msgstr ""
+
+#: templates/operating/contact.html:20 templates/operating/mail.html:6
+#: templates/operating/notify.html:4
+msgid "4 Words Limited"
+msgstr ""
+
+#: templates/operating/contact.html:21 templates/operating/mail.html:7
+msgid "120 Words Limited"
+msgstr ""
+
+#: templates/operating/contact.html:22
+msgid "Reply"
+msgstr ""
+
+#: templates/operating/contact.html:23
+msgid "Return List"
+msgstr ""
+
+#: templates/operating/hero_info.html:2
+msgid "Hero Info"
+msgstr ""
+
+#: templates/operating/hero_info.html:3 templates/operating/pve_info.html:12
+msgid "Hero ID"
+msgstr ""
+
+#: templates/operating/hero_info.html:5
+msgid "Exp."
+msgstr ""
+
+#: templates/operating/hero_info.html:6
+msgid "Emblem"
+msgstr ""
+
+#: templates/operating/hero_info.html:7
+msgid "ID"
+msgstr ""
+
+#: templates/operating/hero_info.html:8
+msgid "Skill"
+msgstr ""
+
+#: templates/operating/hero_info.html:9
+msgid "Equiped"
+msgstr ""
+
+#: templates/operating/hero_info.html:10
+msgid "Item Pos"
+msgstr ""
+
+#: templates/operating/hero_info.html:11
+#: templates/operating/package_info.html:6
+msgid "Level"
+msgstr ""
+
+#: templates/operating/hero_info.html:12
+#: templates/operating/package_info.html:8
+msgid "Grow Up"
+msgstr ""
+
+#: templates/operating/hero_info.html:13
+#: templates/operating/package_info.html:9
+msgid "Current Exp."
+msgstr ""
+
+#: templates/operating/hero_info.html:14
+#: templates/operating/package_info.html:17
+msgid "Base ID"
+msgstr ""
+
+#: templates/operating/hero_info.html:15
+#: templates/operating/package_info.html:12
+msgid "Equip Name"
+msgstr ""
+
+#: templates/operating/hero_info.html:16
+#: templates/operating/package_info.html:13
+msgid "Wake Up"
+msgstr ""
+
+#: templates/operating/mail.html:8
+msgid "1000 Uids Limited"
+msgstr ""
+
+#: templates/operating/mail.html:9
+msgid "Split By ,"
+msgstr ""
+
+#: templates/operating/mail.html:10
+msgid "Accessory"
+msgstr ""
+
+#: templates/operating/mail.html:17 templates/operating/package_info.html:4
+msgid "Item"
+msgstr ""
+
+#: templates/operating/mail.html:18
+msgid "Equip"
+msgstr ""
+
+#: templates/operating/mail.html:19 templates/operating/package_info.html:7
+msgid "Count"
+msgstr ""
+
+#: templates/operating/mail.html:21
+msgid "None"
+msgstr ""
+
+#: templates/operating/mail.html:22
+msgid "Limited 6 Kind Of Accessory"
+msgstr ""
+
+#: templates/operating/mail.html:23
+msgid "Accessory Include Item And Equip"
+msgstr ""
+
+#: templates/operating/mail.html:24 templates/operating/notify.html:22
+msgid "Success"
+msgstr ""
+
+#: templates/operating/mail.html:25
+msgid "Please Check The Response Of Sending Mail"
+msgstr ""
+
+#: templates/operating/mail.html:26 templates/operating/notify.html:24
+msgid "Fail"
+msgstr ""
+
+#: templates/operating/mail.html:27 templates/operating/notify.html:25
+msgid "Please Check The Input Is Correct"
+msgstr ""
+
+#: templates/operating/mail.html:28
+msgid "Send"
+msgstr ""
+
+#: templates/operating/mail.html:29
+msgid "The Response Of Sending Mail"
+msgstr ""
+
+#: templates/operating/mail.html:30
+msgid "Server"
+msgstr ""
+
+#: templates/operating/mail.html:31
+msgid "GuardMaster"
+msgstr ""
+
+#: templates/operating/mail.html:32
+msgid "Pub Date"
+msgstr ""
+
+#: templates/operating/mail.html:33
+msgid "Lastest 20 Mails By Every Server"
+msgstr ""
+
+#: templates/operating/notify.html:5
+msgid "Notify Info"
+msgstr ""
+
+#: templates/operating/notify.html:6
+msgid "Notify Title"
+msgstr ""
+
+#: templates/operating/notify.html:7
+msgid "Notify Content"
+msgstr ""
+
+#: templates/operating/notify.html:8
+msgid "Start Date"
+msgstr ""
+
+#: templates/operating/notify.html:9
+msgid "End Date"
+msgstr ""
+
+#: templates/operating/notify.html:10
+msgid "Is Display"
+msgstr ""
+
+#: templates/operating/notify.html:11
+msgid "Picture Info"
+msgstr ""
+
+#: templates/operating/notify.html:12
+msgid "Picture Link"
+msgstr ""
+
+#: templates/operating/notify.html:13
+msgid "Picture Width"
+msgstr ""
+
+#: templates/operating/notify.html:14
+msgid "Picture Height"
+msgstr ""
+
+#: templates/operating/notify.html:16
+msgid "Channel"
+msgstr ""
+
+#: templates/operating/notify.html:18
+msgid "Zone"
+msgstr ""
+
+#: templates/operating/notify.html:19
+msgid "Seq ID"
+msgstr ""
+
+#: templates/operating/notify.html:20
+msgid "Other Options"
+msgstr ""
+
+#: templates/operating/notify.html:23
+msgid "Please Check The Notify Info"
+msgstr ""
+
+#: templates/operating/notify.html:26
+msgid "The Will Be DIR Notify When The Zone Is All Zone"
+msgstr ""
+
+#: templates/operating/notify.html:27
+msgid "Add Or Edit Notify Without Synchronization"
+msgstr ""
+
+#: templates/operating/notify.html:28
+msgid "Synchronize Notify"
+msgstr ""
+
+#: templates/operating/notify.html:29
+msgid "Delete"
+msgstr ""
+
+#: templates/operating/notify.html:30
+msgid "Edit"
+msgstr ""
+
+#: templates/operating/notify.html:31
+msgid "Operate"
+msgstr ""
+
+#: templates/operating/notify.html:32
+msgid "Attention"
+msgstr ""
+
+#: templates/operating/notify.html:33
+msgid "Please Edit The Notify"
+msgstr ""
+
+#: templates/operating/notify.html:34
+msgid "Back"
+msgstr ""
+
+#: templates/operating/package_info.html:2
+msgid "Package & Item"
+msgstr ""
+
+#: templates/operating/package_info.html:3
+msgid "Package Info"
+msgstr ""
+
+#: templates/operating/package_info.html:5
+msgid "Package Pos"
+msgstr ""
+
+#: templates/operating/package_info.html:10
+msgid "Binded Hero"
+msgstr ""
+
+#: templates/operating/package_info.html:11
+msgid "Equip ID"
+msgstr ""
+
+#: templates/operating/package_info.html:14
+msgid "Item Info"
+msgstr ""
+
+#: templates/operating/package_info.html:15
+#: templates/operating/pve_info.html:10
+msgid "Status"
+msgstr ""
+
+#: templates/operating/package_info.html:16
+msgid "Function Type"
+msgstr ""
+
+#: templates/operating/package_info.html:18
+msgid "Item Name"
+msgstr ""
+
+#: templates/operating/package_info.html:19
+msgid "Type"
+msgstr ""
+
+#: templates/operating/pve_info.html:2
+msgid "Pve Info"
+msgstr ""
+
+#: templates/operating/pve_info.html:3
+msgid "Dungeon List"
+msgstr ""
+
+#: templates/operating/pve_info.html:4
+msgid "Dungeon"
+msgstr ""
+
+#: templates/operating/pve_info.html:5
+msgid "Dungeon ID"
+msgstr ""
+
+#: templates/operating/pve_info.html:6
+msgid "Challenge Time"
+msgstr ""
+
+#: templates/operating/pve_info.html:7
+msgid "Dungeon Level"
+msgstr ""
+
+#: templates/operating/pve_info.html:8
+msgid "Best Evaluation"
+msgstr ""
+
+#: templates/operating/pve_info.html:9
+msgid "Frequency"
+msgstr ""
+
+#: templates/operating/pve_info.html:11
+msgid "Hero"
+msgstr ""
+
+#: templates/operating/pve_info.html:14
+msgid "Hero Grow Up"
+msgstr ""
+
+#: templates/operating/pve_info.html:16
+msgid "Remain HP"
+msgstr ""
+
+#: templates/operating/pve_info.html:17
+msgid "Max Score"
+msgstr ""
+
+#: templates/operating/pve_info.html:18
+msgid "Max Floor"
+msgstr ""
+
+#: templates/operating/pve_info.html:19
+msgid "Max Score of History"
+msgstr ""
+
+#: templates/operating/pve_info.html:20
+msgid "Max Floor of History"
+msgstr ""
+
+#: templates/operating/pve_info.html:21
+msgid "Today's Enter"
+msgstr ""
+
+#: templates/operating/pve_info.html:22
+msgid "Today's Wipeout"
+msgstr ""
+
+#: templates/operating/rank.html:4
+msgid "Real Rank Info"
+msgstr ""
+
+#: templates/operating/rank.html:5 templates/operating/rank_list.html:2
+msgid "Rank List"
+msgstr ""
+
+#: templates/operating/rank.html:6
+msgid "Range Of Rank"
+msgstr ""
+
+#: templates/operating/rank.html:7
+msgid "Max Range In 100"
+msgstr ""
+
+#: templates/operating/rank.html:8
+msgid "Total Number"
+msgstr ""
+
+#: templates/operating/rank.html:9 templates/operating/rank_list.html:5
+msgid "Rank Pos"
+msgstr ""
+
+#: templates/operating/rank.html:10
+msgid "Player ID"
+msgstr ""
+
+#: templates/operating/rank.html:11
+msgid "Player Name"
+msgstr ""
+
+#: templates/operating/rank.html:12
+msgid "Is Robot"
+msgstr ""
+
+#: templates/operating/rank.html:13
+msgid "Recharge ID"
+msgstr ""
+
+#: templates/operating/rank.html:14
+msgid "Gang ID"
+msgstr ""
+
+#: templates/operating/rank.html:15
+msgid "Gang Name"
+msgstr ""
+
+#: templates/operating/rank.html:16
+msgid "Gang Level"
+msgstr ""
+
+#: templates/operating/rank_list.html:3
+msgid "Rank ID"
+msgstr ""
+
+#: templates/operating/rank_list.html:4
+msgid "Rank Name"
+msgstr ""
+
+#: templates/operating/synchronization.html:4
+msgid "Notify CDN Url List"
+msgstr ""
+
+#: templates/operating/synchronization.html:5
+msgid "Copy This List To CDN Controler"
+msgstr ""
+
+#: templates/operating/synchronization.html:6
+msgid "Return Notify List"
+msgstr ""
+
+#: templatetags/custom.py:24 templatetags/custom.py:175
+msgid "Not Time"
+msgstr ""
+
+#: templatetags/custom.py:42
+#, python-format
+msgid "%(hour)s H %(minute)s M %(second)s S"
+msgstr ""
+
+#: templatetags/custom.py:47
+msgid "OFF LINE"
+msgstr ""
+
+#: templatetags/custom.py:49
+msgid "ON LINE"
+msgstr ""
+
+#: templatetags/custom.py:119
+msgid "Novice Dungeon List"
+msgstr ""
+
+#: templatetags/custom.py:121
+msgid "Normal Dungeon List"
+msgstr ""
+
+#: templatetags/custom.py:123
+msgid "Elite Dungeon List"
+msgstr ""
+
+#: templatetags/custom.py:125
+msgid "Endless Dungeon List"
+msgstr ""
+
+#: templatetags/custom.py:163
+msgid "PvP Win Times"
+msgstr ""
+
+#: templatetags/custom.py:163
+msgid "PvP Total Times"
+msgstr ""
+
+#: templatetags/custom.py:164
+msgid "Endless Score"
+msgstr ""
+
+#: templatetags/custom.py:164
+msgid "Endless Floor"
+msgstr ""
+
+#: templatetags/custom.py:165
+msgid "Gang Score"
+msgstr ""
+
+#: templatetags/custom.py:165
+msgid "Gang History Score"
+msgstr ""
+
+#: templatetags/custom.py:166
+msgid "Achievement Score"
+msgstr ""
+
+#: templatetags/custom.py:166
+msgid "Achievement Times"
+msgstr ""
+
+#: templatetags/custom.py:167
+msgid "Fight Offline Name"
+msgstr ""
+
+#: templatetags/custom.py:167
+msgid "Fight Offline Kill Man"
+msgstr ""
+
+#: templatetags/custom.py:168
+msgid "Fight Online Score"
+msgstr ""
+
+#: templatetags/custom.py:168
+msgid "Fight Online Win Times"
+msgstr ""

@@ -91,6 +91,7 @@ class UISubMenu(models.Model):
         ('operating:single', _('single')),
         ('operating:rank', _('rank')),
         ('operating:contact', _('contact')),
+        ('deployment:patch', _('patch')),
     }
     label = models.CharField(max_length=45)
     main_menu = models.ForeignKey(UIMainMenu, blank=True, null=True)
@@ -428,3 +429,21 @@ class Tabel(object):
             'vals': vals,
         }
         ret = self.insert.delay(self, panel, condition)
+
+    @classmethod
+    def get_last_version(self, sub_menu, panel, request_get):
+        condition = ()
+        if 'hostname' in request_get:
+            r = "hostname = '" + request_get['hostname'] + "'"
+            condition = condition + (r,)
+        if 'platform' in request_get:
+            r = "platform = '" + request_get['platform'] + "'"
+            condition = condition + (r,)
+        if 'channel' in request_get:
+            r = "channel = '" + request_get['channel'] + "'"
+            condition = condition + (r,)
+        if len(condition) > 0:
+            condition = " AND ".join(condition)
+            condition += " ORDER BY client_id DESC LIMIT 1"
+        ret = self.select(sub_menu, panel, condition)
+        return ret

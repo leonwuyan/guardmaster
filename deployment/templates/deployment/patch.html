@@ -1,0 +1,157 @@
+{% extends "detection/base.html" %}
+{% block content %}
+{% load custom i18n %}
+{% trans "Version" as t_version %}
+{% trans "Hostname/Platform/Channel" as t_h_p_c %}
+{% trans "Success" as t_success %}
+{% trans "Please Check The Response Of Upload Work Order" as t_p_c_t_r_o_u_w_o %}
+{% trans "Fail" as t_fail %}
+{% trans "Please Check The Input Is Correct" as t_p_c_t_i_i_c %}
+{% trans "Push" as t_push %}
+{% trans "The Response Of Upload Work Order" as t_t_r_o_u_w_o %}
+{% trans "Server" as t_server %}
+{% trans "GuardMaster" as t_guardmaster %}
+{% trans "Pub Date" as t_pub_date %}
+{% trans "Lastest 20 Upload Work Order By Every Server" as t_l_20_u_w_o_b_e_s %}
+{% trans "Progress" as t_progress %}
+{% trans "Result" as t_result %}
+{% trans "Start Date" as t_start_date %}
+{% trans "Stop Date" as t_stop_date %}
+<div class="container-fluid white-bg">
+  <div class="row">
+    <ol class="breadcrumb">
+      <li><a href="{{servlet}}/">{{panel.label}}</a></li>
+      <li class="active">{{ title }}</li>
+    </ol>
+
+    {% if message == 1 %}
+      <div class="alert alert-success alert-dismissible" role="alert">
+        <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <strong>{{t_success}}!</strong>&emsp;{{t_p_c_t_r_o_u_w_o}}
+      </div>
+    {% endif %}
+    {% if message == 2 %}
+      <div class="alert alert-danger alert-dismissible" role="alert">
+        <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <strong>{{t_fail}}!</strong>&emsp;{{t_p_c_t_i_i_c}}
+      </div>
+    {% endif %}
+
+    <form class="form" role="form" method="post">
+    {% csrf_token %}
+      <div class="form-group" style="margin-bottom: 5px">
+        <label>{{t_list_of_servers}}</label>
+        <select class="form-control" name="server">
+          {% for server in servers %}
+          <option value="{{server.id}}">{{server.label}}</option>
+          {% endfor %}
+        </select>
+      </div>
+      <div class="form-group" style="margin-bottom: 5px">
+        <label>{{t_h_p_c}}</label>
+        <div class="row">
+          <div class="col-md-4">
+            <select class="form-control" name="hostname" id="hostname" onchange="javascript:select_change();">
+              {% for hostname in hostnames %}
+              <option value="{{hostname.id}}">{{hostname.label}}</option>
+              {% endfor %}
+            </select>
+          </div>
+          <div class="col-md-4">
+            <select class="form-control" name="platform" id="platform" onchange="javascript:select_change();">
+              {% for platform in platforms %}
+              <option value="{{platform.label}}">{{platform.label}}</option>
+              {% endfor %}
+            </select>
+          </div>
+          <div class="col-md-4">
+            <select class="form-control" name="channel" id="channel" onchange="javascript:select_change();">
+              {% for channel in channels %}
+              <option value="{{channel.label}}">{{channel.label}}</option>
+              {% endfor %}
+            </select>
+          </div>
+        </div>
+      </div>
+      <div class="form-group">
+        <label for="uid">{{t_version}}</label>
+        <div class="row">
+          <div class="col-md-3">
+            <div class="input-group">
+              <span class="input-group-addon" id="a-addon">a</span>
+              <input type="text" class="form-control" value="0" aria-describedby="a-addon" name="a" id="a" readonly="readonly">
+            </div>
+          </div>
+          <div class="col-md-3">
+            <div class="input-group">
+              <span class="input-group-addon" id="b-addon">b</span>
+              <input type="text" class="form-control" value="0" aria-describedby="b-addon" name="b" id="b" readonly="readonly">
+            </div>
+          </div>
+          <div class="col-md-3">
+            <div class="input-group">
+              <span class="input-group-addon" id="c-addon">c</span>
+              <input type="text" class="form-control" value="0" aria-describedby="c-addon" name="c" id="c" readonly="readonly">
+            </div>
+          </div>
+          <div class="col-md-3">
+            <div class="input-group">
+              <span class="input-group-addon" id="d-addon">d</span>
+              <input type="text" class="form-control" value="0" aria-describedby="d-addon" name="d" id="d">
+            </div>
+          </div>
+        </div>
+      </div>
+      <button type="submit" class="btn btn-primary btn-sm">{{t_push}}</button>
+    </form>
+
+    <div class="panel panel-default" style="margin-top: 50px">
+      <div class="panel-heading">{{t_t_r_o_u_w_o}}&emsp;<span class="label label-default">{{ t_l_20_u_w_o_b_e_s }}</span></div>
+      <div class="table-responsive">
+        <table class="table table-bordered table-striped table-condensed">
+            <thead>
+              <tr>
+              <th>{{ t_version }}</th>
+              <th>{{ t_h_p_c }}</th>
+              <th>{{ t_progress }}</th>
+              <th>{{ t_guardmaster }}</th>
+              <th>{{ t_result }}</th>
+              <th>{{ t_start_date }}</th>
+              <th>{{ t_stop_date }}</th>
+              </tr>
+            </thead>
+          <tbody>
+          {% for u in uploadworkorders %}
+            <tr>
+              <td>{{u.version}}</td>
+              <td>{{u.hostname}}/{{u.platform}}/{{u.channel}}</td>
+              <td>{{u.progress}}%</td>
+              <td>{{u.user}}</td>
+              <td>{{u.result}}</td>
+              <td>{{u.start_date}}</td>
+              <td>{{u.stop_date}}</td>
+            </tr>
+          {% endfor %}
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+  <center style='color: #999; padding-top: 20px; font-family: "arial","NSimSun","SimSun","STSong","AR PL SungtiL GB","TW\-Sung","WenQuanYi Bitmap Song"; font-size: 14px; font-weight: bold;'>{{excuse}}</center>
+</div>
+<script type="text/javascript">
+  function select_change(){
+    hostname = $('#hostname').val()
+    platform = $('#platform').val()
+    channel = $('#channel').val()
+    deployment.last_version(hostname, platform, channel);
+  }
+  $(document).ready(function() {
+    management.numberOnly("input[name='a']");
+    management.numberOnly("input[name='b']");
+    management.numberOnly("input[name='c']");
+    management.numberOnly("input[name='d']");
+    //select_change()
+  });
+</script>
+{% endblock %}

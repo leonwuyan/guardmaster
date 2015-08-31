@@ -457,9 +457,37 @@
       $(ul).append(html)
     }
   };
+  var _deployment = {
+    'last_version': function(hostname, platform, channel) {
+      url = window.location.pathname
+      url_arr = url.split("/", 3).concat([hostname, platform, channel])
+      url = url_arr.join("/") + '/version.json'
+      $.ajax({
+        url: url,
+        type: 'GET',
+        success: function(msg){
+          $('#a').val(msg.a);
+          $('#b').val(msg.b);
+          $('#c').val(msg.c);
+          $('#d').val(parseInt(msg.d)+1);
+        },
+        error: function(e){
+          switch (e.status) {
+            case 401:
+              //location.reload();
+              break;
+            default:
+              //location.reload();
+              break;
+          }
+        }
+      });
+    }
+  };
   window.dataAccess = _dataAccess;
   window.queryButton = _queryButton;
   window.management = _management;
+  window.deployment = _deployment;
   window.getData = _getData;
   window.getTime = _getTime;
 })();

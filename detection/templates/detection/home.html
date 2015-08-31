@@ -14,7 +14,7 @@
       {% for panel in panels %}
       <div class="form-group">
         <div class="col-md-12">
-        <a href="{% url 'detection:count' panel.id 'total' %}">
+        <a href="{% url panel.category panel.id panel.url %}">
           <input type="button" value="{{panel.label}}" class="btn btn-primary">
         </a>
         </div>

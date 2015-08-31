@@ -164,6 +164,14 @@ DATABASES = {
         'HOST': '203.69.246.91',
         'PORT': '3307',
     },
+    'db_bbrr_control': {
+        'ENGINE': 'django.db.backends.mysql',
+        'NAME': 'db_bbrr_control',
+        'USER': 'upt',
+        'PASSWORD': '8791act@b7',
+        'HOST': '203.69.246.24',
+        'PORT': '3306',
+    },
 }
 
 
