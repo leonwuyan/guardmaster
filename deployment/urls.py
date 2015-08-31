@@ -7,7 +7,7 @@ urlpatterns = [
         views.patch,
         name='patch'),
     url(
-        r'^(?P<panel_id>[0-9]+)/(?P<hostname>[.A-Za-z0-9]+)/(?P<platform>[a-z]+)/(?P<channel>[0-9]+)/version.json$',
+        r'^(?P<panel_id>[0-9]+)/(?P<hostname_id>[0-9]+)/(?P<platform>[a-z]+)/(?P<channel>[0-9]+)/version.json$',
         views.version,
         name='version'),
 ]

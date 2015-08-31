@@ -85,7 +85,8 @@ def patch(request, panel_id, url=Common.URL):
     return render(request, t, d)
 
 
-def version(request, panel_id, hostname, platform, channel):
-    tmp = get_version(request.user, panel_id, hostname, platform, channel)
+def version(request, panel_id, hostname_id, platform, channel):
+    hostname = get_object_or_404(HostName, pk=hostname_id)
+    tmp = get_version(request.user, panel_id, hostname.label, platform, channel)
     ret = json.dumps(tmp, ensure_ascii=False)
     return HttpResponse(ret, content_type='application/json')
