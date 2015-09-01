@@ -191,6 +191,15 @@ class Tabel(object):
         return cursor.fetchall()
 
     @classmethod
+    def update_unsafe(self, panel, condition):
+        cursor = connections[panel.db_aliases].cursor()
+        sql = "UPDATE %(table_name)s SET %(update)s WHERE %(condition)s" % condition
+        logger = logging.getLogger(__name__)
+        logger.info(sql)
+        cursor.execute(sql)
+        return cursor.fetchall()
+
+    @classmethod
     def select(self, sub_menu, panel, condition=None):
         try:
             ret = self.select_unsafe(sub_menu, panel, condition)
@@ -207,6 +216,19 @@ class Tabel(object):
             return []
         try:
             ret = self.insert_unsafe(panel, condition)
+        except Exception as e:
+            ret = []
+            logger = logging.getLogger(__name__)
+            logger.error(e)
+        return ret
+
+    @classmethod
+    @task
+    def update(self, panel, condition):
+        if condition is None:
+            return []
+        try:
+            ret = self.update_unsafe(panel, condition)
         except Exception as e:
             ret = []
             logger = logging.getLogger(__name__)
@@ -446,4 +468,51 @@ class Tabel(object):
             condition = " AND ".join(condition)
             condition += " ORDER BY client_id DESC LIMIT 1"
         ret = self.select(sub_menu, panel, condition)
+        return ret
+
+    @classmethod
+    def update_tb_upt_conf(self, panel, update, request_get):
+        condition = ()
+        if 'hostname' in request_get:
+            r = "hostname = '" + request_get['hostname'] + "'"
+            condition = condition + (r,)
+        if 'platform' in request_get:
+            r = "platform = '" + request_get['platform'] + "'"
+            condition = condition + (r,)
+        if 'channel' in request_get:
+            r = "channel = '" + request_get['channel'] + "'"
+            condition = condition + (r,)
+        if 'client_id' in request_get:
+            r = "client_id = " + request_get['client_id']
+            condition = condition + (r,)
+        if len(condition) == 4:
+            condition = " AND ".join(condition)
+        else:
+            return []
+        sqlset = ()
+        if 'is_valid' in update:
+            r = "is_valid = " + update['is_valid']
+            sqlset = sqlset + (r,)
+        if len(sqlset) > 0:
+            sqlset = ", ".join(sqlset)
+        else:
+            return []
+        cond = {
+            'table_name': 'tb_upt_conf',
+            'update': sqlset,
+            'condition': condition,
+        }
+        ret = self.update(panel, cond)
+        return ret
+
+    @classmethod
+    def insert_tb_client_ver(self, panel, vals):
+        vals = "', '".join(vals)
+        vals = "('" + vals + "')"
+        condition = {
+            'table_name': 'tb_client_ver',
+            'cols': "(`client_id`, `ver_l1`, `ver_l2`, `ver_l3`, `ver_l4`, `is_valid`, `load_date`)",
+            'vals': vals,
+        }
+        ret = self.insert(panel, condition)
         return ret

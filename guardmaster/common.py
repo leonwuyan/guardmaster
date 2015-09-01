@@ -11,6 +11,8 @@ import tempfile
 URL = 'total'
 ENUM = 'enum'
 CONTACT_REPLY = 'contact_reply'
+MAX_CLIENT_ID = 'max_client_id'
+CLIENT_ID = 'client_id'
 E_BUILDINGID = 'BuildingId'
 E_CHANNELID = 'ChannelID'
 E_CHGREASON = 'ChgReason'

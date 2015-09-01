@@ -24,9 +24,10 @@ from pprint import pprint
 
 
 class ServerSocket(object):
-    def __init__(self, ip, port):
+    def __init__(self, ip, port, buf):
         super(ServerSocket, self).__init__()
-        self.pkg_head_length = 32
+        self.pkg_buf = buf
+        self.pkg_head_length = 32 + buf
         self.ip = ip
         self.port = port
         self.empty = {'result': 3}
@@ -63,7 +64,8 @@ class ServerSocket(object):
         type_h = socket.htonl(phash)
         seq_no = socket.htonl(0)
         pkg = ('DD', length, uid, type_h, seq_no, data)
-        st = struct.Struct('16sIIII' + str(len(data)) + 's')
+        l = str(16 + self.pkg_buf)
+        st = struct.Struct(l + 'sIIII' + str(len(data)) + 's')
 
         pkg_data = st.pack(*pkg)
         un_pkg_data = st.unpack(pkg_data)
@@ -77,7 +79,8 @@ class ServerSocket(object):
         return body
 
     def parse_pkg_head(self, data):
-        st = struct.Struct('16sIIII')
+        l = str(16 + self.pkg_buf)
+        st = struct.Struct(l + 'sIIII')
         head = st.unpack(data)
         head_safe = (
             head[0],
@@ -155,6 +158,9 @@ class ServerSocket(object):
                 res_type=mail_acc['res_type'],
                 res_id=mail_acc['res_id'],
                 res_count=mail_acc['res_count'],
+                res_extern_param_1=mail_acc['res_extern_param_1'],
+                res_extern_param_2=mail_acc['res_extern_param_2'],
+                res_extern_param_3=mail_acc['res_extern_param_3'],
             )
         pkggg = self.serialize_pkg(phash_mail, pb_mail.SerializeToString())
         return self.connect_server(self.ip, self.port, pkggg)
@@ -321,3 +327,48 @@ class ServerSocket(object):
         p = 'GM_GET_PLAYER_FIRST_PURCHASE'
         r = {'world_id': world_id, 'uid': uid, 'channel': channel}
         return self._get(p, r)
+
+    def del_player_equiped_equip(self, uid, world_id, uin, hero_id, equip_id):
+        if world_id is None or uid is None or uin is None or hero_id is None or equip_id is None:
+            return self.empty
+        p = 'GM_DEL_PLAYER_EQUIPED_EQUIP_REQ'
+        r = {
+            'world_id': world_id,
+            'uid': uid,
+            'uin': uin,
+            'hero_id': hero_id,
+            'equip_id': equip_id
+            }
+        return self._get(p, r)
+
+"""
+#
+ss = ServerSocket('192.168.1.90', 9135, 0)
+pprint(ss.get_player_account(uid=10001))
+pprint(ss.get_player_first_purchase(1, 10001, 3))
+pprint(ss.get_player_world_info('421289057'))
+pprint(ss.get_player_base_info(10001, 1))
+pprint(ss.get_rank_list(1, 1, 100, 1))
+pprint(ss.get_rank_pos(10001, 1, 1))
+pprint(ss.get_player_pve_info(10001, 1))
+pprint(ss.get_player_building_and_package(10001, 1))
+pprint(ss.del_player_equiped_equip(10001, 1, '421289057', 11, 142))
+pprint(ss.get_player_total_recharge(10001, 1))
+pprint(ss.lock_player(10001, 0))
+pprint(ss.ban_player_chat(10001, 0, '421289057', 1))
+pprint(ss.kick_player(10001, '421289057', 1))
+pprint(ss.send_mail(
+    [10001, 10002],
+    1,
+    {'mail_title': u'蛋蛋是猪', 'mail_content': u'测试内容', 'mail_interval': 7200},
+    [
+        {'res_type': 1, 'res_id': 0, 'res_count': 100},
+        {'res_type': 2, 'res_id': 0, 'res_count': 100}
+    ]
+))
+pprint(ss.change_player_attr(10001, '421289057', 1, 1, 0, 300))
+pprint(ss.change_player_hero_level(10001, '421289057', 1, 1, 10, 100000))
+pprint(ss.del_player_equiped_equip(14745, 1, '600789998', 1, 2))
+pprint(ss.change_player_vip_level(10001, 1, 10))
+pprint(ss.change_player_unlock_dungeon(10001, '421289057', 1, 10))
+"""

@@ -104,7 +104,7 @@ class ServerControl(object):
         return ranks
 
     def _params(self):
-        ss = ServerSocket(self.server.ip, self.server.port)
+        ss = ServerSocket(self.server.ip, self.server.port, self.server.buf)
         ret = ss.get_player_account(uid=self.uid)
         if ret['result'] != 0:
             return None, None, None, None
@@ -293,7 +293,7 @@ class ServerControl(object):
         return ret
 
     def all_rank(self, world_id, rank_id, rank_start, rank_count):
-        ss = ServerSocket(self.server.ip, self.server.port)
+        ss = ServerSocket(self.server.ip, self.server.port, self.server.buf)
         if rank_count <= 0:
             rank_count = 1
         rank = ss.get_rank_list(world_id, rank_id, rank_start, rank_count)

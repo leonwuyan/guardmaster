@@ -1,8 +1,10 @@
 from __future__ import absolute_import
 from deployment.models import UpLoadWorkOrder, HostName
+from django.shortcuts import render, get_object_or_404
+from guardmaster import common as Common
 from deployment.version import Version
 from operating.models import Server
-from detection.models import Panel
+from detection.models import Panel, Tabel, UISubMenu
 from django.utils import timezone
 from celery.task import task
 import subprocess
@@ -13,6 +15,7 @@ import os
 
 local_path_Mac = '/Volumes/91ACT_CONTROL/clientupdate/'
 local_path_CentOS = '/mnt/smbcontrol/clientupdate/'
+BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
 
 @task
@@ -59,16 +62,62 @@ def _scp_single_zip(ip, local_path, remote_path, file_name):
     if retcode != 0:
         return False
 
-    local_size = os.path.getsize(local_path)
+    local_size = os.path.getsize(local_file)
     tools_path = "{0}tools/".format(local_path_CentOS)
-    checksum_cmd = "./checksum {0}".format(local_path)
+    checksum_cmd = "./checksum {0}{1}".format(local_path, file_name)
     retcode, output = _sh(tools_path, checksum_cmd)
-    print 'checksum :', output
+    checksum = output[0]
     return True
 
 
-def scp_path(u, server, local_path, remote_path):
+def get_max_client_id(panel):
+    sub_menu = get_object_or_404(UISubMenu, url=Common.MAX_CLIENT_ID)
+    ret = Tabel.select(sub_menu, panel)
+    try:
+        ret = ret[0][0]
+    except Exception as e:
+        ret = 0
+    return ret
+
+
+def get_client_id(panel, version):
+    sub_menu = get_object_or_404(UISubMenu, url=Common.CLIENT_ID)
+    condition = "concat(ver_l1,'.',ver_l2,'.' ,ver_l3,'.' ,ver_l4)='{0}'".format(version)
+    ret = Tabel.select(sub_menu, panel, condition)
+    try:
+        ret = ret[0][0]
+    except Exception as e:
+        ret = 0
+    return ret
+
+
+def insert_client_id(panel, version):
+    client_id = get_max_client_id(panel) + 1
+    v = version.split('.')
+    ret = Tabel.insert_tb_client_ver(panel, [
+        str(client_id), v[0], v[1], v[2], v[3], '1', str(timezone.now())])
+    return client_id
+
+
+def _update_bbc_list(u, server, local_path, remote_path):
+    client_id = get_client_id(u.panel, u.version)
+    if client_id == 0:
+        client_id = insert_client_id(u.panel, u.version)
+    else:
+        update = {'is_valid': '0'}
+        request_get = {
+            'hostname': u.hostname,
+            'platform': u.platform,
+            'channel': str(u.channel),
+            'client_id': str(client_id),
+        }
+        Tabel.update_tb_upt_conf(u.panel, update, request_get)
+    pass
+
+
+def scp_patch(u, server, local_path, remote_path):
     file_list = os.listdir(local_path)
+    file_list = filter(lambda x: x.find('.zip') > 0, file_list)
     progress_total = len(file_list)
     if progress_total == 0:
         u.result = 'Not Any Files'
@@ -88,6 +137,7 @@ def scp_path(u, server, local_path, remote_path):
             u.result = 'Error In Scp'
             u.save()
             return False
+    # _update_bbc_list(u, server, local_path, remote_path)
     u.result = 'Successful'
     u.save()
     return True
@@ -107,7 +157,6 @@ def _upload_patch(uploadworkorder_id, server_id, dir_path):
         version_path,
         u.platform
     )
-    print local_path
     if not os.path.exists(local_path):
         u.result = 'Dir Do Not Exists'
         u.save()
@@ -120,8 +169,7 @@ def _upload_patch(uploadworkorder_id, server_id, dir_path):
         version_path,
         u.platform
     )
-    print remote_path
-    if scp_path(u, s, local_path, remote_path):
+    if scp_patch(u, s, local_path, remote_path):
         pass
 
 

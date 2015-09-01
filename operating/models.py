@@ -23,6 +23,7 @@ class Server(models.Model):
     home = models.CharField(max_length=60)
     user = models.CharField(max_length=45)
     cdn_url = models.CharField(max_length=256, blank=True, null=True)
+    buf = models.IntegerField()
 
     def __unicode__(self):
         return self.label
