@@ -188,7 +188,7 @@ class Tabel(object):
         logger = logging.getLogger(__name__)
         logger.info(sql)
         cursor.execute(sql)
-        return cursor.fetchall()
+        return cursor.lastrowid
 
     @classmethod
     def update_unsafe(self, panel, condition):
@@ -464,6 +464,9 @@ class Tabel(object):
         if 'channel' in request_get:
             r = "channel = '" + request_get['channel'] + "'"
             condition = condition + (r,)
+        if 'is_valid' in request_get:
+            r = "is_valid = " + request_get['is_valid']
+            condition = condition + (r,)
         if len(condition) > 0:
             condition = " AND ".join(condition)
             condition += " ORDER BY client_id DESC LIMIT 1"
@@ -511,7 +514,7 @@ class Tabel(object):
         vals = "('" + vals + "')"
         condition = {
             'table_name': 'tb_client_ver',
-            'cols': "(`client_id`, `ver_l1`, `ver_l2`, `ver_l3`, `ver_l4`, `is_valid`, `load_date`)",
+            'cols': "(`ver_l1`, `ver_l2`, `ver_l3`, `ver_l4`, `is_valid`, `load_date`)",
             'vals': vals,
         }
         ret = self.insert(panel, condition)

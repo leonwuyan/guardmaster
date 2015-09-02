@@ -70,16 +70,6 @@ def _scp_single_zip(ip, local_path, remote_path, file_name):
     return True
 
 
-def get_max_client_id(panel):
-    sub_menu = get_object_or_404(UISubMenu, url=Common.MAX_CLIENT_ID)
-    ret = Tabel.select(sub_menu, panel)
-    try:
-        ret = ret[0][0]
-    except Exception as e:
-        ret = 0
-    return ret
-
-
 def get_client_id(panel, version):
     sub_menu = get_object_or_404(UISubMenu, url=Common.CLIENT_ID)
     condition = "concat(ver_l1,'.',ver_l2,'.' ,ver_l3,'.' ,ver_l4)='{0}'".format(version)
@@ -92,14 +82,13 @@ def get_client_id(panel, version):
 
 
 def insert_client_id(panel, version):
-    client_id = get_max_client_id(panel) + 1
     v = version.split('.')
-    ret = Tabel.insert_tb_client_ver(panel, [
-        str(client_id), v[0], v[1], v[2], v[3], '1', str(timezone.now())])
+    client_id = Tabel.insert_tb_client_ver(panel, [
+        v[0], v[1], v[2], v[3], '1', str(timezone.now())])
     return client_id
 
 
-def _update_bbc_list(u, server, local_path, remote_path):
+def clean_up_tb(u, server):
     client_id = get_client_id(u.panel, u.version)
     if client_id == 0:
         client_id = insert_client_id(u.panel, u.version)
@@ -112,6 +101,11 @@ def _update_bbc_list(u, server, local_path, remote_path):
             'client_id': str(client_id),
         }
         Tabel.update_tb_upt_conf(u.panel, update, request_get)
+    return client_id
+
+
+def _update_bbc_list(u, server, local_path, remote_path):
+    client_id = clean_up_tb(u, server)
     pass
 
 

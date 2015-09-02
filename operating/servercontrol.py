@@ -210,6 +210,8 @@ class ServerControl(object):
                     (a, b, c) = (int(t[0]), int(t[1]), int(t[2]))
                     acc.append({'res_type': a, 'res_id': b, 'res_count': c})
         ret = self._send_mail(title, content, acc)
+        if ret['result'] != self.success['result']:
+            return ret
         for p in ret['sucess_result']:
             if ret['result'] == self.success['result']:
                 r = ResponseMail(

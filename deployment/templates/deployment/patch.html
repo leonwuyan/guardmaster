@@ -2,6 +2,7 @@
 {% block content %}
 {% load custom i18n %}
 {% trans "Version" as t_version %}
+{% trans "Url" as t_url %}
 {% trans "Hostname/Platform/Channel" as t_h_p_c %}
 {% trans "Success" as t_success %}
 {% trans "Please Check The Response Of Upload Work Order" as t_p_c_t_r_o_u_w_o %}
@@ -102,7 +103,13 @@
           </div>
         </div>
       </div>
-      <button type="submit" class="btn btn-primary btn-sm">{{t_push}}</button>
+      {% if url == 'app' %}
+      <div class="form-group">
+        <label for="url">{{t_url}}</label>
+        <input type="text" class="form-control" name="url">
+      </div>
+      {% endif %}
+      <button type="submit" class="btn btn-primary btn-sm" onclick="return deployment.patchUploadConfirm()">{{t_push}}</button>
     </form>
 
     <div class="panel panel-default" style="margin-top: 50px">
@@ -140,11 +147,23 @@
   <center style='color: #999; padding-top: 20px; font-family: "arial","NSimSun","SimSun","STSong","AR PL SungtiL GB","TW\-Sung","WenQuanYi Bitmap Song"; font-size: 14px; font-weight: bold;'>{{excuse}}</center>
 </div>
 <script type="text/javascript">
-  function select_change(){
-    hostname = $('#hostname').val()
-    platform = $('#platform').val()
-    channel = $('#channel').val()
+  function select_change() {
+    hostname = $('#hostname').val();
+    platform = $('#platform').val();
+    channel = $('#channel').val();
     deployment.last_version(hostname, platform, channel);
+  }
+  function select_app() {
+    url = window.location.pathname;
+    if (url.lastIndexOf("app") > 0) {
+      $('#a').removeAttr('readonly');
+      $('#b').removeAttr('readonly');
+      $('#c').removeAttr('readonly');
+      $('#d').attr('readonly', 'readonly');
+      $('#d').val('0')
+      return true;
+    }
+    return false;
   }
   $(document).ready(function() {
     management.numberOnly("input[name='a']");
@@ -152,6 +171,7 @@
     management.numberOnly("input[name='c']");
     management.numberOnly("input[name='d']");
     //select_change()
+    select_app()
   });
 </script>
 {% endblock %}

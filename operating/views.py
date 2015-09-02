@@ -121,7 +121,10 @@ def mail(request, panel_id, url=Common.URL):
             request.user.username,
             Common.get_client_ip(request))
         ret = sc.send_mail(post=request.POST)
-        d['message'] = 1
+        if ret['result'] == 1:
+            d['message'] = 2
+        else:
+            d['message'] = 1
     return render(request, t, d)
 
 

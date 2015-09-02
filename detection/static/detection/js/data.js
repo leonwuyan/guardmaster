@@ -469,7 +469,10 @@
           $('#a').val(msg.a);
           $('#b').val(msg.b);
           $('#c').val(msg.c);
-          $('#d').val(parseInt(msg.d)+1);
+          url = window.location.pathname;
+          if (url.lastIndexOf("app") < 0) {
+            $('#d').val(parseInt(msg.d)+1);
+          }
         },
         error: function(e){
           switch (e.status) {
@@ -482,6 +485,19 @@
           }
         }
       });
+    },
+    'patchUploadConfirm': function() {
+      fmts = gettext('Please Confirm This:\nHostName :%(h)s\nPlatform :%(p)s\nChannel :%(c)s\nVerseion :%(v)s');
+      t = {
+        'h':$('#hostname').val(),
+        'p':$('#platform').val(),
+        'c':$('#channel').val(),
+        'v':$('#a').val() + '.' + $('#b').val() + '.' + $('#c').val() + '.' + $('#d').val()
+      }
+      s = interpolate(fmts, t, true);
+      if (!confirm(s)) {
+        return false;
+      }
     }
   };
   window.dataAccess = _dataAccess;

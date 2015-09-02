@@ -158,9 +158,9 @@ class ServerSocket(object):
                 res_type=mail_acc['res_type'],
                 res_id=mail_acc['res_id'],
                 res_count=mail_acc['res_count'],
-                res_extern_param_1=mail_acc['res_extern_param_1'],
-                res_extern_param_2=mail_acc['res_extern_param_2'],
-                res_extern_param_3=mail_acc['res_extern_param_3'],
+                res_extern_param_1=mail_acc.get('res_extern_param_1', 0),
+                res_extern_param_2=mail_acc.get('res_extern_param_2', 0),
+                res_extern_param_3=mail_acc.get('res_extern_param_3', 0),
             )
         pkggg = self.serialize_pkg(phash_mail, pb_mail.SerializeToString())
         return self.connect_server(self.ip, self.port, pkggg)

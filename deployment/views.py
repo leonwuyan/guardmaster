@@ -20,6 +20,7 @@ def get_version(user, panel_id, hostname, platform, channel):
         'hostname': hostname,
         'platform': platform,
         'channel': channel,
+        'is_valid': '1',
     }
     ret = Tabel.get_last_version(sub_menu, panel, request_get)
     if len(ret) > 0:
@@ -43,6 +44,7 @@ def patch(request, panel_id, url=Common.URL):
     d['hostnames'] = panel.hostname_set.all()
     d['platforms'] = panel.platform_set.all()
     d['channels'] = panel.channel_set.all()
+    d['url'] = url
     d['uploadworkorders'] = panel.uploadworkorder_set.all()[:20]
     if request.method == 'POST':
         server_id = int(request.POST['server'])
