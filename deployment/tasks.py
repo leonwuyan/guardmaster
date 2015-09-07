@@ -15,14 +15,8 @@ import os
 
 local_path_Mac = '/Volumes/91ACT_CONTROL/clientupdate/'
 local_path_CentOS = '/mnt/smbcontrol/clientupdate/'
+SH_PATH = local_path_CentOS
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
-
-
-@task
-def _do_kground_work(name):
-    for i in range(1, 10):
-        print 'hello:%s %s' % (name, i)
-        time.sleep(1)
 
 
 def print_output(output):
@@ -61,13 +55,18 @@ def _scp_single_zip(ip, local_path, remote_path, file_name):
     retcode, output = _sh(BASE_DIR, scp_cmd)
     if retcode != 0:
         return False
+    return True
 
+
+def _info_single_zip(addr_path, file_name):
+    local_file = SH_PATH + addr_path + file_name
+    local_path = SH_PATH + addr_path
     local_size = os.path.getsize(local_file)
-    tools_path = "{0}tools/".format(local_path_CentOS)
+    tools_path = "{0}tools/".format(SH_PATH)
     checksum_cmd = "./checksum {0}{1}".format(local_path, file_name)
     retcode, output = _sh(tools_path, checksum_cmd)
     checksum = output[0]
-    return True
+    return local_size, checksum
 
 
 def get_client_id(panel, version):
@@ -84,8 +83,29 @@ def get_client_id(panel, version):
 def insert_client_id(panel, version):
     v = version.split('.')
     client_id = Tabel.insert_tb_client_ver(panel, [
-        v[0], v[1], v[2], v[3], '1', str(timezone.now())])
+        v[0], v[1], v[2], v[3], '1', timezone.now()])
     return client_id
+
+
+def insert_upt(u, server, client_id, file_name, addr_path, app_url=None):
+    TYP = u.platform
+    v = u.version.split('.')
+    if v[3] == '0':
+        TYP += '_app'
+        addr = app_url
+        local_size = checksum = '0'
+        file_name = 'None'
+    else:
+        TYP += '_patch'
+        addr = addr_path + file_name
+        local_size, checksum = _info_single_zip(addr_path, file_name)
+    update_id = Tabel.insert_tb_upt_info(u.panel, [
+        v[3], TYP, file_name, addr, local_size, checksum,
+        timezone.now(), timezone.now()])
+    ret = Tabel.insert_tb_upt_conf(u.panel, [
+        client_id, u.platform, u.hostname, u.channel,
+        update_id, timezone.now(), '0'])
+    return update_id
 
 
 def clean_up_tb(u, server):
@@ -104,9 +124,21 @@ def clean_up_tb(u, server):
     return client_id
 
 
-def _update_bbc_list(u, server, local_path, remote_path):
+def _update_bbc_list(u, server, local_path, addr_path):
     client_id = clean_up_tb(u, server)
-    pass
+    file_list = os.listdir(local_path)
+    file_list = filter(lambda x: x.find('.zip') > 0, file_list)
+    update_list = []
+    for f in file_list:
+        update_id = insert_upt(u, server, client_id, f, addr_path)
+        update_list.append({
+            'client_id': client_id,
+            'hostname': u.hostname,
+            'platform': u.platform,
+            'channel': u.channel,
+            'update_id': update_id,
+            })
+    return update_list
 
 
 def scp_patch(u, server, local_path, remote_path):
@@ -131,43 +163,39 @@ def scp_patch(u, server, local_path, remote_path):
             u.result = 'Error In Scp'
             u.save()
             return False
-    # _update_bbc_list(u, server, local_path, remote_path)
-    u.result = 'Successful'
-    u.save()
     return True
 
 
 @task
-def _upload_patch(uploadworkorder_id, server_id, dir_path):
+def _upload_patch(uploadworkorder_id, server_id, addr_path):
     u = UpLoadWorkOrder.objects.get(pk=uploadworkorder_id)
     s = Server.objects.get(pk=server_id)
-    app_path = '.'.join(u.version.split('.')[:3])
-    version_path = u.version.split('.')[3:][0]
-    local_path = '{0}{1}/{2}/{3}/{4}/{5}/'.format(
-        local_path_CentOS,
-        dir_path,
-        u.channel,
-        app_path,
-        version_path,
-        u.platform
-    )
+    local_path = SH_PATH + addr_path
     if not os.path.exists(local_path):
         u.result = 'Dir Do Not Exists'
         u.save()
         return
-    remote_path = '{0}{1}/{2}/{3}/{4}/{5}/'.format(
-        s.home,
-        dir_path,
-        u.channel,
-        app_path,
-        version_path,
-        u.platform
-    )
+    remote_path = s.home + addr_path
     if scp_patch(u, s, local_path, remote_path):
+        update_list = _update_bbc_list(u, server, local_path, addr_path)
+        u.result = 'Successful'
+        u.save()
+        print 'UPDATE_LIST :', update_list
+
+
+@task
+def _upload_app(uploadworkorder_id, server_id, app_url):
+    u = UpLoadWorkOrder.objects.get(pk=uploadworkorder_id)
+    s = Server.objects.get(pk=server_id)
+    client_id = clean_up_tb(u, s)
+    udpate_id = insert_upt(u, s, client_id, None, None, app_url)
+
+
+def upload_version(
+        panel, server, hostname, platform,
+        channel, version, user, app_url):
+    if True:
         pass
-
-
-def upload_patch(panel, server, hostname, platform, channel, version, user):
     u = UpLoadWorkOrder(
         server=server.label,
         panel=panel,
@@ -181,4 +209,15 @@ def upload_patch(panel, server, hostname, platform, channel, version, user):
         start_date=timezone.now(),
         stop_date=timezone.now())
     u.save()
-    _upload_patch.delay(u.id, server.id, hostname.dir_path)
+    app_path = '.'.join(u.version.split('.')[:3])
+    version_path = u.version.split('.')[3:][0]
+    addr_path = '{0}/{1}/{2}/{3}/{4}/'.format(
+        hostname.dir_path,
+        u.channel,
+        app_path,
+        version_path,
+        u.platform)
+    if version.is_app():
+        _upload_app.delay(u.id, server.id, app_url)
+    else:
+        _upload_patch.delay(u.id, server.id, addr_path)

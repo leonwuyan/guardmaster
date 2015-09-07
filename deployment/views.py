@@ -6,7 +6,7 @@ from guardmaster import common as Common
 from django.http import HttpResponse, HttpResponseRedirect
 from django.core.urlresolvers import reverse
 from django.views.generic import View
-from deployment.tasks import _do_sh, upload_patch
+from deployment.tasks import _do_sh, upload_version
 from deployment.models import HostName
 from deployment.version import Version
 import json
@@ -59,29 +59,36 @@ def patch(request, panel_id, url=Common.URL):
             hostname = get_object_or_404(HostName, pk=hostname_id)
             platform = request.POST['platform']
             channel = request.POST['channel']
-            tmp = get_version(
-                request.user,
-                panel_id,
-                hostname.label,
-                platform,
-                channel)
-            old_version = Version(tmp['a'], tmp['b'], tmp['c'], tmp['d'])
-            if version < old_version:
-                d['message'] = 2
-                return render(request, t, d)
+            app_url = request.POST.get('app_url')
+            if app_url:
+                if not version.is_app():
+                    d['message'] = 2
+                    return render(request, t, d)
+            else:
+                tmp = get_version(
+                    request.user,
+                    panel_id,
+                    hostname.label,
+                    platform,
+                    channel)
+                old_version = Version(tmp['a'], tmp['b'], tmp['c'], tmp['d'])
+                if version < old_version or version.is_app():
+                    d['message'] = 2
+                    return render(request, t, d)
         except Exception as e:
             d['message'] = 2
             return render(request, t, d)
 
         server = get_object_or_404(Server, pk=server_id)
-        upload_patch(
+        upload_version(
             panel,
             server,
             hostname,
             platform,
             channel,
             version,
-            request.user)
+            request.user,
+            app_url)
         d['message'] = 1
         return HttpResponseRedirect(reverse('deployment:patch', args=(panel_id, url)))
     return render(request, t, d)
