@@ -357,16 +357,11 @@ class Tabel(object):
     def history_query_select(self, sub_menu, panel, request_get):
         condition = ()
         if 'start' in request_get:
-            r = "LogDt >= '" + request_get.get('start').split(' ')[0] + "'"
-            condition = condition + (r,)
-            r = "LogTime >= '" + request_get.get('start').split(' ')[1] + "'"
+            r = "CONCAT(LogDt,' ',LogTime)>='" + request_get.get('start') + "'"
             condition = condition + (r,)
         if 'end' in request_get:
-            r = "LogDt <= '" + request_get.get('end').split(' ')[0] + "'"
+            r = "CONCAT(LogDt,' ',LogTime)<'" + request_get.get('end') + "'"
             condition = condition + (r,)
-            if request_get.get('end').split(' ')[1] > '00:00:00':
-                r = "LogTime <= '" + request_get.get('end').split(' ')[1] + "'"
-                condition = condition + (r,)
         if 'server' in request_get:
             r = "Server = '" + request_get.get('server') + "'"
             condition = condition + (r,)
@@ -488,7 +483,10 @@ class Tabel(object):
         if 'client_id' in request_get:
             r = "client_id = " + request_get['client_id']
             condition = condition + (r,)
-        if len(condition) == 4:
+        if 'update_id' in request_get:
+            r = "update_id = " + request_get['update_id']
+            condition = condition + (r,)
+        if len(condition) >= 4:
             condition = " AND ".join(condition)
         else:
             return []
@@ -510,11 +508,38 @@ class Tabel(object):
 
     @classmethod
     def insert_tb_client_ver(self, panel, vals):
+        vals = map(lambda x: str(x), vals)
         vals = "', '".join(vals)
         vals = "('" + vals + "')"
         condition = {
             'table_name': 'tb_client_ver',
             'cols': "(`ver_l1`, `ver_l2`, `ver_l3`, `ver_l4`, `is_valid`, `load_date`)",
+            'vals': vals,
+        }
+        ret = self.insert(panel, condition)
+        return ret
+
+    @classmethod
+    def insert_tb_upt_conf(self, panel, vals):
+        vals = map(lambda x: str(x), vals)
+        vals = "', '".join(vals)
+        vals = "('" + vals + "')"
+        condition = {
+            'table_name': 'tb_upt_conf',
+            'cols': "(`client_id`, `platform`, `hostname`, `channel`, `update_id`, `load_date`, `is_valid`)",
+            'vals': vals,
+        }
+        ret = self.insert(panel, condition)
+        return ret
+
+    @classmethod
+    def insert_tb_upt_info(self, panel, vals):
+        vals = map(lambda x: str(x), vals)
+        vals = "', '".join(vals)
+        vals = "('" + vals + "')"
+        condition = {
+            'table_name': 'tb_upt_info',
+            'cols': "(`upt_ver`, `upt_typ`, `file_name`, `addr`, `size`, `checksum`, `upt_date`, `load_date`)",
             'vals': vals,
         }
         ret = self.insert(panel, condition)
