@@ -87,7 +87,7 @@ def insert_client_id(panel, version):
     return client_id
 
 
-def insert_upt(u, server, client_id, file_name, addr_path, app_url=None):
+def insert_upt(u, client_id, file_name, addr_path, app_url=None):
     TYP = u.platform
     v = u.version.split('.')
     if v[3] == '0':
@@ -108,7 +108,7 @@ def insert_upt(u, server, client_id, file_name, addr_path, app_url=None):
     return update_id
 
 
-def clean_up_tb(u, server):
+def clean_up_tb(u):
     client_id = get_client_id(u.panel, u.version)
     if client_id == 0:
         client_id = insert_client_id(u.panel, u.version)
@@ -124,13 +124,13 @@ def clean_up_tb(u, server):
     return client_id
 
 
-def _update_bbc_list(u, server, local_path, addr_path):
-    client_id = clean_up_tb(u, server)
+def _update_bbc_list(u, local_path, addr_path):
+    client_id = clean_up_tb(u)
     file_list = os.listdir(local_path)
     file_list = filter(lambda x: x.find('.zip') > 0, file_list)
     update_list = []
     for f in file_list:
-        update_id = insert_upt(u, server, client_id, f, addr_path)
+        update_id = insert_upt(u, client_id, f, addr_path)
         update_list.append({
             'client_id': client_id,
             'hostname': u.hostname,
@@ -177,18 +177,20 @@ def _upload_patch(uploadworkorder_id, server_id, addr_path):
         return
     remote_path = s.home + addr_path
     if scp_patch(u, s, local_path, remote_path):
-        update_list = _update_bbc_list(u, server, local_path, addr_path)
+        update_list = _update_bbc_list(u, local_path, addr_path)
         u.result = 'Successful'
         u.save()
         print 'UPDATE_LIST :', update_list
 
 
 @task
-def _upload_app(uploadworkorder_id, server_id, app_url):
+def _upload_app(uploadworkorder_id, app_url):
     u = UpLoadWorkOrder.objects.get(pk=uploadworkorder_id)
-    s = Server.objects.get(pk=server_id)
-    client_id = clean_up_tb(u, s)
-    udpate_id = insert_upt(u, s, client_id, None, None, app_url)
+    client_id = clean_up_tb(u)
+    udpate_id = insert_upt(u, client_id, None, None, app_url)
+    u.progress = 100
+    u.result = 'Successful'
+    u.save()
 
 
 def upload_version(
@@ -218,6 +220,6 @@ def upload_version(
         version_path,
         u.platform)
     if version.is_app():
-        _upload_app.delay(u.id, server.id, app_url)
+        _upload_app.delay(u.id, app_url)
     else:
         _upload_patch.delay(u.id, server.id, addr_path)
