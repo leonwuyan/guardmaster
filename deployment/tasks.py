@@ -1,5 +1,5 @@
 from __future__ import absolute_import
-from deployment.models import UpLoadWorkOrder, HostName
+from deployment.models import UpLoadWorkOrder, HostName, UpLoadWorkOrderLock
 from django.shortcuts import render, get_object_or_404
 from guardmaster import common as Common
 from deployment.version import Version
@@ -17,6 +17,11 @@ local_path_Mac = '/Volumes/91ACT_CONTROL/clientupdate/'
 local_path_CentOS = '/mnt/smbcontrol/clientupdate/'
 SH_PATH = local_path_CentOS
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+WORKING = 0
+FAILED = 1
+SUCCESSFUL = 2
+LOCKING = 1
+UNLOCK = 0
 
 
 def print_output(output):
@@ -47,6 +52,64 @@ def _do_sh(*cmds):
     for cmd in cmds:
         _sh(cmd[0], cmd[1:])
     print '---------- CMDS END ----------'
+
+
+def update_upload_work_order(u, progress, result, status):
+    u.progress = progress
+    u.result = result
+    u.status = status
+    u.stop_date = timezone.now()
+    u.save()
+
+
+def is_upload_work_order_locking(panel, hostname, platform, channel):
+    try:
+        ul = UpLoadWorkOrderLock.objects.filter(
+            panel=panel, hostname=hostname, platform=platform, channel=channel)
+        if ul:
+            if len(ul) > 1:
+                logger = logging.getLogger(__name__)
+                error = '[Panel_ID:{3}]{0}/{1}/{2} Has More Than One Lock'.format(
+                    hostname, platform, channel, panel.id)
+                logger.error(error)
+                return True
+            ul = ul[0]
+            if ul.status == LOCKING:
+                return True
+        else:
+            ul = UpLoadWorkOrderLock(
+                panel=panel,
+                hostname=hostname,
+                platform=platform,
+                channel=channel,
+                status=UNLOCK)
+            ul.save()
+    except Exception as e:
+        print 'Exception :', e
+        return True
+    return False
+
+
+def update_upload_work_order_lock(panel, hostname, platform, channel, status):
+    try:
+        ul = UpLoadWorkOrderLock.objects.get(
+            panel=panel, hostname=hostname, platform=platform, channel=channel)
+        if ul:
+            if ul.status == status:
+                return False
+            else:
+                ul.status = status
+                ul.save()
+                print '[Panel_ID:{3}]{0}/{1}/{2} Status:{4}'.format(
+                    hostname, platform, channel, panel.id, status)
+                return True
+    except Exception as e:
+        logger = logging.getLogger(__name__)
+        error = '[Panel_ID:{3}]{0}/{1}/{2} Has More Than One Lock'.format(
+            hostname, platform, channel, panel.id)
+        logger.error(error)
+        return False
+    return False
 
 
 def _scp_single_zip(ip, local_path, remote_path, file_name):
@@ -146,8 +209,7 @@ def scp_patch(u, server, local_path, remote_path):
     file_list = filter(lambda x: x.find('.zip') > 0, file_list)
     progress_total = len(file_list)
     if progress_total == 0:
-        u.result = 'Not Any Files'
-        u.save()
+        update_upload_work_order(u, u.progress, 'Not Any Files', FAILED)
         return False
 
     mkdir_cmd = "ssh root@{0} 'mkdir -p {1}'".format(server.ip, remote_path)
@@ -157,11 +219,10 @@ def scp_patch(u, server, local_path, remote_path):
     for f in file_list:
         if _scp_single_zip(server.ip, local_path, remote_path, f):
             progress += 1
-            u.progress = progress * 100 / progress_total
-            u.save()
+            tmp = progress * 100 / progress_total
+            update_upload_work_order(u, tmp, u.result, u.status)
         else:
-            u.result = 'Error In Scp'
-            u.save()
+            update_upload_work_order(u, u.progress, 'Error In Scp', FAILED)
             return False
     return True
 
@@ -172,32 +233,42 @@ def _upload_patch(uploadworkorder_id, server_id, addr_path):
     s = Server.objects.get(pk=server_id)
     local_path = SH_PATH + addr_path
     if not os.path.exists(local_path):
-        u.result = 'Dir Do Not Exists'
-        u.save()
+        update_upload_work_order(u, u.progress, 'Dir Do Not Exists', FAILED)
         return
     remote_path = s.home + addr_path
-    if scp_patch(u, s, local_path, remote_path):
-        update_list = _update_bbc_list(u, local_path, addr_path)
-        u.result = 'Successful'
-        u.save()
-        print 'UPDATE_LIST :', update_list
+    if update_upload_work_order_lock(u.panel, u.hostname, u.platform, u.channel, LOCKING):
+        try:
+            if scp_patch(u, s, local_path, remote_path):
+                update_list = _update_bbc_list(u, local_path, addr_path)
+                update_upload_work_order(u, u.progress, 'Successful', SUCCESSFUL)
+                print 'UPDATE_LIST :', update_list
+                u.update_list = str(update_list)
+                u.save()
+        except Exception as e:
+            print 'Exception :', e
+        finally:
+            update_upload_work_order_lock(
+                u.panel, u.hostname, u.platform, u.channel, UNLOCK)
 
 
 @task
 def _upload_app(uploadworkorder_id, app_url):
     u = UpLoadWorkOrder.objects.get(pk=uploadworkorder_id)
-    client_id = clean_up_tb(u)
-    udpate_id = insert_upt(u, client_id, None, None, app_url)
-    u.progress = 100
-    u.result = 'Successful'
-    u.save()
+    if update_upload_work_order_lock(u.panel, u.hostname, u.platform, u.channel, LOCKING):
+        try:
+            client_id = clean_up_tb(u)
+            udpate_id = insert_upt(u, client_id, None, None, app_url)
+            update_upload_work_order(u, 100, 'Successful', SUCCESSFUL)
+        except Exception as e:
+            print 'Exception :', e
+        finally:
+            update_upload_work_order_lock(
+                u.panel, u.hostname, u.platform, u.channel, UNLOCK)
 
 
 def upload_version(
         panel, server, hostname, platform,
         channel, version, user, app_url):
-    if True:
-        pass
     u = UpLoadWorkOrder(
         server=server.label,
         panel=panel,
@@ -208,8 +279,12 @@ def upload_version(
         user=str(user),
         progress=0,
         result='Working',
+        status=WORKING,
         start_date=timezone.now(),
         stop_date=timezone.now())
+    if is_upload_work_order_locking(panel, hostname, platform, channel):
+        update_upload_work_order(u, 0, 'Order Is Locking', FAILED)
+        return
     u.save()
     app_path = '.'.join(u.version.split('.')[:3])
     version_path = u.version.split('.')[3:][0]

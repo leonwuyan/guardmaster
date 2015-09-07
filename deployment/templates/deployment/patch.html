@@ -115,7 +115,7 @@
     <div class="panel panel-default" style="margin-top: 50px">
       <div class="panel-heading">{{t_t_r_o_u_w_o}}&emsp;<span class="label label-default">{{ t_l_20_u_w_o_b_e_s }}</span></div>
       <div class="table-responsive">
-        <table class="table table-bordered table-striped table-condensed">
+        <table class="table table-bordered table-condensed">
             <thead>
               <tr>
               <th>{{ t_version }}</th>
@@ -129,7 +129,15 @@
             </thead>
           <tbody>
           {% for u in uploadworkorders %}
-            <tr>
+          {% if u.status == 0 %}
+            <tr class="active">
+          {% endif %}
+          {% if u.status == 1 %}
+            <tr class="danger">
+          {% endif %}
+          {% if u.status == 2 %}
+            <tr class="success">
+          {% endif %}
               <td>{{u.version}}</td>
               <td>{{u.hostname}}/{{u.platform}}/{{u.channel}}</td>
               <td>{{u.progress}}%</td>

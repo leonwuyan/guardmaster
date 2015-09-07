@@ -40,9 +40,22 @@ class UpLoadWorkOrder(models.Model):
     user = models.CharField(max_length=45)
     result = models.CharField(max_length=255)
     panel = models.ForeignKey(Panel)
+    status = models.IntegerField()
+    update_list = models.TextField(blank=True, null=True)
 
     def __unicode__(self):
         return self.version
 
     class Meta:
         ordering = ['-id']
+
+
+class UpLoadWorkOrderLock(models.Model):
+    hostname = models.CharField(max_length=45)
+    platform = models.CharField(max_length=45)
+    channel = models.IntegerField()
+    status = models.IntegerField()
+    panel = models.ForeignKey(Panel)
+
+    def __unicode__(self):
+        return '{0}/{1}/{2}'.format(self.hostname, self.platform, self.channel)
