@@ -184,6 +184,18 @@ def list_find(x, stringlsit):
         return False
 
 
+def result_label(result):
+    r = {
+        'Order Is Locking': _('Order Is Locking'),
+        'Successful': _('Successful'),
+        'Dir Do Not Exists': _('Dir Do Not Exists'),
+        'Not Any Files': _('Not Any Files'),
+        'Error In Scp': _('Error In Scp'),
+        'Working': _('Working'),
+    }
+    return r[result]
+
+
 register.filter(ts2date)
 register.filter(ts2time)
 register.filter(second2time)
@@ -201,3 +213,4 @@ register.filter(rank_val)
 register.filter(ts2bantime)
 register.filter(datetime2string)
 register.filter(list_find)
+register.filter(result_label)

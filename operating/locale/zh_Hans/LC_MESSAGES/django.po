@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2015-08-03 16:30+0800\n"
-"PO-Revision-Date: 2015-08-03 16:32+0800\n"
+"POT-Creation-Date: 2015-09-07 21:56+0800\n"
+"PO-Revision-Date: 2015-09-07 21:59+0800\n"
 "Last-Translator: Raynor <raynor41@gmail.com>\n"
 "Language-Team: \n"
 "Language: zh_CN\n"
@@ -873,3 +873,27 @@ msgstr "线上对战积分"
 #: templatetags/custom.py:168
 msgid "Fight Online Win Times"
 msgstr "线上对战赢场"
+
+#: templatetags/custom.py:189
+msgid "Order Is Locking"
+msgstr "请求已上锁"
+
+#: templatetags/custom.py:190
+msgid "Successful"
+msgstr "成功"
+
+#: templatetags/custom.py:191
+msgid "Dir Do Not Exists"
+msgstr "文件目录不存在"
+
+#: templatetags/custom.py:192
+msgid "Not Any Files"
+msgstr "没有文件"
+
+#: templatetags/custom.py:193
+msgid "Error In Scp"
+msgstr "上传错误"
+
+#: templatetags/custom.py:194
+msgid "Working"
+msgstr "工作中"

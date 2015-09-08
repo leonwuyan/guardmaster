@@ -167,7 +167,7 @@ def insert_upt(u, client_id, file_name, addr_path, app_url=None):
         timezone.now(), timezone.now()])
     ret = Tabel.insert_tb_upt_conf(u.panel, [
         client_id, u.platform, u.hostname, u.channel,
-        update_id, timezone.now(), '0'])
+        update_id, timezone.now(), '1'])
     return update_id
 
 
@@ -192,13 +192,15 @@ def _update_bbc_list(u, local_path, addr_path):
     file_list = os.listdir(local_path)
     file_list = filter(lambda x: x.find('.zip') > 0, file_list)
     update_list = []
+    progress_total = len(file_list)
+    progress = 0
     for f in file_list:
         update_id = insert_upt(u, client_id, f, addr_path)
+        progress += 1
+        tmp = (progress * 20 / progress_total) + 80
+        update_upload_work_order(u, tmp, u.result, u.status)
         update_list.append({
             'client_id': client_id,
-            'hostname': u.hostname,
-            'platform': u.platform,
-            'channel': u.channel,
             'update_id': update_id,
             })
     return update_list
@@ -219,7 +221,7 @@ def scp_patch(u, server, local_path, remote_path):
     for f in file_list:
         if _scp_single_zip(server.ip, local_path, remote_path, f):
             progress += 1
-            tmp = progress * 100 / progress_total
+            tmp = progress * 80 / progress_total
             update_upload_work_order(u, tmp, u.result, u.status)
         else:
             update_upload_work_order(u, u.progress, 'Error In Scp', FAILED)
@@ -240,10 +242,8 @@ def _upload_patch(uploadworkorder_id, server_id, addr_path):
         try:
             if scp_patch(u, s, local_path, remote_path):
                 update_list = _update_bbc_list(u, local_path, addr_path)
-                update_upload_work_order(u, u.progress, 'Successful', SUCCESSFUL)
-                print 'UPDATE_LIST :', update_list
                 u.update_list = str(update_list)
-                u.save()
+                update_upload_work_order(u, u.progress, 'Successful', SUCCESSFUL)
         except Exception as e:
             print 'Exception :', e
         finally:
@@ -298,3 +298,63 @@ def upload_version(
         _upload_app.delay(u.id, app_url)
     else:
         _upload_patch.delay(u.id, server.id, addr_path)
+
+
+def _inherit(
+        panel, server, hostname, platform,
+        channel, version, user, update_id_con):
+    u = UpLoadWorkOrder(
+        server=server.label,
+        panel=panel,
+        hostname=hostname.label,
+        platform=platform,
+        channel=channel,
+        version=str(version),
+        user=str(user),
+        progress=0,
+        result='Working',
+        status=WORKING,
+        start_date=timezone.now(),
+        stop_date=timezone.now())
+    u.save()
+    client_id = clean_up_tb(u)
+    update_list = []
+    progress = 0
+    progress_total = len(update_id_con)
+    for update_id in update_id_con:
+        ret = Tabel.insert_tb_upt_conf(u.panel, [
+            client_id, u.platform, u.hostname, u.channel,
+            update_id, timezone.now(), '1'])
+        progress += 1
+        tmp = progress * 100 / progress_total
+        update_upload_work_order(u, tmp, u.result, u.status)
+        update_list.append({
+            'client_id': client_id,
+            'update_id': update_id,
+            })
+    u.update_list = str(update_list)
+    update_upload_work_order(u, 100, 'Successful', SUCCESSFUL)
+    pass
+
+
+@task
+def inherit_version(
+        panel, server, hostname, platform,
+        channel, version, user, update_id_list):
+    client_id_tmp = map(lambda x: x[0], update_id_list)
+    client_id_list = list(set(client_id_tmp))
+    client_id_list.sort()
+    if update_upload_work_order_lock(panel, hostname, platform, channel, LOCKING):
+        try:
+            for client_id in client_id_list:
+                update_id_con = filter(lambda x: x[0] == client_id, update_id_list)
+                version[3] = str(update_id_con[0][1])
+                update_id_con = map(lambda x: x[2], update_id_con)
+                _inherit(
+                    panel, server, hostname, platform,
+                    channel, version, user, update_id_con)
+        except Exception as e:
+            print 'Exception :', e
+        finally:
+            update_upload_work_order_lock(
+                panel, hostname, platform, channel, UNLOCK)

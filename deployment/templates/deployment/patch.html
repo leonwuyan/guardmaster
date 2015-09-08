@@ -10,6 +10,7 @@
 {% trans "Please Check The Input Is Correct" as t_p_c_t_i_i_c %}
 {% trans "Push" as t_push %}
 {% trans "The Response Of Upload Work Order" as t_t_r_o_u_w_o %}
+{% trans "The Following Inherited The Above" as t_t_f_i_t_a %}
 {% trans "Server" as t_server %}
 {% trans "GuardMaster" as t_guardmaster %}
 {% trans "Pub Date" as t_pub_date %}
@@ -52,21 +53,21 @@
         <label>{{t_h_p_c}}</label>
         <div class="row">
           <div class="col-md-4">
-            <select class="form-control" name="hostname" id="hostname" onchange="javascript:select_change();">
+            <select class="form-control" name="hostname" id="hostname" onchange="javascript:select_change('');">
               {% for hostname in hostnames %}
               <option value="{{hostname.id}}">{{hostname.label}}</option>
               {% endfor %}
             </select>
           </div>
           <div class="col-md-4">
-            <select class="form-control" name="platform" id="platform" onchange="javascript:select_change();">
+            <select class="form-control" name="platform" id="platform" onchange="javascript:select_change('');">
               {% for platform in platforms %}
               <option value="{{platform.label}}">{{platform.label}}</option>
               {% endfor %}
             </select>
           </div>
           <div class="col-md-4">
-            <select class="form-control" name="channel" id="channel" onchange="javascript:select_change();">
+            <select class="form-control" name="channel" id="channel" onchange="javascript:select_change('');">
               {% for channel in channels %}
               <option value="{{channel.label}}">{{channel.label}}</option>
               {% endfor %}
@@ -109,6 +110,67 @@
         <input type="text" class="form-control" name="app_url">
       </div>
       {% endif %}
+      {% if url == 'inherit' %}
+      <div class="form-group">
+        <label for="app_url"><b>{{t_t_f_i_t_a}}</b></label>
+        <input type="hidden" class="form-control" name="app_url" value="inherit">
+      </div>
+      <div class="form-group" style="margin-bottom: 5px">
+        <label>{{t_h_p_c}}</label>
+        <div class="row">
+          <div class="col-md-4">
+            <select class="form-control" name="inherit_hostname" id="inherit_hostname" onchange="javascript:select_change('inherit_');">
+              {% for hostname in hostnames %}
+              <option value="{{hostname.id}}">{{hostname.label}}</option>
+              {% endfor %}
+            </select>
+          </div>
+          <div class="col-md-4">
+            <select class="form-control" name="inherit_platform" id="inherit_platform" onchange="javascript:select_change('inherit_');">
+              {% for platform in platforms %}
+              <option value="{{platform.label}}">{{platform.label}}</option>
+              {% endfor %}
+            </select>
+          </div>
+          <div class="col-md-4">
+            <select class="form-control" name="inherit_channel" id="inherit_channel" onchange="javascript:select_change('inherit_');">
+              {% for channel in channels %}
+              <option value="{{channel.label}}">{{channel.label}}</option>
+              {% endfor %}
+            </select>
+          </div>
+        </div>
+      </div>
+      <div class="form-group">
+        <label for="uid">{{t_version}}</label>
+        <div class="row">
+          <div class="col-md-3">
+            <div class="input-group">
+              <span class="input-group-addon" id="a-addon">a</span>
+              <input type="text" class="form-control" value="0" aria-describedby="a-addon" name="inherit_a" id="inherit_a" readonly="readonly">
+            </div>
+          </div>
+          <div class="col-md-3">
+            <div class="input-group">
+              <span class="input-group-addon" id="b-addon">b</span>
+              <input type="text" class="form-control" value="0" aria-describedby="b-addon" name="inherit_b" id="inherit_b" readonly="readonly">
+            </div>
+          </div>
+          <div class="col-md-3">
+            <div class="input-group">
+              <span class="input-group-addon" id="c-addon">c</span>
+              <input type="text" class="form-control" value="0" aria-describedby="c-addon" name="inherit_c" id="inherit_c" readonly="readonly">
+            </div>
+          </div>
+          <div class="col-md-3">
+            <div class="input-group">
+              <span class="input-group-addon" id="d-addon">d</span>
+              <input type="text" class="form-control" value="0" aria-describedby="d-addon" name="inherit_d" id="inherit_d" readonly="readonly">
+            </div>
+          </div>
+        </div>
+      </div>
+      {% endif %}
       <button type="submit" class="btn btn-primary btn-sm" onclick="return deployment.patchUploadConfirm()">{{t_push}}</button>
     </form>
 
@@ -142,7 +204,7 @@
               <td>{{u.hostname}}/{{u.platform}}/{{u.channel}}</td>
               <td>{{u.progress}}%</td>
               <td>{{u.user}}</td>
-              <td>{{u.result}}</td>
+              <td>{{u.result|result_label}}</td>
               <td>{{u.start_date}}</td>
               <td>{{u.stop_date}}</td>
             </tr>
@@ -155,13 +217,16 @@
   <center style='color: #999; padding-top: 20px; font-family: "arial","NSimSun","SimSun","STSong","AR PL SungtiL GB","TW\-Sung","WenQuanYi Bitmap Song"; font-size: 14px; font-weight: bold;'>{{excuse}}</center>
 </div>
 <script type="text/javascript">
-  function select_change() {
-    hostname = $('#hostname').val();
-    platform = $('#platform').val();
-    channel = $('#channel').val();
-    deployment.last_version(hostname, platform, channel);
+  function select_change(inherit) {
+    itmp = 1
+    url = window.location.pathname;
+    if (url.lastIndexOf("inherit") > 0) itmp = 0
+    hostname = $('#'+ inherit +'hostname').val();
+    platform = $('#'+ inherit +'platform').val();
+    channel = $('#'+ inherit +'channel').val();
+    deployment.last_version(hostname, platform, channel, inherit, itmp);
   }
-  function select_app() {
+  function select_init() {
     url = window.location.pathname;
     if (url.lastIndexOf("app") > 0) {
       $('#a').removeAttr('readonly');
@@ -169,9 +234,10 @@
       $('#c').removeAttr('readonly');
       $('#d').attr('readonly', 'readonly');
       $('#d').val('0')
-      return true;
     }
-    return false;
+    if (url.lastIndexOf("inherit") > 0) {
+      $('#d').attr('readonly', 'readonly');
+    }
   }
   $(document).ready(function() {
     management.numberOnly("input[name='a']");
@@ -179,7 +245,7 @@
     management.numberOnly("input[name='c']");
     management.numberOnly("input[name='d']");
     //select_change()
-    select_app()
+    select_init()
   });
 </script>
 {% endblock %}

@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2015-08-03 16:30+0800\n"
-"PO-Revision-Date: 2015-08-03 16:31+0800\n"
+"POT-Creation-Date: 2015-09-08 20:31+0800\n"
+"PO-Revision-Date: 2015-09-08 20:32+0800\n"
 "Last-Translator: Raynor <raynor41@gmail.com>\n"
 "Language-Team: \n"
 "Language: zh_TW\n"
@@ -18,858 +18,677 @@ msgstr ""
 "Plural-Forms: nplurals=1; plural=0;\n"
 "X-Generator: Poedit 1.7.6\n"
 
-#: models.py:11
-msgid "Dir Server"
-msgstr "Dir 伺服器"
-
-#: models.py:12
-msgid "CDN Server"
-msgstr "CDN 伺服器"
-
-#: models.py:13
-msgid "Normal Server"
-msgstr "普通伺服器"
-
-#: models.py:14
-msgid "Update Server"
-msgstr "更新伺服器"
-
-#: models.py:20
-msgid "GM Port, Usually Is 9135"
-msgstr "GM指令端口,通常為9135"
-
-#: models.py:21
-msgid "SSH Port, Usually Is 22"
-msgstr "SSH指令端口,通常為22"
-
-#: templates/operating/base_info.html:2
-msgid "Player Base Info"
-msgstr "玩家基本信息"
-
-#: templates/operating/base_info.html:3
-msgid "Create Time"
-msgstr "創建時間"
-
-#: templates/operating/base_info.html:4
-msgid "Online"
-msgstr "在線情況"
-
-#: templates/operating/base_info.html:5
-msgid "Last Login Time"
-msgstr "上次登錄時間"
-
-#: templates/operating/base_info.html:6
-msgid "Last Logout Time"
-msgstr "上次註銷時間"
-
-#: templates/operating/base_info.html:7
-msgid "Total Online Time"
-msgstr "總在線時間"
-
-#: templates/operating/base_info.html:8 templates/operating/mail.html:12
-msgid "Gold"
-msgstr "金幣"
-
-#: templates/operating/base_info.html:9
-msgid "Times Of Buy Gold"
-msgstr "購買金幣次數"
-
-#: templates/operating/base_info.html:10 templates/operating/mail.html:11
-msgid "Crystal"
-msgstr "魔素"
-
-#: templates/operating/base_info.html:11
-msgid "Times Of Buy Crystal"
-msgstr "購買魔素次數"
-
-#: templates/operating/base_info.html:12 templates/operating/mail.html:13
-msgid "Money"
-msgstr "寶石"
-
-#: templates/operating/base_info.html:13 templates/operating/mail.html:15
-msgid "Power"
-msgstr "體力"
-
-#: templates/operating/base_info.html:14
-msgid "Times Of Buy Power"
-msgstr "購買體力次數"
-
-#: templates/operating/base_info.html:15 templates/operating/mail.html:14
-msgid "Skill Point"
-msgstr "技能點數"
-
-#: templates/operating/base_info.html:16
-msgid "Times Of Buy Skill Point"
-msgstr "購買技能點數次數"
-
-#: templates/operating/base_info.html:17
-msgid "Endless' Floor"
-msgstr "無盡之塔層數"
-
-#: templates/operating/base_info.html:18
-msgid "Endless' Score"
-msgstr "無盡之塔積分"
-
-#: templates/operating/base_info.html:19 templates/operating/mail.html:16
-msgid "Score Of Rank Battle"
-msgstr "排行榜積分"
-
-#: templates/operating/base_info.html:20
-msgid "Times Of Growup"
-msgstr "升階次數"
-
-#: templates/operating/base_info.html:21
-msgid "Account Ban Time"
-msgstr "賬戶鎖定到期時間"
-
-#: templates/operating/base_info.html:22
-msgid "Chat Ban Time"
-msgstr "玩家禁言到期時間"
-
-#: templates/operating/base_info.html:23
-msgid "Total Recharge (VIP Level)"
-msgstr "總充值數（VIP等級）"
-
-#: templates/operating/base_info.html:24
-msgid "Add 100k"
-msgstr "增加 100k"
-
-#: templates/operating/base_info.html:25
-msgid "Add 10k"
-msgstr "增加 10k"
-
-#: templates/operating/base_info.html:26 templates/operating/mail.html:20
-#: templates/operating/notify.html:21
-msgid "Add"
-msgstr "添加"
-
-#: templates/operating/base_info.html:27
-msgid "Change"
-msgstr "變更"
-
-#: templates/operating/base_info.html:28
-msgid "Kick Player"
-msgstr "踢玩家下線"
-
-#: templates/operating/base_info.html:29
-msgid "Account Ban 7 Days"
-msgstr "鎖定賬戶7天"
-
-#: templates/operating/base_info.html:30
-msgid "Account Ban 30 Days"
-msgstr "鎖定賬戶30天"
-
-#: templates/operating/base_info.html:31
-msgid "Chat Ban 7 Days"
-msgstr "禁言玩家7天"
-
-#: templates/operating/base_info.html:32
-msgid "Chat Ban 30 Days"
-msgstr "禁言玩家30天"
-
-#: templates/operating/base_info.html:33
-msgid "Un Ban"
-msgstr "解除"
-
-#: templates/operating/base_info.html:34
-msgid "Ohter Contorl"
-msgstr "其他操作"
-
-#: templates/operating/base_info.html:35
-msgid "Add 100k Exp. Items"
-msgstr "增加 100k 經驗神水"
-
-#: templates/operating/base_info.html:36
-msgid "Unlock 50 Dungeon"
-msgstr "解鎖到50關"
-
-#: templates/operating/base_info.html:37
-msgid "Unlock 100 Dungeon"
-msgstr "解鎖到100關"
-
-#: templates/operating/base_info.html:38
-msgid "Unlock 150 Dungeon"
-msgstr "解鎖到150關"
-
-#: templates/operating/building_info.html:2
-msgid "Building Info"
-msgstr "建築信息"
-
-#: templates/operating/building_info.html:3
-msgid "Building"
-msgstr "建築"
-
-#: templates/operating/building_info.html:4
-msgid "Pvp Gold Gain"
-msgstr "累計獲得金幣"
-
-#: templates/operating/building_info.html:5
-msgid "Pvp Exp. Item Gain"
-msgstr "累計獲得經驗道具"
-
-#: templates/operating/building_info.html:6
-msgid "Pvp Money Gain"
-msgstr "累計獲得寶石"
-
-#: templates/operating/building_info.html:7
-msgid "Pvp Crystal Gain"
-msgstr "累計獲得魔素"
-
-#: templates/operating/building_info.html:8
-msgid "Resources Type"
-msgstr "資源類型"
-
-#: templates/operating/building_info.html:9
-msgid "Resources Type Name"
-msgstr "資源類型名稱"
-
-#: templates/operating/building_info.html:10
-msgid "Last Born Time"
-msgstr "最後一次產出時間"
-
-#: templates/operating/building_info.html:11
-msgid "Born Speed"
-msgstr "產出速度"
-
-#: templates/operating/building_info.html:12
-msgid "Resources Limit"
-msgstr "資源上限"
-
-#: templates/operating/building_info.html:13
-msgid "Current Resources Born"
-msgstr "當前產出資源"
-
-#: templates/operating/building_info.html:14
-msgid "Defend Info"
-msgstr "防守信息"
-
-#: templates/operating/building_info.html:15
-#: templates/operating/hero_info.html:4 templates/operating/pve_info.html:13
-msgid "Hero Name"
-msgstr "英雄名稱"
-
-#: templates/operating/building_info.html:16
-#: templates/operating/pve_info.html:15
-msgid "Hero Level"
-msgstr "英雄等級"
-
-#: templates/operating/building_info.html:17
-msgid "Monster ID"
-msgstr "怪物ID"
-
-#: templates/operating/building_info.html:18
-msgid "Monster Level"
-msgstr "怪物等級"
-
-#: templates/operating/building_info.html:19
-msgid "Trap ID"
-msgstr "陷阱ID"
-
-#: templates/operating/building_info.html:20
-msgid "Trap Level"
-msgstr "陷阱等級"
-
-#: templates/operating/building_info.html:21
-msgid "Building ID"
-msgstr "建築ID"
-
-#: templates/operating/building_info.html:22
-msgid "Building Name"
-msgstr "建築名稱"
-
-#: templates/operating/building_info.html:23
-msgid "Building Level"
-msgstr "建築等級"
-
-#: templates/operating/building_info.html:24
-msgid "Level Begin Time"
-msgstr "升級開始時間"
-
-#: templates/operating/building_info.html:25
-msgid "Level Total Time"
-msgstr "升級總耗時"
-
-#: templates/operating/building_info.html:26
-msgid "Hero Tower"
-msgstr "英雄塔"
-
-#: templates/operating/building_info.html:27
-msgid "Resources Store"
-msgstr "資源倉庫"
-
-#: templates/operating/contact.html:4
-msgid "Issue Info"
-msgstr "問題信息"
-
-#: templates/operating/contact.html:5
-msgid "Issue ID"
-msgstr "問題ID"
-
-#: templates/operating/contact.html:6
-msgid "Uid"
-msgstr "玩家ID"
-
-#: templates/operating/contact.html:7
-msgid "Uin"
-msgstr "用戶ID"
-
-#: templates/operating/contact.html:8
-msgid "Name"
-msgstr "名稱"
-
-#: templates/operating/contact.html:9 templates/operating/notify.html:15
-msgid "Hostname"
-msgstr "伺服器域名"
-
-#: templates/operating/contact.html:10
-msgid "Channel ID"
-msgstr "渠道"
-
-#: templates/operating/contact.html:11 templates/operating/notify.html:17
-msgid "Platform"
-msgstr "平台"
-
-#: templates/operating/contact.html:12
+#: templates/deployment/patch.html:4
 msgid "Version"
 msgstr "客戶端版本"
 
-#: templates/operating/contact.html:13
-msgid "Issue Type"
-msgstr "問題類型"
+#: templates/deployment/patch.html:5
+msgid "Url"
+msgstr "網址"
 
-#: templates/operating/contact.html:14
-msgid "Issue Time"
-msgstr "留言時間"
+#: templates/deployment/patch.html:6
+msgid "Hostname/Platform/Channel"
+msgstr "伺服器/平台/渠道"
 
-#: templates/operating/contact.html:15
-msgid "Issue Content"
-msgstr "問題內容"
-
-#: templates/operating/contact.html:16
-msgid "History Reply"
-msgstr "歷史回覆列表"
-
-#: templates/operating/contact.html:17
-msgid "Reply Mail"
-msgstr "郵件回覆"
-
-#: templates/operating/contact.html:18 templates/operating/mail.html:4
-msgid "Mail Title"
-msgstr "郵件題目"
-
-#: templates/operating/contact.html:19 templates/operating/mail.html:5
-msgid "Mail Content"
-msgstr "郵件內容"
-
-#: templates/operating/contact.html:20 templates/operating/mail.html:6
-#: templates/operating/notify.html:4
-msgid "4 Words Limited"
-msgstr "最多可以4個文字"
-
-#: templates/operating/contact.html:21 templates/operating/mail.html:7
-msgid "120 Words Limited"
-msgstr "最多可以120個文字"
-
-#: templates/operating/contact.html:22
-msgid "Reply"
-msgstr "回覆"
-
-#: templates/operating/contact.html:23
-msgid "Return List"
-msgstr "返回問題列表"
-
-#: templates/operating/hero_info.html:2
-msgid "Hero Info"
-msgstr "英雄信息"
-
-#: templates/operating/hero_info.html:3 templates/operating/pve_info.html:12
-msgid "Hero ID"
-msgstr "英雄ID"
-
-#: templates/operating/hero_info.html:5
-msgid "Exp."
-msgstr "經驗"
-
-#: templates/operating/hero_info.html:6
-msgid "Emblem"
-msgstr "紋章"
-
-#: templates/operating/hero_info.html:7
-msgid "ID"
-msgstr "ID"
-
-#: templates/operating/hero_info.html:8
-msgid "Skill"
-msgstr "技能"
-
-#: templates/operating/hero_info.html:9
-msgid "Equiped"
-msgstr "裝備的"
-
-#: templates/operating/hero_info.html:10
-msgid "Item Pos"
-msgstr "道具位置"
-
-#: templates/operating/hero_info.html:11
-#: templates/operating/package_info.html:6
-msgid "Level"
-msgstr "等級"
-
-#: templates/operating/hero_info.html:12
-#: templates/operating/package_info.html:8
-msgid "Grow Up"
-msgstr "升階"
-
-#: templates/operating/hero_info.html:13
-#: templates/operating/package_info.html:9
-msgid "Current Exp."
-msgstr "當前經驗"
-
-#: templates/operating/hero_info.html:14
-#: templates/operating/package_info.html:17
-msgid "Base ID"
-msgstr "基本ID"
-
-#: templates/operating/hero_info.html:15
-#: templates/operating/package_info.html:12
-msgid "Equip Name"
-msgstr "裝備名稱"
-
-#: templates/operating/hero_info.html:16
-#: templates/operating/package_info.html:13
-msgid "Wake Up"
-msgstr "覺醒"
-
-#: templates/operating/mail.html:8
-msgid "1000 Uids Limited"
-msgstr "最多可以1000個UID"
-
-#: templates/operating/mail.html:9
-msgid "Split By ,"
-msgstr "以 , 分割"
-
-#: templates/operating/mail.html:10
-msgid "Accessory"
-msgstr "附件"
-
-#: templates/operating/mail.html:17 templates/operating/package_info.html:4
-msgid "Item"
-msgstr "道具"
-
-#: templates/operating/mail.html:18
-msgid "Equip"
-msgstr "裝備"
-
-#: templates/operating/mail.html:19 templates/operating/package_info.html:7
-msgid "Count"
-msgstr "數量"
-
-#: templates/operating/mail.html:21
-msgid "None"
-msgstr "無"
-
-#: templates/operating/mail.html:22
-msgid "Limited 6 Kind Of Accessory"
-msgstr "最多可以添加6種附件"
-
-#: templates/operating/mail.html:23
-msgid "Accessory Include Item And Equip"
-msgstr "附件包含物品和裝備"
-
-#: templates/operating/mail.html:24 templates/operating/notify.html:22
+#: templates/deployment/patch.html:7
 msgid "Success"
 msgstr "成功"
 
-#: templates/operating/mail.html:25
-msgid "Please Check The Response Of Sending Mail"
-msgstr "請檢查發送郵件的回執狀態"
+#: templates/deployment/patch.html:8
+msgid "Please Check The Response Of Upload Work Order"
+msgstr "請檢查上傳工單的回執狀態"
 
-#: templates/operating/mail.html:26 templates/operating/notify.html:24
+#: templates/deployment/patch.html:9
 msgid "Fail"
 msgstr "失敗"
 
-#: templates/operating/mail.html:27 templates/operating/notify.html:25
+#: templates/deployment/patch.html:10
 msgid "Please Check The Input Is Correct"
 msgstr "請檢查輸入是否正確"
 
-#: templates/operating/mail.html:28
-msgid "Send"
-msgstr "發送"
+#: templates/deployment/patch.html:11
+msgid "Push"
+msgstr "上傳"
 
-#: templates/operating/mail.html:29
-msgid "The Response Of Sending Mail"
-msgstr "郵件回執狀態"
+#: templates/deployment/patch.html:12
+msgid "The Response Of Upload Work Order"
+msgstr "上傳工單的回執"
 
-#: templates/operating/mail.html:30
+#: templates/deployment/patch.html:13
+msgid "The Following Inherited The Above"
+msgstr "下面的版本信息繼承于上面的版本信息"
+
+#: templates/deployment/patch.html:14
 msgid "Server"
 msgstr "伺服器"
 
-#: templates/operating/mail.html:31
+#: templates/deployment/patch.html:15
 msgid "GuardMaster"
 msgstr "操作員"
 
-#: templates/operating/mail.html:32
+#: templates/deployment/patch.html:16
 msgid "Pub Date"
 msgstr "發送日期"
 
-#: templates/operating/mail.html:33
-msgid "Lastest 20 Mails By Every Server"
-msgstr "每個服務器顯示最後20條郵件"
+#: templates/deployment/patch.html:17
+msgid "Lastest 20 Upload Work Order By Every Server"
+msgstr "每個服務器顯示最後20條上傳工單"
 
-#: templates/operating/notify.html:5
-msgid "Notify Info"
-msgstr "公告信息"
+#: templates/deployment/patch.html:18
+msgid "Progress"
+msgstr "進度"
 
-#: templates/operating/notify.html:6
-msgid "Notify Title"
-msgstr "公告標題"
+#: templates/deployment/patch.html:19
+msgid "Result"
+msgstr "結果"
 
-#: templates/operating/notify.html:7
-msgid "Notify Content"
-msgstr "公告內容"
-
-#: templates/operating/notify.html:8
+#: templates/deployment/patch.html:20
 msgid "Start Date"
 msgstr "起始日期"
 
-#: templates/operating/notify.html:9
-msgid "End Date"
+#: templates/deployment/patch.html:21
+msgid "Stop Date"
 msgstr "結束日期"
 
-#: templates/operating/notify.html:10
-msgid "Is Display"
-msgstr "是否顯示"
-
-#: templates/operating/notify.html:11
-msgid "Picture Info"
-msgstr "圖片信息"
-
-#: templates/operating/notify.html:12
-msgid "Picture Link"
-msgstr "圖片鏈接"
-
-#: templates/operating/notify.html:13
-msgid "Picture Width"
-msgstr "圖片寬度"
-
-#: templates/operating/notify.html:14
-msgid "Picture Height"
-msgstr "圖片高度"
-
-#: templates/operating/notify.html:16
-msgid "Channel"
-msgstr "渠道"
-
-#: templates/operating/notify.html:18
-msgid "Zone"
-msgstr "區服"
-
-#: templates/operating/notify.html:19
-msgid "Seq ID"
-msgstr "順序號"
-
-#: templates/operating/notify.html:20
-msgid "Other Options"
-msgstr "其他設置"
-
-#: templates/operating/notify.html:23
-msgid "Please Check The Notify Info"
-msgstr "請檢查公告信息"
-
-#: templates/operating/notify.html:26
-msgid "The Will Be DIR Notify When The Zone Is All Zone"
-msgstr "檔區服選擇全部區服時講會是一個DIR公告"
-
-#: templates/operating/notify.html:27
-msgid "Add Or Edit Notify Without Synchronization"
-msgstr "添加或者修改公告不會同步到外網"
-
-#: templates/operating/notify.html:28
-msgid "Synchronize Notify"
-msgstr "同步公告"
-
-#: templates/operating/notify.html:29
-msgid "Delete"
-msgstr "刪除"
-
-#: templates/operating/notify.html:30
-msgid "Edit"
-msgstr "修改"
-
-#: templates/operating/notify.html:31
-msgid "Operate"
-msgstr "操作"
-
-#: templates/operating/notify.html:32
-msgid "Attention"
-msgstr "注意"
-
-#: templates/operating/notify.html:33
-msgid "Please Edit The Notify"
-msgstr "請修改公告"
-
-#: templates/operating/notify.html:34
-msgid "Back"
-msgstr "返回"
-
-#: templates/operating/package_info.html:2
-msgid "Package & Item"
-msgstr "揹包 ＆ 道具"
-
-#: templates/operating/package_info.html:3
-msgid "Package Info"
-msgstr "揹包"
-
-#: templates/operating/package_info.html:5
-msgid "Package Pos"
-msgstr "揹包位置"
-
-#: templates/operating/package_info.html:10
-msgid "Binded Hero"
-msgstr "綁定英雄"
-
-#: templates/operating/package_info.html:11
-msgid "Equip ID"
-msgstr "裝備ID"
-
-#: templates/operating/package_info.html:14
-msgid "Item Info"
-msgstr "道具信息"
-
-#: templates/operating/package_info.html:15
-#: templates/operating/pve_info.html:10
-msgid "Status"
-msgstr "狀態"
-
-#: templates/operating/package_info.html:16
-msgid "Function Type"
-msgstr "道具功能類型"
-
-#: templates/operating/package_info.html:18
-msgid "Item Name"
-msgstr "道具名稱"
-
-#: templates/operating/package_info.html:19
-msgid "Type"
-msgstr "類型"
-
-#: templates/operating/pve_info.html:2
-msgid "Pve Info"
-msgstr "PvE 信息"
-
-#: templates/operating/pve_info.html:3
-msgid "Dungeon List"
-msgstr "地下城列表"
-
-#: templates/operating/pve_info.html:4
-msgid "Dungeon"
-msgstr "地下城"
-
-#: templates/operating/pve_info.html:5
-msgid "Dungeon ID"
-msgstr "地下城ID"
-
-#: templates/operating/pve_info.html:6
-msgid "Challenge Time"
-msgstr "挑戰時間"
-
-#: templates/operating/pve_info.html:7
-msgid "Dungeon Level"
-msgstr "地下城等級"
-
-#: templates/operating/pve_info.html:8
-msgid "Best Evaluation"
-msgstr "最好成績"
-
-#: templates/operating/pve_info.html:9
-msgid "Frequency"
-msgstr "挑戰次數"
-
-#: templates/operating/pve_info.html:11
-msgid "Hero"
-msgstr "英雄"
-
-#: templates/operating/pve_info.html:14
-msgid "Hero Grow Up"
-msgstr "英雄升階"
-
-#: templates/operating/pve_info.html:16
-msgid "Remain HP"
-msgstr "剩餘血量"
-
-#: templates/operating/pve_info.html:17
-msgid "Max Score"
-msgstr "最好積分"
-
-#: templates/operating/pve_info.html:18
-msgid "Max Floor"
-msgstr "最高層數"
-
-#: templates/operating/pve_info.html:19
-msgid "Max Score of History"
-msgstr "歷史最好積分"
-
-#: templates/operating/pve_info.html:20
-msgid "Max Floor of History"
-msgstr "歷史最高層數"
-
-#: templates/operating/pve_info.html:21
-msgid "Today's Enter"
-msgstr "今天是否挑戰"
-
-#: templates/operating/pve_info.html:22
-msgid "Today's Wipeout"
-msgstr "今天是否掃蕩"
-
-#: templates/operating/rank.html:4
-msgid "Real Rank Info"
-msgstr "實時排行榜信息"
-
-#: templates/operating/rank.html:5 templates/operating/rank_list.html:2
-msgid "Rank List"
-msgstr "排行榜列表"
-
-#: templates/operating/rank.html:6
-msgid "Range Of Rank"
-msgstr "排名範圍"
-
-#: templates/operating/rank.html:7
-msgid "Max Range In 100"
-msgstr "範圍相差最大為100"
-
-#: templates/operating/rank.html:8
-msgid "Total Number"
-msgstr "總數"
-
-#: templates/operating/rank.html:9 templates/operating/rank_list.html:5
-msgid "Rank Pos"
-msgstr "排行榜位置"
-
-#: templates/operating/rank.html:10
-msgid "Player ID"
-msgstr "玩家ID"
-
-#: templates/operating/rank.html:11
-msgid "Player Name"
-msgstr "玩家名"
-
-#: templates/operating/rank.html:12
-msgid "Is Robot"
-msgstr "是否為機器人"
-
-#: templates/operating/rank.html:13
-msgid "Recharge ID"
-msgstr "VIP等級"
-
-#: templates/operating/rank.html:14
-msgid "Gang ID"
-msgstr "聯盟ID"
-
-#: templates/operating/rank.html:15
-msgid "Gang Name"
-msgstr "聯盟名稱"
-
-#: templates/operating/rank.html:16
-msgid "Gang Level"
-msgstr "聯盟等級"
-
-#: templates/operating/rank_list.html:3
-msgid "Rank ID"
-msgstr "排行榜ID"
-
-#: templates/operating/rank_list.html:4
-msgid "Rank Name"
-msgstr "排行榜名稱"
-
-#: templates/operating/synchronization.html:4
-msgid "Notify CDN Url List"
-msgstr "公告 CDN Url 列表"
-
-#: templates/operating/synchronization.html:5
-msgid "Copy This List To CDN Controler"
-msgstr "複製一下列表給CDN服務器管理員"
-
-#: templates/operating/synchronization.html:6
-msgid "Return Notify List"
-msgstr "返回公告列表"
-
-#: templatetags/custom.py:24 templatetags/custom.py:175
-msgid "Not Time"
-msgstr "無時間"
-
-#: templatetags/custom.py:42
-#, python-format
-msgid "%(hour)s H %(minute)s M %(second)s S"
-msgstr "%(hour)s 小時 %(minute)s 分鐘 %(second)s 秒"
-
-#: templatetags/custom.py:47
-msgid "OFF LINE"
-msgstr "離線"
-
-#: templatetags/custom.py:49
-msgid "ON LINE"
-msgstr "在線"
-
-#: templatetags/custom.py:119
-msgid "Novice Dungeon List"
-msgstr "新手關卡"
-
-#: templatetags/custom.py:121
-msgid "Normal Dungeon List"
-msgstr "普通關卡"
-
-#: templatetags/custom.py:123
-msgid "Elite Dungeon List"
-msgstr "精英關卡"
-
-#: templatetags/custom.py:125
-msgid "Endless Dungeon List"
-msgstr "無盡之塔"
-
-#: templatetags/custom.py:163
-msgid "PvP Win Times"
-msgstr "掠奪勝利場次"
-
-#: templatetags/custom.py:163
-msgid "PvP Total Times"
-msgstr "掠奪總場次"
-
-#: templatetags/custom.py:164
-msgid "Endless Score"
-msgstr "無盡之塔積分"
-
-#: templatetags/custom.py:164
-msgid "Endless Floor"
-msgstr "無盡之塔層數"
-
-#: templatetags/custom.py:165
-msgid "Gang Score"
-msgstr "聯盟當前積分"
-
-#: templatetags/custom.py:165
-msgid "Gang History Score"
-msgstr "聯盟歷史最高積分"
-
-#: templatetags/custom.py:166
-msgid "Achievement Score"
-msgstr "成就分數"
-
-#: templatetags/custom.py:166
-msgid "Achievement Times"
-msgstr "成就完成數量"
-
-#: templatetags/custom.py:167
-msgid "Fight Offline Name"
-msgstr "線下堆棧稱號"
-
-#: templatetags/custom.py:167
-msgid "Fight Offline Kill Man"
-msgstr "線下堆棧人頭"
-
-#: templatetags/custom.py:168
-msgid "Fight Online Score"
-msgstr "線上堆棧積分"
-
-#: templatetags/custom.py:168
-msgid "Fight Online Win Times"
-msgstr "線上堆棧勝場"
+#~ msgid "Dir Server"
+#~ msgstr "Dir 伺服器"
+
+#~ msgid "CDN Server"
+#~ msgstr "CDN 伺服器"
+
+#~ msgid "Normal Server"
+#~ msgstr "普通伺服器"
+
+#~ msgid "Update Server"
+#~ msgstr "更新伺服器"
+
+#~ msgid "GM Port, Usually Is 9135"
+#~ msgstr "GM指令端口,通常為9135"
+
+#~ msgid "SSH Port, Usually Is 22"
+#~ msgstr "SSH指令端口,通常為22"
+
+#~ msgid "Player Base Info"
+#~ msgstr "玩家基本信息"
+
+#~ msgid "Create Time"
+#~ msgstr "創建時間"
+
+#~ msgid "Online"
+#~ msgstr "在線情況"
+
+#~ msgid "Last Login Time"
+#~ msgstr "上次登錄時間"
+
+#~ msgid "Last Logout Time"
+#~ msgstr "上次註銷時間"
+
+#~ msgid "Total Online Time"
+#~ msgstr "總在線時間"
+
+#~ msgid "Gold"
+#~ msgstr "金幣"
+
+#~ msgid "Times Of Buy Gold"
+#~ msgstr "購買金幣次數"
+
+#~ msgid "Crystal"
+#~ msgstr "魔素"
+
+#~ msgid "Times Of Buy Crystal"
+#~ msgstr "購買魔素次數"
+
+#~ msgid "Money"
+#~ msgstr "寶石"
+
+#~ msgid "Power"
+#~ msgstr "體力"
+
+#~ msgid "Times Of Buy Power"
+#~ msgstr "購買體力次數"
+
+#~ msgid "Skill Point"
+#~ msgstr "技能點數"
+
+#~ msgid "Times Of Buy Skill Point"
+#~ msgstr "購買技能點數次數"
+
+#~ msgid "Endless' Floor"
+#~ msgstr "無盡之塔層數"
+
+#~ msgid "Endless' Score"
+#~ msgstr "無盡之塔積分"
+
+#~ msgid "Score Of Rank Battle"
+#~ msgstr "排行榜積分"
+
+#~ msgid "Times Of Growup"
+#~ msgstr "升階次數"
+
+#~ msgid "Account Ban Time"
+#~ msgstr "賬戶鎖定到期時間"
+
+#~ msgid "Chat Ban Time"
+#~ msgstr "玩家禁言到期時間"
+
+#~ msgid "Total Recharge (VIP Level)"
+#~ msgstr "總充值數（VIP等級）"
+
+#~ msgid "Add 100k"
+#~ msgstr "增加 100k"
+
+#~ msgid "Add 10k"
+#~ msgstr "增加 10k"
+
+#~ msgid "Add"
+#~ msgstr "添加"
+
+#~ msgid "Change"
+#~ msgstr "變更"
+
+#~ msgid "Kick Player"
+#~ msgstr "踢玩家下線"
+
+#~ msgid "Account Ban 7 Days"
+#~ msgstr "鎖定賬戶7天"
+
+#~ msgid "Account Ban 30 Days"
+#~ msgstr "鎖定賬戶30天"
+
+#~ msgid "Chat Ban 7 Days"
+#~ msgstr "禁言玩家7天"
+
+#~ msgid "Chat Ban 30 Days"
+#~ msgstr "禁言玩家30天"
+
+#~ msgid "Un Ban"
+#~ msgstr "解除"
+
+#~ msgid "Ohter Contorl"
+#~ msgstr "其他操作"
+
+#~ msgid "Add 100k Exp. Items"
+#~ msgstr "增加 100k 經驗神水"
+
+#~ msgid "Unlock 50 Dungeon"
+#~ msgstr "解鎖到50關"
+
+#~ msgid "Unlock 100 Dungeon"
+#~ msgstr "解鎖到100關"
+
+#~ msgid "Unlock 150 Dungeon"
+#~ msgstr "解鎖到150關"
+
+#~ msgid "Building Info"
+#~ msgstr "建築信息"
+
+#~ msgid "Building"
+#~ msgstr "建築"
+
+#~ msgid "Pvp Gold Gain"
+#~ msgstr "累計獲得金幣"
+
+#~ msgid "Pvp Exp. Item Gain"
+#~ msgstr "累計獲得經驗道具"
+
+#~ msgid "Pvp Money Gain"
+#~ msgstr "累計獲得寶石"
+
+#~ msgid "Pvp Crystal Gain"
+#~ msgstr "累計獲得魔素"
+
+#~ msgid "Resources Type"
+#~ msgstr "資源類型"
+
+#~ msgid "Resources Type Name"
+#~ msgstr "資源類型名稱"
+
+#~ msgid "Last Born Time"
+#~ msgstr "最後一次產出時間"
+
+#~ msgid "Born Speed"
+#~ msgstr "產出速度"
+
+#~ msgid "Resources Limit"
+#~ msgstr "資源上限"
+
+#~ msgid "Current Resources Born"
+#~ msgstr "當前產出資源"
+
+#~ msgid "Defend Info"
+#~ msgstr "防守信息"
+
+#~ msgid "Hero Name"
+#~ msgstr "英雄名稱"
+
+#~ msgid "Hero Level"
+#~ msgstr "英雄等級"
+
+#~ msgid "Monster ID"
+#~ msgstr "怪物ID"
+
+#~ msgid "Monster Level"
+#~ msgstr "怪物等級"
+
+#~ msgid "Trap ID"
+#~ msgstr "陷阱ID"
+
+#~ msgid "Trap Level"
+#~ msgstr "陷阱等級"
+
+#~ msgid "Building ID"
+#~ msgstr "建築ID"
+
+#~ msgid "Building Name"
+#~ msgstr "建築名稱"
+
+#~ msgid "Building Level"
+#~ msgstr "建築等級"
+
+#~ msgid "Level Begin Time"
+#~ msgstr "升級開始時間"
+
+#~ msgid "Level Total Time"
+#~ msgstr "升級總耗時"
+
+#~ msgid "Hero Tower"
+#~ msgstr "英雄塔"
+
+#~ msgid "Resources Store"
+#~ msgstr "資源倉庫"
+
+#~ msgid "Issue Info"
+#~ msgstr "問題信息"
+
+#~ msgid "Issue ID"
+#~ msgstr "問題ID"
+
+#~ msgid "Uid"
+#~ msgstr "玩家ID"
+
+#~ msgid "Uin"
+#~ msgstr "用戶ID"
+
+#~ msgid "Name"
+#~ msgstr "名稱"
+
+#~ msgid "Hostname"
+#~ msgstr "伺服器域名"
+
+#~ msgid "Channel ID"
+#~ msgstr "渠道"
+
+#~ msgid "Platform"
+#~ msgstr "平台"
+
+#~ msgid "Issue Type"
+#~ msgstr "問題類型"
+
+#~ msgid "Issue Time"
+#~ msgstr "留言時間"
+
+#~ msgid "Issue Content"
+#~ msgstr "問題內容"
+
+#~ msgid "History Reply"
+#~ msgstr "歷史回覆列表"
+
+#~ msgid "Reply Mail"
+#~ msgstr "郵件回覆"
+
+#~ msgid "Mail Title"
+#~ msgstr "郵件題目"
+
+#~ msgid "Mail Content"
+#~ msgstr "郵件內容"
+
+#~ msgid "4 Words Limited"
+#~ msgstr "最多可以4個文字"
+
+#~ msgid "120 Words Limited"
+#~ msgstr "最多可以120個文字"
+
+#~ msgid "Reply"
+#~ msgstr "回覆"
+
+#~ msgid "Return List"
+#~ msgstr "返回問題列表"
+
+#~ msgid "Hero Info"
+#~ msgstr "英雄信息"
+
+#~ msgid "Hero ID"
+#~ msgstr "英雄ID"
+
+#~ msgid "Exp."
+#~ msgstr "經驗"
+
+#~ msgid "Emblem"
+#~ msgstr "紋章"
+
+#~ msgid "ID"
+#~ msgstr "ID"
+
+#~ msgid "Skill"
+#~ msgstr "技能"
+
+#~ msgid "Equiped"
+#~ msgstr "裝備的"
+
+#~ msgid "Item Pos"
+#~ msgstr "道具位置"
+
+#~ msgid "Level"
+#~ msgstr "等級"
+
+#~ msgid "Grow Up"
+#~ msgstr "升階"
+
+#~ msgid "Current Exp."
+#~ msgstr "當前經驗"
+
+#~ msgid "Base ID"
+#~ msgstr "基本ID"
+
+#~ msgid "Equip Name"
+#~ msgstr "裝備名稱"
+
+#~ msgid "Wake Up"
+#~ msgstr "覺醒"
+
+#~ msgid "1000 Uids Limited"
+#~ msgstr "最多可以1000個UID"
+
+#~ msgid "Split By ,"
+#~ msgstr "以 , 分割"
+
+#~ msgid "Accessory"
+#~ msgstr "附件"
+
+#~ msgid "Item"
+#~ msgstr "道具"
+
+#~ msgid "Equip"
+#~ msgstr "裝備"
+
+#~ msgid "Count"
+#~ msgstr "數量"
+
+#~ msgid "None"
+#~ msgstr "無"
+
+#~ msgid "Limited 6 Kind Of Accessory"
+#~ msgstr "最多可以添加6種附件"
+
+#~ msgid "Accessory Include Item And Equip"
+#~ msgstr "附件包含物品和裝備"
+
+#~ msgid "Send"
+#~ msgstr "發送"
+
+#~ msgid "The Response Of Sending Mail"
+#~ msgstr "郵件回執狀態"
+
+#~ msgid "Notify Info"
+#~ msgstr "公告信息"
+
+#~ msgid "Notify Title"
+#~ msgstr "公告標題"
+
+#~ msgid "Notify Content"
+#~ msgstr "公告內容"
+
+#~ msgid "End Date"
+#~ msgstr "結束日期"
+
+#~ msgid "Is Display"
+#~ msgstr "是否顯示"
+
+#~ msgid "Picture Info"
+#~ msgstr "圖片信息"
+
+#~ msgid "Picture Link"
+#~ msgstr "圖片鏈接"
+
+#~ msgid "Picture Width"
+#~ msgstr "圖片寬度"
+
+#~ msgid "Picture Height"
+#~ msgstr "圖片高度"
+
+#~ msgid "Channel"
+#~ msgstr "渠道"
+
+#~ msgid "Zone"
+#~ msgstr "區服"
+
+#~ msgid "Seq ID"
+#~ msgstr "順序號"
+
+#~ msgid "Other Options"
+#~ msgstr "其他設置"
+
+#~ msgid "Please Check The Notify Info"
+#~ msgstr "請檢查公告信息"
+
+#~ msgid "The Will Be DIR Notify When The Zone Is All Zone"
+#~ msgstr "檔區服選擇全部區服時講會是一個DIR公告"
+
+#~ msgid "Add Or Edit Notify Without Synchronization"
+#~ msgstr "添加或者修改公告不會同步到外網"
+
+#~ msgid "Synchronize Notify"
+#~ msgstr "同步公告"
+
+#~ msgid "Delete"
+#~ msgstr "刪除"
+
+#~ msgid "Edit"
+#~ msgstr "修改"
+
+#~ msgid "Operate"
+#~ msgstr "操作"
+
+#~ msgid "Attention"
+#~ msgstr "注意"
+
+#~ msgid "Please Edit The Notify"
+#~ msgstr "請修改公告"
+
+#~ msgid "Back"
+#~ msgstr "返回"
+
+#~ msgid "Package & Item"
+#~ msgstr "揹包 ＆ 道具"
+
+#~ msgid "Package Info"
+#~ msgstr "揹包"
+
+#~ msgid "Package Pos"
+#~ msgstr "揹包位置"
+
+#~ msgid "Binded Hero"
+#~ msgstr "綁定英雄"
+
+#~ msgid "Equip ID"
+#~ msgstr "裝備ID"
+
+#~ msgid "Item Info"
+#~ msgstr "道具信息"
+
+#~ msgid "Status"
+#~ msgstr "狀態"
+
+#~ msgid "Function Type"
+#~ msgstr "道具功能類型"
+
+#~ msgid "Item Name"
+#~ msgstr "道具名稱"
+
+#~ msgid "Type"
+#~ msgstr "類型"
+
+#~ msgid "Pve Info"
+#~ msgstr "PvE 信息"
+
+#~ msgid "Dungeon List"
+#~ msgstr "地下城列表"
+
+#~ msgid "Dungeon"
+#~ msgstr "地下城"
+
+#~ msgid "Dungeon ID"
+#~ msgstr "地下城ID"
+
+#~ msgid "Challenge Time"
+#~ msgstr "挑戰時間"
+
+#~ msgid "Dungeon Level"
+#~ msgstr "地下城等級"
+
+#~ msgid "Best Evaluation"
+#~ msgstr "最好成績"
+
+#~ msgid "Frequency"
+#~ msgstr "挑戰次數"
+
+#~ msgid "Hero"
+#~ msgstr "英雄"
+
+#~ msgid "Hero Grow Up"
+#~ msgstr "英雄升階"
+
+#~ msgid "Remain HP"
+#~ msgstr "剩餘血量"
+
+#~ msgid "Max Score"
+#~ msgstr "最好積分"
+
+#~ msgid "Max Floor"
+#~ msgstr "最高層數"
+
+#~ msgid "Max Score of History"
+#~ msgstr "歷史最好積分"
+
+#~ msgid "Max Floor of History"
+#~ msgstr "歷史最高層數"
+
+#~ msgid "Today's Enter"
+#~ msgstr "今天是否挑戰"
+
+#~ msgid "Today's Wipeout"
+#~ msgstr "今天是否掃蕩"
+
+#~ msgid "Real Rank Info"
+#~ msgstr "實時排行榜信息"
+
+#~ msgid "Rank List"
+#~ msgstr "排行榜列表"
+
+#~ msgid "Range Of Rank"
+#~ msgstr "排名範圍"
+
+#~ msgid "Max Range In 100"
+#~ msgstr "範圍相差最大為100"
+
+#~ msgid "Total Number"
+#~ msgstr "總數"
+
+#~ msgid "Rank Pos"
+#~ msgstr "排行榜位置"
+
+#~ msgid "Player ID"
+#~ msgstr "玩家ID"
+
+#~ msgid "Player Name"
+#~ msgstr "玩家名"
+
+#~ msgid "Is Robot"
+#~ msgstr "是否為機器人"
+
+#~ msgid "Recharge ID"
+#~ msgstr "VIP等級"
+
+#~ msgid "Gang ID"
+#~ msgstr "聯盟ID"
+
+#~ msgid "Gang Name"
+#~ msgstr "聯盟名稱"
+
+#~ msgid "Gang Level"
+#~ msgstr "聯盟等級"
+
+#~ msgid "Rank ID"
+#~ msgstr "排行榜ID"
+
+#~ msgid "Rank Name"
+#~ msgstr "排行榜名稱"
+
+#~ msgid "Notify CDN Url List"
+#~ msgstr "公告 CDN Url 列表"
+
+#~ msgid "Copy This List To CDN Controler"
+#~ msgstr "複製一下列表給CDN服務器管理員"
+
+#~ msgid "Return Notify List"
+#~ msgstr "返回公告列表"
+
+#~ msgid "Not Time"
+#~ msgstr "無時間"
+
+#~ msgid "%(hour)s H %(minute)s M %(second)s S"
+#~ msgstr "%(hour)s 小時 %(minute)s 分鐘 %(second)s 秒"
+
+#~ msgid "OFF LINE"
+#~ msgstr "離線"
+
+#~ msgid "ON LINE"
+#~ msgstr "在線"
+
+#~ msgid "Novice Dungeon List"
+#~ msgstr "新手關卡"
+
+#~ msgid "Normal Dungeon List"
+#~ msgstr "普通關卡"
+
+#~ msgid "Elite Dungeon List"
+#~ msgstr "精英關卡"
+
+#~ msgid "Endless Dungeon List"
+#~ msgstr "無盡之塔"
+
+#~ msgid "PvP Win Times"
+#~ msgstr "掠奪勝利場次"
+
+#~ msgid "PvP Total Times"
+#~ msgstr "掠奪總場次"
+
+#~ msgid "Endless Score"
+#~ msgstr "無盡之塔積分"
+
+#~ msgid "Endless Floor"
+#~ msgstr "無盡之塔層數"
+
+#~ msgid "Gang Score"
+#~ msgstr "聯盟當前積分"
+
+#~ msgid "Gang History Score"
+#~ msgstr "聯盟歷史最高積分"
+
+#~ msgid "Achievement Score"
+#~ msgstr "成就分數"
+
+#~ msgid "Achievement Times"
+#~ msgstr "成就完成數量"
+
+#~ msgid "Fight Offline Name"
+#~ msgstr "線下堆棧稱號"
+
+#~ msgid "Fight Offline Kill Man"
+#~ msgstr "線下堆棧人頭"
+
+#~ msgid "Fight Online Score"
+#~ msgstr "線上堆棧積分"
+
+#~ msgid "Fight Online Win Times"
+#~ msgstr "線上堆棧勝場"

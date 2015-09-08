@@ -458,20 +458,20 @@
     }
   };
   var _deployment = {
-    'last_version': function(hostname, platform, channel) {
+    'last_version': function(hostname, platform, channel, inherit, i) {
       url = window.location.pathname
       url_arr = url.split("/", 3).concat([hostname, platform, channel])
-      url = url_arr.join("/") + '/version.json'
+      url = url_arr.join("/") + '/upload.json'
       $.ajax({
         url: url,
         type: 'GET',
         success: function(msg){
-          $('#a').val(msg.a);
-          $('#b').val(msg.b);
-          $('#c').val(msg.c);
+          $('#'+ inherit +'a').val(msg.a);
+          $('#'+ inherit +'b').val(msg.b);
+          $('#'+ inherit +'c').val(msg.c);
           url = window.location.pathname;
           if (url.lastIndexOf("app") < 0) {
-            $('#d').val(parseInt(msg.d)+1);
+            $('#'+ inherit +'d').val(parseInt(msg.d) + i);
           }
         },
         error: function(e){

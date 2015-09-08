@@ -462,6 +462,9 @@ class Tabel(object):
         if 'is_valid' in request_get:
             r = "is_valid = " + request_get['is_valid']
             condition = condition + (r,)
+        if 'upt_typ' in request_get:
+            r = "upt_typ = '" + request_get['upt_typ'] + "'"
+            condition = condition + (r,)
         if len(condition) > 0:
             condition = " AND ".join(condition)
             condition += " ORDER BY client_id DESC LIMIT 1"
@@ -543,4 +546,34 @@ class Tabel(object):
             'vals': vals,
         }
         ret = self.insert(panel, condition)
+        return ret
+
+    @classmethod
+    def get_versions(self, sub_menu, panel, request_get):
+        condition = ()
+        if 'hostname' in request_get:
+            r = "hostname = '" + request_get['hostname'] + "'"
+            condition = condition + (r,)
+        if 'platform' in request_get:
+            r = "platform = '" + request_get['platform'] + "'"
+            condition = condition + (r,)
+        if 'channel' in request_get:
+            r = "channel = '" + request_get['channel'] + "'"
+            condition = condition + (r,)
+        if 'is_valid' in request_get:
+            r = "is_valid = " + request_get['is_valid']
+            condition = condition + (r,)
+        if 'upt_typ' in request_get:
+            r = "upt_typ = '" + request_get['upt_typ'] + "'"
+            condition = condition + (r,)
+        if 'start' in request_get:
+            r = "client_id > " + request_get['start']
+            condition = condition + (r,)
+        if 'end' in request_get:
+            r = "client_id <= " + request_get['end']
+            condition = condition + (r,)
+        if len(condition) > 0:
+            condition = " AND ".join(condition)
+            condition += " ORDER BY client_id"
+        ret = self.select(sub_menu, panel, condition)
         return ret

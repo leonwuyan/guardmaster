@@ -54,6 +54,11 @@ class Version(object):
         tmp[3] = str(int(tmp[3]) + 1)
         return str(tmp)
 
+    def app(self):
+        tmp = Version(self[0], self[1], self[2], self[3])
+        tmp[3] = '0'
+        return str(tmp)
+
     def is_app(self):
         if self[3] == '0':
             return True
