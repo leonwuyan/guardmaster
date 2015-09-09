@@ -112,9 +112,10 @@ def update_upload_work_order_lock(panel, hostname, platform, channel, status):
     return False
 
 
-def _scp_single_zip(ip, local_path, remote_path, file_name):
+def _scp_single_zip(ip, port, local_path, remote_path, file_name):
     local_file = local_path + file_name
-    scp_cmd = "scp {0} root@{1}:{2}".format(local_file, ip, remote_path)
+    scp_cmd = "scp -P {3} {0} root@{1}:{2}".format(
+        local_file, ip, remote_path, port)
     retcode, output = _sh(BASE_DIR, scp_cmd)
     if retcode != 0:
         return False
@@ -219,7 +220,7 @@ def scp_patch(u, server, local_path, remote_path):
 
     progress = 0
     for f in file_list:
-        if _scp_single_zip(server.ip, local_path, remote_path, f):
+        if _scp_single_zip(server.ip, server.port, local_path, remote_path, f):
             progress += 1
             tmp = progress * 80 / progress_total
             update_upload_work_order(u, tmp, u.result, u.status)
