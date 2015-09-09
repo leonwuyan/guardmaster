@@ -220,7 +220,7 @@ def scp_patch(u, server, local_path, remote_path):
 
     progress = 0
     for f in file_list:
-        if _scp_single_zip(server.ip, server.port, local_path, remote_path, f):
+        if _scp_single_zip(server.ip, server.ssh_port, local_path, remote_path, f):
             progress += 1
             tmp = progress * 80 / progress_total
             update_upload_work_order(u, tmp, u.result, u.status)
