@@ -215,7 +215,8 @@ def scp_patch(u, server, local_path, remote_path):
         update_upload_work_order(u, u.progress, 'Not Any Files', FAILED)
         return False
 
-    mkdir_cmd = "ssh root@{0} 'mkdir -p {1}'".format(server.ip, remote_path)
+    mkdir_cmd = "ssh -p {2} root@{0} 'mkdir -p {1}'".format(
+        server.ip, remote_path, server.ssh_port)
     retcode, output = _sh(BASE_DIR, mkdir_cmd)
 
     progress = 0
