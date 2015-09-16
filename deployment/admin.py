@@ -1,23 +1,23 @@
 from django.contrib import admin
-from deployment.models import HostName, Platform, Channel, UpLoadWorkOrder, UpLoadWorkOrderLock
+from deployment.models import HostName, Platform, Channel, UpLoadWorkOrder, UpLoadWorkOrderLock, TplItem, TplTemplate
 
 
-class UIHostNameAdmin(admin.ModelAdmin):
+class HostNameAdmin(admin.ModelAdmin):
     list_display = ('label', 'dir_path', 'panel')
     list_filter = ['panel']
 
 
-class UIPlatformAdmin(admin.ModelAdmin):
+class PlatformAdmin(admin.ModelAdmin):
     list_display = ('label', 'panel')
     list_filter = ['panel']
 
 
-class UIChannelAdmin(admin.ModelAdmin):
+class ChannelAdmin(admin.ModelAdmin):
     list_display = ('label', 'panel')
     list_filter = ['panel']
 
 
-class UIUpLoadworkOrderAdmin(admin.ModelAdmin):
+class UpLoadworkOrderAdmin(admin.ModelAdmin):
     list_display = (
         'version',
         'panel',
@@ -35,7 +35,7 @@ class UIUpLoadworkOrderAdmin(admin.ModelAdmin):
         return '{0} - {1}'.format(obj.start_date, obj.stop_date)
 
 
-class UIUpLoadworkOrderLockAdmin(admin.ModelAdmin):
+class UpLoadworkOrderLockAdmin(admin.ModelAdmin):
     list_display = ('hpc', 'status_label', 'panel')
     list_filter = ['panel', 'hostname', 'platform', 'channel']
 
@@ -48,8 +48,25 @@ class UIUpLoadworkOrderLockAdmin(admin.ModelAdmin):
         else:
             return 'LOCKING'
 
-admin.site.register(HostName, UIHostNameAdmin)
-admin.site.register(Platform, UIPlatformAdmin)
-admin.site.register(Channel, UIChannelAdmin)
-admin.site.register(UpLoadWorkOrder, UIUpLoadworkOrderAdmin)
-admin.site.register(UpLoadWorkOrderLock, UIUpLoadworkOrderLockAdmin)
+
+class TplItemInline(admin.TabularInline):
+    model = TplItem
+    extra = 3
+
+
+class TplItemAdmin(admin.ModelAdmin):
+    list_display = ('tpl_template', 'module_name', 'module_times', 'item_name', 'seqid', 'module_seqid')
+    list_filter = ['tpl_template', 'module_name']
+
+
+class TplTemplateAdmin(admin.ModelAdmin):
+    inlines = [TplItemInline]
+    list_display = ('tpl_type', 'out_file_type', 'out_name_mask')
+
+admin.site.register(HostName, HostNameAdmin)
+admin.site.register(Platform, PlatformAdmin)
+admin.site.register(Channel, ChannelAdmin)
+admin.site.register(UpLoadWorkOrder, UpLoadworkOrderAdmin)
+admin.site.register(UpLoadWorkOrderLock, UpLoadworkOrderLockAdmin)
+admin.site.register(TplItem, TplItemAdmin)
+admin.site.register(TplTemplate, TplTemplateAdmin)
