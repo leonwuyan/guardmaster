@@ -78,7 +78,7 @@ class TplItem(models.Model):
     module_times = models.IntegerField()
     module_seqid = models.IntegerField()
     item_name = models.CharField(max_length=45)
-    editable = models.BooleanField()
+    editable = models.IntegerField()
     item_desc = models.CharField(max_length=255)
     item_default = models.CharField(max_length=255, blank=True, null=True)
     item_valuelist = models.TextField(blank=True, null=True)
@@ -90,4 +90,4 @@ class TplItem(models.Model):
 
     class Meta:
         db_table = 'tpl_item'
-        ordering = ['seqid']
+        ordering = ['seqid', 'module_seqid']

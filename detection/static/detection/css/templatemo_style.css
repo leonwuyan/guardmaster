@@ -25,7 +25,7 @@ h2 {
 .green { color: #3C3; }
 .gray { color: #999; }
 
-.form-horizontal .control-label { padding-top: 0; }
+/*.form-horizontal .control-label { padding-top: 0; }*/
 .form-horizontal.templatemo-payment-form .radio.templatemo-no-padding-top {	padding-top: 0; }
 .control-wrapper {
 	position: relative;
@@ -37,9 +37,9 @@ h2 {
 	top: 6px;
 }
 .form-group:last-child { margin-bottom: 0; }
-.form-horizontal .control-label { margin-bottom: 10px; }
+/*.form-horizontal .control-label { margin-bottom: 10px; }*/
 .table { margin-bottom: 0; }
-.table>thead>tr>th, .table>tbody>tr>th, .table>tfoot>tr>th, 
+.table>thead>tr>th, .table>tbody>tr>th, .table>tfoot>tr>th,
 .table>thead>tr>td, .table>tbody>tr>td, .table>tfoot>tr>td {
 	vertical-align: middle;
 }
@@ -51,7 +51,7 @@ h2 {
 	left: 10px;
 	top: 10px;
 }
-.templatemo-input-icon-container input, 
+.templatemo-input-icon-container input,
 .templatemo-input-icon-container textarea {
 	padding-left: 30px;
 }
@@ -66,7 +66,7 @@ h2 {
 .templatemo-bg-gray h1 { color: rgb(74, 164, 180); }
 .templatemo-bg-image-1 {
 	background-color: rgb(60,60,60);
-	background-image: url(../img/templatemo-bg-1.jpg);	
+	background-image: url(../img/templatemo-bg-1.jpg);
 }
 .templatemo-bg-image-2 {
 	background-color: #fff;
@@ -75,7 +75,7 @@ h2 {
 .templatemo-bg-image-1, .templatemo-bg-image-2 {
 	background-repeat: no-repeat;
 	background-position: center center;
-	background-attachment: fixed;	
+	background-attachment: fixed;
 }
 .white-bg {
 	border: 1px solid transparent;

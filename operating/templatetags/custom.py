@@ -196,6 +196,14 @@ def result_label(result):
     return r[result]
 
 
+def div2(x):
+    return x % 2 == 1
+
+
+def div2div2(x):
+    return ((x - 1) / 2) % 2 == 0
+
+
 register.filter(ts2date)
 register.filter(ts2time)
 register.filter(second2time)
@@ -214,3 +222,5 @@ register.filter(ts2bantime)
 register.filter(datetime2string)
 register.filter(list_find)
 register.filter(result_label)
+register.filter(div2)
+register.filter(div2div2)

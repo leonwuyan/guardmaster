@@ -7,7 +7,7 @@ from django.http import HttpResponse, HttpResponseRedirect
 from django.core.urlresolvers import reverse
 from django.views.generic import View
 from deployment.tasks import upload_version, inherit_version, get_client_id
-from deployment.models import HostName
+from deployment.models import HostName, TplTemplate, TplItem
 from deployment.version import Version
 import json
 
@@ -136,3 +136,18 @@ def version(request, panel_id, hostname_id, platform, channel, version):
         request.user, panel_id, hostname.label, platform, channel, version)
     ret = json.dumps(tmp, ensure_ascii=False)
     return HttpResponse(ret, content_type='application/json')
+
+
+@Common.competence_required
+def config(request, panel_id, url, tpltemplate_id=0):
+    t = "deployment/config.html"
+    d = view_template_base(request, panel_id, url)
+    d['tpltemplate_id'] = tpltemplate_id
+    if tpltemplate_id > 0:
+        tplitem = TplItem.objects.filter(tpl_template=tpltemplate_id)
+        d['tpltemplate'] = get_object_or_404(TplTemplate, pk=tpltemplate_id)
+        d['tplitem'] = tplitem
+    else:
+        tpltemplate = TplTemplate.objects.all()
+        d['tpltemplate'] = tpltemplate
+    return render(request, t, d)

@@ -1,0 +1,70 @@
+{% extends "detection/base.html" %}
+{% block content %}
+{% load custom i18n %}
+{% trans "Deploy" as t_deploy %}
+<div class="container-fluid white-bg">
+  <div class="row">
+    <ol class="breadcrumb">
+      <li><a href="{{servlet}}/">{{panel.label}}</a></li>
+      <li class="active">{{ title }}</li>
+    </ol>
+
+    {% ifequal tpltemplate_id 0 %}
+    <form class="form" role="form" method="post">
+      {% for t in tpltemplate %}
+      {% if forloop.counter|div2 %}
+      <div class="form-group">
+        <div class="row">
+          <div class="col-md-6">
+            <a href="{% url 'deployment:config_tpl' panel.id 'config_index' t.id %}">
+              <input type="button" value="{{ t.tpl_type }}" class="btn {% if forloop.counter|div2div2 %}btn-primary{% else %}btn-default{% endif %} btn-block btn-lg">
+            </a>
+          </div>
+      {% if forloop.last %}
+        </div>
+      </div>
+      {% endif %}
+      {% else %}
+          <div class="col-md-6">
+            <a href="{% url 'deployment:config_tpl' panel.id 'config_index' t.id %}">
+              <input type="button" value="{{ t.tpl_type }}" class="btn {% if forloop.counter|div2div2 %}btn-primary{% else %}btn-default{% endif %} btn-block btn-lg">
+            </a>
+          </div>
+        </div>
+      </div>
+      {% endif %}
+      {% endfor %}
+    </form>
+    {% else %}
+    <div class="page-header"><h1>{{ tpltemplate.tpl_type }}</h1></div>
+    <form class="form-horizontal" role="form" method="post">
+    {% csrf_token %}
+      {% for t in tplitem %}
+      {% if t.item_valuelist %}
+
+      {% else %}
+
+      {% endif %}
+      <div class="form-group">
+        <label class="col-md-2 control-label">{{ t.item_name }}</label>
+        <div class="col-md-8">
+          <input class="form-control" type="text" name="BB" id="BB" value="{{ t.item_default }}">
+        </div>
+      </div>
+      {% endfor %}
+      <div class="form-group">
+        <div class="col-md-offset-2 col-md-8">
+          <button id="deploy" class="btn btn-default">{{ t_deploy }}</button>
+        </div>
+      </div>
+    </form>
+    {% endifequal %}
+
+  </div>
+  <center style='color: #999; padding-top: 20px; font-family: "arial","NSimSun","SimSun","STSong","AR PL SungtiL GB","TW\-Sung","WenQuanYi Bitmap Song"; font-size: 14px; font-weight: bold;'>{{excuse}}</center>
+</div>
+<script type="text/javascript">
+  $(document).ready(function() {
+  });
+</script>
+{% endblock %}

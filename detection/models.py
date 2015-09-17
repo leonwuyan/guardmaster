@@ -92,6 +92,7 @@ class UISubMenu(models.Model):
         ('operating:rank', _('rank')),
         ('operating:contact', _('contact')),
         ('deployment:patch', _('patch')),
+        ('deployment:config', _('config')),
     }
     label = models.CharField(max_length=45)
     main_menu = models.ForeignKey(UIMainMenu, blank=True, null=True)
