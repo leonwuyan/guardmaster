@@ -65,6 +65,8 @@ class TplTemplate(models.Model):
     tpl_type = models.CharField(max_length=45)
     out_file_type = models.CharField(max_length=45)
     out_name_mask = models.CharField(max_length=45)
+    out_dir = models.CharField(max_length=45)
+    saved_path = models.CharField(max_length=45)
 
     def __unicode__(self):
         return self.tpl_type
@@ -79,7 +81,7 @@ class TplItem(models.Model):
     module_seqid = models.IntegerField()
     item_name = models.CharField(max_length=45)
     editable = models.IntegerField()
-    item_desc = models.CharField(max_length=255)
+    item_desc = models.CharField(max_length=255, blank=True, null=True)
     item_default = models.CharField(max_length=255, blank=True, null=True)
     item_valuelist = models.TextField(blank=True, null=True)
     seqid = models.IntegerField()

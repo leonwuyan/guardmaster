@@ -61,7 +61,7 @@ class TplItemAdmin(admin.ModelAdmin):
 
 class TplTemplateAdmin(admin.ModelAdmin):
     inlines = [TplItemInline]
-    list_display = ('tpl_type', 'out_file_type', 'out_name_mask')
+    list_display = ('tpl_type', 'out_file_type', 'out_name_mask', 'out_dir', 'saved_path')
 
 admin.site.register(HostName, HostNameAdmin)
 admin.site.register(Platform, PlatformAdmin)

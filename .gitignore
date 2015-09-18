@@ -53,6 +53,7 @@ coverage.xml
 # Django stuff:
 *.log
 log/
+output/
 # Sphinx documentation
 docs/_build/
 

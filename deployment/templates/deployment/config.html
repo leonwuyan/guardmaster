@@ -2,6 +2,7 @@
 {% block content %}
 {% load custom i18n %}
 {% trans "Deploy" as t_deploy %}
+{% trans "No Item Needed" as t_no_item_needed %}
 <div class="container-fluid white-bg">
   <div class="row">
     <ol class="breadcrumb">
@@ -40,21 +41,18 @@
     <form class="form-horizontal" role="form" method="post">
     {% csrf_token %}
       {% for t in tplitem %}
-      {% if t.item_valuelist %}
-
-      {% else %}
-
-      {% endif %}
       <div class="form-group">
-        <label class="col-md-2 control-label">{{ t.item_name }}</label>
+        <label for="{{ t.item_name }}" class="col-md-2 control-label">{{ t.item_name }}</label>
         <div class="col-md-8">
-          <input class="form-control" type="text" name="BB" id="BB" value="{{ t.item_default }}">
+          <input class="form-control" type="text" name="{{ t.item_name }}" id="{{ t.item_name }}" value="{{ t.item_default }}">
         </div>
       </div>
+      {% empty %}
+      <p>{{ t_no_item_needed }}</p>
       {% endfor %}
       <div class="form-group">
         <div class="col-md-offset-2 col-md-8">
-          <button id="deploy" class="btn btn-default">{{ t_deploy }}</button>
+          <button id="deploy" type="submit" class="btn btn-default">{{ t_deploy }}</button>
         </div>
       </div>
     </form>
