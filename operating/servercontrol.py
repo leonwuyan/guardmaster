@@ -207,8 +207,11 @@ class ServerControl(object):
             for k in post.getlist('acc'):
                 if len(acc) < 6:
                     t = k.split("|")
-                    (a, b, c) = (int(t[0]), int(t[1]), int(t[2]))
-                    acc.append({'res_type': a, 'res_id': b, 'res_count': c})
+                    (a, b, c, d, e, f) = (int(t[0]), int(t[1]), int(t[2]), int(t[3]), int(t[4]), int(t[5]))
+                    acc.append({
+                        'res_type': a, 'res_id': b, 'res_count': c,
+                        'res_extern_param_1': d, 'res_extern_param_2': e,
+                        'res_extern_param_3': f})
         ret = self._send_mail(title, content, acc)
         if ret['result'] != self.success['result']:
             return ret

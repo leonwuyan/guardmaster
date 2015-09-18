@@ -450,9 +450,21 @@
       val = $(obj).val()
       text = $(obj).find("option:selected").text()
       t = $(count).val()
+      exp = 0
+      level = 0
+      growup = 0
+      if(count == '#equip-count'){
+        exp = $('#equip-exp').val()
+        level = $('#equip-level').val()
+        growup = $('#equip-growup').val()
+        if(exp == '') exp = 0
+        if(level == '') level = 0
+        if(growup == '') growup = 0
+        text += ' [ ' + exp + ' | ' + level + ' | ' + growup + ' ]'
+      }
       html = '<li class="list-group-item"><span class="badge">'
       html += t + '</span>'
-      html += '<input name="acc" type="hidden" value="' + k + '|' + val + '|' + t + '" />'
+      html += '<input name="acc" type="hidden" value="' + k + '|' + val + '|' + t + '|' + exp + '|' + level + '|' + growup + '" />'
       html += text + '</li>'
       $(ul).append(html)
     }

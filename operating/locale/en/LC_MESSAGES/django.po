@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2015-09-07 21:56+0800\n"
+"POT-Creation-Date: 2015-09-18 17:07+0800\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -137,7 +137,7 @@ msgstr ""
 msgid "Add 10k"
 msgstr ""
 
-#: templates/operating/base_info.html:26 templates/operating/mail.html:20
+#: templates/operating/base_info.html:26 templates/operating/mail.html:23
 #: templates/operating/notify.html:21
 msgid "Add"
 msgstr ""
@@ -385,7 +385,7 @@ msgstr ""
 msgid "Hero ID"
 msgstr ""
 
-#: templates/operating/hero_info.html:5
+#: templates/operating/hero_info.html:5 templates/operating/mail.html:20
 msgid "Exp."
 msgstr ""
 
@@ -409,7 +409,7 @@ msgstr ""
 msgid "Item Pos"
 msgstr ""
 
-#: templates/operating/hero_info.html:11
+#: templates/operating/hero_info.html:11 templates/operating/mail.html:21
 #: templates/operating/package_info.html:6
 msgid "Level"
 msgstr ""
@@ -463,55 +463,59 @@ msgstr ""
 msgid "Count"
 msgstr ""
 
-#: templates/operating/mail.html:21
+#: templates/operating/mail.html:22
+msgid "GrowUp"
+msgstr ""
+
+#: templates/operating/mail.html:24
 msgid "None"
 msgstr ""
 
-#: templates/operating/mail.html:22
+#: templates/operating/mail.html:25
 msgid "Limited 6 Kind Of Accessory"
 msgstr ""
 
-#: templates/operating/mail.html:23
+#: templates/operating/mail.html:26
 msgid "Accessory Include Item And Equip"
 msgstr ""
 
-#: templates/operating/mail.html:24 templates/operating/notify.html:22
+#: templates/operating/mail.html:27 templates/operating/notify.html:22
 msgid "Success"
 msgstr ""
 
-#: templates/operating/mail.html:25
+#: templates/operating/mail.html:28
 msgid "Please Check The Response Of Sending Mail"
 msgstr ""
 
-#: templates/operating/mail.html:26 templates/operating/notify.html:24
+#: templates/operating/mail.html:29 templates/operating/notify.html:24
 msgid "Fail"
 msgstr ""
 
-#: templates/operating/mail.html:27 templates/operating/notify.html:25
+#: templates/operating/mail.html:30 templates/operating/notify.html:25
 msgid "Please Check The Input Is Correct"
 msgstr ""
 
-#: templates/operating/mail.html:28
+#: templates/operating/mail.html:31
 msgid "Send"
 msgstr ""
 
-#: templates/operating/mail.html:29
+#: templates/operating/mail.html:32
 msgid "The Response Of Sending Mail"
 msgstr ""
 
-#: templates/operating/mail.html:30
+#: templates/operating/mail.html:33
 msgid "Server"
 msgstr ""
 
-#: templates/operating/mail.html:31
+#: templates/operating/mail.html:34
 msgid "GuardMaster"
 msgstr ""
 
-#: templates/operating/mail.html:32
+#: templates/operating/mail.html:35
 msgid "Pub Date"
 msgstr ""
 
-#: templates/operating/mail.html:33
+#: templates/operating/mail.html:36
 msgid "Lastest 20 Mails By Every Server"
 msgstr ""
 

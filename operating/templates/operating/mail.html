@@ -17,6 +17,9 @@
 {% trans "Item" as t_item %}
 {% trans "Equip" as t_equip %}
 {% trans "Count" as t_count %}
+{% trans "Exp." as t_exp %}
+{% trans "Level" as t_level %}
+{% trans "GrowUp" as t_growup %}
 {% trans "Add" as t_add %}
 {% trans "None" as t_none %}
 {% trans "Limited 6 Kind Of Accessory" as t_limited_6_kind_of_accessory %}
@@ -116,10 +119,10 @@
       </div>
       <div class="form-group" style="margin-bottom:5px">
         <div class="row">
-          <div class="col-md-6">
+          <div class="col-md-4">
             <label for="uid">{{t_item}}</label>
             <div class="form-group">
-              <div class="col-md-8">
+              <div class="col-md-7">
                 <select class="form-control" id="items-select">
                   <option value="-1" selected="selected">{{t_none}}</option>
                   {% for item in items %}
@@ -127,7 +130,7 @@
                   {% endfor %}
                 </select>
               </div>
-              <div class="input-group col-md-4">
+              <div class="input-group col-md-5">
                 <span class="input-group-addon" id="item-count-addon">{{t_count}}</span>
                 <input type="text" class="form-control" placeholder="0" aria-describedby="item-count-addon" id="item-count">
                 <div class="input-group-btn">
@@ -137,10 +140,10 @@
             </div>
             <ul class="list-group" id="items"></ul>
           </div>
-          <div class="col-md-6">
+          <div class="col-md-8">
             <label for="uid">{{t_equip}}</label>
             <div class="form-group">
-              <div class="col-md-8">
+              <div class="col-md-3">
                 <select class="form-control" id="equips-select">
                   <option value="-1" selected="selected">{{t_none}}</option>
                   {% for equip in equips %}
@@ -148,7 +151,25 @@
                   {% endfor %}
                 </select>
               </div>
-              <div class="input-group col-md-4">
+              <div class="col-md-2">
+                <div class="input-group">
+                  <span class="input-group-addon" id="equip-exp-addon">{{t_exp}}</span>
+                  <input type="text" class="form-control" placeholder="0" aria-describedby="equip-exp-addon" id="equip-exp">
+                </div>
+              </div>
+              <div class="col-md-2">
+                <div class="input-group">
+                  <span class="input-group-addon" id="equip-level-addon">{{t_level}}</span>
+                  <input type="text" class="form-control" placeholder="0" aria-describedby="equip-level-addon" id="equip-level">
+                </div>
+              </div>
+              <div class="col-md-2">
+                <div class="input-group">
+                  <span class="input-group-addon" id="equip-growup-addon">{{t_growup}}</span>
+                  <input type="text" class="form-control" placeholder="0" aria-describedby="equip-growup-addon" id="equip-growup">
+                </div>
+              </div>
+              <div class="input-group col-md-3">
                 <span class="input-group-addon" id="equip-count-addon">{{t_count}}</span>
                 <input type="text" class="form-control" placeholder="0" aria-describedby="equip-count-addon" id="equip-count">
                 <div class="input-group-btn">
