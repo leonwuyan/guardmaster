@@ -140,6 +140,14 @@ DATABASES = {
         'HOST': '192.168.1.76',
         'PORT': '3308',
     },
+    'db_cyzr_statdb': {
+        'ENGINE': 'django.db.backends.mysql',
+        'NAME': 'db_cyzr_statdb',
+        'USER': 'act',
+        'PASSWORD': '91act@b7',
+        'HOST': '192.168.1.62',
+        'PORT': '3306',
+    },
     'db_flty_statdb': {
         'ENGINE': 'django.db.backends.mysql',
         'NAME': 'db_flty_statdb',
