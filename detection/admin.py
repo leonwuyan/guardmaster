@@ -27,13 +27,21 @@ class UISubMenuAdmin(admin.ModelAdmin):
     inlines = [UIColMapInline]
     list_display = (
         'label',
+        'show_panel',
         'main_menu',
         'url',
         'table_name',
         'category',
         'seqid')
     search_fields = ['label']
-    list_filter = ['main_menu', 'category']
+    list_filter = ['category']
+
+    def show_panel(self, obj):
+        m = obj.main_menu
+        if m:
+            return obj.main_menu.group.name
+        else:
+            return 'None'
 
 
 class UIMainMenuAdmin(admin.ModelAdmin):

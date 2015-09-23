@@ -70,7 +70,7 @@ class UIMainMenu(models.Model):
 
     class Meta:
         db_table = 'ui_main_menu'
-        ordering = ['seqid']
+        ordering = ['group', 'seqid']
 
 
 class UISubMenu(models.Model):
