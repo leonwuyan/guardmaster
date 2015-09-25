@@ -344,14 +344,23 @@ def _inherit(
 def inherit_version(
         panel, server, hostname, platform,
         channel, version, user, update_id_list):
-    client_id_tmp = map(lambda x: x[0], update_id_list)
-    client_id_list = list(set(client_id_tmp))
-    client_id_list.sort()
+    # client_id_tmp = map(lambda x: x[0], update_id_list)
+    # client_id_list = list(set(client_id_tmp))
+    # client_id_list.sort()
+    version_id_tmp = map(lambda x: x[0], update_id_list)
+    version_id_list = range(1, max(version_id_tmp) + 1)
     if update_upload_work_order_lock(panel, hostname, platform, channel, LOCKING):
         try:
-            for client_id in client_id_list:
-                update_id_con = filter(lambda x: x[0] == client_id, update_id_list)
-                version[3] = str(update_id_con[0][1])
+            # for client_id in client_id_list:
+            #     update_id_con = filter(lambda x: x[0] == client_id, update_id_list)
+            #     version[3] = str(update_id_con[0][1])
+            #     update_id_con = map(lambda x: x[2], update_id_con)
+            #     _inherit(
+            #         panel, server, hostname, platform,
+            #         channel, version, user, update_id_con)
+            for version_id in version_id_list:
+                update_id_con = filter(lambda x: x[1] == version_id, update_id_list)
+                version[3] = str(version_id)
                 update_id_con = map(lambda x: x[2], update_id_con)
                 _inherit(
                     panel, server, hostname, platform,
