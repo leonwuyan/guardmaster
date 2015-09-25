@@ -347,7 +347,7 @@ def inherit_version(
     # client_id_tmp = map(lambda x: x[0], update_id_list)
     # client_id_list = list(set(client_id_tmp))
     # client_id_list.sort()
-    version_id_tmp = map(lambda x: x[0], update_id_list)
+    version_id_tmp = map(lambda x: x[1], update_id_list)
     version_id_list = range(1, max(version_id_tmp) + 1)
     if update_upload_work_order_lock(panel, hostname, platform, channel, LOCKING):
         try:
