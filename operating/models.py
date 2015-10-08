@@ -78,4 +78,4 @@ class Notify(models.Model):
         return self.title
 
     class Meta:
-        ordering = ['hostname', 'channel', 'platform', 'seqid']
+        ordering = ['seqid', 'hostname', 'channel', 'platform']
