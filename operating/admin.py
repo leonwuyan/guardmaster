@@ -5,7 +5,7 @@ from operating.models import Server, ResponseMail, Notify
 
 
 class ServerAdmin(admin.ModelAdmin):
-    list_display = ('label', 'panel', 'server_type', 'ip', 'hostname')
+    list_display = ('label', 'panel', 'server_type', 'ip', 'inetip', 'hostname')
     search_fields = ['label']
     list_filter = ['panel', 'server_type']
 
