@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2015-09-18 17:07+0800\n"
-"PO-Revision-Date: 2015-09-18 17:08+0800\n"
+"POT-Creation-Date: 2015-10-13 11:22+0800\n"
+"PO-Revision-Date: 2015-10-13 11:23+0800\n"
 "Last-Translator: Raynor <raynor41@gmail.com>\n"
 "Language-Team: \n"
 "Language: zh_CN\n"
@@ -34,11 +34,23 @@ msgstr "普通服务器"
 msgid "Update Server"
 msgstr "更新服务器"
 
-#: models.py:20
+#: models.py:15
+msgid "World Server"
+msgstr "World服务器"
+
+#: models.py:16
+msgid "Zone Server"
+msgstr "Zone服务器"
+
+#: models.py:17
+msgid "GameAll Server"
+msgstr "GameAll服务器"
+
+#: models.py:24
 msgid "GM Port, Usually Is 9135"
 msgstr "GM指令端口,通常为9135"
 
-#: models.py:21
+#: models.py:25
 msgid "SSH Port, Usually Is 22"
 msgstr "SSH指令端口,通常为22"
 
@@ -86,7 +98,7 @@ msgstr "购买魔素次数"
 msgid "Money"
 msgstr "宝石"
 
-#: templates/operating/base_info.html:13 templates/operating/mail.html:15
+#: templates/operating/base_info.html:13 templates/operating/mail.html:16
 msgid "Power"
 msgstr "体力"
 
@@ -94,7 +106,7 @@ msgstr "体力"
 msgid "Times Of Buy Power"
 msgstr "购买体力次数"
 
-#: templates/operating/base_info.html:15 templates/operating/mail.html:14
+#: templates/operating/base_info.html:15 templates/operating/mail.html:15
 msgid "Skill Point"
 msgstr "技能点数"
 
@@ -110,7 +122,7 @@ msgstr "无尽之塔层数"
 msgid "Endless' Score"
 msgstr "无尽之塔积分"
 
-#: templates/operating/base_info.html:19 templates/operating/mail.html:16
+#: templates/operating/base_info.html:19 templates/operating/mail.html:17
 msgid "Score Of Rank Battle"
 msgstr "排位赛积分"
 
@@ -138,7 +150,7 @@ msgstr "增加 100k"
 msgid "Add 10k"
 msgstr "增加 10k"
 
-#: templates/operating/base_info.html:26 templates/operating/mail.html:23
+#: templates/operating/base_info.html:26 templates/operating/mail.html:24
 #: templates/operating/notify.html:21
 msgid "Add"
 msgstr "添加"
@@ -386,7 +398,7 @@ msgstr "英雄信息"
 msgid "Hero ID"
 msgstr "英雄ID"
 
-#: templates/operating/hero_info.html:5 templates/operating/mail.html:20
+#: templates/operating/hero_info.html:5 templates/operating/mail.html:21
 msgid "Exp."
 msgstr "经验"
 
@@ -410,7 +422,7 @@ msgstr "装备的"
 msgid "Item Pos"
 msgstr "道具位置"
 
-#: templates/operating/hero_info.html:11 templates/operating/mail.html:21
+#: templates/operating/hero_info.html:11 templates/operating/mail.html:22
 #: templates/operating/package_info.html:6
 msgid "Level"
 msgstr "等级"
@@ -452,71 +464,75 @@ msgstr "以 , 分割"
 msgid "Accessory"
 msgstr "附件"
 
-#: templates/operating/mail.html:17 templates/operating/package_info.html:4
+#: templates/operating/mail.html:14
+msgid "WinPoint"
+msgstr "胜点"
+
+#: templates/operating/mail.html:18 templates/operating/package_info.html:4
 msgid "Item"
 msgstr "道具"
 
-#: templates/operating/mail.html:18
+#: templates/operating/mail.html:19
 msgid "Equip"
 msgstr "装备"
 
-#: templates/operating/mail.html:19 templates/operating/package_info.html:7
+#: templates/operating/mail.html:20 templates/operating/package_info.html:7
 msgid "Count"
 msgstr "数量"
 
-#: templates/operating/mail.html:22
+#: templates/operating/mail.html:23
 msgid "GrowUp"
 msgstr "升阶"
 
-#: templates/operating/mail.html:24
+#: templates/operating/mail.html:25
 msgid "None"
 msgstr "无"
 
-#: templates/operating/mail.html:25
+#: templates/operating/mail.html:26
 msgid "Limited 6 Kind Of Accessory"
 msgstr "最多只能添加6种附件"
 
-#: templates/operating/mail.html:26
+#: templates/operating/mail.html:27
 msgid "Accessory Include Item And Equip"
 msgstr "附件包含物品和装备"
 
-#: templates/operating/mail.html:27 templates/operating/notify.html:22
+#: templates/operating/mail.html:28 templates/operating/notify.html:22
 msgid "Success"
 msgstr "成功"
 
-#: templates/operating/mail.html:28
+#: templates/operating/mail.html:29
 msgid "Please Check The Response Of Sending Mail"
 msgstr "请检查发送邮件的回执状态"
 
-#: templates/operating/mail.html:29 templates/operating/notify.html:24
+#: templates/operating/mail.html:30 templates/operating/notify.html:24
 msgid "Fail"
 msgstr "失败"
 
-#: templates/operating/mail.html:30 templates/operating/notify.html:25
+#: templates/operating/mail.html:31 templates/operating/notify.html:25
 msgid "Please Check The Input Is Correct"
 msgstr "请检查输入是否正确"
 
-#: templates/operating/mail.html:31
+#: templates/operating/mail.html:32
 msgid "Send"
 msgstr "发送"
 
-#: templates/operating/mail.html:32
+#: templates/operating/mail.html:33
 msgid "The Response Of Sending Mail"
 msgstr "邮件回执状态"
 
-#: templates/operating/mail.html:33
+#: templates/operating/mail.html:34
 msgid "Server"
 msgstr "服务器"
 
-#: templates/operating/mail.html:34
+#: templates/operating/mail.html:35
 msgid "GuardMaster"
 msgstr "操作员"
 
-#: templates/operating/mail.html:35
+#: templates/operating/mail.html:36
 msgid "Pub Date"
 msgstr "发送日期"
 
-#: templates/operating/mail.html:36
+#: templates/operating/mail.html:37
 msgid "Lastest 20 Mails By Every Server"
 msgstr "每个服务器显示最后20条邮件"
 

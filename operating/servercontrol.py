@@ -185,6 +185,7 @@ class ServerControl(object):
         title = post.get('title', 'Title')
         content = post.get('content', 'Content')
         acc = []
+        print 'post :', post
         if post.get('crystal', None):
             crystal = int(post.get('crystal'))
             acc.append({'res_type': 1, 'res_id': 0, 'res_count': crystal})
@@ -203,6 +204,9 @@ class ServerControl(object):
         if post.get('score', None):
             score = int(post.get('score'))
             acc.append({'res_type': 11, 'res_id': 0, 'res_count': score})
+        if post.get('winpoint', None) and len(acc) < 6:
+            winpoint = int(post.get('winpoint'))
+            acc.append({'res_type': 14, 'res_id': 0, 'res_count': winpoint})
         if len(post.getlist('acc', [])) > 0:
             for k in post.getlist('acc'):
                 if len(acc) < 6:
@@ -213,6 +217,7 @@ class ServerControl(object):
                         'res_extern_param_1': d, 'res_extern_param_2': e,
                         'res_extern_param_3': f})
         ret = self._send_mail(title, content, acc)
+        print 'ret :', ret
         if ret['result'] != self.success['result']:
             return ret
         for p in ret['sucess_result']:
