@@ -81,11 +81,25 @@ def sh_remote_log(panel, t_p, request_get):
         _sh(cmd)
 
 
+def clac_panel_start_date(panel):
+    start_date = str(panel.start_date)
+    today = time.strftime('%Y-%m-%d', time.localtime(time.time()))
+    month_age = time.strftime('%Y-%m-%d', time.localtime(time.time()-2592000))
+    ret = {}
+    if start_date < month_age:
+        ret['start'] = month_age
+    else:
+        ret['start'] = start_date
+    ret['end'] = today
+    return ret
+
+
 def view_template_base(request, panel_id, url):
     excuse = random.choice(Excuse.objects.all())
     view_init()
 
     panel = get_object_or_404(Panel, pk=panel_id)
+    count_date = clac_panel_start_date(panel)
     sub_menu = Common.get_user_sub_menu(request.user, url)
     menus = Common.get_user_menus(request.user, int(panel_id))
 
@@ -98,6 +112,7 @@ def view_template_base(request, panel_id, url):
         'page': url,
         'panel': panel,
         'table_head': table_head,
+        'count_date': count_date,
     }
 
     return data

@@ -376,22 +376,10 @@
       	}
       }
     },
-    'initDate': function () {
+    'initDate': function (start, end) {
       if ($('input[name="start"]').length > 0) {
-      	var d = new Date();
-      	var year = d.getFullYear();
-      	var month_start = d.getMonth();
-        if (month_start == 0) {
-          month_start = 12;
-          year -= 1;
-        }
-        var month_end = d.getMonth() + 1;
-        if (month_start < 10) month_start = '0' + month_start;
-        if (month_end < 10) month_end = '0' + month_end;
-      	var day = d.getDate();
-      	if (day < 10) day = '0' + day;
-      	$('input[name="start"]').val(year + '-' + '06-27');
-      	$('input[name="end"]').val(year + '-' + month_end + '-' + day);
+      	$('input[name="start"]').val(start);
+      	$('input[name="end"]').val(end);
       }
       _queryButton.active('ul#zone-list li:first');
       _queryButton.active('ul#channel-list li:first');

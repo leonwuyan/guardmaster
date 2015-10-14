@@ -24,6 +24,7 @@ class Panel(models.Model):
     label = models.CharField(max_length=45, unique=True)
     groups = models.ManyToManyField(Group)
     db_aliases = models.CharField(max_length=45)
+    start_date = models.DateField()
     symbol = models.CharField(max_length=45)
 
     def __unicode__(self):
