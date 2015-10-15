@@ -15,6 +15,10 @@ urlpatterns = [
         views.patch,
         name='patch'),
     url(
+        r'^(?P<panel_id>[0-9]+)/control/(?P<url>[_A-Za-z]+)/$',
+        views.control,
+        name='control'),
+    url(
         r'^(?P<panel_id>[0-9]+)/(?P<hostname_id>[0-9]+)/(?P<platform>[a-z]+)/(?P<channel>[0-9]+)/(?P<version>[a-zA-Z]+).json$',
         views.version,
         name='version'),

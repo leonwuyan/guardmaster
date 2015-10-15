@@ -28,6 +28,14 @@ class Channel(models.Model):
         return str(self.label)
 
 
+class CIWP(models.Model):
+    label = models.CharField(max_length=45)
+    panel = models.ForeignKey(Panel)
+
+    def __unicode__(self):
+        return self.label
+
+
 class UpLoadWorkOrder(models.Model):
     hostname = models.CharField(max_length=45)
     platform = models.CharField(max_length=45)

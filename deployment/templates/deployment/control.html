@@ -1,0 +1,156 @@
+{% extends "detection/base.html" %}
+{% block content %}
+{% load custom i18n %}
+{% trans "Version" as t_version %}
+{% trans "Url" as t_url %}
+{% trans "Stage/Release/CIWP/Version" as t_s_r_c_v %}
+{% trans "Success" as t_success %}
+{% trans "Please Check The Response Of Upload Work Order" as t_p_c_t_r_o_u_w_o %}
+{% trans "Fail" as t_fail %}
+{% trans "Please Check The Input Is Correct" as t_p_c_t_i_i_c %}
+{% trans "Push" as t_push %}
+{% trans "The Response Of Upload Work Order" as t_t_r_o_u_w_o %}
+{% trans "The Following Inherited The Above" as t_t_f_i_t_a %}
+{% trans "Server" as t_server %}
+{% trans "GuardMaster" as t_guardmaster %}
+{% trans "Pub Date" as t_pub_date %}
+{% trans "Lastest 20 Upload Work Order By Every Server" as t_l_20_u_w_o_b_e_s %}
+{% trans "Progress" as t_progress %}
+{% trans "Result" as t_result %}
+{% trans "Start Date" as t_start_date %}
+{% trans "Stop Date" as t_stop_date %}
+<div class="container-fluid white-bg">
+  <div class="row">
+    <ol class="breadcrumb">
+      <li><a href="{{servlet}}/">{{panel.label}}</a></li>
+      <li class="active">{{ title }}</li>
+    </ol>
+
+    {% if message == 1 %}
+      <div class="alert alert-success alert-dismissible" role="alert">
+        <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <strong>{{t_success}}!</strong>&emsp;{{t_p_c_t_r_o_u_w_o}}
+      </div>
+    {% endif %}
+    {% if message == 2 %}
+      <div class="alert alert-danger alert-dismissible" role="alert">
+        <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <strong>{{t_fail}}!</strong>&emsp;{{t_p_c_t_i_i_c}}
+      </div>
+    {% endif %}
+
+    <form class="form" role="form" method="post">
+    {% csrf_token %}
+      <div class="form-group" style="margin-bottom: 5px">
+        <label>{{t_list_of_servers}}</label>
+        <select class="form-control" name="server">
+          {% for server in servers %}
+          <option value="{{server.id}}">{{server.label}}</option>
+          {% endfor %}
+        </select>
+      </div>
+      <div class="form-group">
+        <label>{{t_s_r_c_v}}</label>
+        <div class="row">
+          <div class="col-md-3">
+            <select class="form-control" name="stage" id="stage">
+              <option value="upgrade">upgrade</option>
+              <option value="new">new</option>
+            </select>
+          </div>
+          <div class="col-md-3">
+            <select class="form-control" name="release" id="release">
+              <option value="R">Release</option>
+              <option value="D">Debug</option>
+            </select>
+          </div>
+          <div class="col-md-3">
+            <select class="form-control" name="ciwp" id="ciwp">
+              {% for ciwp in ciwps %}
+              <option value="{{ciwp.label}}">{{ciwp.label}}</option>
+              {% endfor %}
+            </select>
+          </div>
+          <div class="col-md-3">
+            <input type="text" class="form-control" value="0" name="d" id="d">
+          </div>
+        </div>
+      </div>
+      <button type="submit" class="btn btn-primary btn-sm" onclick="return false;">{{t_push}}</button>
+    </form>
+
+    <div class="panel panel-default" style="margin-top: 50px">
+      <div class="panel-heading">{{t_t_r_o_u_w_o}}&emsp;<span class="label label-default">{{ t_l_20_u_w_o_b_e_s }}</span></div>
+      <div class="table-responsive">
+        <table class="table table-bordered table-condensed">
+            <thead>
+              <tr>
+              <th>{{ t_version }}</th>
+              <th>{{ t_h_p_c }}</th>
+              <th>{{ t_progress }}</th>
+              <th>{{ t_guardmaster }}</th>
+              <th>{{ t_result }}</th>
+              <th>{{ t_start_date }}</th>
+              <th>{{ t_stop_date }}</th>
+              </tr>
+            </thead>
+          <tbody>
+          {% for u in uploadworkorders %}
+          {% if u.status == 0 %}
+            <tr class="active">
+          {% endif %}
+          {% if u.status == 1 %}
+            <tr class="danger">
+          {% endif %}
+          {% if u.status == 2 %}
+            <tr class="success">
+          {% endif %}
+              <td>{{u.version}}</td>
+              <td>{{u.hostname}}/{{u.platform}}/{{u.channel}}</td>
+              <td>{{u.progress}}%</td>
+              <td>{{u.user}}</td>
+              <td>{{u.result|result_label}}</td>
+              <td>{{u.start_date}}</td>
+              <td>{{u.stop_date}}</td>
+            </tr>
+          {% endfor %}
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+  <center style='color: #999; padding-top: 20px; font-family: "arial","NSimSun","SimSun","STSong","AR PL SungtiL GB","TW\-Sung","WenQuanYi Bitmap Song"; font-size: 14px; font-weight: bold;'>{{excuse}}</center>
+</div>
+<script type="text/javascript">
+  function select_change(inherit) {
+    itmp = 1
+    url = window.location.pathname;
+    if (url.lastIndexOf("inherit") > 0) itmp = 0
+    hostname = $('#'+ inherit +'hostname').val();
+    platform = $('#'+ inherit +'platform').val();
+    channel = $('#'+ inherit +'channel').val();
+    deployment.last_version(hostname, platform, channel, inherit, itmp);
+  }
+  function select_init() {
+    url = window.location.pathname;
+    if (url.lastIndexOf("app") > 0) {
+      $('#a').removeAttr('readonly');
+      $('#b').removeAttr('readonly');
+      $('#c').removeAttr('readonly');
+      $('#d').attr('readonly', 'readonly');
+      $('#d').val('0')
+    }
+    if (url.lastIndexOf("inherit") > 0) {
+      $('#d').attr('readonly', 'readonly');
+    }
+  }
+  $(document).ready(function() {
+    management.numberOnly("input[name='a']");
+    management.numberOnly("input[name='b']");
+    management.numberOnly("input[name='c']");
+    management.numberOnly("input[name='d']");
+    //select_change()
+    select_init()
+  });
+</script>
+{% endblock %}

@@ -154,3 +154,14 @@ def config(request, panel_id, url, tpltemplate_id=0):
         tpltemplate = TplTemplate.objects.all()
         d['tpltemplate'] = tpltemplate
     return render(request, t, d)
+
+
+@Common.competence_required
+def control(request, panel_id, url):
+    t = "deployment/control.html"
+    d = view_template_base(request, panel_id, url)
+    panel = get_object_or_404(Panel, pk=panel_id)
+    tmp = panel.server_set.all()
+    d['servers'] = filter(lambda x: x.server_type != 'update', tmp)
+    d['ciwps'] = panel.ciwp_set.all()
+    return render(request, t, d)
