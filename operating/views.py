@@ -33,6 +33,13 @@ def enum_channel_list(panel_id):
     return Common.E_CHANNELID_LIST
 
 
+def enum_package_channel_list(panel_id):
+    if Common.E_PACKAGECHANNEL_LIST is None:
+        Common.E_PACKAGECHANNEL_LIST = Tabel.get_enum(
+            panel_id, Common.E_PACKAGECHANNEL)
+    return Common.E_PACKAGECHANNEL_LIST
+
+
 def enum_zone_list(panel_id):
     if Common.E_ZONEID_LIST is None:
         Common.E_ZONEID_LIST = Tabel.get_enum(panel_id, Common.E_ZONEID)
@@ -52,7 +59,7 @@ def notify(request, panel_id, url=Common.URL):
     panel = get_object_or_404(Panel, pk=panel_id)
     d['servers'] = panel.server_set.filter(server_type='dir')
     d['notifys'] = panel.notify_set.all()
-    d['channels'] = enum_channel_list(panel_id)
+    d['channels'] = enum_package_channel_list(panel_id)
     d['zones'] = enum_zone_list(panel_id)
     d['url'] = url
     if request.method == 'POST':
@@ -72,7 +79,7 @@ def edit_notify(request, panel_id, id):
         notify = get_object_or_404(Notify, pk=id)
         d['servers'] = panel.server_set.filter(server_type='dir')
         d['notifys'] = panel.notify_set.all()
-        d['channels'] = enum_channel_list(panel_id)
+        d['channels'] = enum_package_channel_list(panel_id)
         d['zones'] = enum_zone_list(panel_id)
         d['url'] = url
         notify.start = Common.datetime2string(notify.start, 28800)
