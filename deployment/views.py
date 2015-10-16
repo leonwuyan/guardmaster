@@ -9,6 +9,7 @@ from django.views.generic import View
 from deployment.tasks import upload_version, inherit_version, get_client_id, make_cfg
 from deployment.models import HostName, TplTemplate, TplItem
 from deployment.version import Version
+from deployment.control import server_control
 import json
 
 
@@ -162,6 +163,41 @@ def control(request, panel_id, url):
     d = view_template_base(request, panel_id, url)
     panel = get_object_or_404(Panel, pk=panel_id)
     tmp = panel.server_set.all()
+    d['url'] = url
     d['servers'] = filter(lambda x: x.server_type != 'update', tmp)
+    if url == 'version':
+        d['servers'] = filter(lambda x: x.server_type == 'dir', tmp)
     d['ciwps'] = panel.ciwp_set.all()
+    d['servercontrolworkorders'] = panel.servercontrolworkorder_set.all()[:20]
+    if request.method == 'POST':
+        server_id = int(request.POST['server'])
+        if url == 'server':
+            fn = '_deployment'
+            package = {
+                'panel': panel,
+                'server': get_object_or_404(Server, pk=server_id),
+                'parameter1': request.POST['stage'],
+                'parameter2': request.POST['release'],
+                'parameter3': request.POST['ciwp'],
+                'parameter4': request.POST['version'],
+                'user': request.user,
+            }
+        if url == 'version':
+            fn = '_change_version'
+            commitvers = "{0}:{1}".format(
+                request.POST['commitvers_from'], request.POST['commitvers_to'])
+            gmvers = "{0}:{1}".format(
+                request.POST['gmvers_from'], request.POST['gmvers_to'])
+            package = {
+                'panel': panel,
+                'server': get_object_or_404(Server, pk=server_id),
+                'parameter1': request.POST['platform'],
+                'parameter2': request.POST['chgtype'],
+                'parameter3': commitvers,
+                'parameter4': gmvers,
+                'user': request.user,
+            }
+        server_control(fn, package)
+        return HttpResponseRedirect(
+            reverse('deployment:control', args=(panel_id, url)))
     return render(request, t, d)

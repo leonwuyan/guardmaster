@@ -101,3 +101,35 @@ class TplItem(models.Model):
     class Meta:
         db_table = 'tpl_item'
         ordering = ['seqid', 'module_seqid']
+
+
+class ServerControlWorkOrder(models.Model):
+    server = models.CharField(max_length=45)
+    parameter1 = models.CharField(max_length=45)
+    parameter2 = models.CharField(max_length=45)
+    parameter3 = models.CharField(max_length=45)
+    parameter4 = models.CharField(max_length=45)
+    progress = models.IntegerField()
+    start_date = models.DateTimeField()
+    stop_date = models.DateTimeField(blank=True, null=True)
+    user = models.CharField(max_length=45)
+    result = models.CharField(max_length=255)
+    panel = models.ForeignKey(Panel)
+    status = models.IntegerField()
+
+    def __unicode__(self):
+        return '{0} - {1}/{2}/{3}/{4}'.format(
+            self.server, self.parameter1, self.parameter2,
+            self.parameter3, self.parameter4)
+
+    class Meta:
+        ordering = ['-id']
+
+
+class ServerControlWorkOrderLock(models.Model):
+    server = models.CharField(max_length=45)
+    status = models.IntegerField()
+    panel = models.ForeignKey(Panel)
+
+    def __unicode__(self):
+        return self.server

@@ -54,6 +54,7 @@ coverage.xml
 *.log
 log/
 output/
+script/
 # Sphinx documentation
 docs/_build/
 

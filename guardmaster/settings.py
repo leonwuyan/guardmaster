@@ -311,5 +311,10 @@ LOGGING = {
             'level': 'INFO',
             'propagate': True
         },
+        'deployment.control': {
+            'handlers': ['shell', 'error'],
+            'level': 'INFO',
+            'propagate': True
+        },
     }
 }

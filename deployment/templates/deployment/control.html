@@ -4,17 +4,19 @@
 {% trans "Version" as t_version %}
 {% trans "Url" as t_url %}
 {% trans "Stage/Release/CIWP/Version" as t_s_r_c_v %}
-{% trans "Success" as t_success %}
-{% trans "Please Check The Response Of Upload Work Order" as t_p_c_t_r_o_u_w_o %}
+{% trans "Parameters" as t_parameters %}
+{% trans "Platform/ChgType" as t_p_c %}
+{% trans "CommitVers" as t_commitvers %}
+{% trans "GMVers" as t_gmvers %}
 {% trans "Fail" as t_fail %}
 {% trans "Please Check The Input Is Correct" as t_p_c_t_i_i_c %}
 {% trans "Push" as t_push %}
-{% trans "The Response Of Upload Work Order" as t_t_r_o_u_w_o %}
-{% trans "The Following Inherited The Above" as t_t_f_i_t_a %}
+{% trans "Deployment" as t_deployment %}
+{% trans "The Response Of Server Control Order" as t_t_r_o_s_c_o %}
 {% trans "Server" as t_server %}
 {% trans "GuardMaster" as t_guardmaster %}
 {% trans "Pub Date" as t_pub_date %}
-{% trans "Lastest 20 Upload Work Order By Every Server" as t_l_20_u_w_o_b_e_s %}
+{% trans "Lastest 20 Server Control Order By Every Server" as t_l_20_s_c_o_b_e_s %}
 {% trans "Progress" as t_progress %}
 {% trans "Result" as t_result %}
 {% trans "Start Date" as t_start_date %}
@@ -26,12 +28,6 @@
       <li class="active">{{ title }}</li>
     </ol>
 
-    {% if message == 1 %}
-      <div class="alert alert-success alert-dismissible" role="alert">
-        <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-        <strong>{{t_success}}!</strong>&emsp;{{t_p_c_t_r_o_u_w_o}}
-      </div>
-    {% endif %}
     {% if message == 2 %}
       <div class="alert alert-danger alert-dismissible" role="alert">
         <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
@@ -43,12 +39,13 @@
     {% csrf_token %}
       <div class="form-group" style="margin-bottom: 5px">
         <label>{{t_list_of_servers}}</label>
-        <select class="form-control" name="server">
+        <select class="form-control" name="server" id="server">
           {% for server in servers %}
           <option value="{{server.id}}">{{server.label}}</option>
           {% endfor %}
         </select>
       </div>
+      {% ifequal url 'server'  %}
       <div class="form-group">
         <label>{{t_s_r_c_v}}</label>
         <div class="row">
@@ -72,21 +69,70 @@
             </select>
           </div>
           <div class="col-md-3">
-            <input type="text" class="form-control" value="0" name="d" id="d">
+            <input type="text" class="form-control" value="0" name="version" id="version">
           </div>
         </div>
       </div>
-      <button type="submit" class="btn btn-primary btn-sm" onclick="return false;">{{t_push}}</button>
+      <button type="submit" class="btn btn-primary btn-sm" onclick="return deployment.serverControlConfirm();">{{t_deployment}}</button>
+      {% endifequal %}
+      {% ifequal url 'version'  %}
+      <div class="form-group" style="margin-bottom: 5px">
+        <label>{{t_p_c}}</label>
+        <div class="row">
+          <div class="col-md-6">
+            <select class="form-control" name="platform" id="platform" onchange="platform_select();">
+              <option value="ios">iOS</option>
+              <option value="android">Android</option>
+            </select>
+          </div>
+          <div class="col-md-6">
+            <select class="form-control" name="chgtype" id="chgtype">
+              <option value="GM">游戏</option>
+              <option value="COM">提审</option>
+            </select>
+          </div>
+        </div>
+      </div>
+      <div class="form-group" style="margin-bottom: 5px">
+        <label>{{t_commitvers}}</label>
+        <div class="row">
+          <div class="col-md-5">
+            <input type="text" class="form-control" value="2.1.0.0" name="commitvers_from" id="commitvers_from">
+          </div>
+          <div class="col-md-2" style="text-align: center; line-height: 34px;">
+            <span>===>>></span>
+          </div>
+          <div class="col-md-5">
+            <input type="text" class="form-control" value="0.0.0.0" name="commitvers_to" id="commitvers_to">
+          </div>
+        </div>
+      </div>
+      <div class="form-group">
+        <label>{{t_gmvers}}</label>
+        <div class="row">
+          <div class="col-md-5">
+            <input type="text" class="form-control" value="1.1.0.0" name="gmvers_from" id="gmvers_from">
+          </div>
+          <div class="col-md-2" style="text-align: center; line-height: 34px;">
+            <span>===>>></span>
+          </div>
+          <div class="col-md-5">
+            <input type="text" class="form-control" value="0.0.0.0" name="gmvers_to" id="gmvers_to">
+          </div>
+        </div>
+      </div>
+      <button type="submit" class="btn btn-primary btn-sm" onclick="return deployment.versionControlConfirm();">{{t_deployment}}</button>
+      {% endifequal %}
     </form>
 
     <div class="panel panel-default" style="margin-top: 50px">
-      <div class="panel-heading">{{t_t_r_o_u_w_o}}&emsp;<span class="label label-default">{{ t_l_20_u_w_o_b_e_s }}</span></div>
+      <div class="panel-heading">{{t_t_r_o_s_c_o}}&emsp;<span class="label label-default">{{ t_l_20_s_c_o_b_e_s }}</span></div>
       <div class="table-responsive">
         <table class="table table-bordered table-condensed">
             <thead>
               <tr>
-              <th>{{ t_version }}</th>
-              <th>{{ t_h_p_c }}</th>
+              <th>{{ t_server }}</th>
+              <th>{{ t_parameters }}</th>
               <th>{{ t_progress }}</th>
               <th>{{ t_guardmaster }}</th>
               <th>{{ t_result }}</th>
@@ -95,23 +141,23 @@
               </tr>
             </thead>
           <tbody>
-          {% for u in uploadworkorders %}
-          {% if u.status == 0 %}
+          {% for s in servercontrolworkorders %}
+          {% if s.status == 0 %}
             <tr class="active">
           {% endif %}
-          {% if u.status == 1 %}
+          {% if s.status == 1 %}
             <tr class="danger">
           {% endif %}
-          {% if u.status == 2 %}
+          {% if s.status == 2 %}
             <tr class="success">
           {% endif %}
-              <td>{{u.version}}</td>
-              <td>{{u.hostname}}/{{u.platform}}/{{u.channel}}</td>
-              <td>{{u.progress}}%</td>
-              <td>{{u.user}}</td>
-              <td>{{u.result|result_label}}</td>
-              <td>{{u.start_date}}</td>
-              <td>{{u.stop_date}}</td>
+              <td>{{s.server}}</td>
+              <td>{{s.parameter1}}/{{s.parameter2}}/{{s.parameter3}}/{{s.parameter4}}</td>
+              <td>{{s.progress}}%</td>
+              <td>{{s.user}}</td>
+              <td>{{s.result|result_label}}</td>
+              <td>{{s.start_date}}</td>
+              <td>{{s.stop_date}}</td>
             </tr>
           {% endfor %}
           </tbody>
@@ -122,35 +168,17 @@
   <center style='color: #999; padding-top: 20px; font-family: "arial","NSimSun","SimSun","STSong","AR PL SungtiL GB","TW\-Sung","WenQuanYi Bitmap Song"; font-size: 14px; font-weight: bold;'>{{excuse}}</center>
 </div>
 <script type="text/javascript">
-  function select_change(inherit) {
-    itmp = 1
-    url = window.location.pathname;
-    if (url.lastIndexOf("inherit") > 0) itmp = 0
-    hostname = $('#'+ inherit +'hostname').val();
-    platform = $('#'+ inherit +'platform').val();
-    channel = $('#'+ inherit +'channel').val();
-    deployment.last_version(hostname, platform, channel, inherit, itmp);
+function platform_select(){
+  tmp = $('#platform').find("option:selected").text()
+  if (tmp == 'iOS'){
+    $('#commitvers_from').val('2.1.0.0')
+  } else {
+    $('#commitvers_from').val('2.2.0.0')
   }
-  function select_init() {
-    url = window.location.pathname;
-    if (url.lastIndexOf("app") > 0) {
-      $('#a').removeAttr('readonly');
-      $('#b').removeAttr('readonly');
-      $('#c').removeAttr('readonly');
-      $('#d').attr('readonly', 'readonly');
-      $('#d').val('0')
-    }
-    if (url.lastIndexOf("inherit") > 0) {
-      $('#d').attr('readonly', 'readonly');
-    }
-  }
+}
   $(document).ready(function() {
-    management.numberOnly("input[name='a']");
-    management.numberOnly("input[name='b']");
-    management.numberOnly("input[name='c']");
-    management.numberOnly("input[name='d']");
-    //select_change()
-    select_init()
+    management.numberOnly("input[name='version']");
+    platform_select();
   });
 </script>
 {% endblock %}

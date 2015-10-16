@@ -498,6 +498,36 @@
       if (!confirm(s)) {
         return false;
       }
+    },
+    'serverControlConfirm': function() {
+      fmts = gettext('Please Confirm This:\nServer :%(se)s\nStage :%(st)s\nRelease :%(re)s\nCIWP :%(ci)s\nVersion :%(ve)s');
+      t = {
+        'se':$('#server').find("option:selected").text(),
+        'st':$('#stage').val(),
+        're':$('#release').val(),
+        'ci':$('#ciwp').val(),
+        've':$('#version').val()
+      }
+      s = interpolate(fmts, t, true);
+      if (!confirm(s)) {
+        return false;
+      }
+    },
+    'versionControlConfirm': function() {
+      fmts = gettext('Please Confirm This:\nServer :%(se)s\nPlatform :%(pl)s\nChgType :%(ch)s\nCommitVers :%(co_f)s => %(co_t)s\nGMVers :%(gm_f)s => %(gm_t)s');
+      t = {
+        'se':$('#server').find("option:selected").text(),
+        'pl':$('#platform').find("option:selected").text(),
+        'ch':$('#chgtype').find("option:selected").text(),
+        'co_f':$('#commitvers_from').val(),
+        'co_t':$('#commitvers_to').val(),
+        'gm_f':$('#gmvers_from').val(),
+        'gm_t':$('#gmvers_to').val()
+      }
+      s = interpolate(fmts, t, true);
+      if (!confirm(s)) {
+        return false;
+      }
     }
   };
   window.dataAccess = _dataAccess;

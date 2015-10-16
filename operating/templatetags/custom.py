@@ -192,6 +192,7 @@ def result_label(result):
         'Not Any Files': _('Not Any Files'),
         'Error In Scp': _('Error In Scp'),
         'Working': _('Working'),
+        'Error In Srcipt': _('Error In Srcipt'),
     }
     return r[result]
 

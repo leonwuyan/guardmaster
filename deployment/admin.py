@@ -1,5 +1,5 @@
 from django.contrib import admin
-from deployment.models import HostName, Platform, Channel, UpLoadWorkOrder, UpLoadWorkOrderLock, TplItem, TplTemplate, CIWP
+from deployment.models import HostName, Platform, Channel, UpLoadWorkOrder, UpLoadWorkOrderLock, TplItem, TplTemplate, CIWP, ServerControlWorkOrder, ServerControlWorkOrderLock
 
 
 class HostNameAdmin(admin.ModelAdmin):
@@ -68,6 +68,36 @@ class TplTemplateAdmin(admin.ModelAdmin):
     inlines = [TplItemInline]
     list_display = ('tpl_type', 'out_file_type', 'out_name_mask', 'out_dir', 'saved_path')
 
+
+class ServerControlWorkOrderAdmin(admin.ModelAdmin):
+    list_display = (
+        'server',
+        'panel',
+        'parameter',
+        'date',
+        'progress',
+        'result',
+        'user')
+    list_filter = ['panel', 'server']
+
+    def parameter(self, obj):
+        return '{0}/{1}/{2}/{3}'.format(
+            obj.parameter1, obj.parameter2, obj.parameter3, obj.parameter4)
+
+    def date(self, obj):
+        return '{0} - {1}'.format(obj.start_date, obj.stop_date)
+
+
+class ServerControlWorkOrderLockAdmin(admin.ModelAdmin):
+    list_display = ('server', 'status_label', 'panel')
+    list_filter = ['panel', 'server']
+
+    def status_label(self, obj):
+        if obj.status == 0:
+            return 'UNLOCK'
+        else:
+            return 'LOCKING'
+
 admin.site.register(HostName, HostNameAdmin)
 admin.site.register(Platform, PlatformAdmin)
 admin.site.register(Channel, ChannelAdmin)
@@ -76,3 +106,5 @@ admin.site.register(UpLoadWorkOrder, UpLoadworkOrderAdmin)
 admin.site.register(UpLoadWorkOrderLock, UpLoadworkOrderLockAdmin)
 admin.site.register(TplItem, TplItemAdmin)
 admin.site.register(TplTemplate, TplTemplateAdmin)
+admin.site.register(ServerControlWorkOrder, ServerControlWorkOrderAdmin)
+admin.site.register(ServerControlWorkOrderLock, ServerControlWorkOrderLockAdmin)
