@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2015-09-08 20:31+0800\n"
+"POT-Creation-Date: 2015-10-16 17:03+0800\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -17,12 +17,88 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 
-#: templates/deployment/patch.html:4
+#: templates/deployment/config.html:4 templates/deployment/control.html:14
+msgid "Deploy"
+msgstr ""
+
+#: templates/deployment/config.html:5
+msgid "No Item Needed"
+msgstr ""
+
+#: templates/deployment/control.html:4 templates/deployment/patch.html:4
 msgid "Version"
 msgstr ""
 
-#: templates/deployment/patch.html:5
+#: templates/deployment/control.html:5 templates/deployment/patch.html:5
 msgid "Url"
+msgstr ""
+
+#: templates/deployment/control.html:6
+msgid "Stage/Release/CIWP/Version"
+msgstr ""
+
+#: templates/deployment/control.html:7
+msgid "Parameters"
+msgstr ""
+
+#: templates/deployment/control.html:8
+msgid "Platform/ChgType"
+msgstr ""
+
+#: templates/deployment/control.html:9
+msgid "CommitVers"
+msgstr ""
+
+#: templates/deployment/control.html:10
+msgid "GMVers"
+msgstr ""
+
+#: templates/deployment/control.html:11 templates/deployment/patch.html:9
+msgid "Fail"
+msgstr ""
+
+#: templates/deployment/control.html:12 templates/deployment/patch.html:10
+msgid "Please Check The Input Is Correct"
+msgstr ""
+
+#: templates/deployment/control.html:13 templates/deployment/patch.html:11
+msgid "Push"
+msgstr ""
+
+#: templates/deployment/control.html:15
+msgid "The Response Of Server Control Order"
+msgstr ""
+
+#: templates/deployment/control.html:16 templates/deployment/patch.html:14
+msgid "Server"
+msgstr ""
+
+#: templates/deployment/control.html:17 templates/deployment/patch.html:15
+msgid "GuardMaster"
+msgstr ""
+
+#: templates/deployment/control.html:18 templates/deployment/patch.html:16
+msgid "Pub Date"
+msgstr ""
+
+#: templates/deployment/control.html:19
+msgid "Lastest 20 Server Control Order By Every Server"
+msgstr ""
+
+#: templates/deployment/control.html:20 templates/deployment/patch.html:18
+msgid "Progress"
+msgstr ""
+
+#: templates/deployment/control.html:21 templates/deployment/patch.html:19
+msgid "Result"
+msgstr ""
+
+#: templates/deployment/control.html:22 templates/deployment/patch.html:20
+msgid "Start Date"
+msgstr ""
+
+#: templates/deployment/control.html:23 templates/deployment/patch.html:21
+msgid "Stop Date"
 msgstr ""
 
 #: templates/deployment/patch.html:6
@@ -37,18 +113,6 @@ msgstr ""
 msgid "Please Check The Response Of Upload Work Order"
 msgstr ""
 
-#: templates/deployment/patch.html:9
-msgid "Fail"
-msgstr ""
-
-#: templates/deployment/patch.html:10
-msgid "Please Check The Input Is Correct"
-msgstr ""
-
-#: templates/deployment/patch.html:11
-msgid "Push"
-msgstr ""
-
 #: templates/deployment/patch.html:12
 msgid "The Response Of Upload Work Order"
 msgstr ""
@@ -57,34 +121,6 @@ msgstr ""
 msgid "The Following Inherited The Above"
 msgstr ""
 
-#: templates/deployment/patch.html:14
-msgid "Server"
-msgstr ""
-
-#: templates/deployment/patch.html:15
-msgid "GuardMaster"
-msgstr ""
-
-#: templates/deployment/patch.html:16
-msgid "Pub Date"
-msgstr ""
-
 #: templates/deployment/patch.html:17
 msgid "Lastest 20 Upload Work Order By Every Server"
-msgstr ""
-
-#: templates/deployment/patch.html:18
-msgid "Progress"
-msgstr ""
-
-#: templates/deployment/patch.html:19
-msgid "Result"
-msgstr ""
-
-#: templates/deployment/patch.html:20
-msgid "Start Date"
-msgstr ""
-
-#: templates/deployment/patch.html:21
-msgid "Stop Date"
 msgstr ""

@@ -11,7 +11,7 @@
 {% trans "Fail" as t_fail %}
 {% trans "Please Check The Input Is Correct" as t_p_c_t_i_i_c %}
 {% trans "Push" as t_push %}
-{% trans "Deployment" as t_deployment %}
+{% trans "Deploy" as t_deploy %}
 {% trans "The Response Of Server Control Order" as t_t_r_o_s_c_o %}
 {% trans "Server" as t_server %}
 {% trans "GuardMaster" as t_guardmaster %}
@@ -73,7 +73,7 @@
           </div>
         </div>
       </div>
-      <button type="submit" class="btn btn-primary btn-sm" onclick="return deployment.serverControlConfirm();">{{t_deployment}}</button>
+      <button type="submit" class="btn btn-primary btn-sm" onclick="return deployment.serverControlConfirm();">{{t_deploy}}</button>
       {% endifequal %}
       {% ifequal url 'version'  %}
       <div class="form-group" style="margin-bottom: 5px">
@@ -121,7 +121,7 @@
           </div>
         </div>
       </div>
-      <button type="submit" class="btn btn-primary btn-sm" onclick="return deployment.versionControlConfirm();">{{t_deployment}}</button>
+      <button type="submit" class="btn btn-primary btn-sm" onclick="return deployment.versionControlConfirm();">{{t_deploy}}</button>
       {% endifequal %}
     </form>
 

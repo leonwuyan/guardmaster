@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2015-09-08 20:31+0800\n"
-"PO-Revision-Date: 2015-09-08 20:32+0800\n"
+"POT-Creation-Date: 2015-10-16 17:03+0800\n"
+"PO-Revision-Date: 2015-10-16 17:06+0800\n"
 "Last-Translator: Raynor <raynor41@gmail.com>\n"
 "Language-Team: \n"
 "Language: zh_CN\n"
@@ -18,13 +18,89 @@ msgstr ""
 "Plural-Forms: nplurals=1; plural=0;\n"
 "X-Generator: Poedit 1.7.6\n"
 
-#: templates/deployment/patch.html:4
+#: templates/deployment/config.html:4 templates/deployment/control.html:14
+msgid "Deploy"
+msgstr "部署"
+
+#: templates/deployment/config.html:5
+msgid "No Item Needed"
+msgstr "没有内容"
+
+#: templates/deployment/control.html:4 templates/deployment/patch.html:4
 msgid "Version"
 msgstr "客户端版本"
 
-#: templates/deployment/patch.html:5
+#: templates/deployment/control.html:5 templates/deployment/patch.html:5
 msgid "Url"
 msgstr "网址"
+
+#: templates/deployment/control.html:6
+msgid "Stage/Release/CIWP/Version"
+msgstr "Stage/Release/CIWP/Version"
+
+#: templates/deployment/control.html:7
+msgid "Parameters"
+msgstr "参数"
+
+#: templates/deployment/control.html:8
+msgid "Platform/ChgType"
+msgstr "平台/变更类型"
+
+#: templates/deployment/control.html:9
+msgid "CommitVers"
+msgstr "校验版本"
+
+#: templates/deployment/control.html:10
+msgid "GMVers"
+msgstr "游戏服务器版本"
+
+#: templates/deployment/control.html:11 templates/deployment/patch.html:9
+msgid "Fail"
+msgstr "失败"
+
+#: templates/deployment/control.html:12 templates/deployment/patch.html:10
+msgid "Please Check The Input Is Correct"
+msgstr "请检查输入是否正确"
+
+#: templates/deployment/control.html:13 templates/deployment/patch.html:11
+msgid "Push"
+msgstr "上传"
+
+#: templates/deployment/control.html:15
+msgid "The Response Of Server Control Order"
+msgstr "控制工单的回执"
+
+#: templates/deployment/control.html:16 templates/deployment/patch.html:14
+msgid "Server"
+msgstr "服务器"
+
+#: templates/deployment/control.html:17 templates/deployment/patch.html:15
+msgid "GuardMaster"
+msgstr "操作员"
+
+#: templates/deployment/control.html:18 templates/deployment/patch.html:16
+msgid "Pub Date"
+msgstr "发送日期"
+
+#: templates/deployment/control.html:19
+msgid "Lastest 20 Server Control Order By Every Server"
+msgstr "每个服务器显示最后20条控制工单"
+
+#: templates/deployment/control.html:20 templates/deployment/patch.html:18
+msgid "Progress"
+msgstr "进度"
+
+#: templates/deployment/control.html:21 templates/deployment/patch.html:19
+msgid "Result"
+msgstr "结果"
+
+#: templates/deployment/control.html:22 templates/deployment/patch.html:20
+msgid "Start Date"
+msgstr "开始时间"
+
+#: templates/deployment/control.html:23 templates/deployment/patch.html:21
+msgid "Stop Date"
+msgstr "结束时间"
 
 #: templates/deployment/patch.html:6
 msgid "Hostname/Platform/Channel"
@@ -38,18 +114,6 @@ msgstr "成功"
 msgid "Please Check The Response Of Upload Work Order"
 msgstr "请检查上传工单的回执状态"
 
-#: templates/deployment/patch.html:9
-msgid "Fail"
-msgstr "失败"
-
-#: templates/deployment/patch.html:10
-msgid "Please Check The Input Is Correct"
-msgstr "请检查输入是否正确"
-
-#: templates/deployment/patch.html:11
-msgid "Push"
-msgstr "上传"
-
 #: templates/deployment/patch.html:12
 msgid "The Response Of Upload Work Order"
 msgstr "上传工单的回执"
@@ -58,37 +122,9 @@ msgstr "上传工单的回执"
 msgid "The Following Inherited The Above"
 msgstr "下面的版本信息继承于上面的版本信息"
 
-#: templates/deployment/patch.html:14
-msgid "Server"
-msgstr "服务器"
-
-#: templates/deployment/patch.html:15
-msgid "GuardMaster"
-msgstr "操作员"
-
-#: templates/deployment/patch.html:16
-msgid "Pub Date"
-msgstr "发送日期"
-
 #: templates/deployment/patch.html:17
 msgid "Lastest 20 Upload Work Order By Every Server"
 msgstr "每个服务器显示最后20条上传工单"
-
-#: templates/deployment/patch.html:18
-msgid "Progress"
-msgstr "进度"
-
-#: templates/deployment/patch.html:19
-msgid "Result"
-msgstr "结果"
-
-#: templates/deployment/patch.html:20
-msgid "Start Date"
-msgstr "开始时间"
-
-#: templates/deployment/patch.html:21
-msgid "Stop Date"
-msgstr "结束时间"
 
 #~ msgid "Dir Server"
 #~ msgstr "Dir 服务器"
@@ -318,9 +354,6 @@ msgstr "结束时间"
 #~ msgid "Channel ID"
 #~ msgstr "渠道"
 
-#~ msgid "Platform"
-#~ msgstr "平台"
-
 #~ msgid "Issue Type"
 #~ msgstr "问题类型"
 
@@ -521,9 +554,6 @@ msgstr "结束时间"
 
 #~ msgid "Function Type"
 #~ msgstr "道具功能类型"
-
-#~ msgid "Item Name"
-#~ msgstr "道具名称"
 
 #~ msgid "Type"
 #~ msgstr "类型"
