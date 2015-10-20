@@ -26,6 +26,7 @@ def view_init():
     Common.E_SKILLID_LIST = None
     Common.E_ZONEID_LIST = None
     Common.E_PAYCHANNEL_LIST = None
+    Common.E_PACKAGECHANNEL_LIST = None
 
 
 def _sh(cmd):
