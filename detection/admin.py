@@ -27,7 +27,7 @@ class UISubMenuAdmin(admin.ModelAdmin):
     inlines = [UIColMapInline]
     list_display = (
         'label',
-        'show_panel',
+        'get_main_menu_id',
         'main_menu',
         'url',
         'table_name',
@@ -36,17 +36,17 @@ class UISubMenuAdmin(admin.ModelAdmin):
     search_fields = ['label']
     list_filter = ['category']
 
-    def show_panel(self, obj):
+    def get_main_menu_id(self, obj):
         m = obj.main_menu
         if m:
-            return obj.main_menu.group.name
+            return obj.main_menu.id
         else:
             return 'None'
 
 
 class UIMainMenuAdmin(admin.ModelAdmin):
     inlines = [UISubMenuInline]
-    list_display = ('label', 'group', 'panels_list', 'seqid')
+    list_display = ('label', 'group_list', 'panels_list', 'seqid')
     search_fields = ['label']
     list_filter = ['group', 'panels']
 
@@ -55,6 +55,12 @@ class UIMainMenuAdmin(admin.ModelAdmin):
         for panel in obj.panels.all():
             panels += panel.label + ' | '
         return panels
+
+    def group_list(self, obj):
+        groups = ""
+        for g in obj.group.all():
+            groups += g.name + ' | '
+        return groups
 
 
 class PanelAdmin(admin.ModelAdmin):

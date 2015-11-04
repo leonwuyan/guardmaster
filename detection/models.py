@@ -40,7 +40,7 @@ class Panel(models.Model):
 
 class UIMainMenu(models.Model):
     label = models.CharField(max_length=45)
-    group = models.ForeignKey(Group)
+    group = models.ManyToManyField(Group)
     panels = models.ManyToManyField(Panel)
     seqid = models.IntegerField()
 
@@ -71,7 +71,7 @@ class UIMainMenu(models.Model):
 
     class Meta:
         db_table = 'ui_main_menu'
-        ordering = ['group', 'seqid']
+        ordering = ['seqid']
 
 
 class UISubMenu(models.Model):
