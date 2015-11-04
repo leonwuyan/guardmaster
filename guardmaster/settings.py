@@ -196,6 +196,30 @@ DATABASES = {
         'HOST': '61.174.10.19',
         'PORT': '3306',
     },
+    'db_cyzrtx_statdb': {
+        'ENGINE': 'django.db.backends.mysql',
+        'NAME': 'db_cyzrtx_statdb',
+        'USER': 'act',
+        'PASSWORD': '91act@b7',
+        'HOST': '119.29.100.196',
+        'PORT': '8791',
+    },
+    'db_cyzr37_statdb': {
+        'ENGINE': 'django.db.backends.mysql',
+        'NAME': 'db_cyzr37_statdb',
+        'USER': 'act',
+        'PASSWORD': '91act@b7',
+        'HOST': '120.132.55.59',
+        'PORT': '8791',
+    },
+    'db_cyzrios_statdb': {
+        'ENGINE': 'django.db.backends.mysql',
+        'NAME': 'db_cyzrios_statdb',
+        'USER': 'act',
+        'PASSWORD': '91act@b7',
+        'HOST': '123.59.61.27',
+        'PORT': '8791',
+    },
 }
 
 
