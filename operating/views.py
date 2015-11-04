@@ -141,6 +141,7 @@ def single(request, panel_id, url=Common.URL):
     d = view_template(request, panel_id, url)
     panel = get_object_or_404(Panel, pk=panel_id)
     d['servers'] = panel.server_set.filter(server_type='dir')
+    d['url'] = url
     if request.method == 'POST':
         server_id = int(request.POST['server'])
         uid = int(request.POST['uid'])

@@ -69,8 +69,10 @@
         <td><b>{{ t_gold }}</b></td>
         <td>{{ player.gold_cnt }}</td>
         <td width="150px">
+        {% ifequal url 'single_query'  %}
           <input type="text" style="width: 80px;" value="100000" name="add2">
           <button type="submit" class="btn btn-default btn-xs" onclick="dataAccess.addJSON({{server_id}},{{player.uid|default:0}},'add',2)">{{t_add}}</button>
+        {% endifequal %}
         </td>
         <td><b>{{ t_times_of_buy_gold }}</b></td>
         <td>{{ player.gold_buy_times }}</td>
@@ -79,8 +81,10 @@
         <td><b>{{ t_crystal }}</b></td>
         <td>{{ player.crystal_cnt }}</td>
         <td>
+        {% ifequal url 'single_query'  %}
           <input type="text" style="width: 80px;" value="100000" name="add1">
           <button type="submit" class="btn btn-default btn-xs" onclick="dataAccess.addJSON({{server_id}},{{player.uid|default:0}},'add',1)">{{t_add}}</button>
+        {% endifequal %}
         </td>
         <td><b>{{ t_times_of_buy_crystal }}</b></td>
         <td>{{ player.crystal_buy_times }}</td>
@@ -89,8 +93,10 @@
         <td><b>{{ t_power }}</b></td>
         <td>{{ player.power_cnt }}</td>
         <td>
+        {% ifequal url 'single_query'  %}
           <input type="text" style="width: 80px;" value="100000" name="add6">
           <button type="submit" class="btn btn-default btn-xs" onclick="dataAccess.addJSON({{server_id}},{{player.uid|default:0}},'add',6)">{{t_add}}</button>
+        {% endifequal %}
         </td>
         <td><b>{{ t_times_of_buy_power }}</b></td>
         <td>{{ player.power_buy_times }}</td>
@@ -99,8 +105,10 @@
         <td><b>{{ t_skill_point }}</b></td>
         <td>{{ player.skillpoint_cnt }}</td>
         <td>
+        {% ifequal url 'single_query'  %}
           <input type="text" style="width: 80px;" value="100000" name="add4">
           <button type="submit" class="btn btn-default btn-xs" onclick="dataAccess.addJSON({{server_id}},{{player.uid|default:0}},'add',4)">{{t_add}}</button>
+        {% endifequal %}
         </td>
         <td><b>{{ t_times_of_buy_skill_point }}</b></td>
         <td>{{ player.skillpoint_buy_times }}</td>
@@ -109,8 +117,10 @@
         <td><b>{{ t_money }}</b></td>
         <td>{{ player.money_cnt }}</td>
         <td>
+        {% ifequal url 'single_query'  %}
           <input type="text" style="width: 80px;" value="100000" name="add3">
           <button type="submit" class="btn btn-default btn-xs" onclick="dataAccess.addJSON({{server_id}},{{player.uid|default:0}},'add',3)">{{t_add}}</button>
+        {% endifequal %}
         </td>
         <td><b>{{ t_times_of_growup }}</b></td>
         <td>{{ player.growup_cnt }}</td>
@@ -119,8 +129,10 @@
         <td><b>{{ t_score_of_rank_battle }}</b></td>
         <td>{{ player.rank_battle_score }}</td>
         <td>
+        {% ifequal url 'single_query'  %}
           <input type="text" style="width: 80px;" value="100000" name="add11">
           <button type="submit" class="btn btn-default btn-xs" onclick="dataAccess.addJSON({{server_id}},{{player.uid|default:0}},'add',11)">{{t_add}}</button>
+        {% endifequal %}
         </td>
         <td><b>{{ t_endless_score }}</b></td>
         <td>{{ player.endless_score }}</td>
@@ -129,8 +141,10 @@
         <td><b>{{ t_total_recharge_vip_level }}</b></td>
         <td>{{ player.total_recharge }}</td>
         <td>
+        {% ifequal url 'single_query'  %}
           <input type="text" style="width: 80px;" value="10000" name="recharge0">
           <button type="submit" class="btn btn-default btn-xs" onclick="dataAccess.addJSON({{server_id}},{{player.uid|default:0}},'recharge',0)">{{t_change}}</button>
+        {% endifequal %}
         </td>
         <td><b>{{ t_endless_floor }}</b></td>
         <td>{{ player.endless_floor }}</td>
@@ -162,6 +176,7 @@
           <button type="submit" class="btn btn-danger btn-xs" onclick="dataAccess.addJSON({{server_id}},{{player.uid|default:0}},'kick',0)">{{t_kick_player}}</button></span>
         </td>
       </tr>
+      {% ifequal url 'single_query'  %}
       <tr>
         <td><b>{{ t_other_contorl }}</b></td>
         <td colspan="4"><span class="pull-right">
@@ -171,6 +186,7 @@
           <button type="submit" class="btn btn-default btn-xs" onclick="dataAccess.addJSON({{server_id}},{{player.uid|default:0}},'dungeon',150)">{{t_unlock_150_dungeon}}</button>
         </span></td>
       </tr>
+      {% endifequal %}
     </tbody>
   </table>
   <!-- List -->
