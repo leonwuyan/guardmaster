@@ -186,7 +186,7 @@ def contact_reply(request, panel_id, issue_id):
     if request.method == 'POST':
         title = request.POST['title']
         content = request.POST['content']
-        server = get_object_or_404(Server, hostname=issue['hostname'])
+        server = get_object_or_404(Server, hostname=issue['hostname'], panel=panel)
         if title and len(title) < 30 and content and len(content) < 256:
             sc = ServerControl(
                 server,

@@ -8,7 +8,7 @@ import time
 import settings
 import tempfile
 
-URL = 'total'
+URL = 'contact'
 ENUM = 'enum'
 CONTACT_REPLY = 'contact_reply'
 MAX_CLIENT_ID = 'max_client_id'
