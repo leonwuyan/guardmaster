@@ -72,6 +72,7 @@ class Notify(models.Model):
     image_height = models.IntegerField()
     start = models.DateTimeField()
     end = models.DateTimeField()
+    is_title = models.BooleanField(default=True)
     seqid = models.IntegerField()
 
     def __unicode__(self):

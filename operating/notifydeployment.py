@@ -15,10 +15,13 @@ class NotifyDeployment(object):
         self.username = username
         self.cdn_url = []
 
-    def _tiitle(self, t):
+    def _tiitle(self, t, is_title):
         before = "<stroke size=2 color='0x0000417'><gradient direction=y start_color='0xFFFFFF' end_color='0xFFB300'>"
         after = "</gradient></stroke>"
-        return before + t + after
+        if is_title:
+            return before + t + after
+        else:
+            return ""
 
     def _channel_plus(self, channel):
         channel_plus = {
@@ -46,7 +49,7 @@ class NotifyDeployment(object):
                         self.json[path] = []
                     self.json[path].append({
                         'Name': str(n.id),
-                        'Title': self._tiitle(n.title),
+                        'Title': self._tiitle(n.title, n.is_title),
                         'Link': n.link,
                         'ImageWidth': n.image_width,
                         'ImageHeight': n.image_height,
