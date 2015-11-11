@@ -202,6 +202,63 @@
       _buildTable(data);
       return false;
     },
+    'reduceJSON': function(server_id, uid, type, type_id) {
+      if (uid == 0 || server_id == 0) {
+        return false
+      }
+      var addData = {};
+      var p = '';
+      switch (type) {
+        case 'add':
+          iname = type + type_id;
+          count = $('input[name='+iname+']').val() || 0;
+          if(count > 0) count = 0 - count;
+          $('input[name='+iname+']').val(count);
+          fmts = gettext('Confirm Adding %(count)s ?');
+          s = interpolate(fmts, {'count':count}, true);
+          if (!confirm(s)) {
+            return false;
+          }
+          addData = {
+            'server_id': server_id,
+            'type_id': type_id,
+            'count': count,
+            'uid': uid
+          };
+          p = '/add.json';
+          break;
+      }
+      $.ajax({
+        url: _askData + p,
+        data: addData,
+        type: 'POST',
+        beforeSend: function(xhr, settings) {
+          if (!_csrfSafeMethod(settings.type) && !this.crossDomain) {
+            xhr.setRequestHeader("X-CSRFToken", _getCookie('csrftoken'));
+          }
+        },
+        success: function(msg){
+          if (msg.result == '0'){
+            location.reload();
+            return false;
+          }
+          alert('Error Code : ' + msg.result);
+        },
+        error: function(e){
+          switch (e.status) {
+            case 401:
+              //location.reload();
+              break;
+            default:
+              //location.reload();
+              break;
+          }
+        }
+      });
+      return false;
+    },
+
+
     'addJSON': function(server_id, uid, type, type_id) {
       if (uid == 0 || server_id == 0) {
         return false
@@ -211,7 +268,7 @@
       switch (type) {
         case 'add':
           iname = type + type_id;
-          count = $('input[name='+iname+']').val() || 100000;
+          count = $('input[name='+iname+']').val() || 0;
           $('input[name='+iname+']').val(count);
           fmts = gettext('Confirm Adding %(count)s ?');
           s = interpolate(fmts, {'count':count}, true);
@@ -228,7 +285,7 @@
           break;
         case 'recharge':
           iname = type + type_id;
-          count = $('input[name='+iname+']').val() || 10000;
+          count = $('input[name='+iname+']').val() || 0;
           $('input[name='+iname+']').val(count);
           fmts = gettext('Confirm Change To %(count)s ?');
           s = interpolate(fmts, {'count':count}, true);
