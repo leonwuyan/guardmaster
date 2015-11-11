@@ -156,6 +156,12 @@ def enum_building(building_id, panel_id):
     return Common.filter_enum(Common.E_BUILDINGID_LIST, building_id)
 
 
+def enum_zone(zone_id, panel_id):
+    if Common.E_ZONEID_LIST is None:
+        Common.E_ZONEID_LIST = Tabel.get_enum(panel_id, Common.E_ZONEID)
+    return Common.filter_enum(Common.E_ZONEID_LIST, zone_id)
+
+
 def rank_val(rank_id, pos):
     val = [
         ('', '',),
@@ -225,3 +231,4 @@ register.filter(list_find)
 register.filter(result_label)
 register.filter(div2)
 register.filter(div2div2)
+register.filter(enum_zone)

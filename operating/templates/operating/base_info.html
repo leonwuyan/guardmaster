@@ -52,7 +52,7 @@
         <td><b>{{ t_user_id }}</b></td>
         <td colspan="2">{{ player.uin }}</td>
         <td><b>{{ t_zone }}</b></td>
-        <td>{{ player.world_id }}</td>
+        <td>{{ player.world_id|enum_zone:panel.id|default_if_none:"" }}[world_id:{{player.world_id}}]</td>
       </tr>
       <tr>
         <td><b>{{ t_create_time }}</b></td>
