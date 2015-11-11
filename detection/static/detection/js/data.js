@@ -212,17 +212,18 @@
         case 'add':
           iname = type + type_id;
           count = $('input[name='+iname+']').val() || 0;
-          if(count > 0) count = 0 - count;
+          Tcount = 0;
+          if(count > 0) Tcount = 0 - count;
           $('input[name='+iname+']').val(count);
           fmts = gettext('Confirm Adding %(count)s ?');
-          s = interpolate(fmts, {'count':count}, true);
+          s = interpolate(fmts, {'count':Tcount}, true);
           if (!confirm(s)) {
             return false;
           }
           addData = {
             'server_id': server_id,
             'type_id': type_id,
-            'count': count,
+            'count': Tcount,
             'uid': uid
           };
           p = '/add.json';
