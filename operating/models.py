@@ -68,6 +68,7 @@ class Notify(models.Model):
     channel = models.CharField(max_length=256)
     platform = models.CharField(max_length=45)
     world_id = models.CharField(max_length=128)
+    version = models.CharField(max_length=128)
     image_width = models.IntegerField()
     image_height = models.IntegerField()
     start = models.DateTimeField()

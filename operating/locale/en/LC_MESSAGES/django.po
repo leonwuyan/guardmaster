@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2015-11-11 15:43+0800\n"
+"POT-Creation-Date: 2015-11-13 12:33+0800\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -150,7 +150,7 @@ msgid "Add 10k"
 msgstr ""
 
 #: templates/operating/base_info.html:26 templates/operating/mail.html:24
-#: templates/operating/notify.html:21
+#: templates/operating/notify.html:24
 msgid "Add"
 msgstr ""
 
@@ -340,11 +340,11 @@ msgstr ""
 msgid "Channel ID"
 msgstr ""
 
-#: templates/operating/contact.html:11 templates/operating/notify.html:17
+#: templates/operating/contact.html:11 templates/operating/notify.html:20
 msgid "Platform"
 msgstr ""
 
-#: templates/operating/contact.html:12
+#: templates/operating/contact.html:12 templates/operating/notify.html:17
 msgid "Version"
 msgstr ""
 
@@ -499,7 +499,7 @@ msgstr ""
 msgid "Accessory Include Item And Equip"
 msgstr ""
 
-#: templates/operating/mail.html:28 templates/operating/notify.html:22
+#: templates/operating/mail.html:28 templates/operating/notify.html:25
 msgid "Success"
 msgstr ""
 
@@ -507,11 +507,11 @@ msgstr ""
 msgid "Please Check The Response Of Sending Mail"
 msgstr ""
 
-#: templates/operating/mail.html:30 templates/operating/notify.html:24
+#: templates/operating/mail.html:30 templates/operating/notify.html:27
 msgid "Fail"
 msgstr ""
 
-#: templates/operating/mail.html:31 templates/operating/notify.html:25
+#: templates/operating/mail.html:31 templates/operating/notify.html:28
 msgid "Please Check The Input Is Correct"
 msgstr ""
 
@@ -584,54 +584,62 @@ msgid "Channel"
 msgstr ""
 
 #: templates/operating/notify.html:18
-msgid "Zone"
+msgid "Is Title"
 msgstr ""
 
 #: templates/operating/notify.html:19
+msgid "Show"
+msgstr ""
+
+#: templates/operating/notify.html:21
+msgid "Zone"
+msgstr ""
+
+#: templates/operating/notify.html:22
 msgid "Seq ID"
 msgstr ""
 
-#: templates/operating/notify.html:20
+#: templates/operating/notify.html:23
 msgid "Other Options"
 msgstr ""
 
-#: templates/operating/notify.html:23
+#: templates/operating/notify.html:26
 msgid "Please Check The Notify Info"
 msgstr ""
 
-#: templates/operating/notify.html:26
+#: templates/operating/notify.html:29
 msgid "The Will Be DIR Notify When The Zone Is All Zone"
 msgstr ""
 
-#: templates/operating/notify.html:27
+#: templates/operating/notify.html:30
 msgid "Add Or Edit Notify Without Synchronization"
 msgstr ""
 
-#: templates/operating/notify.html:28
+#: templates/operating/notify.html:31
 msgid "Synchronize Notify"
 msgstr ""
 
-#: templates/operating/notify.html:29
+#: templates/operating/notify.html:32
 msgid "Delete"
 msgstr ""
 
-#: templates/operating/notify.html:30
+#: templates/operating/notify.html:33
 msgid "Edit"
 msgstr ""
 
-#: templates/operating/notify.html:31
+#: templates/operating/notify.html:34
 msgid "Operate"
 msgstr ""
 
-#: templates/operating/notify.html:32
+#: templates/operating/notify.html:35
 msgid "Attention"
 msgstr ""
 
-#: templates/operating/notify.html:33
+#: templates/operating/notify.html:36
 msgid "Please Edit The Notify"
 msgstr ""
 
-#: templates/operating/notify.html:34
+#: templates/operating/notify.html:37
 msgid "Back"
 msgstr ""
 
@@ -816,7 +824,7 @@ msgstr ""
 msgid "Return Notify List"
 msgstr ""
 
-#: templatetags/custom.py:24 templatetags/custom.py:175
+#: templatetags/custom.py:24 templatetags/custom.py:181
 msgid "Not Time"
 msgstr ""
 
@@ -849,78 +857,78 @@ msgstr ""
 msgid "Endless Dungeon List"
 msgstr ""
 
-#: templatetags/custom.py:163
+#: templatetags/custom.py:169
 msgid "PvP Win Times"
 msgstr ""
 
-#: templatetags/custom.py:163
+#: templatetags/custom.py:169
 msgid "PvP Total Times"
 msgstr ""
 
-#: templatetags/custom.py:164
+#: templatetags/custom.py:170
 msgid "Endless Score"
 msgstr ""
 
-#: templatetags/custom.py:164
+#: templatetags/custom.py:170
 msgid "Endless Floor"
 msgstr ""
 
-#: templatetags/custom.py:165
+#: templatetags/custom.py:171
 msgid "Gang Score"
 msgstr ""
 
-#: templatetags/custom.py:165
+#: templatetags/custom.py:171
 msgid "Gang History Score"
 msgstr ""
 
-#: templatetags/custom.py:166
+#: templatetags/custom.py:172
 msgid "Achievement Score"
 msgstr ""
 
-#: templatetags/custom.py:166
+#: templatetags/custom.py:172
 msgid "Achievement Times"
 msgstr ""
 
-#: templatetags/custom.py:167
+#: templatetags/custom.py:173
 msgid "Fight Offline Name"
 msgstr ""
 
-#: templatetags/custom.py:167
+#: templatetags/custom.py:173
 msgid "Fight Offline Kill Man"
 msgstr ""
 
-#: templatetags/custom.py:168
+#: templatetags/custom.py:174
 msgid "Fight Online Score"
 msgstr ""
 
-#: templatetags/custom.py:168
+#: templatetags/custom.py:174
 msgid "Fight Online Win Times"
 msgstr ""
 
-#: templatetags/custom.py:189
+#: templatetags/custom.py:195
 msgid "Order Is Locking"
 msgstr ""
 
-#: templatetags/custom.py:190
+#: templatetags/custom.py:196
 msgid "Successful"
 msgstr ""
 
-#: templatetags/custom.py:191
+#: templatetags/custom.py:197
 msgid "Dir Do Not Exists"
 msgstr ""
 
-#: templatetags/custom.py:192
+#: templatetags/custom.py:198
 msgid "Not Any Files"
 msgstr ""
 
-#: templatetags/custom.py:193
+#: templatetags/custom.py:199
 msgid "Error In Scp"
 msgstr ""
 
-#: templatetags/custom.py:194
+#: templatetags/custom.py:200
 msgid "Working"
 msgstr ""
 
-#: templatetags/custom.py:195
+#: templatetags/custom.py:201
 msgid "Error In Srcipt"
 msgstr ""

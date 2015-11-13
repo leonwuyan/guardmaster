@@ -56,6 +56,7 @@ class NotifyDeployment(object):
                         'Start': Common.datetime2ts(n.start, 28800),
                         'End': Common.datetime2ts(n.end, 28800),
                         'Content': n.content,
+                        'Version': n.version,
                         'IsDisplay': n.is_display,
                     })
 
@@ -121,6 +122,10 @@ class NotifyDeployment(object):
         channel = ','.join(post.getlist('channel'))
         platform = ','.join(post.getlist('platform'))
         zone = ','.join(post.getlist('zone'))
+        if post.get('is_title'):
+            is_title = True
+        else:
+            is_title = False
         if 'id' in post:
             n = get_object_or_404(Notify, pk=post.get('id'))
             n.title = self._get(post, 'title')
@@ -131,6 +136,8 @@ class NotifyDeployment(object):
             n.image_height = post.get('height')
             n.hostname = post.get('hostname')
             n.channel = channel
+            n.version = post.get('version')
+            n.is_title = is_title
             n.platform = platform
             n.world_id = zone
             n.start = post.get('start')
@@ -147,6 +154,8 @@ class NotifyDeployment(object):
                 image_height=post.get('height'),
                 hostname=post.get('hostname'),
                 channel=channel,
+                version=post.get('version'),
+                is_title=is_title,
                 platform=platform,
                 world_id=zone,
                 start=post.get('start'),

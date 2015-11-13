@@ -14,6 +14,9 @@
 {% trans "Picture Height" as t_picture_height %}
 {% trans "Hostname" as t_hostname %}
 {% trans "Channel" as t_channel %}
+{% trans "Version" as t_version %}
+{% trans "Is Title" as t_is_title %}
+{% trans "Show" as t_show %}
 {% trans "Platform" as t_platform %}
 {% trans "Zone" as t_zone %}
 {% trans "Seq ID" as t_seqid %}
@@ -143,6 +146,12 @@
           {% endfor %}
       </div>
       <div class="form-group">
+        <label>{{ t_is_title }}</label>&emsp;
+        <label class="checkbox-inline">
+          <input type="checkbox" name="is_title" id="is_title" value="true" {% if notify.is_title %}checked{% endif %}> {{ t_show }}
+        </label>
+      </div>
+      <div class="form-group">
         <label>{{t_other_options}}</label>
         <div class="row">
           <div class="col-md-2">
@@ -158,6 +167,12 @@
             <div class="input-group">
               <span class="input-group-addon" id="seqid-addon">{{t_seqid}}</span>
               <input type="text" class="form-control" value="{{ notify.seqid|default:0}}" aria-describedby="seqid-addon" name="seqid">
+            </div>
+          </div>
+          <div class="col-md-2">
+            <div class="input-group">
+              <span class="input-group-addon" id="version-addon">{{t_version}}</span>
+              <input type="text" class="form-control" value="{{ notify.version|default:'1.1.0.0'}}" aria-describedby="version-addon" name="version">
             </div>
           </div>
         </div>
@@ -192,11 +207,13 @@
               <th style="width: 6%">{{t_picture_width}}</th>
               <th style="width: 6%">{{t_picture_height}}</th>
               <th style="width: 12%">{{t_hostname}}</th>
-              <th style="width: 16%">{{t_channel}}</th>
+              <th style="width: 10%">{{t_channel}}</th>
+              <th style="width: 6%">{{t_version}}</th>
               <th style="width: 6%">{{t_zone}}</th>
-              <th style="width: 6%">{{t_is_display}}</th>
-              <th style="width: 6%">{{t_seqid}}</th>
-              <th style="width: 6%">{{t_operate}}</th>
+              <th style="width: 4%">{{t_is_display}}</th>
+              <th style="width: 4%">{{t_is_title}}</th>
+              <th style="width: 5%">{{t_seqid}}</th>
+              <th style="width: 5%">{{t_operate}}</th>
             </tr>
           </thead>
           <tbody>
@@ -210,13 +227,15 @@
               <td>{{r.image_height}}</td>
               <td style="word-wrap:break-word;word-break:break-all">{{r.hostname}}</td>
               <td style="word-wrap:break-word;word-break:break-all">{{r.channel}}</td>
+              <td style="word-wrap:break-word;word-break:break-all">{{r.version}}</td>
               <td style="word-wrap:break-word;word-break:break-all">{{r.world_id}}</td>
               <td>{{r.is_display}}</td>
+              <td>{{r.is_title}}</td>
               <td>{{r.seqid}}</td>
               <td><a href="{% url 'operating:edit_notify' panel.id r.id %}"><button class="btn-xs btn btn-primary" type="button">{{t_edit}}</button></a><br><br><button class="btn-xs btn btn-danger" type="button" onclick="dataAccess.notifyJSON({{r.id}}, '{{r.title}}')">{{t_delete}}</button></td>
             </tr>
             <tr>
-              <td colspan="13">
+              <td colspan="15">
               <textarea class="form-control notifycontent" id="notify-{{r.id}}" rows="2" readonly="readonly">{{r.content}}</textarea></td>
             </tr>
           {% endfor %}
