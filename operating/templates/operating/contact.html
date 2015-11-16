@@ -124,13 +124,17 @@
           <input type="text" class="input-md form-control" name="end">
         </div>
       </div>
-      <div class="form-group" style="margin-bottom: 5px">
+      <div class="form-group" style="margin-bottom:5px">
         <label>{{t_list_of_servers}}</label>
         <select class="form-control" name="hostname">
           {% for server in servers %}
           <option value="{{server.hostname}}">{{server.label}}</option>
           {% endfor %}
         </select>
+      </div>
+      <div class="form-group" style="margin-bottom: 5px">
+          <label for="uid">{{t_uid}}</label>
+            <input type="text" class="form-control" id="uid" name="uid">
       </div>
 
       <button type="submit" class="btn btn-default btn-sm" id="count-button"onclick="return dataAccess.contactJSON()">{{t_query}}</button>

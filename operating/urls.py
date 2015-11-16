@@ -39,5 +39,6 @@ urlpatterns = [
     url(
         r'^(?P<panel_id>[0-9]+)/contact/(?P<issue_id>[0-9]+)$',
         views.contact_reply,
-        name='contact_reply'),    url(r'^$', auth_views.index, name='default_index'),
+        name='contact_reply'),
+    url(r'^$', auth_views.index, name='default_index'),
 ]

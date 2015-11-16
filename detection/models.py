@@ -389,6 +389,9 @@ class Tabel(object):
         if 'hostname' in request_get:
             r = "hostname = '" + request_get.get('hostname') + "'"
             condition = condition + (r,)
+        if 'uid' in request_get:
+            r = "uid = '" + request_get.get('uid') + "'"
+            condition = condition + (r,)
         if len(condition) > 0:
             condition = " AND ".join(condition)
         if 'id' in request_get:
