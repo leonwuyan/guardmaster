@@ -87,6 +87,7 @@ class UISubMenu(models.Model):
         ('detection:history_query', _('history_query')),
         ('detection:everyday_history_query', _('everyday_history_query')),
         ('detection:everyday_deal_query', _('everyday_deal_query')),
+        ('detection:chat_query', _('chat_query')),
         ('operating:notify', _('notify')),
         ('operating:mail', _('mail')),
         ('operating:single', _('single')),
@@ -150,6 +151,8 @@ class UIColMap(models.Model):
         ('contact_reply', _('contact to reply')),
         ('ip_to_server', _('ip to server')),
         ('pay_channel_list', _('pay channel list')),
+        ('chat_type_list', _('chat type list')),
+        ('user_status_list', _('user status list')),
     }
     label = models.CharField(max_length=45)
     sub_menu = models.ForeignKey(UISubMenu)
@@ -374,6 +377,30 @@ class Tabel(object):
         if len(condition) > 0:
             condition = " AND ".join(condition)
             condition += " ORDER BY Server, UID, LogDt, LogTime, EventTyp"
+        ret = self.select(sub_menu, panel, condition)
+        return ret
+
+    @classmethod
+    def chat_query_select(self, sub_menu, panel, request_get):
+        condition = ()
+        if 'start' in request_get:
+            r = "LogDt>='" + request_get.get('start') + "'"
+            condition = condition + (r,)
+        if 'end' in request_get:
+            r = "LogDt<'" + request_get.get('end') + "'"
+            condition = condition + (r,)
+        if 'chat_type' in request_get:
+            r = "ChatType='" + request_get.get('chat_type') + "'"
+            condition = condition + (r,)
+        if 'user_status' in request_get:
+            r = "BanStatus='" + request_get.get('user_status') + "'"
+            condition = condition + (r,)
+        if 'uid' in request_get:
+            r = "UID = " + request_get.get('uid')
+            condition = condition + (r,)
+        if len(condition) > 0:
+            condition = " AND ".join(condition)
+            condition += " ORDER BY LogDt DESC"
         ret = self.select(sub_menu, panel, condition)
         return ret
 

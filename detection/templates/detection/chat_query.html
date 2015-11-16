@@ -1,0 +1,81 @@
+{% extends "detection/base.html" %}
+{% load custom i18n %}
+{% block content %}
+{% trans "Chat Type" as t_chat_type %}
+{% trans "User Status" as t_user_status %}
+<script type="text/javascript">
+ $(document).ready(function() {
+  end_time = getTime(true);
+  start_time = end_time.replace(/ (\w+):(\w+):(\w+)/, " 00:00:00");
+   $('.input-datepicker > input').datetimepicker({
+    format: "yyyy-mm-dd hh:ii:ss",
+    autoclose: true,
+    todayBtn: true,
+    weekStart: 0,
+    language: gettext('en'),
+    startDate: start_time,
+    endDate: end_time,
+    pickerPosition: "bottom-left"
+  });
+  management.numberOnly("input[name='uid']");
+  queryButton.initHistoryQuery();
+ });
+</script>
+<div class="container-fluid white-bg">
+  <div class="row">
+    <ol class="breadcrumb">
+      <li><a href="{{servlet}}/">{{panel.label}}</a></li>
+      <li class="active">{{ title }}</li>
+    </ol>
+    <form role="form" id="queryForm">
+      <div class="form-group" style="margin-bottom:5px">
+        <label>{{t_range_of_date}}</label>
+        <div class="input-daterange input-group input-datepicker" id="datepicker">
+          <input type="text" class="input-md form-control" name="start">
+          <span class="input-group-addon">{{t_to}}</span>
+          <input type="text" class="input-md form-control" name="end">
+        </div>
+      </div>
+      <div class="form-group">
+        <div class="row">
+          <div class="col-md-4">
+            <label>{{t_chat_type}}</label>
+            <select class="form-control" name="chat_type">
+              {% for chat_type in chat_type_list %}
+              <option value="{{ chat_type.EnumCd }}">{{ chat_type.EnumDes }}</option>
+              {% endfor %}
+            </select>
+          </div>
+          <div class="col-md-4">
+            <label>{{t_user_status}}</label>
+            <select class="form-control" name="user_status">
+              {% for user_status in user_status_list %}
+              <option value="{{user_status.EnumCd}}">{{user_status.EnumDes}}</option>
+              {% endfor %}
+            </select>
+          </div>
+          <div class="col-md-4">
+            <label for="uid">{{t_player_id}}</label>
+            <input type="text" class="form-control" id="uid" name="uid">
+          </div>
+        </div>
+      </div>
+      <button type="submit" class="btn btn-default btn-sm" onclick="return dataAccess.chat_queryJSON()">{{t_query}}</button>
+    </form>
+
+    <p class="sub-header"></p>
+    <div class="table-responsive">
+      <table class="table table-bordered table-striped" id="sources">
+        <thead>
+          <tr>
+            {% for table in table_head %}
+            <th>{{table.label}}</th>
+            {% endfor %}
+          </tr>
+        </thead>
+      </table>
+    </div>
+  </div>
+  <center style='color: #999; padding-top: 20px; font-family: "arial","NSimSun","SimSun","STSong","AR PL SungtiL GB","TW\-Sung","WenQuanYi Bitmap Song"; font-size: 14px; font-weight: bold;'>{{excuse}}</center>
+</div>
+{% endblock %}

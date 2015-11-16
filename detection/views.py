@@ -27,6 +27,8 @@ def view_init():
     Common.E_ZONEID_LIST = None
     Common.E_PAYCHANNEL_LIST = None
     Common.E_PACKAGECHANNEL_LIST = None
+    Common.E_CHATTYPE_LIST = None
+    Common.E_USERSTATUS_LIST = None
 
 
 def _sh(cmd):
@@ -156,6 +158,8 @@ def json_template(request, panel_id, t_p, url=Common.URL):
         ret = Tabel.user_qeury_select(sub_menu, panel, request.GET)
     if t_p == 'gang_query':
         ret = Tabel.gang_qeury_select(sub_menu, panel, request.GET)
+    if t_p == 'chat_query':
+        ret = Tabel.chat_query_select(sub_menu, panel, request.GET)
     if t_p == 'deal_query' or t_p == 'everyday_deal_query':
         ret = Tabel.deal_query_select(sub_menu, panel, request.GET)
     if t_p == 'history_query' or t_p == 'everyday_history_query':
@@ -242,4 +246,17 @@ def everyday_history_query(request, panel_id, url=Common.URL):
     d = view_template(request, panel_id, url)
     panel = get_object_or_404(Panel, pk=panel_id)
     d['servers'] = panel.server_set.filter(server_type='dir')
+    return render(request, t, d)
+
+
+@Common.competence_required
+def chat_query(request, panel_id, url=Common.URL):
+    t = "detection/chat_query.html"
+    d = view_template(request, panel_id, url)
+    chat_type_list = Tabel.get_enum(panel_id, Common.E_CHATTYPE)
+    user_status_list = Tabel.get_enum(panel_id, Common.E_USERSTATUS)
+    panel = get_object_or_404(Panel, pk=panel_id)
+    d['servers'] = panel.server_set.filter(server_type='dir')
+    d['chat_type_list'] = chat_type_list
+    d['user_status_list'] = user_status_list
     return render(request, t, d)

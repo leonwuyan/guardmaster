@@ -197,6 +197,34 @@
       _buildTable(data);
       return false;
     },
+    'chat_queryJSON': function() {
+      if ($('input[name="start"]').length > 0) {
+        var start = $('input[name="start"]').val();
+        var end = $('input[name="end"]').val();
+        if (start == '' || end == '') {
+          alert('请填写起始日期和结束日期。');
+          return false;
+        }
+        if (start > end) {
+          alert('起始日期请小于结束日期');
+          return false;
+        }
+        var start_date = new Date(Date.parse(start.replace(/-/g, "/")));
+        var end_date = new Date(Date.parse(end.replace(/-/g, "/")));
+        s_d = start_date.getDate();
+        e_d = end_date.getDate();
+        if (end_date.getHours() == 0 && end_date.getMinutes() == 0 && end_date.getSeconds() == 0){
+          e_d -= 1;
+        }
+        if (s_d != e_d){
+          alert('日期范围请在一个自然天')
+          return false;
+        }
+      }
+      var data = _getData('form#queryForm [name]');
+      _buildTable(data);
+      return false;
+    },
     'contactJSON': function() {
       var data = _getData('form#contactForm [name]');
       _buildTable(data);

@@ -17,6 +17,8 @@ class ValueFormat(object):
         self.channel_list = None
         self.zone_list = None
         self.pay_channel_list = None
+        self.chat_type_list = None
+        self.user_status_list = None
 
     def _date(self, d):
         if d.__class__ is date:
@@ -75,6 +77,16 @@ class ValueFormat(object):
         if self.pay_channel_list is None:
             self.pay_channel_list = Tabel.get_enum(self.panel_id, Common.E_PAYCHANNEL)
         return Common.filter_enum(self.pay_channel_list, int(id), id)
+
+    def _chat_type_list(self, id):
+        if self.chat_type_list is None:
+            self.chat_type_list = Tabel.get_enum(self.panel_id, Common.E_CHATTYPE)
+        return Common.filter_enum(self.chat_type_list, int(id), id)
+
+    def _user_status_list(self, id):
+        if self.user_status_list is None:
+            self.user_status_list = Tabel.get_enum(self.panel_id, Common.E_USERSTATUS)
+        return Common.filter_enum(self.user_status_list, int(id), id)
 
     def _f_v(self, f, v):
         if f is None:

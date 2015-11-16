@@ -27,6 +27,10 @@ urlpatterns = [
         views.everyday_history_query,
         name='everyday_history_query'),
     url(
+        r'^(?P<panel_id>[0-9]+)/chat_query/(?P<url>[_A-Za-z]+)$',
+        views.chat_query,
+        name='chat_query'),
+    url(
         r'^(?P<panel_id>[0-9]+)/(?P<t_p>[_A-Za-z]+)/(?P<url>[_A-Za-z]+).json$',
         views.json_template,
         name='json_template'),

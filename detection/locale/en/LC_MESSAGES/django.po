@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2015-10-16 17:07+0800\n"
+"POT-Creation-Date: 2015-11-16 16:22+0800\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -58,87 +58,99 @@ msgid "everyday_deal_query"
 msgstr ""
 
 #: models.py:90
-msgid "notify"
+msgid "chat_query"
 msgstr ""
 
 #: models.py:91
-msgid "mail"
+msgid "notify"
 msgstr ""
 
 #: models.py:92
-msgid "single"
+msgid "mail"
 msgstr ""
 
 #: models.py:93
-msgid "rank"
+msgid "single"
 msgstr ""
 
 #: models.py:94
-msgid "contact"
+msgid "rank"
 msgstr ""
 
 #: models.py:95
-msgid "patch"
+msgid "contact"
 msgstr ""
 
 #: models.py:96
-msgid "config"
+msgid "patch"
 msgstr ""
 
 #: models.py:97
+msgid "config"
+msgstr ""
+
+#: models.py:98
 msgid "control"
 msgstr ""
 
-#: models.py:107
+#: models.py:108
 msgid "Category is required when Main menu is selected"
 msgstr ""
 
-#: models.py:141
+#: models.py:142
 msgid "date"
 msgstr ""
 
-#: models.py:142
+#: models.py:143
 msgid "time"
 msgstr ""
 
-#: models.py:143
+#: models.py:144
 msgid "timestamp to date"
 msgstr ""
 
-#: models.py:144
+#: models.py:145
 msgid "timestamp to time"
 msgstr ""
 
-#: models.py:145
+#: models.py:146
 msgid "float two"
 msgstr ""
 
-#: models.py:146
+#: models.py:147
 msgid "ratio two"
 msgstr ""
 
-#: models.py:147
+#: models.py:148
 msgid "channel list"
 msgstr ""
 
-#: models.py:148
+#: models.py:149
 msgid "zone list"
 msgstr ""
 
-#: models.py:149
+#: models.py:150
 msgid "anything to string"
 msgstr ""
 
-#: models.py:150
+#: models.py:151
 msgid "contact to reply"
 msgstr ""
 
-#: models.py:151
+#: models.py:152
 msgid "ip to server"
 msgstr ""
 
-#: models.py:152
+#: models.py:153
 msgid "pay channel list"
+msgstr ""
+
+#: models.py:154
+msgid "chat type list"
+msgstr ""
+
+#: models.py:155
+msgid "user status list"
 msgstr ""
 
 #: templates/detection/base.html:4
@@ -209,6 +221,14 @@ msgstr ""
 msgid "Choose The Panel"
 msgstr ""
 
-#: value_format.py:65
+#: templates/detection/chat_query.html:4
+msgid "Chat Type"
+msgstr ""
+
+#: templates/detection/chat_query.html:5
+msgid "User Status"
+msgstr ""
+
+#: value_format.py:67
 msgid "reply"
 msgstr ""
