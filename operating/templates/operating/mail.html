@@ -77,6 +77,7 @@
         <label for="content">{{ t_mail_content }}</label>&emsp;<span class="label label-danger">{{ t_120_words_limited }}</span>
         <input type="text" class="form-control" id="content" name="content">
       </div>
+      {% ifequal url 'send_mail' %}
       <div class="form-group" style="margin-bottom:5px">
         <label for="uid">{{t_accessory}}</label>&emsp;<span class="label label-danger">{{ t_limited_6_kind_of_accessory }}&emsp;|&emsp;{{ t_accessory_include_item_and_equip }}</span>
         <div class="row">
@@ -192,6 +193,7 @@
           </div>
         </div>
       </div>
+      {% endifequal %}
       <button type="submit" class="btn btn-primary btn-sm" onclick="return queryButton.mailConfirm()">{{t_send}}</button>
     </form>
 

@@ -104,6 +104,7 @@ def mail(request, panel_id, url=Common.URL):
     d['equips'] = enum_equip_list(panel_id)
     d['items'] = enum_item_list(panel_id)
     d['responsemails'] = Common.get_panel_response_mail(panel)
+    d['url'] = url
     if request.method == 'POST':
         server_id = int(request.POST['server'])
         try:
