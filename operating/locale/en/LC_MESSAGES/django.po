@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2015-11-13 12:33+0800\n"
+"POT-Creation-Date: 2015-11-16 12:44+0800\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -167,19 +167,19 @@ msgid "Kick Player"
 msgstr ""
 
 #: templates/operating/base_info.html:30
-msgid "Account Ban 7 Days"
-msgstr ""
-
-#: templates/operating/base_info.html:31
 msgid "Account Ban 30 Days"
 msgstr ""
 
+#: templates/operating/base_info.html:31
+msgid "Account Ban 1000 Days"
+msgstr ""
+
 #: templates/operating/base_info.html:32
-msgid "Chat Ban 7 Days"
+msgid "Chat Ban 30 Days"
 msgstr ""
 
 #: templates/operating/base_info.html:33
-msgid "Chat Ban 30 Days"
+msgid "Chat Ban 1000 Days"
 msgstr ""
 
 #: templates/operating/base_info.html:34
