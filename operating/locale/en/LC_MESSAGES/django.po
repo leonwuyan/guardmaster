@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2015-11-16 12:44+0800\n"
+"POT-Creation-Date: 2015-11-17 15:12+0800\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -824,7 +824,7 @@ msgstr ""
 msgid "Return Notify List"
 msgstr ""
 
-#: templatetags/custom.py:24 templatetags/custom.py:181
+#: templatetags/custom.py:24 templatetags/custom.py:190
 msgid "Not Time"
 msgstr ""
 
@@ -905,30 +905,74 @@ msgstr ""
 msgid "Fight Online Win Times"
 msgstr ""
 
-#: templatetags/custom.py:195
+#: templatetags/custom.py:175
+msgid "BOSS History Damage"
+msgstr ""
+
+#: templatetags/custom.py:175 templatetags/custom.py:176
+#: templatetags/custom.py:177 templatetags/custom.py:178
+#: templatetags/custom.py:179 templatetags/custom.py:180
+#: templatetags/custom.py:181 templatetags/custom.py:182
+#: templatetags/custom.py:183
+msgid "Unkown"
+msgstr ""
+
+#: templatetags/custom.py:176
+msgid "1st BOSS Damage"
+msgstr ""
+
+#: templatetags/custom.py:177
+msgid "2rd BOSS Damage"
+msgstr ""
+
+#: templatetags/custom.py:178
+msgid "3th BOSS Damage"
+msgstr ""
+
+#: templatetags/custom.py:179
+msgid "4th BOSS Damage"
+msgstr ""
+
+#: templatetags/custom.py:180
+msgid "5th BOSS Damage"
+msgstr ""
+
+#: templatetags/custom.py:181
+msgid "6th BOSS Damage"
+msgstr ""
+
+#: templatetags/custom.py:182
+msgid "7th BOSS Damage"
+msgstr ""
+
+#: templatetags/custom.py:183
+msgid "8th BOSS Damage"
+msgstr ""
+
+#: templatetags/custom.py:204
 msgid "Order Is Locking"
 msgstr ""
 
-#: templatetags/custom.py:196
+#: templatetags/custom.py:205
 msgid "Successful"
 msgstr ""
 
-#: templatetags/custom.py:197
+#: templatetags/custom.py:206
 msgid "Dir Do Not Exists"
 msgstr ""
 
-#: templatetags/custom.py:198
+#: templatetags/custom.py:207
 msgid "Not Any Files"
 msgstr ""
 
-#: templatetags/custom.py:199
+#: templatetags/custom.py:208
 msgid "Error In Scp"
 msgstr ""
 
-#: templatetags/custom.py:200
+#: templatetags/custom.py:209
 msgid "Working"
 msgstr ""
 
-#: templatetags/custom.py:201
+#: templatetags/custom.py:210
 msgid "Error In Srcipt"
 msgstr ""

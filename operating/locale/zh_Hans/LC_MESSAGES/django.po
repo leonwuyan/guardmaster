@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2015-11-16 12:44+0800\n"
-"PO-Revision-Date: 2015-11-16 12:45+0800\n"
+"POT-Creation-Date: 2015-11-17 15:12+0800\n"
+"PO-Revision-Date: 2015-11-17 15:14+0800\n"
 "Last-Translator: Raynor <raynor41@gmail.com>\n"
 "Language-Team: \n"
 "Language: zh_CN\n"
@@ -825,7 +825,7 @@ msgstr "复制以下列表给CDN服务器管理员"
 msgid "Return Notify List"
 msgstr "返回公告列表"
 
-#: templatetags/custom.py:24 templatetags/custom.py:181
+#: templatetags/custom.py:24 templatetags/custom.py:190
 msgid "Not Time"
 msgstr "无时间"
 
@@ -906,31 +906,75 @@ msgstr "线上对战积分"
 msgid "Fight Online Win Times"
 msgstr "线上对战赢场"
 
-#: templatetags/custom.py:195
+#: templatetags/custom.py:175
+msgid "BOSS History Damage"
+msgstr "世界Boss历史伤害量"
+
+#: templatetags/custom.py:175 templatetags/custom.py:176
+#: templatetags/custom.py:177 templatetags/custom.py:178
+#: templatetags/custom.py:179 templatetags/custom.py:180
+#: templatetags/custom.py:181 templatetags/custom.py:182
+#: templatetags/custom.py:183
+msgid "Unkown"
+msgstr "未知"
+
+#: templatetags/custom.py:176
+msgid "1st BOSS Damage"
+msgstr "第一只Boss伤害量"
+
+#: templatetags/custom.py:177
+msgid "2rd BOSS Damage"
+msgstr "第二只Boss伤害量"
+
+#: templatetags/custom.py:178
+msgid "3th BOSS Damage"
+msgstr "第三只Boss伤害量"
+
+#: templatetags/custom.py:179
+msgid "4th BOSS Damage"
+msgstr "第四只Boss伤害量"
+
+#: templatetags/custom.py:180
+msgid "5th BOSS Damage"
+msgstr "第五只Boss伤害量"
+
+#: templatetags/custom.py:181
+msgid "6th BOSS Damage"
+msgstr "第六只Boss伤害量"
+
+#: templatetags/custom.py:182
+msgid "7th BOSS Damage"
+msgstr "第七只Boss伤害量"
+
+#: templatetags/custom.py:183
+msgid "8th BOSS Damage"
+msgstr "第八只Boss伤害量"
+
+#: templatetags/custom.py:204
 msgid "Order Is Locking"
 msgstr "请求已上锁"
 
-#: templatetags/custom.py:196
+#: templatetags/custom.py:205
 msgid "Successful"
 msgstr "成功"
 
-#: templatetags/custom.py:197
+#: templatetags/custom.py:206
 msgid "Dir Do Not Exists"
 msgstr "文件目录不存在"
 
-#: templatetags/custom.py:198
+#: templatetags/custom.py:207
 msgid "Not Any Files"
 msgstr "没有文件"
 
-#: templatetags/custom.py:199
+#: templatetags/custom.py:208
 msgid "Error In Scp"
 msgstr "上传错误"
 
-#: templatetags/custom.py:200
+#: templatetags/custom.py:209
 msgid "Working"
 msgstr "工作中"
 
-#: templatetags/custom.py:201
+#: templatetags/custom.py:210
 msgid "Error In Srcipt"
 msgstr "脚本错误"
 
