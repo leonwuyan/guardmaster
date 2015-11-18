@@ -153,6 +153,7 @@ class UIColMap(models.Model):
         ('pay_channel_list', _('pay channel list')),
         ('chat_type_list', _('chat type list')),
         ('user_status_list', _('user status list')),
+        ('kick_ban', _('kick ban user')),
     }
     label = models.CharField(max_length=45)
     sub_menu = models.ForeignKey(UISubMenu)

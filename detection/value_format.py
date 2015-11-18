@@ -19,6 +19,7 @@ class ValueFormat(object):
         self.pay_channel_list = None
         self.chat_type_list = None
         self.user_status_list = None
+        self.server_id = '0'
 
     def _date(self, d):
         if d.__class__ is date:
@@ -68,6 +69,13 @@ class ValueFormat(object):
         button = "<a href='" + url + "'>" + reply + "</a>"
         return button
 
+    def _kick_ban(self, x):
+        url = reverse('operating:change_single', args=(self.panel_id, 'single_query', 'kick_ban'))
+        ban = _("ban")
+        x = str(x)
+        button = "<a href='javascript:management.kickbanUser(\"" + url + "\", \"" + self.server_id + "\", \"" + x + "\")'>" + ban + "</a>"
+        return button
+
     def _ip_to_server(self, x):
         panel = get_object_or_404(Panel, pk=self.panel_id)
         Server = panel.server_set.get(ip=x)
@@ -108,3 +116,6 @@ class ValueFormat(object):
 
     def execute(self, vals):
         return map(lambda x: self._fs_vs(self.format_list, x), vals)
+
+    def set_server_id(self, server_id):
+        self.server_id = str(server_id)

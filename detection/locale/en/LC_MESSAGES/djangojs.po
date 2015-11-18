@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2015-09-08 17:58+0800\n"
+"POT-Creation-Date: 2015-11-18 16:18+0800\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -21,54 +21,78 @@ msgstr ""
 msgid "en"
 msgstr ""
 
-#: static/detection/js/data.js:216
+#: static/detection/js/data.js:246 static/detection/js/data.js:302
 msgid "Confirm Adding %(count)s ?"
 msgstr ""
 
-#: static/detection/js/data.js:233
+#: static/detection/js/data.js:319
 msgid "Confirm Change To %(count)s ?"
 msgstr ""
 
-#: static/detection/js/data.js:246
+#: static/detection/js/data.js:332
 msgid "Confirm Unlocking Dungeon To %(type_id)s ?"
 msgstr ""
 
-#: static/detection/js/data.js:259
+#: static/detection/js/data.js:345
 msgid "Confirm Kicking Player UID %(uid)s ?"
 msgstr ""
 
-#: static/detection/js/data.js:271
+#: static/detection/js/data.js:357
 msgid "Confirm Chat Ban Player %(type_id)s Day?"
 msgstr ""
 
-#: static/detection/js/data.js:284
+#: static/detection/js/data.js:370
 msgid "Confirm Account Ban Player %(type_id)s Day?"
 msgstr ""
 
-#: static/detection/js/data.js:327
+#: static/detection/js/data.js:413
 msgid "Confirm To Delete This Notify %(title)s?"
 msgstr ""
 
-#: static/detection/js/data.js:363
+#: static/detection/js/data.js:449
 msgid "Confirm To Synchronize All The Noitfy To The CDNServer?"
 msgstr ""
 
-#: static/detection/js/data.js:425
+#: static/detection/js/data.js:499
 msgid "Title And Content Is Required"
 msgstr ""
 
-#: static/detection/js/data.js:428
+#: static/detection/js/data.js:502
 msgid ""
 "Please Confirm This:\n"
 "Title :%(t)s\n"
 "Content :%(c)s"
 msgstr ""
 
-#: static/detection/js/data.js:490
+#: static/detection/js/data.js:515
+msgid "Confirm Kick And Account Ban Player UID :%(uid)s ?"
+msgstr ""
+
+#: static/detection/js/data.js:610
 msgid ""
 "Please Confirm This:\n"
 "HostName :%(h)s\n"
 "Platform :%(p)s\n"
 "Channel :%(c)s\n"
 "Verseion :%(v)s"
+msgstr ""
+
+#: static/detection/js/data.js:623
+msgid ""
+"Please Confirm This:\n"
+"Server :%(se)s\n"
+"Stage :%(st)s\n"
+"Release :%(re)s\n"
+"CIWP :%(ci)s\n"
+"Version :%(ve)s"
+msgstr ""
+
+#: static/detection/js/data.js:637
+msgid ""
+"Please Confirm This:\n"
+"Server :%(se)s\n"
+"Platform :%(pl)s\n"
+"ChgType :%(ch)s\n"
+"CommitVers :%(co_f)s => %(co_t)s\n"
+"GMVers :%(gm_f)s => %(gm_t)s"
 msgstr ""

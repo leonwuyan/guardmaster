@@ -159,6 +159,8 @@ def json_template(request, panel_id, t_p, url=Common.URL):
     if t_p == 'gang_query':
         ret = Tabel.gang_qeury_select(sub_menu, panel, request.GET)
     if t_p == 'chat_query':
+        server_id = int(request.GET['server_id'])
+        vf.set_server_id(server_id)
         ret = Tabel.chat_query_select(sub_menu, panel, request.GET)
     if t_p == 'deal_query' or t_p == 'everyday_deal_query':
         ret = Tabel.deal_query_select(sub_menu, panel, request.GET)

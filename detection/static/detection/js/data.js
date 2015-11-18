@@ -507,6 +507,40 @@
     }
   };
   var _management = {
+    'kickbanUser': function(_url, server_id, uid){
+      addData = {
+        'server_id': server_id,
+        'uid': uid
+      }
+      fmts = gettext('Confirm Kick And Account Ban Player UID :%(uid)s ?');
+      s = interpolate(fmts, {'uid':uid}, true);
+      if (!confirm(s)) {
+        return false;
+      }
+      $.ajax({
+        url: _url,
+        data: addData,
+        type: 'POST',
+        beforeSend: function(xhr, settings) {
+          if (!_csrfSafeMethod(settings.type) && !this.crossDomain) {
+            xhr.setRequestHeader("X-CSRFToken", _getCookie('csrftoken'));
+          }
+        },
+        success: function(msg){
+          //
+        },
+        error: function(e){
+          switch (e.status) {
+            case 401:
+              //location.reload();
+              break;
+            default:
+              //location.reload();
+              break;
+          }
+        }
+      });
+    },
     'numberOnly': function(obj) {
       $(obj).keyup(function(){
               $(this).val($(this).val().replace(/\D|^0/g,''));

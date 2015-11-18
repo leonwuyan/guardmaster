@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2015-09-08 17:58+0800\n"
-"PO-Revision-Date: 2015-09-08 18:00+0800\n"
+"POT-Creation-Date: 2015-11-18 16:18+0800\n"
+"PO-Revision-Date: 2015-11-18 16:26+0800\n"
 "Last-Translator: Raynor <raynor41@gmail.com>\n"
 "Language-Team: \n"
 "Language: zh_TW\n"
@@ -22,43 +22,43 @@ msgstr ""
 msgid "en"
 msgstr "zh-TW"
 
-#: static/detection/js/data.js:216
+#: static/detection/js/data.js:246 static/detection/js/data.js:302
 msgid "Confirm Adding %(count)s ?"
 msgstr "確認增加 %(count)s ?"
 
-#: static/detection/js/data.js:233
+#: static/detection/js/data.js:319
 msgid "Confirm Change To %(count)s ?"
 msgstr "確認變更到 %(count)s ?"
 
-#: static/detection/js/data.js:246
+#: static/detection/js/data.js:332
 msgid "Confirm Unlocking Dungeon To %(type_id)s ?"
 msgstr "確認解鎖地下城到 %(type_id)s 層?"
 
-#: static/detection/js/data.js:259
+#: static/detection/js/data.js:345
 msgid "Confirm Kicking Player UID %(uid)s ?"
 msgstr "確認踢掉玩家 UID %(uid)s 下線?"
 
-#: static/detection/js/data.js:271
+#: static/detection/js/data.js:357
 msgid "Confirm Chat Ban Player %(type_id)s Day?"
 msgstr "確認禁言玩家 %(type_id)s 天?"
 
-#: static/detection/js/data.js:284
+#: static/detection/js/data.js:370
 msgid "Confirm Account Ban Player %(type_id)s Day?"
 msgstr "確認鎖定玩家 %(type_id)s 天?"
 
-#: static/detection/js/data.js:327
+#: static/detection/js/data.js:413
 msgid "Confirm To Delete This Notify %(title)s?"
 msgstr "確認刪除公告 %(title)s?"
 
-#: static/detection/js/data.js:363
+#: static/detection/js/data.js:449
 msgid "Confirm To Synchronize All The Noitfy To The CDNServer?"
 msgstr "確認將所有公告同步到CDN服務器?"
 
-#: static/detection/js/data.js:425
+#: static/detection/js/data.js:499
 msgid "Title And Content Is Required"
 msgstr "郵件題目和內容是必填"
 
-#: static/detection/js/data.js:428
+#: static/detection/js/data.js:502
 msgid ""
 "Please Confirm This:\n"
 "Title :%(t)s\n"
@@ -68,7 +68,11 @@ msgstr ""
 "郵件題目 :%(t)s\n"
 "郵件內容 :%(c)s"
 
-#: static/detection/js/data.js:490
+#: static/detection/js/data.js:515
+msgid "Confirm Kick And Account Ban Player UID :%(uid)s ?"
+msgstr "確認禁封玩家 UID %(uid)s 并踢下線?"
+
+#: static/detection/js/data.js:610
 msgid ""
 "Please Confirm This:\n"
 "HostName :%(h)s\n"
@@ -81,6 +85,38 @@ msgstr ""
 "平台 :%(p)s\n"
 "渠道 :%(c)s\n"
 "版本 :%(v)s"
+
+#: static/detection/js/data.js:623
+msgid ""
+"Please Confirm This:\n"
+"Server :%(se)s\n"
+"Stage :%(st)s\n"
+"Release :%(re)s\n"
+"CIWP :%(ci)s\n"
+"Version :%(ve)s"
+msgstr ""
+"請確認以下內容:\n"
+"伺服器 :%(se)s\n"
+"Stage :%(st)s\n"
+"Release :%(re)s\n"
+"CIWP :%(ci)s\n"
+"版本 :%(ve)s"
+
+#: static/detection/js/data.js:637
+msgid ""
+"Please Confirm This:\n"
+"Server :%(se)s\n"
+"Platform :%(pl)s\n"
+"ChgType :%(ch)s\n"
+"CommitVers :%(co_f)s => %(co_t)s\n"
+"GMVers :%(gm_f)s => %(gm_t)s"
+msgstr ""
+"請確認以下內容:\n"
+"伺服器 :%(se)s\n"
+"平台 :%(pl)s\n"
+"變更類型 :%(ch)s\n"
+"提審版本 :%(co_f)s => %(co_t)s\n"
+"遊戲版本 :%(gm_f)s => %(gm_t)s"
 
 #~ msgid "Confirm Adding 100K?"
 #~ msgstr "確認增加100k？"
