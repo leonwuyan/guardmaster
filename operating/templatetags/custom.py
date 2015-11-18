@@ -1,4 +1,5 @@
 from django.utils.translation import ugettext_lazy as _
+from django.utils.translation import ugettext as __
 from guardmaster import common as Common
 from detection.models import Tabel
 from django import template
@@ -220,6 +221,42 @@ def div2div2(x):
     return ((x - 1) / 2) % 2 == 0
 
 
+def format_accessory(x, panel_id):
+    d = eval(x)
+    tmp = ''
+    for item in d:
+        s = ''
+        if item['res_type'] == 1:
+            s = __('t_crystal').encode('utf-8')
+        if item['res_type'] == 2:
+            s = __('t_gold').encode('utf-8')
+        if item['res_type'] == 3:
+            s = __('t_money').encode('utf-8')
+        if item['res_type'] == 4:
+            s = __('t_skill_point').encode('utf-8')
+        if item['res_type'] == 5:
+            s = __('t_item').encode('utf-8')
+            s += '[ {0} | {1} ]'.format(
+                item['res_id'],
+                enum_item(item['res_id'], panel_id).encode('utf-8'))
+        if item['res_type'] == 6:
+            s = __('t_power').encode('utf-8')
+        if item['res_type'] == 10:
+            s = __('t_equip').encode('utf-8')
+            s += '[ {0} | {1} | {2} | {3} | {4} ]'.format(
+                item['res_id'],
+                enum_equip(item['res_id'], panel_id).encode('utf-8'),
+                item['res_extern_param_1'],
+                item['res_extern_param_2'],
+                item['res_extern_param_3'])
+        if item['res_type'] == 11:
+            s = __('t_score_of_rank_battle').encode('utf-8')
+        if item['res_type'] == 13:
+            s = __('t_winpoint').encode('utf-8')
+        tmp += '{0} :{1}<br/>'.format(s, item['res_count'])
+    return tmp
+
+
 register.filter(ts2date)
 register.filter(ts2time)
 register.filter(second2time)
@@ -241,3 +278,4 @@ register.filter(result_label)
 register.filter(div2)
 register.filter(div2div2)
 register.filter(enum_zone)
+register.filter(format_accessory)

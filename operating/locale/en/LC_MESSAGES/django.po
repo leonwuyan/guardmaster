@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2015-11-18 16:16+0800\n"
+"POT-Creation-Date: 2015-11-18 17:30+0800\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -824,155 +824,191 @@ msgstr ""
 msgid "Return Notify List"
 msgstr ""
 
-#: templatetags/custom.py:24 templatetags/custom.py:190
+#: templatetags/custom.py:25 templatetags/custom.py:191
 msgid "Not Time"
 msgstr ""
 
-#: templatetags/custom.py:42
+#: templatetags/custom.py:43
 #, python-format
 msgid "%(hour)s H %(minute)s M %(second)s S"
 msgstr ""
 
-#: templatetags/custom.py:47
+#: templatetags/custom.py:48
 msgid "OFF LINE"
 msgstr ""
 
-#: templatetags/custom.py:49
+#: templatetags/custom.py:50
 msgid "ON LINE"
 msgstr ""
 
-#: templatetags/custom.py:119
+#: templatetags/custom.py:120
 msgid "Novice Dungeon List"
 msgstr ""
 
-#: templatetags/custom.py:121
+#: templatetags/custom.py:122
 msgid "Normal Dungeon List"
 msgstr ""
 
-#: templatetags/custom.py:123
+#: templatetags/custom.py:124
 msgid "Elite Dungeon List"
 msgstr ""
 
-#: templatetags/custom.py:125
+#: templatetags/custom.py:126
 msgid "Endless Dungeon List"
 msgstr ""
 
-#: templatetags/custom.py:169
+#: templatetags/custom.py:170
 msgid "PvP Win Times"
 msgstr ""
 
-#: templatetags/custom.py:169
+#: templatetags/custom.py:170
 msgid "PvP Total Times"
 msgstr ""
 
-#: templatetags/custom.py:170
+#: templatetags/custom.py:171
 msgid "Endless Score"
 msgstr ""
 
-#: templatetags/custom.py:170
+#: templatetags/custom.py:171
 msgid "Endless Floor"
 msgstr ""
 
-#: templatetags/custom.py:171
+#: templatetags/custom.py:172
 msgid "Gang Score"
 msgstr ""
 
-#: templatetags/custom.py:171
+#: templatetags/custom.py:172
 msgid "Gang History Score"
 msgstr ""
 
-#: templatetags/custom.py:172
+#: templatetags/custom.py:173
 msgid "Achievement Score"
 msgstr ""
 
-#: templatetags/custom.py:172
+#: templatetags/custom.py:173
 msgid "Achievement Times"
 msgstr ""
 
-#: templatetags/custom.py:173
+#: templatetags/custom.py:174
 msgid "Fight Offline Name"
 msgstr ""
 
-#: templatetags/custom.py:173
+#: templatetags/custom.py:174
 msgid "Fight Offline Kill Man"
 msgstr ""
 
-#: templatetags/custom.py:174
+#: templatetags/custom.py:175
 msgid "Fight Online Score"
 msgstr ""
 
-#: templatetags/custom.py:174
+#: templatetags/custom.py:175
 msgid "Fight Online Win Times"
 msgstr ""
 
-#: templatetags/custom.py:175
+#: templatetags/custom.py:176
 msgid "BOSS History Damage"
 msgstr ""
 
-#: templatetags/custom.py:175 templatetags/custom.py:176
-#: templatetags/custom.py:177 templatetags/custom.py:178
-#: templatetags/custom.py:179 templatetags/custom.py:180
-#: templatetags/custom.py:181 templatetags/custom.py:182
-#: templatetags/custom.py:183
+#: templatetags/custom.py:176 templatetags/custom.py:177
+#: templatetags/custom.py:178 templatetags/custom.py:179
+#: templatetags/custom.py:180 templatetags/custom.py:181
+#: templatetags/custom.py:182 templatetags/custom.py:183
+#: templatetags/custom.py:184
 msgid "Unkown"
 msgstr ""
 
-#: templatetags/custom.py:176
+#: templatetags/custom.py:177
 msgid "1st BOSS Damage"
 msgstr ""
 
-#: templatetags/custom.py:177
+#: templatetags/custom.py:178
 msgid "2rd BOSS Damage"
 msgstr ""
 
-#: templatetags/custom.py:178
+#: templatetags/custom.py:179
 msgid "3th BOSS Damage"
 msgstr ""
 
-#: templatetags/custom.py:179
+#: templatetags/custom.py:180
 msgid "4th BOSS Damage"
 msgstr ""
 
-#: templatetags/custom.py:180
+#: templatetags/custom.py:181
 msgid "5th BOSS Damage"
 msgstr ""
 
-#: templatetags/custom.py:181
+#: templatetags/custom.py:182
 msgid "6th BOSS Damage"
 msgstr ""
 
-#: templatetags/custom.py:182
+#: templatetags/custom.py:183
 msgid "7th BOSS Damage"
 msgstr ""
 
-#: templatetags/custom.py:183
+#: templatetags/custom.py:184
 msgid "8th BOSS Damage"
 msgstr ""
 
-#: templatetags/custom.py:204
+#: templatetags/custom.py:205
 msgid "Order Is Locking"
 msgstr ""
 
-#: templatetags/custom.py:205
+#: templatetags/custom.py:206
 msgid "Successful"
 msgstr ""
 
-#: templatetags/custom.py:206
+#: templatetags/custom.py:207
 msgid "Dir Do Not Exists"
 msgstr ""
 
-#: templatetags/custom.py:207
+#: templatetags/custom.py:208
 msgid "Not Any Files"
 msgstr ""
 
-#: templatetags/custom.py:208
+#: templatetags/custom.py:209
 msgid "Error In Scp"
 msgstr ""
 
-#: templatetags/custom.py:209
+#: templatetags/custom.py:210
 msgid "Working"
 msgstr ""
 
-#: templatetags/custom.py:210
+#: templatetags/custom.py:211
 msgid "Error In Srcipt"
+msgstr ""
+
+#: templatetags/custom.py:230
+msgid "t_crystal"
+msgstr ""
+
+#: templatetags/custom.py:232
+msgid "t_gold"
+msgstr ""
+
+#: templatetags/custom.py:234
+msgid "t_money"
+msgstr ""
+
+#: templatetags/custom.py:236
+msgid "t_skill_point"
+msgstr ""
+
+#: templatetags/custom.py:238
+msgid "t_item"
+msgstr ""
+
+#: templatetags/custom.py:240
+msgid "t_power"
+msgstr ""
+
+#: templatetags/custom.py:242
+msgid "t_equip"
+msgstr ""
+
+#: templatetags/custom.py:244
+msgid "t_score_of_rank_battle"
+msgstr ""
+
+#: templatetags/custom.py:246
+msgid "t_winpoint"
 msgstr ""

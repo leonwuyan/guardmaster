@@ -204,10 +204,10 @@
         	<thead>
         	  <tr>
               <th style="width: 7%">{{t_mail_title}}</th>
-              <th style="width: 14%">{{t_mail_content}}</th>
+              <th style="width: 25%">{{t_mail_content}}</th>
               <th style="width: 14%">{{t_server}}</th>
               <th style="width: 7%">{{t_player_id}}</th>
-              <th style="width: 25%">{{t_accessory}}</th>
+              <th style="width: 14%">{{t_accessory}}</th>
               <th style="width: 7%">{{t_guardmaster}}</th>
               <th style="width: 14%">{{t_pub_date}}</th>
         	  </tr>
@@ -219,7 +219,7 @@
               <td>{{r.content}}</td>
               <td>{{r.server}}</td>
               <td>{{r.uid}}</td>
-              <td>{{r.accessory}}</td>
+              <td>{{r.accessory|format_accessory:panel.id|safe}}</td>
               <td>{{r.guardmaster}}</td>
               <td>{{r.pub_date}}</td>
             </tr>
