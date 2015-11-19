@@ -28,8 +28,10 @@
 {% trans "Reduce" as t_reduce %}
 {% trans "Change" as t_change %}
 {% trans "Kick Player" as t_kick_player %}
+{% trans "Account Ban 1 Day" as t_account_ban_1_day %}
 {% trans "Account Ban 30 Days" as t_account_ban_30_days %}
 {% trans "Account Ban 1000 Days" as t_account_ban_1000_days %}
+{% trans "Chat Ban 1 Day" as t_chat_ban_1_day %}
 {% trans "Chat Ban 30 Days" as t_chat_ban_30_days %}
 {% trans "Chat Ban 1000 Days" as t_chat_ban_1000_days %}
 {% trans "Un Ban" as t_un_ban %}
@@ -176,6 +178,7 @@
         <td colspan="4">{{ player.world_info.chat_ban_time|ts2bantime }}
           <span class="pull-right">
             <button type="submit" class="btn btn-info btn-xs" onclick="dataAccess.addJSON({{server_id}},{{player.uid|default:0}},'chat_ban',0)">{{t_un_ban}}</button>
+            <button type="submit" class="btn btn-warning btn-xs" onclick="dataAccess.addJSON({{server_id}},{{player.uid|default:0}},'chat_ban',1)">{{t_chat_ban_1_day}}</button>
             <button type="submit" class="btn btn-warning btn-xs" onclick="dataAccess.addJSON({{server_id}},{{player.uid|default:0}},'chat_ban',30)">{{t_chat_ban_30_days}}</button>
             <button type="submit" class="btn btn-warning btn-xs" onclick="dataAccess.addJSON({{server_id}},{{player.uid|default:0}},'chat_ban',1000)">{{t_chat_ban_1000_days}}</button>
           </span>
@@ -186,6 +189,7 @@
         <td colspan="4">{{ player.world_info.account_ban_time|ts2bantime }}
           <span class="pull-right">
             <button type="submit" class="btn btn-info btn-xs" onclick="dataAccess.addJSON({{server_id}},{{player.uid|default:0}},'account_ban',0)">{{t_un_ban}}</button>
+            <button type="submit" class="btn btn-warning btn-xs" onclick="dataAccess.addJSON({{server_id}},{{player.uid|default:0}},'account_ban',1)">{{t_account_ban_1_day}}</button>
             <button type="submit" class="btn btn-warning btn-xs" onclick="dataAccess.addJSON({{server_id}},{{player.uid|default:0}},'account_ban',30)">{{t_account_ban_30_days}}</button>
             <button type="submit" class="btn btn-warning btn-xs" onclick="dataAccess.addJSON({{server_id}},{{player.uid|default:0}},'account_ban',1000)">{{t_account_ban_1000_days}}</button>
           </span>

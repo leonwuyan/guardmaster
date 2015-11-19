@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2015-11-19 16:04+0800\n"
+"POT-Creation-Date: 2015-11-19 16:33+0800\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -171,50 +171,58 @@ msgid "Kick Player"
 msgstr ""
 
 #: templates/operating/base_info.html:31
-msgid "Account Ban 30 Days"
+msgid "Account Ban 1 Day"
 msgstr ""
 
 #: templates/operating/base_info.html:32
-msgid "Account Ban 1000 Days"
+msgid "Account Ban 30 Days"
 msgstr ""
 
 #: templates/operating/base_info.html:33
-msgid "Chat Ban 30 Days"
+msgid "Account Ban 1000 Days"
 msgstr ""
 
 #: templates/operating/base_info.html:34
-msgid "Chat Ban 1000 Days"
+msgid "Chat Ban 1 Day"
 msgstr ""
 
 #: templates/operating/base_info.html:35
-msgid "Un Ban"
+msgid "Chat Ban 30 Days"
 msgstr ""
 
 #: templates/operating/base_info.html:36
-msgid "Ohter Contorl"
+msgid "Chat Ban 1000 Days"
 msgstr ""
 
 #: templates/operating/base_info.html:37
-msgid "Add 100k Exp. Items"
+msgid "Un Ban"
 msgstr ""
 
 #: templates/operating/base_info.html:38
-msgid "Unlock 50 Dungeon"
+msgid "Ohter Contorl"
 msgstr ""
 
 #: templates/operating/base_info.html:39
-msgid "Unlock 100 Dungeon"
+msgid "Add 100k Exp. Items"
 msgstr ""
 
 #: templates/operating/base_info.html:40
-msgid "Unlock 150 Dungeon"
+msgid "Unlock 50 Dungeon"
 msgstr ""
 
 #: templates/operating/base_info.html:41
-msgid "Off Gang"
+msgid "Unlock 100 Dungeon"
 msgstr ""
 
 #: templates/operating/base_info.html:42
+msgid "Unlock 150 Dungeon"
+msgstr ""
+
+#: templates/operating/base_info.html:43
+msgid "Off Gang"
+msgstr ""
+
+#: templates/operating/base_info.html:44
 msgid "Off Rank"
 msgstr ""
 
