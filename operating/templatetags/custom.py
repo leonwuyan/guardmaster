@@ -246,9 +246,9 @@ def format_accessory(x, panel_id):
             s += '[ {0} | {1} | {2} | {3} | {4} ]'.format(
                 item['res_id'],
                 enum_equip(item['res_id'], panel_id).encode('utf-8'),
-                item['res_extern_param_1'],
-                item['res_extern_param_2'],
-                item['res_extern_param_3'])
+                item.get('res_extern_param_1'),
+                item.get('res_extern_param_2'),
+                item.get('res_extern_param_3'))
         if item['res_type'] == 11:
             s = __('t_score_of_rank_battle').encode('utf-8')
         if item['res_type'] == 13:
