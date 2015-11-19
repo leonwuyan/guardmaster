@@ -2,7 +2,7 @@ from detection.models import Tabel
 from operating.models import Server
 from guardmaster import common as Common
 from operating.bbrr.api import ServerSocket
-from operating.models import ResponseMail
+from operating.models import ResponseMail, ResponseAllMail
 from django.utils import timezone
 from pprint import pprint
 import logging
@@ -167,25 +167,8 @@ class ServerControl(object):
         )
         return ret
 
-    def send_mail(self, title=None, content=None, post=None):
-        start_time = time.time()
-        if post is None:
-            ret = self._send_mail(title, content)
-            response_id = Common.first(ret['sucess_result'])['mail_id']
-            self.db_log({
-                'type': 'contact',
-                'post': {
-                    'title': title,
-                    'actRest': response_id},
-                'ret': ret,
-                'start_time': start_time,
-                'done_time': time.time(),
-            })
-            return ret
-        title = post.get('title', 'Title')
-        content = post.get('content', 'Content')
+    def _acc(self, post):
         acc = []
-        print 'post :', post
         if post.get('crystal', None):
             crystal = int(post.get('crystal'))
             acc.append({'res_type': 1, 'res_id': 0, 'res_count': crystal})
@@ -216,6 +199,27 @@ class ServerControl(object):
                         'res_type': a, 'res_id': b, 'res_count': c,
                         'res_extern_param_1': d, 'res_extern_param_2': e,
                         'res_extern_param_3': f})
+        return acc
+
+    def send_mail(self, title=None, content=None, post=None):
+        start_time = time.time()
+        if post is None:
+            ret = self._send_mail(title, content)
+            response_id = Common.first(ret['sucess_result'])['mail_id']
+            self.db_log({
+                'type': 'contact',
+                'post': {
+                    'title': title,
+                    'actRest': response_id},
+                'ret': ret,
+                'start_time': start_time,
+                'done_time': time.time(),
+            })
+            return ret
+        title = post.get('title', 'Title')
+        content = post.get('content', 'Content')
+        acc = self._acc(post)
+
         ret = self._send_mail(title, content, acc)
         print 'ret :', ret
         if ret['result'] != self.success['result']:
@@ -258,6 +262,55 @@ class ServerControl(object):
                     'start_time': start_time,
                     'done_time': time.time(),
                 }, p['uid'])
+        return ret
+
+    def send_all_mail(self, post):
+        title = post.get('title', 'Title')
+        content = post.get('content', 'Content')
+        acc = self._acc(post)
+        start_date = post.get('start', timezone.now())
+        end_date = post.get('end', timezone.now())
+        zone = map(lambda x: int(x), post.getlist('zone'))
+        version = post.get('version', '')
+        ss = ServerSocket(self.server.ip, self.server.port, self.server.buf)
+        r = ResponseAllMail(
+                title=title,
+                content=content,
+                server=self.server,
+                guardmaster=self.username,
+                version=version,
+                zone=str(zone),
+                accessory=str(acc),
+                start_date=start_date,
+                end_date=end_date
+            )
+        r.save()
+        response_list = []
+        for world_id in zone:
+            ret = ss.send_all_mail(
+                world_id,
+                {
+                    'mail_title': title,
+                    'mail_content': content,
+                    'mail_interval': 60*60*24*7,
+                },
+                acc,
+                {
+                    'begin': Common.string2ts(r.start_date),
+                    'end': Common.string2ts(r.end_date),
+                    'version': version,
+                    'channel': 0
+                },
+                False)
+
+            if ret['result'] == self.success['result']:
+                response_list.append(ret['mail_seq_key'])
+            else:
+                response_list.append(0)
+        r.response_list = str(response_list)
+        r.save()
+        s = 'all_mail|' + str(r.id)
+        self.log(s)
         return ret
 
     def add_attr(self, type_id, res_id=46, count=100000):

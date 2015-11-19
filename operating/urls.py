@@ -21,6 +21,10 @@ urlpatterns = [
         views.mail,
         name='mail'),
     url(
+        r'^(?P<panel_id>[0-9]+)/all_mail/(?P<url>[_A-Za-z]+)$',
+        views.all_mail,
+        name='all_mail'),
+    url(
         r'^(?P<panel_id>[0-9]+)/rank/(?P<url>[_A-Za-z]+)$',
         views.rank,
         name='rank'),

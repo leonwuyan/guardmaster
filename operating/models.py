@@ -58,6 +58,25 @@ class ResponseMail(models.Model):
         ordering = ['-pub_date']
 
 
+class ResponseAllMail(models.Model):
+    title = models.CharField(max_length=45)
+    content = models.CharField(max_length=256)
+    server = models.ForeignKey(Server)
+    guardmaster = models.CharField(max_length=45)
+    version = models.CharField(max_length=45)
+    zone = models.CharField(max_length=256)
+    accessory = models.TextField()
+    response_list = models.CharField(max_length=256)
+    start_date = models.DateTimeField()
+    end_date = models.DateTimeField()
+
+    def __unicode__(self):
+        return self.title
+
+    class Meta:
+        ordering = ['-id']
+
+
 class Notify(models.Model):
     panel = models.ForeignKey(Panel)
     title = models.CharField(max_length=256)

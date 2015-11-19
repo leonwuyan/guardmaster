@@ -8,7 +8,7 @@ from operating.notifydeployment import NotifyDeployment
 from detection.value_format import ValueFormat
 from detection.views import view_template
 from guardmaster import common as Common
-from operating.models import Server, ResponseMail
+from operating.models import Server, ResponseMail, ResponseAllMail
 from operating.models import Notify
 from pprint import pprint
 import json
@@ -129,6 +129,33 @@ def mail(request, panel_id, url=Common.URL):
             request.user.username,
             Common.get_client_ip(request))
         ret = sc.send_mail(post=request.POST)
+        if ret['result'] == 1:
+            d['message'] = 2
+        else:
+            d['message'] = 1
+    return render(request, t, d)
+
+
+@Common.competence_required
+def all_mail(request, panel_id, url=Common.URL):
+    t = "operating/all_mail.html"
+    d = view_template(request, panel_id, url)
+    panel = get_object_or_404(Panel, pk=panel_id)
+    d['servers'] = panel.server_set.filter(server_type='dir')
+    d['equips'] = enum_equip_list(panel_id)
+    d['items'] = enum_item_list(panel_id)
+    d['responseallmails'] = Common.get_panel_response_all_mail(panel)
+    if request.method == 'POST':
+        server_id = int(request.POST['server'])
+
+        server = get_object_or_404(Server, pk=server_id)
+        sc = ServerControl(
+            server,
+            0,
+            panel_id,
+            request.user.username,
+            Common.get_client_ip(request))
+        ret = sc.send_all_mail(request.POST)
         if ret['result'] == 1:
             d['message'] = 2
         else:

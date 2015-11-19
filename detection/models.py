@@ -90,6 +90,7 @@ class UISubMenu(models.Model):
         ('detection:chat_query', _('chat_query')),
         ('operating:notify', _('notify')),
         ('operating:mail', _('mail')),
+        ('operating:all_mail', _('all_mail')),
         ('operating:single', _('single')),
         ('operating:rank', _('rank')),
         ('operating:contact', _('contact')),

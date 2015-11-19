@@ -82,6 +82,11 @@ def datetime2ts(t, tz=0):
     return int(ts)
 
 
+def string2ts(t, tz=0):
+    ts = time.mktime(time.strptime(t, '%Y-%m-%d %H:%M:%S')) + tz
+    return int(ts)
+
+
 def get_user_panels(user):
     groups = user.groups.all()
     panels = map(lambda x: x.panel_set.all(), groups)
@@ -114,6 +119,13 @@ def get_panel_response_mail(panel):
     responsemails = map(lambda x: x.responsemail_set.all()[:20], servers)
     responsemails = apply(chain, responsemails)
     return responsemails
+
+
+def get_panel_response_all_mail(panel):
+    servers = panel.server_set.all()
+    responseallmails = map(lambda x: x.responseallmail_set.all()[:20], servers)
+    responseallmails = apply(chain, responseallmails)
+    return responseallmails
 
 
 def competence_required(function):
