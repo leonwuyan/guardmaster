@@ -310,3 +310,25 @@ class ServerControl(object):
         for i in range(len(rank['rank_list'])):
             rank['rank_list'][i]['rank_pos'] = i+rank_start
         return rank
+
+    def off_gang(self):
+        (ss, uin, world_id, world_info) = self._params()
+        if ss is None:
+            return self.socketerror
+        ret = ss.del_player_from_gang(self.uid, world_id)
+        return ret
+
+    def off_rank(self):
+        (ss, uin, world_id, world_info) = self._params()
+        if ss is None:
+            return self.socketerror
+        rank_list = self._rank_list()
+        rank_list = map(lambda x: {
+                'rank_name': x['EnumDes'],
+                'rank_id': int(x['EnumCd']),
+                'rank_info': ss.get_rank_pos(self.uid, world_id, int(x['EnumCd'])),
+            }, rank_list)
+        for k in rank_list:
+            if k['rank_info']['rank_pos'] > 0:
+                ret = ss.del_player_from_rank(self.uid, world_id, k['rank_id'])
+        return ret

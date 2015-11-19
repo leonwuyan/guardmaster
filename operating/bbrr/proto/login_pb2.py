@@ -15,21 +15,21 @@ _sym_db = _symbol_database.Default()
 
 import protocommon_pb2
 import quest_pb2
-import offlinebattle_pb2
 import business_pb2
 import building_pb2
 import dungeon_pb2
 import endless_pb2
 import pvpsteal_pb2
 import rankbattle_pb2
+import multiplayer_pb2
 
 
 DESCRIPTOR = _descriptor.FileDescriptor(
   name='login.proto',
   package='',
-  serialized_pb=_b('\n\x0blogin.proto\x1a\x11protocommon.proto\x1a\x0bquest.proto\x1a\x13offlinebattle.proto\x1a\x0e\x62usiness.proto\x1a\x0e\x62uilding.proto\x1a\rdungeon.proto\x1a\rendless.proto\x1a\x0epvpsteal.proto\x1a\x10rankbattle.proto\"O\n\x18\x43SPKG_CMD_PLAYER_LEVELUP\x12\x0e\n\x06obj_id\x18\x01 \x01(\r\x12\x10\n\x08obj_type\x18\x02 \x01(\r\x12\x11\n\tcur_level\x18\x03 \x01(\r\"q\n\x18SCPKG_CMD_PLAYER_LEVELUP\x12\x0e\n\x06obj_id\x18\x01 \x01(\r\x12\x10\n\x08obj_type\x18\x02 \x01(\r\x12\x0e\n\x06result\x18\x03 \x01(\x05\x12\x10\n\x08\x62\x65g_time\x18\x04 \x01(\r\x12\x11\n\tcost_time\x18\x05 \x01(\r\"F\n\rSCDT_ATT_INFO\x12$\n\x08hero_att\x18\x01 \x01(\x0b\x32\x12.SCDT_HERO_ATTINFO\x12\x0f\n\x07reserve\x18\x03 \x01(\x05\"\xd3\x01\n\x1bSCPKG_CMD_PLAYER_LEVELUPEDN\x12\x0e\n\x06obj_id\x18\x01 \x01(\r\x12\x10\n\x08obj_type\x18\x02 \x01(\r\x12\x13\n\x0bis_directly\x18\x03 \x01(\r\x12\x12\n\ndest_level\x18\x04 \x01(\r\x12\x14\n\x0creward_power\x18\x05 \x01(\r\x12 \n\x08\x61tt_info\x18\x06 \x01(\x0b\x32\x0e.SCDT_ATT_INFO\x12\x31\n\x11passive_hero_info\x18\x07 \x03(\x0b\x32\x16.SCDT_PASSIVEHERO_INFO\"\xae\x02\n\x15\x43SDT_PLAYER_BEHAVIOUR\x12\x1b\n\x13total_skilllvup_cnt\x18\x01 \x01(\r\x12\x1a\n\x12total_archlvup_cnt\x18\x02 \x01(\r\x12\x18\n\x10total_growup_cnt\x18\x03 \x01(\r\x12\x1b\n\x13total_endless_score\x18\x04 \x01(\r\x12\x1e\n\x16total_buildinglvup_cnt\x18\x05 \x01(\r\x12\"\n\x1atotal_equip_level_up_level\x18\x06 \x01(\r\x12\x1f\n\x17total_equip_grow_up_cnt\x18\x07 \x01(\r\x12\x1f\n\x17total_equip_wake_up_cnt\x18\x08 \x01(\r\x12\x1f\n\x17total_world_boss_damage\x18\t \x01(\r\"\xfd\x01\n\x0e\x43SDT_MISC_DATA\x12&\n\x05quest\x18\x01 \x01(\x0b\x32\x17.CSDT_PLAYER_QUEST_INFO\x12)\n\tbehaviour\x18\x02 \x01(\x0b\x32\x16.CSDT_PLAYER_BEHAVIOUR\x12\x36\n\x13offline_battle_info\x18\x03 \x01(\x0b\x32\x19.CSDT_OFFLINE_BATTLE_INFO\x12\x34\n\x12online_battle_info\x18\x04 \x01(\x0b\x32\x18.CSDT_ONLINE_BATTLE_INFO\x12*\n\rbusiness_info\x18\x05 \x01(\x0b\x32\x13.CSDT_BUSINESS_INFO\"F\n\x15SCDT_PASSIVEHERO_INFO\x12\x0f\n\x07hero_id\x18\x01 \x01(\r\x12\n\n\x02hp\x18\x02 \x01(\r\x12\x10\n\x08strength\x18\x03 \x01(\r\"\x85\x01\n\x11SCDT_HERO_ATTINFO\x12\x0e\n\x06max_hp\x18\x01 \x01(\r\x12\x0e\n\x06\x63ur_hp\x18\x02 \x01(\r\x12\x0e\n\x06max_sp\x18\x03 \x01(\r\x12\x0e\n\x06\x63ur_sp\x18\x04 \x01(\r\x12\x10\n\x08strength\x18\x05 \x01(\r\x12\x0f\n\x07grow_up\x18\x06 \x01(\r\x12\r\n\x05level\x18\x07 \x01(\r\"\x8a\x02\n\x15SCPKG_CMD_UNLOCK_HERO\x12\x0e\n\x06result\x18\x01 \x01(\x05\x12\x13\n\x0bunlock_type\x18\x02 \x01(\r\x12\x0f\n\x07hero_id\x18\x03 \x01(\r\x12\x0b\n\x03pos\x18\x04 \x01(\x05\x12$\n\x08hero_att\x18\x05 \x01(\x0b\x32\x12.SCDT_HERO_ATTINFO\x12,\n\rinit_skill_id\x18\x06 \x03(\x0b\x32\x15.CSDT_SKILL_INFO_DATA\x12\x31\n\x11passive_hero_info\x18\x07 \x03(\x0b\x32\x16.SCDT_PASSIVEHERO_INFO\x12\'\n\x1fgreatest_dungeon_id_when_unlock\x18\x08 \x01(\r\"=\n\x14\x43SDT_SKILL_INFO_DATA\x12\x10\n\x08skill_id\x18\x01 \x01(\r\x12\x13\n\x0bskill_index\x18\x02 \x01(\r\"\x95\x02\n\x13\x43SDT_HERO_INFO_DATA\x12\x0f\n\x07hero_id\x18\x01 \x01(\r\x12\x0f\n\x07grow_up\x18\x02 \x01(\r\x12\r\n\x05level\x18\x03 \x01(\r\x12\x0b\n\x03\x65xp\x18\x04 \x01(\r\x12\x0e\n\x06\x63ur_hp\x18\x05 \x01(\r\x12\x0e\n\x06\x63ur_sp\x18\x06 \x01(\r\x12\x0e\n\x06max_hp\x18\x07 \x01(\r\x12\x10\n\x08strength\x18\x08 \x01(\r\x12)\n\nskill_info\x18\t \x03(\x0b\x32\x15.CSDT_SKILL_INFO_DATA\x12*\n\x0b\x65mblem_info\x18\n \x03(\x0b\x32\x15.CSDT_EMBLEMINFO_DATA\x12\'\n\x1fgreatest_dungeon_id_when_unlock\x18\x0b \x01(\r\"9\n\x0e\x43SDT_HERO_INFO\x12\'\n\thero_info\x18\x01 \x03(\x0b\x32\x14.CSDT_HERO_INFO_DATA\"\xed\x04\n\x10\x43SDT_ROLE_ONLINE\x12\r\n\x05money\x18\x01 \x01(\r\x12\x11\n\tmax_power\x18\x02 \x01(\r\x12\x11\n\tcur_power\x18\x03 \x01(\r\x12\x1e\n\x16power_recover_beg_time\x18\x04 \x01(\r\x12 \n\x18power_recover_total_time\x18\x05 \x01(\r\x12\x1f\n\x17power_last_refresh_time\x18\x06 \x01(\r\x12\x17\n\x0f\x62uy_power_times\x18\x07 \x01(\r\x12\x16\n\x0e\x63ur_achi_point\x18\x08 \x01(\r\x12\x13\n\x0b\x63ur_crystal\x18\t \x01(\r\x12\x10\n\x08\x63ur_gold\x18\n \x01(\r\x12\x1d\n\x15\x63ur_rank_battle_score\x18\x14 \x01(\r\x12\x0e\n\x06max_sp\x18\x0b \x01(\r\x12\x0e\n\x06\x63ur_sp\x18\x0c \x01(\r\x12\x1b\n\x13\x63ur_spborn_beg_time\x18\r \x01(\r\x12\x1d\n\x15\x63ur_spborn_total_time\x18\x0e \x01(\r\x12\x19\n\x11max_endless_score\x18\x0f \x01(\r\x12\x19\n\x11max_endless_floor\x18\x10 \x01(\r\x12\x14\n\x0c\x63lt_bit_mark\x18\x11 \x01(\x04\x12\x1b\n\x13\x63ur_notify_beg_time\x18\x12 \x01(\r\x12\x1d\n\x15\x62uy_skill_point_times\x18\x13 \x01(\r\x12\x19\n\x11\x62uy_crystal_times\x18\x15 \x01(\r\x12\x16\n\x0e\x62uy_gold_times\x18\x16 \x01(\r\x12\x12\n\nhead_photo\x18\x17 \x01(\r\x12\x1f\n\x17online_battle_win_point\x18\x18 \x01(\r\"\x86\x02\n\x1aSCPKG_CMD_ROLELOGIN_ONLINE\x12\x11\n\tresult_id\x18\x01 \x01(\x05\x12\x0f\n\x07zone_id\x18\x02 \x01(\r\x12\x0e\n\x06obj_id\x18\x03 \x01(\r\x12\x15\n\rzone_time_sec\x18\x04 \x01(\r\x12\x16\n\x0ezone_time_msec\x18\x05 \x01(\r\x12\x0b\n\x03uid\x18\x06 \x01(\r\x12\x0c\n\x04name\x18\x07 \x01(\t\x12\x11\n\tclient_ip\x18\x08 \x01(\r\x12\x13\n\x0b\x63lient_port\x18\t \x01(\r\x12+\n\x10role_online_info\x18\n \x01(\x0b\x32\x11.CSDT_ROLE_ONLINE\x12\x15\n\rleft_ban_time\x18\x0b \x01(\r\"J\n\x1cSCPKG_CMD_ROLELOGIN_BUILDING\x12*\n\rbuilding_info\x18\x01 \x01(\x0b\x32\x13.CSDT_BUILDING_INFO\">\n\x18SCPKG_CMD_ROLELOGIN_HERO\x12\"\n\thero_info\x18\x01 \x01(\x0b\x32\x0f.CSDT_HERO_INFO\"8\n\x16\x43SDT_SELFDUN_HERO_INFO\x12\r\n\x05state\x18\x01 \x01(\r\x12\x0f\n\x07hero_id\x18\x02 \x01(\r\"{\n\x12\x43SDT_SELF_DUN_DATA\x12\x32\n\x11\x64\x65\x66\x65nse_hero_info\x18\x01 \x03(\x0b\x32\x17.CSDT_SELFDUN_HERO_INFO\x12\x31\n\x10\x61ttack_hero_info\x18\x02 \x03(\x0b\x32\x17.CSDT_SELFDUN_HERO_INFO\"\xe3\x01\n\x1bSCPKG_CMD_ROLE_DUNGEON_INFO\x12\x34\n\x12pve_challenge_data\x18\x01 \x01(\x0b\x32\x18.CSDT_PVE_CHALLENGE_DATA\x12\x38\n\x14tower_challenge_data\x18\x02 \x01(\x0b\x32\x1a.CSDT_TOWER_CHALLENGE_DATA\x12*\n\rself_dun_data\x18\x03 \x01(\x0b\x32\x13.CSDT_SELF_DUN_DATA\x12(\n\x0cpvp_dun_data\x18\x04 \x01(\x0b\x32\x12.CSDT_PVP_DUN_DATA\"[\n#SCPKG_CMD_ROLELOGIN_GANGBATTLE_HERO\x12\x34\n\x10gang_battle_info\x18\x01 \x01(\x0b\x32\x1a.CSDT_GANGBATTLE_HERO_INFO\"_\n$SCPKG_CMD_ROLELOGIN_RANK_BATTLE_INFO\x12\x37\n\x10rank_battle_info\x18\x01 \x01(\x0b\x32\x1d.CSDT_PLAYER_RANK_BATTLE_INFO\">\n\x18SCPKG_CMD_ROLELOGIN_MISC\x12\"\n\tmisc_data\x18\x01 \x01(\x0b\x32\x0f.CSDT_MISC_DATA\"-\n\x1aSCPKG_CMD_ROLELOGIN_FINISH\x12\x0f\n\x07succeed\x18\x01 \x01(\x08')
+  serialized_pb=_b('\n\x0blogin.proto\x1a\x11protocommon.proto\x1a\x0bquest.proto\x1a\x0e\x62usiness.proto\x1a\x0e\x62uilding.proto\x1a\rdungeon.proto\x1a\rendless.proto\x1a\x0epvpsteal.proto\x1a\x10rankbattle.proto\x1a\x11multiplayer.proto\"O\n\x18\x43SPKG_CMD_PLAYER_LEVELUP\x12\x0e\n\x06obj_id\x18\x01 \x01(\r\x12\x10\n\x08obj_type\x18\x02 \x01(\r\x12\x11\n\tcur_level\x18\x03 \x01(\r\"q\n\x18SCPKG_CMD_PLAYER_LEVELUP\x12\x0e\n\x06obj_id\x18\x01 \x01(\r\x12\x10\n\x08obj_type\x18\x02 \x01(\r\x12\x0e\n\x06result\x18\x03 \x01(\x05\x12\x10\n\x08\x62\x65g_time\x18\x04 \x01(\r\x12\x11\n\tcost_time\x18\x05 \x01(\r\"F\n\rSCDT_ATT_INFO\x12$\n\x08hero_att\x18\x01 \x01(\x0b\x32\x12.SCDT_HERO_ATTINFO\x12\x0f\n\x07reserve\x18\x03 \x01(\x05\"\xd3\x01\n\x1bSCPKG_CMD_PLAYER_LEVELUPEDN\x12\x0e\n\x06obj_id\x18\x01 \x01(\r\x12\x10\n\x08obj_type\x18\x02 \x01(\r\x12\x13\n\x0bis_directly\x18\x03 \x01(\r\x12\x12\n\ndest_level\x18\x04 \x01(\r\x12\x14\n\x0creward_power\x18\x05 \x01(\r\x12 \n\x08\x61tt_info\x18\x06 \x01(\x0b\x32\x0e.SCDT_ATT_INFO\x12\x31\n\x11passive_hero_info\x18\x07 \x03(\x0b\x32\x16.SCDT_PASSIVEHERO_INFO\"\xae\x02\n\x15\x43SDT_PLAYER_BEHAVIOUR\x12\x1b\n\x13total_skilllvup_cnt\x18\x01 \x01(\r\x12\x1a\n\x12total_archlvup_cnt\x18\x02 \x01(\r\x12\x18\n\x10total_growup_cnt\x18\x03 \x01(\r\x12\x1b\n\x13total_endless_score\x18\x04 \x01(\r\x12\x1e\n\x16total_buildinglvup_cnt\x18\x05 \x01(\r\x12\"\n\x1atotal_equip_level_up_level\x18\x06 \x01(\r\x12\x1f\n\x17total_equip_grow_up_cnt\x18\x07 \x01(\r\x12\x1f\n\x17total_equip_wake_up_cnt\x18\x08 \x01(\r\x12\x1f\n\x17total_world_boss_damage\x18\t \x01(\r\"\xfd\x01\n\x0e\x43SDT_MISC_DATA\x12&\n\x05quest\x18\x01 \x01(\x0b\x32\x17.CSDT_PLAYER_QUEST_INFO\x12)\n\tbehaviour\x18\x02 \x01(\x0b\x32\x16.CSDT_PLAYER_BEHAVIOUR\x12\x36\n\x13offline_battle_info\x18\x03 \x01(\x0b\x32\x19.CSDT_OFFLINE_BATTLE_INFO\x12\x34\n\x12online_battle_info\x18\x04 \x01(\x0b\x32\x18.CSDT_ONLINE_BATTLE_INFO\x12*\n\rbusiness_info\x18\x05 \x01(\x0b\x32\x13.CSDT_BUSINESS_INFO\"F\n\x15SCDT_PASSIVEHERO_INFO\x12\x0f\n\x07hero_id\x18\x01 \x01(\r\x12\n\n\x02hp\x18\x02 \x01(\r\x12\x10\n\x08strength\x18\x03 \x01(\r\"\x85\x01\n\x11SCDT_HERO_ATTINFO\x12\x0e\n\x06max_hp\x18\x01 \x01(\r\x12\x0e\n\x06\x63ur_hp\x18\x02 \x01(\r\x12\x0e\n\x06max_sp\x18\x03 \x01(\r\x12\x0e\n\x06\x63ur_sp\x18\x04 \x01(\r\x12\x10\n\x08strength\x18\x05 \x01(\r\x12\x0f\n\x07grow_up\x18\x06 \x01(\r\x12\r\n\x05level\x18\x07 \x01(\r\"\x8a\x02\n\x15SCPKG_CMD_UNLOCK_HERO\x12\x0e\n\x06result\x18\x01 \x01(\x05\x12\x13\n\x0bunlock_type\x18\x02 \x01(\r\x12\x0f\n\x07hero_id\x18\x03 \x01(\r\x12\x0b\n\x03pos\x18\x04 \x01(\x05\x12$\n\x08hero_att\x18\x05 \x01(\x0b\x32\x12.SCDT_HERO_ATTINFO\x12,\n\rinit_skill_id\x18\x06 \x03(\x0b\x32\x15.CSDT_SKILL_INFO_DATA\x12\x31\n\x11passive_hero_info\x18\x07 \x03(\x0b\x32\x16.SCDT_PASSIVEHERO_INFO\x12\'\n\x1fgreatest_dungeon_id_when_unlock\x18\x08 \x01(\r\"=\n\x14\x43SDT_SKILL_INFO_DATA\x12\x10\n\x08skill_id\x18\x01 \x01(\r\x12\x13\n\x0bskill_index\x18\x02 \x01(\r\"\xaa\x02\n\x13\x43SDT_HERO_INFO_DATA\x12\x0f\n\x07hero_id\x18\x01 \x01(\r\x12\x0f\n\x07grow_up\x18\x02 \x01(\r\x12\r\n\x05level\x18\x03 \x01(\r\x12\x0b\n\x03\x65xp\x18\x04 \x01(\r\x12\x0e\n\x06\x63ur_hp\x18\x05 \x01(\r\x12\x0e\n\x06\x63ur_sp\x18\x06 \x01(\r\x12\x0e\n\x06max_hp\x18\x07 \x01(\r\x12\x10\n\x08strength\x18\x08 \x01(\r\x12)\n\nskill_info\x18\t \x03(\x0b\x32\x15.CSDT_SKILL_INFO_DATA\x12*\n\x0b\x65mblem_info\x18\n \x03(\x0b\x32\x15.CSDT_EMBLEMINFO_DATA\x12\'\n\x1fgreatest_dungeon_id_when_unlock\x18\x0b \x01(\r\x12\x13\n\x0btalent_info\x18\x0c \x01(\x04\"9\n\x0e\x43SDT_HERO_INFO\x12\'\n\thero_info\x18\x01 \x03(\x0b\x32\x14.CSDT_HERO_INFO_DATA\"\xed\x04\n\x10\x43SDT_ROLE_ONLINE\x12\r\n\x05money\x18\x01 \x01(\r\x12\x11\n\tmax_power\x18\x02 \x01(\r\x12\x11\n\tcur_power\x18\x03 \x01(\r\x12\x1e\n\x16power_recover_beg_time\x18\x04 \x01(\r\x12 \n\x18power_recover_total_time\x18\x05 \x01(\r\x12\x1f\n\x17power_last_refresh_time\x18\x06 \x01(\r\x12\x17\n\x0f\x62uy_power_times\x18\x07 \x01(\r\x12\x16\n\x0e\x63ur_achi_point\x18\x08 \x01(\r\x12\x13\n\x0b\x63ur_crystal\x18\t \x01(\r\x12\x10\n\x08\x63ur_gold\x18\n \x01(\r\x12\x1d\n\x15\x63ur_rank_battle_score\x18\x14 \x01(\r\x12\x0e\n\x06max_sp\x18\x0b \x01(\r\x12\x0e\n\x06\x63ur_sp\x18\x0c \x01(\r\x12\x1b\n\x13\x63ur_spborn_beg_time\x18\r \x01(\r\x12\x1d\n\x15\x63ur_spborn_total_time\x18\x0e \x01(\r\x12\x19\n\x11max_endless_score\x18\x0f \x01(\r\x12\x19\n\x11max_endless_floor\x18\x10 \x01(\r\x12\x14\n\x0c\x63lt_bit_mark\x18\x11 \x01(\x04\x12\x1b\n\x13\x63ur_notify_beg_time\x18\x12 \x01(\r\x12\x1d\n\x15\x62uy_skill_point_times\x18\x13 \x01(\r\x12\x19\n\x11\x62uy_crystal_times\x18\x15 \x01(\r\x12\x16\n\x0e\x62uy_gold_times\x18\x16 \x01(\r\x12\x12\n\nhead_photo\x18\x17 \x01(\r\x12\x1f\n\x17online_battle_win_point\x18\x18 \x01(\r\"\xa0\x02\n\x1aSCPKG_CMD_ROLELOGIN_ONLINE\x12\x11\n\tresult_id\x18\x01 \x01(\x05\x12\x0f\n\x07zone_id\x18\x02 \x01(\r\x12\x0e\n\x06obj_id\x18\x03 \x01(\r\x12\x15\n\rzone_time_sec\x18\x04 \x01(\r\x12\x16\n\x0ezone_time_msec\x18\x05 \x01(\r\x12\x0b\n\x03uid\x18\x06 \x01(\r\x12\x0c\n\x04name\x18\x07 \x01(\t\x12\x11\n\tclient_ip\x18\x08 \x01(\r\x12\x13\n\x0b\x63lient_port\x18\t \x01(\r\x12+\n\x10role_online_info\x18\n \x01(\x0b\x32\x11.CSDT_ROLE_ONLINE\x12\x15\n\rleft_ban_time\x18\x0b \x01(\r\x12\x18\n\x10server_open_time\x18\x0c \x01(\r\"J\n\x1cSCPKG_CMD_ROLELOGIN_BUILDING\x12*\n\rbuilding_info\x18\x01 \x01(\x0b\x32\x13.CSDT_BUILDING_INFO\">\n\x18SCPKG_CMD_ROLELOGIN_HERO\x12\"\n\thero_info\x18\x01 \x01(\x0b\x32\x0f.CSDT_HERO_INFO\"8\n\x16\x43SDT_SELFDUN_HERO_INFO\x12\r\n\x05state\x18\x01 \x01(\r\x12\x0f\n\x07hero_id\x18\x02 \x01(\r\"{\n\x12\x43SDT_SELF_DUN_DATA\x12\x32\n\x11\x64\x65\x66\x65nse_hero_info\x18\x01 \x03(\x0b\x32\x17.CSDT_SELFDUN_HERO_INFO\x12\x31\n\x10\x61ttack_hero_info\x18\x02 \x03(\x0b\x32\x17.CSDT_SELFDUN_HERO_INFO\"\xe3\x01\n\x1bSCPKG_CMD_ROLE_DUNGEON_INFO\x12\x34\n\x12pve_challenge_data\x18\x01 \x01(\x0b\x32\x18.CSDT_PVE_CHALLENGE_DATA\x12\x38\n\x14tower_challenge_data\x18\x02 \x01(\x0b\x32\x1a.CSDT_TOWER_CHALLENGE_DATA\x12*\n\rself_dun_data\x18\x03 \x01(\x0b\x32\x13.CSDT_SELF_DUN_DATA\x12(\n\x0cpvp_dun_data\x18\x04 \x01(\x0b\x32\x12.CSDT_PVP_DUN_DATA\"[\n#SCPKG_CMD_ROLELOGIN_GANGBATTLE_HERO\x12\x34\n\x10gang_battle_info\x18\x01 \x01(\x0b\x32\x1a.CSDT_GANGBATTLE_HERO_INFO\"_\n$SCPKG_CMD_ROLELOGIN_RANK_BATTLE_INFO\x12\x37\n\x10rank_battle_info\x18\x01 \x01(\x0b\x32\x1d.CSDT_PLAYER_RANK_BATTLE_INFO\">\n\x18SCPKG_CMD_ROLELOGIN_MISC\x12\"\n\tmisc_data\x18\x01 \x01(\x0b\x32\x0f.CSDT_MISC_DATA\"-\n\x1aSCPKG_CMD_ROLELOGIN_FINISH\x12\x0f\n\x07succeed\x18\x01 \x01(\x08')
   ,
-  dependencies=[protocommon_pb2.DESCRIPTOR,quest_pb2.DESCRIPTOR,offlinebattle_pb2.DESCRIPTOR,business_pb2.DESCRIPTOR,building_pb2.DESCRIPTOR,dungeon_pb2.DESCRIPTOR,endless_pb2.DESCRIPTOR,pvpsteal_pb2.DESCRIPTOR,rankbattle_pb2.DESCRIPTOR,])
+  dependencies=[protocommon_pb2.DESCRIPTOR,quest_pb2.DESCRIPTOR,business_pb2.DESCRIPTOR,building_pb2.DESCRIPTOR,dungeon_pb2.DESCRIPTOR,endless_pb2.DESCRIPTOR,pvpsteal_pb2.DESCRIPTOR,rankbattle_pb2.DESCRIPTOR,multiplayer_pb2.DESCRIPTOR,])
 _sym_db.RegisterFileDescriptor(DESCRIPTOR)
 
 
@@ -74,8 +74,8 @@ _CSPKG_CMD_PLAYER_LEVELUP = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=164,
-  serialized_end=243,
+  serialized_start=162,
+  serialized_end=241,
 )
 
 
@@ -132,8 +132,8 @@ _SCPKG_CMD_PLAYER_LEVELUP = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=245,
-  serialized_end=358,
+  serialized_start=243,
+  serialized_end=356,
 )
 
 
@@ -169,8 +169,8 @@ _SCDT_ATT_INFO = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=360,
-  serialized_end=430,
+  serialized_start=358,
+  serialized_end=428,
 )
 
 
@@ -241,8 +241,8 @@ _SCPKG_CMD_PLAYER_LEVELUPEDN = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=433,
-  serialized_end=644,
+  serialized_start=431,
+  serialized_end=642,
 )
 
 
@@ -327,8 +327,8 @@ _CSDT_PLAYER_BEHAVIOUR = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=647,
-  serialized_end=949,
+  serialized_start=645,
+  serialized_end=947,
 )
 
 
@@ -385,8 +385,8 @@ _CSDT_MISC_DATA = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=952,
-  serialized_end=1205,
+  serialized_start=950,
+  serialized_end=1203,
 )
 
 
@@ -429,8 +429,8 @@ _SCDT_PASSIVEHERO_INFO = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=1207,
-  serialized_end=1277,
+  serialized_start=1205,
+  serialized_end=1275,
 )
 
 
@@ -501,8 +501,8 @@ _SCDT_HERO_ATTINFO = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=1280,
-  serialized_end=1413,
+  serialized_start=1278,
+  serialized_end=1411,
 )
 
 
@@ -580,8 +580,8 @@ _SCPKG_CMD_UNLOCK_HERO = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=1416,
-  serialized_end=1682,
+  serialized_start=1414,
+  serialized_end=1680,
 )
 
 
@@ -617,8 +617,8 @@ _CSDT_SKILL_INFO_DATA = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=1684,
-  serialized_end=1745,
+  serialized_start=1682,
+  serialized_end=1743,
 )
 
 
@@ -706,6 +706,13 @@ _CSDT_HERO_INFO_DATA = _descriptor.Descriptor(
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
+    _descriptor.FieldDescriptor(
+      name='talent_info', full_name='CSDT_HERO_INFO_DATA.talent_info', index=11,
+      number=12, type=4, cpp_type=4, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
   ],
   extensions=[
   ],
@@ -717,8 +724,8 @@ _CSDT_HERO_INFO_DATA = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=1748,
-  serialized_end=2025,
+  serialized_start=1746,
+  serialized_end=2044,
 )
 
 
@@ -747,8 +754,8 @@ _CSDT_HERO_INFO = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=2027,
-  serialized_end=2084,
+  serialized_start=2046,
+  serialized_end=2103,
 )
 
 
@@ -938,8 +945,8 @@ _CSDT_ROLE_ONLINE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=2087,
-  serialized_end=2708,
+  serialized_start=2106,
+  serialized_end=2727,
 )
 
 
@@ -1027,6 +1034,13 @@ _SCPKG_CMD_ROLELOGIN_ONLINE = _descriptor.Descriptor(
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
+    _descriptor.FieldDescriptor(
+      name='server_open_time', full_name='SCPKG_CMD_ROLELOGIN_ONLINE.server_open_time', index=11,
+      number=12, type=13, cpp_type=3, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
   ],
   extensions=[
   ],
@@ -1038,8 +1052,8 @@ _SCPKG_CMD_ROLELOGIN_ONLINE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=2711,
-  serialized_end=2973,
+  serialized_start=2730,
+  serialized_end=3018,
 )
 
 
@@ -1068,8 +1082,8 @@ _SCPKG_CMD_ROLELOGIN_BUILDING = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=2975,
-  serialized_end=3049,
+  serialized_start=3020,
+  serialized_end=3094,
 )
 
 
@@ -1098,8 +1112,8 @@ _SCPKG_CMD_ROLELOGIN_HERO = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=3051,
-  serialized_end=3113,
+  serialized_start=3096,
+  serialized_end=3158,
 )
 
 
@@ -1135,8 +1149,8 @@ _CSDT_SELFDUN_HERO_INFO = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=3115,
-  serialized_end=3171,
+  serialized_start=3160,
+  serialized_end=3216,
 )
 
 
@@ -1172,8 +1186,8 @@ _CSDT_SELF_DUN_DATA = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=3173,
-  serialized_end=3296,
+  serialized_start=3218,
+  serialized_end=3341,
 )
 
 
@@ -1223,8 +1237,8 @@ _SCPKG_CMD_ROLE_DUNGEON_INFO = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=3299,
-  serialized_end=3526,
+  serialized_start=3344,
+  serialized_end=3571,
 )
 
 
@@ -1253,8 +1267,8 @@ _SCPKG_CMD_ROLELOGIN_GANGBATTLE_HERO = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=3528,
-  serialized_end=3619,
+  serialized_start=3573,
+  serialized_end=3664,
 )
 
 
@@ -1283,8 +1297,8 @@ _SCPKG_CMD_ROLELOGIN_RANK_BATTLE_INFO = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=3621,
-  serialized_end=3716,
+  serialized_start=3666,
+  serialized_end=3761,
 )
 
 
@@ -1313,8 +1327,8 @@ _SCPKG_CMD_ROLELOGIN_MISC = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=3718,
-  serialized_end=3780,
+  serialized_start=3763,
+  serialized_end=3825,
 )
 
 
@@ -1343,8 +1357,8 @@ _SCPKG_CMD_ROLELOGIN_FINISH = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=3782,
-  serialized_end=3827,
+  serialized_start=3827,
+  serialized_end=3872,
 )
 
 _SCDT_ATT_INFO.fields_by_name['hero_att'].message_type = _SCDT_HERO_ATTINFO
@@ -1352,7 +1366,7 @@ _SCPKG_CMD_PLAYER_LEVELUPEDN.fields_by_name['att_info'].message_type = _SCDT_ATT
 _SCPKG_CMD_PLAYER_LEVELUPEDN.fields_by_name['passive_hero_info'].message_type = _SCDT_PASSIVEHERO_INFO
 _CSDT_MISC_DATA.fields_by_name['quest'].message_type = quest_pb2._CSDT_PLAYER_QUEST_INFO
 _CSDT_MISC_DATA.fields_by_name['behaviour'].message_type = _CSDT_PLAYER_BEHAVIOUR
-_CSDT_MISC_DATA.fields_by_name['offline_battle_info'].message_type = offlinebattle_pb2._CSDT_OFFLINE_BATTLE_INFO
+_CSDT_MISC_DATA.fields_by_name['offline_battle_info'].message_type = multiplayer_pb2._CSDT_OFFLINE_BATTLE_INFO
 _CSDT_MISC_DATA.fields_by_name['online_battle_info'].message_type = protocommon_pb2._CSDT_ONLINE_BATTLE_INFO
 _CSDT_MISC_DATA.fields_by_name['business_info'].message_type = business_pb2._CSDT_BUSINESS_INFO
 _SCPKG_CMD_UNLOCK_HERO.fields_by_name['hero_att'].message_type = _SCDT_HERO_ATTINFO

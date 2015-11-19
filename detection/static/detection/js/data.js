@@ -379,6 +379,30 @@
           };
           p = '/account_ban.json';
           break;
+        case 'off_gang':
+          fmts = gettext('Confirm Player UID %(uid)s Off Gang?');
+          s = interpolate(fmts, {'uid':uid}, true);
+          if (!confirm(s)) {
+            return false;
+          }
+          addData = {
+            'server_id': server_id,
+            'uid': uid
+          };
+          p = '/off_gang.json';
+          break;
+        case 'off_rank':
+          fmts = gettext('Confirm Player UID %(uid)s Off Rank?');
+          s = interpolate(fmts, {'uid':uid}, true);
+          if (!confirm(s)) {
+            return false;
+          }
+          addData = {
+            'server_id': server_id,
+            'uid': uid
+          };
+          p = '/off_rank.json';
+          break;
       }
       $.ajax({
         url: _askData + p,

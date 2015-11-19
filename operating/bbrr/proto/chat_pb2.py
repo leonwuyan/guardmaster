@@ -18,7 +18,7 @@ _sym_db = _symbol_database.Default()
 DESCRIPTOR = _descriptor.FileDescriptor(
   name='chat.proto',
   package='',
-  serialized_pb=_b('\n\nchat.proto\".\n\x18\x43SPKG_REMOVE_PRIVATE_MSG\x12\x12\n\ntarget_uid\x18\x01 \x01(\r\"K\n\x11\x43SPKG_CMD_CHATMSG\x12\x10\n\x08msg_data\x18\x01 \x01(\t\x12\x10\n\x08msg_type\x18\x02 \x01(\r\x12\x12\n\ntarget_uid\x18\x03 \x01(\r\"\xa6\x01\n\x11SCPKG_CMD_CHATMSG\x12\x14\n\x0c\x66rom_role_id\x18\x01 \x01(\r\x12\x0c\n\x04\x66rom\x18\x02 \x01(\t\x12\x10\n\x08msg_data\x18\x03 \x01(\t\x12\x10\n\x08msg_type\x18\x04 \x01(\r\x12\x10\n\x08msg_time\x18\x05 \x01(\r\x12#\n\x1bsender_cumulate_recharge_id\x18\x06 \x01(\r\x12\x12\n\nto_role_id\x18\x07 \x01(\r\"2\n\x14SCPKG_CHAT_BAN_ERROR\x12\x1a\n\x12left_chat_ban_time\x18\x01 \x01(\r\"*\n\x15SCPKG_CHAT_FAST_ERROR\x12\x11\n\tleft_time\x18\x01 \x01(\r')
+  serialized_pb=_b('\n\nchat.proto\".\n\x18\x43SPKG_REMOVE_PRIVATE_MSG\x12\x12\n\ntarget_uid\x18\x01 \x01(\r\"K\n\x11\x43SPKG_CMD_CHATMSG\x12\x10\n\x08msg_data\x18\x01 \x01(\t\x12\x10\n\x08msg_type\x18\x02 \x01(\r\x12\x12\n\ntarget_uid\x18\x03 \x01(\r\"\xb9\x01\n\x11SCPKG_CMD_CHATMSG\x12\x14\n\x0c\x66rom_role_id\x18\x01 \x01(\r\x12\x0c\n\x04\x66rom\x18\x02 \x01(\t\x12\x10\n\x08msg_data\x18\x03 \x01(\t\x12\x10\n\x08msg_type\x18\x04 \x01(\r\x12\x10\n\x08msg_time\x18\x05 \x01(\r\x12#\n\x1bsender_cumulate_recharge_id\x18\x06 \x01(\r\x12\x12\n\nto_role_id\x18\x07 \x01(\r\x12\x11\n\tis_system\x18\x08 \x01(\x08\"2\n\x14SCPKG_CHAT_BAN_ERROR\x12\x1a\n\x12left_chat_ban_time\x18\x01 \x01(\r\"*\n\x15SCPKG_CHAT_FAST_ERROR\x12\x11\n\tleft_time\x18\x01 \x01(\r\"/\n\x1c\x43SPKG_REPORT_PLAYER_CHAT_REQ\x12\x0f\n\x07role_id\x18\x01 \x01(\r')
 )
 _sym_db.RegisterFileDescriptor(DESCRIPTOR)
 
@@ -155,6 +155,13 @@ _SCPKG_CMD_CHATMSG = _descriptor.Descriptor(
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
+    _descriptor.FieldDescriptor(
+      name='is_system', full_name='SCPKG_CMD_CHATMSG.is_system', index=7,
+      number=8, type=8, cpp_type=7, label=1,
+      has_default_value=False, default_value=False,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
   ],
   extensions=[
   ],
@@ -167,7 +174,7 @@ _SCPKG_CMD_CHATMSG = _descriptor.Descriptor(
   oneofs=[
   ],
   serialized_start=140,
-  serialized_end=306,
+  serialized_end=325,
 )
 
 
@@ -196,8 +203,8 @@ _SCPKG_CHAT_BAN_ERROR = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=308,
-  serialized_end=358,
+  serialized_start=327,
+  serialized_end=377,
 )
 
 
@@ -226,8 +233,38 @@ _SCPKG_CHAT_FAST_ERROR = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=360,
-  serialized_end=402,
+  serialized_start=379,
+  serialized_end=421,
+)
+
+
+_CSPKG_REPORT_PLAYER_CHAT_REQ = _descriptor.Descriptor(
+  name='CSPKG_REPORT_PLAYER_CHAT_REQ',
+  full_name='CSPKG_REPORT_PLAYER_CHAT_REQ',
+  filename=None,
+  file=DESCRIPTOR,
+  containing_type=None,
+  fields=[
+    _descriptor.FieldDescriptor(
+      name='role_id', full_name='CSPKG_REPORT_PLAYER_CHAT_REQ.role_id', index=0,
+      number=1, type=13, cpp_type=3, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+  ],
+  extensions=[
+  ],
+  nested_types=[],
+  enum_types=[
+  ],
+  options=None,
+  is_extendable=False,
+  extension_ranges=[],
+  oneofs=[
+  ],
+  serialized_start=423,
+  serialized_end=470,
 )
 
 DESCRIPTOR.message_types_by_name['CSPKG_REMOVE_PRIVATE_MSG'] = _CSPKG_REMOVE_PRIVATE_MSG
@@ -235,6 +272,7 @@ DESCRIPTOR.message_types_by_name['CSPKG_CMD_CHATMSG'] = _CSPKG_CMD_CHATMSG
 DESCRIPTOR.message_types_by_name['SCPKG_CMD_CHATMSG'] = _SCPKG_CMD_CHATMSG
 DESCRIPTOR.message_types_by_name['SCPKG_CHAT_BAN_ERROR'] = _SCPKG_CHAT_BAN_ERROR
 DESCRIPTOR.message_types_by_name['SCPKG_CHAT_FAST_ERROR'] = _SCPKG_CHAT_FAST_ERROR
+DESCRIPTOR.message_types_by_name['CSPKG_REPORT_PLAYER_CHAT_REQ'] = _CSPKG_REPORT_PLAYER_CHAT_REQ
 
 CSPKG_REMOVE_PRIVATE_MSG = _reflection.GeneratedProtocolMessageType('CSPKG_REMOVE_PRIVATE_MSG', (_message.Message,), dict(
   DESCRIPTOR = _CSPKG_REMOVE_PRIVATE_MSG,
@@ -270,6 +308,13 @@ SCPKG_CHAT_FAST_ERROR = _reflection.GeneratedProtocolMessageType('SCPKG_CHAT_FAS
   # @@protoc_insertion_point(class_scope:SCPKG_CHAT_FAST_ERROR)
   ))
 _sym_db.RegisterMessage(SCPKG_CHAT_FAST_ERROR)
+
+CSPKG_REPORT_PLAYER_CHAT_REQ = _reflection.GeneratedProtocolMessageType('CSPKG_REPORT_PLAYER_CHAT_REQ', (_message.Message,), dict(
+  DESCRIPTOR = _CSPKG_REPORT_PLAYER_CHAT_REQ,
+  __module__ = 'chat_pb2'
+  # @@protoc_insertion_point(class_scope:CSPKG_REPORT_PLAYER_CHAT_REQ)
+  ))
+_sym_db.RegisterMessage(CSPKG_REPORT_PLAYER_CHAT_REQ)
 
 
 # @@protoc_insertion_point(module_scope)

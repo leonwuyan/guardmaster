@@ -3,6 +3,7 @@
 
 import sys
 _b=sys.version_info[0]<3 and (lambda x:x) or (lambda x:x.encode('latin1'))
+from google.protobuf.internal import enum_type_wrapper
 from google.protobuf import descriptor as _descriptor
 from google.protobuf import message as _message
 from google.protobuf import reflection as _reflection
@@ -18,10 +19,50 @@ _sym_db = _symbol_database.Default()
 DESCRIPTOR = _descriptor.FileDescriptor(
   name='dirserver.proto',
   package='',
-  serialized_pb=_b('\n\x0f\x64irserver.proto\"_\n\x11\x43SPKG_IOS_ACCOUNT\x12\x16\n\x0epublic_key_url\x18\x01 \x01(\t\x12\x11\n\tsignature\x18\x02 \x01(\t\x12\x0c\n\x04salt\x18\x03 \x01(\t\x12\x11\n\ttimestamp\x18\x04 \x01(\r\"\xa0\x02\n\x14\x43SPKG_DIR_WORLD_INFO\x12\x11\n\tunique_id\x18\x01 \x01(\t\x12\x0f\n\x07version\x18\x02 \x01(\t\x12\x0f\n\x07token37\x18\x03 \x01(\t\x12\x0b\n\x03pid\x18\x04 \x01(\r\x12\x0b\n\x03gid\x18\x05 \x01(\r\x12\x11\n\tserver_id\x18\x06 \x01(\r\x12\x0f\n\x07sign_fl\x18\x07 \x01(\t\x12\x0f\n\x07uuid_fl\x18\x08 \x01(\t\x12\x14\n\x0ctimestamp_fl\x18\t \x01(\t\x12\x16\n\x0elogin_terminal\x18\n \x01(\r\x12\x15\n\rgamecenter_id\x18\x0b \x01(\t\x12\x16\n\x0eios_device_uid\x18\x0c \x01(\t\x12\'\n\x0bios_account\x18\r \x01(\x0b\x32\x12.CSPKG_IOS_ACCOUNT\"E\n\x0fSSDT_WORLD_HERO\x12\x0e\n\x06heroid\x18\x01 \x01(\r\x12\x0e\n\x06herolv\x18\x02 \x01(\r\x12\x12\n\nherogrowup\x18\x03 \x01(\r\"\xeb\x01\n\x0fSCDT_WORLD_STAT\x12\x10\n\x08world_id\x18\x01 \x01(\r\x12\x12\n\nworld_name\x18\x02 \x01(\t\x12\x0f\n\x07\x63onn_ip\x18\x03 \x01(\r\x12\x11\n\tconn_port\x18\x04 \x01(\r\x12\x0f\n\x07is_open\x18\x05 \x01(\r\x12\x11\n\topen_time\x18\x06 \x01(\r\x12\x14\n\x0cis_recommend\x18\x07 \x01(\r\x12\x0c\n\x04stat\x18\x08 \x01(\r\x12\x12\n\nis_timeout\x18\n \x01(\r\x12\x0e\n\x06\x63urpve\x18\x0b \x01(\r\x12\"\n\x08heroinfo\x18\x0c \x03(\x0b\x32\x10.SSDT_WORLD_HERO\"\xba\x01\n\x14SCPKG_DIR_WORLD_INFO\x12\x0e\n\x06result\x18\x01 \x01(\x05\x12\x11\n\tunique_id\x18\x02 \x01(\t\x12\x14\n\x0c\x64isplay_name\x18\x03 \x01(\t\x12\x18\n\x10last_login_world\x18\x04 \x01(\r\x12\x17\n\x0flast_login_time\x18\x05 \x01(\r\x12$\n\nworld_stat\x18\x06 \x03(\x0b\x32\x10.SCDT_WORLD_STAT\x12\x10\n\x08strategy\x18\x07 \x01(\r\"\xf8\x01\n\x10\x43SPKG_ACT_ALOGIN\x12\x10\n\x08log_type\x18\x01 \x01(\r\x12\x10\n\x08log_plat\x18\x02 \x01(\r\x12\x14\n\x0clog_terminal\x18\x03 \x01(\r\x12\x13\n\x0b\x64\x65vice_type\x18\x04 \x01(\t\x12\x16\n\x0e\x64\x65vice_sys_ver\x18\x05 \x01(\t\x12\x17\n\x0fresolution_wide\x18\x06 \x01(\x05\x12\x17\n\x0fresolution_high\x18\x07 \x01(\x05\x12\x11\n\tunique_id\x18\x08 \x01(\t\x12\x0f\n\x07\x61non_id\x18\t \x01(\t\x12\x12\n\nchannel_id\x18\n \x01(\r\x12\x13\n\x0b\x63li_version\x18\x0b \x01(\t\"\xa2\x01\n\x10SCPKG_CMD_ALOGIN\x12\x11\n\tresult_id\x18\x01 \x01(\r\x12\x11\n\tclient_ip\x18\x02 \x01(\r\x12\x13\n\x0b\x63lient_port\x18\x03 \x01(\r\x12\x10\n\x08log_type\x18\x04 \x01(\r\x12\x10\n\x08log_plat\x18\x05 \x01(\r\x12\x0f\n\x07\x61non_id\x18\x06 \x01(\t\x12\x0b\n\x03uid\x18\x07 \x01(\r\x12\x11\n\tunique_id\x18\x08 \x01(\t')
+  serialized_pb=_b('\n\x0f\x64irserver.proto\"_\n\x11\x43SPKG_IOS_ACCOUNT\x12\x16\n\x0epublic_key_url\x18\x01 \x01(\t\x12\x11\n\tsignature\x18\x02 \x01(\t\x12\x0c\n\x04salt\x18\x03 \x01(\t\x12\x11\n\ttimestamp\x18\x04 \x01(\x04\"\xa0\x02\n\x14\x43SPKG_DIR_WORLD_INFO\x12\x11\n\tunique_id\x18\x01 \x01(\t\x12\x0f\n\x07version\x18\x02 \x01(\t\x12\x0f\n\x07token37\x18\x03 \x01(\t\x12\x0b\n\x03pid\x18\x04 \x01(\r\x12\x0b\n\x03gid\x18\x05 \x01(\r\x12\x11\n\tserver_id\x18\x06 \x01(\r\x12\x0f\n\x07sign_fl\x18\x07 \x01(\t\x12\x0f\n\x07uuid_fl\x18\x08 \x01(\t\x12\x14\n\x0ctimestamp_fl\x18\t \x01(\t\x12\x16\n\x0elogin_terminal\x18\n \x01(\r\x12\x15\n\rgamecenter_id\x18\x0b \x01(\t\x12\x16\n\x0eios_device_uid\x18\x0c \x01(\t\x12\'\n\x0bios_account\x18\r \x01(\x0b\x32\x12.CSPKG_IOS_ACCOUNT\"E\n\x0fSSDT_WORLD_HERO\x12\x0e\n\x06heroid\x18\x01 \x01(\r\x12\x0e\n\x06herolv\x18\x02 \x01(\r\x12\x12\n\nherogrowup\x18\x03 \x01(\r\"\xeb\x01\n\x0fSCDT_WORLD_STAT\x12\x10\n\x08world_id\x18\x01 \x01(\r\x12\x12\n\nworld_name\x18\x02 \x01(\t\x12\x0f\n\x07\x63onn_ip\x18\x03 \x01(\r\x12\x11\n\tconn_port\x18\x04 \x01(\r\x12\x0f\n\x07is_open\x18\x05 \x01(\r\x12\x11\n\topen_time\x18\x06 \x01(\r\x12\x14\n\x0cis_recommend\x18\x07 \x01(\r\x12\x0c\n\x04stat\x18\x08 \x01(\r\x12\x12\n\nis_timeout\x18\n \x01(\r\x12\x0e\n\x06\x63urpve\x18\x0b \x01(\r\x12\"\n\x08heroinfo\x18\x0c \x03(\x0b\x32\x10.SSDT_WORLD_HERO\"\xe1\x01\n\x14SCPKG_DIR_WORLD_INFO\x12\x0e\n\x06result\x18\x01 \x01(\x05\x12\x11\n\tunique_id\x18\x02 \x01(\t\x12\x14\n\x0c\x64isplay_name\x18\x03 \x01(\t\x12\x18\n\x10last_login_world\x18\x04 \x01(\r\x12\x17\n\x0flast_login_time\x18\x05 \x01(\r\x12$\n\nworld_stat\x18\x06 \x03(\x0b\x32\x10.SCDT_WORLD_STAT\x12\x10\n\x08strategy\x18\x07 \x01(\r\x12\x11\n\terror_msg\x18\x08 \x01(\t\x12\x12\n\nfirst_bind\x18\t \x01(\x05\"W\n\x19\x43SPKG_IOS_BIND_GAMECENTER\x12\x0b\n\x03uid\x18\x01 \x01(\r\x12\x15\n\rgamecenter_id\x18\x02 \x01(\t\x12\x16\n\x0eios_device_uid\x18\x03 \x01(\t\"[\n\x1dSSPKG_IOS_BIND_GAMECENTER_RES\x12\x0b\n\x03uid\x18\x01 \x01(\r\x12-\n\nbind_state\x18\x02 \x01(\x0e\x32\x19.CS_GAMECENTER_BIND_STATE\"\x8b\x02\n\x10\x43SPKG_ACT_ALOGIN\x12\x10\n\x08log_type\x18\x01 \x01(\r\x12\x10\n\x08log_plat\x18\x02 \x01(\r\x12\x14\n\x0clog_terminal\x18\x03 \x01(\r\x12\x13\n\x0b\x64\x65vice_type\x18\x04 \x01(\t\x12\x16\n\x0e\x64\x65vice_sys_ver\x18\x05 \x01(\t\x12\x17\n\x0fresolution_wide\x18\x06 \x01(\x05\x12\x17\n\x0fresolution_high\x18\x07 \x01(\x05\x12\x11\n\tunique_id\x18\x08 \x01(\t\x12\x0f\n\x07\x61non_id\x18\t \x01(\t\x12\x12\n\nchannel_id\x18\n \x01(\r\x12\x13\n\x0b\x63li_version\x18\x0b \x01(\t\x12\x11\n\tdevice_id\x18\x0c \x01(\t\"1\n\x1b\x43SPKG_ACT_ALOGIN_ADDITIONAL\x12\x12\n\napp_hooked\x18\x01 \x01(\x08\"\xa2\x01\n\x10SCPKG_CMD_ALOGIN\x12\x11\n\tresult_id\x18\x01 \x01(\r\x12\x11\n\tclient_ip\x18\x02 \x01(\r\x12\x13\n\x0b\x63lient_port\x18\x03 \x01(\r\x12\x10\n\x08log_type\x18\x04 \x01(\r\x12\x10\n\x08log_plat\x18\x05 \x01(\r\x12\x0f\n\x07\x61non_id\x18\x06 \x01(\t\x12\x0b\n\x03uid\x18\x07 \x01(\r\x12\x11\n\tunique_id\x18\x08 \x01(\t*\xf4\x01\n\x18\x43S_GAMECENTER_BIND_STATE\x12#\n\x1f\x43S_GAMECENTER_BIND_STATE_NORMAL\x10\x00\x12/\n+CS_GAMECENTER_BIND_STATE_GAMECENTER_NEWBIND\x10\x01\x12\"\n\x1e\x43S_GAMECENTER_BIND_STATE_GUEST\x10\x02\x12.\n*CS_GAMECENTER_BIND_STATE_GAMECENTER_BINDED\x10\x03\x12.\n*CS_GAMECENTER_BIND_STATE_GAMECENTER_CHANGE\x10\x04')
 )
 _sym_db.RegisterFileDescriptor(DESCRIPTOR)
 
+_CS_GAMECENTER_BIND_STATE = _descriptor.EnumDescriptor(
+  name='CS_GAMECENTER_BIND_STATE',
+  full_name='CS_GAMECENTER_BIND_STATE',
+  filename=None,
+  file=DESCRIPTOR,
+  values=[
+    _descriptor.EnumValueDescriptor(
+      name='CS_GAMECENTER_BIND_STATE_NORMAL', index=0, number=0,
+      options=None,
+      type=None),
+    _descriptor.EnumValueDescriptor(
+      name='CS_GAMECENTER_BIND_STATE_GAMECENTER_NEWBIND', index=1, number=1,
+      options=None,
+      type=None),
+    _descriptor.EnumValueDescriptor(
+      name='CS_GAMECENTER_BIND_STATE_GUEST', index=2, number=2,
+      options=None,
+      type=None),
+    _descriptor.EnumValueDescriptor(
+      name='CS_GAMECENTER_BIND_STATE_GAMECENTER_BINDED', index=3, number=3,
+      options=None,
+      type=None),
+    _descriptor.EnumValueDescriptor(
+      name='CS_GAMECENTER_BIND_STATE_GAMECENTER_CHANGE', index=4, number=4,
+      options=None,
+      type=None),
+  ],
+  containing_type=None,
+  options=None,
+  serialized_start=1613,
+  serialized_end=1857,
+)
+_sym_db.RegisterEnumDescriptor(_CS_GAMECENTER_BIND_STATE)
+
+CS_GAMECENTER_BIND_STATE = enum_type_wrapper.EnumTypeWrapper(_CS_GAMECENTER_BIND_STATE)
+CS_GAMECENTER_BIND_STATE_NORMAL = 0
+CS_GAMECENTER_BIND_STATE_GAMECENTER_NEWBIND = 1
+CS_GAMECENTER_BIND_STATE_GUEST = 2
+CS_GAMECENTER_BIND_STATE_GAMECENTER_BINDED = 3
+CS_GAMECENTER_BIND_STATE_GAMECENTER_CHANGE = 4
 
 
 
@@ -55,7 +96,7 @@ _CSPKG_IOS_ACCOUNT = _descriptor.Descriptor(
       options=None),
     _descriptor.FieldDescriptor(
       name='timestamp', full_name='CSPKG_IOS_ACCOUNT.timestamp', index=3,
-      number=4, type=13, cpp_type=3, label=1,
+      number=4, type=4, cpp_type=4, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
@@ -390,6 +431,20 @@ _SCPKG_DIR_WORLD_INFO = _descriptor.Descriptor(
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
+    _descriptor.FieldDescriptor(
+      name='error_msg', full_name='SCPKG_DIR_WORLD_INFO.error_msg', index=7,
+      number=8, type=9, cpp_type=9, label=1,
+      has_default_value=False, default_value=_b("").decode('utf-8'),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    _descriptor.FieldDescriptor(
+      name='first_bind', full_name='SCPKG_DIR_WORLD_INFO.first_bind', index=8,
+      number=9, type=5, cpp_type=1, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
   ],
   extensions=[
   ],
@@ -402,7 +457,88 @@ _SCPKG_DIR_WORLD_INFO = _descriptor.Descriptor(
   oneofs=[
   ],
   serialized_start=717,
-  serialized_end=903,
+  serialized_end=942,
+)
+
+
+_CSPKG_IOS_BIND_GAMECENTER = _descriptor.Descriptor(
+  name='CSPKG_IOS_BIND_GAMECENTER',
+  full_name='CSPKG_IOS_BIND_GAMECENTER',
+  filename=None,
+  file=DESCRIPTOR,
+  containing_type=None,
+  fields=[
+    _descriptor.FieldDescriptor(
+      name='uid', full_name='CSPKG_IOS_BIND_GAMECENTER.uid', index=0,
+      number=1, type=13, cpp_type=3, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    _descriptor.FieldDescriptor(
+      name='gamecenter_id', full_name='CSPKG_IOS_BIND_GAMECENTER.gamecenter_id', index=1,
+      number=2, type=9, cpp_type=9, label=1,
+      has_default_value=False, default_value=_b("").decode('utf-8'),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    _descriptor.FieldDescriptor(
+      name='ios_device_uid', full_name='CSPKG_IOS_BIND_GAMECENTER.ios_device_uid', index=2,
+      number=3, type=9, cpp_type=9, label=1,
+      has_default_value=False, default_value=_b("").decode('utf-8'),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+  ],
+  extensions=[
+  ],
+  nested_types=[],
+  enum_types=[
+  ],
+  options=None,
+  is_extendable=False,
+  extension_ranges=[],
+  oneofs=[
+  ],
+  serialized_start=944,
+  serialized_end=1031,
+)
+
+
+_SSPKG_IOS_BIND_GAMECENTER_RES = _descriptor.Descriptor(
+  name='SSPKG_IOS_BIND_GAMECENTER_RES',
+  full_name='SSPKG_IOS_BIND_GAMECENTER_RES',
+  filename=None,
+  file=DESCRIPTOR,
+  containing_type=None,
+  fields=[
+    _descriptor.FieldDescriptor(
+      name='uid', full_name='SSPKG_IOS_BIND_GAMECENTER_RES.uid', index=0,
+      number=1, type=13, cpp_type=3, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    _descriptor.FieldDescriptor(
+      name='bind_state', full_name='SSPKG_IOS_BIND_GAMECENTER_RES.bind_state', index=1,
+      number=2, type=14, cpp_type=8, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+  ],
+  extensions=[
+  ],
+  nested_types=[],
+  enum_types=[
+  ],
+  options=None,
+  is_extendable=False,
+  extension_ranges=[],
+  oneofs=[
+  ],
+  serialized_start=1033,
+  serialized_end=1124,
 )
 
 
@@ -490,6 +626,13 @@ _CSPKG_ACT_ALOGIN = _descriptor.Descriptor(
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
+    _descriptor.FieldDescriptor(
+      name='device_id', full_name='CSPKG_ACT_ALOGIN.device_id', index=11,
+      number=12, type=9, cpp_type=9, label=1,
+      has_default_value=False, default_value=_b("").decode('utf-8'),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
   ],
   extensions=[
   ],
@@ -501,8 +644,38 @@ _CSPKG_ACT_ALOGIN = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=906,
-  serialized_end=1154,
+  serialized_start=1127,
+  serialized_end=1394,
+)
+
+
+_CSPKG_ACT_ALOGIN_ADDITIONAL = _descriptor.Descriptor(
+  name='CSPKG_ACT_ALOGIN_ADDITIONAL',
+  full_name='CSPKG_ACT_ALOGIN_ADDITIONAL',
+  filename=None,
+  file=DESCRIPTOR,
+  containing_type=None,
+  fields=[
+    _descriptor.FieldDescriptor(
+      name='app_hooked', full_name='CSPKG_ACT_ALOGIN_ADDITIONAL.app_hooked', index=0,
+      number=1, type=8, cpp_type=7, label=1,
+      has_default_value=False, default_value=False,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+  ],
+  extensions=[
+  ],
+  nested_types=[],
+  enum_types=[
+  ],
+  options=None,
+  is_extendable=False,
+  extension_ranges=[],
+  oneofs=[
+  ],
+  serialized_start=1396,
+  serialized_end=1445,
 )
 
 
@@ -580,20 +753,25 @@ _SCPKG_CMD_ALOGIN = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=1157,
-  serialized_end=1319,
+  serialized_start=1448,
+  serialized_end=1610,
 )
 
 _CSPKG_DIR_WORLD_INFO.fields_by_name['ios_account'].message_type = _CSPKG_IOS_ACCOUNT
 _SCDT_WORLD_STAT.fields_by_name['heroinfo'].message_type = _SSDT_WORLD_HERO
 _SCPKG_DIR_WORLD_INFO.fields_by_name['world_stat'].message_type = _SCDT_WORLD_STAT
+_SSPKG_IOS_BIND_GAMECENTER_RES.fields_by_name['bind_state'].enum_type = _CS_GAMECENTER_BIND_STATE
 DESCRIPTOR.message_types_by_name['CSPKG_IOS_ACCOUNT'] = _CSPKG_IOS_ACCOUNT
 DESCRIPTOR.message_types_by_name['CSPKG_DIR_WORLD_INFO'] = _CSPKG_DIR_WORLD_INFO
 DESCRIPTOR.message_types_by_name['SSDT_WORLD_HERO'] = _SSDT_WORLD_HERO
 DESCRIPTOR.message_types_by_name['SCDT_WORLD_STAT'] = _SCDT_WORLD_STAT
 DESCRIPTOR.message_types_by_name['SCPKG_DIR_WORLD_INFO'] = _SCPKG_DIR_WORLD_INFO
+DESCRIPTOR.message_types_by_name['CSPKG_IOS_BIND_GAMECENTER'] = _CSPKG_IOS_BIND_GAMECENTER
+DESCRIPTOR.message_types_by_name['SSPKG_IOS_BIND_GAMECENTER_RES'] = _SSPKG_IOS_BIND_GAMECENTER_RES
 DESCRIPTOR.message_types_by_name['CSPKG_ACT_ALOGIN'] = _CSPKG_ACT_ALOGIN
+DESCRIPTOR.message_types_by_name['CSPKG_ACT_ALOGIN_ADDITIONAL'] = _CSPKG_ACT_ALOGIN_ADDITIONAL
 DESCRIPTOR.message_types_by_name['SCPKG_CMD_ALOGIN'] = _SCPKG_CMD_ALOGIN
+DESCRIPTOR.enum_types_by_name['CS_GAMECENTER_BIND_STATE'] = _CS_GAMECENTER_BIND_STATE
 
 CSPKG_IOS_ACCOUNT = _reflection.GeneratedProtocolMessageType('CSPKG_IOS_ACCOUNT', (_message.Message,), dict(
   DESCRIPTOR = _CSPKG_IOS_ACCOUNT,
@@ -630,12 +808,33 @@ SCPKG_DIR_WORLD_INFO = _reflection.GeneratedProtocolMessageType('SCPKG_DIR_WORLD
   ))
 _sym_db.RegisterMessage(SCPKG_DIR_WORLD_INFO)
 
+CSPKG_IOS_BIND_GAMECENTER = _reflection.GeneratedProtocolMessageType('CSPKG_IOS_BIND_GAMECENTER', (_message.Message,), dict(
+  DESCRIPTOR = _CSPKG_IOS_BIND_GAMECENTER,
+  __module__ = 'dirserver_pb2'
+  # @@protoc_insertion_point(class_scope:CSPKG_IOS_BIND_GAMECENTER)
+  ))
+_sym_db.RegisterMessage(CSPKG_IOS_BIND_GAMECENTER)
+
+SSPKG_IOS_BIND_GAMECENTER_RES = _reflection.GeneratedProtocolMessageType('SSPKG_IOS_BIND_GAMECENTER_RES', (_message.Message,), dict(
+  DESCRIPTOR = _SSPKG_IOS_BIND_GAMECENTER_RES,
+  __module__ = 'dirserver_pb2'
+  # @@protoc_insertion_point(class_scope:SSPKG_IOS_BIND_GAMECENTER_RES)
+  ))
+_sym_db.RegisterMessage(SSPKG_IOS_BIND_GAMECENTER_RES)
+
 CSPKG_ACT_ALOGIN = _reflection.GeneratedProtocolMessageType('CSPKG_ACT_ALOGIN', (_message.Message,), dict(
   DESCRIPTOR = _CSPKG_ACT_ALOGIN,
   __module__ = 'dirserver_pb2'
   # @@protoc_insertion_point(class_scope:CSPKG_ACT_ALOGIN)
   ))
 _sym_db.RegisterMessage(CSPKG_ACT_ALOGIN)
+
+CSPKG_ACT_ALOGIN_ADDITIONAL = _reflection.GeneratedProtocolMessageType('CSPKG_ACT_ALOGIN_ADDITIONAL', (_message.Message,), dict(
+  DESCRIPTOR = _CSPKG_ACT_ALOGIN_ADDITIONAL,
+  __module__ = 'dirserver_pb2'
+  # @@protoc_insertion_point(class_scope:CSPKG_ACT_ALOGIN_ADDITIONAL)
+  ))
+_sym_db.RegisterMessage(CSPKG_ACT_ALOGIN_ADDITIONAL)
 
 SCPKG_CMD_ALOGIN = _reflection.GeneratedProtocolMessageType('SCPKG_CMD_ALOGIN', (_message.Message,), dict(
   DESCRIPTOR = _SCPKG_CMD_ALOGIN,

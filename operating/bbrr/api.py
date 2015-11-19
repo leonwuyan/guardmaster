@@ -165,6 +165,30 @@ class ServerSocket(object):
         pkggg = self.serialize_pkg(phash_mail, pb_mail.SerializeToString())
         return self.connect_server(self.ip, self.port, pkggg)
 
+    def send_gameserver_mail(self, world_id, mail_info, mail_accs, condition, online):
+        mail = {'world_id': world_id, 'is_send_online': online}
+        (phash_mail, pb_mail) = self.create_pb('GM_SEND_GAMESERVER_MAIL_REQ', mail)
+        pb_mail_info = pb_mail.mail_info
+        pb_mail_info.mail_title = mail_info['mail_title']
+        pb_mail_info.mail_content = mail_info['mail_content']
+        pb_mail_info.mail_interval = mail_info['mail_interval']
+        for mail_acc in mail_accs:
+            pb_mail_info.mail_acc.add(
+                res_type=mail_acc['res_type'],
+                res_id=mail_acc['res_id'],
+                res_count=mail_acc['res_count'],
+                res_extern_param_1=mail_acc.get('res_extern_param_1', 0),
+                res_extern_param_2=mail_acc.get('res_extern_param_2', 0),
+                res_extern_param_3=mail_acc.get('res_extern_param_3', 0),
+            )
+        pb_mail_condition = pb_mail.mail_condition
+        pb_mail_condition.effect_begin_time = condition['begin']
+        pb_mail_condition.effect_end_time = condition['end']
+        pb_mail_condition.effect_clt_version = condition['version']
+        pb_mail_condition.effect_channel_id = condition['channel']
+        pkggg = self.serialize_pkg(phash_mail, pb_mail.SerializeToString())
+        return self.connect_server(self.ip, self.port, pkggg)
+
     def send_server(self, proto, req):
         (phash, pb) = self.serialize_pb(proto, req)
         pkggg = self.serialize_pkg(phash, pb)
@@ -276,6 +300,30 @@ class ServerSocket(object):
             return ret
         return {'result': 1, 'failed_uid': self.res(pb.failed_uid)}
 
+    def send_all_mail(self, world_id, mail_info, mail_accs, condition, online):
+        if world_id is None or mail_info is None or mail_accs is None:
+            return self.empty
+        if condition is None or online is None:
+            return self.empty
+        pb = self.send_gameserver_mail(world_id, mail_info, mail_accs, condition, online)
+        if pb.__class__ is dict:
+            return self.timeout
+        return self.res(pb)
+
+    def get_all_mail(self, world_id):
+        if world_id is None:
+            return self.empty
+        p = 'GM_GET_GAMESERVER_MAIL_INFO_REQ'
+        r = {'world_id': world_id}
+        return self._get(p, r)
+
+    def del_all_mail(self, world_id, mail_seq_key):
+        if world_id is None or mail_seq_key is None:
+            return self.empty
+        p = 'GM_DEL_GAMESERVER_MAIL_REQ'
+        r = {'world_id': world_id, 'mail_seq_key': mail_seq_key}
+        return self._get(p, r)
+
     def change_player_attr(self, uid, uin, world_id, res_type, res_id, chg_count):
         if uid is None or world_id is None or uin is None:
             return self.empty
@@ -341,34 +389,16 @@ class ServerSocket(object):
             }
         return self._get(p, r)
 
-"""
-#
-ss = ServerSocket('192.168.1.90', 9135, 0)
-pprint(ss.get_player_account(uid=10001))
-pprint(ss.get_player_first_purchase(1, 10001, 3))
-pprint(ss.get_player_world_info('421289057'))
-pprint(ss.get_player_base_info(10001, 1))
-pprint(ss.get_rank_list(1, 1, 100, 1))
-pprint(ss.get_rank_pos(10001, 1, 1))
-pprint(ss.get_player_pve_info(10001, 1))
-pprint(ss.get_player_building_and_package(10001, 1))
-pprint(ss.del_player_equiped_equip(10001, 1, '421289057', 11, 142))
-pprint(ss.get_player_total_recharge(10001, 1))
-pprint(ss.lock_player(10001, 0))
-pprint(ss.ban_player_chat(10001, 0, '421289057', 1))
-pprint(ss.kick_player(10001, '421289057', 1))
-pprint(ss.send_mail(
-    [10001, 10002],
-    1,
-    {'mail_title': u'蛋蛋是猪', 'mail_content': u'测试内容', 'mail_interval': 7200},
-    [
-        {'res_type': 1, 'res_id': 0, 'res_count': 100},
-        {'res_type': 2, 'res_id': 0, 'res_count': 100}
-    ]
-))
-pprint(ss.change_player_attr(10001, '421289057', 1, 1, 0, 300))
-pprint(ss.change_player_hero_level(10001, '421289057', 1, 1, 10, 100000))
-pprint(ss.del_player_equiped_equip(14745, 1, '600789998', 1, 2))
-pprint(ss.change_player_vip_level(10001, 1, 10))
-pprint(ss.change_player_unlock_dungeon(10001, '421289057', 1, 10))
-"""
+    def del_player_from_gang(self, uid, world_id):
+        if world_id is None or uid is None:
+            return self.empty
+        p = 'GM_DEL_PLAYER_FROM_GANG_REQ'
+        r = {'world_id': world_id, 'role_id': uid}
+        return self._get(p, r)
+
+    def del_player_from_rank(self, uid, world_id, rank_id):
+        if world_id is None or uid is None or rank_id is None:
+            return self.empty
+        p = 'GM_DEL_PLAYER_FROM_RANK_REQ'
+        r = {'world_id': world_id, 'role_id': uid, 'rank_id': rank_id}
+        return self._get(p, r)

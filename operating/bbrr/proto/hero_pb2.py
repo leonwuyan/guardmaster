@@ -18,7 +18,7 @@ _sym_db = _symbol_database.Default()
 DESCRIPTOR = _descriptor.FileDescriptor(
   name='hero.proto',
   package='',
-  serialized_pb=_b('\n\nhero.proto\"<\n\x15\x43SPKG_CMD_HERO_GROWUP\x12\x0f\n\x07hero_id\x18\x01 \x01(\r\x12\x12\n\ngrow_up_id\x18\x02 \x01(\r\"\x82\x01\n\x15SCPKG_CMD_HERO_GROWUP\x12\x0e\n\x06result\x18\x01 \x01(\r\x12\x0f\n\x07hero_id\x18\x02 \x01(\r\x12\x12\n\ngrow_up_id\x18\x03 \x01(\r\x12\x18\n\x10grow_up_beg_time\x18\x04 \x01(\r\x12\x1a\n\x12grow_up_total_time\x18\x05 \x01(\r\"r\n\x19SCPKG_CMD_HERO_GROWUP_END\x12\x0e\n\x06result\x18\x01 \x01(\r\x12\x0f\n\x07hero_id\x18\x02 \x01(\r\x12\x12\n\ngrow_up_id\x18\x03 \x01(\r\x12\x0e\n\x06max_hp\x18\x04 \x01(\r\x12\x10\n\x08strength\x18\x05 \x01(\r\"I\n\x16SCDT_HERO_ATT_EFFECTED\x12\x0f\n\x07hero_id\x18\x01 \x01(\r\x12\x0e\n\x06max_hp\x18\x02 \x01(\r\x12\x0e\n\x06\x64\x61mage\x18\x03 \x01(\r\"\xca\x01\n\x18SCPKG_CMD_EMBLEM_LEVELUP\x12\x0f\n\x07hero_id\x18\x01 \x01(\r\x12\x0e\n\x06result\x18\x02 \x01(\r\x12\x11\n\temblem_id\x18\x03 \x01(\r\x12\x11\n\temblem_lv\x18\x04 \x01(\r\x12\x12\n\nemblem_exp\x18\x05 \x01(\r\x12\x11\n\tadded_exp\x18\x06 \x01(\r\x12\x0c\n\x04rate\x18\x07 \x01(\x02\x12\x32\n\x11hero_att_effected\x18\x08 \x01(\x0b\x32\x17.SCDT_HERO_ATT_EFFECTED\"\x84\x01\n\x17SCPKG_CMD_EMBLEM_UNLOCK\x12\x0f\n\x07hero_id\x18\x01 \x01(\r\x12\x11\n\temblem_id\x18\x02 \x01(\r\x12\x11\n\temblem_lv\x18\x03 \x01(\r\x12\x32\n\x11hero_att_effected\x18\x04 \x01(\x0b\x32\x17.SCDT_HERO_ATT_EFFECTED\"=\n\x15\x43SPKG_CMD_UNLOCK_HERO\x12\x0f\n\x07hero_id\x18\x01 \x01(\r\x12\x13\n\x0bunlock_type\x18\x02 \x01(\r\">\n\x1a\x43SPKG_CMD_LEVELUP_DIRECTLY\x12\x10\n\x08obj_type\x18\x01 \x01(\r\x12\x0e\n\x06obj_id\x18\x02 \x01(\r\"L\n\x16SCPKG_CMD_SPBORN_BEGIN\x12\x17\n\x0fspborn_beg_time\x18\x01 \x01(\r\x12\x19\n\x11spborn_total_time\x18\x02 \x01(\r\"Z\n\x14SCPKG_CMD_SPBORN_END\x12\x0e\n\x06\x63ur_sp\x18\x01 \x01(\r\x12\x17\n\x0fspborn_beg_time\x18\x02 \x01(\r\x12\x19\n\x11spborn_total_time\x18\x03 \x01(\r\"<\n\x17\x43SPKG_CMD_SKILL_LEVELUP\x12\x0f\n\x07hero_id\x18\x01 \x01(\r\x12\x10\n\x08skill_id\x18\x02 \x01(\r\"L\n\x17SCPKG_CMD_SKILL_LEVELUP\x12\x0e\n\x06result\x18\x01 \x01(\r\x12\x0f\n\x07hero_id\x18\x02 \x01(\r\x12\x10\n\x08skill_id\x18\x03 \x01(\r\"=\n\x19NOTIFY_HERO_NEW_ROLE_BUFF\x12\x0f\n\x07hero_id\x18\x01 \x02(\r\x12\x0f\n\x07leftCnt\x18\x02 \x01(\r\">\n\x18\x43SPKG_CMD_EMBLEM_LEVELUP\x12\x0f\n\x07hero_id\x18\x01 \x01(\r\x12\x11\n\temblem_id\x18\x02 \x01(\r')
+  serialized_pb=_b('\n\nhero.proto\"<\n\x15\x43SPKG_CMD_HERO_GROWUP\x12\x0f\n\x07hero_id\x18\x01 \x01(\r\x12\x12\n\ngrow_up_id\x18\x02 \x01(\r\"\x82\x01\n\x15SCPKG_CMD_HERO_GROWUP\x12\x0e\n\x06result\x18\x01 \x01(\r\x12\x0f\n\x07hero_id\x18\x02 \x01(\r\x12\x12\n\ngrow_up_id\x18\x03 \x01(\r\x12\x18\n\x10grow_up_beg_time\x18\x04 \x01(\r\x12\x1a\n\x12grow_up_total_time\x18\x05 \x01(\r\"r\n\x19SCPKG_CMD_HERO_GROWUP_END\x12\x0e\n\x06result\x18\x01 \x01(\r\x12\x0f\n\x07hero_id\x18\x02 \x01(\r\x12\x12\n\ngrow_up_id\x18\x03 \x01(\r\x12\x0e\n\x06max_hp\x18\x04 \x01(\r\x12\x10\n\x08strength\x18\x05 \x01(\r\"I\n\x16SCDT_HERO_ATT_EFFECTED\x12\x0f\n\x07hero_id\x18\x01 \x01(\r\x12\x0e\n\x06max_hp\x18\x02 \x01(\r\x12\x0e\n\x06\x64\x61mage\x18\x03 \x01(\r\"\xca\x01\n\x18SCPKG_CMD_EMBLEM_LEVELUP\x12\x0f\n\x07hero_id\x18\x01 \x01(\r\x12\x0e\n\x06result\x18\x02 \x01(\r\x12\x11\n\temblem_id\x18\x03 \x01(\r\x12\x11\n\temblem_lv\x18\x04 \x01(\r\x12\x12\n\nemblem_exp\x18\x05 \x01(\r\x12\x11\n\tadded_exp\x18\x06 \x01(\r\x12\x0c\n\x04rate\x18\x07 \x01(\x02\x12\x32\n\x11hero_att_effected\x18\x08 \x01(\x0b\x32\x17.SCDT_HERO_ATT_EFFECTED\"\x84\x01\n\x17SCPKG_CMD_EMBLEM_UNLOCK\x12\x0f\n\x07hero_id\x18\x01 \x01(\r\x12\x11\n\temblem_id\x18\x02 \x01(\r\x12\x11\n\temblem_lv\x18\x03 \x01(\r\x12\x32\n\x11hero_att_effected\x18\x04 \x01(\x0b\x32\x17.SCDT_HERO_ATT_EFFECTED\"=\n\x15\x43SPKG_CMD_UNLOCK_HERO\x12\x0f\n\x07hero_id\x18\x01 \x01(\r\x12\x13\n\x0bunlock_type\x18\x02 \x01(\r\">\n\x1a\x43SPKG_CMD_LEVELUP_DIRECTLY\x12\x10\n\x08obj_type\x18\x01 \x01(\r\x12\x0e\n\x06obj_id\x18\x02 \x01(\r\"L\n\x16SCPKG_CMD_SPBORN_BEGIN\x12\x17\n\x0fspborn_beg_time\x18\x01 \x01(\r\x12\x19\n\x11spborn_total_time\x18\x02 \x01(\r\"Z\n\x14SCPKG_CMD_SPBORN_END\x12\x0e\n\x06\x63ur_sp\x18\x01 \x01(\r\x12\x17\n\x0fspborn_beg_time\x18\x02 \x01(\r\x12\x19\n\x11spborn_total_time\x18\x03 \x01(\r\"<\n\x17\x43SPKG_CMD_SKILL_LEVELUP\x12\x0f\n\x07hero_id\x18\x01 \x01(\r\x12\x10\n\x08skill_id\x18\x02 \x01(\r\"L\n\x17SCPKG_CMD_SKILL_LEVELUP\x12\x0e\n\x06result\x18\x01 \x01(\r\x12\x0f\n\x07hero_id\x18\x02 \x01(\r\x12\x10\n\x08skill_id\x18\x03 \x01(\r\"=\n\x19NOTIFY_HERO_NEW_ROLE_BUFF\x12\x0f\n\x07hero_id\x18\x01 \x02(\r\x12\x0f\n\x07leftCnt\x18\x02 \x01(\r\">\n\x18\x43SPKG_CMD_EMBLEM_LEVELUP\x12\x0f\n\x07hero_id\x18\x01 \x01(\r\x12\x11\n\temblem_id\x18\x02 \x01(\r\"A\n\x1b\x43SPKG_CMD_ACTIVE_TALENT_REQ\x12\x0f\n\x07hero_id\x18\x01 \x01(\r\x12\x11\n\ttalent_id\x18\x02 \x01(\r\"S\n\x1bSCPKG_CMD_ACTIVE_TALENT_RES\x12\x0e\n\x06result\x18\x01 \x01(\x05\x12\x0f\n\x07hero_id\x18\x02 \x01(\r\x12\x13\n\x0btalent_info\x18\x03 \x01(\x04')
 )
 _sym_db.RegisterFileDescriptor(DESCRIPTOR)
 
@@ -661,6 +661,87 @@ _CSPKG_CMD_EMBLEM_LEVELUP = _descriptor.Descriptor(
   serialized_end=1302,
 )
 
+
+_CSPKG_CMD_ACTIVE_TALENT_REQ = _descriptor.Descriptor(
+  name='CSPKG_CMD_ACTIVE_TALENT_REQ',
+  full_name='CSPKG_CMD_ACTIVE_TALENT_REQ',
+  filename=None,
+  file=DESCRIPTOR,
+  containing_type=None,
+  fields=[
+    _descriptor.FieldDescriptor(
+      name='hero_id', full_name='CSPKG_CMD_ACTIVE_TALENT_REQ.hero_id', index=0,
+      number=1, type=13, cpp_type=3, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    _descriptor.FieldDescriptor(
+      name='talent_id', full_name='CSPKG_CMD_ACTIVE_TALENT_REQ.talent_id', index=1,
+      number=2, type=13, cpp_type=3, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+  ],
+  extensions=[
+  ],
+  nested_types=[],
+  enum_types=[
+  ],
+  options=None,
+  is_extendable=False,
+  extension_ranges=[],
+  oneofs=[
+  ],
+  serialized_start=1304,
+  serialized_end=1369,
+)
+
+
+_SCPKG_CMD_ACTIVE_TALENT_RES = _descriptor.Descriptor(
+  name='SCPKG_CMD_ACTIVE_TALENT_RES',
+  full_name='SCPKG_CMD_ACTIVE_TALENT_RES',
+  filename=None,
+  file=DESCRIPTOR,
+  containing_type=None,
+  fields=[
+    _descriptor.FieldDescriptor(
+      name='result', full_name='SCPKG_CMD_ACTIVE_TALENT_RES.result', index=0,
+      number=1, type=5, cpp_type=1, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    _descriptor.FieldDescriptor(
+      name='hero_id', full_name='SCPKG_CMD_ACTIVE_TALENT_RES.hero_id', index=1,
+      number=2, type=13, cpp_type=3, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    _descriptor.FieldDescriptor(
+      name='talent_info', full_name='SCPKG_CMD_ACTIVE_TALENT_RES.talent_info', index=2,
+      number=3, type=4, cpp_type=4, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+  ],
+  extensions=[
+  ],
+  nested_types=[],
+  enum_types=[
+  ],
+  options=None,
+  is_extendable=False,
+  extension_ranges=[],
+  oneofs=[
+  ],
+  serialized_start=1371,
+  serialized_end=1454,
+)
+
 _SCPKG_CMD_EMBLEM_LEVELUP.fields_by_name['hero_att_effected'].message_type = _SCDT_HERO_ATT_EFFECTED
 _SCPKG_CMD_EMBLEM_UNLOCK.fields_by_name['hero_att_effected'].message_type = _SCDT_HERO_ATT_EFFECTED
 DESCRIPTOR.message_types_by_name['CSPKG_CMD_HERO_GROWUP'] = _CSPKG_CMD_HERO_GROWUP
@@ -677,6 +758,8 @@ DESCRIPTOR.message_types_by_name['CSPKG_CMD_SKILL_LEVELUP'] = _CSPKG_CMD_SKILL_L
 DESCRIPTOR.message_types_by_name['SCPKG_CMD_SKILL_LEVELUP'] = _SCPKG_CMD_SKILL_LEVELUP
 DESCRIPTOR.message_types_by_name['NOTIFY_HERO_NEW_ROLE_BUFF'] = _NOTIFY_HERO_NEW_ROLE_BUFF
 DESCRIPTOR.message_types_by_name['CSPKG_CMD_EMBLEM_LEVELUP'] = _CSPKG_CMD_EMBLEM_LEVELUP
+DESCRIPTOR.message_types_by_name['CSPKG_CMD_ACTIVE_TALENT_REQ'] = _CSPKG_CMD_ACTIVE_TALENT_REQ
+DESCRIPTOR.message_types_by_name['SCPKG_CMD_ACTIVE_TALENT_RES'] = _SCPKG_CMD_ACTIVE_TALENT_RES
 
 CSPKG_CMD_HERO_GROWUP = _reflection.GeneratedProtocolMessageType('CSPKG_CMD_HERO_GROWUP', (_message.Message,), dict(
   DESCRIPTOR = _CSPKG_CMD_HERO_GROWUP,
@@ -775,6 +858,20 @@ CSPKG_CMD_EMBLEM_LEVELUP = _reflection.GeneratedProtocolMessageType('CSPKG_CMD_E
   # @@protoc_insertion_point(class_scope:CSPKG_CMD_EMBLEM_LEVELUP)
   ))
 _sym_db.RegisterMessage(CSPKG_CMD_EMBLEM_LEVELUP)
+
+CSPKG_CMD_ACTIVE_TALENT_REQ = _reflection.GeneratedProtocolMessageType('CSPKG_CMD_ACTIVE_TALENT_REQ', (_message.Message,), dict(
+  DESCRIPTOR = _CSPKG_CMD_ACTIVE_TALENT_REQ,
+  __module__ = 'hero_pb2'
+  # @@protoc_insertion_point(class_scope:CSPKG_CMD_ACTIVE_TALENT_REQ)
+  ))
+_sym_db.RegisterMessage(CSPKG_CMD_ACTIVE_TALENT_REQ)
+
+SCPKG_CMD_ACTIVE_TALENT_RES = _reflection.GeneratedProtocolMessageType('SCPKG_CMD_ACTIVE_TALENT_RES', (_message.Message,), dict(
+  DESCRIPTOR = _SCPKG_CMD_ACTIVE_TALENT_RES,
+  __module__ = 'hero_pb2'
+  # @@protoc_insertion_point(class_scope:SCPKG_CMD_ACTIVE_TALENT_RES)
+  ))
+_sym_db.RegisterMessage(SCPKG_CMD_ACTIVE_TALENT_RES)
 
 
 # @@protoc_insertion_point(module_scope)

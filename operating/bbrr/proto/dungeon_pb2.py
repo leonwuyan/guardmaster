@@ -15,14 +15,15 @@ _sym_db = _symbol_database.Default()
 
 import rescommon_pb2
 import protocommon_pb2
+import multiplayer_pb2
 
 
 DESCRIPTOR = _descriptor.FileDescriptor(
   name='dungeon.proto',
   package='',
-  serialized_pb=_b('\n\rdungeon.proto\x1a\x0frescommon.proto\x1a\x11protocommon.proto\"\xdd\x01\n\x14\x43SDT_DUN_UNLOCK_DATA\x12\x12\n\ndungeon_id\x18\x01 \x01(\r\x12\x11\n\tdun_level\x18\x02 \x01(\r\x12\x0c\n\x04stat\x18\x03 \x01(\r\x12\x15\n\rchallenge_cnt\x18\x04 \x01(\r\x12\x16\n\x0e\x63hallenge_time\x18\x05 \x01(\r\x12\x11\n\tstory_bit\x18\x06 \x01(\r\x12\x17\n\x0f\x62\x65st_evaluation\x18\x07 \x01(\r\x12\x1d\n\x15\x65lite_challenge_count\x18\x08 \x01(\r\x12\x16\n\x0e\x65lite_drop_exp\x18\t \x01(\r\"\x83\x01\n\x17\x43SDT_PVE_CHALLENGE_DATA\x12\x0f\n\x07npc_cnt\x18\x01 \x01(\r\x12\x12\n\nplayer_cnt\x18\x02 \x01(\r\x12*\n\x0bunlock_data\x18\x03 \x03(\x0b\x32\x15.CSDT_DUN_UNLOCK_DATA\x12\x17\n\x0f\x65lite_buy_count\x18\x04 \x01(\r\"7\n\x14\x43SPKG_CMD_RELIVE_REQ\x12\x0f\n\x07hero_id\x18\x01 \x01(\r\x12\x0e\n\x06\x64un_id\x18\x02 \x01(\r\"G\n\x14SCPKG_CMD_RELIVE_RES\x12\x0e\n\x06result\x18\x01 \x01(\r\x12\x0f\n\x07hero_id\x18\x02 \x01(\r\x12\x0e\n\x06\x64un_id\x18\x03 \x01(\r\"H\n\x14\x43SPKG_CMD_PAUSE_GAME\x12\x0f\n\x07hero_id\x18\x01 \x01(\r\x12\x0e\n\x06\x64un_id\x18\x02 \x01(\r\x12\x0f\n\x07room_id\x18\x03 \x01(\r\"K\n\x17\x43SPKG_CMD_CONTINUE_GAME\x12\x0f\n\x07hero_id\x18\x01 \x01(\r\x12\x0e\n\x06\x64un_id\x18\x02 \x01(\r\x12\x0f\n\x07room_id\x18\x03 \x01(\r\"Z\n\x17SCPKG_CMD_CONTINUE_GAME\x12\x0e\n\x06\x64un_id\x18\x01 \x01(\r\x12\x0f\n\x07room_id\x18\x02 \x01(\r\x12\x1e\n\x16\x63ur_room_interval_time\x18\x03 \x01(\x05\"c\n\x14\x43SPKG_CMD_ENTER_ROOM\x12\x0f\n\x07hero_id\x18\x01 \x01(\r\x12\x0e\n\x06\x64un_id\x18\x02 \x01(\r\x12\x0f\n\x07room_id\x18\x03 \x01(\r\x12\x19\n\x11\x63lt_room_interval\x18\x04 \x01(\r\"\x81\x01\n\x14SCPKG_CMD_ENTER_ROOM\x12\x0e\n\x06result\x18\x01 \x01(\r\x12\x0f\n\x07hero_id\x18\x02 \x01(\r\x12\x0e\n\x06\x64un_id\x18\x03 \x01(\r\x12\x0f\n\x07room_id\x18\x04 \x01(\r\x12\x10\n\x08\x62\x65g_time\x18\x05 \x01(\r\x12\x15\n\rinterval_time\x18\x06 \x01(\x05\"]\n\x16SCPKG_CMD_ROOM_TIMEOUT\x12\x0e\n\x06\x64un_id\x18\x01 \x01(\r\x12\x0f\n\x07room_id\x18\x02 \x01(\r\x12\x10\n\x08\x62\x65g_time\x18\x03 \x01(\r\x12\x10\n\x08\x63ur_time\x18\x04 \x01(\r\"\'\n\x14\x43SPKG_DUNGEON_UNLOCK\x12\x0f\n\x07\x63ity_id\x18\x01 \x02(\r\"B\n\x14SCPKG_UNLOCK_DUNGEON\x12*\n\x0bunlock_data\x18\x01 \x02(\x0b\x32\x15.CSDT_DUN_UNLOCK_DATA\"H\n\x1e\x43SPKG_WIPE_OUT_PVE_DUNGEON_REQ\x12\x0e\n\x06\x64un_id\x18\x01 \x01(\r\x12\x16\n\x0ewipe_out_count\x18\x02 \x01(\r\"\xda\x01\n\x1eSCPKG_WIPE_OUT_PVE_DUNGEON_RES\x12\x0e\n\x06result\x18\x01 \x01(\x05\x12\x0e\n\x06\x64un_id\x18\x02 \x01(\r\x12\x13\n\x0breward_gold\x18\x03 \x01(\r\x12\x16\n\x0ereward_crystal\x18\x04 \x01(\r\x12)\n\x10normal_drop_info\x18\x05 \x01(\x0b\x32\x0f.CSDT_DROP_INFO\x12(\n\x0f\x65xtra_drop_info\x18\x06 \x01(\x0b\x32\x0f.CSDT_DROP_INFO\x12\x16\n\x0e\x65lite_drop_exp\x18\x07 \x01(\r\"2\n\x1b\x43SPKG_BUY_WIPE_OUT_ITEM_REQ\x12\x13\n\x0blevel_Index\x18\x01 \x01(\x05\"-\n\x1bSCPKG_BUY_WIPE_OUT_ITEM_RES\x12\x0e\n\x06result\x18\x01 \x01(\x05\">\n\x13SCDT_PVEUNLOCK_INFO\x12\x0c\n\x04type\x18\x01 \x01(\r\x12\n\n\x02id\x18\x02 \x01(\r\x12\r\n\x05level\x18\x03 \x01(\r\"P\n\x13SCPKG_CMD_PVEUNLOCK\x12\x0e\n\x06\x64un_id\x18\x01 \x01(\r\x12)\n\x0bunlock_info\x18\x02 \x03(\x0b\x32\x14.SCDT_PVEUNLOCK_INFO\"M\n\x1cST_ELITE_DUNGEON_CHANCE_INFO\x12\x0e\n\x06\x64un_id\x18\x01 \x01(\r\x12\x1d\n\x15\x65lite_challenge_count\x18\x02 \x01(\r\"v\n SCPKG_REFRESH_ELITE_DUNGEON_INFO\x12\x17\n\x0f\x65lite_buy_count\x18\x01 \x01(\r\x12\x39\n\x12\x65lite_dungeon_info\x18\x02 \x03(\x0b\x32\x1d.ST_ELITE_DUNGEON_CHANCE_INFO\"+\n\x19\x43SPKG_BUY_ELITE_COUNT_REQ\x12\x0e\n\x06\x64un_id\x18\x01 \x01(\r\"3\n\x1c\x43SDT_ENTER_ENDLESS_DUN_PARAM\x12\x13\n\x0bmatch_index\x18\x01 \x01(\r\"P\n\x14\x43SDT_ENTER_DUN_PARAM\x12\x38\n\x11\x65ndless_dun_param\x18\x01 \x01(\x0b\x32\x1d.CSDT_ENTER_ENDLESS_DUN_PARAM\"~\n\x19\x43SPKG_CMD_PLAYER_ENTERDUN\x12\x10\n\x08\x64un_type\x18\x01 \x01(\r\x12\x0e\n\x06\x64un_id\x18\x02 \x01(\r\x12\x0f\n\x07hero_id\x18\x03 \x03(\r\x12.\n\x0f\x65nter_dun_param\x18\x04 \x01(\x0b\x32\x15.CSDT_ENTER_DUN_PARAM\"1\n\x1f\x43SPKG_CMD_PLAYER_ENTERDUN_INDUN\x12\x0e\n\x06\x64un_id\x18\x01 \x01(\r\"8\n\x12\x43SPKG_CMD_QUIT_DUN\x12\x0e\n\x06\x64un_id\x18\x01 \x01(\r\x12\x12\n\npve_result\x18\x02 \x01(\r\"E\n\x12SCPKG_CMD_QUIT_DUN\x12\x0e\n\x06result\x18\x01 \x01(\r\x12\x0f\n\x07hero_id\x18\x02 \x01(\r\x12\x0e\n\x06\x64un_id\x18\x03 \x01(\r\"m\n\x1b\x43SPKG_CMD_ENTER_PRACTICEDUN\x12\x0f\n\x07hero_id\x18\x01 \x01(\r\x12\x12\n\nchapter_id\x18\x02 \x01(\r\x12\x12\n\nsection_id\x18\x03 \x01(\r\x12\x15\n\renter_hero_id\x18\x04 \x01(\r\"\x8d\x01\n\x1bSCPKG_CMD_ENTER_PRACTICEDUN\x12\x0e\n\x06result\x18\x01 \x01(\r\x12\x0f\n\x07hero_id\x18\x02 \x01(\r\x12\x12\n\nchapter_id\x18\x03 \x01(\r\x12\x12\n\nsection_id\x18\x04 \x01(\r\x12\x0e\n\x06\x64un_id\x18\x05 \x01(\r\x12\x15\n\renter_hero_id\x18\x06 \x01(\r\"W\n\x19\x43SDT_CMD_DUN_EVALUATEINFO\x12\x10\n\x08\x64un_time\x18\x01 \x01(\r\x12\x15\n\rremain_hprate\x18\x02 \x01(\r\x12\x11\n\tmax_combo\x18\x03 \x01(\r\"\xff\x01\n\x1a\x43SDT_PLAYER_PVE_DUNBALANCE\x12\x0e\n\x06\x64un_id\x18\x01 \x01(\r\x12\x1b\n\x13pick_money_over_hit\x18\x02 \x01(\r\x12\x19\n\x11pick_res_over_hit\x18\x03 \x01(\r\x12\x1b\n\x13pick_money_kill_mst\x18\x04 \x01(\r\x12\x19\n\x11pick_res_kill_mst\x18\x05 \x01(\r\x12\x19\n\x11style_total_count\x18\x06 \x01(\r\x12\x13\n\x0bstyle_times\x18\x07 \x01(\r\x12\x31\n\revaluate_info\x18\x08 \x01(\x0b\x32\x1a.CSDT_CMD_DUN_EVALUATEINFO\"\xa3\x01\n\x1e\x43SDT_PLAYER_ENDLESS_DUNBALANCE\x12\x0e\n\x06\x64un_id\x18\x01 \x01(\r\x12\x16\n\x0ekill_mst_score\x18\x02 \x01(\r\x12\x15\n\roverhit_score\x18\x03 \x01(\r\x12\x12\n\ntime_score\x18\x04 \x01(\r\x12\x19\n\x11style_total_count\x18\x05 \x01(\r\x12\x13\n\x0bstyle_times\x18\x06 \x01(\r\"z\n\x1f\x43SDT_PLAYER_PRACTICE_DUNBALANCE\x12\x0e\n\x06result\x18\x01 \x01(\r\x12\x0e\n\x06\x64un_id\x18\x02 \x01(\r\x12\x0f\n\x07hero_id\x18\x03 \x01(\r\x12\x12\n\nchapter_id\x18\x04 \x01(\r\x12\x12\n\nsection_id\x18\x05 \x01(\r\"E\n$CSDT_PLAYER_ONLINE_BATTLE_DUNBALANCE\x12\x0e\n\x06result\x18\x01 \x01(\r\x12\r\n\x05param\x18\x03 \x03(\r\"M\n!CSDT_PLAYER_WORLD_BOSS_DUNBALANCE\x12\x10\n\x08week_day\x18\x01 \x01(\r\x12\x16\n\x0e\x63ur_boss_index\x18\x02 \x01(\r\"\xc6\x02\n\x16\x43SDT_PLAYER_DUNBALANCE\x12\x30\n\x0bpve_balance\x18\x01 \x01(\x0b\x32\x1b.CSDT_PLAYER_PVE_DUNBALANCE\x12\x38\n\x0f\x65ndless_balance\x18\x02 \x01(\x0b\x32\x1f.CSDT_PLAYER_ENDLESS_DUNBALANCE\x12:\n\x10practice_balance\x18\x03 \x01(\x0b\x32 .CSDT_PLAYER_PRACTICE_DUNBALANCE\x12\x44\n\x15online_battle_balance\x18\x04 \x01(\x0b\x32%.CSDT_PLAYER_ONLINE_BATTLE_DUNBALANCE\x12>\n\x12world_boss_balance\x18\x05 \x01(\x0b\x32\".CSDT_PLAYER_WORLD_BOSS_DUNBALANCE\"^\n\x1b\x43SPKG_CMD_PLAYER_DUNBALANCE\x12\x10\n\x08\x64un_type\x18\x01 \x01(\r\x12-\n\x0c\x62\x61lance_info\x18\x02 \x01(\x0b\x32\x17.CSDT_PLAYER_DUNBALANCE\"\x9b\x01\n\x1dSCPKG_CMD_PRACTICE_DUNBALANCE\x12\x10\n\x08quest_id\x18\x01 \x01(\r\x12\x0e\n\x06\x64un_id\x18\x02 \x01(\r\x12\x0f\n\x07hero_id\x18\x03 \x01(\r\x12\x12\n\nchapter_id\x18\x04 \x01(\r\x12\x12\n\nsection_id\x18\x05 \x01(\r\x12\x1f\n\x0breward_info\x18\x06 \x03(\x0b\x32\n.ResReward\"\xe8\x01\n#SCPKG_CMD_PLAYER_DUNBALANCE_ENDLESS\x12\x0e\n\x06\x64un_id\x18\x01 \x01(\r\x12\x16\n\x0ereward_crystal\x18\x02 \x01(\r\x12\r\n\x05score\x18\x03 \x01(\r\x12\x0e\n\x06\x66loors\x18\x04 \x01(\r\x12\x16\n\x0ekill_mst_score\x18\x05 \x01(\r\x12\x15\n\roverhit_score\x18\x06 \x01(\r\x12\x12\n\ntime_score\x18\x07 \x01(\r\x12\x13\n\x0bstyle_score\x18\x08 \x01(\r\x12\"\n\tdrop_info\x18\t \x01(\x0b\x32\x0f.CSDT_DROP_INFO\"\xa6\x01\n)SCPKG_CMD_PLAYER_DUNBALANCE_ONLINE_BATTLE\x12\x10\n\x08\x66inished\x18\x01 \x01(\x08\x12\x34\n\x12online_battle_info\x18\x02 \x01(\x0b\x32\x18.CSDT_ONLINE_BATTLE_INFO\x12\x18\n\x10win_point_before\x18\x03 \x01(\r\x12\x17\n\x0fwin_point_after\x18\x04 \x01(\r\"\xff\x03\n\x1bSCPKG_CMD_PLAYER_DUNBALANCE\x12\x0f\n\x07hero_id\x18\x01 \x01(\r\x12\x12\n\nhero_level\x18\x02 \x01(\r\x12\x0e\n\x06\x64un_id\x18\x03 \x01(\r\x12\x10\n\x08\x64un_time\x18\x04 \x01(\r\x12\x14\n\x0c\x64un_evaluate\x18\x05 \x01(\r\x12\x31\n\revaluate_info\x18\x06 \x01(\x0b\x32\x1a.CSDT_CMD_DUN_EVALUATEINFO\x12\x1a\n\x12pick_money_overhit\x18\x07 \x01(\r\x12\x18\n\x10pick_res_overhit\x18\x08 \x01(\r\x12\x1b\n\x13pick_money_kill_mst\x18\t \x01(\r\x12\x19\n\x11pick_res_kill_mst\x18\n \x01(\r\x12\x18\n\x10reward_gold_time\x18\x0b \x01(\r\x12\x1c\n\x14style_reward_crystal\x18\x0c \x01(\r\x12\x13\n\x0breward_gold\x18\r \x01(\r\x12\x16\n\x0ereward_crystal\x18\x0e \x01(\r\x12\x12\n\nreward_exp\x18\x0f \x01(\r\x12\x15\n\runlock_dun_id\x18\x10 \x03(\r\x12.\n\x0f\x64un_unlock_info\x18\x11 \x01(\x0b\x32\x15.CSDT_DUN_UNLOCK_DATA\x12\"\n\tdrop_info\x18\x12 \x01(\x0b\x32\x0f.CSDT_DROP_INFO\"m\n\x19SCPKG_CMD_PLAYER_ENTERDUN\x12\x0f\n\x07hero_id\x18\x01 \x01(\r\x12\x0e\n\x06\x64un_id\x18\x02 \x01(\r\x12\x0e\n\x06result\x18\x03 \x01(\x05\x12\r\n\x05level\x18\x04 \x01(\r\x12\x10\n\x08\x64un_type\x18\x05 \x01(\r')
+  serialized_pb=_b('\n\rdungeon.proto\x1a\x0frescommon.proto\x1a\x11protocommon.proto\x1a\x11multiplayer.proto\"\xdd\x01\n\x14\x43SDT_DUN_UNLOCK_DATA\x12\x12\n\ndungeon_id\x18\x01 \x01(\r\x12\x11\n\tdun_level\x18\x02 \x01(\r\x12\x0c\n\x04stat\x18\x03 \x01(\r\x12\x15\n\rchallenge_cnt\x18\x04 \x01(\r\x12\x16\n\x0e\x63hallenge_time\x18\x05 \x01(\r\x12\x11\n\tstory_bit\x18\x06 \x01(\r\x12\x17\n\x0f\x62\x65st_evaluation\x18\x07 \x01(\r\x12\x1d\n\x15\x65lite_challenge_count\x18\x08 \x01(\r\x12\x16\n\x0e\x65lite_drop_exp\x18\t \x01(\r\"\x83\x01\n\x17\x43SDT_PVE_CHALLENGE_DATA\x12\x0f\n\x07npc_cnt\x18\x01 \x01(\r\x12\x12\n\nplayer_cnt\x18\x02 \x01(\r\x12*\n\x0bunlock_data\x18\x03 \x03(\x0b\x32\x15.CSDT_DUN_UNLOCK_DATA\x12\x17\n\x0f\x65lite_buy_count\x18\x04 \x01(\r\"7\n\x14\x43SPKG_CMD_RELIVE_REQ\x12\x0f\n\x07hero_id\x18\x01 \x01(\r\x12\x0e\n\x06\x64un_id\x18\x02 \x01(\r\"G\n\x14SCPKG_CMD_RELIVE_RES\x12\x0e\n\x06result\x18\x01 \x01(\r\x12\x0f\n\x07hero_id\x18\x02 \x01(\r\x12\x0e\n\x06\x64un_id\x18\x03 \x01(\r\"H\n\x14\x43SPKG_CMD_PAUSE_GAME\x12\x0f\n\x07hero_id\x18\x01 \x01(\r\x12\x0e\n\x06\x64un_id\x18\x02 \x01(\r\x12\x0f\n\x07room_id\x18\x03 \x01(\r\"K\n\x17\x43SPKG_CMD_CONTINUE_GAME\x12\x0f\n\x07hero_id\x18\x01 \x01(\r\x12\x0e\n\x06\x64un_id\x18\x02 \x01(\r\x12\x0f\n\x07room_id\x18\x03 \x01(\r\"Z\n\x17SCPKG_CMD_CONTINUE_GAME\x12\x0e\n\x06\x64un_id\x18\x01 \x01(\r\x12\x0f\n\x07room_id\x18\x02 \x01(\r\x12\x1e\n\x16\x63ur_room_interval_time\x18\x03 \x01(\x05\"c\n\x14\x43SPKG_CMD_ENTER_ROOM\x12\x0f\n\x07hero_id\x18\x01 \x01(\r\x12\x0e\n\x06\x64un_id\x18\x02 \x01(\r\x12\x0f\n\x07room_id\x18\x03 \x01(\r\x12\x19\n\x11\x63lt_room_interval\x18\x04 \x01(\r\"\x81\x01\n\x14SCPKG_CMD_ENTER_ROOM\x12\x0e\n\x06result\x18\x01 \x01(\r\x12\x0f\n\x07hero_id\x18\x02 \x01(\r\x12\x0e\n\x06\x64un_id\x18\x03 \x01(\r\x12\x0f\n\x07room_id\x18\x04 \x01(\r\x12\x10\n\x08\x62\x65g_time\x18\x05 \x01(\r\x12\x15\n\rinterval_time\x18\x06 \x01(\x05\"]\n\x16SCPKG_CMD_ROOM_TIMEOUT\x12\x0e\n\x06\x64un_id\x18\x01 \x01(\r\x12\x0f\n\x07room_id\x18\x02 \x01(\r\x12\x10\n\x08\x62\x65g_time\x18\x03 \x01(\r\x12\x10\n\x08\x63ur_time\x18\x04 \x01(\r\"\'\n\x14\x43SPKG_DUNGEON_UNLOCK\x12\x0f\n\x07\x63ity_id\x18\x01 \x02(\r\"B\n\x14SCPKG_UNLOCK_DUNGEON\x12*\n\x0bunlock_data\x18\x01 \x02(\x0b\x32\x15.CSDT_DUN_UNLOCK_DATA\"H\n\x1e\x43SPKG_WIPE_OUT_PVE_DUNGEON_REQ\x12\x0e\n\x06\x64un_id\x18\x01 \x01(\r\x12\x16\n\x0ewipe_out_count\x18\x02 \x01(\r\"\x87\x02\n\x1eSCPKG_WIPE_OUT_PVE_DUNGEON_RES\x12\x0e\n\x06result\x18\x01 \x01(\x05\x12\x0e\n\x06\x64un_id\x18\x02 \x01(\r\x12\x13\n\x0breward_gold\x18\x03 \x01(\r\x12\x16\n\x0ereward_crystal\x18\x04 \x01(\r\x12)\n\x10normal_drop_info\x18\x05 \x01(\x0b\x32\x0f.CSDT_DROP_INFO\x12(\n\x0f\x65xtra_drop_info\x18\x06 \x01(\x0b\x32\x0f.CSDT_DROP_INFO\x12\x16\n\x0e\x65lite_drop_exp\x18\x07 \x01(\r\x12+\n\x12\x61\x63tivity_drop_info\x18\x08 \x01(\x0b\x32\x0f.CSDT_DROP_INFO\"2\n\x1b\x43SPKG_BUY_WIPE_OUT_ITEM_REQ\x12\x13\n\x0blevel_Index\x18\x01 \x01(\x05\"-\n\x1bSCPKG_BUY_WIPE_OUT_ITEM_RES\x12\x0e\n\x06result\x18\x01 \x01(\x05\">\n\x13SCDT_PVEUNLOCK_INFO\x12\x0c\n\x04type\x18\x01 \x01(\r\x12\n\n\x02id\x18\x02 \x01(\r\x12\r\n\x05level\x18\x03 \x01(\r\"P\n\x13SCPKG_CMD_PVEUNLOCK\x12\x0e\n\x06\x64un_id\x18\x01 \x01(\r\x12)\n\x0bunlock_info\x18\x02 \x03(\x0b\x32\x14.SCDT_PVEUNLOCK_INFO\"M\n\x1cST_ELITE_DUNGEON_CHANCE_INFO\x12\x0e\n\x06\x64un_id\x18\x01 \x01(\r\x12\x1d\n\x15\x65lite_challenge_count\x18\x02 \x01(\r\"v\n SCPKG_REFRESH_ELITE_DUNGEON_INFO\x12\x17\n\x0f\x65lite_buy_count\x18\x01 \x01(\r\x12\x39\n\x12\x65lite_dungeon_info\x18\x02 \x03(\x0b\x32\x1d.ST_ELITE_DUNGEON_CHANCE_INFO\"+\n\x19\x43SPKG_BUY_ELITE_COUNT_REQ\x12\x0e\n\x06\x64un_id\x18\x01 \x01(\r\"\x81\x01\n\"CSDT_ENTER_ONLINE_BATTLE_DUN_PARAM\x12\x0f\n\x07is_host\x18\x01 \x01(\x08\x12\x19\n\x11host_player_score\x18\x02 \x01(\r\x12\x1a\n\x12guest_player_score\x18\x03 \x01(\r\x12\x13\n\x0bscene_index\x18\x04 \x01(\r\"3\n\x1c\x43SDT_ENTER_ENDLESS_DUN_PARAM\x12\x13\n\x0bmatch_index\x18\x01 \x01(\r\"_\n$CSDT_ENTER_MULTIPLAYER_PVE_DUN_PARAM\x12\x37\n\x07res_msg\x18\x01 \x01(\x0b\x32&.SCPKG_MULTIPLAYER_PVE_DUN_ROOM_OP_RES\"\xe0\x01\n\x14\x43SDT_ENTER_DUN_PARAM\x12\x38\n\x11\x65ndless_dun_param\x18\x01 \x01(\x0b\x32\x1d.CSDT_ENTER_ENDLESS_DUN_PARAM\x12H\n\x19multiplayer_pve_dun_param\x18\x02 \x01(\x0b\x32%.CSDT_ENTER_MULTIPLAYER_PVE_DUN_PARAM\x12\x44\n\x17online_battle_dun_param\x18\x03 \x01(\x0b\x32#.CSDT_ENTER_ONLINE_BATTLE_DUN_PARAM\"~\n\x19\x43SPKG_CMD_PLAYER_ENTERDUN\x12\x10\n\x08\x64un_type\x18\x01 \x01(\r\x12\x0e\n\x06\x64un_id\x18\x02 \x01(\r\x12\x0f\n\x07hero_id\x18\x03 \x03(\r\x12.\n\x0f\x65nter_dun_param\x18\x04 \x01(\x0b\x32\x15.CSDT_ENTER_DUN_PARAM\"1\n\x1f\x43SPKG_CMD_PLAYER_ENTERDUN_INDUN\x12\x0e\n\x06\x64un_id\x18\x01 \x01(\r\"8\n\x12\x43SPKG_CMD_QUIT_DUN\x12\x0e\n\x06\x64un_id\x18\x01 \x01(\r\x12\x12\n\npve_result\x18\x02 \x01(\r\"E\n\x12SCPKG_CMD_QUIT_DUN\x12\x0e\n\x06result\x18\x01 \x01(\r\x12\x0f\n\x07hero_id\x18\x02 \x01(\r\x12\x0e\n\x06\x64un_id\x18\x03 \x01(\r\"m\n\x1b\x43SPKG_CMD_ENTER_PRACTICEDUN\x12\x0f\n\x07hero_id\x18\x01 \x01(\r\x12\x12\n\nchapter_id\x18\x02 \x01(\r\x12\x12\n\nsection_id\x18\x03 \x01(\r\x12\x15\n\renter_hero_id\x18\x04 \x01(\r\"\x8d\x01\n\x1bSCPKG_CMD_ENTER_PRACTICEDUN\x12\x0e\n\x06result\x18\x01 \x01(\r\x12\x0f\n\x07hero_id\x18\x02 \x01(\r\x12\x12\n\nchapter_id\x18\x03 \x01(\r\x12\x12\n\nsection_id\x18\x04 \x01(\r\x12\x0e\n\x06\x64un_id\x18\x05 \x01(\r\x12\x15\n\renter_hero_id\x18\x06 \x01(\r\"W\n\x19\x43SDT_CMD_DUN_EVALUATEINFO\x12\x10\n\x08\x64un_time\x18\x01 \x01(\r\x12\x15\n\rremain_hprate\x18\x02 \x01(\r\x12\x11\n\tmax_combo\x18\x03 \x01(\r\"\xff\x01\n\x1a\x43SDT_PLAYER_PVE_DUNBALANCE\x12\x0e\n\x06\x64un_id\x18\x01 \x01(\r\x12\x1b\n\x13pick_money_over_hit\x18\x02 \x01(\r\x12\x19\n\x11pick_res_over_hit\x18\x03 \x01(\r\x12\x1b\n\x13pick_money_kill_mst\x18\x04 \x01(\r\x12\x19\n\x11pick_res_kill_mst\x18\x05 \x01(\r\x12\x19\n\x11style_total_count\x18\x06 \x01(\r\x12\x13\n\x0bstyle_times\x18\x07 \x01(\r\x12\x31\n\revaluate_info\x18\x08 \x01(\x0b\x32\x1a.CSDT_CMD_DUN_EVALUATEINFO\"\xc5\x02\n\x1f\x43SDT_PLAYER_BOSSRUSH_DUNBALANCE\x12\x0e\n\x06\x64un_id\x18\x01 \x01(\r\x12\x1b\n\x13pick_money_over_hit\x18\x02 \x01(\r\x12\x19\n\x11pick_res_over_hit\x18\x03 \x01(\r\x12\x1b\n\x13pick_money_kill_mst\x18\x04 \x01(\r\x12\x19\n\x11pick_res_kill_mst\x18\x05 \x01(\r\x12\x19\n\x11style_total_count\x18\x06 \x01(\r\x12\x13\n\x0bstyle_times\x18\x07 \x01(\r\x12\x31\n\revaluate_info\x18\x08 \x01(\x0b\x32\x1a.CSDT_CMD_DUN_EVALUATEINFO\x12\x0f\n\x07hero_hp\x18\t \x03(\r\x12.\n\thp_remain\x18\n \x01(\x0b\x32\x1b.ST_BOSSRUSH_HERO_HP_REMAIN\"\xa3\x01\n\x1e\x43SDT_PLAYER_ENDLESS_DUNBALANCE\x12\x0e\n\x06\x64un_id\x18\x01 \x01(\r\x12\x16\n\x0ekill_mst_score\x18\x02 \x01(\r\x12\x15\n\roverhit_score\x18\x03 \x01(\r\x12\x12\n\ntime_score\x18\x04 \x01(\r\x12\x19\n\x11style_total_count\x18\x05 \x01(\r\x12\x13\n\x0bstyle_times\x18\x06 \x01(\r\"z\n\x1f\x43SDT_PLAYER_PRACTICE_DUNBALANCE\x12\x0e\n\x06result\x18\x01 \x01(\r\x12\x0e\n\x06\x64un_id\x18\x02 \x01(\r\x12\x0f\n\x07hero_id\x18\x03 \x01(\r\x12\x12\n\nchapter_id\x18\x04 \x01(\r\x12\x12\n\nsection_id\x18\x05 \x01(\r\"E\n$CSDT_PLAYER_ONLINE_BATTLE_DUNBALANCE\x12\x0e\n\x06result\x18\x01 \x01(\r\x12\r\n\x05param\x18\x03 \x03(\r\"M\n!CSDT_PLAYER_WORLD_BOSS_DUNBALANCE\x12\x10\n\x08week_day\x18\x01 \x01(\r\x12\x16\n\x0e\x63ur_boss_index\x18\x02 \x01(\r\"9\n&CSDT_PLAYER_MULTIPLAYER_PVE_DUNBALANCE\x12\x0f\n\x07succeed\x18\x01 \x01(\x08\"4\n\x1bSCPKG_DUNGEON_COMBAT_SWITCH\x12\x15\n\rcombat_switch\x18\x01 \x02(\r\"*\n\x1a\x43SDT_DUNGEON_COMBAT_RECORD\x12\x0c\n\x04\x64\x61ta\x18\x01 \x03(\r\"J\n\x1b\x43SPKG_DUNGEON_COMBAT_REPORT\x12+\n\x06record\x18\x01 \x03(\x0b\x32\x1b.CSDT_DUNGEON_COMBAT_RECORD\"\xf7\x03\n\x16\x43SDT_PLAYER_DUNBALANCE\x12\x30\n\x0bpve_balance\x18\x01 \x01(\x0b\x32\x1b.CSDT_PLAYER_PVE_DUNBALANCE\x12\x38\n\x0f\x65ndless_balance\x18\x02 \x01(\x0b\x32\x1f.CSDT_PLAYER_ENDLESS_DUNBALANCE\x12:\n\x10practice_balance\x18\x03 \x01(\x0b\x32 .CSDT_PLAYER_PRACTICE_DUNBALANCE\x12\x44\n\x15online_battle_balance\x18\x04 \x01(\x0b\x32%.CSDT_PLAYER_ONLINE_BATTLE_DUNBALANCE\x12>\n\x12world_boss_balance\x18\x05 \x01(\x0b\x32\".CSDT_PLAYER_WORLD_BOSS_DUNBALANCE\x12:\n\x10\x62ossrush_balance\x18\x06 \x01(\x0b\x32 .CSDT_PLAYER_BOSSRUSH_DUNBALANCE\x12H\n\x17multiplayer_pve_balance\x18\x07 \x01(\x0b\x32\'.CSDT_PLAYER_MULTIPLAYER_PVE_DUNBALANCE\x12)\n\x05\x62rief\x18\x08 \x01(\x0b\x32\x1a.CSDT_DUNGEON_COMBAT_BRIEF\"^\n\x1b\x43SPKG_CMD_PLAYER_DUNBALANCE\x12\x10\n\x08\x64un_type\x18\x01 \x01(\r\x12-\n\x0c\x62\x61lance_info\x18\x02 \x01(\x0b\x32\x17.CSDT_PLAYER_DUNBALANCE\"\x9b\x01\n\x1dSCPKG_CMD_PRACTICE_DUNBALANCE\x12\x10\n\x08quest_id\x18\x01 \x01(\r\x12\x0e\n\x06\x64un_id\x18\x02 \x01(\r\x12\x0f\n\x07hero_id\x18\x03 \x01(\r\x12\x12\n\nchapter_id\x18\x04 \x01(\r\x12\x12\n\nsection_id\x18\x05 \x01(\r\x12\x1f\n\x0breward_info\x18\x06 \x03(\x0b\x32\n.ResReward\"\xe8\x01\n#SCPKG_CMD_PLAYER_DUNBALANCE_ENDLESS\x12\x0e\n\x06\x64un_id\x18\x01 \x01(\r\x12\x16\n\x0ereward_crystal\x18\x02 \x01(\r\x12\r\n\x05score\x18\x03 \x01(\r\x12\x0e\n\x06\x66loors\x18\x04 \x01(\r\x12\x16\n\x0ekill_mst_score\x18\x05 \x01(\r\x12\x15\n\roverhit_score\x18\x06 \x01(\r\x12\x12\n\ntime_score\x18\x07 \x01(\r\x12\x13\n\x0bstyle_score\x18\x08 \x01(\r\x12\"\n\tdrop_info\x18\t \x01(\x0b\x32\x0f.CSDT_DROP_INFO\"\xa6\x01\n)SCPKG_CMD_PLAYER_DUNBALANCE_ONLINE_BATTLE\x12\x10\n\x08\x66inished\x18\x01 \x01(\x08\x12\x34\n\x12online_battle_info\x18\x02 \x01(\x0b\x32\x18.CSDT_ONLINE_BATTLE_INFO\x12\x18\n\x10win_point_before\x18\x03 \x01(\r\x12\x17\n\x0fwin_point_after\x18\x04 \x01(\r\"\xac\x04\n\x1bSCPKG_CMD_PLAYER_DUNBALANCE\x12\x0f\n\x07hero_id\x18\x01 \x01(\r\x12\x12\n\nhero_level\x18\x02 \x01(\r\x12\x0e\n\x06\x64un_id\x18\x03 \x01(\r\x12\x10\n\x08\x64un_time\x18\x04 \x01(\r\x12\x14\n\x0c\x64un_evaluate\x18\x05 \x01(\r\x12\x31\n\revaluate_info\x18\x06 \x01(\x0b\x32\x1a.CSDT_CMD_DUN_EVALUATEINFO\x12\x1a\n\x12pick_money_overhit\x18\x07 \x01(\r\x12\x18\n\x10pick_res_overhit\x18\x08 \x01(\r\x12\x1b\n\x13pick_money_kill_mst\x18\t \x01(\r\x12\x19\n\x11pick_res_kill_mst\x18\n \x01(\r\x12\x18\n\x10reward_gold_time\x18\x0b \x01(\r\x12\x1c\n\x14style_reward_crystal\x18\x0c \x01(\r\x12\x13\n\x0breward_gold\x18\r \x01(\r\x12\x16\n\x0ereward_crystal\x18\x0e \x01(\r\x12\x12\n\nreward_exp\x18\x0f \x01(\r\x12\x15\n\runlock_dun_id\x18\x10 \x03(\r\x12.\n\x0f\x64un_unlock_info\x18\x11 \x01(\x0b\x32\x15.CSDT_DUN_UNLOCK_DATA\x12\"\n\tdrop_info\x18\x12 \x01(\x0b\x32\x0f.CSDT_DROP_INFO\x12+\n\x12\x61\x63tivity_drop_info\x18\x13 \x01(\x0b\x32\x0f.CSDT_DROP_INFO\"m\n\x19SCPKG_CMD_PLAYER_ENTERDUN\x12\x0f\n\x07hero_id\x18\x01 \x01(\r\x12\x0e\n\x06\x64un_id\x18\x02 \x01(\r\x12\x0e\n\x06result\x18\x03 \x01(\x05\x12\r\n\x05level\x18\x04 \x01(\r\x12\x10\n\x08\x64un_type\x18\x05 \x01(\r')
   ,
-  dependencies=[rescommon_pb2.DESCRIPTOR,protocommon_pb2.DESCRIPTOR,])
+  dependencies=[rescommon_pb2.DESCRIPTOR,protocommon_pb2.DESCRIPTOR,multiplayer_pb2.DESCRIPTOR,])
 _sym_db.RegisterFileDescriptor(DESCRIPTOR)
 
 
@@ -109,8 +110,8 @@ _CSDT_DUN_UNLOCK_DATA = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=54,
-  serialized_end=275,
+  serialized_start=73,
+  serialized_end=294,
 )
 
 
@@ -160,8 +161,8 @@ _CSDT_PVE_CHALLENGE_DATA = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=278,
-  serialized_end=409,
+  serialized_start=297,
+  serialized_end=428,
 )
 
 
@@ -197,8 +198,8 @@ _CSPKG_CMD_RELIVE_REQ = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=411,
-  serialized_end=466,
+  serialized_start=430,
+  serialized_end=485,
 )
 
 
@@ -241,8 +242,8 @@ _SCPKG_CMD_RELIVE_RES = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=468,
-  serialized_end=539,
+  serialized_start=487,
+  serialized_end=558,
 )
 
 
@@ -285,8 +286,8 @@ _CSPKG_CMD_PAUSE_GAME = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=541,
-  serialized_end=613,
+  serialized_start=560,
+  serialized_end=632,
 )
 
 
@@ -329,8 +330,8 @@ _CSPKG_CMD_CONTINUE_GAME = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=615,
-  serialized_end=690,
+  serialized_start=634,
+  serialized_end=709,
 )
 
 
@@ -373,8 +374,8 @@ _SCPKG_CMD_CONTINUE_GAME = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=692,
-  serialized_end=782,
+  serialized_start=711,
+  serialized_end=801,
 )
 
 
@@ -424,8 +425,8 @@ _CSPKG_CMD_ENTER_ROOM = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=784,
-  serialized_end=883,
+  serialized_start=803,
+  serialized_end=902,
 )
 
 
@@ -489,8 +490,8 @@ _SCPKG_CMD_ENTER_ROOM = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=886,
-  serialized_end=1015,
+  serialized_start=905,
+  serialized_end=1034,
 )
 
 
@@ -540,8 +541,8 @@ _SCPKG_CMD_ROOM_TIMEOUT = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=1017,
-  serialized_end=1110,
+  serialized_start=1036,
+  serialized_end=1129,
 )
 
 
@@ -570,8 +571,8 @@ _CSPKG_DUNGEON_UNLOCK = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=1112,
-  serialized_end=1151,
+  serialized_start=1131,
+  serialized_end=1170,
 )
 
 
@@ -600,8 +601,8 @@ _SCPKG_UNLOCK_DUNGEON = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=1153,
-  serialized_end=1219,
+  serialized_start=1172,
+  serialized_end=1238,
 )
 
 
@@ -637,8 +638,8 @@ _CSPKG_WIPE_OUT_PVE_DUNGEON_REQ = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=1221,
-  serialized_end=1293,
+  serialized_start=1240,
+  serialized_end=1312,
 )
 
 
@@ -698,6 +699,13 @@ _SCPKG_WIPE_OUT_PVE_DUNGEON_RES = _descriptor.Descriptor(
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
+    _descriptor.FieldDescriptor(
+      name='activity_drop_info', full_name='SCPKG_WIPE_OUT_PVE_DUNGEON_RES.activity_drop_info', index=7,
+      number=8, type=11, cpp_type=10, label=1,
+      has_default_value=False, default_value=None,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
   ],
   extensions=[
   ],
@@ -709,8 +717,8 @@ _SCPKG_WIPE_OUT_PVE_DUNGEON_RES = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=1296,
-  serialized_end=1514,
+  serialized_start=1315,
+  serialized_end=1578,
 )
 
 
@@ -739,8 +747,8 @@ _CSPKG_BUY_WIPE_OUT_ITEM_REQ = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=1516,
-  serialized_end=1566,
+  serialized_start=1580,
+  serialized_end=1630,
 )
 
 
@@ -769,8 +777,8 @@ _SCPKG_BUY_WIPE_OUT_ITEM_RES = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=1568,
-  serialized_end=1613,
+  serialized_start=1632,
+  serialized_end=1677,
 )
 
 
@@ -813,8 +821,8 @@ _SCDT_PVEUNLOCK_INFO = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=1615,
-  serialized_end=1677,
+  serialized_start=1679,
+  serialized_end=1741,
 )
 
 
@@ -850,8 +858,8 @@ _SCPKG_CMD_PVEUNLOCK = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=1679,
-  serialized_end=1759,
+  serialized_start=1743,
+  serialized_end=1823,
 )
 
 
@@ -887,8 +895,8 @@ _ST_ELITE_DUNGEON_CHANCE_INFO = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=1761,
-  serialized_end=1838,
+  serialized_start=1825,
+  serialized_end=1902,
 )
 
 
@@ -924,8 +932,8 @@ _SCPKG_REFRESH_ELITE_DUNGEON_INFO = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=1840,
-  serialized_end=1958,
+  serialized_start=1904,
+  serialized_end=2022,
 )
 
 
@@ -954,8 +962,59 @@ _CSPKG_BUY_ELITE_COUNT_REQ = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=1960,
-  serialized_end=2003,
+  serialized_start=2024,
+  serialized_end=2067,
+)
+
+
+_CSDT_ENTER_ONLINE_BATTLE_DUN_PARAM = _descriptor.Descriptor(
+  name='CSDT_ENTER_ONLINE_BATTLE_DUN_PARAM',
+  full_name='CSDT_ENTER_ONLINE_BATTLE_DUN_PARAM',
+  filename=None,
+  file=DESCRIPTOR,
+  containing_type=None,
+  fields=[
+    _descriptor.FieldDescriptor(
+      name='is_host', full_name='CSDT_ENTER_ONLINE_BATTLE_DUN_PARAM.is_host', index=0,
+      number=1, type=8, cpp_type=7, label=1,
+      has_default_value=False, default_value=False,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    _descriptor.FieldDescriptor(
+      name='host_player_score', full_name='CSDT_ENTER_ONLINE_BATTLE_DUN_PARAM.host_player_score', index=1,
+      number=2, type=13, cpp_type=3, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    _descriptor.FieldDescriptor(
+      name='guest_player_score', full_name='CSDT_ENTER_ONLINE_BATTLE_DUN_PARAM.guest_player_score', index=2,
+      number=3, type=13, cpp_type=3, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    _descriptor.FieldDescriptor(
+      name='scene_index', full_name='CSDT_ENTER_ONLINE_BATTLE_DUN_PARAM.scene_index', index=3,
+      number=4, type=13, cpp_type=3, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+  ],
+  extensions=[
+  ],
+  nested_types=[],
+  enum_types=[
+  ],
+  options=None,
+  is_extendable=False,
+  extension_ranges=[],
+  oneofs=[
+  ],
+  serialized_start=2070,
+  serialized_end=2199,
 )
 
 
@@ -984,8 +1043,38 @@ _CSDT_ENTER_ENDLESS_DUN_PARAM = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=2005,
-  serialized_end=2056,
+  serialized_start=2201,
+  serialized_end=2252,
+)
+
+
+_CSDT_ENTER_MULTIPLAYER_PVE_DUN_PARAM = _descriptor.Descriptor(
+  name='CSDT_ENTER_MULTIPLAYER_PVE_DUN_PARAM',
+  full_name='CSDT_ENTER_MULTIPLAYER_PVE_DUN_PARAM',
+  filename=None,
+  file=DESCRIPTOR,
+  containing_type=None,
+  fields=[
+    _descriptor.FieldDescriptor(
+      name='res_msg', full_name='CSDT_ENTER_MULTIPLAYER_PVE_DUN_PARAM.res_msg', index=0,
+      number=1, type=11, cpp_type=10, label=1,
+      has_default_value=False, default_value=None,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+  ],
+  extensions=[
+  ],
+  nested_types=[],
+  enum_types=[
+  ],
+  options=None,
+  is_extendable=False,
+  extension_ranges=[],
+  oneofs=[
+  ],
+  serialized_start=2254,
+  serialized_end=2349,
 )
 
 
@@ -1003,6 +1092,20 @@ _CSDT_ENTER_DUN_PARAM = _descriptor.Descriptor(
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
+    _descriptor.FieldDescriptor(
+      name='multiplayer_pve_dun_param', full_name='CSDT_ENTER_DUN_PARAM.multiplayer_pve_dun_param', index=1,
+      number=2, type=11, cpp_type=10, label=1,
+      has_default_value=False, default_value=None,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    _descriptor.FieldDescriptor(
+      name='online_battle_dun_param', full_name='CSDT_ENTER_DUN_PARAM.online_battle_dun_param', index=2,
+      number=3, type=11, cpp_type=10, label=1,
+      has_default_value=False, default_value=None,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
   ],
   extensions=[
   ],
@@ -1014,8 +1117,8 @@ _CSDT_ENTER_DUN_PARAM = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=2058,
-  serialized_end=2138,
+  serialized_start=2352,
+  serialized_end=2576,
 )
 
 
@@ -1065,8 +1168,8 @@ _CSPKG_CMD_PLAYER_ENTERDUN = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=2140,
-  serialized_end=2266,
+  serialized_start=2578,
+  serialized_end=2704,
 )
 
 
@@ -1095,8 +1198,8 @@ _CSPKG_CMD_PLAYER_ENTERDUN_INDUN = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=2268,
-  serialized_end=2317,
+  serialized_start=2706,
+  serialized_end=2755,
 )
 
 
@@ -1132,8 +1235,8 @@ _CSPKG_CMD_QUIT_DUN = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=2319,
-  serialized_end=2375,
+  serialized_start=2757,
+  serialized_end=2813,
 )
 
 
@@ -1176,8 +1279,8 @@ _SCPKG_CMD_QUIT_DUN = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=2377,
-  serialized_end=2446,
+  serialized_start=2815,
+  serialized_end=2884,
 )
 
 
@@ -1227,8 +1330,8 @@ _CSPKG_CMD_ENTER_PRACTICEDUN = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=2448,
-  serialized_end=2557,
+  serialized_start=2886,
+  serialized_end=2995,
 )
 
 
@@ -1292,8 +1395,8 @@ _SCPKG_CMD_ENTER_PRACTICEDUN = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=2560,
-  serialized_end=2701,
+  serialized_start=2998,
+  serialized_end=3139,
 )
 
 
@@ -1336,8 +1439,8 @@ _CSDT_CMD_DUN_EVALUATEINFO = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=2703,
-  serialized_end=2790,
+  serialized_start=3141,
+  serialized_end=3228,
 )
 
 
@@ -1415,8 +1518,101 @@ _CSDT_PLAYER_PVE_DUNBALANCE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=2793,
-  serialized_end=3048,
+  serialized_start=3231,
+  serialized_end=3486,
+)
+
+
+_CSDT_PLAYER_BOSSRUSH_DUNBALANCE = _descriptor.Descriptor(
+  name='CSDT_PLAYER_BOSSRUSH_DUNBALANCE',
+  full_name='CSDT_PLAYER_BOSSRUSH_DUNBALANCE',
+  filename=None,
+  file=DESCRIPTOR,
+  containing_type=None,
+  fields=[
+    _descriptor.FieldDescriptor(
+      name='dun_id', full_name='CSDT_PLAYER_BOSSRUSH_DUNBALANCE.dun_id', index=0,
+      number=1, type=13, cpp_type=3, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    _descriptor.FieldDescriptor(
+      name='pick_money_over_hit', full_name='CSDT_PLAYER_BOSSRUSH_DUNBALANCE.pick_money_over_hit', index=1,
+      number=2, type=13, cpp_type=3, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    _descriptor.FieldDescriptor(
+      name='pick_res_over_hit', full_name='CSDT_PLAYER_BOSSRUSH_DUNBALANCE.pick_res_over_hit', index=2,
+      number=3, type=13, cpp_type=3, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    _descriptor.FieldDescriptor(
+      name='pick_money_kill_mst', full_name='CSDT_PLAYER_BOSSRUSH_DUNBALANCE.pick_money_kill_mst', index=3,
+      number=4, type=13, cpp_type=3, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    _descriptor.FieldDescriptor(
+      name='pick_res_kill_mst', full_name='CSDT_PLAYER_BOSSRUSH_DUNBALANCE.pick_res_kill_mst', index=4,
+      number=5, type=13, cpp_type=3, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    _descriptor.FieldDescriptor(
+      name='style_total_count', full_name='CSDT_PLAYER_BOSSRUSH_DUNBALANCE.style_total_count', index=5,
+      number=6, type=13, cpp_type=3, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    _descriptor.FieldDescriptor(
+      name='style_times', full_name='CSDT_PLAYER_BOSSRUSH_DUNBALANCE.style_times', index=6,
+      number=7, type=13, cpp_type=3, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    _descriptor.FieldDescriptor(
+      name='evaluate_info', full_name='CSDT_PLAYER_BOSSRUSH_DUNBALANCE.evaluate_info', index=7,
+      number=8, type=11, cpp_type=10, label=1,
+      has_default_value=False, default_value=None,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    _descriptor.FieldDescriptor(
+      name='hero_hp', full_name='CSDT_PLAYER_BOSSRUSH_DUNBALANCE.hero_hp', index=8,
+      number=9, type=13, cpp_type=3, label=3,
+      has_default_value=False, default_value=[],
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    _descriptor.FieldDescriptor(
+      name='hp_remain', full_name='CSDT_PLAYER_BOSSRUSH_DUNBALANCE.hp_remain', index=9,
+      number=10, type=11, cpp_type=10, label=1,
+      has_default_value=False, default_value=None,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+  ],
+  extensions=[
+  ],
+  nested_types=[],
+  enum_types=[
+  ],
+  options=None,
+  is_extendable=False,
+  extension_ranges=[],
+  oneofs=[
+  ],
+  serialized_start=3489,
+  serialized_end=3814,
 )
 
 
@@ -1480,8 +1676,8 @@ _CSDT_PLAYER_ENDLESS_DUNBALANCE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=3051,
-  serialized_end=3214,
+  serialized_start=3817,
+  serialized_end=3980,
 )
 
 
@@ -1538,8 +1734,8 @@ _CSDT_PLAYER_PRACTICE_DUNBALANCE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=3216,
-  serialized_end=3338,
+  serialized_start=3982,
+  serialized_end=4104,
 )
 
 
@@ -1575,8 +1771,8 @@ _CSDT_PLAYER_ONLINE_BATTLE_DUNBALANCE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=3340,
-  serialized_end=3409,
+  serialized_start=4106,
+  serialized_end=4175,
 )
 
 
@@ -1612,8 +1808,128 @@ _CSDT_PLAYER_WORLD_BOSS_DUNBALANCE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=3411,
-  serialized_end=3488,
+  serialized_start=4177,
+  serialized_end=4254,
+)
+
+
+_CSDT_PLAYER_MULTIPLAYER_PVE_DUNBALANCE = _descriptor.Descriptor(
+  name='CSDT_PLAYER_MULTIPLAYER_PVE_DUNBALANCE',
+  full_name='CSDT_PLAYER_MULTIPLAYER_PVE_DUNBALANCE',
+  filename=None,
+  file=DESCRIPTOR,
+  containing_type=None,
+  fields=[
+    _descriptor.FieldDescriptor(
+      name='succeed', full_name='CSDT_PLAYER_MULTIPLAYER_PVE_DUNBALANCE.succeed', index=0,
+      number=1, type=8, cpp_type=7, label=1,
+      has_default_value=False, default_value=False,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+  ],
+  extensions=[
+  ],
+  nested_types=[],
+  enum_types=[
+  ],
+  options=None,
+  is_extendable=False,
+  extension_ranges=[],
+  oneofs=[
+  ],
+  serialized_start=4256,
+  serialized_end=4313,
+)
+
+
+_SCPKG_DUNGEON_COMBAT_SWITCH = _descriptor.Descriptor(
+  name='SCPKG_DUNGEON_COMBAT_SWITCH',
+  full_name='SCPKG_DUNGEON_COMBAT_SWITCH',
+  filename=None,
+  file=DESCRIPTOR,
+  containing_type=None,
+  fields=[
+    _descriptor.FieldDescriptor(
+      name='combat_switch', full_name='SCPKG_DUNGEON_COMBAT_SWITCH.combat_switch', index=0,
+      number=1, type=13, cpp_type=3, label=2,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+  ],
+  extensions=[
+  ],
+  nested_types=[],
+  enum_types=[
+  ],
+  options=None,
+  is_extendable=False,
+  extension_ranges=[],
+  oneofs=[
+  ],
+  serialized_start=4315,
+  serialized_end=4367,
+)
+
+
+_CSDT_DUNGEON_COMBAT_RECORD = _descriptor.Descriptor(
+  name='CSDT_DUNGEON_COMBAT_RECORD',
+  full_name='CSDT_DUNGEON_COMBAT_RECORD',
+  filename=None,
+  file=DESCRIPTOR,
+  containing_type=None,
+  fields=[
+    _descriptor.FieldDescriptor(
+      name='data', full_name='CSDT_DUNGEON_COMBAT_RECORD.data', index=0,
+      number=1, type=13, cpp_type=3, label=3,
+      has_default_value=False, default_value=[],
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+  ],
+  extensions=[
+  ],
+  nested_types=[],
+  enum_types=[
+  ],
+  options=None,
+  is_extendable=False,
+  extension_ranges=[],
+  oneofs=[
+  ],
+  serialized_start=4369,
+  serialized_end=4411,
+)
+
+
+_CSPKG_DUNGEON_COMBAT_REPORT = _descriptor.Descriptor(
+  name='CSPKG_DUNGEON_COMBAT_REPORT',
+  full_name='CSPKG_DUNGEON_COMBAT_REPORT',
+  filename=None,
+  file=DESCRIPTOR,
+  containing_type=None,
+  fields=[
+    _descriptor.FieldDescriptor(
+      name='record', full_name='CSPKG_DUNGEON_COMBAT_REPORT.record', index=0,
+      number=1, type=11, cpp_type=10, label=3,
+      has_default_value=False, default_value=[],
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+  ],
+  extensions=[
+  ],
+  nested_types=[],
+  enum_types=[
+  ],
+  options=None,
+  is_extendable=False,
+  extension_ranges=[],
+  oneofs=[
+  ],
+  serialized_start=4413,
+  serialized_end=4487,
 )
 
 
@@ -1659,6 +1975,27 @@ _CSDT_PLAYER_DUNBALANCE = _descriptor.Descriptor(
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
+    _descriptor.FieldDescriptor(
+      name='bossrush_balance', full_name='CSDT_PLAYER_DUNBALANCE.bossrush_balance', index=5,
+      number=6, type=11, cpp_type=10, label=1,
+      has_default_value=False, default_value=None,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    _descriptor.FieldDescriptor(
+      name='multiplayer_pve_balance', full_name='CSDT_PLAYER_DUNBALANCE.multiplayer_pve_balance', index=6,
+      number=7, type=11, cpp_type=10, label=1,
+      has_default_value=False, default_value=None,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    _descriptor.FieldDescriptor(
+      name='brief', full_name='CSDT_PLAYER_DUNBALANCE.brief', index=7,
+      number=8, type=11, cpp_type=10, label=1,
+      has_default_value=False, default_value=None,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
   ],
   extensions=[
   ],
@@ -1670,8 +2007,8 @@ _CSDT_PLAYER_DUNBALANCE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=3491,
-  serialized_end=3817,
+  serialized_start=4490,
+  serialized_end=4993,
 )
 
 
@@ -1707,8 +2044,8 @@ _CSPKG_CMD_PLAYER_DUNBALANCE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=3819,
-  serialized_end=3913,
+  serialized_start=4995,
+  serialized_end=5089,
 )
 
 
@@ -1772,8 +2109,8 @@ _SCPKG_CMD_PRACTICE_DUNBALANCE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=3916,
-  serialized_end=4071,
+  serialized_start=5092,
+  serialized_end=5247,
 )
 
 
@@ -1858,8 +2195,8 @@ _SCPKG_CMD_PLAYER_DUNBALANCE_ENDLESS = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=4074,
-  serialized_end=4306,
+  serialized_start=5250,
+  serialized_end=5482,
 )
 
 
@@ -1909,8 +2246,8 @@ _SCPKG_CMD_PLAYER_DUNBALANCE_ONLINE_BATTLE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=4309,
-  serialized_end=4475,
+  serialized_start=5485,
+  serialized_end=5651,
 )
 
 
@@ -2047,6 +2384,13 @@ _SCPKG_CMD_PLAYER_DUNBALANCE = _descriptor.Descriptor(
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
+    _descriptor.FieldDescriptor(
+      name='activity_drop_info', full_name='SCPKG_CMD_PLAYER_DUNBALANCE.activity_drop_info', index=18,
+      number=19, type=11, cpp_type=10, label=1,
+      has_default_value=False, default_value=None,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
   ],
   extensions=[
   ],
@@ -2058,8 +2402,8 @@ _SCPKG_CMD_PLAYER_DUNBALANCE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=4478,
-  serialized_end=4989,
+  serialized_start=5654,
+  serialized_end=6210,
 )
 
 
@@ -2116,24 +2460,34 @@ _SCPKG_CMD_PLAYER_ENTERDUN = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=4991,
-  serialized_end=5100,
+  serialized_start=6212,
+  serialized_end=6321,
 )
 
 _CSDT_PVE_CHALLENGE_DATA.fields_by_name['unlock_data'].message_type = _CSDT_DUN_UNLOCK_DATA
 _SCPKG_UNLOCK_DUNGEON.fields_by_name['unlock_data'].message_type = _CSDT_DUN_UNLOCK_DATA
 _SCPKG_WIPE_OUT_PVE_DUNGEON_RES.fields_by_name['normal_drop_info'].message_type = protocommon_pb2._CSDT_DROP_INFO
 _SCPKG_WIPE_OUT_PVE_DUNGEON_RES.fields_by_name['extra_drop_info'].message_type = protocommon_pb2._CSDT_DROP_INFO
+_SCPKG_WIPE_OUT_PVE_DUNGEON_RES.fields_by_name['activity_drop_info'].message_type = protocommon_pb2._CSDT_DROP_INFO
 _SCPKG_CMD_PVEUNLOCK.fields_by_name['unlock_info'].message_type = _SCDT_PVEUNLOCK_INFO
 _SCPKG_REFRESH_ELITE_DUNGEON_INFO.fields_by_name['elite_dungeon_info'].message_type = _ST_ELITE_DUNGEON_CHANCE_INFO
+_CSDT_ENTER_MULTIPLAYER_PVE_DUN_PARAM.fields_by_name['res_msg'].message_type = multiplayer_pb2._SCPKG_MULTIPLAYER_PVE_DUN_ROOM_OP_RES
 _CSDT_ENTER_DUN_PARAM.fields_by_name['endless_dun_param'].message_type = _CSDT_ENTER_ENDLESS_DUN_PARAM
+_CSDT_ENTER_DUN_PARAM.fields_by_name['multiplayer_pve_dun_param'].message_type = _CSDT_ENTER_MULTIPLAYER_PVE_DUN_PARAM
+_CSDT_ENTER_DUN_PARAM.fields_by_name['online_battle_dun_param'].message_type = _CSDT_ENTER_ONLINE_BATTLE_DUN_PARAM
 _CSPKG_CMD_PLAYER_ENTERDUN.fields_by_name['enter_dun_param'].message_type = _CSDT_ENTER_DUN_PARAM
 _CSDT_PLAYER_PVE_DUNBALANCE.fields_by_name['evaluate_info'].message_type = _CSDT_CMD_DUN_EVALUATEINFO
+_CSDT_PLAYER_BOSSRUSH_DUNBALANCE.fields_by_name['evaluate_info'].message_type = _CSDT_CMD_DUN_EVALUATEINFO
+_CSDT_PLAYER_BOSSRUSH_DUNBALANCE.fields_by_name['hp_remain'].message_type = rescommon_pb2._ST_BOSSRUSH_HERO_HP_REMAIN
+_CSPKG_DUNGEON_COMBAT_REPORT.fields_by_name['record'].message_type = _CSDT_DUNGEON_COMBAT_RECORD
 _CSDT_PLAYER_DUNBALANCE.fields_by_name['pve_balance'].message_type = _CSDT_PLAYER_PVE_DUNBALANCE
 _CSDT_PLAYER_DUNBALANCE.fields_by_name['endless_balance'].message_type = _CSDT_PLAYER_ENDLESS_DUNBALANCE
 _CSDT_PLAYER_DUNBALANCE.fields_by_name['practice_balance'].message_type = _CSDT_PLAYER_PRACTICE_DUNBALANCE
 _CSDT_PLAYER_DUNBALANCE.fields_by_name['online_battle_balance'].message_type = _CSDT_PLAYER_ONLINE_BATTLE_DUNBALANCE
 _CSDT_PLAYER_DUNBALANCE.fields_by_name['world_boss_balance'].message_type = _CSDT_PLAYER_WORLD_BOSS_DUNBALANCE
+_CSDT_PLAYER_DUNBALANCE.fields_by_name['bossrush_balance'].message_type = _CSDT_PLAYER_BOSSRUSH_DUNBALANCE
+_CSDT_PLAYER_DUNBALANCE.fields_by_name['multiplayer_pve_balance'].message_type = _CSDT_PLAYER_MULTIPLAYER_PVE_DUNBALANCE
+_CSDT_PLAYER_DUNBALANCE.fields_by_name['brief'].message_type = rescommon_pb2._CSDT_DUNGEON_COMBAT_BRIEF
 _CSPKG_CMD_PLAYER_DUNBALANCE.fields_by_name['balance_info'].message_type = _CSDT_PLAYER_DUNBALANCE
 _SCPKG_CMD_PRACTICE_DUNBALANCE.fields_by_name['reward_info'].message_type = rescommon_pb2._RESREWARD
 _SCPKG_CMD_PLAYER_DUNBALANCE_ENDLESS.fields_by_name['drop_info'].message_type = protocommon_pb2._CSDT_DROP_INFO
@@ -2141,6 +2495,7 @@ _SCPKG_CMD_PLAYER_DUNBALANCE_ONLINE_BATTLE.fields_by_name['online_battle_info'].
 _SCPKG_CMD_PLAYER_DUNBALANCE.fields_by_name['evaluate_info'].message_type = _CSDT_CMD_DUN_EVALUATEINFO
 _SCPKG_CMD_PLAYER_DUNBALANCE.fields_by_name['dun_unlock_info'].message_type = _CSDT_DUN_UNLOCK_DATA
 _SCPKG_CMD_PLAYER_DUNBALANCE.fields_by_name['drop_info'].message_type = protocommon_pb2._CSDT_DROP_INFO
+_SCPKG_CMD_PLAYER_DUNBALANCE.fields_by_name['activity_drop_info'].message_type = protocommon_pb2._CSDT_DROP_INFO
 DESCRIPTOR.message_types_by_name['CSDT_DUN_UNLOCK_DATA'] = _CSDT_DUN_UNLOCK_DATA
 DESCRIPTOR.message_types_by_name['CSDT_PVE_CHALLENGE_DATA'] = _CSDT_PVE_CHALLENGE_DATA
 DESCRIPTOR.message_types_by_name['CSPKG_CMD_RELIVE_REQ'] = _CSPKG_CMD_RELIVE_REQ
@@ -2162,7 +2517,9 @@ DESCRIPTOR.message_types_by_name['SCPKG_CMD_PVEUNLOCK'] = _SCPKG_CMD_PVEUNLOCK
 DESCRIPTOR.message_types_by_name['ST_ELITE_DUNGEON_CHANCE_INFO'] = _ST_ELITE_DUNGEON_CHANCE_INFO
 DESCRIPTOR.message_types_by_name['SCPKG_REFRESH_ELITE_DUNGEON_INFO'] = _SCPKG_REFRESH_ELITE_DUNGEON_INFO
 DESCRIPTOR.message_types_by_name['CSPKG_BUY_ELITE_COUNT_REQ'] = _CSPKG_BUY_ELITE_COUNT_REQ
+DESCRIPTOR.message_types_by_name['CSDT_ENTER_ONLINE_BATTLE_DUN_PARAM'] = _CSDT_ENTER_ONLINE_BATTLE_DUN_PARAM
 DESCRIPTOR.message_types_by_name['CSDT_ENTER_ENDLESS_DUN_PARAM'] = _CSDT_ENTER_ENDLESS_DUN_PARAM
+DESCRIPTOR.message_types_by_name['CSDT_ENTER_MULTIPLAYER_PVE_DUN_PARAM'] = _CSDT_ENTER_MULTIPLAYER_PVE_DUN_PARAM
 DESCRIPTOR.message_types_by_name['CSDT_ENTER_DUN_PARAM'] = _CSDT_ENTER_DUN_PARAM
 DESCRIPTOR.message_types_by_name['CSPKG_CMD_PLAYER_ENTERDUN'] = _CSPKG_CMD_PLAYER_ENTERDUN
 DESCRIPTOR.message_types_by_name['CSPKG_CMD_PLAYER_ENTERDUN_INDUN'] = _CSPKG_CMD_PLAYER_ENTERDUN_INDUN
@@ -2172,10 +2529,15 @@ DESCRIPTOR.message_types_by_name['CSPKG_CMD_ENTER_PRACTICEDUN'] = _CSPKG_CMD_ENT
 DESCRIPTOR.message_types_by_name['SCPKG_CMD_ENTER_PRACTICEDUN'] = _SCPKG_CMD_ENTER_PRACTICEDUN
 DESCRIPTOR.message_types_by_name['CSDT_CMD_DUN_EVALUATEINFO'] = _CSDT_CMD_DUN_EVALUATEINFO
 DESCRIPTOR.message_types_by_name['CSDT_PLAYER_PVE_DUNBALANCE'] = _CSDT_PLAYER_PVE_DUNBALANCE
+DESCRIPTOR.message_types_by_name['CSDT_PLAYER_BOSSRUSH_DUNBALANCE'] = _CSDT_PLAYER_BOSSRUSH_DUNBALANCE
 DESCRIPTOR.message_types_by_name['CSDT_PLAYER_ENDLESS_DUNBALANCE'] = _CSDT_PLAYER_ENDLESS_DUNBALANCE
 DESCRIPTOR.message_types_by_name['CSDT_PLAYER_PRACTICE_DUNBALANCE'] = _CSDT_PLAYER_PRACTICE_DUNBALANCE
 DESCRIPTOR.message_types_by_name['CSDT_PLAYER_ONLINE_BATTLE_DUNBALANCE'] = _CSDT_PLAYER_ONLINE_BATTLE_DUNBALANCE
 DESCRIPTOR.message_types_by_name['CSDT_PLAYER_WORLD_BOSS_DUNBALANCE'] = _CSDT_PLAYER_WORLD_BOSS_DUNBALANCE
+DESCRIPTOR.message_types_by_name['CSDT_PLAYER_MULTIPLAYER_PVE_DUNBALANCE'] = _CSDT_PLAYER_MULTIPLAYER_PVE_DUNBALANCE
+DESCRIPTOR.message_types_by_name['SCPKG_DUNGEON_COMBAT_SWITCH'] = _SCPKG_DUNGEON_COMBAT_SWITCH
+DESCRIPTOR.message_types_by_name['CSDT_DUNGEON_COMBAT_RECORD'] = _CSDT_DUNGEON_COMBAT_RECORD
+DESCRIPTOR.message_types_by_name['CSPKG_DUNGEON_COMBAT_REPORT'] = _CSPKG_DUNGEON_COMBAT_REPORT
 DESCRIPTOR.message_types_by_name['CSDT_PLAYER_DUNBALANCE'] = _CSDT_PLAYER_DUNBALANCE
 DESCRIPTOR.message_types_by_name['CSPKG_CMD_PLAYER_DUNBALANCE'] = _CSPKG_CMD_PLAYER_DUNBALANCE
 DESCRIPTOR.message_types_by_name['SCPKG_CMD_PRACTICE_DUNBALANCE'] = _SCPKG_CMD_PRACTICE_DUNBALANCE
@@ -2331,12 +2693,26 @@ CSPKG_BUY_ELITE_COUNT_REQ = _reflection.GeneratedProtocolMessageType('CSPKG_BUY_
   ))
 _sym_db.RegisterMessage(CSPKG_BUY_ELITE_COUNT_REQ)
 
+CSDT_ENTER_ONLINE_BATTLE_DUN_PARAM = _reflection.GeneratedProtocolMessageType('CSDT_ENTER_ONLINE_BATTLE_DUN_PARAM', (_message.Message,), dict(
+  DESCRIPTOR = _CSDT_ENTER_ONLINE_BATTLE_DUN_PARAM,
+  __module__ = 'dungeon_pb2'
+  # @@protoc_insertion_point(class_scope:CSDT_ENTER_ONLINE_BATTLE_DUN_PARAM)
+  ))
+_sym_db.RegisterMessage(CSDT_ENTER_ONLINE_BATTLE_DUN_PARAM)
+
 CSDT_ENTER_ENDLESS_DUN_PARAM = _reflection.GeneratedProtocolMessageType('CSDT_ENTER_ENDLESS_DUN_PARAM', (_message.Message,), dict(
   DESCRIPTOR = _CSDT_ENTER_ENDLESS_DUN_PARAM,
   __module__ = 'dungeon_pb2'
   # @@protoc_insertion_point(class_scope:CSDT_ENTER_ENDLESS_DUN_PARAM)
   ))
 _sym_db.RegisterMessage(CSDT_ENTER_ENDLESS_DUN_PARAM)
+
+CSDT_ENTER_MULTIPLAYER_PVE_DUN_PARAM = _reflection.GeneratedProtocolMessageType('CSDT_ENTER_MULTIPLAYER_PVE_DUN_PARAM', (_message.Message,), dict(
+  DESCRIPTOR = _CSDT_ENTER_MULTIPLAYER_PVE_DUN_PARAM,
+  __module__ = 'dungeon_pb2'
+  # @@protoc_insertion_point(class_scope:CSDT_ENTER_MULTIPLAYER_PVE_DUN_PARAM)
+  ))
+_sym_db.RegisterMessage(CSDT_ENTER_MULTIPLAYER_PVE_DUN_PARAM)
 
 CSDT_ENTER_DUN_PARAM = _reflection.GeneratedProtocolMessageType('CSDT_ENTER_DUN_PARAM', (_message.Message,), dict(
   DESCRIPTOR = _CSDT_ENTER_DUN_PARAM,
@@ -2401,6 +2777,13 @@ CSDT_PLAYER_PVE_DUNBALANCE = _reflection.GeneratedProtocolMessageType('CSDT_PLAY
   ))
 _sym_db.RegisterMessage(CSDT_PLAYER_PVE_DUNBALANCE)
 
+CSDT_PLAYER_BOSSRUSH_DUNBALANCE = _reflection.GeneratedProtocolMessageType('CSDT_PLAYER_BOSSRUSH_DUNBALANCE', (_message.Message,), dict(
+  DESCRIPTOR = _CSDT_PLAYER_BOSSRUSH_DUNBALANCE,
+  __module__ = 'dungeon_pb2'
+  # @@protoc_insertion_point(class_scope:CSDT_PLAYER_BOSSRUSH_DUNBALANCE)
+  ))
+_sym_db.RegisterMessage(CSDT_PLAYER_BOSSRUSH_DUNBALANCE)
+
 CSDT_PLAYER_ENDLESS_DUNBALANCE = _reflection.GeneratedProtocolMessageType('CSDT_PLAYER_ENDLESS_DUNBALANCE', (_message.Message,), dict(
   DESCRIPTOR = _CSDT_PLAYER_ENDLESS_DUNBALANCE,
   __module__ = 'dungeon_pb2'
@@ -2428,6 +2811,34 @@ CSDT_PLAYER_WORLD_BOSS_DUNBALANCE = _reflection.GeneratedProtocolMessageType('CS
   # @@protoc_insertion_point(class_scope:CSDT_PLAYER_WORLD_BOSS_DUNBALANCE)
   ))
 _sym_db.RegisterMessage(CSDT_PLAYER_WORLD_BOSS_DUNBALANCE)
+
+CSDT_PLAYER_MULTIPLAYER_PVE_DUNBALANCE = _reflection.GeneratedProtocolMessageType('CSDT_PLAYER_MULTIPLAYER_PVE_DUNBALANCE', (_message.Message,), dict(
+  DESCRIPTOR = _CSDT_PLAYER_MULTIPLAYER_PVE_DUNBALANCE,
+  __module__ = 'dungeon_pb2'
+  # @@protoc_insertion_point(class_scope:CSDT_PLAYER_MULTIPLAYER_PVE_DUNBALANCE)
+  ))
+_sym_db.RegisterMessage(CSDT_PLAYER_MULTIPLAYER_PVE_DUNBALANCE)
+
+SCPKG_DUNGEON_COMBAT_SWITCH = _reflection.GeneratedProtocolMessageType('SCPKG_DUNGEON_COMBAT_SWITCH', (_message.Message,), dict(
+  DESCRIPTOR = _SCPKG_DUNGEON_COMBAT_SWITCH,
+  __module__ = 'dungeon_pb2'
+  # @@protoc_insertion_point(class_scope:SCPKG_DUNGEON_COMBAT_SWITCH)
+  ))
+_sym_db.RegisterMessage(SCPKG_DUNGEON_COMBAT_SWITCH)
+
+CSDT_DUNGEON_COMBAT_RECORD = _reflection.GeneratedProtocolMessageType('CSDT_DUNGEON_COMBAT_RECORD', (_message.Message,), dict(
+  DESCRIPTOR = _CSDT_DUNGEON_COMBAT_RECORD,
+  __module__ = 'dungeon_pb2'
+  # @@protoc_insertion_point(class_scope:CSDT_DUNGEON_COMBAT_RECORD)
+  ))
+_sym_db.RegisterMessage(CSDT_DUNGEON_COMBAT_RECORD)
+
+CSPKG_DUNGEON_COMBAT_REPORT = _reflection.GeneratedProtocolMessageType('CSPKG_DUNGEON_COMBAT_REPORT', (_message.Message,), dict(
+  DESCRIPTOR = _CSPKG_DUNGEON_COMBAT_REPORT,
+  __module__ = 'dungeon_pb2'
+  # @@protoc_insertion_point(class_scope:CSPKG_DUNGEON_COMBAT_REPORT)
+  ))
+_sym_db.RegisterMessage(CSPKG_DUNGEON_COMBAT_REPORT)
 
 CSDT_PLAYER_DUNBALANCE = _reflection.GeneratedProtocolMessageType('CSDT_PLAYER_DUNBALANCE', (_message.Message,), dict(
   DESCRIPTOR = _CSDT_PLAYER_DUNBALANCE,

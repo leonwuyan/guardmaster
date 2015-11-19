@@ -20,7 +20,7 @@ import rescommon_pb2
 DESCRIPTOR = _descriptor.FileDescriptor(
   name='viewplayer.proto',
   package='',
-  serialized_pb=_b('\n\x10viewplayer.proto\x1a\x11protocommon.proto\x1a\x0frescommon.proto\"_\n\x1e\x43SPKG_CMD_VIEW_PLAYER_INFO_REQ\x12\x14\n\x0cview_role_id\x18\x01 \x01(\r\x12\x11\n\tvip_level\x18\x03 \x01(\r\x12\x14\n\x0cis_from_gang\x18\x02 \x01(\x08\"\xc4\x01\n\x18ST_VIEW_PlAYER_HERO_INFO\x12\x0f\n\x07hero_id\x18\x01 \x01(\r\x12\x0f\n\x07hero_lv\x18\x02 \x01(\r\x12\x14\n\x0chero_grow_up\x18\x03 \x01(\r\x12*\n\x0b\x65mblem_info\x18\x04 \x03(\x0b\x32\x15.CSDT_EMBLEMINFO_DATA\x12&\n\nequip_info\x18\x05 \x03(\x0b\x32\x12.CSDT_EQUIPED_INFO\x12\x1c\n\thero_attr\x18\x06 \x03(\x0b\x32\t.HeroAttr\"\xe5\x03\n\x1eSCPKG_CMD_VIEW_PLAYER_INFO_RES\x12\x0e\n\x06result\x18\x01 \x01(\x05\x12\x14\n\x0cis_from_gang\x18\x02 \x01(\x08\x12\x14\n\x0cview_role_id\x18\x03 \x01(\r\x12\x16\n\x0eview_role_name\x18\x04 \x01(\t\x12\x13\n\x0bpvp_win_cnt\x18\x05 \x01(\r\x12\x15\n\rpvp_total_cnt\x18\x06 \x01(\r\x12\x1b\n\x13greatest_dungeon_id\x18\x07 \x01(\r\x12\x11\n\tgang_name\x18\x08 \x01(\t\x12\x17\n\x0frank_battle_pos\x18\t \x01(\x05\x12\x15\n\rendless_floor\x18\n \x01(\r\x12\x1b\n\x13offline_battle_kill\x18\x0b \x01(\r\x12\x1c\n\x14\x61\x63hievement_rank_pos\x18\x0c \x01(\x05\x12\x34\n\x10gang_battle_info\x18\r \x01(\x0b\x32\x1a.CSDT_GANGBATTLE_HERO_INFO\x12,\n\thero_info\x18\x0e \x03(\x0b\x32\x19.ST_VIEW_PlAYER_HERO_INFO\x12\x11\n\tvip_level\x18\x0f \x01(\r\x12\x12\n\nhead_photo\x18\x10 \x01(\r\x12\x1d\n\x15online_battle_win_cnt\x18\x11 \x01(\x05')
+  serialized_pb=_b('\n\x10viewplayer.proto\x1a\x11protocommon.proto\x1a\x0frescommon.proto\"_\n\x1e\x43SPKG_CMD_VIEW_PLAYER_INFO_REQ\x12\x14\n\x0cview_role_id\x18\x01 \x01(\r\x12\x11\n\tvip_level\x18\x03 \x01(\r\x12\x14\n\x0cis_from_gang\x18\x02 \x01(\x08\"\xd9\x01\n\x18ST_VIEW_PlAYER_HERO_INFO\x12\x0f\n\x07hero_id\x18\x01 \x01(\r\x12\x0f\n\x07hero_lv\x18\x02 \x01(\r\x12\x14\n\x0chero_grow_up\x18\x03 \x01(\r\x12*\n\x0b\x65mblem_info\x18\x04 \x03(\x0b\x32\x15.CSDT_EMBLEMINFO_DATA\x12&\n\nequip_info\x18\x05 \x03(\x0b\x32\x12.CSDT_EQUIPED_INFO\x12\x1c\n\thero_attr\x18\x06 \x03(\x0b\x32\t.HeroAttr\x12\x13\n\x0btalent_info\x18\x07 \x01(\x04\"\xe5\x03\n\x1eSCPKG_CMD_VIEW_PLAYER_INFO_RES\x12\x0e\n\x06result\x18\x01 \x01(\x05\x12\x14\n\x0cis_from_gang\x18\x02 \x01(\x08\x12\x14\n\x0cview_role_id\x18\x03 \x01(\r\x12\x16\n\x0eview_role_name\x18\x04 \x01(\t\x12\x13\n\x0bpvp_win_cnt\x18\x05 \x01(\r\x12\x15\n\rpvp_total_cnt\x18\x06 \x01(\r\x12\x1b\n\x13greatest_dungeon_id\x18\x07 \x01(\r\x12\x11\n\tgang_name\x18\x08 \x01(\t\x12\x17\n\x0frank_battle_pos\x18\t \x01(\x05\x12\x15\n\rendless_floor\x18\n \x01(\r\x12\x1b\n\x13offline_battle_kill\x18\x0b \x01(\r\x12\x1c\n\x14\x61\x63hievement_rank_pos\x18\x0c \x01(\x05\x12\x34\n\x10gang_battle_info\x18\r \x01(\x0b\x32\x1a.CSDT_GANGBATTLE_HERO_INFO\x12,\n\thero_info\x18\x0e \x03(\x0b\x32\x19.ST_VIEW_PlAYER_HERO_INFO\x12\x11\n\tvip_level\x18\x0f \x01(\r\x12\x12\n\nhead_photo\x18\x10 \x01(\r\x12\x1d\n\x15online_battle_win_cnt\x18\x11 \x01(\x05')
   ,
   dependencies=[protocommon_pb2.DESCRIPTOR,rescommon_pb2.DESCRIPTOR,])
 _sym_db.RegisterFileDescriptor(DESCRIPTOR)
@@ -121,6 +121,13 @@ _ST_VIEW_PLAYER_HERO_INFO = _descriptor.Descriptor(
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
+    _descriptor.FieldDescriptor(
+      name='talent_info', full_name='ST_VIEW_PlAYER_HERO_INFO.talent_info', index=6,
+      number=7, type=4, cpp_type=4, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
   ],
   extensions=[
   ],
@@ -133,7 +140,7 @@ _ST_VIEW_PLAYER_HERO_INFO = _descriptor.Descriptor(
   oneofs=[
   ],
   serialized_start=154,
-  serialized_end=350,
+  serialized_end=371,
 )
 
 
@@ -274,8 +281,8 @@ _SCPKG_CMD_VIEW_PLAYER_INFO_RES = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=353,
-  serialized_end=838,
+  serialized_start=374,
+  serialized_end=859,
 )
 
 _ST_VIEW_PLAYER_HERO_INFO.fields_by_name['emblem_info'].message_type = protocommon_pb2._CSDT_EMBLEMINFO_DATA

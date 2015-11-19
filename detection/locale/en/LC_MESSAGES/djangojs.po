@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2015-11-18 16:18+0800\n"
+"POT-Creation-Date: 2015-11-19 16:05+0800\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -45,30 +45,38 @@ msgstr ""
 msgid "Confirm Account Ban Player %(type_id)s Day?"
 msgstr ""
 
-#: static/detection/js/data.js:413
+#: static/detection/js/data.js:383
+msgid "Confirm Player UID %(uid)s Off Gang?"
+msgstr ""
+
+#: static/detection/js/data.js:395
+msgid "Confirm Player UID %(uid)s Off Rank?"
+msgstr ""
+
+#: static/detection/js/data.js:437
 msgid "Confirm To Delete This Notify %(title)s?"
 msgstr ""
 
-#: static/detection/js/data.js:449
+#: static/detection/js/data.js:473
 msgid "Confirm To Synchronize All The Noitfy To The CDNServer?"
 msgstr ""
 
-#: static/detection/js/data.js:499
+#: static/detection/js/data.js:523
 msgid "Title And Content Is Required"
 msgstr ""
 
-#: static/detection/js/data.js:502
+#: static/detection/js/data.js:526
 msgid ""
 "Please Confirm This:\n"
 "Title :%(t)s\n"
 "Content :%(c)s"
 msgstr ""
 
-#: static/detection/js/data.js:515
+#: static/detection/js/data.js:539
 msgid "Confirm Kick And Account Ban Player UID :%(uid)s ?"
 msgstr ""
 
-#: static/detection/js/data.js:610
+#: static/detection/js/data.js:634
 msgid ""
 "Please Confirm This:\n"
 "HostName :%(h)s\n"
@@ -77,7 +85,7 @@ msgid ""
 "Verseion :%(v)s"
 msgstr ""
 
-#: static/detection/js/data.js:623
+#: static/detection/js/data.js:647
 msgid ""
 "Please Confirm This:\n"
 "Server :%(se)s\n"
@@ -87,7 +95,7 @@ msgid ""
 "Version :%(ve)s"
 msgstr ""
 
-#: static/detection/js/data.js:637
+#: static/detection/js/data.js:661
 msgid ""
 "Please Confirm This:\n"
 "Server :%(se)s\n"

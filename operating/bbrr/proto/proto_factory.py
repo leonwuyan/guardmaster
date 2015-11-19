@@ -24,6 +24,9 @@ def create_pb(hash):
     if hash == StringHash.calculate_hash('SCPKG_CMD_ACHIEVEMENT_COMPELETE'):
         return getattr(guard_proto_pb2, 'SCPKG_CMD_ACHIEVEMENT_COMPELETE')()
     
+    if hash == StringHash.calculate_hash('SCDT_ACTIVITY_RESOURCE_BOX_INFO'):
+        return getattr(guard_proto_pb2, 'SCDT_ACTIVITY_RESOURCE_BOX_INFO')()
+    
     if hash == StringHash.calculate_hash('SCDT_ACTIVITY_INFO'):
         return getattr(guard_proto_pb2, 'SCDT_ACTIVITY_INFO')()
     
@@ -48,14 +51,41 @@ def create_pb(hash):
     if hash == StringHash.calculate_hash('SCPKG_NTF_BROADCAST'):
         return getattr(guard_proto_pb2, 'SCPKG_NTF_BROADCAST')()
     
+    if hash == StringHash.calculate_hash('SCPKG_GAME_PLAY_MODE_ACTIVITY_INFO'):
+        return getattr(guard_proto_pb2, 'SCPKG_GAME_PLAY_MODE_ACTIVITY_INFO')()
+    
+    if hash == StringHash.calculate_hash('CSPKG_OPEN_RESOURCE_BOX_REQ'):
+        return getattr(guard_proto_pb2, 'CSPKG_OPEN_RESOURCE_BOX_REQ')()
+    
+    if hash == StringHash.calculate_hash('SCPKG_OPEN_RESOURCE_BOX_RES'):
+        return getattr(guard_proto_pb2, 'SCPKG_OPEN_RESOURCE_BOX_RES')()
+    
+    if hash == StringHash.calculate_hash('SCPKG_ACTIVITY_RESOURCE_BOX_INFO'):
+        return getattr(guard_proto_pb2, 'SCPKG_ACTIVITY_RESOURCE_BOX_INFO')()
+    
+    if hash == StringHash.calculate_hash('CSPKG_GET_COUNT_TO_REWARD_REQ'):
+        return getattr(guard_proto_pb2, 'CSPKG_GET_COUNT_TO_REWARD_REQ')()
+    
+    if hash == StringHash.calculate_hash('SCPKG_GET_COUNT_TO_REWARD_RES'):
+        return getattr(guard_proto_pb2, 'SCPKG_GET_COUNT_TO_REWARD_RES')()
+    
+    if hash == StringHash.calculate_hash('SCPKG_NTF_ACTIVITY_DISCOUNT'):
+        return getattr(guard_proto_pb2, 'SCPKG_NTF_ACTIVITY_DISCOUNT')()
+    
     if hash == StringHash.calculate_hash('CSPKG_ENTER_BOSSRUSH_ROOM_REQ'):
         return getattr(guard_proto_pb2, 'CSPKG_ENTER_BOSSRUSH_ROOM_REQ')()
     
     if hash == StringHash.calculate_hash('SCPKG_BOSSRUSH_INFO'):
         return getattr(guard_proto_pb2, 'SCPKG_BOSSRUSH_INFO')()
     
+    if hash == StringHash.calculate_hash('SCPKG_HP_REMAIN_CHANGE'):
+        return getattr(guard_proto_pb2, 'SCPKG_HP_REMAIN_CHANGE')()
+    
     if hash == StringHash.calculate_hash('SCPKG_BOSSRUSH_HERO_INFO'):
         return getattr(guard_proto_pb2, 'SCPKG_BOSSRUSH_HERO_INFO')()
+    
+    if hash == StringHash.calculate_hash('ST_BOSS_RUSH_FRIEND_HERO_DETAIL'):
+        return getattr(guard_proto_pb2, 'ST_BOSS_RUSH_FRIEND_HERO_DETAIL')()
     
     if hash == StringHash.calculate_hash('SCPKG_ENTER_BOSSRUSH_ROOM_RES'):
         return getattr(guard_proto_pb2, 'SCPKG_ENTER_BOSSRUSH_ROOM_RES')()
@@ -65,6 +95,51 @@ def create_pb(hash):
     
     if hash == StringHash.calculate_hash('CSPKG_BOSSRUSH_REPLACE_PARTNER_HERO'):
         return getattr(guard_proto_pb2, 'CSPKG_BOSSRUSH_REPLACE_PARTNER_HERO')()
+    
+    if hash == StringHash.calculate_hash('CSPKG_BOSSRUSH_ENTER_DUN'):
+        return getattr(guard_proto_pb2, 'CSPKG_BOSSRUSH_ENTER_DUN')()
+    
+    if hash == StringHash.calculate_hash('SCPKG_BOSSRUSH_ENTER_DUN_RES'):
+        return getattr(guard_proto_pb2, 'SCPKG_BOSSRUSH_ENTER_DUN_RES')()
+    
+    if hash == StringHash.calculate_hash('CSPKG_BOSSRUSH_REPLACE_BOSS'):
+        return getattr(guard_proto_pb2, 'CSPKG_BOSSRUSH_REPLACE_BOSS')()
+    
+    if hash == StringHash.calculate_hash('CSPKG_BOSSRUSH_SELECT_HERO_CONFIRM'):
+        return getattr(guard_proto_pb2, 'CSPKG_BOSSRUSH_SELECT_HERO_CONFIRM')()
+    
+    if hash == StringHash.calculate_hash('SCPKG_BOSSRUSH_REPLACE_BOSS_RES'):
+        return getattr(guard_proto_pb2, 'SCPKG_BOSSRUSH_REPLACE_BOSS_RES')()
+    
+    if hash == StringHash.calculate_hash('CSPKG_REPLACE_ASSISTANT_HERO'):
+        return getattr(guard_proto_pb2, 'CSPKG_REPLACE_ASSISTANT_HERO')()
+    
+    if hash == StringHash.calculate_hash('CSPKG_CLEAR_ASSISTANT_HERO'):
+        return getattr(guard_proto_pb2, 'CSPKG_CLEAR_ASSISTANT_HERO')()
+    
+    if hash == StringHash.calculate_hash('CSPKG_CLAIM_ASSISTANT_HERO_REWARD'):
+        return getattr(guard_proto_pb2, 'CSPKG_CLAIM_ASSISTANT_HERO_REWARD')()
+    
+    if hash == StringHash.calculate_hash('SCPKG_ASSISTANT_HERO_INFO'):
+        return getattr(guard_proto_pb2, 'SCPKG_ASSISTANT_HERO_INFO')()
+    
+    if hash == StringHash.calculate_hash('CSPKG_REQUEST_FRIEND_ASSISTANT_HERO'):
+        return getattr(guard_proto_pb2, 'CSPKG_REQUEST_FRIEND_ASSISTANT_HERO')()
+    
+    if hash == StringHash.calculate_hash('CSPKG_RESET_CURRENT_BOSSRUSH'):
+        return getattr(guard_proto_pb2, 'CSPKG_RESET_CURRENT_BOSSRUSH')()
+    
+    if hash == StringHash.calculate_hash('FRIEND_ASSISTANT_HERO'):
+        return getattr(guard_proto_pb2, 'FRIEND_ASSISTANT_HERO')()
+    
+    if hash == StringHash.calculate_hash('SCPKG_FRIEND_ASSISSTANT_HERO_CAN_USE'):
+        return getattr(guard_proto_pb2, 'SCPKG_FRIEND_ASSISSTANT_HERO_CAN_USE')()
+    
+    if hash == StringHash.calculate_hash('CSPKGG_REPLACE_FRIEND_ASSISTANT_HERO'):
+        return getattr(guard_proto_pb2, 'CSPKGG_REPLACE_FRIEND_ASSISTANT_HERO')()
+    
+    if hash == StringHash.calculate_hash('SCPKG_FRIEND_CURRENT_ASSISSTANT_HERO'):
+        return getattr(guard_proto_pb2, 'SCPKG_FRIEND_CURRENT_ASSISSTANT_HERO')()
     
     if hash == StringHash.calculate_hash('CSDT_BUILDING_BASE_INFO'):
         return getattr(guard_proto_pb2, 'CSDT_BUILDING_BASE_INFO')()
@@ -237,6 +312,15 @@ def create_pb(hash):
     if hash == StringHash.calculate_hash('SCPKG_GET_DAILY_RECHARGE_REWARD'):
         return getattr(guard_proto_pb2, 'SCPKG_GET_DAILY_RECHARGE_REWARD')()
     
+    if hash == StringHash.calculate_hash('CSPKG_GET_MONTHCARD_REWARD'):
+        return getattr(guard_proto_pb2, 'CSPKG_GET_MONTHCARD_REWARD')()
+    
+    if hash == StringHash.calculate_hash('SCPKG_GET_MONTHCARD_REWARD'):
+        return getattr(guard_proto_pb2, 'SCPKG_GET_MONTHCARD_REWARD')()
+    
+    if hash == StringHash.calculate_hash('SCPKG_NTF_MONTHCARD_REFRESH'):
+        return getattr(guard_proto_pb2, 'SCPKG_NTF_MONTHCARD_REFRESH')()
+    
     if hash == StringHash.calculate_hash('CSPKG_REMOVE_PRIVATE_MSG'):
         return getattr(guard_proto_pb2, 'CSPKG_REMOVE_PRIVATE_MSG')()
     
@@ -251,6 +335,9 @@ def create_pb(hash):
     
     if hash == StringHash.calculate_hash('SCPKG_CHAT_FAST_ERROR'):
         return getattr(guard_proto_pb2, 'SCPKG_CHAT_FAST_ERROR')()
+    
+    if hash == StringHash.calculate_hash('CSPKG_REPORT_PLAYER_CHAT_REQ'):
+        return getattr(guard_proto_pb2, 'CSPKG_REPORT_PLAYER_CHAT_REQ')()
     
     if hash == StringHash.calculate_hash('NOTIFY_CITY_REWARD_ACQUIRED'):
         return getattr(guard_proto_pb2, 'NOTIFY_CITY_REWARD_ACQUIRED')()
@@ -308,6 +395,9 @@ def create_pb(hash):
     
     if hash == StringHash.calculate_hash('SCPKG_NTF_ERROR'):
         return getattr(guard_proto_pb2, 'SCPKG_NTF_ERROR')()
+    
+    if hash == StringHash.calculate_hash('SCPKG_ERROR_MSG'):
+        return getattr(guard_proto_pb2, 'SCPKG_ERROR_MSG')()
     
     if hash == StringHash.calculate_hash('SCDT_NOTIFY_DATA'):
         return getattr(guard_proto_pb2, 'SCDT_NOTIFY_DATA')()
@@ -387,6 +477,12 @@ def create_pb(hash):
     if hash == StringHash.calculate_hash('CSPKG_SELL_RUBBISH'):
         return getattr(guard_proto_pb2, 'CSPKG_SELL_RUBBISH')()
     
+    if hash == StringHash.calculate_hash('SCPKG_DO_SOMETHING'):
+        return getattr(guard_proto_pb2, 'SCPKG_DO_SOMETHING')()
+    
+    if hash == StringHash.calculate_hash('CSPKG_DO_SOMETHING_RES'):
+        return getattr(guard_proto_pb2, 'CSPKG_DO_SOMETHING_RES')()
+    
     if hash == StringHash.calculate_hash('CSPKG_IOS_ACCOUNT'):
         return getattr(guard_proto_pb2, 'CSPKG_IOS_ACCOUNT')()
     
@@ -402,8 +498,17 @@ def create_pb(hash):
     if hash == StringHash.calculate_hash('SCPKG_DIR_WORLD_INFO'):
         return getattr(guard_proto_pb2, 'SCPKG_DIR_WORLD_INFO')()
     
+    if hash == StringHash.calculate_hash('CSPKG_IOS_BIND_GAMECENTER'):
+        return getattr(guard_proto_pb2, 'CSPKG_IOS_BIND_GAMECENTER')()
+    
+    if hash == StringHash.calculate_hash('SSPKG_IOS_BIND_GAMECENTER_RES'):
+        return getattr(guard_proto_pb2, 'SSPKG_IOS_BIND_GAMECENTER_RES')()
+    
     if hash == StringHash.calculate_hash('CSPKG_ACT_ALOGIN'):
         return getattr(guard_proto_pb2, 'CSPKG_ACT_ALOGIN')()
+    
+    if hash == StringHash.calculate_hash('CSPKG_ACT_ALOGIN_ADDITIONAL'):
+        return getattr(guard_proto_pb2, 'CSPKG_ACT_ALOGIN_ADDITIONAL')()
     
     if hash == StringHash.calculate_hash('SCPKG_CMD_ALOGIN'):
         return getattr(guard_proto_pb2, 'SCPKG_CMD_ALOGIN')()
@@ -471,8 +576,14 @@ def create_pb(hash):
     if hash == StringHash.calculate_hash('CSPKG_BUY_ELITE_COUNT_REQ'):
         return getattr(guard_proto_pb2, 'CSPKG_BUY_ELITE_COUNT_REQ')()
     
+    if hash == StringHash.calculate_hash('CSDT_ENTER_ONLINE_BATTLE_DUN_PARAM'):
+        return getattr(guard_proto_pb2, 'CSDT_ENTER_ONLINE_BATTLE_DUN_PARAM')()
+    
     if hash == StringHash.calculate_hash('CSDT_ENTER_ENDLESS_DUN_PARAM'):
         return getattr(guard_proto_pb2, 'CSDT_ENTER_ENDLESS_DUN_PARAM')()
+    
+    if hash == StringHash.calculate_hash('CSDT_ENTER_MULTIPLAYER_PVE_DUN_PARAM'):
+        return getattr(guard_proto_pb2, 'CSDT_ENTER_MULTIPLAYER_PVE_DUN_PARAM')()
     
     if hash == StringHash.calculate_hash('CSDT_ENTER_DUN_PARAM'):
         return getattr(guard_proto_pb2, 'CSDT_ENTER_DUN_PARAM')()
@@ -501,6 +612,9 @@ def create_pb(hash):
     if hash == StringHash.calculate_hash('CSDT_PLAYER_PVE_DUNBALANCE'):
         return getattr(guard_proto_pb2, 'CSDT_PLAYER_PVE_DUNBALANCE')()
     
+    if hash == StringHash.calculate_hash('CSDT_PLAYER_BOSSRUSH_DUNBALANCE'):
+        return getattr(guard_proto_pb2, 'CSDT_PLAYER_BOSSRUSH_DUNBALANCE')()
+    
     if hash == StringHash.calculate_hash('CSDT_PLAYER_ENDLESS_DUNBALANCE'):
         return getattr(guard_proto_pb2, 'CSDT_PLAYER_ENDLESS_DUNBALANCE')()
     
@@ -512,6 +626,18 @@ def create_pb(hash):
     
     if hash == StringHash.calculate_hash('CSDT_PLAYER_WORLD_BOSS_DUNBALANCE'):
         return getattr(guard_proto_pb2, 'CSDT_PLAYER_WORLD_BOSS_DUNBALANCE')()
+    
+    if hash == StringHash.calculate_hash('CSDT_PLAYER_MULTIPLAYER_PVE_DUNBALANCE'):
+        return getattr(guard_proto_pb2, 'CSDT_PLAYER_MULTIPLAYER_PVE_DUNBALANCE')()
+    
+    if hash == StringHash.calculate_hash('SCPKG_DUNGEON_COMBAT_SWITCH'):
+        return getattr(guard_proto_pb2, 'SCPKG_DUNGEON_COMBAT_SWITCH')()
+    
+    if hash == StringHash.calculate_hash('CSDT_DUNGEON_COMBAT_RECORD'):
+        return getattr(guard_proto_pb2, 'CSDT_DUNGEON_COMBAT_RECORD')()
+    
+    if hash == StringHash.calculate_hash('CSPKG_DUNGEON_COMBAT_REPORT'):
+        return getattr(guard_proto_pb2, 'CSPKG_DUNGEON_COMBAT_REPORT')()
     
     if hash == StringHash.calculate_hash('CSDT_PLAYER_DUNBALANCE'):
         return getattr(guard_proto_pb2, 'CSDT_PLAYER_DUNBALANCE')()
@@ -654,6 +780,18 @@ def create_pb(hash):
     if hash == StringHash.calculate_hash('SCPKG_BUY_EQUIP_FUSION_ADDTION_RES'):
         return getattr(guard_proto_pb2, 'SCPKG_BUY_EQUIP_FUSION_ADDTION_RES')()
     
+    if hash == StringHash.calculate_hash('CSPKG_EQUIP_RESET_RESULT_REQ'):
+        return getattr(guard_proto_pb2, 'CSPKG_EQUIP_RESET_RESULT_REQ')()
+    
+    if hash == StringHash.calculate_hash('SCPKG_EQUIP_RESET_RESULT_RES'):
+        return getattr(guard_proto_pb2, 'SCPKG_EQUIP_RESET_RESULT_RES')()
+    
+    if hash == StringHash.calculate_hash('CSPKG_EQUIP_RESET_CONFIRM_REQ'):
+        return getattr(guard_proto_pb2, 'CSPKG_EQUIP_RESET_CONFIRM_REQ')()
+    
+    if hash == StringHash.calculate_hash('SCPKG_EQUIP_RESET_CONFIRM_RES'):
+        return getattr(guard_proto_pb2, 'SCPKG_EQUIP_RESET_CONFIRM_RES')()
+    
     if hash == StringHash.calculate_hash('SCDT_FRIEND_BASE_INFO'):
         return getattr(guard_proto_pb2, 'SCDT_FRIEND_BASE_INFO')()
     
@@ -761,15 +899,6 @@ def create_pb(hash):
     
     if hash == StringHash.calculate_hash('SCPKG_APPLY_INVITED_CODE'):
         return getattr(guard_proto_pb2, 'SCPKG_APPLY_INVITED_CODE')()
-    
-    if hash == StringHash.calculate_hash('ST_HERO_BATTLE_EMBLEM_INFO'):
-        return getattr(guard_proto_pb2, 'ST_HERO_BATTLE_EMBLEM_INFO')()
-    
-    if hash == StringHash.calculate_hash('ST_HERO_BATTLE_EQUIP_INFO'):
-        return getattr(guard_proto_pb2, 'ST_HERO_BATTLE_EQUIP_INFO')()
-    
-    if hash == StringHash.calculate_hash('ST_HERO_BATTLE_INFO'):
-        return getattr(guard_proto_pb2, 'ST_HERO_BATTLE_INFO')()
     
     if hash == StringHash.calculate_hash('ST_GANG_CITY_STRONG_POINT_HERO_INFO'):
         return getattr(guard_proto_pb2, 'ST_GANG_CITY_STRONG_POINT_HERO_INFO')()
@@ -1059,6 +1188,18 @@ def create_pb(hash):
     if hash == StringHash.calculate_hash('GM_GET_RANK_POS_BY_UID_RES'):
         return getattr(guard_proto_pb2, 'GM_GET_RANK_POS_BY_UID_RES')()
     
+    if hash == StringHash.calculate_hash('GM_DEL_PLAYER_FROM_RANK_REQ'):
+        return getattr(guard_proto_pb2, 'GM_DEL_PLAYER_FROM_RANK_REQ')()
+    
+    if hash == StringHash.calculate_hash('GM_DEL_PLAYER_FROM_RANK_RES'):
+        return getattr(guard_proto_pb2, 'GM_DEL_PLAYER_FROM_RANK_RES')()
+    
+    if hash == StringHash.calculate_hash('GM_DEL_PLAYER_FROM_GANG_REQ'):
+        return getattr(guard_proto_pb2, 'GM_DEL_PLAYER_FROM_GANG_REQ')()
+    
+    if hash == StringHash.calculate_hash('GM_DEL_PLAYER_FROM_GANG_RES'):
+        return getattr(guard_proto_pb2, 'GM_DEL_PLAYER_FROM_GANG_RES')()
+    
     if hash == StringHash.calculate_hash('GM_GET_PLAYER_PVE_INFO_REQ'):
         return getattr(guard_proto_pb2, 'GM_GET_PLAYER_PVE_INFO_REQ')()
     
@@ -1118,6 +1259,30 @@ def create_pb(hash):
     
     if hash == StringHash.calculate_hash('GM_SEND_MAIL_RES'):
         return getattr(guard_proto_pb2, 'GM_SEND_MAIL_RES')()
+    
+    if hash == StringHash.calculate_hash('GM_GAMESERVER_MAIL_CONDITION'):
+        return getattr(guard_proto_pb2, 'GM_GAMESERVER_MAIL_CONDITION')()
+    
+    if hash == StringHash.calculate_hash('GM_SEND_GAMESERVER_MAIL_REQ'):
+        return getattr(guard_proto_pb2, 'GM_SEND_GAMESERVER_MAIL_REQ')()
+    
+    if hash == StringHash.calculate_hash('GM_SEND_GAMESERVER_MAIL_RES'):
+        return getattr(guard_proto_pb2, 'GM_SEND_GAMESERVER_MAIL_RES')()
+    
+    if hash == StringHash.calculate_hash('GM_GET_GAMESERVER_MAIL_INFO_REQ'):
+        return getattr(guard_proto_pb2, 'GM_GET_GAMESERVER_MAIL_INFO_REQ')()
+    
+    if hash == StringHash.calculate_hash('GM_GAMESERVER_MAIL_INFO'):
+        return getattr(guard_proto_pb2, 'GM_GAMESERVER_MAIL_INFO')()
+    
+    if hash == StringHash.calculate_hash('GM_GET_GAMESERVER_MAIL_INFO_RES'):
+        return getattr(guard_proto_pb2, 'GM_GET_GAMESERVER_MAIL_INFO_RES')()
+    
+    if hash == StringHash.calculate_hash('GM_DEL_GAMESERVER_MAIL_REQ'):
+        return getattr(guard_proto_pb2, 'GM_DEL_GAMESERVER_MAIL_REQ')()
+    
+    if hash == StringHash.calculate_hash('GM_DEL_GAMESERVER_MAIL_RES'):
+        return getattr(guard_proto_pb2, 'GM_DEL_GAMESERVER_MAIL_RES')()
     
     if hash == StringHash.calculate_hash('GM_CHG_PLAYER_ATTR_REQ'):
         return getattr(guard_proto_pb2, 'GM_CHG_PLAYER_ATTR_REQ')()
@@ -1193,6 +1358,12 @@ def create_pb(hash):
     
     if hash == StringHash.calculate_hash('CSPKG_CMD_EMBLEM_LEVELUP'):
         return getattr(guard_proto_pb2, 'CSPKG_CMD_EMBLEM_LEVELUP')()
+    
+    if hash == StringHash.calculate_hash('CSPKG_CMD_ACTIVE_TALENT_REQ'):
+        return getattr(guard_proto_pb2, 'CSPKG_CMD_ACTIVE_TALENT_REQ')()
+    
+    if hash == StringHash.calculate_hash('SCPKG_CMD_ACTIVE_TALENT_RES'):
+        return getattr(guard_proto_pb2, 'SCPKG_CMD_ACTIVE_TALENT_RES')()
     
     if hash == StringHash.calculate_hash('CSPKG_CMD_PLAYER_LEVELUP'):
         return getattr(guard_proto_pb2, 'CSPKG_CMD_PLAYER_LEVELUP')()
@@ -1349,6 +1520,33 @@ def create_pb(hash):
     
     if hash == StringHash.calculate_hash('SCDT_UNLOCK_MONSTER_ATTINFO'):
         return getattr(guard_proto_pb2, 'SCDT_UNLOCK_MONSTER_ATTINFO')()
+    
+    if hash == StringHash.calculate_hash('CSPKG_ONLINE_BATTLE_MATCH_MSG'):
+        return getattr(guard_proto_pb2, 'CSPKG_ONLINE_BATTLE_MATCH_MSG')()
+    
+    if hash == StringHash.calculate_hash('CSPKG_MULTIPLAYER_PVE_DUN_BULK_MSG'):
+        return getattr(guard_proto_pb2, 'CSPKG_MULTIPLAYER_PVE_DUN_BULK_MSG')()
+    
+    if hash == StringHash.calculate_hash('CSPKG_MULTIPLAYER_PVE_DUN_MSG'):
+        return getattr(guard_proto_pb2, 'CSPKG_MULTIPLAYER_PVE_DUN_MSG')()
+    
+    if hash == StringHash.calculate_hash('CSPKG_MULTIPLAYER_PVE_DUN_ROOM_OP_REQ'):
+        return getattr(guard_proto_pb2, 'CSPKG_MULTIPLAYER_PVE_DUN_ROOM_OP_REQ')()
+    
+    if hash == StringHash.calculate_hash('SCPKG_MULTIPLAYER_PVE_DUN_ROOM_OP_RES'):
+        return getattr(guard_proto_pb2, 'SCPKG_MULTIPLAYER_PVE_DUN_ROOM_OP_RES')()
+    
+    if hash == StringHash.calculate_hash('CSDT_MULTIPLAYER_PVE_DUN_PLAYER_INFO'):
+        return getattr(guard_proto_pb2, 'CSDT_MULTIPLAYER_PVE_DUN_PLAYER_INFO')()
+    
+    if hash == StringHash.calculate_hash('CSDT_MULTIPLAYER_PVE_DUN_ROLE_INFO'):
+        return getattr(guard_proto_pb2, 'CSDT_MULTIPLAYER_PVE_DUN_ROLE_INFO')()
+    
+    if hash == StringHash.calculate_hash('SCPKG_MULTIPLAYER_PVE_DUNBALANCE'):
+        return getattr(guard_proto_pb2, 'SCPKG_MULTIPLAYER_PVE_DUNBALANCE')()
+    
+    if hash == StringHash.calculate_hash('SCPKG_MULTIPLAYER_PVE_CHALLENGE_DATA'):
+        return getattr(guard_proto_pb2, 'SCPKG_MULTIPLAYER_PVE_CHALLENGE_DATA')()
     
     if hash == StringHash.calculate_hash('CSPKG_SET_OFFLINE_BATTLE_TITLE_ID_REQ'):
         return getattr(guard_proto_pb2, 'CSPKG_SET_OFFLINE_BATTLE_TITLE_ID_REQ')()
@@ -1545,6 +1743,15 @@ def create_pb(hash):
     if hash == StringHash.calculate_hash('CSDT_GANGBATTLE_HERO_INFO'):
         return getattr(guard_proto_pb2, 'CSDT_GANGBATTLE_HERO_INFO')()
     
+    if hash == StringHash.calculate_hash('CSPKG_BUY_REFRESH_REQ'):
+        return getattr(guard_proto_pb2, 'CSPKG_BUY_REFRESH_REQ')()
+    
+    if hash == StringHash.calculate_hash('SCPKG_BUY_REFRESH_RES'):
+        return getattr(guard_proto_pb2, 'SCPKG_BUY_REFRESH_RES')()
+    
+    if hash == StringHash.calculate_hash('SCDT_ACTIVITY_PRIZE_DRAW_INFO'):
+        return getattr(guard_proto_pb2, 'SCDT_ACTIVITY_PRIZE_DRAW_INFO')()
+    
     if hash == StringHash.calculate_hash('CSDT_PVP_DUN_DATA'):
         return getattr(guard_proto_pb2, 'CSDT_PVP_DUN_DATA')()
     
@@ -1577,6 +1784,15 @@ def create_pb(hash):
     
     if hash == StringHash.calculate_hash('SCPKG_GET_STEAL_TARGET_STATE_RES'):
         return getattr(guard_proto_pb2, 'SCPKG_GET_STEAL_TARGET_STATE_RES')()
+    
+    if hash == StringHash.calculate_hash('CSPKG_WIPE_OUT_STEAL_BATTLE_REQ'):
+        return getattr(guard_proto_pb2, 'CSPKG_WIPE_OUT_STEAL_BATTLE_REQ')()
+    
+    if hash == StringHash.calculate_hash('ST_WIPE_OUT_STEAL_BATTLE_INFO'):
+        return getattr(guard_proto_pb2, 'ST_WIPE_OUT_STEAL_BATTLE_INFO')()
+    
+    if hash == StringHash.calculate_hash('SCPKG_WIPE_OUT_STEAL_BATTLE_RES'):
+        return getattr(guard_proto_pb2, 'SCPKG_WIPE_OUT_STEAL_BATTLE_RES')()
     
     if hash == StringHash.calculate_hash('CSPKG_ENTER_STEAL_BATTLE_REQ'):
         return getattr(guard_proto_pb2, 'CSPKG_ENTER_STEAL_BATTLE_REQ')()
@@ -1682,6 +1898,18 @@ def create_pb(hash):
     
     if hash == StringHash.calculate_hash('CSDT_RANKPOS_SEARCH_KEY'):
         return getattr(guard_proto_pb2, 'CSDT_RANKPOS_SEARCH_KEY')()
+    
+    if hash == StringHash.calculate_hash('SSPKG_RANK_REWARD_ITEM'):
+        return getattr(guard_proto_pb2, 'SSPKG_RANK_REWARD_ITEM')()
+    
+    if hash == StringHash.calculate_hash('SSPKG_RANK_REWARD_DISPATCH'):
+        return getattr(guard_proto_pb2, 'SSPKG_RANK_REWARD_DISPATCH')()
+    
+    if hash == StringHash.calculate_hash('RANK_RESET_INFO_ITEM'):
+        return getattr(guard_proto_pb2, 'RANK_RESET_INFO_ITEM')()
+    
+    if hash == StringHash.calculate_hash('SSPKG_RANK_RESET_INFO'):
+        return getattr(guard_proto_pb2, 'SSPKG_RANK_RESET_INFO')()
     
     if hash == StringHash.calculate_hash('CSDT_PLAYER_RANK_BATTLE_INFO'):
         return getattr(guard_proto_pb2, 'CSDT_PLAYER_RANK_BATTLE_INFO')()
@@ -1890,8 +2118,20 @@ def create_pb(hash):
     if hash == StringHash.calculate_hash('ResWorldBossNormalReward'):
         return getattr(guard_proto_pb2, 'ResWorldBossNormalReward')()
     
+    if hash == StringHash.calculate_hash('ResMultiplayerPVEHeroBuff'):
+        return getattr(guard_proto_pb2, 'ResMultiplayerPVEHeroBuff')()
+    
+    if hash == StringHash.calculate_hash('ResMultiplayerPVEDungeonConfig'):
+        return getattr(guard_proto_pb2, 'ResMultiplayerPVEDungeonConfig')()
+    
     if hash == StringHash.calculate_hash('ResNewbieActivity'):
         return getattr(guard_proto_pb2, 'ResNewbieActivity')()
+    
+    if hash == StringHash.calculate_hash('ResGamePlayModeActivity'):
+        return getattr(guard_proto_pb2, 'ResGamePlayModeActivity')()
+    
+    if hash == StringHash.calculate_hash('ResRankReward'):
+        return getattr(guard_proto_pb2, 'ResRankReward')()
     
     if hash == StringHash.calculate_hash('ResHeroEvaluate'):
         return getattr(guard_proto_pb2, 'ResHeroEvaluate')()
@@ -1916,9 +2156,6 @@ def create_pb(hash):
     
     if hash == StringHash.calculate_hash('ResPvpRobot'):
         return getattr(guard_proto_pb2, 'ResPvpRobot')()
-    
-    if hash == StringHash.calculate_hash('ResPvpSerchInfo'):
-        return getattr(guard_proto_pb2, 'ResPvpSerchInfo')()
     
     if hash == StringHash.calculate_hash('ResPvpMisc'):
         return getattr(guard_proto_pb2, 'ResPvpMisc')()
@@ -1953,6 +2190,9 @@ def create_pb(hash):
     if hash == StringHash.calculate_hash('ResDungeonInfo'):
         return getattr(guard_proto_pb2, 'ResDungeonInfo')()
     
+    if hash == StringHash.calculate_hash('ResDungeonData'):
+        return getattr(guard_proto_pb2, 'ResDungeonData')()
+    
     if hash == StringHash.calculate_hash('ResDungeonFightCapacityFix'):
         return getattr(guard_proto_pb2, 'ResDungeonFightCapacityFix')()
     
@@ -1976,6 +2216,12 @@ def create_pb(hash):
     
     if hash == StringHash.calculate_hash('ResAchievement'):
         return getattr(guard_proto_pb2, 'ResAchievement')()
+    
+    if hash == StringHash.calculate_hash('ResAchievementGameCenter'):
+        return getattr(guard_proto_pb2, 'ResAchievementGameCenter')()
+    
+    if hash == StringHash.calculate_hash('ResSpecialActivity'):
+        return getattr(guard_proto_pb2, 'ResSpecialActivity')()
     
     if hash == StringHash.calculate_hash('ResDailyTask'):
         return getattr(guard_proto_pb2, 'ResDailyTask')()
@@ -2151,6 +2397,9 @@ def create_pb(hash):
     if hash == StringHash.calculate_hash('ResBaseDrop'):
         return getattr(guard_proto_pb2, 'ResBaseDrop')()
     
+    if hash == StringHash.calculate_hash('ResWorldDrop'):
+        return getattr(guard_proto_pb2, 'ResWorldDrop')()
+    
     if hash == StringHash.calculate_hash('ResRetrieveInfo'):
         return getattr(guard_proto_pb2, 'ResRetrieveInfo')()
     
@@ -2238,6 +2487,9 @@ def create_pb(hash):
     if hash == StringHash.calculate_hash('ResBossRushChapter'):
         return getattr(guard_proto_pb2, 'ResBossRushChapter')()
     
+    if hash == StringHash.calculate_hash('ResBossRushDrop'):
+        return getattr(guard_proto_pb2, 'ResBossRushDrop')()
+    
     if hash == StringHash.calculate_hash('ResBossRushDungeon'):
         return getattr(guard_proto_pb2, 'ResBossRushDungeon')()
     
@@ -2249,6 +2501,39 @@ def create_pb(hash):
     
     if hash == StringHash.calculate_hash('ResSectRecharge'):
         return getattr(guard_proto_pb2, 'ResSectRecharge')()
+    
+    if hash == StringHash.calculate_hash('ResTalentAttr'):
+        return getattr(guard_proto_pb2, 'ResTalentAttr')()
+    
+    if hash == StringHash.calculate_hash('ResTalentActiveInfo'):
+        return getattr(guard_proto_pb2, 'ResTalentActiveInfo')()
+    
+    if hash == StringHash.calculate_hash('ResTalent'):
+        return getattr(guard_proto_pb2, 'ResTalent')()
+    
+    if hash == StringHash.calculate_hash('ResAssistantHeroRent'):
+        return getattr(guard_proto_pb2, 'ResAssistantHeroRent')()
+    
+    if hash == StringHash.calculate_hash('ResCountToReward'):
+        return getattr(guard_proto_pb2, 'ResCountToReward')()
+    
+    if hash == StringHash.calculate_hash('ResWorldActivity'):
+        return getattr(guard_proto_pb2, 'ResWorldActivity')()
+    
+    if hash == StringHash.calculate_hash('ResActivityOrder'):
+        return getattr(guard_proto_pb2, 'ResActivityOrder')()
+    
+    if hash == StringHash.calculate_hash('ResActivityResourceBox'):
+        return getattr(guard_proto_pb2, 'ResActivityResourceBox')()
+    
+    if hash == StringHash.calculate_hash('ResErrorMsg'):
+        return getattr(guard_proto_pb2, 'ResErrorMsg')()
+    
+    if hash == StringHash.calculate_hash('ResActivityDiscount'):
+        return getattr(guard_proto_pb2, 'ResActivityDiscount')()
+    
+    if hash == StringHash.calculate_hash('ResGameModeEntrance'):
+        return getattr(guard_proto_pb2, 'ResGameModeEntrance')()
     
     if hash == StringHash.calculate_hash('ResReward'):
         return getattr(guard_proto_pb2, 'ResReward')()
@@ -2277,6 +2562,21 @@ def create_pb(hash):
     if hash == StringHash.calculate_hash('ResMaterial'):
         return getattr(guard_proto_pb2, 'ResMaterial')()
     
+    if hash == StringHash.calculate_hash('ST_HERO_BATTLE_EMBLEM_INFO'):
+        return getattr(guard_proto_pb2, 'ST_HERO_BATTLE_EMBLEM_INFO')()
+    
+    if hash == StringHash.calculate_hash('ST_HERO_BATTLE_EQUIP_INFO'):
+        return getattr(guard_proto_pb2, 'ST_HERO_BATTLE_EQUIP_INFO')()
+    
+    if hash == StringHash.calculate_hash('ST_HERO_BATTLE_INFO'):
+        return getattr(guard_proto_pb2, 'ST_HERO_BATTLE_INFO')()
+    
+    if hash == StringHash.calculate_hash('ST_BOSSRUSH_HERO_HP_REMAIN'):
+        return getattr(guard_proto_pb2, 'ST_BOSSRUSH_HERO_HP_REMAIN')()
+    
+    if hash == StringHash.calculate_hash('CSDT_DUNGEON_COMBAT_BRIEF'):
+        return getattr(guard_proto_pb2, 'CSDT_DUNGEON_COMBAT_BRIEF')()
+    
     if hash == StringHash.calculate_hash('ST_SHOP_GOODS_INFO'):
         return getattr(guard_proto_pb2, 'ST_SHOP_GOODS_INFO')()
     
@@ -2297,6 +2597,21 @@ def create_pb(hash):
     
     if hash == StringHash.calculate_hash('SCPKG_BUY_SHOP_GOODS_RES'):
         return getattr(guard_proto_pb2, 'SCPKG_BUY_SHOP_GOODS_RES')()
+    
+    if hash == StringHash.calculate_hash('SCPKG_SPECIAL_ACTIVITY_ITEM'):
+        return getattr(guard_proto_pb2, 'SCPKG_SPECIAL_ACTIVITY_ITEM')()
+    
+    if hash == StringHash.calculate_hash('SCPKG_SPECIAL_ACTIVITY_INFO'):
+        return getattr(guard_proto_pb2, 'SCPKG_SPECIAL_ACTIVITY_INFO')()
+    
+    if hash == StringHash.calculate_hash('CSPKG_SPECIAL_ACTIVITY_CLAIM_REQ'):
+        return getattr(guard_proto_pb2, 'CSPKG_SPECIAL_ACTIVITY_CLAIM_REQ')()
+    
+    if hash == StringHash.calculate_hash('SCPKG_SPECIAL_ACTIVITY_CLAIM_RES'):
+        return getattr(guard_proto_pb2, 'SCPKG_SPECIAL_ACTIVITY_CLAIM_RES')()
+    
+    if hash == StringHash.calculate_hash('CSPKG_SPECIAL_ACTIVITY_SHARE_REQ'):
+        return getattr(guard_proto_pb2, 'CSPKG_SPECIAL_ACTIVITY_SHARE_REQ')()
     
     if hash == StringHash.calculate_hash('SSDT_NOTIFY_MSG'):
         return getattr(guard_proto_pb2, 'SSDT_NOTIFY_MSG')()
@@ -2520,11 +2835,20 @@ def create_pb(hash):
     if hash == StringHash.calculate_hash('SSPKG_WORLD_BOSS_KILLER_INFO_RES'):
         return getattr(guard_proto_pb2, 'SSPKG_WORLD_BOSS_KILLER_INFO_RES')()
     
+    if hash == StringHash.calculate_hash('DBBLOB_MULTIPLAYER_PVE_CHALLENGE_DATA'):
+        return getattr(guard_proto_pb2, 'DBBLOB_MULTIPLAYER_PVE_CHALLENGE_DATA')()
+    
     if hash == StringHash.calculate_hash('DBBLOB_NEWBIE_ACTIVITY_ITEM'):
         return getattr(guard_proto_pb2, 'DBBLOB_NEWBIE_ACTIVITY_ITEM')()
     
     if hash == StringHash.calculate_hash('DBBLOB_NEWBIE_ACTIVITY_STATUS'):
         return getattr(guard_proto_pb2, 'DBBLOB_NEWBIE_ACTIVITY_STATUS')()
+    
+    if hash == StringHash.calculate_hash('DBBLOB_SPECIAL_ACTIVITY_ITEM'):
+        return getattr(guard_proto_pb2, 'DBBLOB_SPECIAL_ACTIVITY_ITEM')()
+    
+    if hash == StringHash.calculate_hash('DBBLOB_SPECIAL_ACTIVITY_INFO'):
+        return getattr(guard_proto_pb2, 'DBBLOB_SPECIAL_ACTIVITY_INFO')()
     
     if hash == StringHash.calculate_hash('DBBLOB_SELFDUN_HERO_INFO'):
         return getattr(guard_proto_pb2, 'DBBLOB_SELFDUN_HERO_INFO')()
@@ -2894,6 +3218,9 @@ def create_pb(hash):
     
     if hash == StringHash.calculate_hash('PKG_SEARCH_PVP_PLAYER_RES'):
         return getattr(guard_proto_pb2, 'PKG_SEARCH_PVP_PLAYER_RES')()
+    
+    if hash == StringHash.calculate_hash('PKG_WIPE_OUT_STEAL_BATTLE_BALANCE_REQ'):
+        return getattr(guard_proto_pb2, 'PKG_WIPE_OUT_STEAL_BATTLE_BALANCE_REQ')()
     
     if hash == StringHash.calculate_hash('PKG_BALANCE_STEAL_BATTLE_REQ'):
         return getattr(guard_proto_pb2, 'PKG_BALANCE_STEAL_BATTLE_REQ')()
@@ -3306,6 +3633,9 @@ def create_pb(hash):
     if hash == StringHash.calculate_hash('SSPKG_UPDATE_PVE_EVALUATE_STATS_REQ'):
         return getattr(guard_proto_pb2, 'SSPKG_UPDATE_PVE_EVALUATE_STATS_REQ')()
     
+    if hash == StringHash.calculate_hash('SSPKG_RANK_CHANGE_NAME_REQ'):
+        return getattr(guard_proto_pb2, 'SSPKG_RANK_CHANGE_NAME_REQ')()
+    
     if hash == StringHash.calculate_hash('SSDT_RANK_ONE_UPDATE'):
         return getattr(guard_proto_pb2, 'SSDT_RANK_ONE_UPDATE')()
     
@@ -3395,6 +3725,12 @@ def create_pb(hash):
     
     if hash == StringHash.calculate_hash('SSPKG_PURCHASE_REQUEST_DELIVERY_IAP'):
         return getattr(guard_proto_pb2, 'SSPKG_PURCHASE_REQUEST_DELIVERY_IAP')()
+    
+    if hash == StringHash.calculate_hash('SSPKG_PURCHASE_REQUEST_DELIVERY_IAP_CHECKED'):
+        return getattr(guard_proto_pb2, 'SSPKG_PURCHASE_REQUEST_DELIVERY_IAP_CHECKED')()
+    
+    if hash == StringHash.calculate_hash('SSPKG_PURCHASE_IAP_FINISHED'):
+        return getattr(guard_proto_pb2, 'SSPKG_PURCHASE_IAP_FINISHED')()
     
     if hash == StringHash.calculate_hash('SSPKG_PURCHASE_DONE'):
         return getattr(guard_proto_pb2, 'SSPKG_PURCHASE_DONE')()
@@ -3636,6 +3972,9 @@ def create_pb(hash):
     if hash == StringHash.calculate_hash('SSDT_INVITED_TOTAL_INFO'):
         return getattr(guard_proto_pb2, 'SSDT_INVITED_TOTAL_INFO')()
     
+    if hash == StringHash.calculate_hash('SSDT_ASSISTANT_HERO_INFO'):
+        return getattr(guard_proto_pb2, 'SSDT_ASSISTANT_HERO_INFO')()
+    
     if hash == StringHash.calculate_hash('SSDT_SEND_POWER_RECORD'):
         return getattr(guard_proto_pb2, 'SSDT_SEND_POWER_RECORD')()
     
@@ -3701,6 +4040,48 @@ def create_pb(hash):
     
     if hash == StringHash.calculate_hash('DBBLOB_NEWBIE_ACTIVITY_RECHARGE'):
         return getattr(guard_proto_pb2, 'DBBLOB_NEWBIE_ACTIVITY_RECHARGE')()
+    
+    if hash == StringHash.calculate_hash('SSPKG_NTF_VIP_CHANGE'):
+        return getattr(guard_proto_pb2, 'SSPKG_NTF_VIP_CHANGE')()
+    
+    if hash == StringHash.calculate_hash('DBBLOB_FRIEND_ASSIST_HERO_INFO'):
+        return getattr(guard_proto_pb2, 'DBBLOB_FRIEND_ASSIST_HERO_INFO')()
+    
+    if hash == StringHash.calculate_hash('DBBLOB_PLAYER_BOSSRUSH_INFO'):
+        return getattr(guard_proto_pb2, 'DBBLOB_PLAYER_BOSSRUSH_INFO')()
+    
+    if hash == StringHash.calculate_hash('SSPKG_CLAIM_ASSISTANT_HERO_REWARD'):
+        return getattr(guard_proto_pb2, 'SSPKG_CLAIM_ASSISTANT_HERO_REWARD')()
+    
+    if hash == StringHash.calculate_hash('SSPKG_BOSSRUSH_HIRE_HERO'):
+        return getattr(guard_proto_pb2, 'SSPKG_BOSSRUSH_HIRE_HERO')()
+    
+    if hash == StringHash.calculate_hash('SSDT_WORLD_ACTIVITY_INFO'):
+        return getattr(guard_proto_pb2, 'SSDT_WORLD_ACTIVITY_INFO')()
+    
+    if hash == StringHash.calculate_hash('SSDT_WORLD_DROP_INFO'):
+        return getattr(guard_proto_pb2, 'SSDT_WORLD_DROP_INFO')()
+    
+    if hash == StringHash.calculate_hash('SSDT_GAME_SERVER_MISC_INFO'):
+        return getattr(guard_proto_pb2, 'SSDT_GAME_SERVER_MISC_INFO')()
+    
+    if hash == StringHash.calculate_hash('SSPKG_UPDATE_GAME_SERVER_MISC_REQ'):
+        return getattr(guard_proto_pb2, 'SSPKG_UPDATE_GAME_SERVER_MISC_REQ')()
+    
+    if hash == StringHash.calculate_hash('SSPKG_GET_GAMESVR_MISC_REQ'):
+        return getattr(guard_proto_pb2, 'SSPKG_GET_GAMESVR_MISC_REQ')()
+    
+    if hash == StringHash.calculate_hash('SSPKG_GET_GAMESVR_MISC_RES'):
+        return getattr(guard_proto_pb2, 'SSPKG_GET_GAMESVR_MISC_RES')()
+    
+    if hash == StringHash.calculate_hash('SSPKG_RANK_BATTLE_ACTIVITY_REQ'):
+        return getattr(guard_proto_pb2, 'SSPKG_RANK_BATTLE_ACTIVITY_REQ')()
+    
+    if hash == StringHash.calculate_hash('SSPKG_REPORT_PLAYER_CHAT_REQ'):
+        return getattr(guard_proto_pb2, 'SSPKG_REPORT_PLAYER_CHAT_REQ')()
+    
+    if hash == StringHash.calculate_hash('SSPKG_REPORT_PLAYER_CHAT_RES'):
+        return getattr(guard_proto_pb2, 'SSPKG_REPORT_PLAYER_CHAT_RES')()
     
     if hash == StringHash.calculate_hash('CSPKG_CMD_VIEW_PLAYER_INFO_REQ'):
         return getattr(guard_proto_pb2, 'CSPKG_CMD_VIEW_PLAYER_INFO_REQ')()
@@ -3774,6 +4155,9 @@ def get_pb_name(hash):
     if hash == StringHash.calculate_hash('SCPKG_CMD_ACHIEVEMENT_COMPELETE'):
         return 'SCPKG_CMD_ACHIEVEMENT_COMPELETE'
     
+    if hash == StringHash.calculate_hash('SCDT_ACTIVITY_RESOURCE_BOX_INFO'):
+        return 'SCDT_ACTIVITY_RESOURCE_BOX_INFO'
+    
     if hash == StringHash.calculate_hash('SCDT_ACTIVITY_INFO'):
         return 'SCDT_ACTIVITY_INFO'
     
@@ -3798,14 +4182,41 @@ def get_pb_name(hash):
     if hash == StringHash.calculate_hash('SCPKG_NTF_BROADCAST'):
         return 'SCPKG_NTF_BROADCAST'
     
+    if hash == StringHash.calculate_hash('SCPKG_GAME_PLAY_MODE_ACTIVITY_INFO'):
+        return 'SCPKG_GAME_PLAY_MODE_ACTIVITY_INFO'
+    
+    if hash == StringHash.calculate_hash('CSPKG_OPEN_RESOURCE_BOX_REQ'):
+        return 'CSPKG_OPEN_RESOURCE_BOX_REQ'
+    
+    if hash == StringHash.calculate_hash('SCPKG_OPEN_RESOURCE_BOX_RES'):
+        return 'SCPKG_OPEN_RESOURCE_BOX_RES'
+    
+    if hash == StringHash.calculate_hash('SCPKG_ACTIVITY_RESOURCE_BOX_INFO'):
+        return 'SCPKG_ACTIVITY_RESOURCE_BOX_INFO'
+    
+    if hash == StringHash.calculate_hash('CSPKG_GET_COUNT_TO_REWARD_REQ'):
+        return 'CSPKG_GET_COUNT_TO_REWARD_REQ'
+    
+    if hash == StringHash.calculate_hash('SCPKG_GET_COUNT_TO_REWARD_RES'):
+        return 'SCPKG_GET_COUNT_TO_REWARD_RES'
+    
+    if hash == StringHash.calculate_hash('SCPKG_NTF_ACTIVITY_DISCOUNT'):
+        return 'SCPKG_NTF_ACTIVITY_DISCOUNT'
+    
     if hash == StringHash.calculate_hash('CSPKG_ENTER_BOSSRUSH_ROOM_REQ'):
         return 'CSPKG_ENTER_BOSSRUSH_ROOM_REQ'
     
     if hash == StringHash.calculate_hash('SCPKG_BOSSRUSH_INFO'):
         return 'SCPKG_BOSSRUSH_INFO'
     
+    if hash == StringHash.calculate_hash('SCPKG_HP_REMAIN_CHANGE'):
+        return 'SCPKG_HP_REMAIN_CHANGE'
+    
     if hash == StringHash.calculate_hash('SCPKG_BOSSRUSH_HERO_INFO'):
         return 'SCPKG_BOSSRUSH_HERO_INFO'
+    
+    if hash == StringHash.calculate_hash('ST_BOSS_RUSH_FRIEND_HERO_DETAIL'):
+        return 'ST_BOSS_RUSH_FRIEND_HERO_DETAIL'
     
     if hash == StringHash.calculate_hash('SCPKG_ENTER_BOSSRUSH_ROOM_RES'):
         return 'SCPKG_ENTER_BOSSRUSH_ROOM_RES'
@@ -3815,6 +4226,51 @@ def get_pb_name(hash):
     
     if hash == StringHash.calculate_hash('CSPKG_BOSSRUSH_REPLACE_PARTNER_HERO'):
         return 'CSPKG_BOSSRUSH_REPLACE_PARTNER_HERO'
+    
+    if hash == StringHash.calculate_hash('CSPKG_BOSSRUSH_ENTER_DUN'):
+        return 'CSPKG_BOSSRUSH_ENTER_DUN'
+    
+    if hash == StringHash.calculate_hash('SCPKG_BOSSRUSH_ENTER_DUN_RES'):
+        return 'SCPKG_BOSSRUSH_ENTER_DUN_RES'
+    
+    if hash == StringHash.calculate_hash('CSPKG_BOSSRUSH_REPLACE_BOSS'):
+        return 'CSPKG_BOSSRUSH_REPLACE_BOSS'
+    
+    if hash == StringHash.calculate_hash('CSPKG_BOSSRUSH_SELECT_HERO_CONFIRM'):
+        return 'CSPKG_BOSSRUSH_SELECT_HERO_CONFIRM'
+    
+    if hash == StringHash.calculate_hash('SCPKG_BOSSRUSH_REPLACE_BOSS_RES'):
+        return 'SCPKG_BOSSRUSH_REPLACE_BOSS_RES'
+    
+    if hash == StringHash.calculate_hash('CSPKG_REPLACE_ASSISTANT_HERO'):
+        return 'CSPKG_REPLACE_ASSISTANT_HERO'
+    
+    if hash == StringHash.calculate_hash('CSPKG_CLEAR_ASSISTANT_HERO'):
+        return 'CSPKG_CLEAR_ASSISTANT_HERO'
+    
+    if hash == StringHash.calculate_hash('CSPKG_CLAIM_ASSISTANT_HERO_REWARD'):
+        return 'CSPKG_CLAIM_ASSISTANT_HERO_REWARD'
+    
+    if hash == StringHash.calculate_hash('SCPKG_ASSISTANT_HERO_INFO'):
+        return 'SCPKG_ASSISTANT_HERO_INFO'
+    
+    if hash == StringHash.calculate_hash('CSPKG_REQUEST_FRIEND_ASSISTANT_HERO'):
+        return 'CSPKG_REQUEST_FRIEND_ASSISTANT_HERO'
+    
+    if hash == StringHash.calculate_hash('CSPKG_RESET_CURRENT_BOSSRUSH'):
+        return 'CSPKG_RESET_CURRENT_BOSSRUSH'
+    
+    if hash == StringHash.calculate_hash('FRIEND_ASSISTANT_HERO'):
+        return 'FRIEND_ASSISTANT_HERO'
+    
+    if hash == StringHash.calculate_hash('SCPKG_FRIEND_ASSISSTANT_HERO_CAN_USE'):
+        return 'SCPKG_FRIEND_ASSISSTANT_HERO_CAN_USE'
+    
+    if hash == StringHash.calculate_hash('CSPKGG_REPLACE_FRIEND_ASSISTANT_HERO'):
+        return 'CSPKGG_REPLACE_FRIEND_ASSISTANT_HERO'
+    
+    if hash == StringHash.calculate_hash('SCPKG_FRIEND_CURRENT_ASSISSTANT_HERO'):
+        return 'SCPKG_FRIEND_CURRENT_ASSISSTANT_HERO'
     
     if hash == StringHash.calculate_hash('CSDT_BUILDING_BASE_INFO'):
         return 'CSDT_BUILDING_BASE_INFO'
@@ -3987,6 +4443,15 @@ def get_pb_name(hash):
     if hash == StringHash.calculate_hash('SCPKG_GET_DAILY_RECHARGE_REWARD'):
         return 'SCPKG_GET_DAILY_RECHARGE_REWARD'
     
+    if hash == StringHash.calculate_hash('CSPKG_GET_MONTHCARD_REWARD'):
+        return 'CSPKG_GET_MONTHCARD_REWARD'
+    
+    if hash == StringHash.calculate_hash('SCPKG_GET_MONTHCARD_REWARD'):
+        return 'SCPKG_GET_MONTHCARD_REWARD'
+    
+    if hash == StringHash.calculate_hash('SCPKG_NTF_MONTHCARD_REFRESH'):
+        return 'SCPKG_NTF_MONTHCARD_REFRESH'
+    
     if hash == StringHash.calculate_hash('CSPKG_REMOVE_PRIVATE_MSG'):
         return 'CSPKG_REMOVE_PRIVATE_MSG'
     
@@ -4001,6 +4466,9 @@ def get_pb_name(hash):
     
     if hash == StringHash.calculate_hash('SCPKG_CHAT_FAST_ERROR'):
         return 'SCPKG_CHAT_FAST_ERROR'
+    
+    if hash == StringHash.calculate_hash('CSPKG_REPORT_PLAYER_CHAT_REQ'):
+        return 'CSPKG_REPORT_PLAYER_CHAT_REQ'
     
     if hash == StringHash.calculate_hash('NOTIFY_CITY_REWARD_ACQUIRED'):
         return 'NOTIFY_CITY_REWARD_ACQUIRED'
@@ -4058,6 +4526,9 @@ def get_pb_name(hash):
     
     if hash == StringHash.calculate_hash('SCPKG_NTF_ERROR'):
         return 'SCPKG_NTF_ERROR'
+    
+    if hash == StringHash.calculate_hash('SCPKG_ERROR_MSG'):
+        return 'SCPKG_ERROR_MSG'
     
     if hash == StringHash.calculate_hash('SCDT_NOTIFY_DATA'):
         return 'SCDT_NOTIFY_DATA'
@@ -4137,6 +4608,12 @@ def get_pb_name(hash):
     if hash == StringHash.calculate_hash('CSPKG_SELL_RUBBISH'):
         return 'CSPKG_SELL_RUBBISH'
     
+    if hash == StringHash.calculate_hash('SCPKG_DO_SOMETHING'):
+        return 'SCPKG_DO_SOMETHING'
+    
+    if hash == StringHash.calculate_hash('CSPKG_DO_SOMETHING_RES'):
+        return 'CSPKG_DO_SOMETHING_RES'
+    
     if hash == StringHash.calculate_hash('CSPKG_IOS_ACCOUNT'):
         return 'CSPKG_IOS_ACCOUNT'
     
@@ -4152,8 +4629,17 @@ def get_pb_name(hash):
     if hash == StringHash.calculate_hash('SCPKG_DIR_WORLD_INFO'):
         return 'SCPKG_DIR_WORLD_INFO'
     
+    if hash == StringHash.calculate_hash('CSPKG_IOS_BIND_GAMECENTER'):
+        return 'CSPKG_IOS_BIND_GAMECENTER'
+    
+    if hash == StringHash.calculate_hash('SSPKG_IOS_BIND_GAMECENTER_RES'):
+        return 'SSPKG_IOS_BIND_GAMECENTER_RES'
+    
     if hash == StringHash.calculate_hash('CSPKG_ACT_ALOGIN'):
         return 'CSPKG_ACT_ALOGIN'
+    
+    if hash == StringHash.calculate_hash('CSPKG_ACT_ALOGIN_ADDITIONAL'):
+        return 'CSPKG_ACT_ALOGIN_ADDITIONAL'
     
     if hash == StringHash.calculate_hash('SCPKG_CMD_ALOGIN'):
         return 'SCPKG_CMD_ALOGIN'
@@ -4221,8 +4707,14 @@ def get_pb_name(hash):
     if hash == StringHash.calculate_hash('CSPKG_BUY_ELITE_COUNT_REQ'):
         return 'CSPKG_BUY_ELITE_COUNT_REQ'
     
+    if hash == StringHash.calculate_hash('CSDT_ENTER_ONLINE_BATTLE_DUN_PARAM'):
+        return 'CSDT_ENTER_ONLINE_BATTLE_DUN_PARAM'
+    
     if hash == StringHash.calculate_hash('CSDT_ENTER_ENDLESS_DUN_PARAM'):
         return 'CSDT_ENTER_ENDLESS_DUN_PARAM'
+    
+    if hash == StringHash.calculate_hash('CSDT_ENTER_MULTIPLAYER_PVE_DUN_PARAM'):
+        return 'CSDT_ENTER_MULTIPLAYER_PVE_DUN_PARAM'
     
     if hash == StringHash.calculate_hash('CSDT_ENTER_DUN_PARAM'):
         return 'CSDT_ENTER_DUN_PARAM'
@@ -4251,6 +4743,9 @@ def get_pb_name(hash):
     if hash == StringHash.calculate_hash('CSDT_PLAYER_PVE_DUNBALANCE'):
         return 'CSDT_PLAYER_PVE_DUNBALANCE'
     
+    if hash == StringHash.calculate_hash('CSDT_PLAYER_BOSSRUSH_DUNBALANCE'):
+        return 'CSDT_PLAYER_BOSSRUSH_DUNBALANCE'
+    
     if hash == StringHash.calculate_hash('CSDT_PLAYER_ENDLESS_DUNBALANCE'):
         return 'CSDT_PLAYER_ENDLESS_DUNBALANCE'
     
@@ -4262,6 +4757,18 @@ def get_pb_name(hash):
     
     if hash == StringHash.calculate_hash('CSDT_PLAYER_WORLD_BOSS_DUNBALANCE'):
         return 'CSDT_PLAYER_WORLD_BOSS_DUNBALANCE'
+    
+    if hash == StringHash.calculate_hash('CSDT_PLAYER_MULTIPLAYER_PVE_DUNBALANCE'):
+        return 'CSDT_PLAYER_MULTIPLAYER_PVE_DUNBALANCE'
+    
+    if hash == StringHash.calculate_hash('SCPKG_DUNGEON_COMBAT_SWITCH'):
+        return 'SCPKG_DUNGEON_COMBAT_SWITCH'
+    
+    if hash == StringHash.calculate_hash('CSDT_DUNGEON_COMBAT_RECORD'):
+        return 'CSDT_DUNGEON_COMBAT_RECORD'
+    
+    if hash == StringHash.calculate_hash('CSPKG_DUNGEON_COMBAT_REPORT'):
+        return 'CSPKG_DUNGEON_COMBAT_REPORT'
     
     if hash == StringHash.calculate_hash('CSDT_PLAYER_DUNBALANCE'):
         return 'CSDT_PLAYER_DUNBALANCE'
@@ -4404,6 +4911,18 @@ def get_pb_name(hash):
     if hash == StringHash.calculate_hash('SCPKG_BUY_EQUIP_FUSION_ADDTION_RES'):
         return 'SCPKG_BUY_EQUIP_FUSION_ADDTION_RES'
     
+    if hash == StringHash.calculate_hash('CSPKG_EQUIP_RESET_RESULT_REQ'):
+        return 'CSPKG_EQUIP_RESET_RESULT_REQ'
+    
+    if hash == StringHash.calculate_hash('SCPKG_EQUIP_RESET_RESULT_RES'):
+        return 'SCPKG_EQUIP_RESET_RESULT_RES'
+    
+    if hash == StringHash.calculate_hash('CSPKG_EQUIP_RESET_CONFIRM_REQ'):
+        return 'CSPKG_EQUIP_RESET_CONFIRM_REQ'
+    
+    if hash == StringHash.calculate_hash('SCPKG_EQUIP_RESET_CONFIRM_RES'):
+        return 'SCPKG_EQUIP_RESET_CONFIRM_RES'
+    
     if hash == StringHash.calculate_hash('SCDT_FRIEND_BASE_INFO'):
         return 'SCDT_FRIEND_BASE_INFO'
     
@@ -4511,15 +5030,6 @@ def get_pb_name(hash):
     
     if hash == StringHash.calculate_hash('SCPKG_APPLY_INVITED_CODE'):
         return 'SCPKG_APPLY_INVITED_CODE'
-    
-    if hash == StringHash.calculate_hash('ST_HERO_BATTLE_EMBLEM_INFO'):
-        return 'ST_HERO_BATTLE_EMBLEM_INFO'
-    
-    if hash == StringHash.calculate_hash('ST_HERO_BATTLE_EQUIP_INFO'):
-        return 'ST_HERO_BATTLE_EQUIP_INFO'
-    
-    if hash == StringHash.calculate_hash('ST_HERO_BATTLE_INFO'):
-        return 'ST_HERO_BATTLE_INFO'
     
     if hash == StringHash.calculate_hash('ST_GANG_CITY_STRONG_POINT_HERO_INFO'):
         return 'ST_GANG_CITY_STRONG_POINT_HERO_INFO'
@@ -4809,6 +5319,18 @@ def get_pb_name(hash):
     if hash == StringHash.calculate_hash('GM_GET_RANK_POS_BY_UID_RES'):
         return 'GM_GET_RANK_POS_BY_UID_RES'
     
+    if hash == StringHash.calculate_hash('GM_DEL_PLAYER_FROM_RANK_REQ'):
+        return 'GM_DEL_PLAYER_FROM_RANK_REQ'
+    
+    if hash == StringHash.calculate_hash('GM_DEL_PLAYER_FROM_RANK_RES'):
+        return 'GM_DEL_PLAYER_FROM_RANK_RES'
+    
+    if hash == StringHash.calculate_hash('GM_DEL_PLAYER_FROM_GANG_REQ'):
+        return 'GM_DEL_PLAYER_FROM_GANG_REQ'
+    
+    if hash == StringHash.calculate_hash('GM_DEL_PLAYER_FROM_GANG_RES'):
+        return 'GM_DEL_PLAYER_FROM_GANG_RES'
+    
     if hash == StringHash.calculate_hash('GM_GET_PLAYER_PVE_INFO_REQ'):
         return 'GM_GET_PLAYER_PVE_INFO_REQ'
     
@@ -4868,6 +5390,30 @@ def get_pb_name(hash):
     
     if hash == StringHash.calculate_hash('GM_SEND_MAIL_RES'):
         return 'GM_SEND_MAIL_RES'
+    
+    if hash == StringHash.calculate_hash('GM_GAMESERVER_MAIL_CONDITION'):
+        return 'GM_GAMESERVER_MAIL_CONDITION'
+    
+    if hash == StringHash.calculate_hash('GM_SEND_GAMESERVER_MAIL_REQ'):
+        return 'GM_SEND_GAMESERVER_MAIL_REQ'
+    
+    if hash == StringHash.calculate_hash('GM_SEND_GAMESERVER_MAIL_RES'):
+        return 'GM_SEND_GAMESERVER_MAIL_RES'
+    
+    if hash == StringHash.calculate_hash('GM_GET_GAMESERVER_MAIL_INFO_REQ'):
+        return 'GM_GET_GAMESERVER_MAIL_INFO_REQ'
+    
+    if hash == StringHash.calculate_hash('GM_GAMESERVER_MAIL_INFO'):
+        return 'GM_GAMESERVER_MAIL_INFO'
+    
+    if hash == StringHash.calculate_hash('GM_GET_GAMESERVER_MAIL_INFO_RES'):
+        return 'GM_GET_GAMESERVER_MAIL_INFO_RES'
+    
+    if hash == StringHash.calculate_hash('GM_DEL_GAMESERVER_MAIL_REQ'):
+        return 'GM_DEL_GAMESERVER_MAIL_REQ'
+    
+    if hash == StringHash.calculate_hash('GM_DEL_GAMESERVER_MAIL_RES'):
+        return 'GM_DEL_GAMESERVER_MAIL_RES'
     
     if hash == StringHash.calculate_hash('GM_CHG_PLAYER_ATTR_REQ'):
         return 'GM_CHG_PLAYER_ATTR_REQ'
@@ -4943,6 +5489,12 @@ def get_pb_name(hash):
     
     if hash == StringHash.calculate_hash('CSPKG_CMD_EMBLEM_LEVELUP'):
         return 'CSPKG_CMD_EMBLEM_LEVELUP'
+    
+    if hash == StringHash.calculate_hash('CSPKG_CMD_ACTIVE_TALENT_REQ'):
+        return 'CSPKG_CMD_ACTIVE_TALENT_REQ'
+    
+    if hash == StringHash.calculate_hash('SCPKG_CMD_ACTIVE_TALENT_RES'):
+        return 'SCPKG_CMD_ACTIVE_TALENT_RES'
     
     if hash == StringHash.calculate_hash('CSPKG_CMD_PLAYER_LEVELUP'):
         return 'CSPKG_CMD_PLAYER_LEVELUP'
@@ -5099,6 +5651,33 @@ def get_pb_name(hash):
     
     if hash == StringHash.calculate_hash('SCDT_UNLOCK_MONSTER_ATTINFO'):
         return 'SCDT_UNLOCK_MONSTER_ATTINFO'
+    
+    if hash == StringHash.calculate_hash('CSPKG_ONLINE_BATTLE_MATCH_MSG'):
+        return 'CSPKG_ONLINE_BATTLE_MATCH_MSG'
+    
+    if hash == StringHash.calculate_hash('CSPKG_MULTIPLAYER_PVE_DUN_BULK_MSG'):
+        return 'CSPKG_MULTIPLAYER_PVE_DUN_BULK_MSG'
+    
+    if hash == StringHash.calculate_hash('CSPKG_MULTIPLAYER_PVE_DUN_MSG'):
+        return 'CSPKG_MULTIPLAYER_PVE_DUN_MSG'
+    
+    if hash == StringHash.calculate_hash('CSPKG_MULTIPLAYER_PVE_DUN_ROOM_OP_REQ'):
+        return 'CSPKG_MULTIPLAYER_PVE_DUN_ROOM_OP_REQ'
+    
+    if hash == StringHash.calculate_hash('SCPKG_MULTIPLAYER_PVE_DUN_ROOM_OP_RES'):
+        return 'SCPKG_MULTIPLAYER_PVE_DUN_ROOM_OP_RES'
+    
+    if hash == StringHash.calculate_hash('CSDT_MULTIPLAYER_PVE_DUN_PLAYER_INFO'):
+        return 'CSDT_MULTIPLAYER_PVE_DUN_PLAYER_INFO'
+    
+    if hash == StringHash.calculate_hash('CSDT_MULTIPLAYER_PVE_DUN_ROLE_INFO'):
+        return 'CSDT_MULTIPLAYER_PVE_DUN_ROLE_INFO'
+    
+    if hash == StringHash.calculate_hash('SCPKG_MULTIPLAYER_PVE_DUNBALANCE'):
+        return 'SCPKG_MULTIPLAYER_PVE_DUNBALANCE'
+    
+    if hash == StringHash.calculate_hash('SCPKG_MULTIPLAYER_PVE_CHALLENGE_DATA'):
+        return 'SCPKG_MULTIPLAYER_PVE_CHALLENGE_DATA'
     
     if hash == StringHash.calculate_hash('CSPKG_SET_OFFLINE_BATTLE_TITLE_ID_REQ'):
         return 'CSPKG_SET_OFFLINE_BATTLE_TITLE_ID_REQ'
@@ -5295,6 +5874,15 @@ def get_pb_name(hash):
     if hash == StringHash.calculate_hash('CSDT_GANGBATTLE_HERO_INFO'):
         return 'CSDT_GANGBATTLE_HERO_INFO'
     
+    if hash == StringHash.calculate_hash('CSPKG_BUY_REFRESH_REQ'):
+        return 'CSPKG_BUY_REFRESH_REQ'
+    
+    if hash == StringHash.calculate_hash('SCPKG_BUY_REFRESH_RES'):
+        return 'SCPKG_BUY_REFRESH_RES'
+    
+    if hash == StringHash.calculate_hash('SCDT_ACTIVITY_PRIZE_DRAW_INFO'):
+        return 'SCDT_ACTIVITY_PRIZE_DRAW_INFO'
+    
     if hash == StringHash.calculate_hash('CSDT_PVP_DUN_DATA'):
         return 'CSDT_PVP_DUN_DATA'
     
@@ -5327,6 +5915,15 @@ def get_pb_name(hash):
     
     if hash == StringHash.calculate_hash('SCPKG_GET_STEAL_TARGET_STATE_RES'):
         return 'SCPKG_GET_STEAL_TARGET_STATE_RES'
+    
+    if hash == StringHash.calculate_hash('CSPKG_WIPE_OUT_STEAL_BATTLE_REQ'):
+        return 'CSPKG_WIPE_OUT_STEAL_BATTLE_REQ'
+    
+    if hash == StringHash.calculate_hash('ST_WIPE_OUT_STEAL_BATTLE_INFO'):
+        return 'ST_WIPE_OUT_STEAL_BATTLE_INFO'
+    
+    if hash == StringHash.calculate_hash('SCPKG_WIPE_OUT_STEAL_BATTLE_RES'):
+        return 'SCPKG_WIPE_OUT_STEAL_BATTLE_RES'
     
     if hash == StringHash.calculate_hash('CSPKG_ENTER_STEAL_BATTLE_REQ'):
         return 'CSPKG_ENTER_STEAL_BATTLE_REQ'
@@ -5432,6 +6029,18 @@ def get_pb_name(hash):
     
     if hash == StringHash.calculate_hash('CSDT_RANKPOS_SEARCH_KEY'):
         return 'CSDT_RANKPOS_SEARCH_KEY'
+    
+    if hash == StringHash.calculate_hash('SSPKG_RANK_REWARD_ITEM'):
+        return 'SSPKG_RANK_REWARD_ITEM'
+    
+    if hash == StringHash.calculate_hash('SSPKG_RANK_REWARD_DISPATCH'):
+        return 'SSPKG_RANK_REWARD_DISPATCH'
+    
+    if hash == StringHash.calculate_hash('RANK_RESET_INFO_ITEM'):
+        return 'RANK_RESET_INFO_ITEM'
+    
+    if hash == StringHash.calculate_hash('SSPKG_RANK_RESET_INFO'):
+        return 'SSPKG_RANK_RESET_INFO'
     
     if hash == StringHash.calculate_hash('CSDT_PLAYER_RANK_BATTLE_INFO'):
         return 'CSDT_PLAYER_RANK_BATTLE_INFO'
@@ -5640,8 +6249,20 @@ def get_pb_name(hash):
     if hash == StringHash.calculate_hash('ResWorldBossNormalReward'):
         return 'ResWorldBossNormalReward'
     
+    if hash == StringHash.calculate_hash('ResMultiplayerPVEHeroBuff'):
+        return 'ResMultiplayerPVEHeroBuff'
+    
+    if hash == StringHash.calculate_hash('ResMultiplayerPVEDungeonConfig'):
+        return 'ResMultiplayerPVEDungeonConfig'
+    
     if hash == StringHash.calculate_hash('ResNewbieActivity'):
         return 'ResNewbieActivity'
+    
+    if hash == StringHash.calculate_hash('ResGamePlayModeActivity'):
+        return 'ResGamePlayModeActivity'
+    
+    if hash == StringHash.calculate_hash('ResRankReward'):
+        return 'ResRankReward'
     
     if hash == StringHash.calculate_hash('ResHeroEvaluate'):
         return 'ResHeroEvaluate'
@@ -5666,9 +6287,6 @@ def get_pb_name(hash):
     
     if hash == StringHash.calculate_hash('ResPvpRobot'):
         return 'ResPvpRobot'
-    
-    if hash == StringHash.calculate_hash('ResPvpSerchInfo'):
-        return 'ResPvpSerchInfo'
     
     if hash == StringHash.calculate_hash('ResPvpMisc'):
         return 'ResPvpMisc'
@@ -5703,6 +6321,9 @@ def get_pb_name(hash):
     if hash == StringHash.calculate_hash('ResDungeonInfo'):
         return 'ResDungeonInfo'
     
+    if hash == StringHash.calculate_hash('ResDungeonData'):
+        return 'ResDungeonData'
+    
     if hash == StringHash.calculate_hash('ResDungeonFightCapacityFix'):
         return 'ResDungeonFightCapacityFix'
     
@@ -5726,6 +6347,12 @@ def get_pb_name(hash):
     
     if hash == StringHash.calculate_hash('ResAchievement'):
         return 'ResAchievement'
+    
+    if hash == StringHash.calculate_hash('ResAchievementGameCenter'):
+        return 'ResAchievementGameCenter'
+    
+    if hash == StringHash.calculate_hash('ResSpecialActivity'):
+        return 'ResSpecialActivity'
     
     if hash == StringHash.calculate_hash('ResDailyTask'):
         return 'ResDailyTask'
@@ -5901,6 +6528,9 @@ def get_pb_name(hash):
     if hash == StringHash.calculate_hash('ResBaseDrop'):
         return 'ResBaseDrop'
     
+    if hash == StringHash.calculate_hash('ResWorldDrop'):
+        return 'ResWorldDrop'
+    
     if hash == StringHash.calculate_hash('ResRetrieveInfo'):
         return 'ResRetrieveInfo'
     
@@ -5988,6 +6618,9 @@ def get_pb_name(hash):
     if hash == StringHash.calculate_hash('ResBossRushChapter'):
         return 'ResBossRushChapter'
     
+    if hash == StringHash.calculate_hash('ResBossRushDrop'):
+        return 'ResBossRushDrop'
+    
     if hash == StringHash.calculate_hash('ResBossRushDungeon'):
         return 'ResBossRushDungeon'
     
@@ -5999,6 +6632,39 @@ def get_pb_name(hash):
     
     if hash == StringHash.calculate_hash('ResSectRecharge'):
         return 'ResSectRecharge'
+    
+    if hash == StringHash.calculate_hash('ResTalentAttr'):
+        return 'ResTalentAttr'
+    
+    if hash == StringHash.calculate_hash('ResTalentActiveInfo'):
+        return 'ResTalentActiveInfo'
+    
+    if hash == StringHash.calculate_hash('ResTalent'):
+        return 'ResTalent'
+    
+    if hash == StringHash.calculate_hash('ResAssistantHeroRent'):
+        return 'ResAssistantHeroRent'
+    
+    if hash == StringHash.calculate_hash('ResCountToReward'):
+        return 'ResCountToReward'
+    
+    if hash == StringHash.calculate_hash('ResWorldActivity'):
+        return 'ResWorldActivity'
+    
+    if hash == StringHash.calculate_hash('ResActivityOrder'):
+        return 'ResActivityOrder'
+    
+    if hash == StringHash.calculate_hash('ResActivityResourceBox'):
+        return 'ResActivityResourceBox'
+    
+    if hash == StringHash.calculate_hash('ResErrorMsg'):
+        return 'ResErrorMsg'
+    
+    if hash == StringHash.calculate_hash('ResActivityDiscount'):
+        return 'ResActivityDiscount'
+    
+    if hash == StringHash.calculate_hash('ResGameModeEntrance'):
+        return 'ResGameModeEntrance'
     
     if hash == StringHash.calculate_hash('ResReward'):
         return 'ResReward'
@@ -6027,6 +6693,21 @@ def get_pb_name(hash):
     if hash == StringHash.calculate_hash('ResMaterial'):
         return 'ResMaterial'
     
+    if hash == StringHash.calculate_hash('ST_HERO_BATTLE_EMBLEM_INFO'):
+        return 'ST_HERO_BATTLE_EMBLEM_INFO'
+    
+    if hash == StringHash.calculate_hash('ST_HERO_BATTLE_EQUIP_INFO'):
+        return 'ST_HERO_BATTLE_EQUIP_INFO'
+    
+    if hash == StringHash.calculate_hash('ST_HERO_BATTLE_INFO'):
+        return 'ST_HERO_BATTLE_INFO'
+    
+    if hash == StringHash.calculate_hash('ST_BOSSRUSH_HERO_HP_REMAIN'):
+        return 'ST_BOSSRUSH_HERO_HP_REMAIN'
+    
+    if hash == StringHash.calculate_hash('CSDT_DUNGEON_COMBAT_BRIEF'):
+        return 'CSDT_DUNGEON_COMBAT_BRIEF'
+    
     if hash == StringHash.calculate_hash('ST_SHOP_GOODS_INFO'):
         return 'ST_SHOP_GOODS_INFO'
     
@@ -6047,6 +6728,21 @@ def get_pb_name(hash):
     
     if hash == StringHash.calculate_hash('SCPKG_BUY_SHOP_GOODS_RES'):
         return 'SCPKG_BUY_SHOP_GOODS_RES'
+    
+    if hash == StringHash.calculate_hash('SCPKG_SPECIAL_ACTIVITY_ITEM'):
+        return 'SCPKG_SPECIAL_ACTIVITY_ITEM'
+    
+    if hash == StringHash.calculate_hash('SCPKG_SPECIAL_ACTIVITY_INFO'):
+        return 'SCPKG_SPECIAL_ACTIVITY_INFO'
+    
+    if hash == StringHash.calculate_hash('CSPKG_SPECIAL_ACTIVITY_CLAIM_REQ'):
+        return 'CSPKG_SPECIAL_ACTIVITY_CLAIM_REQ'
+    
+    if hash == StringHash.calculate_hash('SCPKG_SPECIAL_ACTIVITY_CLAIM_RES'):
+        return 'SCPKG_SPECIAL_ACTIVITY_CLAIM_RES'
+    
+    if hash == StringHash.calculate_hash('CSPKG_SPECIAL_ACTIVITY_SHARE_REQ'):
+        return 'CSPKG_SPECIAL_ACTIVITY_SHARE_REQ'
     
     if hash == StringHash.calculate_hash('SSDT_NOTIFY_MSG'):
         return 'SSDT_NOTIFY_MSG'
@@ -6270,11 +6966,20 @@ def get_pb_name(hash):
     if hash == StringHash.calculate_hash('SSPKG_WORLD_BOSS_KILLER_INFO_RES'):
         return 'SSPKG_WORLD_BOSS_KILLER_INFO_RES'
     
+    if hash == StringHash.calculate_hash('DBBLOB_MULTIPLAYER_PVE_CHALLENGE_DATA'):
+        return 'DBBLOB_MULTIPLAYER_PVE_CHALLENGE_DATA'
+    
     if hash == StringHash.calculate_hash('DBBLOB_NEWBIE_ACTIVITY_ITEM'):
         return 'DBBLOB_NEWBIE_ACTIVITY_ITEM'
     
     if hash == StringHash.calculate_hash('DBBLOB_NEWBIE_ACTIVITY_STATUS'):
         return 'DBBLOB_NEWBIE_ACTIVITY_STATUS'
+    
+    if hash == StringHash.calculate_hash('DBBLOB_SPECIAL_ACTIVITY_ITEM'):
+        return 'DBBLOB_SPECIAL_ACTIVITY_ITEM'
+    
+    if hash == StringHash.calculate_hash('DBBLOB_SPECIAL_ACTIVITY_INFO'):
+        return 'DBBLOB_SPECIAL_ACTIVITY_INFO'
     
     if hash == StringHash.calculate_hash('DBBLOB_SELFDUN_HERO_INFO'):
         return 'DBBLOB_SELFDUN_HERO_INFO'
@@ -6644,6 +7349,9 @@ def get_pb_name(hash):
     
     if hash == StringHash.calculate_hash('PKG_SEARCH_PVP_PLAYER_RES'):
         return 'PKG_SEARCH_PVP_PLAYER_RES'
+    
+    if hash == StringHash.calculate_hash('PKG_WIPE_OUT_STEAL_BATTLE_BALANCE_REQ'):
+        return 'PKG_WIPE_OUT_STEAL_BATTLE_BALANCE_REQ'
     
     if hash == StringHash.calculate_hash('PKG_BALANCE_STEAL_BATTLE_REQ'):
         return 'PKG_BALANCE_STEAL_BATTLE_REQ'
@@ -7056,6 +7764,9 @@ def get_pb_name(hash):
     if hash == StringHash.calculate_hash('SSPKG_UPDATE_PVE_EVALUATE_STATS_REQ'):
         return 'SSPKG_UPDATE_PVE_EVALUATE_STATS_REQ'
     
+    if hash == StringHash.calculate_hash('SSPKG_RANK_CHANGE_NAME_REQ'):
+        return 'SSPKG_RANK_CHANGE_NAME_REQ'
+    
     if hash == StringHash.calculate_hash('SSDT_RANK_ONE_UPDATE'):
         return 'SSDT_RANK_ONE_UPDATE'
     
@@ -7145,6 +7856,12 @@ def get_pb_name(hash):
     
     if hash == StringHash.calculate_hash('SSPKG_PURCHASE_REQUEST_DELIVERY_IAP'):
         return 'SSPKG_PURCHASE_REQUEST_DELIVERY_IAP'
+    
+    if hash == StringHash.calculate_hash('SSPKG_PURCHASE_REQUEST_DELIVERY_IAP_CHECKED'):
+        return 'SSPKG_PURCHASE_REQUEST_DELIVERY_IAP_CHECKED'
+    
+    if hash == StringHash.calculate_hash('SSPKG_PURCHASE_IAP_FINISHED'):
+        return 'SSPKG_PURCHASE_IAP_FINISHED'
     
     if hash == StringHash.calculate_hash('SSPKG_PURCHASE_DONE'):
         return 'SSPKG_PURCHASE_DONE'
@@ -7386,6 +8103,9 @@ def get_pb_name(hash):
     if hash == StringHash.calculate_hash('SSDT_INVITED_TOTAL_INFO'):
         return 'SSDT_INVITED_TOTAL_INFO'
     
+    if hash == StringHash.calculate_hash('SSDT_ASSISTANT_HERO_INFO'):
+        return 'SSDT_ASSISTANT_HERO_INFO'
+    
     if hash == StringHash.calculate_hash('SSDT_SEND_POWER_RECORD'):
         return 'SSDT_SEND_POWER_RECORD'
     
@@ -7451,6 +8171,48 @@ def get_pb_name(hash):
     
     if hash == StringHash.calculate_hash('DBBLOB_NEWBIE_ACTIVITY_RECHARGE'):
         return 'DBBLOB_NEWBIE_ACTIVITY_RECHARGE'
+    
+    if hash == StringHash.calculate_hash('SSPKG_NTF_VIP_CHANGE'):
+        return 'SSPKG_NTF_VIP_CHANGE'
+    
+    if hash == StringHash.calculate_hash('DBBLOB_FRIEND_ASSIST_HERO_INFO'):
+        return 'DBBLOB_FRIEND_ASSIST_HERO_INFO'
+    
+    if hash == StringHash.calculate_hash('DBBLOB_PLAYER_BOSSRUSH_INFO'):
+        return 'DBBLOB_PLAYER_BOSSRUSH_INFO'
+    
+    if hash == StringHash.calculate_hash('SSPKG_CLAIM_ASSISTANT_HERO_REWARD'):
+        return 'SSPKG_CLAIM_ASSISTANT_HERO_REWARD'
+    
+    if hash == StringHash.calculate_hash('SSPKG_BOSSRUSH_HIRE_HERO'):
+        return 'SSPKG_BOSSRUSH_HIRE_HERO'
+    
+    if hash == StringHash.calculate_hash('SSDT_WORLD_ACTIVITY_INFO'):
+        return 'SSDT_WORLD_ACTIVITY_INFO'
+    
+    if hash == StringHash.calculate_hash('SSDT_WORLD_DROP_INFO'):
+        return 'SSDT_WORLD_DROP_INFO'
+    
+    if hash == StringHash.calculate_hash('SSDT_GAME_SERVER_MISC_INFO'):
+        return 'SSDT_GAME_SERVER_MISC_INFO'
+    
+    if hash == StringHash.calculate_hash('SSPKG_UPDATE_GAME_SERVER_MISC_REQ'):
+        return 'SSPKG_UPDATE_GAME_SERVER_MISC_REQ'
+    
+    if hash == StringHash.calculate_hash('SSPKG_GET_GAMESVR_MISC_REQ'):
+        return 'SSPKG_GET_GAMESVR_MISC_REQ'
+    
+    if hash == StringHash.calculate_hash('SSPKG_GET_GAMESVR_MISC_RES'):
+        return 'SSPKG_GET_GAMESVR_MISC_RES'
+    
+    if hash == StringHash.calculate_hash('SSPKG_RANK_BATTLE_ACTIVITY_REQ'):
+        return 'SSPKG_RANK_BATTLE_ACTIVITY_REQ'
+    
+    if hash == StringHash.calculate_hash('SSPKG_REPORT_PLAYER_CHAT_REQ'):
+        return 'SSPKG_REPORT_PLAYER_CHAT_REQ'
+    
+    if hash == StringHash.calculate_hash('SSPKG_REPORT_PLAYER_CHAT_RES'):
+        return 'SSPKG_REPORT_PLAYER_CHAT_RES'
     
     if hash == StringHash.calculate_hash('CSPKG_CMD_VIEW_PLAYER_INFO_REQ'):
         return 'CSPKG_CMD_VIEW_PLAYER_INFO_REQ'
@@ -7531,8 +8293,12 @@ def res(f, pb):
         attrs = ['achievement_id']
         return f(pb, attrs)
     
+    if p == 'SCDT_ACTIVITY_RESOURCE_BOX_INFO':
+        attrs = ['last_box_refresh_time', 'gold_box_open_count', 'crystal_box_open_count', 'material_box_open_count']
+        return f(pb, attrs)
+    
     if p == 'SCDT_ACTIVITY_INFO':
-        attrs = ['cumulate_cost_info', 'sect_recharge_info', 'daily_recharge_info']
+        attrs = ['cumulate_cost_info', 'sect_recharge_info', 'daily_recharge_info', 'activity_prize_draw', 'activity_resource_box']
         return f(pb, attrs)
     
     if p == 'SCDT_ACTIVITY_CONTROL':
@@ -7548,11 +8314,11 @@ def res(f, pb):
         return f(pb, attrs)
     
     if p == 'SCPKG_ACTIVITY_CONTROL':
-        attrs = ['activity_control']
+        attrs = ['activity_control', 'is_world_activity']
         return f(pb, attrs)
     
     if p == 'SCPKG_ACTIVITY_INFO':
-        attrs = ['activity_control', 'activity_info']
+        attrs = ['activity_control', 'activity_info', 'world_activity_control']
         return f(pb, attrs)
     
     if p == 'CSDT_BROAD_MSG':
@@ -7563,20 +8329,56 @@ def res(f, pb):
         attrs = ['msg_id', 'show_pos', 'broad_msg']
         return f(pb, attrs)
     
+    if p == 'SCPKG_GAME_PLAY_MODE_ACTIVITY_INFO':
+        attrs = ['closed_dungeon_type']
+        return f(pb, attrs)
+    
+    if p == 'CSPKG_OPEN_RESOURCE_BOX_REQ':
+        attrs = ['type']
+        return f(pb, attrs)
+    
+    if p == 'SCPKG_OPEN_RESOURCE_BOX_RES':
+        attrs = ['result', 'type', 'reward']
+        return f(pb, attrs)
+    
+    if p == 'SCPKG_ACTIVITY_RESOURCE_BOX_INFO':
+        attrs = ['activity_resource_box']
+        return f(pb, attrs)
+    
+    if p == 'CSPKG_GET_COUNT_TO_REWARD_REQ':
+        attrs = ['type', 'id']
+        return f(pb, attrs)
+    
+    if p == 'SCPKG_GET_COUNT_TO_REWARD_RES':
+        attrs = ['result', 'type', 'id', 'reward']
+        return f(pb, attrs)
+    
+    if p == 'SCPKG_NTF_ACTIVITY_DISCOUNT':
+        attrs = ['coin_single_discount', 'coin_multi_discount', 'money_single_discount', 'money_multi_discount']
+        return f(pb, attrs)
+    
     if p == 'CSPKG_ENTER_BOSSRUSH_ROOM_REQ':
         attrs = ['reserve']
         return f(pb, attrs)
     
     if p == 'SCPKG_BOSSRUSH_INFO':
-        attrs = ['cur_chaptor_id', 'cur_monster_id', 'cur_sequence']
+        attrs = ['cur_chaptor_id', 'cur_monster_id', 'cur_sequence', 'last_clear_chaptor_index', 'assistant_hero_cnt_in_dungeon', 'last_clear_time']
+        return f(pb, attrs)
+    
+    if p == 'SCPKG_HP_REMAIN_CHANGE':
+        attrs = ['hp_remain']
         return f(pb, attrs)
     
     if p == 'SCPKG_BOSSRUSH_HERO_INFO':
         attrs = ['main_hero_id', 'partner_hero_id']
         return f(pb, attrs)
     
+    if p == 'ST_BOSS_RUSH_FRIEND_HERO_DETAIL':
+        attrs = ['uid', 'attr_info']
+        return f(pb, attrs)
+    
     if p == 'SCPKG_ENTER_BOSSRUSH_ROOM_RES':
-        attrs = ['result', 'info', 'hero_info']
+        attrs = ['result', 'last_enter_time', 'info', 'hero_info']
         return f(pb, attrs)
     
     if p == 'CSPKG_BOSSRUSH_REPLACE_MAIN_HERO':
@@ -7585,6 +8387,66 @@ def res(f, pb):
     
     if p == 'CSPKG_BOSSRUSH_REPLACE_PARTNER_HERO':
         attrs = ['pos', 'heroid']
+        return f(pb, attrs)
+    
+    if p == 'CSPKG_BOSSRUSH_ENTER_DUN':
+        attrs = ['chapter_id']
+        return f(pb, attrs)
+    
+    if p == 'SCPKG_BOSSRUSH_ENTER_DUN_RES':
+        attrs = ['dungeon_id', 'is_boss', 'monster_id', 'detail']
+        return f(pb, attrs)
+    
+    if p == 'CSPKG_BOSSRUSH_REPLACE_BOSS':
+        attrs = []
+        return f(pb, attrs)
+    
+    if p == 'CSPKG_BOSSRUSH_SELECT_HERO_CONFIRM':
+        attrs = []
+        return f(pb, attrs)
+    
+    if p == 'SCPKG_BOSSRUSH_REPLACE_BOSS_RES':
+        attrs = ['info']
+        return f(pb, attrs)
+    
+    if p == 'CSPKG_REPLACE_ASSISTANT_HERO':
+        attrs = ['index', 'heroid', 'uid', 'battle_info']
+        return f(pb, attrs)
+    
+    if p == 'CSPKG_CLEAR_ASSISTANT_HERO':
+        attrs = []
+        return f(pb, attrs)
+    
+    if p == 'CSPKG_CLAIM_ASSISTANT_HERO_REWARD':
+        attrs = []
+        return f(pb, attrs)
+    
+    if p == 'SCPKG_ASSISTANT_HERO_INFO':
+        attrs = ['uid', 'assistant_heroes', 'gold', 'total_assistant_count', 'cur_assistant_count', 'assistant_calc_time']
+        return f(pb, attrs)
+    
+    if p == 'CSPKG_REQUEST_FRIEND_ASSISTANT_HERO':
+        attrs = []
+        return f(pb, attrs)
+    
+    if p == 'CSPKG_RESET_CURRENT_BOSSRUSH':
+        attrs = []
+        return f(pb, attrs)
+    
+    if p == 'FRIEND_ASSISTANT_HERO':
+        attrs = ['uid', 'heroid', 'name', 'fight_capacity', 'rent_gold', 'level', 'battle_info']
+        return f(pb, attrs)
+    
+    if p == 'SCPKG_FRIEND_ASSISSTANT_HERO_CAN_USE':
+        attrs = ['uid', 'heros']
+        return f(pb, attrs)
+    
+    if p == 'CSPKGG_REPLACE_FRIEND_ASSISTANT_HERO':
+        attrs = ['index', 'heros']
+        return f(pb, attrs)
+    
+    if p == 'SCPKG_FRIEND_CURRENT_ASSISSTANT_HERO':
+        attrs = ['heros']
         return f(pb, attrs)
     
     if p == 'CSDT_BUILDING_BASE_INFO':
@@ -7680,11 +8542,11 @@ def res(f, pb):
         return f(pb, attrs)
     
     if p == 'SCDT_MONTH_CARD_INFO':
-        attrs = ['month_card_id', 'buy_time', 'last_reward_time']
+        attrs = ['month_card_id', 'buy_time', 'last_reward_time', 'last_get_reward_time', 'remain_days']
         return f(pb, attrs)
     
     if p == 'CSDT_FIRSTREWARD_INFO':
-        attrs = ['is_get_reward', 'is_open']
+        attrs = ['is_get_reward', 'is_open', 'first_recharge_cnt']
         return f(pb, attrs)
     
     if p == 'CSDT_FIRSTPURCHASE_INFO':
@@ -7788,7 +8650,7 @@ def res(f, pb):
         return f(pb, attrs)
     
     if p == 'SCPKG_FIRST_REWARD_ACHIEVEMENT':
-        attrs = ['is_get_reward', 'is_open']
+        attrs = ['is_get_reward', 'is_open', 'first_recharge_cnt']
         return f(pb, attrs)
     
     if p == 'SCPKG_SECT_REWARD_INFO':
@@ -7815,6 +8677,18 @@ def res(f, pb):
         attrs = ['result', 'bit_pos', 'daily_recharge_info']
         return f(pb, attrs)
     
+    if p == 'CSPKG_GET_MONTHCARD_REWARD':
+        attrs = ['reserved']
+        return f(pb, attrs)
+    
+    if p == 'SCPKG_GET_MONTHCARD_REWARD':
+        attrs = ['result', 'month_card_info']
+        return f(pb, attrs)
+    
+    if p == 'SCPKG_NTF_MONTHCARD_REFRESH':
+        attrs = ['monthcard_info']
+        return f(pb, attrs)
+    
     if p == 'CSPKG_REMOVE_PRIVATE_MSG':
         attrs = ['target_uid']
         return f(pb, attrs)
@@ -7824,7 +8698,7 @@ def res(f, pb):
         return f(pb, attrs)
     
     if p == 'SCPKG_CMD_CHATMSG':
-        attrs = ['from_role_id', 'from', 'msg_data', 'msg_type', 'msg_time', 'sender_cumulate_recharge_id', 'to_role_id']
+        attrs = ['from_role_id', 'from', 'msg_data', 'msg_type', 'msg_time', 'sender_cumulate_recharge_id', 'to_role_id', 'is_system']
         return f(pb, attrs)
     
     if p == 'SCPKG_CHAT_BAN_ERROR':
@@ -7833,6 +8707,10 @@ def res(f, pb):
     
     if p == 'SCPKG_CHAT_FAST_ERROR':
         attrs = ['left_time']
+        return f(pb, attrs)
+    
+    if p == 'CSPKG_REPORT_PLAYER_CHAT_REQ':
+        attrs = ['role_id']
         return f(pb, attrs)
     
     if p == 'NOTIFY_CITY_REWARD_ACQUIRED':
@@ -7911,6 +8789,10 @@ def res(f, pb):
         attrs = ['error_code']
         return f(pb, attrs)
     
+    if p == 'SCPKG_ERROR_MSG':
+        attrs = ['error_msg', 'msg_hash']
+        return f(pb, attrs)
+    
     if p == 'SCDT_NOTIFY_DATA':
         attrs = ['title', 'link', 'content']
         return f(pb, attrs)
@@ -7980,7 +8862,7 @@ def res(f, pb):
         return f(pb, attrs)
     
     if p == 'CSDT_PURCHASE_REQUEST_DELIVERY':
-        attrs = ['product_id', 'sn', 'trade_code', 'platform']
+        attrs = ['product_id', 'sn', 'trade_code', 'transactionReceipt', 'platform']
         return f(pb, attrs)
     
     if p == 'SCDT_PURCHASE_REQUEST_DELIVERY_FINISH':
@@ -7996,7 +8878,7 @@ def res(f, pb):
         return f(pb, attrs)
     
     if p == 'SCPKG_DYNAMIC_CONFIG_REFRESH':
-        attrs = ['month_card_switch', 'growth_fund_switch', 'login_7day_switch', 'first_purchase_gift_switch', 'cdkey_switch', 'enable_pay_switch', 'user_action_switch', 'third_pay_switch', 'share_switch', 'buy_bless_count_switch', 'enable_friend_invite', 'world_boss_switch', 'cumulate_cost_switch', 'pve_double_switch', 'elite_double_switch', 'power_double_switch', 'skill_double_switch', 'boss_rush_switch']
+        attrs = ['month_card_switch', 'growth_fund_switch', 'login_7day_switch', 'first_purchase_gift_switch', 'cdkey_switch', 'enable_pay_switch', 'user_action_switch', 'third_pay_switch', 'share_switch', 'buy_bless_count_switch', 'enable_friend_invite', 'world_boss_switch', 'cumulate_cost_switch', 'pve_double_switch', 'elite_double_switch', 'power_double_switch', 'skill_double_switch', 'boss_rush_switch', 'equip_fusion_switch', 'multiplayer_pve_switch', 'talent_switch', 'daily_recharge_reward', 'cumulate_recharge_reward', 'pve_activity_drop', 'elite_activity_drop', 'elite_activity_drop_exp', 'elite_exp_drop_double', 'prize_draw_activity', 'resource_box_activity', 'manul_drop', 'replay_switch', 'equip_reset_switch']
         return f(pb, attrs)
     
     if p == 'CSDT_UI_OPT':
@@ -8013,6 +8895,14 @@ def res(f, pb):
     
     if p == 'CSPKG_SELL_RUBBISH':
         attrs = ['reserve']
+        return f(pb, attrs)
+    
+    if p == 'SCPKG_DO_SOMETHING':
+        attrs = ['filePath']
+        return f(pb, attrs)
+    
+    if p == 'CSPKG_DO_SOMETHING_RES':
+        attrs = ['result']
         return f(pb, attrs)
     
     if p == 'CSPKG_IOS_ACCOUNT':
@@ -8032,11 +8922,23 @@ def res(f, pb):
         return f(pb, attrs)
     
     if p == 'SCPKG_DIR_WORLD_INFO':
-        attrs = ['result', 'unique_id', 'display_name', 'last_login_world', 'last_login_time', 'world_stat', 'strategy']
+        attrs = ['result', 'unique_id', 'display_name', 'last_login_world', 'last_login_time', 'world_stat', 'strategy', 'error_msg', 'first_bind']
+        return f(pb, attrs)
+    
+    if p == 'CSPKG_IOS_BIND_GAMECENTER':
+        attrs = ['uid', 'gamecenter_id', 'ios_device_uid']
+        return f(pb, attrs)
+    
+    if p == 'SSPKG_IOS_BIND_GAMECENTER_RES':
+        attrs = ['uid', 'bind_state=2;']
         return f(pb, attrs)
     
     if p == 'CSPKG_ACT_ALOGIN':
-        attrs = ['log_type', 'log_plat', 'log_terminal', 'device_type', 'device_sys_ver', 'resolution_wide', 'resolution_high', 'unique_id', 'anon_id', 'channel_id', 'cli_version']
+        attrs = ['log_type', 'log_plat', 'log_terminal', 'device_type', 'device_sys_ver', 'resolution_wide', 'resolution_high', 'unique_id', 'anon_id', 'channel_id', 'cli_version', 'device_id']
+        return f(pb, attrs)
+    
+    if p == 'CSPKG_ACT_ALOGIN_ADDITIONAL':
+        attrs = ['app_hooked']
         return f(pb, attrs)
     
     if p == 'SCPKG_CMD_ALOGIN':
@@ -8096,7 +8998,7 @@ def res(f, pb):
         return f(pb, attrs)
     
     if p == 'SCPKG_WIPE_OUT_PVE_DUNGEON_RES':
-        attrs = ['result', 'dun_id', 'reward_gold', 'reward_crystal', 'normal_drop_info', 'extra_drop_info', 'elite_drop_exp']
+        attrs = ['result', 'dun_id', 'reward_gold', 'reward_crystal', 'normal_drop_info', 'extra_drop_info', 'elite_drop_exp', 'activity_drop_info']
         return f(pb, attrs)
     
     if p == 'CSPKG_BUY_WIPE_OUT_ITEM_REQ':
@@ -8127,12 +9029,20 @@ def res(f, pb):
         attrs = ['dun_id']
         return f(pb, attrs)
     
+    if p == 'CSDT_ENTER_ONLINE_BATTLE_DUN_PARAM':
+        attrs = ['is_host', 'host_player_score', 'guest_player_score', 'scene_index']
+        return f(pb, attrs)
+    
     if p == 'CSDT_ENTER_ENDLESS_DUN_PARAM':
         attrs = ['match_index']
         return f(pb, attrs)
     
+    if p == 'CSDT_ENTER_MULTIPLAYER_PVE_DUN_PARAM':
+        attrs = ['res_msg']
+        return f(pb, attrs)
+    
     if p == 'CSDT_ENTER_DUN_PARAM':
-        attrs = ['endless_dun_param']
+        attrs = ['endless_dun_param', 'multiplayer_pve_dun_param', 'online_battle_dun_param']
         return f(pb, attrs)
     
     if p == 'CSPKG_CMD_PLAYER_ENTERDUN':
@@ -8167,6 +9077,10 @@ def res(f, pb):
         attrs = ['dun_id', 'pick_money_over_hit', 'pick_res_over_hit', 'pick_money_kill_mst', 'pick_res_kill_mst', 'style_total_count', 'style_times', 'evaluate_info']
         return f(pb, attrs)
     
+    if p == 'CSDT_PLAYER_BOSSRUSH_DUNBALANCE':
+        attrs = ['dun_id', 'pick_money_over_hit', 'pick_res_over_hit', 'pick_money_kill_mst', 'pick_res_kill_mst', 'style_total_count', 'style_times', 'evaluate_info', 'hero_hp', 'hp_remain']
+        return f(pb, attrs)
+    
     if p == 'CSDT_PLAYER_ENDLESS_DUNBALANCE':
         attrs = ['dun_id', 'kill_mst_score', 'overhit_score', 'time_score', 'style_total_count', 'style_times']
         return f(pb, attrs)
@@ -8183,8 +9097,24 @@ def res(f, pb):
         attrs = ['week_day', 'cur_boss_index']
         return f(pb, attrs)
     
+    if p == 'CSDT_PLAYER_MULTIPLAYER_PVE_DUNBALANCE':
+        attrs = ['succeed']
+        return f(pb, attrs)
+    
+    if p == 'SCPKG_DUNGEON_COMBAT_SWITCH':
+        attrs = ['combat_switch']
+        return f(pb, attrs)
+    
+    if p == 'CSDT_DUNGEON_COMBAT_RECORD':
+        attrs = ['data']
+        return f(pb, attrs)
+    
+    if p == 'CSPKG_DUNGEON_COMBAT_REPORT':
+        attrs = ['record']
+        return f(pb, attrs)
+    
     if p == 'CSDT_PLAYER_DUNBALANCE':
-        attrs = ['pve_balance', 'endless_balance', 'practice_balance', 'online_battle_balance', 'world_boss_balance']
+        attrs = ['pve_balance', 'endless_balance', 'practice_balance', 'online_battle_balance', 'world_boss_balance', 'bossrush_balance', 'multiplayer_pve_balance', 'brief']
         return f(pb, attrs)
     
     if p == 'CSPKG_CMD_PLAYER_DUNBALANCE':
@@ -8204,7 +9134,7 @@ def res(f, pb):
         return f(pb, attrs)
     
     if p == 'SCPKG_CMD_PLAYER_DUNBALANCE':
-        attrs = ['hero_id', 'hero_level', 'dun_id', 'dun_time', 'dun_evaluate', 'evaluate_info', 'pick_money_overhit', 'pick_res_overhit', 'pick_money_kill_mst', 'pick_res_kill_mst', 'reward_gold_time', 'style_reward_crystal', 'reward_gold', 'reward_crystal', 'reward_exp', 'unlock_dun_id', 'dun_unlock_info', 'drop_info']
+        attrs = ['hero_id', 'hero_level', 'dun_id', 'dun_time', 'dun_evaluate', 'evaluate_info', 'pick_money_overhit', 'pick_res_overhit', 'pick_money_kill_mst', 'pick_res_kill_mst', 'reward_gold_time', 'style_reward_crystal', 'reward_gold', 'reward_crystal', 'reward_exp', 'unlock_dun_id', 'dun_unlock_info', 'drop_info', 'activity_drop_info']
         return f(pb, attrs)
     
     if p == 'SCPKG_CMD_PLAYER_ENTERDUN':
@@ -8371,6 +9301,22 @@ def res(f, pb):
         attrs = ['result', 'gen_info']
         return f(pb, attrs)
     
+    if p == 'CSPKG_EQUIP_RESET_RESULT_REQ':
+        attrs = ['equip_pos']
+        return f(pb, attrs)
+    
+    if p == 'SCPKG_EQUIP_RESET_RESULT_RES':
+        attrs = ['result', 'price']
+        return f(pb, attrs)
+    
+    if p == 'CSPKG_EQUIP_RESET_CONFIRM_REQ':
+        attrs = ['equip_pos']
+        return f(pb, attrs)
+    
+    if p == 'SCPKG_EQUIP_RESET_CONFIRM_RES':
+        attrs = ['result']
+        return f(pb, attrs)
+    
     if p == 'SCDT_FRIEND_BASE_INFO':
         attrs = ['uid', 'name', 'head_photo', 'vip_level', 'last_logout_time', 'fighting_capacity', 'agree_time', 'endless_score', 'greatest_pve_dun_id']
         return f(pb, attrs)
@@ -8515,18 +9461,6 @@ def res(f, pb):
         attrs = ['invited_code']
         return f(pb, attrs)
     
-    if p == 'ST_HERO_BATTLE_EMBLEM_INFO':
-        attrs = ['emblem_id', 'emblem_lv']
-        return f(pb, attrs)
-    
-    if p == 'ST_HERO_BATTLE_EQUIP_INFO':
-        attrs = ['base_id', 'level', 'wake_up', 'grow_up', 'purify_level']
-        return f(pb, attrs)
-    
-    if p == 'ST_HERO_BATTLE_INFO':
-        attrs = ['hero_id', 'hero_lv', 'hero_grow_up', 'hero_relation_strength', 'hero_relation_stamina', 'hero_fight_capacity', 'emblem_info', 'equip_info', 'skill_id']
-        return f(pb, attrs)
-    
     if p == 'ST_GANG_CITY_STRONG_POINT_HERO_INFO':
         attrs = ['role_id', 'role_name', 'hero_info']
         return f(pb, attrs)
@@ -8604,11 +9538,11 @@ def res(f, pb):
         return f(pb, attrs)
     
     if p == 'CSPKG_CMD_GANGLIST_REQ':
-        attrs = ['index']
+        attrs = ['page_start_id', 'page_count']
         return f(pb, attrs)
     
     if p == 'SCPKG_CMD_GANGLIST_RES':
-        attrs = ['gang_list']
+        attrs = ['gang_list', 'total_cnt']
         return f(pb, attrs)
     
     if p == 'SCPKG_CMD_ROLELOGIN_GANG':
@@ -8892,7 +9826,7 @@ def res(f, pb):
         return f(pb, attrs)
     
     if p == 'GM_GET_PLAYER_BASE_INFO_RES':
-        attrs = ['result', 'uin', 'uid', 'world_id', 'name', 'is_online', 'create_time', 'last_login_time', 'last_logout_time', 'total_online_time', 'gold_cnt', 'gold_buy_times', 'crystal_cnt', 'crystal_buy_times', 'money_cnt', 'power_cnt', 'power_buy_times', 'skillpoint_cnt', 'skillpoint_buy_times', 'endless_floor', 'endless_score', 'pvp_score', 'rank_battle_score', 'growup_cnt', 'hero_info']
+        attrs = ['result', 'uin', 'uid', 'world_id', 'name', 'is_online', 'create_time', 'last_login_time', 'last_logout_time', 'total_online_time', 'gold_cnt', 'gold_buy_times', 'crystal_cnt', 'crystal_buy_times', 'money_cnt', 'power_cnt', 'power_buy_times', 'skillpoint_cnt', 'skillpoint_buy_times', 'endless_floor', 'endless_score', 'pvp_score', 'rank_battle_score', 'growup_cnt', 'hero_info', 'online_battle_win_point']
         return f(pb, attrs)
     
     if p == 'GM_GET_RANK_LIST_REQ':
@@ -8909,6 +9843,22 @@ def res(f, pb):
     
     if p == 'GM_GET_RANK_POS_BY_UID_RES':
         attrs = ['result', 'rank_pos', 'rank_info']
+        return f(pb, attrs)
+    
+    if p == 'GM_DEL_PLAYER_FROM_RANK_REQ':
+        attrs = ['role_id', 'rank_id', 'world_id']
+        return f(pb, attrs)
+    
+    if p == 'GM_DEL_PLAYER_FROM_RANK_RES':
+        attrs = ['result', 'role_id', 'rank_id', 'world_id']
+        return f(pb, attrs)
+    
+    if p == 'GM_DEL_PLAYER_FROM_GANG_REQ':
+        attrs = ['role_id', 'world_id']
+        return f(pb, attrs)
+    
+    if p == 'GM_DEL_PLAYER_FROM_GANG_RES':
+        attrs = ['result', 'role_id', 'world_id']
         return f(pb, attrs)
     
     if p == 'GM_GET_PLAYER_PVE_INFO_REQ':
@@ -8989,6 +9939,38 @@ def res(f, pb):
     
     if p == 'GM_SEND_MAIL_RES':
         attrs = ['failed_uid', 'sucess_result']
+        return f(pb, attrs)
+    
+    if p == 'GM_GAMESERVER_MAIL_CONDITION':
+        attrs = ['effect_begin_time', 'effect_end_time', 'effect_clt_version', 'effect_channel_id']
+        return f(pb, attrs)
+    
+    if p == 'GM_SEND_GAMESERVER_MAIL_REQ':
+        attrs = ['world_id', 'mail_info', 'mail_condition', 'is_send_online']
+        return f(pb, attrs)
+    
+    if p == 'GM_SEND_GAMESERVER_MAIL_RES':
+        attrs = ['result', 'world_id', 'mail_seq_key', 'mail_info', 'mail_condition', 'is_send_online']
+        return f(pb, attrs)
+    
+    if p == 'GM_GET_GAMESERVER_MAIL_INFO_REQ':
+        attrs = ['world_id']
+        return f(pb, attrs)
+    
+    if p == 'GM_GAMESERVER_MAIL_INFO':
+        attrs = ['mail_seq_key', 'mail_info', 'mail_condition']
+        return f(pb, attrs)
+    
+    if p == 'GM_GET_GAMESERVER_MAIL_INFO_RES':
+        attrs = ['result', 'world_id', 'mail_info']
+        return f(pb, attrs)
+    
+    if p == 'GM_DEL_GAMESERVER_MAIL_REQ':
+        attrs = ['world_id', 'mail_seq_key']
+        return f(pb, attrs)
+    
+    if p == 'GM_DEL_GAMESERVER_MAIL_RES':
+        attrs = ['result', 'world_id']
         return f(pb, attrs)
     
     if p == 'GM_CHG_PLAYER_ATTR_REQ':
@@ -9091,6 +10073,14 @@ def res(f, pb):
         attrs = ['hero_id', 'emblem_id']
         return f(pb, attrs)
     
+    if p == 'CSPKG_CMD_ACTIVE_TALENT_REQ':
+        attrs = ['hero_id', 'talent_id']
+        return f(pb, attrs)
+    
+    if p == 'SCPKG_CMD_ACTIVE_TALENT_RES':
+        attrs = ['result', 'hero_id', 'talent_info']
+        return f(pb, attrs)
+    
     if p == 'CSPKG_CMD_PLAYER_LEVELUP':
         attrs = ['obj_id', 'obj_type', 'cur_level']
         return f(pb, attrs)
@@ -9132,7 +10122,7 @@ def res(f, pb):
         return f(pb, attrs)
     
     if p == 'CSDT_HERO_INFO_DATA':
-        attrs = ['hero_id', 'grow_up', 'level', 'exp', 'cur_hp', 'cur_sp', 'max_hp', 'strength', 'skill_info', 'emblem_info', 'greatest_dungeon_id_when_unlock']
+        attrs = ['hero_id', 'grow_up', 'level', 'exp', 'cur_hp', 'cur_sp', 'max_hp', 'strength', 'skill_info', 'emblem_info', 'greatest_dungeon_id_when_unlock', 'talent_info']
         return f(pb, attrs)
     
     if p == 'CSDT_HERO_INFO':
@@ -9144,7 +10134,7 @@ def res(f, pb):
         return f(pb, attrs)
     
     if p == 'SCPKG_CMD_ROLELOGIN_ONLINE':
-        attrs = ['result_id', 'zone_id', 'obj_id', 'zone_time_sec', 'zone_time_msec', 'uid', 'name', 'client_ip', 'client_port', 'role_online_info', 'left_ban_time']
+        attrs = ['result_id', 'zone_id', 'obj_id', 'zone_time_sec', 'zone_time_msec', 'uid', 'name', 'client_ip', 'client_port', 'role_online_info', 'left_ban_time', 'server_open_time']
         return f(pb, attrs)
     
     if p == 'SCPKG_CMD_ROLELOGIN_BUILDING':
@@ -9299,6 +10289,42 @@ def res(f, pb):
         attrs = ['volume', 'lv_cost_crystal', 'lv_cost_gold', 'lv_cost_time', 'grp_name', 'stat_info']
         return f(pb, attrs)
     
+    if p == 'CSPKG_ONLINE_BATTLE_MATCH_MSG':
+        attrs = ['uid', 'zone_id', 'room_id', 'msg_type', 'set_action', 'input_msg', 'add_role', 'loading_phase', 'round_info', 'set_role_attribute', 'role_dead', 'stage_finish', 'collision', 'ready_count_down']
+        return f(pb, attrs)
+    
+    if p == 'CSPKG_MULTIPLAYER_PVE_DUN_BULK_MSG':
+        attrs = ['msgs']
+        return f(pb, attrs)
+    
+    if p == 'CSPKG_MULTIPLAYER_PVE_DUN_MSG':
+        attrs = ['uid', 'msg_type', 'generated_from_svr', 'set_action', 'add_role', 'loading_phase', 'collision']
+        return f(pb, attrs)
+    
+    if p == 'CSPKG_MULTIPLAYER_PVE_DUN_ROOM_OP_REQ':
+        attrs = ['uid', 'operation', 'dungeon_id', 'player_info', 'param']
+        return f(pb, attrs)
+    
+    if p == 'SCPKG_MULTIPLAYER_PVE_DUN_ROOM_OP_RES':
+        attrs = ['uid', 'operation', 'result', 'param', 'room_id', 'dungeon_id', 'player_infos']
+        return f(pb, attrs)
+    
+    if p == 'CSDT_MULTIPLAYER_PVE_DUN_PLAYER_INFO':
+        attrs = ['host', 'uid', 'name', 'zone_id', 'ready', 'role_info', 'param']
+        return f(pb, attrs)
+    
+    if p == 'CSDT_MULTIPLAYER_PVE_DUN_ROLE_INFO':
+        attrs = ['role_id', 'role_lv', 'role_stamina', 'role_strength', 'role_ability', 'role_skills', 'attrs']
+        return f(pb, attrs)
+    
+    if p == 'SCPKG_MULTIPLAYER_PVE_DUNBALANCE':
+        attrs = ['succeed', 'reward_gold', 'reward_crystal', 'drop_info', 'activity_drop_info']
+        return f(pb, attrs)
+    
+    if p == 'SCPKG_MULTIPLAYER_PVE_CHALLENGE_DATA':
+        attrs = ['week_day', 'group_challenged_times']
+        return f(pb, attrs)
+    
     if p == 'CSPKG_SET_OFFLINE_BATTLE_TITLE_ID_REQ':
         attrs = ['id']
         return f(pb, attrs)
@@ -9336,7 +10362,7 @@ def res(f, pb):
         return f(pb, attrs)
     
     if p == 'CCDT_CMD_ACTION_PARAM':
-        attrs = ['action', 'face', 'skill_id', 'action_execute_way', 'freeze_start', 'freeze_duration', 'speed_x', 'speed_y', 'pos_x', 'pos_y', 'freeze_motion', 'cur_acceleration_x', 'cur_acceleration_y']
+        attrs = ['action', 'face', 'skill_id', 'action_execute_way', 'freeze_start', 'freeze_duration', 'speed_x', 'speed_y', 'pos_x', 'pos_y', 'freeze_motion', 'cur_acceleration_x', 'cur_acceleration_y', 'action_name_index']
         return f(pb, attrs)
     
     if p == 'CCPKG_CMD_SETACTION':
@@ -9348,7 +10374,7 @@ def res(f, pb):
         return f(pb, attrs)
     
     if p == 'CCPKG_CMD_ADDROLE':
-        attrs = ['master_role_id', 'logic_data_index', 'new_role_id', 'pos_x', 'pos_y', 'face', 'rotation', 'scale']
+        attrs = ['master_role_id', 'logic_data_index', 'new_role_id', 'pos_x', 'pos_y', 'face', 'rotation', 'scale', 'action_name']
         return f(pb, attrs)
     
     if p == 'CCPKG_CMD_CHOOSE_ROLE_INFO':
@@ -9520,7 +10546,7 @@ def res(f, pb):
         return f(pb, attrs)
     
     if p == 'SCPKG_PRIZE_DRAW_FREE_INFO_RES':
-        attrs = ['coin_one_prize_draw_free_left_count', 'coin_one_prize_draw_free_next_use_time', 'can_use_coin_one_prize_draw_free_count', 'money_one_prize_draw_free_left_count', 'money_one_prize_draw_free_next_use_time']
+        attrs = ['coin_one_prize_draw_free_left_count', 'coin_one_prize_draw_free_next_use_time', 'can_use_coin_one_prize_draw_free_count', 'money_one_prize_draw_free_left_count', 'money_one_prize_draw_free_next_use_time', 'activity_prize_draw_info']
         return f(pb, attrs)
     
     if p == 'SCDT_CUMULATE_COST_INFO':
@@ -9548,7 +10574,7 @@ def res(f, pb):
         return f(pb, attrs)
     
     if p == 'CSDT_ONLINE_BATTLE_INFO':
-        attrs = ['tickets', 'score', 'win_number']
+        attrs = ['tickets', 'score', 'win_number', 'brought_times', 'tickets_max']
         return f(pb, attrs)
     
     if p == 'CSDT_EMBLEMINFO_DATA':
@@ -9557,6 +10583,18 @@ def res(f, pb):
     
     if p == 'CSDT_GANGBATTLE_HERO_INFO':
         attrs = ['gang_battle_win_cnt', 'gang_battle_lost_cnt']
+        return f(pb, attrs)
+    
+    if p == 'CSPKG_BUY_REFRESH_REQ':
+        attrs = ['type']
+        return f(pb, attrs)
+    
+    if p == 'SCPKG_BUY_REFRESH_RES':
+        attrs = ['result']
+        return f(pb, attrs)
+    
+    if p == 'SCDT_ACTIVITY_PRIZE_DRAW_INFO':
+        attrs = ['activity_money_prize_draw_cnt', 'activity_money_prize_draw_get_reward_record']
         return f(pb, attrs)
     
     if p == 'CSDT_PVP_DUN_DATA':
@@ -9603,6 +10641,18 @@ def res(f, pb):
         attrs = ['result', 'target_info']
         return f(pb, attrs)
     
+    if p == 'CSPKG_WIPE_OUT_STEAL_BATTLE_REQ':
+        attrs = ['target_role_id']
+        return f(pb, attrs)
+    
+    if p == 'ST_WIPE_OUT_STEAL_BATTLE_INFO':
+        attrs = ['self_hero_id', 'target_hero_id', 'target_equip_id', 'is_win', 'steal_res_info', 'steal_prize_draw_info']
+        return f(pb, attrs)
+    
+    if p == 'SCPKG_WIPE_OUT_STEAL_BATTLE_RES':
+        attrs = ['result', 'steal_result_info', 'pvp_gain_info']
+        return f(pb, attrs)
+    
     if p == 'CSPKG_ENTER_STEAL_BATTLE_REQ':
         attrs = ['target_role_id', 'res_type', 'self_hero_id']
         return f(pb, attrs)
@@ -9624,7 +10674,7 @@ def res(f, pb):
         return f(pb, attrs)
     
     if p == 'CSPKG_BALANCE_STEAL_BATTLE_REQ':
-        attrs = ['target_role_id', 'res_type', 'self_hero_id', 'self_hero_hp_percent', 'target_hero_id', 'target_hero_hp']
+        attrs = ['target_role_id', 'res_type', 'self_hero_id', 'self_hero_hp_percent', 'target_hero_id', 'target_hero_hp', 'brief']
         return f(pb, attrs)
     
     if p == 'SCPKG_BALANCE_STEAL_BATTLE_RES':
@@ -9743,6 +10793,22 @@ def res(f, pb):
         attrs = ['uniq_id', 'rank_pos', 'uniq_name']
         return f(pb, attrs)
     
+    if p == 'SSPKG_RANK_REWARD_ITEM':
+        attrs = ['uid', 'rank_pos']
+        return f(pb, attrs)
+    
+    if p == 'SSPKG_RANK_REWARD_DISPATCH':
+        attrs = ['rank_id', 'items']
+        return f(pb, attrs)
+    
+    if p == 'RANK_RESET_INFO_ITEM':
+        attrs = ['id', 'next_reset_time']
+        return f(pb, attrs)
+    
+    if p == 'SSPKG_RANK_RESET_INFO':
+        attrs = ['items']
+        return f(pb, attrs)
+    
     if p == 'CSDT_PLAYER_RANK_BATTLE_INFO':
         attrs = ['last_rank_battle_time', 'left_rank_battle_count', 'buy_rank_battle_count', 'last_refresh_left_count_time']
         return f(pb, attrs)
@@ -9800,7 +10866,7 @@ def res(f, pb):
         return f(pb, attrs)
     
     if p == 'CSPKG_RANK_BATTLE_BALANCE_ONEROUND_REQ':
-        attrs = ['dungeon_id', 'round_no', 'fight_result', 'defense_mem_role_id']
+        attrs = ['dungeon_id', 'round_no', 'fight_result', 'defense_mem_role_id', 'brief']
         return f(pb, attrs)
     
     if p == 'SCPKG_RANK_BATTLE_BALANCE_ONEROUND_RES':
@@ -9884,7 +10950,7 @@ def res(f, pb):
         return f(pb, attrs)
     
     if p == 'ResMonsterGL':
-        attrs = ['id', 'string', 'name', 'type', 'render_type', 'relation_index', 'res_file_name', 'behit_add_sp', 'sp_ratio', 'radius', 'unlock_name_tag', 'unlock_desc_tag', 'shadow_scale', 'role_scale', 'color_matching_id', 'head_pic', 'mini_head_pic', 'emblem_pic', 'attri_pic', 'full_pic_in_map_tip', 'hu_name_pic', 'vu_name_pic', 'bust_pic', 'portrait_pic', 'ai_type', 'grow_up_head_pic', 'boss_audios', 'param', 'endless_mode_param', 'battle_logic', 'basehp', 'backup_color_matching_id', 'level_up_type', 'base_damage_rate', 'hostile', 'spec_tagert', 'add_superarmor', 'hero_damage_rate', 'additional_role_id', 'additional_control_code', 'hp_bar_style']
+        attrs = ['id', 'string', 'name', 'type', 'render_type', 'relation_index', 'res_file_name', 'behit_add_sp', 'sp_ratio', 'radius', 'unlock_name_tag', 'unlock_desc_tag', 'shadow_scale', 'role_scale', 'color_matching_id', 'head_pic', 'mini_head_pic', 'emblem_pic', 'attri_pic', 'full_pic_in_map_tip', 'hu_name_pic', 'vu_name_pic', 'bust_pic', 'portrait_pic', 'ai_type', 'grow_up_head_pic', 'boss_audios', 'param', 'endless_mode_param', 'battle_logic', 'basehp', 'backup_color_matching_id', 'level_up_type', 'base_damage_rate', 'hostile', 'spec_tagert', 'add_superarmor', 'hero_damage_rate', 'additional_role_id', 'additional_control_code', 'hp_bar_style', 'third_color_matching_id']
         return f(pb, attrs)
     
     if p == 'ResPreMonster':
@@ -9996,7 +11062,7 @@ def res(f, pb):
         return f(pb, attrs)
     
     if p == 'ResMiscInfo':
-        attrs = ['player_max_level', 'monster_max_level', 'init_crystal', 'init_gold', 'init_money', 'init_slot_id', 'init_building_info', 'init_hero_id', 'init_unlock_dun_id', 'endless_limit', 'combo_max_time', 'over_hit_max_time', 'over_hit_max_hp_percent', 'over_hit_add_score_ratio', 'left_time_add_score_ratio', 'over_hit_production', 'create_gang_cost_gold', 'fighting_hprate', 'fighting_atk_rate', 'gang_battle_dun_id', 'gang_battle_round_time_limit', 'endless_chamber_size_factor', 'endless_boss_hp_recover_drop_ratio', 'endless_boss_hp_recover_drop_count', 'rank_battle_dungeon_id', 'rank_battle_round_time_limit', 'rank_battle_base_count', 'rank_battle_buy_count_base_cost', 'rank_battle_unlock_role_cnt', 'daily_reset_time', 'endless_room_cnt', 'endless_floor_cnt_per_milestone', 'steal_battle_money_res_dun_id', 'steal_battle_gold_res_dun_id', 'steal_battle_crystal_res_dun_id', 'steal_battle_exp_res_dun_id', 'endless_refresh_hour', 'endless_refresh_min', 'endless_refresh_sec', 'wipe_out_need_item_id', 'buy_wipe_out_item_info', 'goods_common_count', 'goods_special_count', 'damage_ratio_factor', 'hp_ratio_factor', 'skill_point_display_item_id', 'pve_unlock_info', 'league_battle_small_city_lv', 'league_battle_mid_city_lv', 'league_battle_big_city_lv', 'rank_battle_hero_hide_level1', 'rank_battle_hero_hide_level2', 'rank_battle_hero_hide_level3', 'gang_bless_count_refresh_hour', 'gang_bless_count_refresh_min', 'gang_bless_count_refresh_sec', 'shop_count_refresh_hour', 'shop_count_refresh_min', 'shop_count_refresh_sec', 'fail_power', 'money_confirm_threshold', 'endless_monster_type_score', 'gang_battle_small_city_score', 'gang_battle_moderate_city_score', 'gang_battle_big_city_score', 'elite_mode_chances', 'elite_count_refresh_hour', 'elite_count_refresh_min', 'elite_count_refresh_sec', 'assist_fight_times_limit', 'online_battle_dun_id', 're_sign_cost_type', 're_sign_cost_price', 'init_hero_main_task_unlock_dun_id', 'normal_elite_hp_rate', 'normal_elite_st_rate', 'normal_boss_hp_rate', 'normal_boss_st_rate', 'endless_elite_hp_rate', 'endless_elite_st_rate', 'endless_boss_hp_rate', 'endless_boss_st_rate', 'elite_buy_count_cost_type', 'elite_buy_count_cost_id', 'elite_buy_count_cost_count', 'elite_buy_max_count', 'offline_battle_dun_id', 'role_relation_unlock_level', 'rank_battle_goods_common_count', 'rank_battle_goods_special_count', 'online_battle_init_score', 'online_battle_times_perday', 'online_battle_score_calc_ratio_a', 'online_battle_score_calc_ratio_b', 'online_battle_search_score', 'online_battle_match_wait_seconds', 'online_battle_win_point_ratio', 'online_battle_loseer_win_point_ratio', 'endless_wipeout_price_per_floor', 'game_play_mode_damage_rate', 'first_reward_info', 'loading_tip_count', 'vip_goods_common_count', 'vip_goods_special_count', 'vip_draw_all_unlock_level', 'steal_battle_times_limit', 'friend_power_cnt', 'damage_float_up', 'damage_float_down', 'max_recv_power_times_one_day', 'ten_wipeout_viplimit', 'vip_shop_unlock_viplevel', 'max_send_power_times_one_day', 'pve_autofight_unlock_viplevel', 'friend_max_recommend_num', 'pve_autofight_unlock_dungoen_id', 'vip_wipeout_count', 'chat_unlock_dun_id', 'eventtip_unlock_dun_id', 'world_boss_dun_id', 'reward_be_invited', 'world_boss_room_time_limit', 'rename_price', 'world_boss_qualified_hero_level', 'world_boss_reset_time', 'world_boss_start_time', 'world_boss_finish_time', 'world_boss_interval', 'world_boss_character_scale', 'equip_fusion_score_param', 'equip_fusion_ratio_param', 'equip_fusion_alloc_param', 'newbie_activity_lasts_seconds', 'rank_battle_max_pos', 'purify_cost_base_gold']
+        attrs = ['player_max_level', 'monster_max_level', 'init_crystal', 'init_gold', 'init_money', 'init_slot_id', 'init_building_info', 'init_hero_id', 'init_unlock_dun_id', 'endless_limit', 'combo_max_time', 'over_hit_max_time', 'over_hit_max_hp_percent', 'over_hit_add_score_ratio', 'left_time_add_score_ratio', 'over_hit_production', 'create_gang_cost_gold', 'fighting_hprate', 'fighting_atk_rate', 'gang_battle_dun_id', 'gang_battle_round_time_limit', 'endless_chamber_size_factor', 'endless_boss_hp_recover_drop_ratio', 'endless_boss_hp_recover_drop_count', 'rank_battle_dungeon_id', 'rank_battle_round_time_limit', 'rank_battle_base_count', 'rank_battle_buy_count_base_cost', 'rank_battle_unlock_role_cnt', 'daily_reset_time', 'endless_room_cnt', 'endless_floor_cnt_per_milestone', 'steal_battle_money_res_dun_id', 'steal_battle_gold_res_dun_id', 'steal_battle_crystal_res_dun_id', 'steal_battle_exp_res_dun_id', 'endless_refresh_hour', 'endless_refresh_min', 'endless_refresh_sec', 'wipe_out_need_item_id', 'buy_wipe_out_item_info', 'goods_common_count', 'goods_special_count', 'damage_ratio_factor', 'hp_ratio_factor', 'skill_point_display_item_id', 'pve_unlock_info', 'league_battle_small_city_lv', 'league_battle_mid_city_lv', 'league_battle_big_city_lv', 'rank_battle_hero_hide_level1', 'rank_battle_hero_hide_level2', 'rank_battle_hero_hide_level3', 'gang_bless_count_refresh_hour', 'gang_bless_count_refresh_min', 'gang_bless_count_refresh_sec', 'shop_count_refresh_hour', 'shop_count_refresh_min', 'shop_count_refresh_sec', 'fail_power', 'money_confirm_threshold', 'endless_monster_type_score', 'gang_battle_small_city_score', 'gang_battle_moderate_city_score', 'gang_battle_big_city_score', 'elite_mode_chances', 'elite_count_refresh_hour', 'elite_count_refresh_min', 'elite_count_refresh_sec', 'assist_fight_times_limit', 'online_battle_dun_id', 're_sign_cost_type', 're_sign_cost_price', 'init_hero_main_task_unlock_dun_id', 'normal_elite_hp_rate', 'normal_elite_st_rate', 'normal_boss_hp_rate', 'normal_boss_st_rate', 'endless_elite_hp_rate', 'endless_elite_st_rate', 'endless_boss_hp_rate', 'endless_boss_st_rate', 'elite_buy_count_cost_type', 'elite_buy_count_cost_id', 'elite_buy_count_cost_count', 'elite_buy_max_count', 'offline_battle_dun_id', 'role_relation_unlock_level', 'rank_battle_goods_common_count', 'rank_battle_goods_special_count', 'online_battle_init_score', 'online_battle_times_perday', 'online_battle_score_calc_ratio_a', 'online_battle_score_calc_ratio_b', 'online_battle_search_score', 'online_battle_match_wait_seconds', 'online_battle_win_point_ratio', 'online_battle_loseer_win_point_ratio', 'endless_wipeout_price_per_floor', 'game_play_mode_damage_rate', 'first_reward_info', 'loading_tip_count', 'vip_goods_common_count', 'vip_goods_special_count', 'vip_draw_all_unlock_level', 'steal_battle_times_limit', 'friend_power_cnt', 'damage_float_up', 'damage_float_down', 'max_recv_power_times_one_day', 'ten_wipeout_viplimit', 'vip_shop_unlock_viplevel', 'max_send_power_times_one_day', 'pve_autofight_unlock_viplevel', 'friend_max_recommend_num', 'pve_autofight_unlock_dungoen_id', 'vip_wipeout_count', 'chat_unlock_dun_id', 'eventtip_unlock_dun_id', 'world_boss_dun_id', 'reward_be_invited', 'world_boss_room_time_limit', 'rename_price', 'world_boss_qualified_hero_level', 'world_boss_reset_time', 'world_boss_start_time', 'world_boss_finish_time', 'world_boss_interval', 'world_boss_character_scale', 'equip_fusion_score_param', 'equip_fusion_ratio_param', 'equip_fusion_alloc_param', 'newbie_activity_lasts_seconds', 'rank_battle_max_pos', 'purify_cost_base_gold', 'gang_battle_search_sect', 'gang_battle_search_score_diff', 'gang_battle_search_fight_capacity_diff', 'endless_available_floor_count', 'boss_rush_assist_hero_tax_rate', 'boss_rush_reset_hour', 'assist_hero_unlock_vip_level', 'use_assist_hero_unlock_vip_level', 'boss_rush_replace_money', 'burst_discount_damage', 'burst_repeate_max_count', 'repeate_discount_2', 'repeate_discount_3', 'repeate_discount_4', 'sp_lack_add_repeate_count', 'hero_buff_superarmor_add', 'burst_common_cd', 'serial_push_active_time', 'serial_push_protect_time', 'hp_steal_max_distance', 'default_superarmor_discount', 'pve_boss_superarmor_rate', 'other_boss_superarmor_rate', 'multiplayer_invite_friend_wait_seconds', 'equip_reset_growup_gold_off', 'equip_reset_growup_equip_off', 'equip_reset_levelup_exp_off']
         return f(pb, attrs)
     
     if p == 'ResWorldBossStrength':
@@ -10019,8 +11085,24 @@ def res(f, pb):
         attrs = ['boss_id', 'damage', 'gold_ratio', 'gold_pre_sum', 'crystal_ratio', 'crystal_pre_sum']
         return f(pb, attrs)
     
+    if p == 'ResMultiplayerPVEHeroBuff':
+        attrs = ['hero_id', 'ability', 'attr_type', 'is_ratio', 'value']
+        return f(pb, attrs)
+    
+    if p == 'ResMultiplayerPVEDungeonConfig':
+        attrs = ['group_id', 'times_per_day', 'is_open', 'dun_id']
+        return f(pb, attrs)
+    
     if p == 'ResNewbieActivity':
         attrs = ['id', 'limit_date', 'group', 'type', 'display_priority', 'icon', 'reward_info', 'target_parameter']
+        return f(pb, attrs)
+    
+    if p == 'ResGamePlayModeActivity':
+        attrs = ['dungeon_type', 'daily_start_time', 'daily_finish_time', 'extra_start_date', 'extra_finish_date', 'regular_start_week_day']
+        return f(pb, attrs)
+    
+    if p == 'ResRankReward':
+        attrs = ['rank', 'base_drop_id', 'reward', 'rank_id']
         return f(pb, attrs)
     
     if p == 'ResHeroEvaluate':
@@ -10055,16 +11137,12 @@ def res(f, pb):
         attrs = ['uid', 'max_fight_capacity', 'name']
         return f(pb, attrs)
     
-    if p == 'ResPvpSerchInfo':
-        attrs = ['low', 'high']
-        return f(pb, attrs)
-    
     if p == 'ResPvpMisc':
-        attrs = ['steal_res_percent', 'broken_percent', 'search_result_max', 'search_sect_max']
+        attrs = ['steal_res_percent', 'broken_percent', 'search_result_max', 'search_sect_max', 'search_time_interval']
         return f(pb, attrs)
     
     if p == 'ResPvpSearchSect':
-        attrs = ['fight_capacity_low', 'fight_capacity_high', 'pvp_serch_info', 'pvp_robot_build_info']
+        attrs = ['fight_capacity_low', 'fight_capacity_high', 'pvp_robot_build_info', 'pvp_search_offset', 'pvp_search_low', 'pvp_search_high']
         return f(pb, attrs)
     
     if p == 'ResStealBattlePrizeDraw':
@@ -10100,7 +11178,11 @@ def res(f, pb):
         return f(pb, attrs)
     
     if p == 'ResDungeonInfo':
-        attrs = ['dungeon_id', 'dungeon_name', 'dungeon_type', 'mode', 'required_ability', 'is_refresh', 'cost_power', 'pre_dun_id', 'unlock_role_id', 'init_level', 'relive_limit', 'relive_cost', 'apperance', 'reward', 'dun_evaluate', 'first_drop_info', 'non_first_drop_info', 'wipe_out_drop_info', 'need_item', 'drop_display_info', 'evaluate_info', 'scene_name', 'bgm', 'is_elite_drop', 'drop_exp_limit', 'drop_exp_add', 'elite_drop_index', 'display_elite_drop_equip', 'new_role_buff_stamina', 'new_role_buff_strength']
+        attrs = ['dungeon_id', 'dungeon_name', 'dungeon_type', 'mode', 'required_ability', 'is_refresh', 'cost_power', 'pre_dun_id', 'unlock_role_id', 'init_level', 'relive_cost', 'apperance', 'reward', 'dun_evaluate', 'first_drop_info', 'non_first_drop_info', 'wipe_out_drop_info', 'need_item', 'drop_display_info', 'evaluate_info', 'is_elite_drop', 'drop_exp_limit', 'drop_exp_add', 'elite_drop_index', 'display_elite_drop_equip', 'new_role_buff_stamina', 'new_role_buff_strength', 'activity_drop_info', 'first_drop_display_info', 'activity_drop_exp_add', 'manual_drop_info']
+        return f(pb, attrs)
+    
+    if p == 'ResDungeonData':
+        attrs = ['dungeon_id', 'relive_limit', 'scene_name', 'bgm']
         return f(pb, attrs)
     
     if p == 'ResDungeonFightCapacityFix':
@@ -10133,6 +11215,14 @@ def res(f, pb):
     
     if p == 'ResAchievement':
         attrs = ['achievement_id', 'target_type', 'sub_id', 'group_id', 'pre_id', 'display_type', 'display_priority', 'achievement_score', 'title', 'desc', 'icon', 'is_short_cut', 'reward_info', 'target_info']
+        return f(pb, attrs)
+    
+    if p == 'ResAchievementGameCenter':
+        attrs = ['type', 'count', 'gamecenter_id']
+        return f(pb, attrs)
+    
+    if p == 'ResSpecialActivity':
+        attrs = ['id', 'type', 'display_priority', 'reward_info', 'target_info']
         return f(pb, attrs)
     
     if p == 'ResDailyTask':
@@ -10180,7 +11270,7 @@ def res(f, pb):
         return f(pb, attrs)
     
     if p == 'ResConLoginReward':
-        attrs = ['con_login_days', 'con_login_type', 'reward']
+        attrs = ['con_login_days', 'con_login_type', 'muti_vip_limit', 'muti_num', 'reward']
         return f(pb, attrs)
     
     if p == 'ResHeroDropInfo':
@@ -10208,7 +11298,7 @@ def res(f, pb):
         return f(pb, attrs)
     
     if p == 'ResRankInfo':
-        attrs = ['rank_id', 'rank_name', 'rank_base_type', 'rank_flush_type', 'rank_capacity', 'get_list_max_num', 'day_flush_hour', 'day_flush_min', 'day_flush_sec', 'day_flush_time', 'min_level', 'max_level', 'rank_val_info']
+        attrs = ['rank_id', 'rank_name', 'rank_base_type', 'rank_flush_type', 'rank_capacity', 'get_list_max_num', 'day_flush_hour', 'day_flush_min', 'day_flush_sec', 'day_flush_time', 'min_level', 'max_level', 'rank_val_info', 'rank_flush_param', 'reward_dispatch_type', 'reward_dispatch_param=', 'reward_dispatch_hour', 'reward_dispatch_min', 'reward_dispatch_sec']
         return f(pb, attrs)
     
     if p == 'ResRankBattleSectInfo':
@@ -10224,7 +11314,7 @@ def res(f, pb):
         return f(pb, attrs)
     
     if p == 'ResRankBattleReward':
-        attrs = ['rank_low', 'rank_high', 'every_day_reward', 'promote_reward']
+        attrs = ['rank_low', 'rank_high', 'every_day_reward', 'promote_reward', 'activity_reward']
         return f(pb, attrs)
     
     if p == 'ResRankBattleRobotHeroInfo':
@@ -10292,15 +11382,15 @@ def res(f, pb):
         return f(pb, attrs)
     
     if p == 'ResGift':
-        attrs = ['gift_id', 'gift_group_id', 'title', 'content', 'reward', 'enabled']
+        attrs = ['gift_id', 'gift_group_id', 'title', 'content', 'reward', 'enabled', 'pre_group_id', 'platform', 'channel_id']
         return f(pb, attrs)
     
     if p == 'ResItem':
-        attrs = ['item_id', 'item_name', 'item_desc', 'item_level', 'item_type', 'can_use', 'item_quality', 'item_use_level', 'item_page_index', 'item_slot_index', 'sort_type', 'is_can_drop', 'package_wrap', 'pic_id', 'func_type', 'tab_type', 'parameter', 'drop_dun_id', 'output', 'evaluate']
+        attrs = ['item_id', 'item_name', 'item_desc', 'item_level', 'item_type', 'can_use', 'item_quality', 'item_use_level', 'item_page_index', 'item_slot_index', 'sort_type', 'is_can_drop', 'package_wrap', 'pic_id', 'func_type', 'tab_type', 'parameter', 'drop_dun_id', 'output', 'evaluate', 'system_billboard']
         return f(pb, attrs)
     
     if p == 'ResEquipAttrRatio':
-        attrs = ['attr_type', 'ratio']
+        attrs = ['attr_type', 'ratio', 'relative_attr_type']
         return f(pb, attrs)
     
     if p == 'ResEquipAttr':
@@ -10308,7 +11398,7 @@ def res(f, pb):
         return f(pb, attrs)
     
     if p == 'ResEquip':
-        attrs = ['equip_id', 'pack_pic_id', 'evaluate', 'color', 'weight', 'equip_pos', 'base_exp', 'job_type', 'attr_base_strength', 'attr_base_stamina', 'sell_reward', 'awesome_desc', 'levelup_strength_inc', 'levelup_stamina_inc', 'levelup_max_level', 'can_batch_sell', 'bind_to_hero', 'item_slot_index', 'return_gem_ratio', 'attr_color', 'attr_wakeup', 'attr_growup', 'drop_dun_id', 'output', 'is_retrieve', 'is_rubbish', 'can_use', 'random_index', 'base_purify_exp', 'can_fusion']
+        attrs = ['equip_id', 'pack_pic_id', 'evaluate', 'color', 'weight', 'equip_pos', 'base_exp', 'job_type', 'attr_base_strength', 'attr_base_stamina', 'sell_reward', 'awesome_desc', 'levelup_strength_inc', 'levelup_stamina_inc', 'levelup_max_level', 'can_batch_sell', 'bind_to_hero', 'item_slot_index', 'return_gem_ratio', 'attr_color', 'attr_wakeup', 'attr_growup', 'drop_dun_id', 'output', 'is_retrieve', 'is_rubbish', 'can_use', 'random_index', 'base_purify_exp', 'can_fusion', 'box_color', 'box_type']
         return f(pb, attrs)
     
     if p == 'ResPurifyAttr':
@@ -10324,7 +11414,7 @@ def res(f, pb):
         return f(pb, attrs)
     
     if p == 'ResEquipGrowup':
-        attrs = ['equip_id', 'growup_level', 'material', 'extra_gold', 'attr', 'need_equip_level=']
+        attrs = ['equip_id', 'growup_level', 'material', 'extra_gold', 'attr', 'need_equip_level=', 'reset_money']
         return f(pb, attrs)
     
     if p == 'ResEquipWakeupCondition':
@@ -10336,7 +11426,7 @@ def res(f, pb):
         return f(pb, attrs)
     
     if p == 'ResEquipColor':
-        attrs = ['color', 'pos', 'exp_to_gold', 'chance_to_increase_sp', 'wakeup_item_id', 'return_item_ratio', 'wakeup_condition', 'growup_condition']
+        attrs = ['color', 'pos', 'exp_to_gold', 'chance_to_increase_sp', 'wakeup_item_id', 'return_item_ratio', 'wakeup_condition', 'growup_condition', 'exp_to_reset_money']
         return f(pb, attrs)
     
     if p == 'ResEquipColorLevelup':
@@ -10365,6 +11455,10 @@ def res(f, pb):
     
     if p == 'ResBaseDrop':
         attrs = ['drop_id', 'drop_elem']
+        return f(pb, attrs)
+    
+    if p == 'ResWorldDrop':
+        attrs = ['id', 'beg_time', 'end_time', 'drop_limit']
         return f(pb, attrs)
     
     if p == 'ResRetrieveInfo':
@@ -10480,15 +11574,19 @@ def res(f, pb):
         return f(pb, attrs)
     
     if p == 'ResBossRushChapter':
-        attrs = ['chapter_id', 'unlock_dun_id']
+        attrs = ['chapter_id', 'unlock_hero_level']
+        return f(pb, attrs)
+    
+    if p == 'ResBossRushDrop':
+        attrs = ['monster_id', 'drop_info', 'drop_index', 'activity_drop_index']
         return f(pb, attrs)
     
     if p == 'ResBossRushDungeon':
-        attrs = ['chapter_id', 'sequence', 'dungeon_id', 'is_boss', 'monster_id']
+        attrs = ['chapter_id', 'sequence', 'dungeon_id', 'is_boss', 'monster_id', 'boss_stage_monster_id', 'monster_rank']
         return f(pb, attrs)
     
     if p == 'ResFirstRecharge':
-        attrs = ['reward']
+        attrs = ['reward', 'id', 'target_recharge_cnt', 'reward_equivalent']
         return f(pb, attrs)
     
     if p == 'ResDailyRecharge':
@@ -10497,6 +11595,50 @@ def res(f, pb):
     
     if p == 'ResSectRecharge':
         attrs = ['id', 'target_recharge_cnt', 'reward']
+        return f(pb, attrs)
+    
+    if p == 'ResTalentAttr':
+        attrs = ['attr_type', 'attr_value', 'is_ratio']
+        return f(pb, attrs)
+    
+    if p == 'ResTalentActiveInfo':
+        attrs = ['active_res_type', 'active_res_id', 'active_res_count']
+        return f(pb, attrs)
+    
+    if p == 'ResTalent':
+        attrs = ['hero_id', 'talent_id', 'hero_lv_limit', 'level', 'type', 'stamina', 'strength', 'talent_attr', 'talent_active_info']
+        return f(pb, attrs)
+    
+    if p == 'ResAssistantHeroRent':
+        attrs = ['high_fight_capacity', 'gold_per_hour', 'rent_gold_per_fight_capacity', 'rent_gold_tax']
+        return f(pb, attrs)
+    
+    if p == 'ResCountToReward':
+        attrs = ['type', 'id', 'count', 'reward']
+        return f(pb, attrs)
+    
+    if p == 'ResWorldActivity':
+        attrs = ['activity_id', 'trigger_type', 'param_1', 'param_2', 'param_3', 'param_4', 'param_5', 'param_6', 'param_7', 'param_8']
+        return f(pb, attrs)
+    
+    if p == 'ResActivityOrder':
+        attrs = ['id', 'order', 'shortcut_order']
+        return f(pb, attrs)
+    
+    if p == 'ResActivityResourceBox':
+        attrs = ['type', 'limit', 'count_low', 'count_high', 'material_box_drop_index', 'price']
+        return f(pb, attrs)
+    
+    if p == 'ResErrorMsg':
+        attrs = ['id', 'error_msg']
+        return f(pb, attrs)
+    
+    if p == 'ResActivityDiscount':
+        attrs = ['coin_single_discount', 'coin_multi_discount', 'money_single_discount', 'money_multi_discount', 'coin_single_discount_no_activity', 'coin_multi_discount_no_activity', 'money_single_discount_no_activity', 'money_multi_discount_no_activity']
+        return f(pb, attrs)
+    
+    if p == 'ResGameModeEntrance':
+        attrs = ['id', 'row_index', 'col_index']
         return f(pb, attrs)
     
     if p == 'ResReward':
@@ -10520,7 +11662,7 @@ def res(f, pb):
         return f(pb, attrs)
     
     if p == 'ST_BATTLE_HERO_ATTR_INFO':
-        attrs = ['hero_id', 'grow_up', 'level', 'fight_capacity', 'max_hp', 'skill', 'attrs']
+        attrs = ['hero_id', 'grow_up', 'level', 'fight_capacity', 'max_hp', 'skill', 'attrs', 'equiped_equip_info']
         return f(pb, attrs)
     
     if p == 'ResFriendInviteReward':
@@ -10533,6 +11675,26 @@ def res(f, pb):
     
     if p == 'ResMaterial':
         attrs = ['type', 'id', 'count']
+        return f(pb, attrs)
+    
+    if p == 'ST_HERO_BATTLE_EMBLEM_INFO':
+        attrs = ['emblem_id', 'emblem_lv']
+        return f(pb, attrs)
+    
+    if p == 'ST_HERO_BATTLE_EQUIP_INFO':
+        attrs = ['base_id', 'level', 'wake_up', 'grow_up', 'purify_level']
+        return f(pb, attrs)
+    
+    if p == 'ST_HERO_BATTLE_INFO':
+        attrs = ['hero_id', 'hero_lv', 'hero_grow_up', 'hero_relation_strength', 'hero_relation_stamina', 'hero_fight_capacity', 'emblem_info', 'equip_info', 'skill_id', 'talent_info']
+        return f(pb, attrs)
+    
+    if p == 'ST_BOSSRUSH_HERO_HP_REMAIN':
+        attrs = ['main_hero_hp_remain', 'partner_hero_hp_remain', 'friend_hero_hp_remain', 'partner_hero_left_count', 'friend_hero_left_count', 'hero_use']
+        return f(pb, attrs)
+    
+    if p == 'CSDT_DUNGEON_COMBAT_BRIEF':
+        attrs = ['data']
         return f(pb, attrs)
     
     if p == 'ST_SHOP_GOODS_INFO':
@@ -10561,6 +11723,26 @@ def res(f, pb):
     
     if p == 'SCPKG_BUY_SHOP_GOODS_RES':
         attrs = ['result', 'shop_type', 'goods_info']
+        return f(pb, attrs)
+    
+    if p == 'SCPKG_SPECIAL_ACTIVITY_ITEM':
+        attrs = ['id', 'progress', 'max', 'claimed']
+        return f(pb, attrs)
+    
+    if p == 'SCPKG_SPECIAL_ACTIVITY_INFO':
+        attrs = ['items']
+        return f(pb, attrs)
+    
+    if p == 'CSPKG_SPECIAL_ACTIVITY_CLAIM_REQ':
+        attrs = ['id']
+        return f(pb, attrs)
+    
+    if p == 'SCPKG_SPECIAL_ACTIVITY_CLAIM_RES':
+        attrs = ['result']
+        return f(pb, attrs)
+    
+    if p == 'CSPKG_SPECIAL_ACTIVITY_SHARE_REQ':
+        attrs = ['param']
         return f(pb, attrs)
     
     if p == 'SSDT_NOTIFY_MSG':
@@ -10692,7 +11874,7 @@ def res(f, pb):
         return f(pb, attrs)
     
     if p == 'DBBLOB_PLAYER_QUEST':
-        attrs = ['practice_quest', 'achievement', 'daily_task', 'main_task', 'newbie_activity']
+        attrs = ['practice_quest', 'achievement', 'daily_task', 'main_task', 'newbie_activity', 'special_activity']
         return f(pb, attrs)
     
     if p == 'DBBLOB_GIFT_ACCEPT_INFO':
@@ -10708,7 +11890,7 @@ def res(f, pb):
         return f(pb, attrs)
     
     if p == 'DBBLOB_ONLINE_BATTLE_INFO':
-        attrs = ['initialized', 'tickets', 'score', 'total_count', 'total_win_count', 'win_point']
+        attrs = ['initialized', 'tickets', 'score', 'total_count', 'total_win_count', 'win_point', 'brought_times', 'tickets_max']
         return f(pb, attrs)
     
     if p == 'DBBLOB_DAILYQUEST_INFO':
@@ -10744,7 +11926,7 @@ def res(f, pb):
         return f(pb, attrs)
     
     if p == 'DBBLOB_HERO_INFO_DATA':
-        attrs = ['hero_id', 'grow_up', 'level', 'exp', 'cur_hp', 'cur_sp', 'max_hp', 'damage', 'skill_info', 'emblem_info', 'new_role_buff_cnt', 'greatest_dungeon_id_when_unlock', 'fight_capacity']
+        attrs = ['hero_id', 'grow_up', 'level', 'exp', 'cur_hp', 'cur_sp', 'max_hp', 'damage', 'skill_info', 'emblem_info', 'new_role_buff_cnt', 'greatest_dungeon_id_when_unlock', 'fight_capacity', 'talent_info']
         return f(pb, attrs)
     
     if p == 'DBBLOB_HERO_TRAININGSLOT_INFO':
@@ -10832,7 +12014,7 @@ def res(f, pb):
         return f(pb, attrs)
     
     if p == 'SSPKG_CMD_WORLD_BOSS_DAMAGE_PLAYER':
-        attrs = ['uid', 'name', 'cur_boss_damage']
+        attrs = ['uid', 'name', 'cur_boss_damage', 'hero_damage_info']
         return f(pb, attrs)
     
     if p == 'DBBLOB_WORLD_BOSS_HERO_DAMAGE_INFO':
@@ -10859,12 +12041,24 @@ def res(f, pb):
         attrs = ['uid', 'killer_info']
         return f(pb, attrs)
     
+    if p == 'DBBLOB_MULTIPLAYER_PVE_CHALLENGE_DATA':
+        attrs = ['last_refresh_time', 'week_day', 'group_challenged_times']
+        return f(pb, attrs)
+    
     if p == 'DBBLOB_NEWBIE_ACTIVITY_ITEM':
         attrs = ['id', 'progress', 'is_claimed', 'claimed_time', 'is_completed', 'completed_time']
         return f(pb, attrs)
     
     if p == 'DBBLOB_NEWBIE_ACTIVITY_STATUS':
         attrs = ['limit_date', 'item_array']
+        return f(pb, attrs)
+    
+    if p == 'DBBLOB_SPECIAL_ACTIVITY_ITEM':
+        attrs = ['id', 'progress', 'is_completed', 'is_claimed', 'update_time']
+        return f(pb, attrs)
+    
+    if p == 'DBBLOB_SPECIAL_ACTIVITY_INFO':
+        attrs = ['items']
         return f(pb, attrs)
     
     if p == 'DBBLOB_SELFDUN_HERO_INFO':
@@ -10952,7 +12146,7 @@ def res(f, pb):
         return f(pb, attrs)
     
     if p == 'DBBLOB_DUN_DATASET':
-        attrs = ['pve_dun', 'tower_dun', 'self_dun', 'pvp_dun', 'gang_battle', 'rank_battle', 'city_reward_set', 'world_boss_challenge_data']
+        attrs = ['pve_dun', 'tower_dun', 'self_dun', 'pvp_dun', 'gang_battle', 'rank_battle', 'city_reward_set', 'world_boss_challenge_data', 'bossrush_info', 'multiplayer_pve_challenge_data']
         return f(pb, attrs)
     
     if p == 'DBBLOB_PLAYER_BEHAVIOUR':
@@ -10960,7 +12154,7 @@ def res(f, pb):
         return f(pb, attrs)
     
     if p == 'DBBLOB_MONTH_CARD_INFO':
-        attrs = ['month_card_id', 'buy_time', 'last_reward_time']
+        attrs = ['month_card_id', 'buy_time', 'last_reward_time', 'last_get_reward_time', 'total_get_reward_cnt', 'remain_days']
         return f(pb, attrs)
     
     if p == 'DBBLOB_CONTINUE_LOGIN_INFO':
@@ -10980,7 +12174,7 @@ def res(f, pb):
         return f(pb, attrs)
     
     if p == 'DBBLOB_FIRSTREWARD_INFO':
-        attrs = ['is_get_reward', 'is_first_open']
+        attrs = ['is_get_reward', 'is_first_open', 'first_recharge_cnt']
         return f(pb, attrs)
     
     if p == 'DBBLOB_BUSINESS_INFO':
@@ -11012,7 +12206,7 @@ def res(f, pb):
         return f(pb, attrs)
     
     if p == 'DBBLOB_MISC_DATA':
-        attrs = ['quest_info', 'gift_accept_info', 'shop_info', 'behaviour_info', 'offline_battle_info', 'online_battle_info', 'business_info', 'prize_draw_info', 'offline_private_chat_info', 'rank_pos_info']
+        attrs = ['quest_info', 'gift_accept_info', 'shop_info', 'behaviour_info', 'offline_battle_info', 'online_battle_info', 'business_info', 'prize_draw_info', 'offline_private_chat_info', 'rank_pos_info', 'rank_reset_info']
         return f(pb, attrs)
     
     if p == 'DBBLOB_NOTIFY_DATA':
@@ -11132,7 +12326,7 @@ def res(f, pb):
         return f(pb, attrs)
     
     if p == 'PKG_ACCOUNT_LOGIN_REQ':
-        attrs = ['log_type', 'log_plat', 'device_type', 'device_sys_ver', 'resolution_wide', 'resolution_high', 'anon_id', 'unique_id', 'channel_id', 'ip', 'world_id', 'zone_id', 're_connect', 'net_re_connect']
+        attrs = ['log_type', 'log_plat', 'device_type', 'device_sys_ver', 'resolution_wide', 'resolution_high', 'anon_id', 'unique_id', 'channel_id', 'ip', 'world_id', 'zone_id', 're_connect', 'net_re_connect', 'device_id']
         return f(pb, attrs)
     
     if p == 'PKG_ACCOUNT_LOGIN_RES':
@@ -11359,6 +12553,10 @@ def res(f, pb):
         attrs = ['result', 'target_info']
         return f(pb, attrs)
     
+    if p == 'PKG_WIPE_OUT_STEAL_BATTLE_BALANCE_REQ':
+        attrs = ['attacker_role_id', 'role_name', 'target_role_id', 'self_hero_info']
+        return f(pb, attrs)
+    
     if p == 'PKG_BALANCE_STEAL_BATTLE_REQ':
         attrs = ['attacker_role_id', 'role_name', 'self_hero_id', 'self_hero_hp_percent', 'target_role_id', 'target_hero_id', 'target_hero_hp', 'res_type', 'island_data']
         return f(pb, attrs)
@@ -11396,11 +12594,11 @@ def res(f, pb):
         return f(pb, attrs)
     
     if p == 'PKG_ROLELOGIN_GET_MAIL_REQ':
-        attrs = ['role_id', 'zone_id']
+        attrs = ['role_id', 'zone_id', 'channel_id', 'clt_version']
         return f(pb, attrs)
     
     if p == 'PKG_ROLELOGIN_GET_MAIL_RES':
-        attrs = ['result', 'role_id', 'zone_id', 'system_mail_info', 'revenge_mail_info', 'system_mail_count', 'revenge_mail_count']
+        attrs = ['result', 'role_id', 'zone_id', 'system_mail_info', 'revenge_mail_info', 'system_mail_count', 'revenge_mail_count', 'channel_id', 'clt_version']
         return f(pb, attrs)
     
     if p == 'PKG_ROLELOGOUT_TO_MAILSVR':
@@ -11496,11 +12694,11 @@ def res(f, pb):
         return f(pb, attrs)
     
     if p == 'PKG_GANGLIST_REQ':
-        attrs = ['index', 'role_id', 'role_rank_pos']
+        attrs = ['role_id', 'role_rank_pos', 'page_start_id', 'page_count']
         return f(pb, attrs)
     
     if p == 'PKG_GANGLIST_RES':
-        attrs = ['gang_list']
+        attrs = ['gang_list', 'total_count']
         return f(pb, attrs)
     
     if p == 'PKG_CMD_SEARCH_GANG_REQ':
@@ -11907,6 +13105,10 @@ def res(f, pb):
         attrs = ['uid', 'role_name', 'role_level', 'cumulate_recharge_id', 'pve_evaluate_stars']
         return f(pb, attrs)
     
+    if p == 'SSPKG_RANK_CHANGE_NAME_REQ':
+        attrs = ['uid', 'role_name']
+        return f(pb, attrs)
+    
     if p == 'SSDT_RANK_ONE_UPDATE':
         attrs = ['rank_id', 'flush_day_time', 'next_flush_day_time', 'flush_week_time', 'next_flush_week_time', 'flush_month_time', 'next_flush_month_time']
         return f(pb, attrs)
@@ -11976,7 +13178,7 @@ def res(f, pb):
         return f(pb, attrs)
     
     if p == 'SSPKG_RANK_BATTLE_REWARD_EVERYDAY_REQ':
-        attrs = ['user_info']
+        attrs = ['user_info', 'activity_id']
         return f(pb, attrs)
     
     if p == 'SSPKG_RANK_BATTLE_REWARD_PROMOTE_REQ':
@@ -12024,7 +13226,15 @@ def res(f, pb):
         return f(pb, attrs)
     
     if p == 'SSPKG_PURCHASE_REQUEST_DELIVERY_IAP':
-        attrs = ['transaction_id', 'transaction_receipt', 'platform', 'uin', 'uid']
+        attrs = ['transaction_id', 'transaction_receipt', 'platform', 'uin', 'uid', 'trade_code']
+        return f(pb, attrs)
+    
+    if p == 'SSPKG_PURCHASE_REQUEST_DELIVERY_IAP_CHECKED':
+        attrs = ['req']
+        return f(pb, attrs)
+    
+    if p == 'SSPKG_PURCHASE_IAP_FINISHED':
+        attrs = ['transaction_id', 'uid']
         return f(pb, attrs)
     
     if p == 'SSPKG_PURCHASE_DONE':
@@ -12032,11 +13242,11 @@ def res(f, pb):
         return f(pb, attrs)
     
     if p == 'SSPKG_PURCHASE_RES':
-        attrs = ['uid', 'unique_id', 'result', 'product_id', 'http_handle', 'is_firstpurchase', 'trade_code', 'cur_cumulate_recharge', 'transaction_id', 'platform', 'extra_flag', 'is_first_reward', 'time', 'newbie_activity_recharge']
+        attrs = ['uid', 'unique_id', 'result', 'product_id', 'http_handle', 'is_firstpurchase', 'trade_code', 'cur_cumulate_recharge', 'transaction_id', 'platform', 'extra_flag', 'is_first_reward', 'time', 'newbie_activity_recharge', 'cur_first_recharge', 'gold_in_any_purchase']
         return f(pb, attrs)
     
     if p == 'SSPKG_PURCHASE_DISP_REQ':
-        attrs = ['uid', 'unique_id', 'server_id', 'transaction_id', 'product_id', 'trade_code', 'coin', 'money', 'time', 'http_handle', 'platform', 'extra_flag']
+        attrs = ['uid', 'unique_id', 'server_id', 'transaction_id', 'product_id', 'trade_code', 'coin', 'money', 'time', 'http_handle', 'platform', 'extra_flag', 'pid']
         return f(pb, attrs)
     
     if p == 'SSPKG_GET_PURCHASEACTIVITY_REQ':
@@ -12044,7 +13254,7 @@ def res(f, pb):
         return f(pb, attrs)
     
     if p == 'SSPKG_GET_PURCHASEACTIVITY_RES':
-        attrs = ['uid', 'firstpurchase_list', 'monthcard_info', 'growthfund_buytime', 'cumulate_recharge', 'first_reward_time', 'is_first_reward', 'sect_recharge_time', 'sect_recharge_cnt', 'daily_recharge', 'daily_recharge_time', 'newbie_activity_recharge']
+        attrs = ['uid', 'firstpurchase_list', 'monthcard_info', 'growthfund_buytime', 'cumulate_recharge', 'first_reward_time', 'is_first_reward', 'sect_recharge_time', 'sect_recharge_cnt', 'daily_recharge', 'daily_recharge_time', 'newbie_activity_recharge', 'first_recharge_cnt']
         return f(pb, attrs)
     
     if p == 'SSPKG_RECORD_TRADE_SUCCESS':
@@ -12052,7 +13262,7 @@ def res(f, pb):
         return f(pb, attrs)
     
     if p == 'SSPKG_GIFT_CODE_REQ':
-        attrs = ['uid', 'unique_id', 'gift_code', 'gift_id', 'channel_id']
+        attrs = ['uid', 'unique_id', 'gift_code', 'gift_id', 'channel_id', 'pre_condition_id']
         return f(pb, attrs)
     
     if p == 'SSPKG_GIFT_UPDATE_ACCEPT_REQ':
@@ -12347,12 +13557,16 @@ def res(f, pb):
         attrs = ['reward_info', 'apply_invited', 'invited_num', 'friend_info']
         return f(pb, attrs)
     
+    if p == 'SSDT_ASSISTANT_HERO_INFO':
+        attrs = ['hire_cnt_total', 'hire_cnt_not_get', 'assistant_hero_gold', 'assistant_calc_time']
+        return f(pb, attrs)
+    
     if p == 'SSDT_SEND_POWER_RECORD':
         attrs = ['role_id']
         return f(pb, attrs)
     
     if p == 'DB_FRIEND_BLOB':
-        attrs = ['apply_info', 'hero_info', 'relation_info', 'social_relation_info', 'send_power_record', 'invite_info']
+        attrs = ['apply_info', 'hero_info', 'relation_info', 'social_relation_info', 'send_power_record', 'invite_info', 'assistant_hero_info']
         return f(pb, attrs)
     
     if p == 'SSPKG_FRIEND_NOTIFY_APPLYLIST_CHG':
@@ -12435,12 +13649,68 @@ def res(f, pb):
         attrs = ['recharge_info']
         return f(pb, attrs)
     
+    if p == 'SSPKG_NTF_VIP_CHANGE':
+        attrs = ['uid', 'recharge_cnt']
+        return f(pb, attrs)
+    
+    if p == 'DBBLOB_FRIEND_ASSIST_HERO_INFO':
+        attrs = ['friend_uid', 'gold', 'friend_hero_battle_info']
+        return f(pb, attrs)
+    
+    if p == 'DBBLOB_PLAYER_BOSSRUSH_INFO':
+        attrs = ['last_clear_time', 'cur_boss_rush_chaptor_id', 'cur_monster_id', 'cur_sequence', 'main_hero_id', 'partner_hero', 'hp_remain', 'friend_assist_hero_info', 'last_clear_chaptor_index']
+        return f(pb, attrs)
+    
+    if p == 'SSPKG_CLAIM_ASSISTANT_HERO_REWARD':
+        attrs = ['uid', 'gold']
+        return f(pb, attrs)
+    
+    if p == 'SSPKG_BOSSRUSH_HIRE_HERO':
+        attrs = ['uid', 'uid_friend', 'hero_id_friend', 'hero_fight_capacity']
+        return f(pb, attrs)
+    
+    if p == 'SSDT_WORLD_ACTIVITY_INFO':
+        attrs = ['activity_id', 'stat', 'last_trigger_time', 'trigger_times']
+        return f(pb, attrs)
+    
+    if p == 'SSDT_WORLD_DROP_INFO':
+        attrs = ['id', 'last_beg_time', 'already_drop_info']
+        return f(pb, attrs)
+    
+    if p == 'SSDT_GAME_SERVER_MISC_INFO':
+        attrs = ['world_activity_info', 'world_drop_info']
+        return f(pb, attrs)
+    
+    if p == 'SSPKG_UPDATE_GAME_SERVER_MISC_REQ':
+        attrs = ['game_server_misc']
+        return f(pb, attrs)
+    
+    if p == 'SSPKG_GET_GAMESVR_MISC_REQ':
+        attrs = ['reverse']
+        return f(pb, attrs)
+    
+    if p == 'SSPKG_GET_GAMESVR_MISC_RES':
+        attrs = ['gamesvr_open_time', 'gamesvr_misc']
+        return f(pb, attrs)
+    
+    if p == 'SSPKG_RANK_BATTLE_ACTIVITY_REQ':
+        attrs = ['activity_id']
+        return f(pb, attrs)
+    
+    if p == 'SSPKG_REPORT_PLAYER_CHAT_REQ':
+        attrs = ['role_id', 'world_id']
+        return f(pb, attrs)
+    
+    if p == 'SSPKG_REPORT_PLAYER_CHAT_RES':
+        attrs = ['uid', 'world_id', 'ban_end_time']
+        return f(pb, attrs)
+    
     if p == 'CSPKG_CMD_VIEW_PLAYER_INFO_REQ':
         attrs = ['view_role_id', 'vip_level', 'is_from_gang']
         return f(pb, attrs)
     
     if p == 'ST_VIEW_PlAYER_HERO_INFO':
-        attrs = ['hero_id', 'hero_lv', 'hero_grow_up', 'emblem_info', 'equip_info', 'hero_attr']
+        attrs = ['hero_id', 'hero_lv', 'hero_grow_up', 'emblem_info', 'equip_info', 'hero_attr', 'talent_info']
         return f(pb, attrs)
     
     if p == 'SCPKG_CMD_VIEW_PLAYER_INFO_RES':

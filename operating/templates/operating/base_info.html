@@ -13,6 +13,7 @@
 {% trans "Power" as t_power %}
 {% trans "Times Of Buy Power" as t_times_of_buy_power %}
 {% trans "Skill Point" as t_skill_point %}
+{% trans "WinPoint" as t_winpoint %}
 {% trans "Times Of Buy Skill Point" as t_times_of_buy_skill_point %}
 {% trans "Endless' Floor" as t_endless_floor %}
 {% trans "Endless' Score" as t_endless_score %}
@@ -37,6 +38,8 @@
 {% trans "Unlock 50 Dungeon" as t_unlock_50_dungeon %}
 {% trans "Unlock 100 Dungeon" as t_unlock_100_dungeon %}
 {% trans "Unlock 150 Dungeon" as t_unlock_150_dungeon %}
+{% trans "Off Gang" as t_off_gang %}
+{% trans "Off Rank" as t_off_rank %}
 <div class="panel panel-primary">
   <div class="panel-heading">{{ t_player_base_info }}</div>
   <!-- Table -->
@@ -145,6 +148,19 @@
         <td>{{ player.endless_score }}</td>
       </tr>
       <tr>
+        <td><b>{{ t_winpoint }}</b></td>
+        <td>{{ player.online_battle_win_point }}</td>
+        <td>
+        {% ifequal url 'single_query'  %}
+          <input type="text" style="width: 80px;" value="0" name="add14">
+          <button type="submit" class="btn btn-default btn-xs" onclick="dataAccess.addJSON({{server_id}},{{player.uid|default:0}},'add',14)">{{t_add}}</button>
+          <button type="submit" class="btn btn-default btn-xs" onclick="dataAccess.reduceJSON({{server_id}},{{player.uid|default:0}},'add',14)">{{t_reduce}}</button>
+        {% endifequal %}
+        </td>
+        <td><b>{{ t_endless_floor }}</b></td>
+        <td>{{ player.endless_floor }}</td>
+      </tr>
+      <tr>
         <td><b>{{ t_total_recharge_vip_level }}</b></td>
         <td>{{ player.total_recharge }}</td>
         <td>
@@ -153,8 +169,7 @@
           <button type="submit" class="btn btn-default btn-xs" onclick="dataAccess.addJSON({{server_id}},{{player.uid|default:0}},'recharge',0)">{{t_change}}</button>
         {% endifequal %}
         </td>
-        <td><b>{{ t_endless_floor }}</b></td>
-        <td>{{ player.endless_floor }}</td>
+        <td colspan="2"></td>
       </tr>
       <tr>
         <td><b>{{ t_chat_ban_time }}</b></td>
@@ -180,7 +195,10 @@
         <td><b>{{ t_online }}</b></td>
         <td colspan="4">{{ player.is_online|online }}
           <span class="pull-right">
-          <button type="submit" class="btn btn-danger btn-xs" onclick="dataAccess.addJSON({{server_id}},{{player.uid|default:0}},'kick',0)">{{t_kick_player}}</button></span>
+          <button type="submit" class="btn btn-danger btn-xs" onclick="dataAccess.addJSON({{server_id}},{{player.uid|default:0}},'kick',0)">{{t_kick_player}}</button>
+          <button type="submit" class="btn btn-default btn-xs" onclick="dataAccess.addJSON({{server_id}},{{player.uid|default:0}},'off_gang',0)">{{t_off_gang}}</button>
+          <button type="submit" class="btn btn-default btn-xs" onclick="dataAccess.addJSON({{server_id}},{{player.uid|default:0}},'off_rank',0)">{{t_off_rank}}</button>
+          </span>
         </td>
       </tr>
       {% ifequal url 'single_query'  %}
@@ -211,6 +229,7 @@
   management.numberOnly("input[name='add4']");
   management.numberOnly("input[name='add3']");
   management.numberOnly("input[name='add11']");
+  management.numberOnly("input[name='add14']");
   management.numberOnly("input[name='recharge0']");
  });
 </script>

@@ -19,193 +19,12 @@ import rescommon_pb2
 DESCRIPTOR = _descriptor.FileDescriptor(
   name='gang.proto',
   package='',
-  serialized_pb=_b('\n\ngang.proto\x1a\x0frescommon.proto\"B\n\x1aST_HERO_BATTLE_EMBLEM_INFO\x12\x11\n\temblem_id\x18\x01 \x01(\r\x12\x11\n\temblem_lv\x18\x02 \x01(\r\"s\n\x19ST_HERO_BATTLE_EQUIP_INFO\x12\x0f\n\x07\x62\x61se_id\x18\x01 \x01(\r\x12\r\n\x05level\x18\x02 \x01(\r\x12\x0f\n\x07wake_up\x18\x03 \x01(\r\x12\x0f\n\x07grow_up\x18\x04 \x01(\r\x12\x14\n\x0cpurify_level\x18\x05 \x01(\r\"\x9d\x02\n\x13ST_HERO_BATTLE_INFO\x12\x0f\n\x07hero_id\x18\x01 \x01(\r\x12\x0f\n\x07hero_lv\x18\x02 \x01(\r\x12\x14\n\x0chero_grow_up\x18\x03 \x01(\r\x12\x1e\n\x16hero_relation_strength\x18\x04 \x01(\r\x12\x1d\n\x15hero_relation_stamina\x18\x05 \x01(\r\x12\x1b\n\x13hero_fight_capacity\x18\x06 \x01(\r\x12\x30\n\x0b\x65mblem_info\x18\x07 \x03(\x0b\x32\x1b.ST_HERO_BATTLE_EMBLEM_INFO\x12.\n\nequip_info\x18\x08 \x03(\x0b\x32\x1a.ST_HERO_BATTLE_EQUIP_INFO\x12\x10\n\x08skill_id\x18\t \x03(\r\"r\n#ST_GANG_CITY_STRONG_POINT_HERO_INFO\x12\x0f\n\x07role_id\x18\x01 \x01(\r\x12\x11\n\trole_name\x18\x03 \x01(\t\x12\'\n\thero_info\x18\x02 \x01(\x0b\x32\x14.ST_HERO_BATTLE_INFO\"i\n\x19ST_GANG_CITY_STRONG_POINT\x12\x13\n\x0bpoint_state\x18\x01 \x01(\r\x12\x37\n\thero_info\x18\x02 \x03(\x0b\x32$.ST_GANG_CITY_STRONG_POINT_HERO_INFO\"j\n\x11ST_GANG_CITY_INFO\x12\n\n\x02id\x18\x01 \x01(\r\x12\x12\n\ncity_state\x18\x02 \x01(\r\x12\x35\n\x11strong_point_info\x18\x03 \x03(\x0b\x32\x1a.ST_GANG_CITY_STRONG_POINT\"\x87\x01\n\x0cST_GANG_CITY\x12&\n\nsmall_city\x18\x01 \x03(\x0b\x32\x12.ST_GANG_CITY_INFO\x12)\n\rmoderate_city\x18\x02 \x03(\x0b\x32\x12.ST_GANG_CITY_INFO\x12$\n\x08\x62ig_city\x18\x03 \x03(\x0b\x32\x12.ST_GANG_CITY_INFO\"c\n\x17ST_GANG_BATTLE_MEM_INFO\x12\x13\n\x0bmem_role_id\x18\x01 \x01(\r\x12\x15\n\rmem_role_name\x18\x02 \x01(\t\x12\x1c\n\x14\x63umulate_recharge_id\x18\x03 \x01(\r\"E\n\x17ST_GANG_BATTLE_MEM_LIST\x12*\n\x08mem_info\x18\x01 \x03(\x0b\x32\x18.ST_GANG_BATTLE_MEM_INFO\"O\n ST_GANG_BATTLE_ATTACK_POINT_INFO\x12\x0f\n\x07\x63ity_id\x18\x01 \x01(\r\x12\x1a\n\x12strong_point_index\x18\x02 \x01(\x05\"\xa2\x01\n\x1eST_GANG_BATTLE_MEM_ATTACK_INFO\x12\x13\n\x0bmem_role_id\x18\x01 \x01(\r\x12\x15\n\rmem_role_name\x18\x02 \x01(\t\x12\x1b\n\x13mem_total_fight_cnt\x18\x03 \x01(\r\x12\x19\n\x11mem_win_fight_cnt\x18\x04 \x01(\r\x12\x1c\n\x14\x63umulate_recharge_id\x18\x05 \x01(\r\"S\n\x1eST_GANG_BATTLE_MEM_ATTACK_LIST\x12\x31\n\x08mem_info\x18\x01 \x03(\x0b\x32\x1f.ST_GANG_BATTLE_MEM_ATTACK_INFO\"\xbe\x01\n\x18\x43SDT_GANG_APPLYLIST_INFO\x12\x10\n\x08mem_name\x18\x01 \x01(\t\x12\x13\n\x0bmem_role_id\x18\x02 \x01(\r\x12\x12\n\napply_time\x18\x03 \x01(\r\x12\x14\n\x0cmem_rank_pos\x18\x04 \x01(\r\x12\x1f\n\x17mem_gang_battle_win_cnt\x18\x05 \x01(\r\x12\x1c\n\x14\x63umulate_recharge_id\x18\x06 \x01(\r\x12\x12\n\nhead_photo\x18\x07 \x01(\r\"\xf8\x01\n\x14\x43SDT_GANGSIMPLE_INFO\x12\x11\n\tgang_name\x18\x01 \x01(\t\x12\x0f\n\x07gang_id\x18\x02 \x01(\r\x12\x18\n\x10gang_leader_name\x18\x03 \x01(\t\x12\x18\n\x10gang_apply_state\x18\x04 \x01(\r\x12\x15\n\rcond_rank_pos\x18\x05 \x01(\r\x12\x16\n\x0egang_mem_count\x18\x06 \x01(\r\x12\x12\n\ngang_level\x18\x07 \x01(\r\x12\x12\n\ngang_score\x18\x08 \x01(\r\x12\x13\n\x0bgang_notify\x18\t \x01(\t\x12\x1c\n\x14is_auto_apply_battle\x18\n \x01(\r\"\xe3\x01\n\x12\x43SDT_GANGLIST_INFO\x12\x0f\n\x07gang_id\x18\x01 \x01(\r\x12\x11\n\tgang_name\x18\x02 \x01(\t\x12\x18\n\x10gang_apply_state\x18\x03 \x01(\r\x12\x12\n\ngang_level\x18\x04 \x01(\r\x12\x12\n\ngang_score\x18\x05 \x01(\r\x12\x16\n\x0egang_mem_count\x18\x06 \x01(\r\x12\x1a\n\x12gang_cond_rank_pos\x18\x07 \x01(\r\x12\x18\n\x10is_in_apply_list\x18\x08 \x01(\r\x12\x19\n\x11gang_avg_rank_pos\x18\t \x01(\r\"\xfc\x01\n\x11\x43SDT_GANGMEM_INFO\x12\x13\n\x0bmem_role_id\x18\x01 \x01(\r\x12\x10\n\x08mem_name\x18\x02 \x01(\t\x12\x13\n\x0bmem_postion\x18\x03 \x01(\r\x12!\n\x19mem_gang_battle_win_score\x18\x04 \x01(\r\x12\x14\n\x0cmem_rank_pos\x18\x05 \x01(\r\x12\x17\n\x0flast_leave_time\x18\x06 \x01(\r\x12\x1c\n\x14\x63umulate_recharge_id\x18\x07 \x01(\r\x12\'\n\x0fgang_bless_info\x18\x08 \x01(\x0b\x32\x0e.ST_BLESS_INFO\x12\x12\n\nhead_photo\x18\t \x01(\r\"\'\n\x13\x43SDT_GANG_SELF_INFO\x12\x10\n\x08position\x18\x01 \x01(\r\"\x94\x01\n!CSDT_GANG_BATTLE_HISTORY_MEM_INFO\x12\x13\n\x0bmem_role_id\x18\x01 \x01(\r\x12\x10\n\x08mem_name\x18\x02 \x01(\t\x12\x13\n\x0bmem_win_cnt\x18\x03 \x01(\r\x12\x15\n\rmem_total_cnt\x18\x04 \x01(\r\x12\x1c\n\x14\x63umulate_recharge_id\x18\x05 \x01(\r\"^\n!CSDT_GANG_BATTLE_HISTORY_MEM_LIST\x12\x39\n\rgang_mem_list\x18\x01 \x03(\x0b\x32\".CSDT_GANG_BATTLE_HISTORY_MEM_INFO\"\x8c\x02\n\x1d\x43SDT_GANG_BATTLE_HISTORY_INFO\x12\x13\n\x0b\x62\x61ttle_time\x18\x01 \x01(\r\x12\x12\n\ngang_level\x18\x02 \x01(\r\x12\x17\n\x0f\x64\x65\x66\x65nse_gang_id\x18\x03 \x01(\r\x12\x19\n\x11\x64\x65\x66\x65nse_gang_name\x18\x04 \x01(\t\x12\x1a\n\x12\x64\x65\x66\x65nse_gang_level\x18\x05 \x01(\r\x12\x19\n\x11self_battle_score\x18\x06 \x01(\r\x12\x1c\n\x14\x64\x65\x66\x65nse_battle_score\x18\x07 \x01(\r\x12\x39\n\rmem_list_info\x18\x08 \x01(\x0b\x32\".CSDT_GANG_BATTLE_HISTORY_MEM_LIST\"p\n\x18\x43SPKG_CMD_CREATEGANG_REQ\x12\x11\n\tgang_name\x18\x01 \x01(\t\x12\x13\n\x0bgang_notify\x18\x02 \x01(\t\x12\x15\n\ris_auto_apply\x18\x03 \x01(\r\x12\x15\n\rcond_rank_pos\x18\x04 \x01(\r\"\x84\x01\n\x18SCPKG_CMD_CREATEGANG_RES\x12\x0e\n\x06result\x18\x01 \x01(\x05\x12/\n\x10gang_simple_info\x18\x02 \x01(\x0b\x32\x15.CSDT_GANGSIMPLE_INFO\x12\'\n\tself_info\x18\x03 \x01(\x0b\x32\x14.CSDT_GANG_SELF_INFO\"\'\n\x16\x43SPKG_CMD_GANGLIST_REQ\x12\r\n\x05index\x18\x01 \x01(\x05\"@\n\x16SCPKG_CMD_GANGLIST_RES\x12&\n\tgang_list\x18\x01 \x03(\x0b\x32\x13.CSDT_GANGLIST_INFO\"\xa4\x01\n\x18SCPKG_CMD_ROLELOGIN_GANG\x12\x14\n\x0cis_have_gang\x18\x01 \x01(\r\x12\x18\n\x10\x61pply_list_count\x18\x02 \x01(\r\x12/\n\x10gang_simple_info\x18\x03 \x01(\x0b\x32\x15.CSDT_GANGSIMPLE_INFO\x12\'\n\tself_info\x18\x04 \x01(\x0b\x32\x14.CSDT_GANG_SELF_INFO\">\n\x18\x43SPKG_CMD_APPLY_GANG_REQ\x12\x11\n\tgang_name\x18\x01 \x01(\t\x12\x0f\n\x07gang_id\x18\x02 \x01(\r\"g\n\x18SCPKG_CMD_APPLY_GANG_RES\x12\x0e\n\x06result\x18\x01 \x01(\x05\x12\x0f\n\x07gang_id\x18\x02 \x01(\r\x12\x10\n\x08mem_name\x18\x03 \x01(\t\x12\x18\n\x10\x61pply_list_count\x18\x04 \x01(\r\"*\n\x17\x43SPKG_CMD_QUIT_GANG_REQ\x12\x0f\n\x07reverse\x18\x01 \x01(\r\")\n\x17SCPKG_CMD_QUIT_GANG_RES\x12\x0e\n\x06result\x18\x01 \x01(\x05\"-\n\x1a\x43SPKG_CMD_GANG_MEMLIST_REQ\x12\x0f\n\x07gang_id\x18\x01 \x01(\r\"d\n\x1aSCPKG_CMD_GANG_MEMLIST_RES\x12\x0e\n\x06result\x18\x01 \x01(\x05\x12\x0f\n\x07gang_id\x18\x02 \x01(\r\x12%\n\tlist_info\x18\x03 \x03(\x0b\x32\x12.CSDT_GANGMEM_INFO\",\n\x19\x43SPKG_CMD_GANG_DETAIL_REQ\x12\x0f\n\x07gang_id\x18\x01 \x01(\r\"\x94\x01\n\x19SCPKG_CMD_GANG_DETAIL_RES\x12\x0e\n\x06result\x18\x01 \x01(\x05\x12\x0f\n\x07gang_id\x18\x02 \x01(\r\x12/\n\x10gang_simple_info\x18\x03 \x01(\x0b\x32\x15.CSDT_GANGSIMPLE_INFO\x12%\n\tlist_info\x18\x04 \x03(\x0b\x32\x12.CSDT_GANGMEM_INFO\"s\n\x1fSCPKG_CMD_GANG_MEM_LIST_CHG_RES\x12\x0b\n\x03\x64\x65l\x18\x01 \x01(\r\x12\x10\n\x08\x64\x65l_type\x18\x02 \x01(\r\x12\x0b\n\x03\x61\x64\x64\x18\x03 \x01(\r\x12$\n\x08mem_info\x18\x04 \x01(\x0b\x32\x12.CSDT_GANGMEM_INFO\"2\n\x1fSCPKG_GANG_BLESS_RANK_CLEAR_RES\x12\x0f\n\x07gang_id\x18\x01 \x01(\r\"i\n$CSPKG_CMD_GANG_UPDATE_BASIC_INFO_REQ\x12\x13\n\x0bgang_notify\x18\x01 \x01(\t\x12\x15\n\ris_auto_apply\x18\x02 \x01(\r\x12\x15\n\rcond_rank_pos\x18\x03 \x01(\r\",\n\x19\x43SPKG_CMD_SEARCH_GANG_REQ\x12\x0f\n\x07gang_id\x18\x01 \x01(\r\"d\n\x19SCPKG_CMD_SEARCH_GANG_RES\x12\x0e\n\x06result\x18\x01 \x01(\x05\x12\x0f\n\x07gang_id\x18\x02 \x01(\r\x12&\n\tgang_info\x18\x03 \x01(\x0b\x32\x13.CSDT_GANGLIST_INFO\"6\n$SCPKG_CMD_GANG_UPDATE_BASIC_INFO_RES\x12\x0e\n\x06result\x18\x01 \x01(\x05\"A\n\x1a\x43SPKG_CMD_GANG_APPROVE_REQ\x12\x0e\n\x06result\x18\x01 \x01(\x05\x12\x13\n\x0bmem_role_id\x18\x02 \x01(\r\"m\n\x1aSCPKG_CMD_GANG_APPROVE_RES\x12\x0e\n\x06result\x18\x01 \x01(\x05\x12\x10\n\x08mem_name\x18\x02 \x01(\t\x12\x13\n\x0bmem_role_id\x18\x03 \x01(\r\x12\x18\n\x10\x61pply_list_count\x18\x04 \x01(\r\"&\n\x17\x43SPKG_CMD_GANG_CHAT_REQ\x12\x0b\n\x03msg\x18\x01 \x01(\t\"\x87\x01\n\x17SCPKG_CMD_GANG_CHAT_RES\x12\x11\n\tfrom_name\x18\x01 \x01(\t\x12\x0b\n\x03msg\x18\x02 \x01(\t\x12\x14\n\x0c\x66rom_role_id\x18\x04 \x01(\r\x12#\n\x1bsender_cumulate_recharge_id\x18\x05 \x01(\r\x12\x11\n\tsend_time\x18\x03 \x01(\r\".\n\x1c\x43SPKG_CMD_GANG_APPLYLIST_REQ\x12\x0e\n\x06result\x18\x01 \x01(\x05\"M\n\x1cSCPKG_CMD_GANG_APPLYLIST_RES\x12-\n\napply_list\x18\x01 \x03(\x0b\x32\x19.CSDT_GANG_APPLYLIST_INFO\"\x8b\x01\n\x1fSCPKG_CMD_GANG_APPROVETOMEM_RES\x12\x0e\n\x06result\x18\x01 \x01(\x05\x12/\n\x10gang_simple_info\x18\x02 \x01(\x0b\x32\x15.CSDT_GANGSIMPLE_INFO\x12\'\n\tself_info\x18\x03 \x01(\x0b\x32\x14.CSDT_GANG_SELF_INFO\"\x91\x01\n!SCPKG_CMD_GANG_BASIC_INFO_CHG_RES\x12\x13\n\x0bgang_notify\x18\x01 \x01(\t\x12\x18\n\x10gang_apply_state\x18\x02 \x01(\r\x12\x15\n\rcond_rank_pos\x18\x03 \x01(\r\x12\x12\n\ngang_score\x18\x04 \x01(\r\x12\x12\n\ngang_level\x18\x05 \x01(\r\"7\n\x1b\x43SPKG_CMD_GANG_KICK_MEM_REQ\x12\x18\n\x10kick_mem_role_id\x18\x01 \x01(\r\"B\n\x1bSCPKG_CMD_GANG_KICK_MEM_RES\x12\x0e\n\x06result\x18\x01 \x01(\x05\x12\x13\n\x0bmem_role_id\x18\x02 \x01(\r\"J\n\x1c\x43SPKG_CMD_GANG_SET_ELDER_REQ\x12\x13\n\x0bmem_role_id\x18\x01 \x01(\r\x12\x15\n\rset_or_cancle\x18\x02 \x01(\r\"C\n\x1cSCPKG_CMD_GANG_SET_ELDER_RES\x12\x0e\n\x06result\x18\x01 \x01(\x05\x12\x13\n\x0bmem_role_id\x18\x02 \x01(\r\"\'\n\x14\x43SPKG_GANG_BLESS_REQ\x12\x0f\n\x07reverse\x18\x01 \x01(\x05\"\x86\x01\n\x14SCPKG_GANG_BLESS_RES\x12\x0e\n\x06result\x18\x01 \x01(\x05\x12%\n\rnormal_reward\x18\x02 \x01(\x0b\x32\x0e.ST_REWARD_RES\x12%\n\rextern_reward\x18\x03 \x01(\x0b\x32\x0e.ST_REWARD_RES\x12\x10\n\x08\x62less_id\x18\x04 \x01(\r\"1\n\x1e\x43SPKG_BUY_GANG_BLESS_COUNT_REQ\x12\x0f\n\x07reverse\x18\x01 \x01(\x05\"\x81\x01\n!SCPKG_REFRESH_GANG_BLESS_INFO_RES\x12\x18\n\x10gang_bless_count\x18\x01 \x01(\r\x12\x1c\n\x14\x62uy_gang_bless_count\x18\x02 \x01(\r\x12$\n\x1cleft_extern_gang_bless_count\x18\x03 \x01(\r\"=\n)CSPKG_SET_GANG_AUTO_APPLY_GANG_BATTLE_REQ\x12\x10\n\x08rerverse\x18\x01 \x01(\r\"I\n)SCPKG_SET_GANG_AUTO_APPLY_GANG_BATTLE_RES\x12\x1c\n\x14is_auto_apply_battle\x18\x01 \x01(\x05\"\x94\x01\n)CSPKG_SET_GANG_CITY_STRONG_POINT_HERO_REQ\x12\x10\n\x08\x63hg_type\x18\x01 \x01(\x05\x12\x0f\n\x07hero_id\x18\x02 \x01(\r\x12\x0f\n\x07\x63ity_id\x18\x03 \x01(\r\x12\x1a\n\x12strong_point_index\x18\x04 \x01(\x05\x12\x17\n\x0fhero_slot_index\x18\x05 \x01(\x05\";\n)SCPKG_SET_GANG_CITY_STRONG_POINT_HERO_RES\x12\x0e\n\x06result\x18\x01 \x01(\x05\"\xbc\x01\n)SCPKG_GANG_CITY_STRONG_POINT_HERO_CHG_RES\x12\x10\n\x08\x63hg_type\x18\x01 \x01(\x05\x12\x0f\n\x07\x63ity_id\x18\x02 \x01(\r\x12\x1a\n\x12strong_point_index\x18\x03 \x01(\x05\x12\x17\n\x0fhero_slot_index\x18\x04 \x01(\x05\x12\x37\n\thero_info\x18\x05 \x01(\x0b\x32$.ST_GANG_CITY_STRONG_POINT_HERO_INFO\"0\n\x1c\x43SPKG_GET_GANG_CITY_INFO_REQ\x12\x10\n\x08rerverse\x18\x01 \x01(\r\"P\n\x1cSCPKG_GET_GANG_CITY_INFO_RES\x12\x0e\n\x06result\x18\x01 \x01(\x05\x12 \n\tcity_info\x18\x02 \x01(\x0b\x32\r.ST_GANG_CITY\"/\n\x1b\x43SPKG_APPLY_GANG_BATTLE_REQ\x12\x10\n\x08rerverse\x18\x01 \x01(\r\"-\n\x1bSCPKG_APPLY_GANG_BATTLE_RES\x12\x0e\n\x06result\x18\x01 \x01(\r\".\n\x1dSCPKG_GANG_BATTLE_STATE_BROAD\x12\r\n\x05state\x18\x01 \x01(\r\"5\n\x1e\x43SPKG_GET_GANG_BATTLE_CITY_REQ\x12\x13\n\x0bis_get_self\x18\x01 \x01(\x08\"\xc6\x01\n\x1eSCPKG_GET_GANG_BATTLE_CITY_RES\x12\x0e\n\x06result\x18\x01 \x01(\x05\x12\x13\n\x0bis_get_self\x18\x02 \x01(\x08\x12\x12\n\nself_score\x18\x03 \x01(\r\x12\x14\n\x0ctarget_score\x18\x04 \x01(\r\x12\x18\n\x10target_gang_name\x18\x05 \x01(\t\x12\x19\n\x11target_gang_level\x18\x06 \x01(\r\x12 \n\tcity_info\x18\x07 \x01(\x0b\x32\r.ST_GANG_CITY\"\xa2\x01\n\x1eSCPKG_GANG_BATTTLE_POINT_BROAD\x12\x12\n\nself_score\x18\x01 \x01(\r\x12\x14\n\x0ctarget_score\x18\x02 \x01(\r\x12\x14\n\x0cis_self_city\x18\x03 \x01(\x08\x12\x0f\n\x07\x63ity_id\x18\x04 \x01(\r\x12\x1a\n\x12strong_point_index\x18\x05 \x01(\x05\x12\x13\n\x0bpoint_state\x18\x06 \x01(\r\"v\n#CSPKG_ENTER_GANG_BATTLE_DUNGEON_REQ\x12\x14\n\x0cself_hero_id\x18\x01 \x01(\r\x12\x16\n\x0etarget_city_id\x18\x02 \x01(\r\x12!\n\x19target_strong_point_index\x18\x03 \x01(\x05\"j\n ST_GANG_BATTLE_DEFENSE_HERO_INFO\x12\x16\n\x0etarget_role_id\x18\x01 \x01(\r\x12.\n\x0btarget_hero\x18\x02 \x01(\x0b\x32\x19.ST_BATTLE_HERO_ATTR_INFO\"\x98\x01\n#SCPKG_ENTER_GANG_BATTLE_DUNGEON_RES\x12\x0e\n\x06result\x18\x01 \x01(\x05\x12\x0e\n\x06\x64un_id\x18\x02 \x01(\r\x12\x14\n\x0cself_hero_id\x18\x03 \x01(\r\x12;\n\x10target_hero_info\x18\x04 \x03(\x0b\x32!.ST_GANG_BATTLE_DEFENSE_HERO_INFO\";\n)CSPKG_GANG_BATTLE_DUNGEON_ROUND_BEGIN_REQ\x12\x0e\n\x06\x64un_id\x18\x02 \x01(\r\"Q\n)SCPKG_GANG_BATTLE_DUNGEON_ROUND_BEGIN_RES\x12\x12\n\nbegin_time\x18\x01 \x01(\r\x12\x10\n\x08interval\x18\x02 \x01(\x05\"\x90\x01\n\x1d\x43SPKG_GANG_BATTLE_BALANCE_REQ\x12\x0e\n\x06\x64un_id\x18\x01 \x01(\r\x12\x14\n\x0cself_hero_id\x18\x02 \x01(\r\x12\x16\n\x0etarget_city_id\x18\x03 \x01(\r\x12!\n\x19target_strong_point_index\x18\x04 \x01(\x05\x12\x0e\n\x06is_win\x18\x05 \x01(\x08\"\\\n\x1dSCPKG_GANG_BATTLE_BALANCE_RES\x12\x0e\n\x06result\x18\x01 \x01(\x05\x12\x13\n\x0breward_gold\x18\x02 \x01(\r\x12\x16\n\x0ereward_crystal\x18\x03 \x01(\r\"7\n#CSPKG_CMD_GET_GANG_BATTLE_STATE_REQ\x12\x10\n\x08rerverse\x18\x01 \x01(\r\"\xc4\x01\n#SCPKG_CMD_GET_GANG_BATTLE_STATE_RES\x12\r\n\x05state\x18\x01 \x01(\r\x12\x11\n\tsub_state\x18\x02 \x01(\r\x12\x14\n\x0cpre_get_gold\x18\x03 \x01(\r\x12\x17\n\x0fpre_get_crystal\x18\x04 \x01(\r\x12\x13\n\x0b\x61ttack_hero\x18\x05 \x03(\r\x12\x37\n\x0c\x61ttack_point\x18\x06 \x03(\x0b\x32!.ST_GANG_BATTLE_ATTACK_POINT_INFO\"9\n%CSPKG_CMD_GET_GANG_BATTLE_HISTORY_REQ\x12\x10\n\x08rerverse\x18\x01 \x01(\r\"]\n%SCPKG_CMD_GET_GANG_BATTLE_HISTORY_RES\x12\x34\n\x0chistory_info\x18\x01 \x03(\x0b\x32\x1e.CSDT_GANG_BATTLE_HISTORY_INFO\"=\n)CSPKG_GET_GANG_BATTLE_MEM_ATTACK_INFO_REQ\x12\x10\n\x08rerverse\x18\x01 \x01(\r\"t\n)SCPKG_GET_GANG_BATTLE_MEM_ATTACK_INFO_RES\x12\x0e\n\x06result\x18\x01 \x01(\x05\x12\x37\n\x0emem_attck_info\x18\x02 \x01(\x0b\x32\x1f.ST_GANG_BATTLE_MEM_ATTACK_LIST\"7\n$CSPKG_GET_GANG_BATTLE_STATE_INFO_REQ\x12\x0f\n\x07reverse\x18\x01 \x01(\x05\"v\n$SCPKG_GET_GANG_BATTLE_STATE_INFO_RES\x12\x17\n\x0fis_battle_start\x18\x01 \x01(\x08\x12\x17\n\x0f\x61ttack_hero_num\x18\x02 \x01(\x08\x12\x1c\n\x14has_can_attack_point\x18\x03 \x01(\x08')
+  serialized_pb=_b('\n\ngang.proto\x1a\x0frescommon.proto\"r\n#ST_GANG_CITY_STRONG_POINT_HERO_INFO\x12\x0f\n\x07role_id\x18\x01 \x01(\r\x12\x11\n\trole_name\x18\x03 \x01(\t\x12\'\n\thero_info\x18\x02 \x01(\x0b\x32\x14.ST_HERO_BATTLE_INFO\"i\n\x19ST_GANG_CITY_STRONG_POINT\x12\x13\n\x0bpoint_state\x18\x01 \x01(\r\x12\x37\n\thero_info\x18\x02 \x03(\x0b\x32$.ST_GANG_CITY_STRONG_POINT_HERO_INFO\"j\n\x11ST_GANG_CITY_INFO\x12\n\n\x02id\x18\x01 \x01(\r\x12\x12\n\ncity_state\x18\x02 \x01(\r\x12\x35\n\x11strong_point_info\x18\x03 \x03(\x0b\x32\x1a.ST_GANG_CITY_STRONG_POINT\"\x87\x01\n\x0cST_GANG_CITY\x12&\n\nsmall_city\x18\x01 \x03(\x0b\x32\x12.ST_GANG_CITY_INFO\x12)\n\rmoderate_city\x18\x02 \x03(\x0b\x32\x12.ST_GANG_CITY_INFO\x12$\n\x08\x62ig_city\x18\x03 \x03(\x0b\x32\x12.ST_GANG_CITY_INFO\"c\n\x17ST_GANG_BATTLE_MEM_INFO\x12\x13\n\x0bmem_role_id\x18\x01 \x01(\r\x12\x15\n\rmem_role_name\x18\x02 \x01(\t\x12\x1c\n\x14\x63umulate_recharge_id\x18\x03 \x01(\r\"E\n\x17ST_GANG_BATTLE_MEM_LIST\x12*\n\x08mem_info\x18\x01 \x03(\x0b\x32\x18.ST_GANG_BATTLE_MEM_INFO\"O\n ST_GANG_BATTLE_ATTACK_POINT_INFO\x12\x0f\n\x07\x63ity_id\x18\x01 \x01(\r\x12\x1a\n\x12strong_point_index\x18\x02 \x01(\x05\"\xa2\x01\n\x1eST_GANG_BATTLE_MEM_ATTACK_INFO\x12\x13\n\x0bmem_role_id\x18\x01 \x01(\r\x12\x15\n\rmem_role_name\x18\x02 \x01(\t\x12\x1b\n\x13mem_total_fight_cnt\x18\x03 \x01(\r\x12\x19\n\x11mem_win_fight_cnt\x18\x04 \x01(\r\x12\x1c\n\x14\x63umulate_recharge_id\x18\x05 \x01(\r\"S\n\x1eST_GANG_BATTLE_MEM_ATTACK_LIST\x12\x31\n\x08mem_info\x18\x01 \x03(\x0b\x32\x1f.ST_GANG_BATTLE_MEM_ATTACK_INFO\"\xbe\x01\n\x18\x43SDT_GANG_APPLYLIST_INFO\x12\x10\n\x08mem_name\x18\x01 \x01(\t\x12\x13\n\x0bmem_role_id\x18\x02 \x01(\r\x12\x12\n\napply_time\x18\x03 \x01(\r\x12\x14\n\x0cmem_rank_pos\x18\x04 \x01(\r\x12\x1f\n\x17mem_gang_battle_win_cnt\x18\x05 \x01(\r\x12\x1c\n\x14\x63umulate_recharge_id\x18\x06 \x01(\r\x12\x12\n\nhead_photo\x18\x07 \x01(\r\"\xf8\x01\n\x14\x43SDT_GANGSIMPLE_INFO\x12\x11\n\tgang_name\x18\x01 \x01(\t\x12\x0f\n\x07gang_id\x18\x02 \x01(\r\x12\x18\n\x10gang_leader_name\x18\x03 \x01(\t\x12\x18\n\x10gang_apply_state\x18\x04 \x01(\r\x12\x15\n\rcond_rank_pos\x18\x05 \x01(\r\x12\x16\n\x0egang_mem_count\x18\x06 \x01(\r\x12\x12\n\ngang_level\x18\x07 \x01(\r\x12\x12\n\ngang_score\x18\x08 \x01(\r\x12\x13\n\x0bgang_notify\x18\t \x01(\t\x12\x1c\n\x14is_auto_apply_battle\x18\n \x01(\r\"\xe3\x01\n\x12\x43SDT_GANGLIST_INFO\x12\x0f\n\x07gang_id\x18\x01 \x01(\r\x12\x11\n\tgang_name\x18\x02 \x01(\t\x12\x18\n\x10gang_apply_state\x18\x03 \x01(\r\x12\x12\n\ngang_level\x18\x04 \x01(\r\x12\x12\n\ngang_score\x18\x05 \x01(\r\x12\x16\n\x0egang_mem_count\x18\x06 \x01(\r\x12\x1a\n\x12gang_cond_rank_pos\x18\x07 \x01(\r\x12\x18\n\x10is_in_apply_list\x18\x08 \x01(\r\x12\x19\n\x11gang_avg_rank_pos\x18\t \x01(\r\"\xfc\x01\n\x11\x43SDT_GANGMEM_INFO\x12\x13\n\x0bmem_role_id\x18\x01 \x01(\r\x12\x10\n\x08mem_name\x18\x02 \x01(\t\x12\x13\n\x0bmem_postion\x18\x03 \x01(\r\x12!\n\x19mem_gang_battle_win_score\x18\x04 \x01(\r\x12\x14\n\x0cmem_rank_pos\x18\x05 \x01(\r\x12\x17\n\x0flast_leave_time\x18\x06 \x01(\r\x12\x1c\n\x14\x63umulate_recharge_id\x18\x07 \x01(\r\x12\'\n\x0fgang_bless_info\x18\x08 \x01(\x0b\x32\x0e.ST_BLESS_INFO\x12\x12\n\nhead_photo\x18\t \x01(\r\"\'\n\x13\x43SDT_GANG_SELF_INFO\x12\x10\n\x08position\x18\x01 \x01(\r\"\x94\x01\n!CSDT_GANG_BATTLE_HISTORY_MEM_INFO\x12\x13\n\x0bmem_role_id\x18\x01 \x01(\r\x12\x10\n\x08mem_name\x18\x02 \x01(\t\x12\x13\n\x0bmem_win_cnt\x18\x03 \x01(\r\x12\x15\n\rmem_total_cnt\x18\x04 \x01(\r\x12\x1c\n\x14\x63umulate_recharge_id\x18\x05 \x01(\r\"^\n!CSDT_GANG_BATTLE_HISTORY_MEM_LIST\x12\x39\n\rgang_mem_list\x18\x01 \x03(\x0b\x32\".CSDT_GANG_BATTLE_HISTORY_MEM_INFO\"\x8c\x02\n\x1d\x43SDT_GANG_BATTLE_HISTORY_INFO\x12\x13\n\x0b\x62\x61ttle_time\x18\x01 \x01(\r\x12\x12\n\ngang_level\x18\x02 \x01(\r\x12\x17\n\x0f\x64\x65\x66\x65nse_gang_id\x18\x03 \x01(\r\x12\x19\n\x11\x64\x65\x66\x65nse_gang_name\x18\x04 \x01(\t\x12\x1a\n\x12\x64\x65\x66\x65nse_gang_level\x18\x05 \x01(\r\x12\x19\n\x11self_battle_score\x18\x06 \x01(\r\x12\x1c\n\x14\x64\x65\x66\x65nse_battle_score\x18\x07 \x01(\r\x12\x39\n\rmem_list_info\x18\x08 \x01(\x0b\x32\".CSDT_GANG_BATTLE_HISTORY_MEM_LIST\"p\n\x18\x43SPKG_CMD_CREATEGANG_REQ\x12\x11\n\tgang_name\x18\x01 \x01(\t\x12\x13\n\x0bgang_notify\x18\x02 \x01(\t\x12\x15\n\ris_auto_apply\x18\x03 \x01(\r\x12\x15\n\rcond_rank_pos\x18\x04 \x01(\r\"\x84\x01\n\x18SCPKG_CMD_CREATEGANG_RES\x12\x0e\n\x06result\x18\x01 \x01(\x05\x12/\n\x10gang_simple_info\x18\x02 \x01(\x0b\x32\x15.CSDT_GANGSIMPLE_INFO\x12\'\n\tself_info\x18\x03 \x01(\x0b\x32\x14.CSDT_GANG_SELF_INFO\"C\n\x16\x43SPKG_CMD_GANGLIST_REQ\x12\x15\n\rpage_start_id\x18\x01 \x01(\r\x12\x12\n\npage_count\x18\x02 \x01(\r\"S\n\x16SCPKG_CMD_GANGLIST_RES\x12&\n\tgang_list\x18\x01 \x03(\x0b\x32\x13.CSDT_GANGLIST_INFO\x12\x11\n\ttotal_cnt\x18\x02 \x01(\r\"\xa4\x01\n\x18SCPKG_CMD_ROLELOGIN_GANG\x12\x14\n\x0cis_have_gang\x18\x01 \x01(\r\x12\x18\n\x10\x61pply_list_count\x18\x02 \x01(\r\x12/\n\x10gang_simple_info\x18\x03 \x01(\x0b\x32\x15.CSDT_GANGSIMPLE_INFO\x12\'\n\tself_info\x18\x04 \x01(\x0b\x32\x14.CSDT_GANG_SELF_INFO\">\n\x18\x43SPKG_CMD_APPLY_GANG_REQ\x12\x11\n\tgang_name\x18\x01 \x01(\t\x12\x0f\n\x07gang_id\x18\x02 \x01(\r\"g\n\x18SCPKG_CMD_APPLY_GANG_RES\x12\x0e\n\x06result\x18\x01 \x01(\x05\x12\x0f\n\x07gang_id\x18\x02 \x01(\r\x12\x10\n\x08mem_name\x18\x03 \x01(\t\x12\x18\n\x10\x61pply_list_count\x18\x04 \x01(\r\"*\n\x17\x43SPKG_CMD_QUIT_GANG_REQ\x12\x0f\n\x07reverse\x18\x01 \x01(\r\")\n\x17SCPKG_CMD_QUIT_GANG_RES\x12\x0e\n\x06result\x18\x01 \x01(\x05\"-\n\x1a\x43SPKG_CMD_GANG_MEMLIST_REQ\x12\x0f\n\x07gang_id\x18\x01 \x01(\r\"d\n\x1aSCPKG_CMD_GANG_MEMLIST_RES\x12\x0e\n\x06result\x18\x01 \x01(\x05\x12\x0f\n\x07gang_id\x18\x02 \x01(\r\x12%\n\tlist_info\x18\x03 \x03(\x0b\x32\x12.CSDT_GANGMEM_INFO\",\n\x19\x43SPKG_CMD_GANG_DETAIL_REQ\x12\x0f\n\x07gang_id\x18\x01 \x01(\r\"\x94\x01\n\x19SCPKG_CMD_GANG_DETAIL_RES\x12\x0e\n\x06result\x18\x01 \x01(\x05\x12\x0f\n\x07gang_id\x18\x02 \x01(\r\x12/\n\x10gang_simple_info\x18\x03 \x01(\x0b\x32\x15.CSDT_GANGSIMPLE_INFO\x12%\n\tlist_info\x18\x04 \x03(\x0b\x32\x12.CSDT_GANGMEM_INFO\"s\n\x1fSCPKG_CMD_GANG_MEM_LIST_CHG_RES\x12\x0b\n\x03\x64\x65l\x18\x01 \x01(\r\x12\x10\n\x08\x64\x65l_type\x18\x02 \x01(\r\x12\x0b\n\x03\x61\x64\x64\x18\x03 \x01(\r\x12$\n\x08mem_info\x18\x04 \x01(\x0b\x32\x12.CSDT_GANGMEM_INFO\"2\n\x1fSCPKG_GANG_BLESS_RANK_CLEAR_RES\x12\x0f\n\x07gang_id\x18\x01 \x01(\r\"i\n$CSPKG_CMD_GANG_UPDATE_BASIC_INFO_REQ\x12\x13\n\x0bgang_notify\x18\x01 \x01(\t\x12\x15\n\ris_auto_apply\x18\x02 \x01(\r\x12\x15\n\rcond_rank_pos\x18\x03 \x01(\r\",\n\x19\x43SPKG_CMD_SEARCH_GANG_REQ\x12\x0f\n\x07gang_id\x18\x01 \x01(\r\"d\n\x19SCPKG_CMD_SEARCH_GANG_RES\x12\x0e\n\x06result\x18\x01 \x01(\x05\x12\x0f\n\x07gang_id\x18\x02 \x01(\r\x12&\n\tgang_info\x18\x03 \x01(\x0b\x32\x13.CSDT_GANGLIST_INFO\"6\n$SCPKG_CMD_GANG_UPDATE_BASIC_INFO_RES\x12\x0e\n\x06result\x18\x01 \x01(\x05\"A\n\x1a\x43SPKG_CMD_GANG_APPROVE_REQ\x12\x0e\n\x06result\x18\x01 \x01(\x05\x12\x13\n\x0bmem_role_id\x18\x02 \x01(\r\"m\n\x1aSCPKG_CMD_GANG_APPROVE_RES\x12\x0e\n\x06result\x18\x01 \x01(\x05\x12\x10\n\x08mem_name\x18\x02 \x01(\t\x12\x13\n\x0bmem_role_id\x18\x03 \x01(\r\x12\x18\n\x10\x61pply_list_count\x18\x04 \x01(\r\"&\n\x17\x43SPKG_CMD_GANG_CHAT_REQ\x12\x0b\n\x03msg\x18\x01 \x01(\t\"\x87\x01\n\x17SCPKG_CMD_GANG_CHAT_RES\x12\x11\n\tfrom_name\x18\x01 \x01(\t\x12\x0b\n\x03msg\x18\x02 \x01(\t\x12\x14\n\x0c\x66rom_role_id\x18\x04 \x01(\r\x12#\n\x1bsender_cumulate_recharge_id\x18\x05 \x01(\r\x12\x11\n\tsend_time\x18\x03 \x01(\r\".\n\x1c\x43SPKG_CMD_GANG_APPLYLIST_REQ\x12\x0e\n\x06result\x18\x01 \x01(\x05\"M\n\x1cSCPKG_CMD_GANG_APPLYLIST_RES\x12-\n\napply_list\x18\x01 \x03(\x0b\x32\x19.CSDT_GANG_APPLYLIST_INFO\"\x8b\x01\n\x1fSCPKG_CMD_GANG_APPROVETOMEM_RES\x12\x0e\n\x06result\x18\x01 \x01(\x05\x12/\n\x10gang_simple_info\x18\x02 \x01(\x0b\x32\x15.CSDT_GANGSIMPLE_INFO\x12\'\n\tself_info\x18\x03 \x01(\x0b\x32\x14.CSDT_GANG_SELF_INFO\"\x91\x01\n!SCPKG_CMD_GANG_BASIC_INFO_CHG_RES\x12\x13\n\x0bgang_notify\x18\x01 \x01(\t\x12\x18\n\x10gang_apply_state\x18\x02 \x01(\r\x12\x15\n\rcond_rank_pos\x18\x03 \x01(\r\x12\x12\n\ngang_score\x18\x04 \x01(\r\x12\x12\n\ngang_level\x18\x05 \x01(\r\"7\n\x1b\x43SPKG_CMD_GANG_KICK_MEM_REQ\x12\x18\n\x10kick_mem_role_id\x18\x01 \x01(\r\"B\n\x1bSCPKG_CMD_GANG_KICK_MEM_RES\x12\x0e\n\x06result\x18\x01 \x01(\x05\x12\x13\n\x0bmem_role_id\x18\x02 \x01(\r\"J\n\x1c\x43SPKG_CMD_GANG_SET_ELDER_REQ\x12\x13\n\x0bmem_role_id\x18\x01 \x01(\r\x12\x15\n\rset_or_cancle\x18\x02 \x01(\r\"C\n\x1cSCPKG_CMD_GANG_SET_ELDER_RES\x12\x0e\n\x06result\x18\x01 \x01(\x05\x12\x13\n\x0bmem_role_id\x18\x02 \x01(\r\"\'\n\x14\x43SPKG_GANG_BLESS_REQ\x12\x0f\n\x07reverse\x18\x01 \x01(\x05\"\x86\x01\n\x14SCPKG_GANG_BLESS_RES\x12\x0e\n\x06result\x18\x01 \x01(\x05\x12%\n\rnormal_reward\x18\x02 \x01(\x0b\x32\x0e.ST_REWARD_RES\x12%\n\rextern_reward\x18\x03 \x01(\x0b\x32\x0e.ST_REWARD_RES\x12\x10\n\x08\x62less_id\x18\x04 \x01(\r\"1\n\x1e\x43SPKG_BUY_GANG_BLESS_COUNT_REQ\x12\x0f\n\x07reverse\x18\x01 \x01(\x05\"\x81\x01\n!SCPKG_REFRESH_GANG_BLESS_INFO_RES\x12\x18\n\x10gang_bless_count\x18\x01 \x01(\r\x12\x1c\n\x14\x62uy_gang_bless_count\x18\x02 \x01(\r\x12$\n\x1cleft_extern_gang_bless_count\x18\x03 \x01(\r\"=\n)CSPKG_SET_GANG_AUTO_APPLY_GANG_BATTLE_REQ\x12\x10\n\x08rerverse\x18\x01 \x01(\r\"I\n)SCPKG_SET_GANG_AUTO_APPLY_GANG_BATTLE_RES\x12\x1c\n\x14is_auto_apply_battle\x18\x01 \x01(\x05\"\x94\x01\n)CSPKG_SET_GANG_CITY_STRONG_POINT_HERO_REQ\x12\x10\n\x08\x63hg_type\x18\x01 \x01(\x05\x12\x0f\n\x07hero_id\x18\x02 \x01(\r\x12\x0f\n\x07\x63ity_id\x18\x03 \x01(\r\x12\x1a\n\x12strong_point_index\x18\x04 \x01(\x05\x12\x17\n\x0fhero_slot_index\x18\x05 \x01(\x05\";\n)SCPKG_SET_GANG_CITY_STRONG_POINT_HERO_RES\x12\x0e\n\x06result\x18\x01 \x01(\x05\"\xbc\x01\n)SCPKG_GANG_CITY_STRONG_POINT_HERO_CHG_RES\x12\x10\n\x08\x63hg_type\x18\x01 \x01(\x05\x12\x0f\n\x07\x63ity_id\x18\x02 \x01(\r\x12\x1a\n\x12strong_point_index\x18\x03 \x01(\x05\x12\x17\n\x0fhero_slot_index\x18\x04 \x01(\x05\x12\x37\n\thero_info\x18\x05 \x01(\x0b\x32$.ST_GANG_CITY_STRONG_POINT_HERO_INFO\"0\n\x1c\x43SPKG_GET_GANG_CITY_INFO_REQ\x12\x10\n\x08rerverse\x18\x01 \x01(\r\"P\n\x1cSCPKG_GET_GANG_CITY_INFO_RES\x12\x0e\n\x06result\x18\x01 \x01(\x05\x12 \n\tcity_info\x18\x02 \x01(\x0b\x32\r.ST_GANG_CITY\"/\n\x1b\x43SPKG_APPLY_GANG_BATTLE_REQ\x12\x10\n\x08rerverse\x18\x01 \x01(\r\"-\n\x1bSCPKG_APPLY_GANG_BATTLE_RES\x12\x0e\n\x06result\x18\x01 \x01(\r\".\n\x1dSCPKG_GANG_BATTLE_STATE_BROAD\x12\r\n\x05state\x18\x01 \x01(\r\"5\n\x1e\x43SPKG_GET_GANG_BATTLE_CITY_REQ\x12\x13\n\x0bis_get_self\x18\x01 \x01(\x08\"\xc6\x01\n\x1eSCPKG_GET_GANG_BATTLE_CITY_RES\x12\x0e\n\x06result\x18\x01 \x01(\x05\x12\x13\n\x0bis_get_self\x18\x02 \x01(\x08\x12\x12\n\nself_score\x18\x03 \x01(\r\x12\x14\n\x0ctarget_score\x18\x04 \x01(\r\x12\x18\n\x10target_gang_name\x18\x05 \x01(\t\x12\x19\n\x11target_gang_level\x18\x06 \x01(\r\x12 \n\tcity_info\x18\x07 \x01(\x0b\x32\r.ST_GANG_CITY\"\xa2\x01\n\x1eSCPKG_GANG_BATTTLE_POINT_BROAD\x12\x12\n\nself_score\x18\x01 \x01(\r\x12\x14\n\x0ctarget_score\x18\x02 \x01(\r\x12\x14\n\x0cis_self_city\x18\x03 \x01(\x08\x12\x0f\n\x07\x63ity_id\x18\x04 \x01(\r\x12\x1a\n\x12strong_point_index\x18\x05 \x01(\x05\x12\x13\n\x0bpoint_state\x18\x06 \x01(\r\"v\n#CSPKG_ENTER_GANG_BATTLE_DUNGEON_REQ\x12\x14\n\x0cself_hero_id\x18\x01 \x01(\r\x12\x16\n\x0etarget_city_id\x18\x02 \x01(\r\x12!\n\x19target_strong_point_index\x18\x03 \x01(\x05\"j\n ST_GANG_BATTLE_DEFENSE_HERO_INFO\x12\x16\n\x0etarget_role_id\x18\x01 \x01(\r\x12.\n\x0btarget_hero\x18\x02 \x01(\x0b\x32\x19.ST_BATTLE_HERO_ATTR_INFO\"\x98\x01\n#SCPKG_ENTER_GANG_BATTLE_DUNGEON_RES\x12\x0e\n\x06result\x18\x01 \x01(\x05\x12\x0e\n\x06\x64un_id\x18\x02 \x01(\r\x12\x14\n\x0cself_hero_id\x18\x03 \x01(\r\x12;\n\x10target_hero_info\x18\x04 \x03(\x0b\x32!.ST_GANG_BATTLE_DEFENSE_HERO_INFO\";\n)CSPKG_GANG_BATTLE_DUNGEON_ROUND_BEGIN_REQ\x12\x0e\n\x06\x64un_id\x18\x02 \x01(\r\"Q\n)SCPKG_GANG_BATTLE_DUNGEON_ROUND_BEGIN_RES\x12\x12\n\nbegin_time\x18\x01 \x01(\r\x12\x10\n\x08interval\x18\x02 \x01(\x05\"\x90\x01\n\x1d\x43SPKG_GANG_BATTLE_BALANCE_REQ\x12\x0e\n\x06\x64un_id\x18\x01 \x01(\r\x12\x14\n\x0cself_hero_id\x18\x02 \x01(\r\x12\x16\n\x0etarget_city_id\x18\x03 \x01(\r\x12!\n\x19target_strong_point_index\x18\x04 \x01(\x05\x12\x0e\n\x06is_win\x18\x05 \x01(\x08\"\\\n\x1dSCPKG_GANG_BATTLE_BALANCE_RES\x12\x0e\n\x06result\x18\x01 \x01(\x05\x12\x13\n\x0breward_gold\x18\x02 \x01(\r\x12\x16\n\x0ereward_crystal\x18\x03 \x01(\r\"7\n#CSPKG_CMD_GET_GANG_BATTLE_STATE_REQ\x12\x10\n\x08rerverse\x18\x01 \x01(\r\"\xc4\x01\n#SCPKG_CMD_GET_GANG_BATTLE_STATE_RES\x12\r\n\x05state\x18\x01 \x01(\r\x12\x11\n\tsub_state\x18\x02 \x01(\r\x12\x14\n\x0cpre_get_gold\x18\x03 \x01(\r\x12\x17\n\x0fpre_get_crystal\x18\x04 \x01(\r\x12\x13\n\x0b\x61ttack_hero\x18\x05 \x03(\r\x12\x37\n\x0c\x61ttack_point\x18\x06 \x03(\x0b\x32!.ST_GANG_BATTLE_ATTACK_POINT_INFO\"9\n%CSPKG_CMD_GET_GANG_BATTLE_HISTORY_REQ\x12\x10\n\x08rerverse\x18\x01 \x01(\r\"]\n%SCPKG_CMD_GET_GANG_BATTLE_HISTORY_RES\x12\x34\n\x0chistory_info\x18\x01 \x03(\x0b\x32\x1e.CSDT_GANG_BATTLE_HISTORY_INFO\"=\n)CSPKG_GET_GANG_BATTLE_MEM_ATTACK_INFO_REQ\x12\x10\n\x08rerverse\x18\x01 \x01(\r\"t\n)SCPKG_GET_GANG_BATTLE_MEM_ATTACK_INFO_RES\x12\x0e\n\x06result\x18\x01 \x01(\x05\x12\x37\n\x0emem_attck_info\x18\x02 \x01(\x0b\x32\x1f.ST_GANG_BATTLE_MEM_ATTACK_LIST\"7\n$CSPKG_GET_GANG_BATTLE_STATE_INFO_REQ\x12\x0f\n\x07reverse\x18\x01 \x01(\x05\"v\n$SCPKG_GET_GANG_BATTLE_STATE_INFO_RES\x12\x17\n\x0fis_battle_start\x18\x01 \x01(\x08\x12\x17\n\x0f\x61ttack_hero_num\x18\x02 \x01(\x08\x12\x1c\n\x14has_can_attack_point\x18\x03 \x01(\x08')
   ,
   dependencies=[rescommon_pb2.DESCRIPTOR,])
 _sym_db.RegisterFileDescriptor(DESCRIPTOR)
 
 
-
-
-_ST_HERO_BATTLE_EMBLEM_INFO = _descriptor.Descriptor(
-  name='ST_HERO_BATTLE_EMBLEM_INFO',
-  full_name='ST_HERO_BATTLE_EMBLEM_INFO',
-  filename=None,
-  file=DESCRIPTOR,
-  containing_type=None,
-  fields=[
-    _descriptor.FieldDescriptor(
-      name='emblem_id', full_name='ST_HERO_BATTLE_EMBLEM_INFO.emblem_id', index=0,
-      number=1, type=13, cpp_type=3, label=1,
-      has_default_value=False, default_value=0,
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      options=None),
-    _descriptor.FieldDescriptor(
-      name='emblem_lv', full_name='ST_HERO_BATTLE_EMBLEM_INFO.emblem_lv', index=1,
-      number=2, type=13, cpp_type=3, label=1,
-      has_default_value=False, default_value=0,
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      options=None),
-  ],
-  extensions=[
-  ],
-  nested_types=[],
-  enum_types=[
-  ],
-  options=None,
-  is_extendable=False,
-  extension_ranges=[],
-  oneofs=[
-  ],
-  serialized_start=31,
-  serialized_end=97,
-)
-
-
-_ST_HERO_BATTLE_EQUIP_INFO = _descriptor.Descriptor(
-  name='ST_HERO_BATTLE_EQUIP_INFO',
-  full_name='ST_HERO_BATTLE_EQUIP_INFO',
-  filename=None,
-  file=DESCRIPTOR,
-  containing_type=None,
-  fields=[
-    _descriptor.FieldDescriptor(
-      name='base_id', full_name='ST_HERO_BATTLE_EQUIP_INFO.base_id', index=0,
-      number=1, type=13, cpp_type=3, label=1,
-      has_default_value=False, default_value=0,
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      options=None),
-    _descriptor.FieldDescriptor(
-      name='level', full_name='ST_HERO_BATTLE_EQUIP_INFO.level', index=1,
-      number=2, type=13, cpp_type=3, label=1,
-      has_default_value=False, default_value=0,
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      options=None),
-    _descriptor.FieldDescriptor(
-      name='wake_up', full_name='ST_HERO_BATTLE_EQUIP_INFO.wake_up', index=2,
-      number=3, type=13, cpp_type=3, label=1,
-      has_default_value=False, default_value=0,
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      options=None),
-    _descriptor.FieldDescriptor(
-      name='grow_up', full_name='ST_HERO_BATTLE_EQUIP_INFO.grow_up', index=3,
-      number=4, type=13, cpp_type=3, label=1,
-      has_default_value=False, default_value=0,
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      options=None),
-    _descriptor.FieldDescriptor(
-      name='purify_level', full_name='ST_HERO_BATTLE_EQUIP_INFO.purify_level', index=4,
-      number=5, type=13, cpp_type=3, label=1,
-      has_default_value=False, default_value=0,
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      options=None),
-  ],
-  extensions=[
-  ],
-  nested_types=[],
-  enum_types=[
-  ],
-  options=None,
-  is_extendable=False,
-  extension_ranges=[],
-  oneofs=[
-  ],
-  serialized_start=99,
-  serialized_end=214,
-)
-
-
-_ST_HERO_BATTLE_INFO = _descriptor.Descriptor(
-  name='ST_HERO_BATTLE_INFO',
-  full_name='ST_HERO_BATTLE_INFO',
-  filename=None,
-  file=DESCRIPTOR,
-  containing_type=None,
-  fields=[
-    _descriptor.FieldDescriptor(
-      name='hero_id', full_name='ST_HERO_BATTLE_INFO.hero_id', index=0,
-      number=1, type=13, cpp_type=3, label=1,
-      has_default_value=False, default_value=0,
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      options=None),
-    _descriptor.FieldDescriptor(
-      name='hero_lv', full_name='ST_HERO_BATTLE_INFO.hero_lv', index=1,
-      number=2, type=13, cpp_type=3, label=1,
-      has_default_value=False, default_value=0,
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      options=None),
-    _descriptor.FieldDescriptor(
-      name='hero_grow_up', full_name='ST_HERO_BATTLE_INFO.hero_grow_up', index=2,
-      number=3, type=13, cpp_type=3, label=1,
-      has_default_value=False, default_value=0,
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      options=None),
-    _descriptor.FieldDescriptor(
-      name='hero_relation_strength', full_name='ST_HERO_BATTLE_INFO.hero_relation_strength', index=3,
-      number=4, type=13, cpp_type=3, label=1,
-      has_default_value=False, default_value=0,
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      options=None),
-    _descriptor.FieldDescriptor(
-      name='hero_relation_stamina', full_name='ST_HERO_BATTLE_INFO.hero_relation_stamina', index=4,
-      number=5, type=13, cpp_type=3, label=1,
-      has_default_value=False, default_value=0,
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      options=None),
-    _descriptor.FieldDescriptor(
-      name='hero_fight_capacity', full_name='ST_HERO_BATTLE_INFO.hero_fight_capacity', index=5,
-      number=6, type=13, cpp_type=3, label=1,
-      has_default_value=False, default_value=0,
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      options=None),
-    _descriptor.FieldDescriptor(
-      name='emblem_info', full_name='ST_HERO_BATTLE_INFO.emblem_info', index=6,
-      number=7, type=11, cpp_type=10, label=3,
-      has_default_value=False, default_value=[],
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      options=None),
-    _descriptor.FieldDescriptor(
-      name='equip_info', full_name='ST_HERO_BATTLE_INFO.equip_info', index=7,
-      number=8, type=11, cpp_type=10, label=3,
-      has_default_value=False, default_value=[],
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      options=None),
-    _descriptor.FieldDescriptor(
-      name='skill_id', full_name='ST_HERO_BATTLE_INFO.skill_id', index=8,
-      number=9, type=13, cpp_type=3, label=3,
-      has_default_value=False, default_value=[],
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      options=None),
-  ],
-  extensions=[
-  ],
-  nested_types=[],
-  enum_types=[
-  ],
-  options=None,
-  is_extendable=False,
-  extension_ranges=[],
-  oneofs=[
-  ],
-  serialized_start=217,
-  serialized_end=502,
-)
 
 
 _ST_GANG_CITY_STRONG_POINT_HERO_INFO = _descriptor.Descriptor(
@@ -247,8 +66,8 @@ _ST_GANG_CITY_STRONG_POINT_HERO_INFO = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=504,
-  serialized_end=618,
+  serialized_start=31,
+  serialized_end=145,
 )
 
 
@@ -284,8 +103,8 @@ _ST_GANG_CITY_STRONG_POINT = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=620,
-  serialized_end=725,
+  serialized_start=147,
+  serialized_end=252,
 )
 
 
@@ -328,8 +147,8 @@ _ST_GANG_CITY_INFO = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=727,
-  serialized_end=833,
+  serialized_start=254,
+  serialized_end=360,
 )
 
 
@@ -372,8 +191,8 @@ _ST_GANG_CITY = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=836,
-  serialized_end=971,
+  serialized_start=363,
+  serialized_end=498,
 )
 
 
@@ -416,8 +235,8 @@ _ST_GANG_BATTLE_MEM_INFO = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=973,
-  serialized_end=1072,
+  serialized_start=500,
+  serialized_end=599,
 )
 
 
@@ -446,8 +265,8 @@ _ST_GANG_BATTLE_MEM_LIST = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=1074,
-  serialized_end=1143,
+  serialized_start=601,
+  serialized_end=670,
 )
 
 
@@ -483,8 +302,8 @@ _ST_GANG_BATTLE_ATTACK_POINT_INFO = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=1145,
-  serialized_end=1224,
+  serialized_start=672,
+  serialized_end=751,
 )
 
 
@@ -541,8 +360,8 @@ _ST_GANG_BATTLE_MEM_ATTACK_INFO = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=1227,
-  serialized_end=1389,
+  serialized_start=754,
+  serialized_end=916,
 )
 
 
@@ -571,8 +390,8 @@ _ST_GANG_BATTLE_MEM_ATTACK_LIST = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=1391,
-  serialized_end=1474,
+  serialized_start=918,
+  serialized_end=1001,
 )
 
 
@@ -643,8 +462,8 @@ _CSDT_GANG_APPLYLIST_INFO = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=1477,
-  serialized_end=1667,
+  serialized_start=1004,
+  serialized_end=1194,
 )
 
 
@@ -736,8 +555,8 @@ _CSDT_GANGSIMPLE_INFO = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=1670,
-  serialized_end=1918,
+  serialized_start=1197,
+  serialized_end=1445,
 )
 
 
@@ -822,8 +641,8 @@ _CSDT_GANGLIST_INFO = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=1921,
-  serialized_end=2148,
+  serialized_start=1448,
+  serialized_end=1675,
 )
 
 
@@ -908,8 +727,8 @@ _CSDT_GANGMEM_INFO = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=2151,
-  serialized_end=2403,
+  serialized_start=1678,
+  serialized_end=1930,
 )
 
 
@@ -938,8 +757,8 @@ _CSDT_GANG_SELF_INFO = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=2405,
-  serialized_end=2444,
+  serialized_start=1932,
+  serialized_end=1971,
 )
 
 
@@ -996,8 +815,8 @@ _CSDT_GANG_BATTLE_HISTORY_MEM_INFO = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=2447,
-  serialized_end=2595,
+  serialized_start=1974,
+  serialized_end=2122,
 )
 
 
@@ -1026,8 +845,8 @@ _CSDT_GANG_BATTLE_HISTORY_MEM_LIST = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=2597,
-  serialized_end=2691,
+  serialized_start=2124,
+  serialized_end=2218,
 )
 
 
@@ -1105,8 +924,8 @@ _CSDT_GANG_BATTLE_HISTORY_INFO = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=2694,
-  serialized_end=2962,
+  serialized_start=2221,
+  serialized_end=2489,
 )
 
 
@@ -1156,8 +975,8 @@ _CSPKG_CMD_CREATEGANG_REQ = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=2964,
-  serialized_end=3076,
+  serialized_start=2491,
+  serialized_end=2603,
 )
 
 
@@ -1200,8 +1019,8 @@ _SCPKG_CMD_CREATEGANG_RES = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=3079,
-  serialized_end=3211,
+  serialized_start=2606,
+  serialized_end=2738,
 )
 
 
@@ -1213,8 +1032,15 @@ _CSPKG_CMD_GANGLIST_REQ = _descriptor.Descriptor(
   containing_type=None,
   fields=[
     _descriptor.FieldDescriptor(
-      name='index', full_name='CSPKG_CMD_GANGLIST_REQ.index', index=0,
-      number=1, type=5, cpp_type=1, label=1,
+      name='page_start_id', full_name='CSPKG_CMD_GANGLIST_REQ.page_start_id', index=0,
+      number=1, type=13, cpp_type=3, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    _descriptor.FieldDescriptor(
+      name='page_count', full_name='CSPKG_CMD_GANGLIST_REQ.page_count', index=1,
+      number=2, type=13, cpp_type=3, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
@@ -1230,8 +1056,8 @@ _CSPKG_CMD_GANGLIST_REQ = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=3213,
-  serialized_end=3252,
+  serialized_start=2740,
+  serialized_end=2807,
 )
 
 
@@ -1249,6 +1075,13 @@ _SCPKG_CMD_GANGLIST_RES = _descriptor.Descriptor(
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
+    _descriptor.FieldDescriptor(
+      name='total_cnt', full_name='SCPKG_CMD_GANGLIST_RES.total_cnt', index=1,
+      number=2, type=13, cpp_type=3, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
   ],
   extensions=[
   ],
@@ -1260,8 +1093,8 @@ _SCPKG_CMD_GANGLIST_RES = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=3254,
-  serialized_end=3318,
+  serialized_start=2809,
+  serialized_end=2892,
 )
 
 
@@ -1311,8 +1144,8 @@ _SCPKG_CMD_ROLELOGIN_GANG = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=3321,
-  serialized_end=3485,
+  serialized_start=2895,
+  serialized_end=3059,
 )
 
 
@@ -1348,8 +1181,8 @@ _CSPKG_CMD_APPLY_GANG_REQ = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=3487,
-  serialized_end=3549,
+  serialized_start=3061,
+  serialized_end=3123,
 )
 
 
@@ -1399,8 +1232,8 @@ _SCPKG_CMD_APPLY_GANG_RES = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=3551,
-  serialized_end=3654,
+  serialized_start=3125,
+  serialized_end=3228,
 )
 
 
@@ -1429,8 +1262,8 @@ _CSPKG_CMD_QUIT_GANG_REQ = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=3656,
-  serialized_end=3698,
+  serialized_start=3230,
+  serialized_end=3272,
 )
 
 
@@ -1459,8 +1292,8 @@ _SCPKG_CMD_QUIT_GANG_RES = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=3700,
-  serialized_end=3741,
+  serialized_start=3274,
+  serialized_end=3315,
 )
 
 
@@ -1489,8 +1322,8 @@ _CSPKG_CMD_GANG_MEMLIST_REQ = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=3743,
-  serialized_end=3788,
+  serialized_start=3317,
+  serialized_end=3362,
 )
 
 
@@ -1533,8 +1366,8 @@ _SCPKG_CMD_GANG_MEMLIST_RES = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=3790,
-  serialized_end=3890,
+  serialized_start=3364,
+  serialized_end=3464,
 )
 
 
@@ -1563,8 +1396,8 @@ _CSPKG_CMD_GANG_DETAIL_REQ = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=3892,
-  serialized_end=3936,
+  serialized_start=3466,
+  serialized_end=3510,
 )
 
 
@@ -1614,8 +1447,8 @@ _SCPKG_CMD_GANG_DETAIL_RES = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=3939,
-  serialized_end=4087,
+  serialized_start=3513,
+  serialized_end=3661,
 )
 
 
@@ -1665,8 +1498,8 @@ _SCPKG_CMD_GANG_MEM_LIST_CHG_RES = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=4089,
-  serialized_end=4204,
+  serialized_start=3663,
+  serialized_end=3778,
 )
 
 
@@ -1695,8 +1528,8 @@ _SCPKG_GANG_BLESS_RANK_CLEAR_RES = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=4206,
-  serialized_end=4256,
+  serialized_start=3780,
+  serialized_end=3830,
 )
 
 
@@ -1739,8 +1572,8 @@ _CSPKG_CMD_GANG_UPDATE_BASIC_INFO_REQ = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=4258,
-  serialized_end=4363,
+  serialized_start=3832,
+  serialized_end=3937,
 )
 
 
@@ -1769,8 +1602,8 @@ _CSPKG_CMD_SEARCH_GANG_REQ = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=4365,
-  serialized_end=4409,
+  serialized_start=3939,
+  serialized_end=3983,
 )
 
 
@@ -1813,8 +1646,8 @@ _SCPKG_CMD_SEARCH_GANG_RES = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=4411,
-  serialized_end=4511,
+  serialized_start=3985,
+  serialized_end=4085,
 )
 
 
@@ -1843,8 +1676,8 @@ _SCPKG_CMD_GANG_UPDATE_BASIC_INFO_RES = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=4513,
-  serialized_end=4567,
+  serialized_start=4087,
+  serialized_end=4141,
 )
 
 
@@ -1880,8 +1713,8 @@ _CSPKG_CMD_GANG_APPROVE_REQ = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=4569,
-  serialized_end=4634,
+  serialized_start=4143,
+  serialized_end=4208,
 )
 
 
@@ -1931,8 +1764,8 @@ _SCPKG_CMD_GANG_APPROVE_RES = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=4636,
-  serialized_end=4745,
+  serialized_start=4210,
+  serialized_end=4319,
 )
 
 
@@ -1961,8 +1794,8 @@ _CSPKG_CMD_GANG_CHAT_REQ = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=4747,
-  serialized_end=4785,
+  serialized_start=4321,
+  serialized_end=4359,
 )
 
 
@@ -2019,8 +1852,8 @@ _SCPKG_CMD_GANG_CHAT_RES = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=4788,
-  serialized_end=4923,
+  serialized_start=4362,
+  serialized_end=4497,
 )
 
 
@@ -2049,8 +1882,8 @@ _CSPKG_CMD_GANG_APPLYLIST_REQ = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=4925,
-  serialized_end=4971,
+  serialized_start=4499,
+  serialized_end=4545,
 )
 
 
@@ -2079,8 +1912,8 @@ _SCPKG_CMD_GANG_APPLYLIST_RES = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=4973,
-  serialized_end=5050,
+  serialized_start=4547,
+  serialized_end=4624,
 )
 
 
@@ -2123,8 +1956,8 @@ _SCPKG_CMD_GANG_APPROVETOMEM_RES = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=5053,
-  serialized_end=5192,
+  serialized_start=4627,
+  serialized_end=4766,
 )
 
 
@@ -2181,8 +2014,8 @@ _SCPKG_CMD_GANG_BASIC_INFO_CHG_RES = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=5195,
-  serialized_end=5340,
+  serialized_start=4769,
+  serialized_end=4914,
 )
 
 
@@ -2211,8 +2044,8 @@ _CSPKG_CMD_GANG_KICK_MEM_REQ = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=5342,
-  serialized_end=5397,
+  serialized_start=4916,
+  serialized_end=4971,
 )
 
 
@@ -2248,8 +2081,8 @@ _SCPKG_CMD_GANG_KICK_MEM_RES = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=5399,
-  serialized_end=5465,
+  serialized_start=4973,
+  serialized_end=5039,
 )
 
 
@@ -2285,8 +2118,8 @@ _CSPKG_CMD_GANG_SET_ELDER_REQ = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=5467,
-  serialized_end=5541,
+  serialized_start=5041,
+  serialized_end=5115,
 )
 
 
@@ -2322,8 +2155,8 @@ _SCPKG_CMD_GANG_SET_ELDER_RES = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=5543,
-  serialized_end=5610,
+  serialized_start=5117,
+  serialized_end=5184,
 )
 
 
@@ -2352,8 +2185,8 @@ _CSPKG_GANG_BLESS_REQ = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=5612,
-  serialized_end=5651,
+  serialized_start=5186,
+  serialized_end=5225,
 )
 
 
@@ -2403,8 +2236,8 @@ _SCPKG_GANG_BLESS_RES = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=5654,
-  serialized_end=5788,
+  serialized_start=5228,
+  serialized_end=5362,
 )
 
 
@@ -2433,8 +2266,8 @@ _CSPKG_BUY_GANG_BLESS_COUNT_REQ = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=5790,
-  serialized_end=5839,
+  serialized_start=5364,
+  serialized_end=5413,
 )
 
 
@@ -2477,8 +2310,8 @@ _SCPKG_REFRESH_GANG_BLESS_INFO_RES = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=5842,
-  serialized_end=5971,
+  serialized_start=5416,
+  serialized_end=5545,
 )
 
 
@@ -2507,8 +2340,8 @@ _CSPKG_SET_GANG_AUTO_APPLY_GANG_BATTLE_REQ = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=5973,
-  serialized_end=6034,
+  serialized_start=5547,
+  serialized_end=5608,
 )
 
 
@@ -2537,8 +2370,8 @@ _SCPKG_SET_GANG_AUTO_APPLY_GANG_BATTLE_RES = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=6036,
-  serialized_end=6109,
+  serialized_start=5610,
+  serialized_end=5683,
 )
 
 
@@ -2595,8 +2428,8 @@ _CSPKG_SET_GANG_CITY_STRONG_POINT_HERO_REQ = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=6112,
-  serialized_end=6260,
+  serialized_start=5686,
+  serialized_end=5834,
 )
 
 
@@ -2625,8 +2458,8 @@ _SCPKG_SET_GANG_CITY_STRONG_POINT_HERO_RES = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=6262,
-  serialized_end=6321,
+  serialized_start=5836,
+  serialized_end=5895,
 )
 
 
@@ -2683,8 +2516,8 @@ _SCPKG_GANG_CITY_STRONG_POINT_HERO_CHG_RES = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=6324,
-  serialized_end=6512,
+  serialized_start=5898,
+  serialized_end=6086,
 )
 
 
@@ -2713,8 +2546,8 @@ _CSPKG_GET_GANG_CITY_INFO_REQ = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=6514,
-  serialized_end=6562,
+  serialized_start=6088,
+  serialized_end=6136,
 )
 
 
@@ -2750,8 +2583,8 @@ _SCPKG_GET_GANG_CITY_INFO_RES = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=6564,
-  serialized_end=6644,
+  serialized_start=6138,
+  serialized_end=6218,
 )
 
 
@@ -2780,8 +2613,8 @@ _CSPKG_APPLY_GANG_BATTLE_REQ = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=6646,
-  serialized_end=6693,
+  serialized_start=6220,
+  serialized_end=6267,
 )
 
 
@@ -2810,8 +2643,8 @@ _SCPKG_APPLY_GANG_BATTLE_RES = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=6695,
-  serialized_end=6740,
+  serialized_start=6269,
+  serialized_end=6314,
 )
 
 
@@ -2840,8 +2673,8 @@ _SCPKG_GANG_BATTLE_STATE_BROAD = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=6742,
-  serialized_end=6788,
+  serialized_start=6316,
+  serialized_end=6362,
 )
 
 
@@ -2870,8 +2703,8 @@ _CSPKG_GET_GANG_BATTLE_CITY_REQ = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=6790,
-  serialized_end=6843,
+  serialized_start=6364,
+  serialized_end=6417,
 )
 
 
@@ -2942,8 +2775,8 @@ _SCPKG_GET_GANG_BATTLE_CITY_RES = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=6846,
-  serialized_end=7044,
+  serialized_start=6420,
+  serialized_end=6618,
 )
 
 
@@ -3007,8 +2840,8 @@ _SCPKG_GANG_BATTTLE_POINT_BROAD = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=7047,
-  serialized_end=7209,
+  serialized_start=6621,
+  serialized_end=6783,
 )
 
 
@@ -3051,8 +2884,8 @@ _CSPKG_ENTER_GANG_BATTLE_DUNGEON_REQ = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=7211,
-  serialized_end=7329,
+  serialized_start=6785,
+  serialized_end=6903,
 )
 
 
@@ -3088,8 +2921,8 @@ _ST_GANG_BATTLE_DEFENSE_HERO_INFO = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=7331,
-  serialized_end=7437,
+  serialized_start=6905,
+  serialized_end=7011,
 )
 
 
@@ -3139,8 +2972,8 @@ _SCPKG_ENTER_GANG_BATTLE_DUNGEON_RES = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=7440,
-  serialized_end=7592,
+  serialized_start=7014,
+  serialized_end=7166,
 )
 
 
@@ -3169,8 +3002,8 @@ _CSPKG_GANG_BATTLE_DUNGEON_ROUND_BEGIN_REQ = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=7594,
-  serialized_end=7653,
+  serialized_start=7168,
+  serialized_end=7227,
 )
 
 
@@ -3206,8 +3039,8 @@ _SCPKG_GANG_BATTLE_DUNGEON_ROUND_BEGIN_RES = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=7655,
-  serialized_end=7736,
+  serialized_start=7229,
+  serialized_end=7310,
 )
 
 
@@ -3264,8 +3097,8 @@ _CSPKG_GANG_BATTLE_BALANCE_REQ = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=7739,
-  serialized_end=7883,
+  serialized_start=7313,
+  serialized_end=7457,
 )
 
 
@@ -3308,8 +3141,8 @@ _SCPKG_GANG_BATTLE_BALANCE_RES = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=7885,
-  serialized_end=7977,
+  serialized_start=7459,
+  serialized_end=7551,
 )
 
 
@@ -3338,8 +3171,8 @@ _CSPKG_CMD_GET_GANG_BATTLE_STATE_REQ = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=7979,
-  serialized_end=8034,
+  serialized_start=7553,
+  serialized_end=7608,
 )
 
 
@@ -3403,8 +3236,8 @@ _SCPKG_CMD_GET_GANG_BATTLE_STATE_RES = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=8037,
-  serialized_end=8233,
+  serialized_start=7611,
+  serialized_end=7807,
 )
 
 
@@ -3433,8 +3266,8 @@ _CSPKG_CMD_GET_GANG_BATTLE_HISTORY_REQ = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=8235,
-  serialized_end=8292,
+  serialized_start=7809,
+  serialized_end=7866,
 )
 
 
@@ -3463,8 +3296,8 @@ _SCPKG_CMD_GET_GANG_BATTLE_HISTORY_RES = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=8294,
-  serialized_end=8387,
+  serialized_start=7868,
+  serialized_end=7961,
 )
 
 
@@ -3493,8 +3326,8 @@ _CSPKG_GET_GANG_BATTLE_MEM_ATTACK_INFO_REQ = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=8389,
-  serialized_end=8450,
+  serialized_start=7963,
+  serialized_end=8024,
 )
 
 
@@ -3530,8 +3363,8 @@ _SCPKG_GET_GANG_BATTLE_MEM_ATTACK_INFO_RES = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=8452,
-  serialized_end=8568,
+  serialized_start=8026,
+  serialized_end=8142,
 )
 
 
@@ -3560,8 +3393,8 @@ _CSPKG_GET_GANG_BATTLE_STATE_INFO_REQ = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=8570,
-  serialized_end=8625,
+  serialized_start=8144,
+  serialized_end=8199,
 )
 
 
@@ -3604,13 +3437,11 @@ _SCPKG_GET_GANG_BATTLE_STATE_INFO_RES = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=8627,
-  serialized_end=8745,
+  serialized_start=8201,
+  serialized_end=8319,
 )
 
-_ST_HERO_BATTLE_INFO.fields_by_name['emblem_info'].message_type = _ST_HERO_BATTLE_EMBLEM_INFO
-_ST_HERO_BATTLE_INFO.fields_by_name['equip_info'].message_type = _ST_HERO_BATTLE_EQUIP_INFO
-_ST_GANG_CITY_STRONG_POINT_HERO_INFO.fields_by_name['hero_info'].message_type = _ST_HERO_BATTLE_INFO
+_ST_GANG_CITY_STRONG_POINT_HERO_INFO.fields_by_name['hero_info'].message_type = rescommon_pb2._ST_HERO_BATTLE_INFO
 _ST_GANG_CITY_STRONG_POINT.fields_by_name['hero_info'].message_type = _ST_GANG_CITY_STRONG_POINT_HERO_INFO
 _ST_GANG_CITY_INFO.fields_by_name['strong_point_info'].message_type = _ST_GANG_CITY_STRONG_POINT
 _ST_GANG_CITY.fields_by_name['small_city'].message_type = _ST_GANG_CITY_INFO
@@ -3644,9 +3475,6 @@ _SCPKG_ENTER_GANG_BATTLE_DUNGEON_RES.fields_by_name['target_hero_info'].message_
 _SCPKG_CMD_GET_GANG_BATTLE_STATE_RES.fields_by_name['attack_point'].message_type = _ST_GANG_BATTLE_ATTACK_POINT_INFO
 _SCPKG_CMD_GET_GANG_BATTLE_HISTORY_RES.fields_by_name['history_info'].message_type = _CSDT_GANG_BATTLE_HISTORY_INFO
 _SCPKG_GET_GANG_BATTLE_MEM_ATTACK_INFO_RES.fields_by_name['mem_attck_info'].message_type = _ST_GANG_BATTLE_MEM_ATTACK_LIST
-DESCRIPTOR.message_types_by_name['ST_HERO_BATTLE_EMBLEM_INFO'] = _ST_HERO_BATTLE_EMBLEM_INFO
-DESCRIPTOR.message_types_by_name['ST_HERO_BATTLE_EQUIP_INFO'] = _ST_HERO_BATTLE_EQUIP_INFO
-DESCRIPTOR.message_types_by_name['ST_HERO_BATTLE_INFO'] = _ST_HERO_BATTLE_INFO
 DESCRIPTOR.message_types_by_name['ST_GANG_CITY_STRONG_POINT_HERO_INFO'] = _ST_GANG_CITY_STRONG_POINT_HERO_INFO
 DESCRIPTOR.message_types_by_name['ST_GANG_CITY_STRONG_POINT'] = _ST_GANG_CITY_STRONG_POINT
 DESCRIPTOR.message_types_by_name['ST_GANG_CITY_INFO'] = _ST_GANG_CITY_INFO
@@ -3727,27 +3555,6 @@ DESCRIPTOR.message_types_by_name['CSPKG_GET_GANG_BATTLE_MEM_ATTACK_INFO_REQ'] = 
 DESCRIPTOR.message_types_by_name['SCPKG_GET_GANG_BATTLE_MEM_ATTACK_INFO_RES'] = _SCPKG_GET_GANG_BATTLE_MEM_ATTACK_INFO_RES
 DESCRIPTOR.message_types_by_name['CSPKG_GET_GANG_BATTLE_STATE_INFO_REQ'] = _CSPKG_GET_GANG_BATTLE_STATE_INFO_REQ
 DESCRIPTOR.message_types_by_name['SCPKG_GET_GANG_BATTLE_STATE_INFO_RES'] = _SCPKG_GET_GANG_BATTLE_STATE_INFO_RES
-
-ST_HERO_BATTLE_EMBLEM_INFO = _reflection.GeneratedProtocolMessageType('ST_HERO_BATTLE_EMBLEM_INFO', (_message.Message,), dict(
-  DESCRIPTOR = _ST_HERO_BATTLE_EMBLEM_INFO,
-  __module__ = 'gang_pb2'
-  # @@protoc_insertion_point(class_scope:ST_HERO_BATTLE_EMBLEM_INFO)
-  ))
-_sym_db.RegisterMessage(ST_HERO_BATTLE_EMBLEM_INFO)
-
-ST_HERO_BATTLE_EQUIP_INFO = _reflection.GeneratedProtocolMessageType('ST_HERO_BATTLE_EQUIP_INFO', (_message.Message,), dict(
-  DESCRIPTOR = _ST_HERO_BATTLE_EQUIP_INFO,
-  __module__ = 'gang_pb2'
-  # @@protoc_insertion_point(class_scope:ST_HERO_BATTLE_EQUIP_INFO)
-  ))
-_sym_db.RegisterMessage(ST_HERO_BATTLE_EQUIP_INFO)
-
-ST_HERO_BATTLE_INFO = _reflection.GeneratedProtocolMessageType('ST_HERO_BATTLE_INFO', (_message.Message,), dict(
-  DESCRIPTOR = _ST_HERO_BATTLE_INFO,
-  __module__ = 'gang_pb2'
-  # @@protoc_insertion_point(class_scope:ST_HERO_BATTLE_INFO)
-  ))
-_sym_db.RegisterMessage(ST_HERO_BATTLE_INFO)
 
 ST_GANG_CITY_STRONG_POINT_HERO_INFO = _reflection.GeneratedProtocolMessageType('ST_GANG_CITY_STRONG_POINT_HERO_INFO', (_message.Message,), dict(
   DESCRIPTOR = _ST_GANG_CITY_STRONG_POINT_HERO_INFO,

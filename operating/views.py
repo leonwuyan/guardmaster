@@ -226,6 +226,7 @@ def change_single(request, panel_id, url, type):
     ret = {}
     log_str = ""
     start_time = time.time()
+    is_log = True
     if type == 'add':
         type_id = int(request.POST['type_id'])
         count = int(request.POST['count'])
@@ -254,18 +255,25 @@ def change_single(request, panel_id, url, type):
         ret = sc.account_ban(spend_time)
         ret = sc.chat_ban(spend_time)
         ret = sc.kick()
-        type = 'kick'
+        is_log = False
+    if type == 'off_gang':
+        ret = sc.off_gang()
+        is_log = False
+    if type == 'off_rank':
+        ret = sc.off_rank()
+        is_log = False
     if ret['result'] == 0:
         s = type + "|" + log_str
         sc.log(s)
     try:
-        db_bool = sc.db_log({
-            'type': type,
-            'post': request.POST,
-            'ret': ret,
-            'start_time': start_time,
-            'done_time': time.time(),
-        })
+        if is_log:
+            db_bool = sc.db_log({
+                'type': type,
+                'post': request.POST,
+                'ret': ret,
+                'start_time': start_time,
+                'done_time': time.time(),
+            })
     except Exception as e:
         print 'e :', e
     ret = {'result': ret['result']}

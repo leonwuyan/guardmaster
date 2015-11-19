@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2015-11-18 17:30+0800\n"
+"POT-Creation-Date: 2015-11-19 16:04+0800\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -109,101 +109,113 @@ msgstr ""
 msgid "Skill Point"
 msgstr ""
 
-#: templates/operating/base_info.html:16
-msgid "Times Of Buy Skill Point"
+#: templates/operating/base_info.html:16 templates/operating/mail.html:14
+msgid "WinPoint"
 msgstr ""
 
 #: templates/operating/base_info.html:17
-msgid "Endless' Floor"
+msgid "Times Of Buy Skill Point"
 msgstr ""
 
 #: templates/operating/base_info.html:18
+msgid "Endless' Floor"
+msgstr ""
+
+#: templates/operating/base_info.html:19
 msgid "Endless' Score"
 msgstr ""
 
-#: templates/operating/base_info.html:19 templates/operating/mail.html:17
+#: templates/operating/base_info.html:20 templates/operating/mail.html:17
 msgid "Score Of Rank Battle"
 msgstr ""
 
-#: templates/operating/base_info.html:20
+#: templates/operating/base_info.html:21
 msgid "Times Of Growup"
 msgstr ""
 
-#: templates/operating/base_info.html:21
+#: templates/operating/base_info.html:22
 msgid "Account Ban Time"
 msgstr ""
 
-#: templates/operating/base_info.html:22
+#: templates/operating/base_info.html:23
 msgid "Chat Ban Time"
 msgstr ""
 
-#: templates/operating/base_info.html:23
+#: templates/operating/base_info.html:24
 msgid "Total Recharge (VIP Level)"
 msgstr ""
 
-#: templates/operating/base_info.html:24
+#: templates/operating/base_info.html:25
 msgid "Add 100k"
 msgstr ""
 
-#: templates/operating/base_info.html:25
+#: templates/operating/base_info.html:26
 msgid "Add 10k"
 msgstr ""
 
-#: templates/operating/base_info.html:26 templates/operating/mail.html:24
+#: templates/operating/base_info.html:27 templates/operating/mail.html:24
 #: templates/operating/notify.html:24
 msgid "Add"
 msgstr ""
 
-#: templates/operating/base_info.html:27
+#: templates/operating/base_info.html:28
 msgid "Reduce"
 msgstr ""
 
-#: templates/operating/base_info.html:28
+#: templates/operating/base_info.html:29
 msgid "Change"
 msgstr ""
 
-#: templates/operating/base_info.html:29
+#: templates/operating/base_info.html:30
 msgid "Kick Player"
 msgstr ""
 
-#: templates/operating/base_info.html:30
+#: templates/operating/base_info.html:31
 msgid "Account Ban 30 Days"
 msgstr ""
 
-#: templates/operating/base_info.html:31
+#: templates/operating/base_info.html:32
 msgid "Account Ban 1000 Days"
 msgstr ""
 
-#: templates/operating/base_info.html:32
+#: templates/operating/base_info.html:33
 msgid "Chat Ban 30 Days"
 msgstr ""
 
-#: templates/operating/base_info.html:33
+#: templates/operating/base_info.html:34
 msgid "Chat Ban 1000 Days"
 msgstr ""
 
-#: templates/operating/base_info.html:34
+#: templates/operating/base_info.html:35
 msgid "Un Ban"
 msgstr ""
 
-#: templates/operating/base_info.html:35
+#: templates/operating/base_info.html:36
 msgid "Ohter Contorl"
 msgstr ""
 
-#: templates/operating/base_info.html:36
+#: templates/operating/base_info.html:37
 msgid "Add 100k Exp. Items"
 msgstr ""
 
-#: templates/operating/base_info.html:37
+#: templates/operating/base_info.html:38
 msgid "Unlock 50 Dungeon"
 msgstr ""
 
-#: templates/operating/base_info.html:38
+#: templates/operating/base_info.html:39
 msgid "Unlock 100 Dungeon"
 msgstr ""
 
-#: templates/operating/base_info.html:39
+#: templates/operating/base_info.html:40
 msgid "Unlock 150 Dungeon"
+msgstr ""
+
+#: templates/operating/base_info.html:41
+msgid "Off Gang"
+msgstr ""
+
+#: templates/operating/base_info.html:42
+msgid "Off Rank"
 msgstr ""
 
 #: templates/operating/building_info.html:2
@@ -465,10 +477,6 @@ msgstr ""
 
 #: templates/operating/mail.html:10
 msgid "Accessory"
-msgstr ""
-
-#: templates/operating/mail.html:14
-msgid "WinPoint"
 msgstr ""
 
 #: templates/operating/mail.html:18 templates/operating/package_info.html:4
@@ -975,40 +983,4 @@ msgstr ""
 
 #: templatetags/custom.py:211
 msgid "Error In Srcipt"
-msgstr ""
-
-#: templatetags/custom.py:230
-msgid "t_crystal"
-msgstr ""
-
-#: templatetags/custom.py:232
-msgid "t_gold"
-msgstr ""
-
-#: templatetags/custom.py:234
-msgid "t_money"
-msgstr ""
-
-#: templatetags/custom.py:236
-msgid "t_skill_point"
-msgstr ""
-
-#: templatetags/custom.py:238
-msgid "t_item"
-msgstr ""
-
-#: templatetags/custom.py:240
-msgid "t_power"
-msgstr ""
-
-#: templatetags/custom.py:242
-msgid "t_equip"
-msgstr ""
-
-#: templatetags/custom.py:244
-msgid "t_score_of_rank_battle"
-msgstr ""
-
-#: templatetags/custom.py:246
-msgid "t_winpoint"
 msgstr ""

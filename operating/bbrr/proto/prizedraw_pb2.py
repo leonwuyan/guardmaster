@@ -14,14 +14,15 @@ _sym_db = _symbol_database.Default()
 
 
 import rescommon_pb2
+import protocommon_pb2
 
 
 DESCRIPTOR = _descriptor.FileDescriptor(
   name='prizedraw.proto',
   package='',
-  serialized_pb=_b('\n\x0fprizedraw.proto\x1a\x0frescommon.proto\"-\n\x14\x43SPKG_PRIZE_DRAW_REQ\x12\x15\n\rprize_draw_id\x18\x01 \x01(\r\"F\n\x14SCPKG_PRIZE_DRAW_RES\x12\x0e\n\x06result\x18\x01 \x01(\x05\x12\x1e\n\x06reward\x18\x02 \x03(\x0b\x32\x0e.ST_REWARD_RES\"\x8c\x02\n\x1eSCPKG_PRIZE_DRAW_FREE_INFO_RES\x12+\n#coin_one_prize_draw_free_left_count\x18\x01 \x01(\x05\x12.\n&coin_one_prize_draw_free_next_use_time\x18\x02 \x01(\r\x12.\n&can_use_coin_one_prize_draw_free_count\x18\x03 \x01(\x08\x12,\n$money_one_prize_draw_free_left_count\x18\x04 \x01(\x05\x12/\n\'money_one_prize_draw_free_next_use_time\x18\x05 \x01(\r')
+  serialized_pb=_b('\n\x0fprizedraw.proto\x1a\x0frescommon.proto\x1a\x11protocommon.proto\"-\n\x14\x43SPKG_PRIZE_DRAW_REQ\x12\x15\n\rprize_draw_id\x18\x01 \x01(\r\"F\n\x14SCPKG_PRIZE_DRAW_RES\x12\x0e\n\x06result\x18\x01 \x01(\x05\x12\x1e\n\x06reward\x18\x02 \x03(\x0b\x32\x0e.ST_REWARD_RES\"\xce\x02\n\x1eSCPKG_PRIZE_DRAW_FREE_INFO_RES\x12+\n#coin_one_prize_draw_free_left_count\x18\x01 \x01(\x05\x12.\n&coin_one_prize_draw_free_next_use_time\x18\x02 \x01(\r\x12.\n&can_use_coin_one_prize_draw_free_count\x18\x03 \x01(\x08\x12,\n$money_one_prize_draw_free_left_count\x18\x04 \x01(\x05\x12/\n\'money_one_prize_draw_free_next_use_time\x18\x05 \x01(\r\x12@\n\x18\x61\x63tivity_prize_draw_info\x18\x06 \x01(\x0b\x32\x1e.SCDT_ACTIVITY_PRIZE_DRAW_INFO')
   ,
-  dependencies=[rescommon_pb2.DESCRIPTOR,])
+  dependencies=[rescommon_pb2.DESCRIPTOR,protocommon_pb2.DESCRIPTOR,])
 _sym_db.RegisterFileDescriptor(DESCRIPTOR)
 
 
@@ -52,8 +53,8 @@ _CSPKG_PRIZE_DRAW_REQ = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=36,
-  serialized_end=81,
+  serialized_start=55,
+  serialized_end=100,
 )
 
 
@@ -89,8 +90,8 @@ _SCPKG_PRIZE_DRAW_RES = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=83,
-  serialized_end=153,
+  serialized_start=102,
+  serialized_end=172,
 )
 
 
@@ -136,6 +137,13 @@ _SCPKG_PRIZE_DRAW_FREE_INFO_RES = _descriptor.Descriptor(
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
+    _descriptor.FieldDescriptor(
+      name='activity_prize_draw_info', full_name='SCPKG_PRIZE_DRAW_FREE_INFO_RES.activity_prize_draw_info', index=5,
+      number=6, type=11, cpp_type=10, label=1,
+      has_default_value=False, default_value=None,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
   ],
   extensions=[
   ],
@@ -147,11 +155,12 @@ _SCPKG_PRIZE_DRAW_FREE_INFO_RES = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=156,
-  serialized_end=424,
+  serialized_start=175,
+  serialized_end=509,
 )
 
 _SCPKG_PRIZE_DRAW_RES.fields_by_name['reward'].message_type = rescommon_pb2._ST_REWARD_RES
+_SCPKG_PRIZE_DRAW_FREE_INFO_RES.fields_by_name['activity_prize_draw_info'].message_type = protocommon_pb2._SCDT_ACTIVITY_PRIZE_DRAW_INFO
 DESCRIPTOR.message_types_by_name['CSPKG_PRIZE_DRAW_REQ'] = _CSPKG_PRIZE_DRAW_REQ
 DESCRIPTOR.message_types_by_name['SCPKG_PRIZE_DRAW_RES'] = _SCPKG_PRIZE_DRAW_RES
 DESCRIPTOR.message_types_by_name['SCPKG_PRIZE_DRAW_FREE_INFO_RES'] = _SCPKG_PRIZE_DRAW_FREE_INFO_RES

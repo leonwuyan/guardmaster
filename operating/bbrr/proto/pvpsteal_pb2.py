@@ -19,7 +19,7 @@ import rescommon_pb2
 DESCRIPTOR = _descriptor.FileDescriptor(
   name='pvpsteal.proto',
   package='',
-  serialized_pb=_b('\n\x0epvpsteal.proto\x1a\x0frescommon.proto\"\xbf\x01\n\x11\x43SDT_PVP_DUN_DATA\x12\x13\n\x0bpvp_win_cnt\x18\x01 \x01(\r\x12\x15\n\rpvp_total_cnt\x18\x02 \x01(\r\x12\x15\n\rpvp_gain_gold\x18\x03 \x01(\r\x12\x18\n\x10pvp_gain_crystal\x18\x04 \x01(\r\x12\x16\n\x0epvp_gain_money\x18\x05 \x01(\r\x12\x19\n\x11pvp_gain_exp_item\x18\x06 \x01(\r\x12\x1a\n\x12steal_battle_times\x18\x07 \x01(\r\"\xe8\x01\n\x1c\x43SDT_PVP_ISLAND_DEFENSE_INFO\x12\x10\n\x08res_type\x18\x01 \x01(\r\x12\x0f\n\x07hero_id\x18\x02 \x01(\r\x12\x0f\n\x07hero_lv\x18\x03 \x01(\r\x12\x0e\n\x06\x63ur_hp\x18\x05 \x01(\r\x12\x0e\n\x06max_hp\x18\x06 \x01(\r\x12\x18\n\x05\x61ttrs\x18\x07 \x03(\x0b\x32\t.HeroAttr\x12\x10\n\x08skill_id\x18\x08 \x03(\r\x12\x12\n\nmonster_id\x18\t \x01(\r\x12\x12\n\nmonster_lv\x18\n \x01(\r\x12\x0f\n\x07trap_id\x18\x0b \x01(\r\x12\x0f\n\x07trap_lv\x18\x0c \x01(\r\"g\n\x14\x43SDT_PVP_ISLAND_INFO\x12\x13\n\x0b\x62uilding_id\x18\x01 \x01(\r\x12\x10\n\x08res_type\x18\x02 \x01(\r\x12\x15\n\rcan_steal_res\x18\x03 \x01(\r\x12\x11\n\tis_stolen\x18\x04 \x01(\r\"\x8f\x01\n#CSDT_PVP_SEARCH_ISLAND_DEFENSE_INFO\x12\x10\n\x08res_type\x18\x01 \x01(\r\x12\x0f\n\x07hero_id\x18\x02 \x01(\r\x12\x0f\n\x07hero_lv\x18\x03 \x01(\r\x12\x14\n\x0chero_grow_up\x18\x06 \x01(\r\x12\x0e\n\x06\x63ur_hp\x18\x04 \x01(\r\x12\x0e\n\x06max_hp\x18\x05 \x01(\r\"=\n\x12\x43SDT_PVP_SELF_HERO\x12\x0f\n\x07hero_id\x18\x01 \x01(\r\x12\x16\n\x0e\x63ur_hp_percent\x18\x02 \x01(\r\"F\n\x17\x43SDT_PVP_SELF_HERO_INFO\x12+\n\x0eself_hero_info\x18\x01 \x03(\x0b\x32\x13.CSDT_PVP_SELF_HERO\"\xe1\x01\n!CSDT_PVP_SEARCH_STEAL_ISLAND_INFO\x12\x0f\n\x07role_id\x18\x01 \x01(\r\x12\x11\n\trole_name\x18\x02 \x01(\t\x12*\n\x0bisland_data\x18\x03 \x03(\x0b\x32\x15.CSDT_PVP_ISLAND_INFO\x12:\n\x0c\x64\x65\x66\x65nse_info\x18\x04 \x03(\x0b\x32$.CSDT_PVP_SEARCH_ISLAND_DEFENSE_INFO\x12\x30\n\x0eself_hero_info\x18\x05 \x01(\x0b\x32\x18.CSDT_PVP_SELF_HERO_INFO\".\n\x1b\x43SPKG_SEARCH_PVP_PLAYER_REQ\x12\x0f\n\x07reverse\x18\x01 \x01(\r\"f\n\x1bSCPKG_SEARCH_PVP_PLAYER_RES\x12\x0e\n\x06result\x18\x01 \x01(\x05\x12\x37\n\x0btarget_info\x18\x02 \x01(\x0b\x32\".CSDT_PVP_SEARCH_STEAL_ISLAND_INFO\"3\n CSPKG_GET_STEAL_TARGET_STATE_REQ\x12\x0f\n\x07reverse\x18\x01 \x01(\r\"k\n SCPKG_GET_STEAL_TARGET_STATE_RES\x12\x0e\n\x06result\x18\x01 \x01(\x05\x12\x37\n\x0btarget_info\x18\x02 \x01(\x0b\x32\".CSDT_PVP_SEARCH_STEAL_ISLAND_INFO\"^\n\x1c\x43SPKG_ENTER_STEAL_BATTLE_REQ\x12\x16\n\x0etarget_role_id\x18\x01 \x01(\r\x12\x10\n\x08res_type\x18\x02 \x01(\r\x12\x14\n\x0cself_hero_id\x18\x03 \x01(\r\":\n\x1cSCPKG_STEAL_BATTLE_TIMES_RES\x12\x1a\n\x12steal_battle_times\x18\x01 \x01(\r\"\x8f\x01\n\x1cSCPKG_ENTER_STEAL_BATTLE_RES\x12\x0e\n\x06result\x18\x01 \x01(\x05\x12\x0e\n\x06\x64un_id\x18\x02 \x01(\r\x12\x33\n\x0c\x64\x65\x66\x65nse_info\x18\x03 \x01(\x0b\x32\x1d.CSDT_PVP_ISLAND_DEFENSE_INFO\x12\x1a\n\x12steal_battle_times\x18\x04 \x01(\r\"t\n\"CSPKG_STEAL_BATTLE_ROUND_BEGIN_REQ\x12\x16\n\x0etarget_role_id\x18\x01 \x01(\r\x12\x10\n\x08res_type\x18\x02 \x01(\r\x12\x14\n\x0cself_hero_id\x18\x03 \x01(\r\x12\x0e\n\x06\x64un_id\x18\x04 \x01(\r\"\xef\x01\n\"SCPKG_STEAL_BATTLE_ROUND_BEGIN_RES\x12\x0e\n\x06result\x18\x01 \x01(\x05\x12\x0e\n\x06\x64un_id\x18\x02 \x01(\r\x12\x14\n\x0cself_hero_id\x18\x03 \x01(\r\x12\x1c\n\x14self_hero_hp_percent\x18\x04 \x01(\r\x12\x16\n\x0etarget_hero_id\x18\x05 \x01(\r\x12\x16\n\x0etarget_hero_hp\x18\x06 \x01(\r\x12\x1a\n\x12target_hero_max_hp\x18\x07 \x01(\r\x12\x12\n\nbegin_time\x18\x08 \x01(\r\x12\x15\n\rinterval_time\x18\t \x01(\x05\"\xae\x01\n\x1e\x43SPKG_BALANCE_STEAL_BATTLE_REQ\x12\x16\n\x0etarget_role_id\x18\x01 \x01(\r\x12\x10\n\x08res_type\x18\x02 \x01(\r\x12\x14\n\x0cself_hero_id\x18\x03 \x01(\r\x12\x1c\n\x14self_hero_hp_percent\x18\x04 \x01(\r\x12\x16\n\x0etarget_hero_id\x18\x05 \x01(\r\x12\x16\n\x0etarget_hero_hp\x18\x06 \x01(\r\"\x91\x02\n\x1eSCPKG_BALANCE_STEAL_BATTLE_RES\x12\x0e\n\x06result\x18\x01 \x01(\x05\x12\x15\n\rbattle_result\x18\x02 \x01(\r\x12\x17\n\x0freward_res_type\x18\x03 \x01(\r\x12\x16\n\x0ereward_res_num\x18\x04 \x01(\r\x12\x16\n\x0ereward_item_id\x18\x05 \x01(\r\x12)\n\rpvp_gain_info\x18\x06 \x01(\x0b\x32\x12.CSDT_PVP_DUN_DATA\x12\x1b\n\x13prize_draw_res_type\x18\x07 \x01(\r\x12\x19\n\x11prize_draw_res_id\x18\x08 \x01(\r\x12\x1c\n\x14prize_draw_res_count\x18\t \x01(\r\"8\n%CSPKG_STEAL_BATTLE_PRIZE_DRAW_GET_REQ\x12\x0f\n\x07reverse\x18\x01 \x01(\x05')
+  serialized_pb=_b('\n\x0epvpsteal.proto\x1a\x0frescommon.proto\"\xbf\x01\n\x11\x43SDT_PVP_DUN_DATA\x12\x13\n\x0bpvp_win_cnt\x18\x01 \x01(\r\x12\x15\n\rpvp_total_cnt\x18\x02 \x01(\r\x12\x15\n\rpvp_gain_gold\x18\x03 \x01(\r\x12\x18\n\x10pvp_gain_crystal\x18\x04 \x01(\r\x12\x16\n\x0epvp_gain_money\x18\x05 \x01(\r\x12\x19\n\x11pvp_gain_exp_item\x18\x06 \x01(\r\x12\x1a\n\x12steal_battle_times\x18\x07 \x01(\r\"\xe8\x01\n\x1c\x43SDT_PVP_ISLAND_DEFENSE_INFO\x12\x10\n\x08res_type\x18\x01 \x01(\r\x12\x0f\n\x07hero_id\x18\x02 \x01(\r\x12\x0f\n\x07hero_lv\x18\x03 \x01(\r\x12\x0e\n\x06\x63ur_hp\x18\x05 \x01(\r\x12\x0e\n\x06max_hp\x18\x06 \x01(\r\x12\x18\n\x05\x61ttrs\x18\x07 \x03(\x0b\x32\t.HeroAttr\x12\x10\n\x08skill_id\x18\x08 \x03(\r\x12\x12\n\nmonster_id\x18\t \x01(\r\x12\x12\n\nmonster_lv\x18\n \x01(\r\x12\x0f\n\x07trap_id\x18\x0b \x01(\r\x12\x0f\n\x07trap_lv\x18\x0c \x01(\r\"g\n\x14\x43SDT_PVP_ISLAND_INFO\x12\x13\n\x0b\x62uilding_id\x18\x01 \x01(\r\x12\x10\n\x08res_type\x18\x02 \x01(\r\x12\x15\n\rcan_steal_res\x18\x03 \x01(\r\x12\x11\n\tis_stolen\x18\x04 \x01(\r\"\x8f\x01\n#CSDT_PVP_SEARCH_ISLAND_DEFENSE_INFO\x12\x10\n\x08res_type\x18\x01 \x01(\r\x12\x0f\n\x07hero_id\x18\x02 \x01(\r\x12\x0f\n\x07hero_lv\x18\x03 \x01(\r\x12\x14\n\x0chero_grow_up\x18\x06 \x01(\r\x12\x0e\n\x06\x63ur_hp\x18\x04 \x01(\r\x12\x0e\n\x06max_hp\x18\x05 \x01(\r\"=\n\x12\x43SDT_PVP_SELF_HERO\x12\x0f\n\x07hero_id\x18\x01 \x01(\r\x12\x16\n\x0e\x63ur_hp_percent\x18\x02 \x01(\r\"F\n\x17\x43SDT_PVP_SELF_HERO_INFO\x12+\n\x0eself_hero_info\x18\x01 \x03(\x0b\x32\x13.CSDT_PVP_SELF_HERO\"\xe1\x01\n!CSDT_PVP_SEARCH_STEAL_ISLAND_INFO\x12\x0f\n\x07role_id\x18\x01 \x01(\r\x12\x11\n\trole_name\x18\x02 \x01(\t\x12*\n\x0bisland_data\x18\x03 \x03(\x0b\x32\x15.CSDT_PVP_ISLAND_INFO\x12:\n\x0c\x64\x65\x66\x65nse_info\x18\x04 \x03(\x0b\x32$.CSDT_PVP_SEARCH_ISLAND_DEFENSE_INFO\x12\x30\n\x0eself_hero_info\x18\x05 \x01(\x0b\x32\x18.CSDT_PVP_SELF_HERO_INFO\".\n\x1b\x43SPKG_SEARCH_PVP_PLAYER_REQ\x12\x0f\n\x07reverse\x18\x01 \x01(\r\"f\n\x1bSCPKG_SEARCH_PVP_PLAYER_RES\x12\x0e\n\x06result\x18\x01 \x01(\x05\x12\x37\n\x0btarget_info\x18\x02 \x01(\x0b\x32\".CSDT_PVP_SEARCH_STEAL_ISLAND_INFO\"3\n CSPKG_GET_STEAL_TARGET_STATE_REQ\x12\x0f\n\x07reverse\x18\x01 \x01(\r\"k\n SCPKG_GET_STEAL_TARGET_STATE_RES\x12\x0e\n\x06result\x18\x01 \x01(\x05\x12\x37\n\x0btarget_info\x18\x02 \x01(\x0b\x32\".CSDT_PVP_SEARCH_STEAL_ISLAND_INFO\"9\n\x1f\x43SPKG_WIPE_OUT_STEAL_BATTLE_REQ\x12\x16\n\x0etarget_role_id\x18\x01 \x01(\r\"\xc5\x01\n\x1dST_WIPE_OUT_STEAL_BATTLE_INFO\x12\x14\n\x0cself_hero_id\x18\x01 \x01(\r\x12\x16\n\x0etarget_hero_id\x18\x02 \x01(\r\x12\x17\n\x0ftarget_equip_id\x18\x03 \x03(\r\x12\x0e\n\x06is_win\x18\x04 \x01(\x08\x12\"\n\x0esteal_res_info\x18\x05 \x01(\x0b\x32\n.ResReward\x12)\n\x15steal_prize_draw_info\x18\x06 \x01(\x0b\x32\n.ResReward\"\x97\x01\n\x1fSCPKG_WIPE_OUT_STEAL_BATTLE_RES\x12\x0e\n\x06result\x18\x01 \x01(\x05\x12\x39\n\x11steal_result_info\x18\x02 \x03(\x0b\x32\x1e.ST_WIPE_OUT_STEAL_BATTLE_INFO\x12)\n\rpvp_gain_info\x18\x03 \x01(\x0b\x32\x12.CSDT_PVP_DUN_DATA\"^\n\x1c\x43SPKG_ENTER_STEAL_BATTLE_REQ\x12\x16\n\x0etarget_role_id\x18\x01 \x01(\r\x12\x10\n\x08res_type\x18\x02 \x01(\r\x12\x14\n\x0cself_hero_id\x18\x03 \x01(\r\":\n\x1cSCPKG_STEAL_BATTLE_TIMES_RES\x12\x1a\n\x12steal_battle_times\x18\x01 \x01(\r\"\x8f\x01\n\x1cSCPKG_ENTER_STEAL_BATTLE_RES\x12\x0e\n\x06result\x18\x01 \x01(\x05\x12\x0e\n\x06\x64un_id\x18\x02 \x01(\r\x12\x33\n\x0c\x64\x65\x66\x65nse_info\x18\x03 \x01(\x0b\x32\x1d.CSDT_PVP_ISLAND_DEFENSE_INFO\x12\x1a\n\x12steal_battle_times\x18\x04 \x01(\r\"t\n\"CSPKG_STEAL_BATTLE_ROUND_BEGIN_REQ\x12\x16\n\x0etarget_role_id\x18\x01 \x01(\r\x12\x10\n\x08res_type\x18\x02 \x01(\r\x12\x14\n\x0cself_hero_id\x18\x03 \x01(\r\x12\x0e\n\x06\x64un_id\x18\x04 \x01(\r\"\xef\x01\n\"SCPKG_STEAL_BATTLE_ROUND_BEGIN_RES\x12\x0e\n\x06result\x18\x01 \x01(\x05\x12\x0e\n\x06\x64un_id\x18\x02 \x01(\r\x12\x14\n\x0cself_hero_id\x18\x03 \x01(\r\x12\x1c\n\x14self_hero_hp_percent\x18\x04 \x01(\r\x12\x16\n\x0etarget_hero_id\x18\x05 \x01(\r\x12\x16\n\x0etarget_hero_hp\x18\x06 \x01(\r\x12\x1a\n\x12target_hero_max_hp\x18\x07 \x01(\r\x12\x12\n\nbegin_time\x18\x08 \x01(\r\x12\x15\n\rinterval_time\x18\t \x01(\x05\"\xd9\x01\n\x1e\x43SPKG_BALANCE_STEAL_BATTLE_REQ\x12\x16\n\x0etarget_role_id\x18\x01 \x01(\r\x12\x10\n\x08res_type\x18\x02 \x01(\r\x12\x14\n\x0cself_hero_id\x18\x03 \x01(\r\x12\x1c\n\x14self_hero_hp_percent\x18\x04 \x01(\r\x12\x16\n\x0etarget_hero_id\x18\x05 \x01(\r\x12\x16\n\x0etarget_hero_hp\x18\x06 \x01(\r\x12)\n\x05\x62rief\x18\x07 \x01(\x0b\x32\x1a.CSDT_DUNGEON_COMBAT_BRIEF\"\x91\x02\n\x1eSCPKG_BALANCE_STEAL_BATTLE_RES\x12\x0e\n\x06result\x18\x01 \x01(\x05\x12\x15\n\rbattle_result\x18\x02 \x01(\r\x12\x17\n\x0freward_res_type\x18\x03 \x01(\r\x12\x16\n\x0ereward_res_num\x18\x04 \x01(\r\x12\x16\n\x0ereward_item_id\x18\x05 \x01(\r\x12)\n\rpvp_gain_info\x18\x06 \x01(\x0b\x32\x12.CSDT_PVP_DUN_DATA\x12\x1b\n\x13prize_draw_res_type\x18\x07 \x01(\r\x12\x19\n\x11prize_draw_res_id\x18\x08 \x01(\r\x12\x1c\n\x14prize_draw_res_count\x18\t \x01(\r\"8\n%CSPKG_STEAL_BATTLE_PRIZE_DRAW_GET_REQ\x12\x0f\n\x07reverse\x18\x01 \x01(\x05')
   ,
   dependencies=[rescommon_pb2.DESCRIPTOR,])
 _sym_db.RegisterFileDescriptor(DESCRIPTOR)
@@ -574,6 +574,145 @@ _SCPKG_GET_STEAL_TARGET_STATE_RES = _descriptor.Descriptor(
 )
 
 
+_CSPKG_WIPE_OUT_STEAL_BATTLE_REQ = _descriptor.Descriptor(
+  name='CSPKG_WIPE_OUT_STEAL_BATTLE_REQ',
+  full_name='CSPKG_WIPE_OUT_STEAL_BATTLE_REQ',
+  filename=None,
+  file=DESCRIPTOR,
+  containing_type=None,
+  fields=[
+    _descriptor.FieldDescriptor(
+      name='target_role_id', full_name='CSPKG_WIPE_OUT_STEAL_BATTLE_REQ.target_role_id', index=0,
+      number=1, type=13, cpp_type=3, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+  ],
+  extensions=[
+  ],
+  nested_types=[],
+  enum_types=[
+  ],
+  options=None,
+  is_extendable=False,
+  extension_ranges=[],
+  oneofs=[
+  ],
+  serialized_start=1392,
+  serialized_end=1449,
+)
+
+
+_ST_WIPE_OUT_STEAL_BATTLE_INFO = _descriptor.Descriptor(
+  name='ST_WIPE_OUT_STEAL_BATTLE_INFO',
+  full_name='ST_WIPE_OUT_STEAL_BATTLE_INFO',
+  filename=None,
+  file=DESCRIPTOR,
+  containing_type=None,
+  fields=[
+    _descriptor.FieldDescriptor(
+      name='self_hero_id', full_name='ST_WIPE_OUT_STEAL_BATTLE_INFO.self_hero_id', index=0,
+      number=1, type=13, cpp_type=3, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    _descriptor.FieldDescriptor(
+      name='target_hero_id', full_name='ST_WIPE_OUT_STEAL_BATTLE_INFO.target_hero_id', index=1,
+      number=2, type=13, cpp_type=3, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    _descriptor.FieldDescriptor(
+      name='target_equip_id', full_name='ST_WIPE_OUT_STEAL_BATTLE_INFO.target_equip_id', index=2,
+      number=3, type=13, cpp_type=3, label=3,
+      has_default_value=False, default_value=[],
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    _descriptor.FieldDescriptor(
+      name='is_win', full_name='ST_WIPE_OUT_STEAL_BATTLE_INFO.is_win', index=3,
+      number=4, type=8, cpp_type=7, label=1,
+      has_default_value=False, default_value=False,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    _descriptor.FieldDescriptor(
+      name='steal_res_info', full_name='ST_WIPE_OUT_STEAL_BATTLE_INFO.steal_res_info', index=4,
+      number=5, type=11, cpp_type=10, label=1,
+      has_default_value=False, default_value=None,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    _descriptor.FieldDescriptor(
+      name='steal_prize_draw_info', full_name='ST_WIPE_OUT_STEAL_BATTLE_INFO.steal_prize_draw_info', index=5,
+      number=6, type=11, cpp_type=10, label=1,
+      has_default_value=False, default_value=None,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+  ],
+  extensions=[
+  ],
+  nested_types=[],
+  enum_types=[
+  ],
+  options=None,
+  is_extendable=False,
+  extension_ranges=[],
+  oneofs=[
+  ],
+  serialized_start=1452,
+  serialized_end=1649,
+)
+
+
+_SCPKG_WIPE_OUT_STEAL_BATTLE_RES = _descriptor.Descriptor(
+  name='SCPKG_WIPE_OUT_STEAL_BATTLE_RES',
+  full_name='SCPKG_WIPE_OUT_STEAL_BATTLE_RES',
+  filename=None,
+  file=DESCRIPTOR,
+  containing_type=None,
+  fields=[
+    _descriptor.FieldDescriptor(
+      name='result', full_name='SCPKG_WIPE_OUT_STEAL_BATTLE_RES.result', index=0,
+      number=1, type=5, cpp_type=1, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    _descriptor.FieldDescriptor(
+      name='steal_result_info', full_name='SCPKG_WIPE_OUT_STEAL_BATTLE_RES.steal_result_info', index=1,
+      number=2, type=11, cpp_type=10, label=3,
+      has_default_value=False, default_value=[],
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    _descriptor.FieldDescriptor(
+      name='pvp_gain_info', full_name='SCPKG_WIPE_OUT_STEAL_BATTLE_RES.pvp_gain_info', index=2,
+      number=3, type=11, cpp_type=10, label=1,
+      has_default_value=False, default_value=None,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+  ],
+  extensions=[
+  ],
+  nested_types=[],
+  enum_types=[
+  ],
+  options=None,
+  is_extendable=False,
+  extension_ranges=[],
+  oneofs=[
+  ],
+  serialized_start=1652,
+  serialized_end=1803,
+)
+
+
 _CSPKG_ENTER_STEAL_BATTLE_REQ = _descriptor.Descriptor(
   name='CSPKG_ENTER_STEAL_BATTLE_REQ',
   full_name='CSPKG_ENTER_STEAL_BATTLE_REQ',
@@ -613,8 +752,8 @@ _CSPKG_ENTER_STEAL_BATTLE_REQ = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=1392,
-  serialized_end=1486,
+  serialized_start=1805,
+  serialized_end=1899,
 )
 
 
@@ -643,8 +782,8 @@ _SCPKG_STEAL_BATTLE_TIMES_RES = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=1488,
-  serialized_end=1546,
+  serialized_start=1901,
+  serialized_end=1959,
 )
 
 
@@ -694,8 +833,8 @@ _SCPKG_ENTER_STEAL_BATTLE_RES = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=1549,
-  serialized_end=1692,
+  serialized_start=1962,
+  serialized_end=2105,
 )
 
 
@@ -745,8 +884,8 @@ _CSPKG_STEAL_BATTLE_ROUND_BEGIN_REQ = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=1694,
-  serialized_end=1810,
+  serialized_start=2107,
+  serialized_end=2223,
 )
 
 
@@ -831,8 +970,8 @@ _SCPKG_STEAL_BATTLE_ROUND_BEGIN_RES = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=1813,
-  serialized_end=2052,
+  serialized_start=2226,
+  serialized_end=2465,
 )
 
 
@@ -885,6 +1024,13 @@ _CSPKG_BALANCE_STEAL_BATTLE_REQ = _descriptor.Descriptor(
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
+    _descriptor.FieldDescriptor(
+      name='brief', full_name='CSPKG_BALANCE_STEAL_BATTLE_REQ.brief', index=6,
+      number=7, type=11, cpp_type=10, label=1,
+      has_default_value=False, default_value=None,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
   ],
   extensions=[
   ],
@@ -896,8 +1042,8 @@ _CSPKG_BALANCE_STEAL_BATTLE_REQ = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=2055,
-  serialized_end=2229,
+  serialized_start=2468,
+  serialized_end=2685,
 )
 
 
@@ -982,8 +1128,8 @@ _SCPKG_BALANCE_STEAL_BATTLE_RES = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=2232,
-  serialized_end=2505,
+  serialized_start=2688,
+  serialized_end=2961,
 )
 
 
@@ -1012,8 +1158,8 @@ _CSPKG_STEAL_BATTLE_PRIZE_DRAW_GET_REQ = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=2507,
-  serialized_end=2563,
+  serialized_start=2963,
+  serialized_end=3019,
 )
 
 _CSDT_PVP_ISLAND_DEFENSE_INFO.fields_by_name['attrs'].message_type = rescommon_pb2._HEROATTR
@@ -1023,7 +1169,12 @@ _CSDT_PVP_SEARCH_STEAL_ISLAND_INFO.fields_by_name['defense_info'].message_type =
 _CSDT_PVP_SEARCH_STEAL_ISLAND_INFO.fields_by_name['self_hero_info'].message_type = _CSDT_PVP_SELF_HERO_INFO
 _SCPKG_SEARCH_PVP_PLAYER_RES.fields_by_name['target_info'].message_type = _CSDT_PVP_SEARCH_STEAL_ISLAND_INFO
 _SCPKG_GET_STEAL_TARGET_STATE_RES.fields_by_name['target_info'].message_type = _CSDT_PVP_SEARCH_STEAL_ISLAND_INFO
+_ST_WIPE_OUT_STEAL_BATTLE_INFO.fields_by_name['steal_res_info'].message_type = rescommon_pb2._RESREWARD
+_ST_WIPE_OUT_STEAL_BATTLE_INFO.fields_by_name['steal_prize_draw_info'].message_type = rescommon_pb2._RESREWARD
+_SCPKG_WIPE_OUT_STEAL_BATTLE_RES.fields_by_name['steal_result_info'].message_type = _ST_WIPE_OUT_STEAL_BATTLE_INFO
+_SCPKG_WIPE_OUT_STEAL_BATTLE_RES.fields_by_name['pvp_gain_info'].message_type = _CSDT_PVP_DUN_DATA
 _SCPKG_ENTER_STEAL_BATTLE_RES.fields_by_name['defense_info'].message_type = _CSDT_PVP_ISLAND_DEFENSE_INFO
+_CSPKG_BALANCE_STEAL_BATTLE_REQ.fields_by_name['brief'].message_type = rescommon_pb2._CSDT_DUNGEON_COMBAT_BRIEF
 _SCPKG_BALANCE_STEAL_BATTLE_RES.fields_by_name['pvp_gain_info'].message_type = _CSDT_PVP_DUN_DATA
 DESCRIPTOR.message_types_by_name['CSDT_PVP_DUN_DATA'] = _CSDT_PVP_DUN_DATA
 DESCRIPTOR.message_types_by_name['CSDT_PVP_ISLAND_DEFENSE_INFO'] = _CSDT_PVP_ISLAND_DEFENSE_INFO
@@ -1036,6 +1187,9 @@ DESCRIPTOR.message_types_by_name['CSPKG_SEARCH_PVP_PLAYER_REQ'] = _CSPKG_SEARCH_
 DESCRIPTOR.message_types_by_name['SCPKG_SEARCH_PVP_PLAYER_RES'] = _SCPKG_SEARCH_PVP_PLAYER_RES
 DESCRIPTOR.message_types_by_name['CSPKG_GET_STEAL_TARGET_STATE_REQ'] = _CSPKG_GET_STEAL_TARGET_STATE_REQ
 DESCRIPTOR.message_types_by_name['SCPKG_GET_STEAL_TARGET_STATE_RES'] = _SCPKG_GET_STEAL_TARGET_STATE_RES
+DESCRIPTOR.message_types_by_name['CSPKG_WIPE_OUT_STEAL_BATTLE_REQ'] = _CSPKG_WIPE_OUT_STEAL_BATTLE_REQ
+DESCRIPTOR.message_types_by_name['ST_WIPE_OUT_STEAL_BATTLE_INFO'] = _ST_WIPE_OUT_STEAL_BATTLE_INFO
+DESCRIPTOR.message_types_by_name['SCPKG_WIPE_OUT_STEAL_BATTLE_RES'] = _SCPKG_WIPE_OUT_STEAL_BATTLE_RES
 DESCRIPTOR.message_types_by_name['CSPKG_ENTER_STEAL_BATTLE_REQ'] = _CSPKG_ENTER_STEAL_BATTLE_REQ
 DESCRIPTOR.message_types_by_name['SCPKG_STEAL_BATTLE_TIMES_RES'] = _SCPKG_STEAL_BATTLE_TIMES_RES
 DESCRIPTOR.message_types_by_name['SCPKG_ENTER_STEAL_BATTLE_RES'] = _SCPKG_ENTER_STEAL_BATTLE_RES
@@ -1121,6 +1275,27 @@ SCPKG_GET_STEAL_TARGET_STATE_RES = _reflection.GeneratedProtocolMessageType('SCP
   # @@protoc_insertion_point(class_scope:SCPKG_GET_STEAL_TARGET_STATE_RES)
   ))
 _sym_db.RegisterMessage(SCPKG_GET_STEAL_TARGET_STATE_RES)
+
+CSPKG_WIPE_OUT_STEAL_BATTLE_REQ = _reflection.GeneratedProtocolMessageType('CSPKG_WIPE_OUT_STEAL_BATTLE_REQ', (_message.Message,), dict(
+  DESCRIPTOR = _CSPKG_WIPE_OUT_STEAL_BATTLE_REQ,
+  __module__ = 'pvpsteal_pb2'
+  # @@protoc_insertion_point(class_scope:CSPKG_WIPE_OUT_STEAL_BATTLE_REQ)
+  ))
+_sym_db.RegisterMessage(CSPKG_WIPE_OUT_STEAL_BATTLE_REQ)
+
+ST_WIPE_OUT_STEAL_BATTLE_INFO = _reflection.GeneratedProtocolMessageType('ST_WIPE_OUT_STEAL_BATTLE_INFO', (_message.Message,), dict(
+  DESCRIPTOR = _ST_WIPE_OUT_STEAL_BATTLE_INFO,
+  __module__ = 'pvpsteal_pb2'
+  # @@protoc_insertion_point(class_scope:ST_WIPE_OUT_STEAL_BATTLE_INFO)
+  ))
+_sym_db.RegisterMessage(ST_WIPE_OUT_STEAL_BATTLE_INFO)
+
+SCPKG_WIPE_OUT_STEAL_BATTLE_RES = _reflection.GeneratedProtocolMessageType('SCPKG_WIPE_OUT_STEAL_BATTLE_RES', (_message.Message,), dict(
+  DESCRIPTOR = _SCPKG_WIPE_OUT_STEAL_BATTLE_RES,
+  __module__ = 'pvpsteal_pb2'
+  # @@protoc_insertion_point(class_scope:SCPKG_WIPE_OUT_STEAL_BATTLE_RES)
+  ))
+_sym_db.RegisterMessage(SCPKG_WIPE_OUT_STEAL_BATTLE_RES)
 
 CSPKG_ENTER_STEAL_BATTLE_REQ = _reflection.GeneratedProtocolMessageType('CSPKG_ENTER_STEAL_BATTLE_REQ', (_message.Message,), dict(
   DESCRIPTOR = _CSPKG_ENTER_STEAL_BATTLE_REQ,

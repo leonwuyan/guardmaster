@@ -20,7 +20,7 @@ import rescommon_pb2
 DESCRIPTOR = _descriptor.FileDescriptor(
   name='res.proto',
   package='',
-  serialized_pb=_b('\n\tres.proto\x1a\x0frescommon.proto\"1\n\x15ResServerLocalization\x12\n\n\x02id\x18\x01 \x02(\t\x12\x0c\n\x04text\x18\x02 \x03(\t\"3\n\x0eResDropIndexEx\x12\x0f\n\x07\x64rop_id\x18\x01 \x01(\r\x12\x10\n\x08\x64rop_cnt\x18\x02 \x01(\r\"F\n\x0fResResourceInfo\x12\x10\n\x08res_type\x18\x01 \x01(\r\x12\x0e\n\x06res_id\x18\x02 \x01(\r\x12\x11\n\tres_count\x18\x03 \x01(\r\".\n\nResPreRole\x12\x0f\n\x07role_id\x18\x01 \x01(\r\x12\x0f\n\x07role_lv\x18\x02 \x01(\r\" \n\x0cResInitSkill\x12\x10\n\x08skill_id\x18\x01 \x01(\r\"7\n\rResNewRoleBuf\x12\x0b\n\x03\x63nt\x18\x01 \x02(\r\x12\x0b\n\x03\x61tk\x18\x02 \x02(\r\x12\x0c\n\x04life\x18\x03 \x02(\r\"0\n\x07ResCost\x12\x0c\n\x04type\x18\x01 \x02(\r\x12\n\n\x02id\x18\x02 \x02(\r\x12\x0b\n\x03\x63nt\x18\x03 \x02(\r\"\x9f\x01\n\x0cResHeadPhoto\x12\n\n\x02id\x18\x01 \x01(\r\x12\x0b\n\x03pic\x18\x02 \x01(\t\x12\x1a\n\x12\x65ndless_rank_limit\x18\x03 \x01(\r\x12\x1d\n\x15rankbattle_rank_limit\x18\x04 \x01(\r\x12\x1b\n\x13hero_level_limit_id\x18\x05 \x01(\r\x12\x1e\n\x16hero_level_limit_level\x18\x06 \x01(\r\"\x80\x06\n\tResRoleGL\x12\x0f\n\x07hero_id\x18\x01 \x01(\r\x12\x11\n\thero_name\x18\x03 \x01(\t\x12\x10\n\x08res_name\x18\x04 \x01(\t\x12\x15\n\rprotrait_name\x18\x05 \x01(\t\x12\x12\n\naudio_name\x18\x06 \x01(\t\x12\x0f\n\x07is_open\x18\x07 \x01(\r\x12\x10\n\x08list_pos\x18\x08 \x01(\r\x12\x14\n\x0c\x62uy_res_type\x18\t \x01(\r\x12\x12\n\npre_dun_id\x18\n \x01(\r\x12\x18\n\x10\x61\x63t_init_grow_up\x18\x0b \x01(\r\x12\x16\n\x0e\x61\x63t_init_level\x18\x0c \x01(\r\x12\x1c\n\x14unlock_emblem_ned_lv\x18\r \x01(\r\x12\x1b\n\x13unlock_emblem_hp_id\x18\x0e \x01(\r\x12\x1f\n\x17unlock_emblem_damage_id\x18\x0f \x01(\r\x12$\n\rinit_skill_id\x18\x10 \x03(\x0b\x32\r.ResInitSkill\x12\x15\n\rhead_offset_x\x18\x11 \x01(\x05\x12\x15\n\rhead_offset_y\x18\x12 \x01(\x05\x12\x18\n\x10new_role_buf_cnt\x18\x13 \x01(\r\x12\x12\n\nbuy_res_id\x18\x14 \x01(\r\x12\x15\n\rbuy_res_count\x18\x15 \x01(\r\x12\x1e\n\nbuy_reward\x18\x16 \x03(\x0b\x32\n.ResReward\x12\x1d\n\x0bunlock_cost\x18\x17 \x03(\x0b\x32\x08.ResCost\x12\x15\n\rbase_critical\x18\x18 \x01(\r\x12\x1c\n\x14\x62\x61se_critical_effect\x18\x19 \x01(\r\x12\x1d\n\x15\x62\x61se_critical_defence\x18\x1a \x01(\r\x12$\n\x1c\x62\x61se_critical_defence_effect\x18\x1b \x01(\r\x12\x18\n\x10\x62uy_res_discount\x18\x1c \x01(\r\x12\x15\n\rbuy_vip_limit\x18\x1d \x01(\r\x12\x19\n\x11protrait_offset_x\x18\x1e \x01(\x05\x12\x19\n\x11protrait_offset_y\x18\x1f \x01(\x05\"\x86\x01\n\x07ResChat\x12\x12\n\nchannel_id\x18\x01 \x01(\r\x12\x14\n\x0c\x63ond_city_id\x18\x02 \x01(\r\x12\x10\n\x08interval\x18\x03 \x01(\r\x12\x14\n\x0c\x63ost_restype\x18\x04 \x01(\r\x12\x12\n\ncost_resid\x18\x05 \x01(\r\x12\x15\n\rcost_rescount\x18\x06 \x01(\r\"\xe0\x01\n\x17ResRoleRelationAddition\x12\x18\n\x10receiver_role_id\x18\x01 \x01(\r\x12\x18\n\x10receiver_role_lv\x18\x02 \x01(\r\x12\x15\n\rgiver_role_id\x18\x03 \x01(\r\x12\x1a\n\x12giver_stamina_rate\x18\x04 \x01(\x02\x12\x1f\n\x17\x61\x64\x64_stamina_value_limit\x18\x05 \x01(\r\x12\x1b\n\x13giver_strength_rate\x18\x06 \x01(\x02\x12 \n\x18\x61\x64\x64_strength_value_limit\x18\x07 \x01(\r\"\x84\x01\n\x1aResRoleRelationSubtraction\x12\x18\n\x10receiver_role_id\x18\x01 \x01(\r\x12\x15\n\rgiver_role_id\x18\x02 \x01(\r\x12\x1a\n\x12\x64mg_addition_point\x18\x03 \x01(\r\x12\x19\n\x11\x64mg_addition_rate\x18\x04 \x01(\x02\"3\n\x0eResChipNumInfo\x12\x0f\n\x07\x63hip_id\x18\x01 \x01(\r\x12\x10\n\x08\x63hip_cnt\x18\x02 \x01(\r\"S\n\x16ResEmblemSingleRequest\x12\x18\n\x10lv_up_single_exp\x18\x01 \x01(\r\x12\x1f\n\x17lv_up_single_possiblity\x18\x02 \x01(\r\"\xad\x02\n\tResEmblem\x12\x11\n\tweapon_id\x18\x01 \x01(\r\x12\x11\n\tweapon_lv\x18\x02 \x01(\r\x12\x0c\n\x04icon\x18\x03 \x01(\t\x12\x0c\n\x04name\x18\x04 \x01(\t\x12\x15\n\rattch_hero_id\x18\x05 \x01(\r\x12\x1c\n\x14lv_up_ned_hero_level\x18\x06 \x01(\r\x12\x16\n\x0elv_up_ned_type\x18\x07 \x01(\r\x12\x18\n\x10lv_up_ned_number\x18\x08 \x01(\r\x12\x12\n\nextra_type\x18\t \x01(\r\x12\x13\n\x0b\x65xtra_value\x18\n \x01(\r\x12\x15\n\rlv_up_ned_exp\x18\x0b \x01(\r\x12\x37\n\x16levelup_single_request\x18\x0c \x03(\x0b\x32\x17.ResEmblemSingleRequest\"\"\n\x12ResStringArrayInfo\x12\x0c\n\x04info\x18\x01 \x01(\t\"\xf7\x06\n\x0cResMonsterGL\x12\n\n\x02id\x18\x01 \x01(\r\x12\x0c\n\x04name\x18\x03 \x01(\t\x12\x0c\n\x04type\x18\x04 \x01(\x05\x12\x13\n\x0brender_type\x18\x05 \x01(\x05\x12\x16\n\x0erelation_index\x18\x06 \x01(\r\x12\x15\n\rres_file_name\x18\x07 \x01(\t\x12\x14\n\x0c\x62\x65hit_add_sp\x18\x08 \x01(\r\x12\x10\n\x08sp_ratio\x18\t \x01(\x02\x12\x0e\n\x06radius\x18\n \x01(\r\x12\x17\n\x0funlock_name_tag\x18\x0b \x01(\t\x12\x17\n\x0funlock_desc_tag\x18\x0c \x01(\t\x12\x14\n\x0cshadow_scale\x18\r \x01(\r\x12\x12\n\nrole_scale\x18\x0e \x01(\r\x12\x19\n\x11\x63olor_matching_id\x18\x0f \x01(\x05\x12\x10\n\x08head_pic\x18\x10 \x01(\t\x12\x15\n\rmini_head_pic\x18\x11 \x01(\t\x12\x12\n\nemblem_pic\x18\x12 \x01(\t\x12\x11\n\tattri_pic\x18\x13 \x01(\t\x12\x1b\n\x13\x66ull_pic_in_map_tip\x18\x14 \x01(\t\x12\x13\n\x0bhu_name_pic\x18\x15 \x01(\t\x12\x13\n\x0bvu_name_pic\x18\x16 \x01(\t\x12\x10\n\x08\x62ust_pic\x18\x17 \x01(\t\x12\x14\n\x0cportrait_pic\x18\x18 \x01(\t\x12\x0f\n\x07\x61i_type\x18\x19 \x01(\t\x12\x18\n\x10grow_up_head_pic\x18\x1a \x01(\t\x12\x13\n\x0b\x62oss_audios\x18\x1f \x03(\t\x12\r\n\x05param\x18  \x01(\x05\x12\x1a\n\x12\x65ndless_mode_param\x18\" \x01(\r\x12\x14\n\x0c\x62\x61ttle_logic\x18# \x01(\t\x12\x0e\n\x06\x62\x61sehp\x18$ \x01(\r\x12 \n\x18\x62\x61\x63kup_color_matching_id\x18% \x01(\x05\x12\x15\n\rlevel_up_type\x18& \x01(\r\x12\x18\n\x10\x62\x61se_damage_rate\x18\' \x01(\r\x12\x0f\n\x07hostile\x18( \x01(\x05\x12\x13\n\x0bspec_tagert\x18) \x01(\x05\x12\x16\n\x0e\x61\x64\x64_superarmor\x18* \x01(\x05\x12\x18\n\x10hero_damage_rate\x18+ \x01(\r\x12\x1a\n\x12\x61\x64\x64itional_role_id\x18, \x01(\r\x12\x1f\n\x17\x61\x64\x64itional_control_code\x18- \x01(\r\x12\x14\n\x0chp_bar_style\x18. \x01(\r\"7\n\rResPreMonster\x12\x12\n\nmonster_id\x18\x01 \x01(\r\x12\x12\n\nmonster_lv\x18\x02 \x01(\r\"X\n\x0fResGroupMonster\x12\x12\n\nmonster_id\x18\x01 \x01(\r\x12\x13\n\x0bmonster_cnt\x18\x02 \x01(\r\x12\r\n\x05pos_x\x18\x03 \x01(\x05\x12\r\n\x05pos_y\x18\x04 \x01(\x05\"\x8a\x02\n\x0fResMonsterLevel\x12\x1d\n\x15monster_level_up_type\x18\x01 \x01(\r\x12\x12\n\nmonster_lv\x18\x02 \x01(\r\x12\x0e\n\x06max_hp\x18\x03 \x01(\r\x12\x13\n\x0b\x64\x61mage_type\x18\x04 \x01(\r\x12\x10\n\x08strength\x18\x05 \x01(\r\x12\x17\n\x0f\x65x_endure_value\x18\x07 \x01(\r\x12\x17\n\x0f\x63oin_drop_value\x18\x08 \x01(\r\x12\x1d\n\x15\x63oin_drop_possibility\x18\t \x01(\r\x12\x1a\n\x12\x64iamond_drop_value\x18\n \x01(\r\x12 \n\x18\x64iamond_drop_possibility\x18\x0b \x01(\r\"h\n\x14ResMonsterGroupLevel\x12\x10\n\x08group_id\x18\x01 \x01(\r\x12\x10\n\x08group_lv\x18\x02 \x01(\r\x12,\n\x12group_monster_info\x18\x03 \x03(\x0b\x32\x10.ResGroupMonster\"%\n\x0cResGainSkill\x12\x15\n\rgain_skill_id\x18\x01 \x01(\r\":\n\x16ResRoleLevelGrowUpAttr\x12\x0e\n\x06max_hp\x18\x01 \x01(\r\x12\x10\n\x08strength\x18\x02 \x01(\r\"\xad\x01\n\x0cResRoleLevel\x12\x0f\n\x07role_id\x18\x01 \x01(\r\x12\x0f\n\x07role_lv\x18\x02 \x01(\r\x12-\n\x0cgrow_up_attr\x18\x03 \x03(\x0b\x32\x17.ResRoleLevelGrowUpAttr\x12\x0e\n\x06max_sp\x18\x04 \x01(\r\x12\x13\n\x0blv_need_exp\x18\x05 \x01(\r\x12\x17\n\x0flv_reward_power\x18\x06 \x01(\r\x12\x0e\n\x06\x62urden\x18\x07 \x01(\r\"\xfa\x01\n\rResBuildingGL\x12\x13\n\x0b\x62uilding_id\x18\x01 \x01(\r\x12\x15\n\rbuilding_type\x18\x02 \x01(\r\x12\x15\n\rbuilding_desc\x18\x03 \x01(\t\x12\x15\n\rbuilding_name\x18\x04 \x01(\t\x12\x10\n\x08res_name\x18\x05 \x01(\t\x12\x12\n\naudio_name\x18\x06 \x01(\t\x12\x0f\n\x07is_open\x18\x07 \x01(\r\x12\x16\n\x0e\x61\x63t_init_level\x18\x08 \x01(\r\x12\x17\n\x0fis_need_levelup\x18\t \x01(\r\x12\x15\n\rtips_priority\x18\n \x01(\r\x12\x10\n\x08tips_tag\x18\x0b \x01(\t\"3\n\x0cResLevelCost\x12\x11\n\tcost_type\x18\x01 \x01(\r\x12\x10\n\x08\x63ost_cnt\x18\x02 \x01(\r\"(\n\x11ResUnlockBuilding\x12\x13\n\x0b\x62uilding_id\x18\x01 \x01(\r\"\xb7\x01\n\x10ResBuildingLevel\x12\x13\n\x0b\x62uilding_id\x18\x01 \x01(\r\x12\x13\n\x0b\x62uilding_lv\x18\x02 \x01(\r\x12\x14\n\x0c\x62uilding_pic\x18\x03 \x01(\t\x12!\n\nlevel_cost\x18\x04 \x03(\x0b\x32\r.ResLevelCost\x12\x17\n\x0flevel_cost_time\x18\x05 \x01(\r\x12\'\n\x0bunlock_info\x18\x06 \x03(\x0b\x32\x12.ResUnlockBuilding\"\xd6\x01\n\x11ResHeroTowerLevel\x12\x13\n\x0b\x62uilding_id\x18\x01 \x01(\r\x12\x13\n\x0b\x62uilding_lv\x18\x02 \x01(\r\x12\x14\n\x0c\x62uilding_pic\x18\x03 \x01(\t\x12!\n\nlevel_cost\x18\x04 \x03(\x0b\x32\r.ResLevelCost\x12\x17\n\x0flevel_cost_time\x18\x05 \x01(\r\x12\x16\n\x0emax_hero_level\x18\x06 \x01(\r\x12\x15\n\runlock_dun_id\x18\x07 \x01(\r\x12\x16\n\x0elevel_priority\x18\x08 \x01(\r\"n\n\x10ResIslandProduct\x12\x10\n\x08res_type\x18\x01 \x01(\r\x12\x10\n\x08\x62orn_cnt\x18\x02 \x01(\r\x12\x0f\n\x07\x62orn_id\x18\x03 \x01(\r\x12\x11\n\tborn_time\x18\x04 \x01(\r\x12\x12\n\nborn_limit\x18\x05 \x01(\r\"\xd9\x01\n\x0eResIslandLevel\x12\x11\n\tisland_id\x18\x01 \x01(\r\x12\x11\n\tisland_lv\x18\x02 \x01(\r\x12\x12\n\nisland_pic\x18\x03 \x01(\t\x12!\n\nlevel_cost\x18\x04 \x03(\x0b\x32\r.ResLevelCost\x12\x17\n\x0flevel_cost_time\x18\x05 \x01(\r\x12\"\n\x07product\x18\x06 \x01(\x0b\x32\x11.ResIslandProduct\x12\x15\n\runlock_dun_id\x18\x07 \x01(\r\x12\x16\n\x0elevel_priority\x18\x08 \x01(\r\"\x8a\x02\n\x15ResResourceStoreLevel\x12\x14\n\x0cres_store_id\x18\x01 \x01(\r\x12\x14\n\x0cres_store_lv\x18\x02 \x01(\r\x12\x15\n\rres_store_pic\x18\x03 \x01(\t\x12\x16\n\x0eres_store_type\x18\x04 \x01(\r\x12\x11\n\tres_limit\x18\x05 \x01(\r\x12\x18\n\x10recover_interval\x18\x06 \x01(\r\x12!\n\nlevel_cost\x18\x07 \x03(\x0b\x32\r.ResLevelCost\x12\x17\n\x0flevel_cost_time\x18\x08 \x01(\r\x12\x15\n\runlock_dun_id\x18\t \x01(\r\x12\x16\n\x0elevel_priority\x18\x0c \x01(\r\"\xc7\x02\n\x0bResLevelArr\x12\r\n\x05level\x18\x01 \x01(\r\x12%\n\x1dsteal_battle_search_cost_type\x18\x02 \x01(\r\x12#\n\x1bsteal_battle_search_cost_id\x18\x03 \x01(\r\x12&\n\x1esteal_battle_search_cost_count\x18\x04 \x01(\r\x12&\n\x1egang_battle_reward_gold_target\x18\x05 \x01(\r\x12)\n!gang_battle_reward_crystal_target\x18\x06 \x01(\r\x12$\n\x1cgang_battle_reward_gold_self\x18\x07 \x01(\r\x12\'\n\x1fgang_battle_reward_crystal_self\x18\x08 \x01(\r\x12\x13\n\x0bmonster_cnt\x18\t \x01(\r\"\x1e\n\x0bResInitHero\x12\x0f\n\x07hero_id\x18\x01 \x01(\r\"\x1e\n\x0bResInitSlot\x12\x0f\n\x07slot_id\x18\x01 \x01(\r\"c\n\x14ResOverHitProduction\x12\x16\n\x0eover_hit_phase\x18\x01 \x01(\r\x12\x17\n\x0f\x63oin_production\x18\x02 \x01(\r\x12\x1a\n\x12\x64iamond_production\x18\x03 \x01(\r\"@\n\x0eResInitMonster\x12\x16\n\x0emonster_grp_id\x18\x01 \x01(\r\x12\x16\n\x0emonster_grp_lv\x18\x02 \x01(\r\"\"\n\x10ResInitUnlockDun\x12\x0e\n\x06\x64un_id\x18\x01 \x01(\r\"9\n\x12ResUnlockTrainSlot\x12\x0f\n\x07slot_id\x18\x01 \x01(\r\x12\x12\n\ncost_money\x18\x02 \x01(\r\"?\n\x13ResInitBuildingInfo\x12\x13\n\x0b\x62uilding_id\x18\x01 \x01(\r\x12\x13\n\x0b\x62uilding_lv\x18\x02 \x01(\r\"?\n\x15ResBuyWipeoutItemInfo\x12\x12\n\nitem_count\x18\x01 \x01(\r\x12\x12\n\nitem_price\x18\x02 \x01(\r\";\n\x10ResPveUnlockInfo\x12\r\n\x05\x64unid\x18\x01 \x01(\r\x12\x0c\n\x04type\x18\x02 \x01(\r\x12\n\n\x02lv\x18\x03 \x01(\r\"\'\n\x16ResEndlessMonsterScore\x12\r\n\x05score\x18\x01 \x01(\r\"H\n\x19ResGamePlayModeDamageRate\x12\x16\n\x0egame_play_mode\x18\x01 \x01(\r\x12\x13\n\x0b\x64\x61mage_rate\x18\x02 \x01(\x02\"\xb8$\n\x0bResMiscInfo\x12\x18\n\x10player_max_level\x18\x01 \x01(\r\x12\x19\n\x11monster_max_level\x18\x02 \x01(\r\x12\x14\n\x0cinit_crystal\x18\x03 \x01(\r\x12\x11\n\tinit_gold\x18\x04 \x01(\r\x12\x12\n\ninit_money\x18\x05 \x01(\r\x12\"\n\x0cinit_slot_id\x18\x06 \x03(\x0b\x32\x0c.ResInitSlot\x12\x30\n\x12init_building_info\x18\x07 \x03(\x0b\x32\x14.ResInitBuildingInfo\x12\"\n\x0cinit_hero_id\x18\x08 \x03(\x0b\x32\x0c.ResInitHero\x12-\n\x12init_unlock_dun_id\x18\t \x03(\x0b\x32\x11.ResInitUnlockDun\x12\x15\n\rendless_limit\x18\n \x01(\r\x12\x16\n\x0e\x63ombo_max_time\x18\x0b \x01(\r\x12\x19\n\x11over_hit_max_time\x18\x0c \x01(\r\x12\x1f\n\x17over_hit_max_hp_percent\x18\r \x01(\r\x12 \n\x18over_hit_add_score_ratio\x18\x0e \x01(\r\x12!\n\x19left_time_add_score_ratio\x18\x0f \x01(\r\x12\x32\n\x13over_hit_production\x18\x10 \x03(\x0b\x32\x15.ResOverHitProduction\x12\x1d\n\x15\x63reate_gang_cost_gold\x18\x11 \x01(\r\x12\x17\n\x0f\x66ighting_hprate\x18\x12 \x01(\r\x12\x19\n\x11\x66ighting_atk_rate\x18\x13 \x01(\r\x12\x1a\n\x12gang_battle_dun_id\x18\x14 \x01(\r\x12$\n\x1cgang_battle_round_time_limit\x18\x15 \x01(\x05\x12#\n\x1b\x65ndless_chamber_size_factor\x18\x16 \x01(\r\x12*\n\"endless_boss_hp_recover_drop_ratio\x18\x17 \x01(\r\x12*\n\"endless_boss_hp_recover_drop_count\x18\x18 \x01(\r\x12\x1e\n\x16rank_battle_dungeon_id\x18\x19 \x01(\r\x12$\n\x1crank_battle_round_time_limit\x18\x1a \x01(\x05\x12\x1e\n\x16rank_battle_base_count\x18\x1b \x01(\r\x12\'\n\x1frank_battle_buy_count_base_cost\x18\x1c \x01(\r\x12#\n\x1brank_battle_unlock_role_cnt\x18\x1d \x01(\r\x12\x18\n\x10\x64\x61ily_reset_time\x18\x1e \x01(\r\x12\x18\n\x10\x65ndless_room_cnt\x18\x1f \x01(\r\x12\'\n\x1f\x65ndless_floor_cnt_per_milestone\x18  \x01(\r\x12%\n\x1dsteal_battle_money_res_dun_id\x18! \x01(\r\x12$\n\x1csteal_battle_gold_res_dun_id\x18\" \x01(\r\x12\'\n\x1fsteal_battle_crystal_res_dun_id\x18# \x01(\r\x12#\n\x1bsteal_battle_exp_res_dun_id\x18$ \x01(\r\x12\x1c\n\x14\x65ndless_refresh_hour\x18& \x01(\r\x12\x1b\n\x13\x65ndless_refresh_min\x18\' \x01(\r\x12\x1b\n\x13\x65ndless_refresh_sec\x18( \x01(\r\x12\x1d\n\x15wipe_out_need_item_id\x18) \x01(\r\x12\x36\n\x16\x62uy_wipe_out_item_info\x18* \x03(\x0b\x32\x16.ResBuyWipeoutItemInfo\x12\x1a\n\x12goods_common_count\x18+ \x01(\r\x12\x1b\n\x13goods_special_count\x18, \x01(\r\x12\x1b\n\x13\x64\x61mage_ratio_factor\x18- \x01(\r\x12\x17\n\x0fhp_ratio_factor\x18. \x01(\r\x12#\n\x1bskill_point_display_item_id\x18/ \x01(\r\x12*\n\x0fpve_unlock_info\x18\x30 \x03(\x0b\x32\x11.ResPveUnlockInfo\x12#\n\x1bleague_battle_small_city_lv\x18\x31 \x03(\r\x12!\n\x19league_battle_mid_city_lv\x18\x32 \x03(\r\x12!\n\x19league_battle_big_city_lv\x18\x33 \x03(\r\x12$\n\x1crank_battle_hero_hide_level1\x18\x34 \x01(\r\x12$\n\x1crank_battle_hero_hide_level2\x18\x35 \x01(\r\x12$\n\x1crank_battle_hero_hide_level3\x18\x36 \x01(\r\x12%\n\x1dgang_bless_count_refresh_hour\x18: \x01(\r\x12$\n\x1cgang_bless_count_refresh_min\x18; \x01(\r\x12$\n\x1cgang_bless_count_refresh_sec\x18< \x01(\r\x12\x1f\n\x17shop_count_refresh_hour\x18= \x01(\r\x12\x1e\n\x16shop_count_refresh_min\x18> \x01(\r\x12\x1e\n\x16shop_count_refresh_sec\x18? \x01(\r\x12\x12\n\nfail_power\x18@ \x01(\x05\x12\x1f\n\x17money_confirm_threshold\x18\x41 \x02(\r\x12;\n\x1a\x65ndless_monster_type_score\x18\x42 \x03(\x0b\x32\x17.ResEndlessMonsterScore\x12$\n\x1cgang_battle_small_city_score\x18\x43 \x01(\r\x12\'\n\x1fgang_battle_moderate_city_score\x18\x44 \x01(\r\x12\"\n\x1agang_battle_big_city_score\x18\x45 \x01(\r\x12\x1a\n\x12\x65lite_mode_chances\x18\x46 \x02(\r\x12 \n\x18\x65lite_count_refresh_hour\x18G \x01(\r\x12\x1f\n\x17\x65lite_count_refresh_min\x18H \x01(\r\x12\x1f\n\x17\x65lite_count_refresh_sec\x18I \x01(\r\x12 \n\x18\x61ssist_fight_times_limit\x18L \x01(\r\x12\x1c\n\x14online_battle_dun_id\x18M \x01(\r\x12\x19\n\x11re_sign_cost_type\x18N \x01(\r\x12\x1a\n\x12re_sign_cost_price\x18O \x01(\r\x12)\n!init_hero_main_task_unlock_dun_id\x18P \x01(\r\x12\x1c\n\x14normal_elite_hp_rate\x18Q \x01(\r\x12\x1c\n\x14normal_elite_st_rate\x18R \x01(\r\x12\x1b\n\x13normal_boss_hp_rate\x18S \x01(\r\x12\x1b\n\x13normal_boss_st_rate\x18T \x01(\r\x12\x1d\n\x15\x65ndless_elite_hp_rate\x18Y \x01(\r\x12\x1d\n\x15\x65ndless_elite_st_rate\x18Z \x01(\r\x12\x1c\n\x14\x65ndless_boss_hp_rate\x18[ \x01(\r\x12\x1c\n\x14\x65ndless_boss_st_rate\x18\\ \x01(\r\x12!\n\x19\x65lite_buy_count_cost_type\x18] \x01(\r\x12\x1f\n\x17\x65lite_buy_count_cost_id\x18^ \x01(\r\x12\"\n\x1a\x65lite_buy_count_cost_count\x18_ \x01(\r\x12\x1b\n\x13\x65lite_buy_max_count\x18` \x01(\r\x12\x1d\n\x15offline_battle_dun_id\x18\x61 \x01(\r\x12\"\n\x1arole_relation_unlock_level\x18\x62 \x01(\r\x12&\n\x1erank_battle_goods_common_count\x18\x63 \x01(\r\x12\'\n\x1frank_battle_goods_special_count\x18\x64 \x01(\r\x12 \n\x18online_battle_init_score\x18\x65 \x01(\r\x12\"\n\x1aonline_battle_times_perday\x18\x66 \x01(\r\x12(\n online_battle_score_calc_ratio_a\x18g \x01(\r\x12(\n online_battle_score_calc_ratio_b\x18h \x01(\r\x12\"\n\x1aonline_battle_search_score\x18i \x01(\r\x12(\n online_battle_match_wait_seconds\x18j \x01(\r\x12%\n\x1donline_battle_win_point_ratio\x18k \x01(\r\x12,\n$online_battle_loseer_win_point_ratio\x18l \x01(\r\x12\'\n\x1f\x65ndless_wipeout_price_per_floor\x18m \x01(\r\x12>\n\x1agame_play_mode_damage_rate\x18n \x03(\x0b\x32\x1a.ResGamePlayModeDamageRate\x12%\n\x11\x66irst_reward_info\x18o \x03(\x0b\x32\n.ResReward\x12\x19\n\x11loading_tip_count\x18p \x01(\r\x12\x1e\n\x16vip_goods_common_count\x18q \x01(\r\x12\x1f\n\x17vip_goods_special_count\x18r \x01(\r\x12!\n\x19vip_draw_all_unlock_level\x18s \x01(\r\x12 \n\x18steal_battle_times_limit\x18t \x01(\r\x12\x18\n\x10\x66riend_power_cnt\x18u \x01(\r\x12\x17\n\x0f\x64\x61mage_float_up\x18v \x01(\r\x12\x19\n\x11\x64\x61mage_float_down\x18w \x01(\r\x12$\n\x1cmax_recv_power_times_one_day\x18z \x01(\r\x12\x1c\n\x14ten_wipeout_viplimit\x18{ \x01(\r\x12 \n\x18vip_shop_unlock_viplevel\x18| \x01(\r\x12$\n\x1cmax_send_power_times_one_day\x18} \x01(\r\x12%\n\x1dpve_autofight_unlock_viplevel\x18~ \x01(\r\x12 \n\x18\x66riend_max_recommend_num\x18\x7f \x01(\r\x12(\n\x1fpve_autofight_unlock_dungoen_id\x18\x80\x01 \x01(\r\x12\x1a\n\x11vip_wipeout_count\x18\x81\x01 \x01(\r\x12\x1b\n\x12\x63hat_unlock_dun_id\x18\x82\x01 \x01(\r\x12\x1f\n\x16\x65venttip_unlock_dun_id\x18\x83\x01 \x01(\r\x12\x1a\n\x11world_boss_dun_id\x18\x84\x01 \x01(\r\x12&\n\x11reward_be_invited\x18\x85\x01 \x03(\x0b\x32\n.ResReward\x12#\n\x1aworld_boss_room_time_limit\x18\x86\x01 \x01(\r\x12!\n\x0crename_price\x18\x87\x01 \x03(\x0b\x32\n.ResReward\x12(\n\x1fworld_boss_qualified_hero_level\x18\x88\x01 \x01(\r\x12\x1e\n\x15world_boss_reset_time\x18\x89\x01 \x01(\r\x12\x1e\n\x15world_boss_start_time\x18\x8a\x01 \x01(\r\x12\x1f\n\x16world_boss_finish_time\x18\x8b\x01 \x01(\r\x12\x1c\n\x13world_boss_interval\x18\x8c\x01 \x01(\r\x12#\n\x1aworld_boss_character_scale\x18\x8d\x01 \x01(\x02\x12!\n\x18\x65quip_fusion_score_param\x18\x8e\x01 \x01(\r\x12!\n\x18\x65quip_fusion_ratio_param\x18\x8f\x01 \x01(\r\x12!\n\x18\x65quip_fusion_alloc_param\x18\x90\x01 \x01(\r\x12&\n\x1dnewbie_activity_lasts_seconds\x18\x91\x01 \x01(\r\x12\x1c\n\x13rank_battle_max_pos\x18\x92\x01 \x01(\r\x12\x1e\n\x15purify_cost_base_gold\x18\x93\x01 \x01(\r\"S\n\x14ResWorldBossStrength\x12\x0f\n\x07\x62oss_id\x18\x01 \x01(\r\x12\x18\n\x10\x62oss_hurt_amount\x18\x02 \x01(\r\x12\x10\n\x08strength\x18\x03 \x01(\r\"m\n\x14ResWorldBossHeroTask\x12\x10\n\x08week_day\x18\x01 \x01(\r\x12\x0f\n\x07hero_id\x18\x02 \x01(\r\x12\x16\n\x0erequire_damage\x18\x03 \x01(\r\x12\x1a\n\x06reward\x18\x04 \x03(\x0b\x32\n.ResReward\"\xa8\x01\n\x17ResWorldBossRefreshInfo\x12\x10\n\x08week_day\x18\x01 \x01(\r\x12\x0f\n\x07\x62oss_id\x18\x02 \x01(\r\x12\x1f\n\x17kill_reward_protrait_id\x18\x03 \x01(\r\x12 \n\x18kill_reward_base_drop_id\x18\x04 \x01(\r\x12\'\n\x13kill_reward_preview\x18\x05 \x03(\x0b\x32\n.ResReward\"k\n\x18ResWorldBossDamageReward\x12\x0f\n\x07\x62oss_id\x18\x01 \x01(\r\x12\x0c\n\x04rank\x18\x02 \x01(\r\x12\x14\n\x0c\x62\x61se_drop_id\x18\x03 \x01(\r\x12\x1a\n\x06reward\x18\x04 \x03(\x0b\x32\n.ResReward\"\x95\x01\n\x18ResWorldBossNormalReward\x12\x0f\n\x07\x62oss_id\x18\x01 \x01(\r\x12\x0e\n\x06\x64\x61mage\x18\x02 \x01(\r\x12\x12\n\ngold_ratio\x18\x03 \x01(\x02\x12\x14\n\x0cgold_pre_sum\x18\x04 \x01(\r\x12\x15\n\rcrystal_ratio\x18\x05 \x01(\x02\x12\x17\n\x0f\x63rystal_pre_sum\x18\x06 \x01(\r\"\xb3\x01\n\x11ResNewbieActivity\x12\n\n\x02id\x18\x01 \x01(\r\x12\x12\n\nlimit_date\x18\x02 \x01(\r\x12\r\n\x05group\x18\x03 \x01(\r\x12\x0c\n\x04type\x18\x04 \x01(\r\x12\x18\n\x10\x64isplay_priority\x18\x05 \x01(\r\x12\x0c\n\x04icon\x18\x06 \x01(\t\x12\x1f\n\x0breward_info\x18\x07 \x03(\x0b\x32\n.ResReward\x12\x18\n\x10target_parameter\x18\x08 \x03(\r\"f\n\x0fResHeroEvaluate\x12\x12\n\nmain_level\x18\x01 \x01(\r\x12\x11\n\tsub_level\x18\x02 \x01(\r\x12\x16\n\x0epvp_score_down\x18\x03 \x01(\r\x12\x14\n\x0cpvp_score_up\x18\x04 \x01(\r\"\xcb\x03\n\x0fResGangMiscInfo\x12$\n\x1csearch_gang_list_low_bounder\x18\x01 \x01(\r\x12#\n\x1bsearch_gang_list_up_bounder\x18\x02 \x01(\r\x12\x1f\n\x17gang_score_calc_ratio_a\x18\x03 \x01(\r\x12\x1f\n\x17gang_score_calc_ratio_b\x18\x04 \x01(\r\x12!\n\x19gang_battle_win_pre_ratio\x18\x05 \x01(\r\x12\"\n\x1agang_battle_lose_pre_ratio\x18\x06 \x01(\r\x12\"\n\x1agang_battle_draw_pre_ratio\x18\x07 \x01(\r\x12*\n\"gang_battle_auto_apply_limit_score\x18\x08 \x01(\r\x12$\n\x1c\x63lear_gang_bless_record_week\x18\t \x01(\r\x12$\n\x1c\x63lear_gang_bless_record_hour\x18\n \x01(\r\x12#\n\x1b\x63lear_gang_bless_record_min\x18\x0b \x01(\r\x12#\n\x1b\x63lear_gang_bless_record_sec\x18\x0c \x01(\r\"w\n\x0cResGangBless\x12\n\n\x02id\x18\x01 \x01(\r\x12\x0c\n\x04rate\x18\x02 \x01(\r\x12\x13\n\x0breward_type\x18\x03 \x01(\r\x12\x11\n\treward_id\x18\x04 \x01(\r\x12\x14\n\x0creward_count\x18\x05 \x01(\r\x12\x0f\n\x07\x64rop_id\x18\x06 \x01(\r\"\xae\x02\n\x10ResGangLevelInfo\x12\n\n\x02lv\x18\x01 \x01(\r\x12\x0f\n\x07lv_icon\x18\x02 \x01(\t\x12\x16\n\x0elv_corner_icon\x18\x0b \x01(\t\x12\x11\n\tlow_score\x18\x03 \x01(\r\x12\x12\n\nhigh_score\x18\x04 \x01(\r\x12\x1a\n\x12gang_mem_max_count\x18\x05 \x01(\r\x12\x1c\n\x14gang_elder_max_count\x18\x06 \x01(\r\x12\"\n\x1asmall_city_strongpoint_num\x18\x07 \x01(\r\x12%\n\x1dmoderate_city_strongpoint_num\x18\x08 \x01(\r\x12 \n\x18\x62ig_city_strongpoint_num\x18\t \x01(\r\x12\x17\n\x0f\x62less_max_count\x18\n \x01(\r\"0\n\x11ResGangBattleTime\x12\x0c\n\x04week\x18\x01 \x01(\r\x12\r\n\x05state\x18\x02 \x01(\r\"\x8f\x01\n\x13ResGangBattleReward\x12\n\n\x02lv\x18\x01 \x01(\r\x12\"\n\nwin_reward\x18\x02 \x03(\x0b\x32\x0e.ST_REWARD_RES\x12#\n\x0blose_reward\x18\x03 \x03(\x0b\x32\x0e.ST_REWARD_RES\x12#\n\x0b\x64raw_reward\x18\x04 \x03(\x0b\x32\x0e.ST_REWARD_RES\"\xb7\x02\n\rResRobotBuild\x12\x10\n\x08res_type\x18\x01 \x01(\r\x12\x18\n\x10\x63ur_born_res_low\x18\x02 \x01(\r\x12\x19\n\x11\x63ur_born_res_high\x18\x03 \x01(\r\x12\x13\n\x0bhero_lv_low\x18\x04 \x01(\r\x12\x14\n\x0chero_lv_high\x18\x05 \x01(\r\x12\x19\n\x11hero_strength_low\x18\x06 \x01(\r\x12\x1a\n\x12hero_strength_high\x18\x07 \x01(\r\x12\x18\n\x10hero_stamina_low\x18\x08 \x01(\r\x12\x19\n\x11hero_stamina_high\x18\t \x01(\r\x12\x12\n\nmonster_id\x18\n \x01(\r\x12\x12\n\nmonster_lv\x18\x0b \x01(\r\x12\x0f\n\x07trap_id\x18\x0c \x01(\r\x12\x0f\n\x07trap_lv\x18\r \x01(\r\"D\n\x0bResPvpRobot\x12\x0b\n\x03uid\x18\x01 \x01(\r\x12\x1a\n\x12max_fight_capacity\x18\x02 \x01(\r\x12\x0c\n\x04name\x18\x03 \x01(\t\",\n\x0fResPvpSerchInfo\x12\x0b\n\x03low\x18\x01 \x01(\r\x12\x0c\n\x04high\x18\x02 \x01(\r\"s\n\nResPvpMisc\x12\x19\n\x11steal_res_percent\x18\x01 \x01(\r\x12\x16\n\x0e\x62roken_percent\x18\x02 \x01(\r\x12\x19\n\x11search_result_max\x18\x03 \x01(\r\x12\x17\n\x0fsearch_sect_max\x18\x04 \x01(\r\"\xa3\x01\n\x10ResPvpSearchSect\x12\x1a\n\x12\x66ight_capacity_low\x18\x01 \x01(\r\x12\x1b\n\x13\x66ight_capacity_high\x18\x02 \x01(\r\x12(\n\x0epvp_serch_info\x18\x03 \x03(\x0b\x32\x10.ResPvpSerchInfo\x12,\n\x14pvp_robot_build_info\x18\x04 \x03(\x0b\x32\x0e.ResRobotBuild\"]\n\x17ResStealBattlePrizeDraw\x12\x17\n\x0flow_fight_power\x18\x01 \x01(\r\x12\x18\n\x10high_fight_power\x18\x02 \x01(\r\x12\x0f\n\x07\x64rop_id\x18\x03 \x01(\r\"2\n\x0bResDunLimit\x12\x0f\n\x07hero_id\x18\x01 \x01(\r\x12\x12\n\nhero_level\x18\x02 \x01(\r\"L\n\x0eResDunEvaluate\x12\x10\n\x08\x64un_time\x18\x01 \x01(\r\x12\x15\n\rremain_hprate\x18\x02 \x01(\r\x12\x11\n\tmax_combo\x18\x03 \x01(\r\"8\n\rResReliveCost\x12\x12\n\nrelive_cnt\x18\x01 \x01(\r\x12\x13\n\x0brelive_cost\x18\x02 \x01(\r\"*\n\nResPosInfo\x12\r\n\x05pos_x\x18\x01 \x01(\x05\x12\r\n\x05pos_y\x18\x02 \x01(\x05\"\"\n\x0cResDropIndex\x12\x12\n\ndrop_index\x18\x01 \x01(\r\"7\n\x12ResDungeonNeedItem\x12\x0f\n\x07item_id\x18\x01 \x01(\r\x12\x10\n\x08item_num\x18\x02 \x01(\r\" \n\x0bResEvaluate\x12\x11\n\tparameter\x18\x01 \x01(\r\"\xcb\x06\n\x0eResDungeonInfo\x12\x12\n\ndungeon_id\x18\x01 \x01(\r\x12\x14\n\x0c\x64ungeon_name\x18\x02 \x01(\t\x12\x14\n\x0c\x64ungeon_type\x18\x03 \x01(\r\x12\x0c\n\x04mode\x18\x1e \x01(\r\x12\x18\n\x10required_ability\x18\x1f \x01(\r\x12\x12\n\nis_refresh\x18\x04 \x01(\r\x12\x12\n\ncost_power\x18\x05 \x01(\r\x12\x12\n\npre_dun_id\x18\x06 \x01(\r\x12\x16\n\x0eunlock_role_id\x18\x07 \x01(\r\x12\x12\n\ninit_level\x18\x08 \x01(\r\x12\x14\n\x0crelive_limit\x18\n \x01(\r\x12#\n\x0brelive_cost\x18\x0b \x03(\x0b\x32\x0e.ResReliveCost\x12\x11\n\tapperance\x18\x0c \x01(\r\x12\x1a\n\x06reward\x18\r \x03(\x0b\x32\n.ResReward\x12%\n\x0c\x64un_evaluate\x18\x0e \x01(\x0b\x32\x0f.ResDunEvaluate\x12&\n\x0f\x66irst_drop_info\x18\x0f \x03(\x0b\x32\r.ResDropIndex\x12*\n\x13non_first_drop_info\x18\x10 \x03(\x0b\x32\r.ResDropIndex\x12)\n\x12wipe_out_drop_info\x18\x14 \x03(\x0b\x32\r.ResDropIndex\x12&\n\tneed_item\x18\x11 \x03(\x0b\x32\x13.ResDungeonNeedItem\x12+\n\x11\x64rop_display_info\x18\x12 \x03(\x0b\x32\x10.ResResourceInfo\x12#\n\revaluate_info\x18\x13 \x03(\x0b\x32\x0c.ResEvaluate\x12\x12\n\nscene_name\x18\x17 \x01(\t\x12\x0b\n\x03\x62gm\x18\x18 \x01(\t\x12\x15\n\ris_elite_drop\x18\x1a \x01(\r\x12\x16\n\x0e\x64rop_exp_limit\x18\x1b \x01(\r\x12\x14\n\x0c\x64rop_exp_add\x18\x1c \x01(\r\x12\x18\n\x10\x65lite_drop_index\x18\x1d \x01(\r\x12 \n\x18\x64isplay_elite_drop_equip\x18  \x01(\r\x12\x1d\n\x15new_role_buff_stamina\x18! \x01(\r\x12\x1e\n\x16new_role_buff_strength\x18\" \x01(\r\"\xa8\x01\n\x1aResDungeonFightCapacityFix\x12\n\n\x02id\x18\x01 \x02(\r\x12\x13\n\x0b\x61\x62ility_low\x18\x02 \x02(\r\x12\x18\n\x10\x61\x62ility_min_diff\x18\x03 \x02(\r\x12\x0f\n\x07\x61tk_fix\x18\x04 \x02(\r\x12\x10\n\x08life_fix\x18\x05 \x02(\r\x12\x17\n\x0fsuper_armor_fix\x18\x06 \x02(\r\x12\x13\n\x0bis_hero_win\x18\x07 \x02(\r\"B\n\x10ResDungeonReward\x12\r\n\x05level\x18\x01 \x01(\r\x12\x1f\n\x0breward_info\x18\x02 \x03(\x0b\x32\n.ResReward\"\xab\x01\n\x0eResDungeonCity\x12\x0f\n\x07\x63ity_id\x18\x01 \x01(\r\x12\x0c\n\x04mode\x18\x02 \x02(\r\x12\x10\n\x08name_tag\x18\x05 \x01(\t\x12\x13\n\x0bpre_city_id\x18\x07 \x01(\r\x12\x16\n\x0eunlock_item_id\x18\x08 \x01(\r\x12\x19\n\x11unlock_item_count\x18\t \x01(\r\x12\x0e\n\x06\x64un_id\x18\x04 \x03(\r\x12\x10\n\x08icon_pos\x18\n \x03(\r\"$\n\x10ResPracticeLimit\x12\x10\n\x08skill_id\x18\x01 \x01(\r\"6\n\x11ResPracticeTarget\x12\x0e\n\x06\x61\x63tion\x18\x01 \x01(\t\x12\x11\n\toperation\x18\x02 \x01(\t\"\x9d\x02\n\x0eResPracticeDun\x12\x0f\n\x07hero_id\x18\x01 \x01(\r\x12\x12\n\nchapter_id\x18\x02 \x01(\r\x12\x12\n\nsection_id\x18\x03 \x01(\r\x12\x0c\n\x04\x64\x65sc\x18\x04 \x01(\t\x12\x0c\n\x04icon\x18\x05 \x01(\t\x12\x10\n\x08quest_id\x18\x06 \x01(\r\x12\x0e\n\x06\x64un_id\x18\x07 \x01(\r\x12\x12\n\npre_dun_id\x18\x08 \x01(\r\x12\x12\n\nhero_level\x18\t \x01(\r\x12$\n\tdun_limit\x18\n \x03(\x0b\x32\x11.ResPracticeLimit\x12\x1e\n\ndun_reward\x18\x0b \x03(\x0b\x32\n.ResReward\x12&\n\ndun_target\x18\x0c \x03(\x0b\x32\x12.ResPracticeTarget\"\"\n\rResTargetInfo\x12\x11\n\tparameter\x18\x01 \x01(\r\"\xc1\x02\n\x0eResAchievement\x12\x16\n\x0e\x61\x63hievement_id\x18\x01 \x01(\r\x12\x13\n\x0btarget_type\x18\x02 \x01(\r\x12\x0e\n\x06sub_id\x18\x03 \x01(\r\x12\x10\n\x08group_id\x18\x04 \x01(\r\x12\x0e\n\x06pre_id\x18\x05 \x01(\r\x12\x14\n\x0c\x64isplay_type\x18\x06 \x01(\r\x12\x18\n\x10\x64isplay_priority\x18\x07 \x01(\r\x12\x19\n\x11\x61\x63hievement_score\x18\x08 \x01(\r\x12\r\n\x05title\x18\t \x01(\t\x12\x0c\n\x04\x64\x65sc\x18\n \x01(\t\x12\x0c\n\x04icon\x18\x0b \x01(\t\x12\x14\n\x0cis_short_cut\x18\x0c \x01(\r\x12\x1f\n\x0breward_info\x18\r \x03(\x0b\x32\n.ResReward\x12#\n\x0btarget_info\x18\x0e \x03(\x0b\x32\x0e.ResTargetInfo\"\xa8\x01\n\x0cResDailyTask\x12\x15\n\rdaily_task_id\x18\x01 \x01(\r\x12\x13\n\x0btarget_type\x18\x02 \x01(\r\x12\x18\n\x10\x64isplay_priority\x18\x03 \x01(\r\x12\x0c\n\x04icon\x18\x04 \x01(\t\x12\x1f\n\x0breward_info\x18\x05 \x03(\x0b\x32\n.ResReward\x12#\n\x0btarget_info\x18\x06 \x03(\x0b\x32\x0e.ResTargetInfo\"\xa5\x01\n\x0bResMainTask\x12\n\n\x02id\x18\x01 \x01(\r\x12\r\n\x05seqid\x18\x02 \x01(\r\x12\x0c\n\x04type\x18\x03 \x01(\r\x12\x10\n\x08group_id\x18\x04 \x01(\r\x12\x15\n\rremind_dun_id\x18\x05 \x01(\r\x12\x1f\n\x0breward_info\x18\x06 \x03(\x0b\x32\n.ResReward\x12#\n\x0btarget_info\x18\x07 \x03(\x0b\x32\x0e.ResTargetInfo\";\n\x12ResLoadingPicParam\x12\x11\n\tpic_index\x18\x01 \x01(\x05\x12\x12\n\ntips_index\x18\x02 \x01(\x05\"Q\n\rResLoadingPic\x12\x14\n\x0c\x64un_id_start\x18\x01 \x01(\x05\x12*\n\rloading_param\x18\x02 \x03(\x0b\x32\x13.ResLoadingPicParam\"X\n\x15ResColorMatchingParam\x12\x15\n\rhue_min_angle\x18\x01 \x01(\x05\x12\x15\n\rhue_max_angle\x18\x02 \x01(\x05\x12\x11\n\thue_angle\x18\x03 \x01(\x05\"E\n\x10ResColorMatching\x12\n\n\x02id\x18\x01 \x01(\r\x12%\n\x05param\x18\x02 \x03(\x0b\x32\x16.ResColorMatchingParam\"I\n\x14ResOnlineBattleTitle\x12\r\n\x05score\x18\x01 \x01(\r\x12\x10\n\x08title_id\x18\x02 \x01(\r\x12\x10\n\x08level_id\x18\x03 \x01(\r\"p\n\x15ResOfflineBattleTitle\x12\x10\n\x08title_id\x18\x01 \x01(\r\x12\x15\n\rrequire_score\x18\x02 \x01(\r\x12\x18\n\x10\x62onus_att_damage\x18\x03 \x01(\r\x12\x14\n\x0c\x62onus_att_hp\x18\x04 \x01(\r\"k\n\x0cResSceneInfo\x12\x12\n\nscene_name\x18\x01 \x01(\t\x12\x10\n\x08in_video\x18\x02 \x01(\r\x12\x11\n\tin_battle\x18\x03 \x01(\r\x12\x12\n\nin_endless\x18\x04 \x01(\r\x12\x0e\n\x06in_pvp\x18\x05 \x01(\r\"\xe3\x02\n\x11ResDungeonMonster\x12\x12\n\ndungeon_id\x18\x01 \x01(\r\x12\x0f\n\x07room_id\x18\x02 \x01(\r\x12\x12\n\nmonster_id\x18\x03 \x01(\r\x12\x17\n\x0fmonster_wave_id\x18\x04 \x01(\r\x12\x13\n\x0bmonster_cnt\x18\x05 \x01(\r\x12\x15\n\rmonster_level\x18\x06 \x01(\x05\x12\x19\n\x11monster_born_type\x18\x07 \x01(\r\x12\x1f\n\x17monster_born_type_param\x18\x08 \x01(\r\x12\x15\n\rmonster_pos_x\x18\t \x01(\x02\x12\x15\n\rmonster_pos_y\x18\n \x01(\x02\x12\x15\n\rmonster_group\x18\x0b \x01(\r\x12\x1b\n\x13monster_born_action\x18\x0c \x01(\t\x12\x19\n\x11monster_born_face\x18\r \x01(\r\x12\x17\n\x0fmonster_hp_rate\x18\x0e \x01(\x05\"\xb9\x03\n\x0eResDungeonRoom\x12\x12\n\ndungeon_id\x18\x01 \x01(\r\x12\x0f\n\x07room_id\x18\x02 \x01(\r\x12\x12\n\ntime_limit\x18\x04 \x01(\x05\x12\x15\n\rpass_add_time\x18\x05 \x01(\x05\x12!\n\x19wave_refresh_monster_type\x18\x06 \x01(\r\x12\"\n\x1awave_refresh_monster_param\x18\x07 \x01(\r\x12\x12\n\nborn_pos_x\x18\t \x01(\x02\x12\x11\n\tgravity_x\x18\n \x01(\x02\x12\x11\n\tgravity_y\x18\x0b \x01(\x02\x12\x13\n\x0b\x62order_left\x18\x0c \x01(\x02\x12\x14\n\x0c\x62order_right\x18\r \x01(\x02\x12\x14\n\x0c\x61\x63tion_limit\x18\x0e \x01(\r\x12\x19\n\x11\x63hamber_objective\x18\x11 \x01(\r\x12\x1a\n\x06reward\x18\x0f \x03(\x0b\x32\n.ResReward\x12 \n\tdrop_info\x18\x10 \x03(\x0b\x32\r.ResDropIndex\x12\x1a\n\x12\x61\x62ility_base_value\x18\x12 \x01(\r\x12 \n\x18\x63omplete_time_base_value\x18\x13 \x01(\r\"_\n\x11ResConLoginReward\x12\x16\n\x0e\x63on_login_days\x18\x01 \x01(\r\x12\x16\n\x0e\x63on_login_type\x18\x02 \x01(\r\x12\x1a\n\x06reward\x18\x03 \x03(\x0b\x32\n.ResReward\"3\n\x0fResHeroDropInfo\x12\x0f\n\x07hero_id\x18\x01 \x01(\r\x12\x0f\n\x07\x64rop_id\x18\x02 \x01(\r\"\xae\x01\n\x12ResScoreToResource\x12\r\n\x05\x66loor\x18\x01 \x01(\r\x12\x1f\n\x0breward_info\x18\x02 \x03(\x0b\x32\n.ResReward\x12#\n\tdrop_info\x18\x03 \x03(\x0b\x32\x10.ResHeroDropInfo\x12\x16\n\x0e\x64rop_box_class\x18\x04 \x01(\r\x12+\n\x11\x64rop_display_info\x18\x05 \x03(\x0b\x32\x10.ResResourceInfo\"i\n\x0eResTimeToMoney\x12\x0f\n\x07sort_id\x18\x01 \x01(\r\x12\x12\n\ndown_limit\x18\x02 \x01(\r\x12\x10\n\x08up_limit\x18\x03 \x01(\r\x12\r\n\x05ratio\x18\x04 \x01(\r\x12\x11\n\tmax_money\x18\x05 \x01(\r\"\xa8\x04\n\x0cResSkillData\x12\x10\n\x08skill_id\x18\x01 \x01(\r\x12\x0e\n\x06job_id\x18\x03 \x01(\r\x12\x10\n\x08tree_pos\x18\x04 \x01(\r\x12\x12\n\nskill_name\x18\x05 \x01(\t\x12\x18\n\x10skill_desc_param\x18\x07 \x01(\t\x12\x13\n\x0bskill_index\x18\x08 \x01(\r\x12\x13\n\x0bskill_level\x18\n \x01(\r\x12\x14\n\x0cskill_damage\x18\x0b \x01(\r\x12\x14\n\x0c\x65ndure_value\x18\x0c \x01(\r\x12\x14\n\x0csub_skill_id\x18\r \x01(\r\x12\x14\n\x0cskill_set_id\x18\x0e \x01(\r\x12\x11\n\toperation\x18\x0f \x01(\t\x12\x12\n\nhit_add_sp\x18\x10 \x01(\r\x12\x17\n\x0f\x64\x61mage_att_rate\x18\x11 \x01(\r\x12\x12\n\nskill_icon\x18\x12 \x01(\r\x12\x17\n\x0flevelup_cost_sp\x18\x13 \x01(\r\x12\x18\n\x10levelup_cost_res\x18\x14 \x01(\r\x12\x13\n\x0blimit_level\x18\x15 \x01(\r\x12\x17\n\x0fpre_skill_index\x18\x16 \x01(\r\x12\x1b\n\x13\x66inal_skill_cost_sp\x18\x17 \x01(\r\x12\x12\n\nskill_meta\x18\x18 \x01(\r\x12\x16\n\x0e\x66ight_capacity\x18\x19 \x01(\r\x12\x19\n\x11show_golden_frame\x18\x1a \x01(\x08\x12\x1b\n\x13skill_combat_damage\x18\x1b \x01(\x02\"\xd6\x01\n\x0cResSkillTree\x12\x0f\n\x07hero_id\x18\x01 \x01(\r\x12\x14\n\x0cskill_set_id\x18\x02 \x01(\r\x12\x19\n\x11relation_sequence\x18\x03 \x01(\t\x12\x1c\n\x14skill_index_sequence\x18\x04 \x01(\t\x12\x11\n\tskill_pos\x18\x05 \x01(\r\x12\x1e\n\x16skill_preview_offset_x\x18\x06 \x01(\x05\x12\x1e\n\x16skill_preview_offset_y\x18\x07 \x01(\x05\x12\x13\n\x0bskill_index\x18\x08 \x01(\x05\"i\n\x0eResRankValInfo\x12\x10\n\x08val_name\x18\x01 \x01(\t\x12\x10\n\x08val_type\x18\x02 \x01(\r\x12\x0f\n\x07min_val\x18\x03 \x01(\r\x12\x0f\n\x07max_val\x18\x04 \x01(\r\x12\x11\n\tsort_type\x18\x05 \x01(\r\"\xbf\x02\n\x0bResRankInfo\x12\x0f\n\x07rank_id\x18\x01 \x01(\r\x12\x11\n\trank_name\x18\x02 \x01(\t\x12\x16\n\x0erank_base_type\x18\x03 \x01(\r\x12\x17\n\x0frank_flush_type\x18\x04 \x01(\r\x12\x15\n\rrank_capacity\x18\x05 \x01(\r\x12\x18\n\x10get_list_max_num\x18\r \x01(\r\x12\x16\n\x0e\x64\x61y_flush_hour\x18\x06 \x01(\r\x12\x15\n\rday_flush_min\x18\x07 \x01(\r\x12\x15\n\rday_flush_sec\x18\x08 \x01(\r\x12\x16\n\x0e\x64\x61y_flush_time\x18\t \x01(\r\x12\x11\n\tmin_level\x18\n \x01(\r\x12\x11\n\tmax_level\x18\x0b \x01(\r\x12&\n\rrank_val_info\x18\x0c \x03(\x0b\x32\x0f.ResRankValInfo\":\n\x15ResRankBattleSectInfo\x12\x0f\n\x07low_val\x18\x01 \x01(\r\x12\x10\n\x08high_val\x18\x02 \x01(\r\"K\n\x11ResRankBattleInfo\x12\n\n\x02id\x18\x01 \x01(\r\x12\x10\n\x08\x63\x61pacity\x18\x02 \x01(\r\x12\x18\n\x10get_list_max_num\x18\x03 \x01(\r\"c\n\x11ResRankBattleSect\x12\x10\n\x08rank_low\x18\x01 \x01(\x05\x12\x11\n\trank_high\x18\x02 \x01(\x05\x12)\n\trank_sect\x18\x03 \x03(\x0b\x32\x16.ResRankBattleSectInfo\"\x8c\x01\n\x13ResRankBattleReward\x12\x10\n\x08rank_low\x18\x01 \x01(\x05\x12\x11\n\trank_high\x18\x02 \x01(\x05\x12(\n\x10\x65very_day_reward\x18\x03 \x03(\x0b\x32\x0e.ST_REWARD_RES\x12&\n\x0epromote_reward\x18\x04 \x03(\x0b\x32\x0e.ST_REWARD_RES\"\x98\x01\n\x1aResRankBattleRobotHeroInfo\x12\x0f\n\x07hero_id\x18\x01 \x01(\r\x12\x0f\n\x07hero_lv\x18\x02 \x01(\r\x12\x15\n\rhero_strength\x18\x03 \x01(\r\x12\x14\n\x0chero_stamina\x18\x04 \x01(\r\x12\x13\n\x0bhero_growup\x18\x05 \x01(\r\x12\x16\n\x0e\x66ight_capacity\x18\x06 \x01(\r\"y\n\x12ResRankBattleRobot\x12\x0b\n\x03uid\x18\x01 \x01(\r\x12\x12\n\nrobot_name\x18\x02 \x01(\t\x12\x12\n\nhead_photo\x18\x03 \x01(\r\x12.\n\thero_info\x18\x04 \x03(\x0b\x32\x1b.ResRankBattleRobotHeroInfo\"t\n\x1cResOnlineBattleRobotHeroInfo\x12\x0f\n\x07hero_id\x18\x01 \x01(\r\x12\x15\n\rhero_strength\x18\x02 \x01(\r\x12\x14\n\x0chero_stamina\x18\x03 \x01(\r\x12\x16\n\x0e\x66ight_capacity\x18\x04 \x01(\r\"x\n\x14ResOnlineBattleRobot\x12\x0b\n\x03uid\x18\x01 \x01(\r\x12\x12\n\nrobot_name\x18\x02 \x01(\t\x12\r\n\x05score\x18\x03 \x01(\r\x12\x30\n\thero_info\x18\x04 \x03(\x0b\x32\x1d.ResOnlineBattleRobotHeroInfo\"X\n\x16ResOnlineBattleShopBox\x12\x0b\n\x03pos\x18\x01 \x01(\r\x12\x0c\n\x04icon\x18\x02 \x01(\t\x12\r\n\x05price\x18\x03 \x01(\r\x12\x14\n\x0c\x62\x61se_drop_id\x18\x04 \x01(\r\"]\n\x12ResGrowUpCondition\x12\x11\n\tcondition\x18\x01 \x01(\r\x12\x19\n\x11\x63ondition_param_1\x18\x02 \x01(\x05\x12\x19\n\x11\x63ondition_param_2\x18\x03 \x01(\x05\"\xbc\x01\n\tResGrowUp\x12\x0f\n\x07hero_id\x18\x01 \x01(\r\x12\x12\n\ngrow_up_id\x18\x02 \x01(\r\x12.\n\x11grow_up_condition\x18\x03 \x03(\x0b\x32\x13.ResGrowUpCondition\x12.\n\x15grow_up_ned_chip_info\x18\x04 \x03(\x0b\x32\x0f.ResChipNumInfo\x12\x14\n\x0cgrow_up_name\x18\x05 \x01(\r\x12\x14\n\x0cgrow_up_icon\x18\x06 \x01(\r\"\xda\x02\n\x0bResPurchase\x12\x15\n\rproduct_index\x18\x01 \x01(\r\x12\x14\n\x0cproduct_name\x18\x02 \x01(\t\x12\x17\n\x0fproduct_picture\x18\x03 \x01(\t\x12\x12\n\nproduct_id\x18\x04 \x01(\t\x12\r\n\x05price\x18\x05 \x01(\x02\x12\x14\n\x0cproduct_type\x18\x06 \x01(\r\x12\x13\n\x0b\x61\x63tivity_id\x18\x07 \x01(\r\x12\r\n\x05\x63ount\x18\x08 \x01(\r\x12\x15\n\rpromotion_cnt\x18\t \x01(\r\x12\x1f\n\x0breward_info\x18\n \x03(\x0b\x32\n.ResReward\x12\x0f\n\x07\x63hannel\x18\x0b \x01(\r\x12\x12\n\nadditional\x18\x0c \x01(\r\x12\x19\n\x11\x66irst_reward_type\x18\r \x01(\r\x12\x17\n\x0flogin_plat_type\x18\x0e \x01(\r\x12\x17\n\x0flocalized_price\x18\x0f \x01(\t\"`\n\x0cResMonthCard\x12\n\n\x02id\x18\x01 \x01(\r\x12\x0c\n\x04type\x18\x02 \x01(\r\x12\x0c\n\x04name\x18\x03 \x01(\t\x12\x12\n\nvalid_time\x18\x04 \x01(\r\x12\x14\n\x0c\x64\x61ily_reward\x18\x05 \x01(\r\"\xa6\x02\n\x12ResBusinessRefresh\x12\x13\n\x0b\x62usiness_id\x18\x01 \x01(\r\x12\x15\n\rbusiness_name\x18\x02 \x01(\t\x12\x14\n\x0ctrigger_type\x18\x03 \x01(\r\x12\x14\n\x0crefresh_hour\x18\x04 \x01(\r\x12\x16\n\x0erefresh_minute\x18\x05 \x01(\r\x12\x16\n\x0erefresh_second\x18\x06 \x01(\r\x12\x15\n\rbeg_time_year\x18\x07 \x01(\r\x12\x16\n\x0e\x62\x65g_time_month\x18\x08 \x01(\r\x12\x14\n\x0c\x62\x65g_time_day\x18\t \x01(\r\x12\x15\n\rend_time_year\x18\n \x01(\r\x12\x16\n\x0e\x65nd_time_month\x18\x0b \x01(\r\x12\x14\n\x0c\x65nd_time_day\x18\x0c \x01(\r\"\xa7\x01\n\x0bResGroupBuy\x12\x14\n\x0cgroup_buy_id\x18\x01 \x01(\r\x12\x16\n\x0egroup_buy_desc\x18\x02 \x01(\t\x12\x10\n\x08\x62\x65g_time\x18\x03 \x01(\t\x12\x10\n\x08\x65nd_time\x18\x04 \x01(\t\x12\x12\n\ncost_money\x18\x05 \x01(\r\x12\x12\n\nis_refresh\x18\x06 \x01(\r\x12\x1e\n\nbuy_reward\x18\x07 \x03(\x0b\x32\n.ResReward\"S\n\x13ResGrowthFundReward\x12\n\n\x02id\x18\x01 \x01(\r\x12\x14\n\x0ctarget_dunid\x18\x02 \x01(\r\x12\x1a\n\x06reward\x18\x03 \x03(\x0b\x32\n.ResReward\"\xe6\x01\n\x13ResCumulateRecharge\x12\n\n\x02id\x18\x01 \x01(\r\x12\x15\n\rrecharge_name\x18\x02 \x01(\t\x12\x17\n\x0ftarget_recharge\x18\x03 \x01(\r\x12\x1a\n\x06reward\x18\x04 \x03(\x0b\x32\n.ResReward\x12 \n\x0c\x64\x61ily_reward\x18\x05 \x03(\x0b\x32\n.ResReward\x12\x16\n\x0e\x64\x61ily_buy_cost\x18\x06 \x01(\r\x12\x1d\n\tdaily_buy\x18\x07 \x03(\x0b\x32\n.ResReward\x12\x1e\n\ndaily_free\x18\x08 \x03(\x0b\x32\n.ResReward\"2\n\x0bResSlotInfo\x12\x0f\n\x07slot_id\x18\x01 \x01(\r\x12\x12\n\nopen_limit\x18\x02 \x01(\r\"!\n\x0cResParamInfo\x12\x11\n\tparameter\x18\x01 \x01(\r\"<\n\x0cResGiftGroup\x12\x15\n\rgift_group_id\x18\x01 \x01(\r\x12\x15\n\rex_change_cnt\x18\x02 \x01(\r\"~\n\x07ResGift\x12\x0f\n\x07gift_id\x18\x01 \x01(\r\x12\x15\n\rgift_group_id\x18\x02 \x01(\r\x12\r\n\x05title\x18\x03 \x01(\t\x12\x0f\n\x07\x63ontent\x18\x04 \x01(\t\x12\x1a\n\x06reward\x18\x05 \x03(\x0b\x32\n.ResReward\x12\x0f\n\x07\x65nabled\x18\x06 \x01(\x08\"\xa4\x03\n\x07ResItem\x12\x0f\n\x07item_id\x18\x01 \x01(\r\x12\x11\n\titem_name\x18\x02 \x01(\t\x12\x11\n\titem_desc\x18\x03 \x01(\t\x12\x12\n\nitem_level\x18\x04 \x01(\r\x12\x11\n\titem_type\x18\x05 \x01(\r\x12\x0f\n\x07\x63\x61n_use\x18\x06 \x01(\r\x12\x14\n\x0citem_quality\x18\x07 \x01(\r\x12\x16\n\x0eitem_use_level\x18\x08 \x01(\r\x12\x17\n\x0fitem_page_index\x18\t \x01(\r\x12\x17\n\x0fitem_slot_index\x18\n \x01(\r\x12\x11\n\tsort_type\x18\x0b \x01(\r\x12\x13\n\x0bis_can_drop\x18\x0c \x01(\r\x12\x14\n\x0cpackage_wrap\x18\r \x01(\r\x12\x0e\n\x06pic_id\x18\x0e \x01(\r\x12\x11\n\tfunc_type\x18\x0f \x01(\r\x12\x10\n\x08tab_type\x18\x10 \x01(\r\x12 \n\tparameter\x18\x11 \x03(\x0b\x32\r.ResParamInfo\x12\x13\n\x0b\x64rop_dun_id\x18\x12 \x03(\r\x12\x0e\n\x06output\x18\x13 \x03(\r\x12\x10\n\x08\x65valuate\x18\x14 \x02(\r\"5\n\x11ResEquipAttrRatio\x12\x11\n\tattr_type\x18\x01 \x02(\r\x12\r\n\x05ratio\x18\x02 \x02(\x02\"\x7f\n\x0cResEquipAttr\x12\x11\n\tattr_type\x18\x01 \x02(\r\x12\x12\n\nattr_value\x18\x02 \x01(\r\x12\x10\n\x08is_ratio\x18\x03 \x01(\r\x12\x1a\n\x12\x61ttr_str_inc_value\x18\x04 \x01(\r\x12\x1a\n\x12\x61ttr_sta_inc_value\x18\x05 \x01(\r\"\xcb\x05\n\x08ResEquip\x12\x10\n\x08\x65quip_id\x18\x01 \x02(\r\x12\x13\n\x0bpack_pic_id\x18\x02 \x02(\r\x12\x10\n\x08\x65valuate\x18\x03 \x02(\r\x12\r\n\x05\x63olor\x18\x04 \x02(\r\x12\x0e\n\x06weight\x18\x05 \x02(\r\x12\x11\n\tequip_pos\x18\x06 \x02(\r\x12\x10\n\x08\x62\x61se_exp\x18\x07 \x02(\r\x12\x10\n\x08job_type\x18\x08 \x02(\r\x12\x1a\n\x12\x61ttr_base_strength\x18\t \x02(\r\x12\x19\n\x11\x61ttr_base_stamina\x18\n \x02(\r\x12\x1f\n\x0bsell_reward\x18\x10 \x02(\x0b\x32\n.ResReward\x12\x14\n\x0c\x61wesome_desc\x18\x11 \x02(\r\x12\x1c\n\x14levelup_strength_inc\x18\x0b \x02(\r\x12\x1b\n\x13levelup_stamina_inc\x18\x0c \x02(\r\x12\x19\n\x11levelup_max_level\x18\x1a \x02(\r\x12\x16\n\x0e\x63\x61n_batch_sell\x18\x19 \x02(\x08\x12\x14\n\x0c\x62ind_to_hero\x18\x16 \x02(\x08\x12\x17\n\x0fitem_slot_index\x18\x14 \x01(\r\x12\x18\n\x10return_gem_ratio\x18\x17 \x02(\r\x12!\n\nattr_color\x18\r \x03(\x0b\x32\r.ResEquipAttr\x12\"\n\x0b\x61ttr_wakeup\x18\x0e \x03(\x0b\x32\r.ResEquipAttr\x12\"\n\x0b\x61ttr_growup\x18\x0f \x03(\x0b\x32\r.ResEquipAttr\x12\x13\n\x0b\x64rop_dun_id\x18\x15 \x03(\r\x12\x0e\n\x06output\x18\x18 \x03(\r\x12\x13\n\x0bis_retrieve\x18\x1b \x01(\r\x12\x12\n\nis_rubbish\x18\x1c \x02(\r\x12\x0f\n\x07\x63\x61n_use\x18\x1d \x01(\r\x12\x14\n\x0crandom_index\x18\x1e \x01(\r\x12\x17\n\x0f\x62\x61se_purify_exp\x18\x1f \x01(\r\x12\x12\n\ncan_fusion\x18  \x01(\x08\"\x9c\x01\n\rResPurifyAttr\x12\r\n\x05level\x18\x01 \x01(\r\x12\x19\n\x11\x61\x64\x64_strength_rate\x18\x02 \x01(\r\x12\x18\n\x10\x61\x64\x64_stamina_rate\x18\x03 \x01(\r\x12\x1a\n\x12\x61\x64\x64_strength_value\x18\x04 \x01(\r\x12\x19\n\x11\x61\x64\x64_stamina_value\x18\x05 \x01(\r\x12\x10\n\x08need_exp\x18\x06 \x01(\r\"G\n\x0eResPurifyLevel\x12\x11\n\tequip_pos\x18\x01 \x02(\r\x12\"\n\nlevel_attr\x18\x03 \x03(\x0b\x32\x0e.ResPurifyAttr\"A\n\x0bResEquipBox\x12\r\n\x05index\x18\x01 \x02(\r\x12\x0f\n\x07hero_id\x18\x02 \x02(\r\x12\x12\n\ndrop_index\x18\x03 \x02(\r\"\xa3\x01\n\x0eResEquipGrowup\x12\x10\n\x08\x65quip_id\x18\x01 \x02(\r\x12\x14\n\x0cgrowup_level\x18\x02 \x02(\r\x12\x1e\n\x08material\x18\x03 \x03(\x0b\x32\x0c.ResMaterial\x12\x12\n\nextra_gold\x18\x04 \x02(\r\x12\x1b\n\x04\x61ttr\x18\x05 \x03(\x0b\x32\r.ResEquipAttr\x12\x18\n\x10need_equip_level\x18\x06 \x02(\r\"L\n\x17ResEquipWakeupCondition\x12\x0b\n\x03\x63nt\x18\x02 \x02(\r\x12\x11\n\tmin_level\x18\x03 \x02(\r\x12\x11\n\tgold_cost\x18\x04 \x02(\r\"?\n\x17ResEquipGrowupCondition\x12\x11\n\tequip_cnt\x18\x02 \x02(\r\x12\x11\n\tgold_cost\x18\x04 \x02(\r\"\xfa\x01\n\rResEquipColor\x12\r\n\x05\x63olor\x18\x01 \x02(\r\x12\x0b\n\x03pos\x18\x02 \x02(\r\x12\x13\n\x0b\x65xp_to_gold\x18\x04 \x02(\x02\x12\x1d\n\x15\x63hance_to_increase_sp\x18\x05 \x01(\r\x12\x16\n\x0ewakeup_item_id\x18\x06 \x02(\r\x12\x19\n\x11return_item_ratio\x18\t \x02(\x02\x12\x32\n\x10wakeup_condition\x18\x07 \x03(\x0b\x32\x18.ResEquipWakeupCondition\x12\x32\n\x10growup_condition\x18\x08 \x03(\x0b\x32\x18.ResEquipGrowupCondition\"7\n\x14ResEquipColorLevelup\x12\r\n\x05level\x18\x02 \x02(\r\x12\x10\n\x08need_exp\x18\x03 \x03(\r\"f\n\x16ResEquipColorLevelAttr\x12\r\n\x05\x63olor\x18\x01 \x02(\r\x12\x0b\n\x03pos\x18\x02 \x02(\r\x12\r\n\x05level\x18\x03 \x02(\r\x12\x10\n\x08strength\x18\x04 \x02(\r\x12\x0f\n\x07stamina\x18\x05 \x02(\r\"j\n\x11ResEquipRecommend\x12\x0f\n\x07hero_id\x18\x01 \x02(\r\x12\x14\n\x0c\x64un_id_start\x18\x02 \x02(\r\x12\x12\n\ndun_id_end\x18\x03 \x02(\r\x12\x1a\n\x12recommend_equip_id\x18\x04 \x03(\r\"\x9d\x02\n\x18ResEquipFusionTargetInfo\x12\x14\n\x0ctarget_price\x18\x01 \x01(\r\x12\x13\n\x0bretrieve_id\x18\x02 \x01(\r\x12\x18\n\x10\x61\x64\x64tion_res_type\x18\x03 \x01(\r\x12\x16\n\x0e\x61\x64\x64tion_res_id\x18\x04 \x01(\r\x12\x19\n\x11\x61\x64\x64tion_res_count\x18\x05 \x01(\r\x12\x1c\n\x14\x61\x64\x64tion_buy_res_type\x18\x08 \x01(\r\x12\x1a\n\x12\x61\x64\x64tion_buy_res_id\x18\t \x01(\r\x12\x1d\n\x15\x61\x64\x64tion_buy_res_count\x18\n \x01(\r\x12\x19\n\x11\x61\x64\x64tion_use_limit\x18\x06 \x01(\r\x12\x15\n\raddtion_ratio\x18\x07 \x01(\r\"|\n\x0eResEquipFusion\x12\x18\n\x10\x66usion_price_low\x18\x01 \x01(\r\x12\x19\n\x11\x66usion_price_high\x18\x02 \x01(\r\x12\x35\n\x12\x66usion_target_info\x18\x03 \x03(\x0b\x32\x19.ResEquipFusionTargetInfo\"{\n\x0bResDropElem\x12\x16\n\x0e\x64rop_item_type\x18\x01 \x01(\r\x12\x14\n\x0c\x64rop_item_id\x18\x02 \x01(\r\x12\x15\n\rdrop_item_num\x18\x03 \x01(\r\x12\x12\n\ndrop_ratio\x18\x04 \x01(\r\x12\x13\n\x0b\x64rop_grp_id\x18\x05 \x01(\r\"?\n\x0bResBaseDrop\x12\x0f\n\x07\x64rop_id\x18\x01 \x01(\r\x12\x1f\n\tdrop_elem\x18\x02 \x03(\x0b\x32\x0c.ResDropElem\"M\n\x0fResRetrieveInfo\x12\n\n\x02id\x18\x01 \x01(\r\x12\x0c\n\x04type\x18\x02 \x01(\r\x12 \n\tparameter\x18\x03 \x03(\x0b\x32\r.ResParamInfo\"\x1d\n\x08ResParam\x12\x11\n\tparametre\x18\x01 \x01(\r\"-\n\x0eResUserTipData\x12\n\n\x02id\x18\x01 \x01(\r\x12\x0f\n\x07tipText\x18\x02 \x01(\t\"\x95\x01\n\x0eResMailContent\x12\n\n\x02id\x18\x01 \x01(\r\x12\r\n\x05title\x18\x02 \x01(\t\x12\x0f\n\x07\x63ontent\x18\x03 \x01(\t\x12\x14\n\x0creward_money\x18\x04 \x01(\r\x12\x13\n\x0breward_gold\x18\x05 \x01(\r\x12\x16\n\x0ereward_crystal\x18\x06 \x01(\r\x12\x14\n\x0cpersist_time\x18\x07 \x01(\r\"T\n\x10ResPrizeDrawHero\x12\x0f\n\x07hero_id\x18\x01 \x01(\r\x12\x16\n\x0enormal_drop_id\x18\x02 \x01(\r\x12\x17\n\x0fspecial_drop_id\x18\x03 \x01(\r\"\xe1\x05\n\x0cResPrizeDraw\x12\n\n\x02id\x18\x01 \x01(\r\x12\x1c\n\x14prize_draw_cost_type\x18\x02 \x01(\r\x12\x1a\n\x12prize_draw_cost_id\x18\x03 \x01(\r\x12\x1d\n\x15prize_draw_cost_count\x18\x04 \x01(\r\x12\x11\n\tmall_type\x18\x06 \x01(\r\x12\x0f\n\x07mall_id\x18\x07 \x01(\r\x12\x12\n\nmall_count\x18\x08 \x01(\r\x12\x17\n\x0f\x63ounteract_type\x18\t \x01(\r\x12\x15\n\rcounteract_id\x18\n \x01(\r\x12\x18\n\x10\x63ounteract_count\x18\x0b \x01(\r\x12\x16\n\x0e\x66ree_max_count\x18\x0c \x01(\r\x12\x19\n\x11\x66ree_use_interval\x18\r \x01(\r\x12*\n\"free_refresh_time_by_last_use_time\x18\x0e \x01(\r\x12\x33\n+free_refresh_time_by_last_refresh_time_hour\x18\x0f \x01(\r\x12\x32\n*free_refresh_time_by_last_refresh_time_min\x18\x10 \x01(\r\x12\x32\n*free_refresh_time_by_last_refresh_time_sec\x18\x11 \x01(\r\x12\x34\n\x1b\x66irst_prize_draw_drop_index\x18\x12 \x01(\x0b\x32\x0f.ResDropIndexEx\x12.\n\x15prize_draw_drop_index\x18\x13 \x03(\x0b\x32\x0f.ResDropIndexEx\x12\x31\n\x17prize_draw_preview_info\x18\x14 \x03(\x0b\x32\x10.ResResourceInfo\x12$\n\x1cprize_draw_by_hero_cnt_limit\x18\x15 \x01(\r\x12/\n\x14prize_draw_hero_info\x18\x16 \x03(\x0b\x32\x11.ResPrizeDrawHero\"8\n\x0eResShopRefresh\x12\x0c\n\x04type\x18\x01 \x01(\r\x12\n\n\x02id\x18\x02 \x01(\r\x12\x0c\n\x04time\x18\x03 \x01(\t\"4\n\nResBuyRate\x12\x15\n\rcritical_rate\x18\x01 \x01(\r\x12\x0f\n\x07\x62uy_cnt\x18\x02 \x01(\r\"\xa8\x01\n\x0fResRefreshPrice\x12\x0c\n\x04type\x18\x01 \x01(\r\x12\r\n\x05\x63ount\x18\x02 \x01(\r\x12\x0e\n\x06is_vip\x18\x03 \x01(\r\x12\x10\n\x08res_type\x18\x04 \x01(\r\x12\x0e\n\x06res_id\x18\x05 \x01(\r\x12\x11\n\tres_count\x18\x06 \x01(\r\x12\x14\n\x0conce_buy_cnt\x18\x07 \x01(\r\x12\x1d\n\x08\x62uy_rate\x18\x08 \x03(\x0b\x32\x0b.ResBuyRate\"\xcd\x02\n\x0cResShopGoods\x12\n\n\x02id\x18\x01 \x01(\r\x12\x0c\n\x04type\x18\x02 \x01(\r\x12\x17\n\x0fvip_level_limit\x18\x0e \x01(\r\x12\x16\n\x0eis_first_goods\x18\x03 \x01(\r\x12\x16\n\x0egoods_res_type\x18\x04 \x01(\r\x12\x14\n\x0cgoods_res_id\x18\x05 \x01(\r\x12\x11\n\tgoods_cnt\x18\r \x01(\r\x12\x12\n\nprice_type\x18\x06 \x01(\r\x12\r\n\x05price\x18\x07 \x01(\r\x12\x10\n\x08\x64iscount\x18\x08 \x01(\r\x12\"\n\x1a\x64iscount_begin_time_string\x18\t \x01(\t\x12 \n\x18\x64iscount_end_time_string\x18\n \x01(\t\x12\x1b\n\x13\x64iscount_begin_time\x18\x0b \x01(\r\x12\x19\n\x11\x64iscount_end_time\x18\x0c \x01(\r\"E\n\x16ResShopRandomGoodsInfo\x12\x10\n\x08goods_id\x18\x01 \x01(\r\x12\x19\n\x11goods_probability\x18\x02 \x01(\r\"\x8d\x01\n\rResShopRandom\x12\x0c\n\x04type\x18\x01 \x01(\r\x12\x0f\n\x07hero_id\x18\x02 \x01(\r\x12\x13\n\x0bhero_lv_low\x18\x03 \x01(\r\x12\x14\n\x0chero_lv_high\x18\x04 \x01(\r\x12\x32\n\x11goods_random_info\x18\x05 \x03(\x0b\x32\x17.ResShopRandomGoodsInfo\"Q\n\x0fResTutorialRule\x12\x0e\n\x06\x64un_id\x18\x01 \x02(\r\x12\x0c\n\x04\x64\x65mo\x18\x02 \x02(\t\x12 \n\x07\x61\x63tions\x18\x03 \x03(\x0b\x32\x0f.ST_ACTION_DESC\"M\n\x08ResBible\x12\x13\n\x0b\x63\x61tegory_id\x18\x01 \x02(\r\x12\x15\n\rcategory_name\x18\x02 \x02(\t\x12\x15\n\rpage_contents\x18\x03 \x03(\t\"3\n\x16ResFriendRecommendInfo\x12\x0b\n\x03low\x18\x01 \x01(\r\x12\x0c\n\x04high\x18\x02 \x01(\r\"\x82\x01\n\x16ResFriendRecommendSect\x12\x1a\n\x12\x66ight_capacity_low\x18\x01 \x01(\r\x12\x1b\n\x13\x66ight_capacity_high\x18\x02 \x01(\r\x12/\n\x0erecommend_info\x18\x03 \x03(\x0b\x32\x17.ResFriendRecommendInfo\"\xee\x05\n\x0fResTutorialInfo\x12\x1a\n\x12tutorial_dugeon_id\x18\x01 \x01(\r\x12\x1c\n\x14tutorial_dugeon_hero\x18\x02 \x01(\t\x12\x18\n\x10\x66irst_steller_id\x18\x03 \x01(\r\x12\x17\n\x0f\x66irst_planet_id\x18\x04 \x01(\r\x12 \n\x18role_level_skill_upgrade\x18\x05 \x01(\r\x12\x18\n\x10hero_tower_level\x18\x06 \x01(\r\x12\x1d\n\x15role_level_hero_tower\x18\x07 \x01(\r\x12\x1d\n\x15gold_mine_building_id\x18\x08 \x01(\r\x12\x1c\n\x14unlock_dun_item_shop\x18\t \x01(\r\x12\x19\n\x11unlock_dun_emblem\x18\n \x01(\r\x12\x16\n\x0erole_id_emblem\x18\x0b \x01(\r\x12\x1f\n\x17unlock_dun_role_upgrade\x18\x0c \x01(\r\x12\x1e\n\x16role_level_skill_burst\x18\r \x01(\r\x12\x16\n\x0esp_skill_burst\x18\x0e \x01(\r\x12\x1a\n\x12sp_skill_ultimatet\x18\x0f \x01(\r\x12\x17\n\x0fsp_skill_charge\x18\x10 \x01(\r\x12\x1b\n\x13new_hero_steller_id\x18\x11 \x01(\r\x12\x1a\n\x12new_hero_planet_id\x18\x12 \x01(\r\x12\x1b\n\x13resource_store_type\x18\x13 \x01(\r\x12\x11\n\tisland_id\x18\x14 \x03(\r\x12 \n\x18role_level_equip_levelup\x18\x15 \x01(\r\x12\x1e\n\x16unlock_dun_join_league\x18\x16 \x01(\r\x12\x1c\n\x14\x65xp_mine_building_id\x18\x17 \x01(\r\x12\x1e\n\x16money_mine_building_id\x18\x18 \x01(\r\x12\x18\n\x10mall_building_id\x18\x19 \x01(\r\x12\x12\n\nexpitem_id\x18\x1a \x03(\r\"\xe1\x01\n\x10ResHeroImageInfo\x12\n\n\x02id\x18\x01 \x01(\r\x12 \n\x18share_hero_card_offset_x\x18\x02 \x01(\x02\x12 \n\x18share_hero_card_offset_y\x18\x03 \x01(\x02\x12\x1d\n\x15share_hero_card_scale\x18\x04 \x01(\x02\x12\x1f\n\x17share_hero_pve_offset_x\x18\x05 \x01(\x02\x12\x1f\n\x17share_hero_pve_offset_y\x18\x06 \x01(\x02\x12\x1c\n\x14share_hero_pve_scale\x18\x07 \x01(\x02\"F\n\x0eST_ACTION_DESC\x12\x0c\n\x04name\x18\x01 \x02(\t\x12\x10\n\x08tips_tag\x18\x02 \x02(\t\x12\x14\n\x0cguide_effect\x18\x03 \x02(\t\"{\n\x14ST_BATTLE_ROBOT_INFO\x12\x0f\n\x07hero_id\x18\x01 \x01(\r\x12\x0f\n\x07hero_lv\x18\x02 \x01(\r\x12\x14\n\x0chero_grow_up\x18\x03 \x01(\r\x12\x15\n\rhero_strength\x18\x04 \x01(\r\x12\x14\n\x0chero_stamina\x18\x05 \x01(\r\"v\n\x12ResRoleCommandList\x12\x0f\n\x07hero_id\x18\x01 \x02(\r\x12\x13\n\x0bitem_number\x18\x02 \x02(\r\x12\x15\n\rskill_name_id\x18\x03 \x02(\r\x12\x0f\n\x07\x63ommand\x18\x04 \x02(\t\x12\x12\n\nis_special\x18\x05 \x02(\r\"<\n\x0cResDailyTime\x12\x0c\n\x04hour\x18\x01 \x01(\r\x12\x0e\n\x06minute\x18\x02 \x01(\r\x12\x0e\n\x06second\x18\x03 \x01(\r\"\x88\x02\n\x0bResActivity\x12\x13\n\x0b\x61\x63tivity_id\x18\x01 \x02(\r\x12\x15\n\ractivity_name\x18\x02 \x02(\t\x12\x15\n\ractivity_type\x18\x03 \x02(\r\x12\x1a\n\x12\x61\x63tivity_parameter\x18\x04 \x02(\r\x12\x14\n\x0ctrigger_type\x18\x05 \x02(\r\x12\x10\n\x08\x62\x65g_time\x18\x06 \x01(\t\x12\x10\n\x08\x65nd_time\x18\x07 \x01(\t\x12\x12\n\nclose_time\x18\x08 \x01(\t\x12%\n\x0e\x64\x61ily_beg_time\x18\t \x03(\x0b\x32\r.ResDailyTime\x12%\n\x0e\x64\x61ily_end_time\x18\n \x03(\x0b\x32\r.ResDailyTime\"I\n\x0cResNameExtra\x12\n\n\x02id\x18\x01 \x02(\r\x12\x0c\n\x04type\x18\x02 \x02(\r\x12\x0e\n\x06prefix\x18\x03 \x01(\t\x12\x0f\n\x07postfix\x18\x04 \x01(\t\"8\n\x0bResZoneInfo\x12\x0f\n\x07zone_id\x18\x01 \x01(\r\x12\n\n\x02ip\x18\x02 \x01(\t\x12\x0c\n\x04port\x18\x03 \x01(\r\"A\n\x0cResWorldZone\x12\x10\n\x08world_id\x18\x01 \x02(\r\x12\x1f\n\tzone_info\x18\x02 \x03(\x0b\x32\x0c.ResZoneInfo\"~\n\x10ResRoleAttribute\x12\x0f\n\x07hero_id\x18\x01 \x02(\r\x12\x0e\n\x06\x61ttack\x18\x02 \x02(\x08\x12\x0f\n\x07\x61gility\x18\x03 \x02(\x08\x12\r\n\x05range\x18\x04 \x02(\x08\x12\r\n\x05\x63ombo\x18\x05 \x02(\x08\x12\x0e\n\x06\x65ndure\x18\x06 \x02(\x08\x12\n\n\x02hp\x18\x07 \x02(\x08\"P\n\x0fResCumulateCost\x12\n\n\x02id\x18\x01 \x02(\r\x12\x15\n\rcumulate_cost\x18\x02 \x02(\r\x12\x1a\n\x06reward\x18\x03 \x03(\x0b\x32\n.ResReward\"?\n\x12ResBossRushChapter\x12\x12\n\nchapter_id\x18\x01 \x02(\r\x12\x15\n\runlock_dun_id\x18\x02 \x02(\r\"s\n\x12ResBossRushDungeon\x12\x12\n\nchapter_id\x18\x01 \x02(\r\x12\x10\n\x08sequence\x18\x02 \x02(\r\x12\x12\n\ndungeon_id\x18\x03 \x02(\r\x12\x0f\n\x07is_boss\x18\x04 \x02(\x08\x12\x12\n\nmonster_id\x18\x05 \x03(\r\".\n\x10ResFirstRecharge\x12\x1a\n\x06reward\x18\x01 \x03(\x0b\x32\n.ResReward\"W\n\x10ResDailyRecharge\x12\n\n\x02id\x18\x01 \x02(\r\x12\x1b\n\x13target_recharge_cnt\x18\x02 \x02(\r\x12\x1a\n\x06reward\x18\x03 \x03(\x0b\x32\n.ResReward\"V\n\x0fResSectRecharge\x12\n\n\x02id\x18\x01 \x02(\r\x12\x1b\n\x13target_recharge_cnt\x18\x02 \x02(\r\x12\x1a\n\x06reward\x18\x03 \x03(\x0b\x32\n.ResReward*@\n\x18\x45NUM_SERVER_LOCOLIZATION\x12$\n ENUM_SERVER_LOCOLIZATION_CHINESE\x10\x00*\xe0\x01\n\x13ResChamberObjective\x12\x1f\n\x1b\x43HAMBER_OBJECTIVE_KILL_BOSS\x10\x01\x12\"\n\x1e\x43HAMBER_OBJECTIVE_KILL_MONSTER\x10\x02\x12%\n!CHAMBER_OBJECTIVE_REACH_WARPPOINT\x10\x03\x12\x1e\n\x1a\x43HAMBER_OBJECTIVE_SURVIVAL\x10\x04\x12\x1d\n\x19\x43HAMBER_OBJECTIVE_PROTECT\x10\x05\x12\x1e\n\x1a\x43HAMBER_OBJECTIVE_KILL_ALL\x10\x06*\x96\x01\n\x0fResSkillSetType\x12\x11\n\rSKILL_SET_TAP\x10\x01\x12\x16\n\x12SKILL_SET_UP_SLIDE\x10\x02\x12\x13\n\x0fSKILL_SET_SLIDE\x10\x03\x12\x18\n\x14SKILL_SET_DOWN_SLIDE\x10\x04\x12\x12\n\x0eSKILL_SET_DASH\x10\x05\x12\x15\n\x11SKILL_SET_SPECIAL\x10\x06*\xa0\x14\n\x0fResHeroAttrType\x12\x19\n\x15HERO_ATTR_COLOR_START\x10\x01\x12.\n*HERO_ATTR_COLOR_INCREASE_DAMAGE_TO_MONSTER\x10\x01\x12 \n\x1cHERO_ATTR_COLOR_SP_GET_SPEED\x10\x02\x12+\n\'HERO_ATTR_COLOR_INCREASE_DAMAGE_TO_BOSS\x10\x03\x12+\n\'HERO_ATTR_COLOR_INCREASE_DAMAGE_TO_HERO\x10\x04\x12\x1e\n\x1aHERO_ATTR_COLOR_SP_EXVALUE\x10\x05\x12\x32\n.HERO_ATTR_COLOR_INCREASE_DAMAGE_TO_MONSTER_TAP\x10\x0b\x12\x31\n-HERO_ATTR_COLOR_INCREASE_DAMAGE_TO_MONSTER_UP\x10\x0c\x12\x34\n0HERO_ATTR_COLOR_INCREASE_DAMAGE_TO_MONSTER_SLIDE\x10\r\x12\x33\n/HERO_ATTR_COLOR_INCREASE_DAMAGE_TO_MONSTER_DOWN\x10\x0e\x12\x33\n/HERO_ATTR_COLOR_INCREASE_DAMAGE_TO_MONSTER_DASH\x10\x0f\x12\x36\n2HERO_ATTR_COLOR_INCREASE_DAMAGE_TO_MONSTER_SPECIAL\x10\x10\x12$\n HERO_ATTR_COLOR_SP_GET_SPEED_TAP\x10\x15\x12#\n\x1fHERO_ATTR_COLOR_SP_GET_SPEED_UP\x10\x16\x12&\n\"HERO_ATTR_COLOR_SP_GET_SPEED_SLIDE\x10\x17\x12%\n!HERO_ATTR_COLOR_SP_GET_SPEED_DOWN\x10\x18\x12%\n!HERO_ATTR_COLOR_SP_GET_SPEED_DASH\x10\x19\x12(\n$HERO_ATTR_COLOR_SP_GET_SPEED_SPECIAL\x10\x1a\x12/\n+HERO_ATTR_COLOR_INCREASE_DAMAGE_TO_BOSS_TAP\x10\x1f\x12.\n*HERO_ATTR_COLOR_INCREASE_DAMAGE_TO_BOSS_UP\x10 \x12\x31\n-HERO_ATTR_COLOR_INCREASE_DAMAGE_TO_BOSS_SLIDE\x10!\x12\x30\n,HERO_ATTR_COLOR_INCREASE_DAMAGE_TO_BOSS_DOWN\x10\"\x12\x30\n,HERO_ATTR_COLOR_INCREASE_DAMAGE_TO_BOSS_DASH\x10#\x12\x33\n/HERO_ATTR_COLOR_INCREASE_DAMAGE_TO_BOSS_SPECIAL\x10$\x12/\n+HERO_ATTR_COLOR_INCREASE_DAMAGE_TO_HERO_TAP\x10)\x12.\n*HERO_ATTR_COLOR_INCREASE_DAMAGE_TO_HERO_UP\x10*\x12\x31\n-HERO_ATTR_COLOR_INCREASE_DAMAGE_TO_HERO_SLIDE\x10+\x12\x30\n,HERO_ATTR_COLOR_INCREASE_DAMAGE_TO_HERO_DOWN\x10,\x12\x30\n,HERO_ATTR_COLOR_INCREASE_DAMAGE_TO_HERO_DASH\x10-\x12\x33\n/HERO_ATTR_COLOR_INCREASE_DAMAGE_TO_HERO_SPECIAL\x10.\x12,\n(HERO_ATTR_LEVELUP_BURST_SUPER_ARMOR_TIME\x10\x64\x12\x1f\n\x1bHERO_ATTR_LEVELUP_BUFF_MOVE\x10\x65\x12&\n\"HERO_ATTR_LEVELUP_CD_DAMAGE_REDUCE\x10\x66\x12.\n*HERO_ATTR_LEVELUP_DEFENCE_SUPER_ARMOR_BUFF\x10g\x12!\n\x1dHERO_ATTR_LEVELUP_DAMAGE_BUFF\x10h\x12-\n)HERO_ATTR_LEVELUP_ATTACK_SUPER_ARMOR_BUFF\x10i\x12!\n\x1dHERO_ATTR_LEVELUP_INCREASE_SP\x10j\x12&\n\"HERO_ATTR_LEVELUP_MOVE_SUPER_ARMOR\x10k\x12 \n\x1cHERO_ATTR_LEVELUP_LIFE_STEAL\x10l\x12#\n\x1fHERO_ATTR_LEVELUP_DAMAGE_REDUCE\x10m\x12\x1c\n\x18HERO_ATTR_LEVELUP_SUMMON\x10n\x12(\n$HERO_ATTR_LEVELUP_GROUND_SUPER_ARMOR\x10o\x12(\n$HERO_ATTR_LEVELUP_INCREASE_SP_CHANCE\x10p\x12(\n#HERO_ATTR_GROWUP_BASE_ATTR_INCREASE\x10\xc8\x01\x12\x1e\n\x19HERO_ATTR_GROWUP_CRITICAL\x10\xc9\x01\x12&\n!HERO_ATTR_GROWUP_CRITICAL_DEFENCE\x10\xca\x01\x12%\n HERO_ATTR_GROWUP_CRITICAL_EFFECT\x10\xcb\x01\x12-\n(HERO_ATTR_GROWUP_CRITICAL_DEFENCE_EFFECT\x10\xcc\x01\x12\x1c\n\x17HERO_ATTR_BASE_STRENGTH\x10\xac\x02\x12\x1b\n\x16HERO_ATTR_BASE_STAMINA\x10\xad\x02\x12\x1b\n\x16HERO_ATTR_BASE_ABILITY\x10\xb0\x02\x12\'\n\"HERO_ATTR_BASE_STRENGTH_ROLE_LEVEL\x10\xb1\x02\x12&\n!HERO_ATTR_BASE_STAMINA_ROLE_LEVEL\x10\xb2\x02\x12#\n\x1eHERO_ATTR_BASE_STRENGTH_EMBLEM\x10\xb3\x02\x12\"\n\x1dHERO_ATTR_BASE_STAMINA_EMBLEM\x10\xb4\x02\x12%\n HERO_ATTR_BASE_STRENGTH_RELATION\x10\xb5\x02\x12$\n\x1fHERO_ATTR_BASE_STAMINA_RELATION\x10\xb6\x02\x12)\n$HERO_ATTR_BASE_STRENGTH_BATTLE_TITLE\x10\xb7\x02\x12(\n#HERO_ATTR_BASE_STAMINA_BATTLE_TITLE\x10\xb8\x02\x12\"\n\x1dHERO_ATTR_BASE_STRENGTH_EQUIP\x10\xb9\x02\x12!\n\x1cHERO_ATTR_BASE_STAMINA_EQUIP\x10\xba\x02\x1a\x02\x10\x01*\xc4\x01\n\x0fResEquipPosType\x12\x11\n\rEQUIPPOS_HEAD\x10\x00\x12\x11\n\rEQUIPPOS_HAND\x10\x01\x12\x11\n\rEQUIPPOS_NECK\x10\x02\x12\x11\n\rEQUIPPOS_BODY\x10\x03\x12\x10\n\x0c\x45QUIPPOS_LEG\x10\x04\x12\x13\n\x0f\x45QUIPPOS_WEAPON\x10\x05\x12\x16\n\x12\x45QUIPPOS_MAX_COUNT\x10\x06\x12\x11\n\rEQUIPPOS_NONE\x10\x07\x12\x13\n\x0f\x45QUIPPOS_ALLPOS\x10\t*\xaa\x01\n\x11ResEquipColorType\x12\x14\n\x10\x45QUIPCOLOR_WHITE\x10\x00\x12\x14\n\x10\x45QUIPCOLOR_GREEN\x10\x01\x12\x13\n\x0f\x45QUIPCOLOR_BLUE\x10\x02\x12\x15\n\x11\x45QUIPCOLOR_PURPLE\x10\x03\x12\x15\n\x11\x45QUIPCOLOR_ORANGE\x10\x04\x12\x12\n\x0e\x45QUIPCOLOR_RED\x10\x05\x12\x12\n\x0e\x45QUIPCOLOR_MAX\x10\x06*\xbc\x01\n\x0e\x45numItemOutput\x12\x13\n\x0fOUTPUT_TREASURE\x10\x01\x12\x0f\n\x0bOUTPUT_SHOP\x10\x02\x12\x16\n\x12OUTPUT_BATTLE_SHOP\x10\x03\x12\x15\n\x11OUTPUT_NORAML_PVE\x10\x04\x12\x14\n\x10OUTPUT_ELITE_PVE\x10\x05\x12\x16\n\x12OUTPUT_VIP_PACKAGE\x10\x06\x12\x12\n\x0eOUTPUT_ENDLESS\x10\x07\x12\x13\n\x0fOUTPUT_VIP_SHOP\x10\x08*Y\n\x19ResFriendInviteRewardType\x12\x1c\n\x18INVITEREWARDTYPE_BYCOUNT\x10\x01\x12\x1e\n\x1aINVITEREWARDTYPE_BYDUNGEON\x10\x02')
+  serialized_pb=_b('\n\tres.proto\x1a\x0frescommon.proto\"1\n\x15ResServerLocalization\x12\n\n\x02id\x18\x01 \x02(\t\x12\x0c\n\x04text\x18\x02 \x03(\t\"3\n\x0eResDropIndexEx\x12\x0f\n\x07\x64rop_id\x18\x01 \x01(\r\x12\x10\n\x08\x64rop_cnt\x18\x02 \x01(\r\"F\n\x0fResResourceInfo\x12\x10\n\x08res_type\x18\x01 \x01(\r\x12\x0e\n\x06res_id\x18\x02 \x01(\r\x12\x11\n\tres_count\x18\x03 \x01(\r\".\n\nResPreRole\x12\x0f\n\x07role_id\x18\x01 \x01(\r\x12\x0f\n\x07role_lv\x18\x02 \x01(\r\" \n\x0cResInitSkill\x12\x10\n\x08skill_id\x18\x01 \x01(\r\"7\n\rResNewRoleBuf\x12\x0b\n\x03\x63nt\x18\x01 \x02(\r\x12\x0b\n\x03\x61tk\x18\x02 \x02(\r\x12\x0c\n\x04life\x18\x03 \x02(\r\"0\n\x07ResCost\x12\x0c\n\x04type\x18\x01 \x02(\r\x12\n\n\x02id\x18\x02 \x02(\r\x12\x0b\n\x03\x63nt\x18\x03 \x02(\r\"\x9f\x01\n\x0cResHeadPhoto\x12\n\n\x02id\x18\x01 \x01(\r\x12\x0b\n\x03pic\x18\x02 \x01(\t\x12\x1a\n\x12\x65ndless_rank_limit\x18\x03 \x01(\r\x12\x1d\n\x15rankbattle_rank_limit\x18\x04 \x01(\r\x12\x1b\n\x13hero_level_limit_id\x18\x05 \x01(\r\x12\x1e\n\x16hero_level_limit_level\x18\x06 \x01(\r\"\x80\x06\n\tResRoleGL\x12\x0f\n\x07hero_id\x18\x01 \x01(\r\x12\x11\n\thero_name\x18\x03 \x01(\t\x12\x10\n\x08res_name\x18\x04 \x01(\t\x12\x15\n\rprotrait_name\x18\x05 \x01(\t\x12\x12\n\naudio_name\x18\x06 \x01(\t\x12\x0f\n\x07is_open\x18\x07 \x01(\r\x12\x10\n\x08list_pos\x18\x08 \x01(\r\x12\x14\n\x0c\x62uy_res_type\x18\t \x01(\r\x12\x12\n\npre_dun_id\x18\n \x01(\r\x12\x18\n\x10\x61\x63t_init_grow_up\x18\x0b \x01(\r\x12\x16\n\x0e\x61\x63t_init_level\x18\x0c \x01(\r\x12\x1c\n\x14unlock_emblem_ned_lv\x18\r \x01(\r\x12\x1b\n\x13unlock_emblem_hp_id\x18\x0e \x01(\r\x12\x1f\n\x17unlock_emblem_damage_id\x18\x0f \x01(\r\x12$\n\rinit_skill_id\x18\x10 \x03(\x0b\x32\r.ResInitSkill\x12\x15\n\rhead_offset_x\x18\x11 \x01(\x05\x12\x15\n\rhead_offset_y\x18\x12 \x01(\x05\x12\x18\n\x10new_role_buf_cnt\x18\x13 \x01(\r\x12\x12\n\nbuy_res_id\x18\x14 \x01(\r\x12\x15\n\rbuy_res_count\x18\x15 \x01(\r\x12\x1e\n\nbuy_reward\x18\x16 \x03(\x0b\x32\n.ResReward\x12\x1d\n\x0bunlock_cost\x18\x17 \x03(\x0b\x32\x08.ResCost\x12\x15\n\rbase_critical\x18\x18 \x01(\r\x12\x1c\n\x14\x62\x61se_critical_effect\x18\x19 \x01(\r\x12\x1d\n\x15\x62\x61se_critical_defence\x18\x1a \x01(\r\x12$\n\x1c\x62\x61se_critical_defence_effect\x18\x1b \x01(\r\x12\x18\n\x10\x62uy_res_discount\x18\x1c \x01(\r\x12\x15\n\rbuy_vip_limit\x18\x1d \x01(\r\x12\x19\n\x11protrait_offset_x\x18\x1e \x01(\x05\x12\x19\n\x11protrait_offset_y\x18\x1f \x01(\x05\"\x86\x01\n\x07ResChat\x12\x12\n\nchannel_id\x18\x01 \x01(\r\x12\x14\n\x0c\x63ond_city_id\x18\x02 \x01(\r\x12\x10\n\x08interval\x18\x03 \x01(\r\x12\x14\n\x0c\x63ost_restype\x18\x04 \x01(\r\x12\x12\n\ncost_resid\x18\x05 \x01(\r\x12\x15\n\rcost_rescount\x18\x06 \x01(\r\"\xe0\x01\n\x17ResRoleRelationAddition\x12\x18\n\x10receiver_role_id\x18\x01 \x01(\r\x12\x18\n\x10receiver_role_lv\x18\x02 \x01(\r\x12\x15\n\rgiver_role_id\x18\x03 \x01(\r\x12\x1a\n\x12giver_stamina_rate\x18\x04 \x01(\x02\x12\x1f\n\x17\x61\x64\x64_stamina_value_limit\x18\x05 \x01(\r\x12\x1b\n\x13giver_strength_rate\x18\x06 \x01(\x02\x12 \n\x18\x61\x64\x64_strength_value_limit\x18\x07 \x01(\r\"\x84\x01\n\x1aResRoleRelationSubtraction\x12\x18\n\x10receiver_role_id\x18\x01 \x01(\r\x12\x15\n\rgiver_role_id\x18\x02 \x01(\r\x12\x1a\n\x12\x64mg_addition_point\x18\x03 \x01(\r\x12\x19\n\x11\x64mg_addition_rate\x18\x04 \x01(\x02\"3\n\x0eResChipNumInfo\x12\x0f\n\x07\x63hip_id\x18\x01 \x01(\r\x12\x10\n\x08\x63hip_cnt\x18\x02 \x01(\r\"S\n\x16ResEmblemSingleRequest\x12\x18\n\x10lv_up_single_exp\x18\x01 \x01(\r\x12\x1f\n\x17lv_up_single_possiblity\x18\x02 \x01(\r\"\xad\x02\n\tResEmblem\x12\x11\n\tweapon_id\x18\x01 \x01(\r\x12\x11\n\tweapon_lv\x18\x02 \x01(\r\x12\x0c\n\x04icon\x18\x03 \x01(\t\x12\x0c\n\x04name\x18\x04 \x01(\t\x12\x15\n\rattch_hero_id\x18\x05 \x01(\r\x12\x1c\n\x14lv_up_ned_hero_level\x18\x06 \x01(\r\x12\x16\n\x0elv_up_ned_type\x18\x07 \x01(\r\x12\x18\n\x10lv_up_ned_number\x18\x08 \x01(\r\x12\x12\n\nextra_type\x18\t \x01(\r\x12\x13\n\x0b\x65xtra_value\x18\n \x01(\r\x12\x15\n\rlv_up_ned_exp\x18\x0b \x01(\r\x12\x37\n\x16levelup_single_request\x18\x0c \x03(\x0b\x32\x17.ResEmblemSingleRequest\"\"\n\x12ResStringArrayInfo\x12\x0c\n\x04info\x18\x01 \x01(\t\"\x98\x07\n\x0cResMonsterGL\x12\n\n\x02id\x18\x01 \x01(\r\x12\x0c\n\x04name\x18\x03 \x01(\t\x12\x0c\n\x04type\x18\x04 \x01(\x05\x12\x13\n\x0brender_type\x18\x05 \x01(\x05\x12\x16\n\x0erelation_index\x18\x06 \x01(\r\x12\x15\n\rres_file_name\x18\x07 \x01(\t\x12\x14\n\x0c\x62\x65hit_add_sp\x18\x08 \x01(\r\x12\x10\n\x08sp_ratio\x18\t \x01(\x02\x12\x0e\n\x06radius\x18\n \x01(\r\x12\x17\n\x0funlock_name_tag\x18\x0b \x01(\t\x12\x17\n\x0funlock_desc_tag\x18\x0c \x01(\t\x12\x14\n\x0cshadow_scale\x18\r \x01(\r\x12\x12\n\nrole_scale\x18\x0e \x01(\r\x12\x19\n\x11\x63olor_matching_id\x18\x0f \x01(\x05\x12\x10\n\x08head_pic\x18\x10 \x01(\t\x12\x15\n\rmini_head_pic\x18\x11 \x01(\t\x12\x12\n\nemblem_pic\x18\x12 \x01(\t\x12\x11\n\tattri_pic\x18\x13 \x01(\t\x12\x1b\n\x13\x66ull_pic_in_map_tip\x18\x14 \x01(\t\x12\x13\n\x0bhu_name_pic\x18\x15 \x01(\t\x12\x13\n\x0bvu_name_pic\x18\x16 \x01(\t\x12\x10\n\x08\x62ust_pic\x18\x17 \x01(\t\x12\x14\n\x0cportrait_pic\x18\x18 \x01(\t\x12\x0f\n\x07\x61i_type\x18\x19 \x01(\t\x12\x18\n\x10grow_up_head_pic\x18\x1a \x01(\t\x12\x13\n\x0b\x62oss_audios\x18\x1f \x03(\t\x12\r\n\x05param\x18  \x01(\x05\x12\x1a\n\x12\x65ndless_mode_param\x18\" \x01(\r\x12\x14\n\x0c\x62\x61ttle_logic\x18# \x01(\t\x12\x0e\n\x06\x62\x61sehp\x18$ \x01(\r\x12 \n\x18\x62\x61\x63kup_color_matching_id\x18% \x01(\x05\x12\x15\n\rlevel_up_type\x18& \x01(\r\x12\x18\n\x10\x62\x61se_damage_rate\x18\' \x01(\r\x12\x0f\n\x07hostile\x18( \x01(\x05\x12\x13\n\x0bspec_tagert\x18) \x01(\x05\x12\x16\n\x0e\x61\x64\x64_superarmor\x18* \x01(\x05\x12\x18\n\x10hero_damage_rate\x18+ \x01(\r\x12\x1a\n\x12\x61\x64\x64itional_role_id\x18, \x01(\r\x12\x1f\n\x17\x61\x64\x64itional_control_code\x18- \x01(\r\x12\x14\n\x0chp_bar_style\x18. \x01(\r\x12\x1f\n\x17third_color_matching_id\x18/ \x01(\r\"7\n\rResPreMonster\x12\x12\n\nmonster_id\x18\x01 \x01(\r\x12\x12\n\nmonster_lv\x18\x02 \x01(\r\"X\n\x0fResGroupMonster\x12\x12\n\nmonster_id\x18\x01 \x01(\r\x12\x13\n\x0bmonster_cnt\x18\x02 \x01(\r\x12\r\n\x05pos_x\x18\x03 \x01(\x05\x12\r\n\x05pos_y\x18\x04 \x01(\x05\"\x8a\x02\n\x0fResMonsterLevel\x12\x1d\n\x15monster_level_up_type\x18\x01 \x01(\r\x12\x12\n\nmonster_lv\x18\x02 \x01(\r\x12\x0e\n\x06max_hp\x18\x03 \x01(\r\x12\x13\n\x0b\x64\x61mage_type\x18\x04 \x01(\r\x12\x10\n\x08strength\x18\x05 \x01(\r\x12\x17\n\x0f\x65x_endure_value\x18\x07 \x01(\r\x12\x17\n\x0f\x63oin_drop_value\x18\x08 \x01(\r\x12\x1d\n\x15\x63oin_drop_possibility\x18\t \x01(\r\x12\x1a\n\x12\x64iamond_drop_value\x18\n \x01(\r\x12 \n\x18\x64iamond_drop_possibility\x18\x0b \x01(\r\"h\n\x14ResMonsterGroupLevel\x12\x10\n\x08group_id\x18\x01 \x01(\r\x12\x10\n\x08group_lv\x18\x02 \x01(\r\x12,\n\x12group_monster_info\x18\x03 \x03(\x0b\x32\x10.ResGroupMonster\"%\n\x0cResGainSkill\x12\x15\n\rgain_skill_id\x18\x01 \x01(\r\":\n\x16ResRoleLevelGrowUpAttr\x12\x0e\n\x06max_hp\x18\x01 \x01(\r\x12\x10\n\x08strength\x18\x02 \x01(\r\"\xad\x01\n\x0cResRoleLevel\x12\x0f\n\x07role_id\x18\x01 \x01(\r\x12\x0f\n\x07role_lv\x18\x02 \x01(\r\x12-\n\x0cgrow_up_attr\x18\x03 \x03(\x0b\x32\x17.ResRoleLevelGrowUpAttr\x12\x0e\n\x06max_sp\x18\x04 \x01(\r\x12\x13\n\x0blv_need_exp\x18\x05 \x01(\r\x12\x17\n\x0flv_reward_power\x18\x06 \x01(\r\x12\x0e\n\x06\x62urden\x18\x07 \x01(\r\"\xfa\x01\n\rResBuildingGL\x12\x13\n\x0b\x62uilding_id\x18\x01 \x01(\r\x12\x15\n\rbuilding_type\x18\x02 \x01(\r\x12\x15\n\rbuilding_desc\x18\x03 \x01(\t\x12\x15\n\rbuilding_name\x18\x04 \x01(\t\x12\x10\n\x08res_name\x18\x05 \x01(\t\x12\x12\n\naudio_name\x18\x06 \x01(\t\x12\x0f\n\x07is_open\x18\x07 \x01(\r\x12\x16\n\x0e\x61\x63t_init_level\x18\x08 \x01(\r\x12\x17\n\x0fis_need_levelup\x18\t \x01(\r\x12\x15\n\rtips_priority\x18\n \x01(\r\x12\x10\n\x08tips_tag\x18\x0b \x01(\t\"3\n\x0cResLevelCost\x12\x11\n\tcost_type\x18\x01 \x01(\r\x12\x10\n\x08\x63ost_cnt\x18\x02 \x01(\r\"(\n\x11ResUnlockBuilding\x12\x13\n\x0b\x62uilding_id\x18\x01 \x01(\r\"\xb7\x01\n\x10ResBuildingLevel\x12\x13\n\x0b\x62uilding_id\x18\x01 \x01(\r\x12\x13\n\x0b\x62uilding_lv\x18\x02 \x01(\r\x12\x14\n\x0c\x62uilding_pic\x18\x03 \x01(\t\x12!\n\nlevel_cost\x18\x04 \x03(\x0b\x32\r.ResLevelCost\x12\x17\n\x0flevel_cost_time\x18\x05 \x01(\r\x12\'\n\x0bunlock_info\x18\x06 \x03(\x0b\x32\x12.ResUnlockBuilding\"\xd6\x01\n\x11ResHeroTowerLevel\x12\x13\n\x0b\x62uilding_id\x18\x01 \x01(\r\x12\x13\n\x0b\x62uilding_lv\x18\x02 \x01(\r\x12\x14\n\x0c\x62uilding_pic\x18\x03 \x01(\t\x12!\n\nlevel_cost\x18\x04 \x03(\x0b\x32\r.ResLevelCost\x12\x17\n\x0flevel_cost_time\x18\x05 \x01(\r\x12\x16\n\x0emax_hero_level\x18\x06 \x01(\r\x12\x15\n\runlock_dun_id\x18\x07 \x01(\r\x12\x16\n\x0elevel_priority\x18\x08 \x01(\r\"n\n\x10ResIslandProduct\x12\x10\n\x08res_type\x18\x01 \x01(\r\x12\x10\n\x08\x62orn_cnt\x18\x02 \x01(\r\x12\x0f\n\x07\x62orn_id\x18\x03 \x01(\r\x12\x11\n\tborn_time\x18\x04 \x01(\r\x12\x12\n\nborn_limit\x18\x05 \x01(\r\"\xd9\x01\n\x0eResIslandLevel\x12\x11\n\tisland_id\x18\x01 \x01(\r\x12\x11\n\tisland_lv\x18\x02 \x01(\r\x12\x12\n\nisland_pic\x18\x03 \x01(\t\x12!\n\nlevel_cost\x18\x04 \x03(\x0b\x32\r.ResLevelCost\x12\x17\n\x0flevel_cost_time\x18\x05 \x01(\r\x12\"\n\x07product\x18\x06 \x01(\x0b\x32\x11.ResIslandProduct\x12\x15\n\runlock_dun_id\x18\x07 \x01(\r\x12\x16\n\x0elevel_priority\x18\x08 \x01(\r\"\x8a\x02\n\x15ResResourceStoreLevel\x12\x14\n\x0cres_store_id\x18\x01 \x01(\r\x12\x14\n\x0cres_store_lv\x18\x02 \x01(\r\x12\x15\n\rres_store_pic\x18\x03 \x01(\t\x12\x16\n\x0eres_store_type\x18\x04 \x01(\r\x12\x11\n\tres_limit\x18\x05 \x01(\r\x12\x18\n\x10recover_interval\x18\x06 \x01(\r\x12!\n\nlevel_cost\x18\x07 \x03(\x0b\x32\r.ResLevelCost\x12\x17\n\x0flevel_cost_time\x18\x08 \x01(\r\x12\x15\n\runlock_dun_id\x18\t \x01(\r\x12\x16\n\x0elevel_priority\x18\x0c \x01(\r\"\xc7\x02\n\x0bResLevelArr\x12\r\n\x05level\x18\x01 \x01(\r\x12%\n\x1dsteal_battle_search_cost_type\x18\x02 \x01(\r\x12#\n\x1bsteal_battle_search_cost_id\x18\x03 \x01(\r\x12&\n\x1esteal_battle_search_cost_count\x18\x04 \x01(\r\x12&\n\x1egang_battle_reward_gold_target\x18\x05 \x01(\r\x12)\n!gang_battle_reward_crystal_target\x18\x06 \x01(\r\x12$\n\x1cgang_battle_reward_gold_self\x18\x07 \x01(\r\x12\'\n\x1fgang_battle_reward_crystal_self\x18\x08 \x01(\r\x12\x13\n\x0bmonster_cnt\x18\t \x01(\r\"\x1e\n\x0bResInitHero\x12\x0f\n\x07hero_id\x18\x01 \x01(\r\"\x1e\n\x0bResInitSlot\x12\x0f\n\x07slot_id\x18\x01 \x01(\r\"c\n\x14ResOverHitProduction\x12\x16\n\x0eover_hit_phase\x18\x01 \x01(\r\x12\x17\n\x0f\x63oin_production\x18\x02 \x01(\r\x12\x1a\n\x12\x64iamond_production\x18\x03 \x01(\r\"@\n\x0eResInitMonster\x12\x16\n\x0emonster_grp_id\x18\x01 \x01(\r\x12\x16\n\x0emonster_grp_lv\x18\x02 \x01(\r\"\"\n\x10ResInitUnlockDun\x12\x0e\n\x06\x64un_id\x18\x01 \x01(\r\"9\n\x12ResUnlockTrainSlot\x12\x0f\n\x07slot_id\x18\x01 \x01(\r\x12\x12\n\ncost_money\x18\x02 \x01(\r\"?\n\x13ResInitBuildingInfo\x12\x13\n\x0b\x62uilding_id\x18\x01 \x01(\r\x12\x13\n\x0b\x62uilding_lv\x18\x02 \x01(\r\"?\n\x15ResBuyWipeoutItemInfo\x12\x12\n\nitem_count\x18\x01 \x01(\r\x12\x12\n\nitem_price\x18\x02 \x01(\r\";\n\x10ResPveUnlockInfo\x12\r\n\x05\x64unid\x18\x01 \x01(\r\x12\x0c\n\x04type\x18\x02 \x01(\r\x12\n\n\x02lv\x18\x03 \x01(\r\"\'\n\x16ResEndlessMonsterScore\x12\r\n\x05score\x18\x01 \x01(\r\"H\n\x19ResGamePlayModeDamageRate\x12\x16\n\x0egame_play_mode\x18\x01 \x01(\r\x12\x13\n\x0b\x64\x61mage_rate\x18\x02 \x01(\x02\"\x88,\n\x0bResMiscInfo\x12\x18\n\x10player_max_level\x18\x01 \x01(\r\x12\x19\n\x11monster_max_level\x18\x02 \x01(\r\x12\x14\n\x0cinit_crystal\x18\x03 \x01(\r\x12\x11\n\tinit_gold\x18\x04 \x01(\r\x12\x12\n\ninit_money\x18\x05 \x01(\r\x12\"\n\x0cinit_slot_id\x18\x06 \x03(\x0b\x32\x0c.ResInitSlot\x12\x30\n\x12init_building_info\x18\x07 \x03(\x0b\x32\x14.ResInitBuildingInfo\x12\"\n\x0cinit_hero_id\x18\x08 \x03(\x0b\x32\x0c.ResInitHero\x12-\n\x12init_unlock_dun_id\x18\t \x03(\x0b\x32\x11.ResInitUnlockDun\x12\x15\n\rendless_limit\x18\n \x01(\r\x12\x16\n\x0e\x63ombo_max_time\x18\x0b \x01(\r\x12\x19\n\x11over_hit_max_time\x18\x0c \x01(\r\x12\x1f\n\x17over_hit_max_hp_percent\x18\r \x01(\r\x12 \n\x18over_hit_add_score_ratio\x18\x0e \x01(\r\x12!\n\x19left_time_add_score_ratio\x18\x0f \x01(\r\x12\x32\n\x13over_hit_production\x18\x10 \x03(\x0b\x32\x15.ResOverHitProduction\x12\x1d\n\x15\x63reate_gang_cost_gold\x18\x11 \x01(\r\x12\x17\n\x0f\x66ighting_hprate\x18\x12 \x01(\r\x12\x19\n\x11\x66ighting_atk_rate\x18\x13 \x01(\r\x12\x1a\n\x12gang_battle_dun_id\x18\x14 \x01(\r\x12$\n\x1cgang_battle_round_time_limit\x18\x15 \x01(\x05\x12#\n\x1b\x65ndless_chamber_size_factor\x18\x16 \x01(\r\x12*\n\"endless_boss_hp_recover_drop_ratio\x18\x17 \x01(\r\x12*\n\"endless_boss_hp_recover_drop_count\x18\x18 \x01(\r\x12\x1e\n\x16rank_battle_dungeon_id\x18\x19 \x01(\r\x12$\n\x1crank_battle_round_time_limit\x18\x1a \x01(\x05\x12\x1e\n\x16rank_battle_base_count\x18\x1b \x01(\r\x12\'\n\x1frank_battle_buy_count_base_cost\x18\x1c \x01(\r\x12#\n\x1brank_battle_unlock_role_cnt\x18\x1d \x01(\r\x12\x18\n\x10\x64\x61ily_reset_time\x18\x1e \x01(\r\x12\x18\n\x10\x65ndless_room_cnt\x18\x1f \x01(\r\x12\'\n\x1f\x65ndless_floor_cnt_per_milestone\x18  \x01(\r\x12%\n\x1dsteal_battle_money_res_dun_id\x18! \x01(\r\x12$\n\x1csteal_battle_gold_res_dun_id\x18\" \x01(\r\x12\'\n\x1fsteal_battle_crystal_res_dun_id\x18# \x01(\r\x12#\n\x1bsteal_battle_exp_res_dun_id\x18$ \x01(\r\x12\x1c\n\x14\x65ndless_refresh_hour\x18& \x01(\r\x12\x1b\n\x13\x65ndless_refresh_min\x18\' \x01(\r\x12\x1b\n\x13\x65ndless_refresh_sec\x18( \x01(\r\x12\x1d\n\x15wipe_out_need_item_id\x18) \x01(\r\x12\x36\n\x16\x62uy_wipe_out_item_info\x18* \x03(\x0b\x32\x16.ResBuyWipeoutItemInfo\x12\x1a\n\x12goods_common_count\x18+ \x01(\r\x12\x1b\n\x13goods_special_count\x18, \x01(\r\x12\x1b\n\x13\x64\x61mage_ratio_factor\x18- \x01(\r\x12\x17\n\x0fhp_ratio_factor\x18. \x01(\r\x12#\n\x1bskill_point_display_item_id\x18/ \x01(\r\x12*\n\x0fpve_unlock_info\x18\x30 \x03(\x0b\x32\x11.ResPveUnlockInfo\x12#\n\x1bleague_battle_small_city_lv\x18\x31 \x03(\r\x12!\n\x19league_battle_mid_city_lv\x18\x32 \x03(\r\x12!\n\x19league_battle_big_city_lv\x18\x33 \x03(\r\x12$\n\x1crank_battle_hero_hide_level1\x18\x34 \x01(\r\x12$\n\x1crank_battle_hero_hide_level2\x18\x35 \x01(\r\x12$\n\x1crank_battle_hero_hide_level3\x18\x36 \x01(\r\x12%\n\x1dgang_bless_count_refresh_hour\x18: \x01(\r\x12$\n\x1cgang_bless_count_refresh_min\x18; \x01(\r\x12$\n\x1cgang_bless_count_refresh_sec\x18< \x01(\r\x12\x1f\n\x17shop_count_refresh_hour\x18= \x01(\r\x12\x1e\n\x16shop_count_refresh_min\x18> \x01(\r\x12\x1e\n\x16shop_count_refresh_sec\x18? \x01(\r\x12\x12\n\nfail_power\x18@ \x01(\x05\x12\x1f\n\x17money_confirm_threshold\x18\x41 \x02(\r\x12;\n\x1a\x65ndless_monster_type_score\x18\x42 \x03(\x0b\x32\x17.ResEndlessMonsterScore\x12$\n\x1cgang_battle_small_city_score\x18\x43 \x01(\r\x12\'\n\x1fgang_battle_moderate_city_score\x18\x44 \x01(\r\x12\"\n\x1agang_battle_big_city_score\x18\x45 \x01(\r\x12\x1a\n\x12\x65lite_mode_chances\x18\x46 \x02(\r\x12 \n\x18\x65lite_count_refresh_hour\x18G \x01(\r\x12\x1f\n\x17\x65lite_count_refresh_min\x18H \x01(\r\x12\x1f\n\x17\x65lite_count_refresh_sec\x18I \x01(\r\x12 \n\x18\x61ssist_fight_times_limit\x18L \x01(\r\x12\x1c\n\x14online_battle_dun_id\x18M \x01(\r\x12\x19\n\x11re_sign_cost_type\x18N \x01(\r\x12\x1a\n\x12re_sign_cost_price\x18O \x01(\r\x12)\n!init_hero_main_task_unlock_dun_id\x18P \x01(\r\x12\x1c\n\x14normal_elite_hp_rate\x18Q \x01(\r\x12\x1c\n\x14normal_elite_st_rate\x18R \x01(\r\x12\x1b\n\x13normal_boss_hp_rate\x18S \x01(\r\x12\x1b\n\x13normal_boss_st_rate\x18T \x01(\r\x12\x1d\n\x15\x65ndless_elite_hp_rate\x18Y \x01(\r\x12\x1d\n\x15\x65ndless_elite_st_rate\x18Z \x01(\r\x12\x1c\n\x14\x65ndless_boss_hp_rate\x18[ \x01(\r\x12\x1c\n\x14\x65ndless_boss_st_rate\x18\\ \x01(\r\x12!\n\x19\x65lite_buy_count_cost_type\x18] \x01(\r\x12\x1f\n\x17\x65lite_buy_count_cost_id\x18^ \x01(\r\x12\"\n\x1a\x65lite_buy_count_cost_count\x18_ \x01(\r\x12\x1b\n\x13\x65lite_buy_max_count\x18` \x01(\r\x12\x1d\n\x15offline_battle_dun_id\x18\x61 \x01(\r\x12\"\n\x1arole_relation_unlock_level\x18\x62 \x01(\r\x12&\n\x1erank_battle_goods_common_count\x18\x63 \x01(\r\x12\'\n\x1frank_battle_goods_special_count\x18\x64 \x01(\r\x12 \n\x18online_battle_init_score\x18\x65 \x01(\r\x12\"\n\x1aonline_battle_times_perday\x18\x66 \x01(\r\x12(\n online_battle_score_calc_ratio_a\x18g \x01(\r\x12(\n online_battle_score_calc_ratio_b\x18h \x01(\r\x12\"\n\x1aonline_battle_search_score\x18i \x01(\r\x12(\n online_battle_match_wait_seconds\x18j \x01(\r\x12%\n\x1donline_battle_win_point_ratio\x18k \x01(\r\x12,\n$online_battle_loseer_win_point_ratio\x18l \x01(\r\x12\'\n\x1f\x65ndless_wipeout_price_per_floor\x18m \x01(\r\x12>\n\x1agame_play_mode_damage_rate\x18n \x03(\x0b\x32\x1a.ResGamePlayModeDamageRate\x12%\n\x11\x66irst_reward_info\x18o \x03(\x0b\x32\n.ResReward\x12\x19\n\x11loading_tip_count\x18p \x01(\r\x12\x1e\n\x16vip_goods_common_count\x18q \x01(\r\x12\x1f\n\x17vip_goods_special_count\x18r \x01(\r\x12!\n\x19vip_draw_all_unlock_level\x18s \x01(\r\x12 \n\x18steal_battle_times_limit\x18t \x01(\r\x12\x18\n\x10\x66riend_power_cnt\x18u \x01(\r\x12\x17\n\x0f\x64\x61mage_float_up\x18v \x01(\r\x12\x19\n\x11\x64\x61mage_float_down\x18w \x01(\r\x12$\n\x1cmax_recv_power_times_one_day\x18z \x01(\r\x12\x1c\n\x14ten_wipeout_viplimit\x18{ \x01(\r\x12 \n\x18vip_shop_unlock_viplevel\x18| \x01(\r\x12$\n\x1cmax_send_power_times_one_day\x18} \x01(\r\x12%\n\x1dpve_autofight_unlock_viplevel\x18~ \x01(\r\x12 \n\x18\x66riend_max_recommend_num\x18\x7f \x01(\r\x12(\n\x1fpve_autofight_unlock_dungoen_id\x18\x80\x01 \x01(\r\x12\x1a\n\x11vip_wipeout_count\x18\x81\x01 \x01(\r\x12\x1b\n\x12\x63hat_unlock_dun_id\x18\x82\x01 \x01(\r\x12\x1f\n\x16\x65venttip_unlock_dun_id\x18\x83\x01 \x01(\r\x12\x1a\n\x11world_boss_dun_id\x18\x84\x01 \x01(\r\x12&\n\x11reward_be_invited\x18\x85\x01 \x03(\x0b\x32\n.ResReward\x12#\n\x1aworld_boss_room_time_limit\x18\x86\x01 \x01(\r\x12!\n\x0crename_price\x18\x87\x01 \x03(\x0b\x32\n.ResReward\x12(\n\x1fworld_boss_qualified_hero_level\x18\x88\x01 \x01(\r\x12\x1e\n\x15world_boss_reset_time\x18\x89\x01 \x01(\r\x12\x1e\n\x15world_boss_start_time\x18\x8a\x01 \x01(\r\x12\x1f\n\x16world_boss_finish_time\x18\x8b\x01 \x01(\r\x12\x1c\n\x13world_boss_interval\x18\x8c\x01 \x01(\r\x12#\n\x1aworld_boss_character_scale\x18\x8d\x01 \x01(\x02\x12!\n\x18\x65quip_fusion_score_param\x18\x8e\x01 \x01(\r\x12!\n\x18\x65quip_fusion_ratio_param\x18\x8f\x01 \x01(\r\x12!\n\x18\x65quip_fusion_alloc_param\x18\x90\x01 \x01(\r\x12&\n\x1dnewbie_activity_lasts_seconds\x18\x91\x01 \x01(\r\x12\x1c\n\x13rank_battle_max_pos\x18\x92\x01 \x01(\r\x12\x1e\n\x15purify_cost_base_gold\x18\x93\x01 \x01(\r\x12 \n\x17gang_battle_search_sect\x18\x94\x01 \x01(\r\x12&\n\x1dgang_battle_search_score_diff\x18\x95\x01 \x01(\r\x12/\n&gang_battle_search_fight_capacity_diff\x18\x96\x01 \x01(\r\x12&\n\x1d\x65ndless_available_floor_count\x18\x99\x01 \x01(\r\x12\'\n\x1e\x62oss_rush_assist_hero_tax_rate\x18\x9a\x01 \x01(\x02\x12\x1d\n\x14\x62oss_rush_reset_hour\x18\x9b\x01 \x03(\r\x12%\n\x1c\x61ssist_hero_unlock_vip_level\x18\x9c\x01 \x03(\r\x12)\n use_assist_hero_unlock_vip_level\x18\x9d\x01 \x03(\r\x12 \n\x17\x62oss_rush_replace_money\x18\x9e\x01 \x01(\r\x12\x1e\n\x15\x62urst_discount_damage\x18\xa0\x01 \x01(\r\x12 \n\x17\x62urst_repeate_max_count\x18\xa1\x01 \x01(\r\x12\x1b\n\x12repeate_discount_2\x18\xa2\x01 \x01(\r\x12\x1b\n\x12repeate_discount_3\x18\xa3\x01 \x01(\r\x12\x1b\n\x12repeate_discount_4\x18\xa4\x01 \x01(\r\x12\"\n\x19sp_lack_add_repeate_count\x18\xa5\x01 \x01(\r\x12!\n\x18hero_buff_superarmor_add\x18\xa7\x01 \x01(\r\x12\x18\n\x0f\x62urst_common_cd\x18\xa8\x01 \x01(\r\x12 \n\x17serial_push_active_time\x18\xa9\x01 \x01(\r\x12!\n\x18serial_push_protect_time\x18\xaa\x01 \x01(\r\x12\x1e\n\x15hp_steal_max_distance\x18\xab\x01 \x01(\r\x12$\n\x1b\x64\x65\x66\x61ult_superarmor_discount\x18\xac\x01 \x01(\r\x12!\n\x18pve_boss_superarmor_rate\x18\xad\x01 \x01(\r\x12#\n\x1aother_boss_superarmor_rate\x18\xae\x01 \x01(\r\x12/\n&multiplayer_invite_friend_wait_seconds\x18\xaf\x01 \x01(\r\x12$\n\x1b\x65quip_reset_growup_gold_off\x18\xb0\x01 \x01(\x02\x12%\n\x1c\x65quip_reset_growup_equip_off\x18\xb1\x01 \x01(\x02\x12$\n\x1b\x65quip_reset_levelup_exp_off\x18\xb2\x01 \x01(\x02\"S\n\x14ResWorldBossStrength\x12\x0f\n\x07\x62oss_id\x18\x01 \x01(\r\x12\x18\n\x10\x62oss_hurt_amount\x18\x02 \x01(\r\x12\x10\n\x08strength\x18\x03 \x01(\r\"m\n\x14ResWorldBossHeroTask\x12\x10\n\x08week_day\x18\x01 \x01(\r\x12\x0f\n\x07hero_id\x18\x02 \x01(\r\x12\x16\n\x0erequire_damage\x18\x03 \x01(\r\x12\x1a\n\x06reward\x18\x04 \x03(\x0b\x32\n.ResReward\"\xa8\x01\n\x17ResWorldBossRefreshInfo\x12\x10\n\x08week_day\x18\x01 \x01(\r\x12\x0f\n\x07\x62oss_id\x18\x02 \x01(\r\x12\x1f\n\x17kill_reward_protrait_id\x18\x03 \x01(\r\x12 \n\x18kill_reward_base_drop_id\x18\x04 \x01(\r\x12\'\n\x13kill_reward_preview\x18\x05 \x03(\x0b\x32\n.ResReward\"k\n\x18ResWorldBossDamageReward\x12\x0f\n\x07\x62oss_id\x18\x01 \x01(\r\x12\x0c\n\x04rank\x18\x02 \x01(\r\x12\x14\n\x0c\x62\x61se_drop_id\x18\x03 \x01(\r\x12\x1a\n\x06reward\x18\x04 \x03(\x0b\x32\n.ResReward\"\x95\x01\n\x18ResWorldBossNormalReward\x12\x0f\n\x07\x62oss_id\x18\x01 \x01(\r\x12\x0e\n\x06\x64\x61mage\x18\x02 \x01(\r\x12\x12\n\ngold_ratio\x18\x03 \x01(\x02\x12\x14\n\x0cgold_pre_sum\x18\x04 \x01(\r\x12\x15\n\rcrystal_ratio\x18\x05 \x01(\x02\x12\x17\n\x0f\x63rystal_pre_sum\x18\x06 \x01(\r\"q\n\x19ResMultiplayerPVEHeroBuff\x12\x0f\n\x07hero_id\x18\x01 \x01(\r\x12\x0f\n\x07\x61\x62ility\x18\x02 \x01(\r\x12\x11\n\tattr_type\x18\x03 \x01(\r\x12\x10\n\x08is_ratio\x18\x04 \x01(\x08\x12\r\n\x05value\x18\x05 \x01(\r\"j\n\x1eResMultiplayerPVEDungeonConfig\x12\x10\n\x08group_id\x18\x01 \x01(\r\x12\x15\n\rtimes_per_day\x18\x02 \x01(\r\x12\x0f\n\x07is_open\x18\x03 \x03(\x08\x12\x0e\n\x06\x64un_id\x18\x04 \x03(\r\"\xb3\x01\n\x11ResNewbieActivity\x12\n\n\x02id\x18\x01 \x01(\r\x12\x12\n\nlimit_date\x18\x02 \x01(\r\x12\r\n\x05group\x18\x03 \x01(\r\x12\x0c\n\x04type\x18\x04 \x01(\r\x12\x18\n\x10\x64isplay_priority\x18\x05 \x01(\r\x12\x0c\n\x04icon\x18\x06 \x01(\t\x12\x1f\n\x0breward_info\x18\x07 \x03(\x0b\x32\n.ResReward\x12\x18\n\x10target_parameter\x18\x08 \x03(\r\"\xb9\x01\n\x17ResGamePlayModeActivity\x12\x14\n\x0c\x64ungeon_type\x18\x01 \x01(\r\x12\x18\n\x10\x64\x61ily_start_time\x18\x02 \x01(\r\x12\x19\n\x11\x64\x61ily_finish_time\x18\x03 \x01(\r\x12\x18\n\x10\x65xtra_start_date\x18\x04 \x01(\t\x12\x19\n\x11\x65xtra_finish_date\x18\x05 \x01(\t\x12\x1e\n\x16regular_start_week_day\x18\x06 \x03(\r\"`\n\rResRankReward\x12\x0c\n\x04rank\x18\x01 \x01(\r\x12\x14\n\x0c\x62\x61se_drop_id\x18\x02 \x01(\r\x12\x1a\n\x06reward\x18\x03 \x03(\x0b\x32\n.ResReward\x12\x0f\n\x07rank_id\x18\x04 \x01(\r\"f\n\x0fResHeroEvaluate\x12\x12\n\nmain_level\x18\x01 \x01(\r\x12\x11\n\tsub_level\x18\x02 \x01(\r\x12\x16\n\x0epvp_score_down\x18\x03 \x01(\r\x12\x14\n\x0cpvp_score_up\x18\x04 \x01(\r\"\xcb\x03\n\x0fResGangMiscInfo\x12$\n\x1csearch_gang_list_low_bounder\x18\x01 \x01(\r\x12#\n\x1bsearch_gang_list_up_bounder\x18\x02 \x01(\r\x12\x1f\n\x17gang_score_calc_ratio_a\x18\x03 \x01(\r\x12\x1f\n\x17gang_score_calc_ratio_b\x18\x04 \x01(\r\x12!\n\x19gang_battle_win_pre_ratio\x18\x05 \x01(\r\x12\"\n\x1agang_battle_lose_pre_ratio\x18\x06 \x01(\r\x12\"\n\x1agang_battle_draw_pre_ratio\x18\x07 \x01(\r\x12*\n\"gang_battle_auto_apply_limit_score\x18\x08 \x01(\r\x12$\n\x1c\x63lear_gang_bless_record_week\x18\t \x01(\r\x12$\n\x1c\x63lear_gang_bless_record_hour\x18\n \x01(\r\x12#\n\x1b\x63lear_gang_bless_record_min\x18\x0b \x01(\r\x12#\n\x1b\x63lear_gang_bless_record_sec\x18\x0c \x01(\r\"w\n\x0cResGangBless\x12\n\n\x02id\x18\x01 \x01(\r\x12\x0c\n\x04rate\x18\x02 \x01(\r\x12\x13\n\x0breward_type\x18\x03 \x01(\r\x12\x11\n\treward_id\x18\x04 \x01(\r\x12\x14\n\x0creward_count\x18\x05 \x01(\r\x12\x0f\n\x07\x64rop_id\x18\x06 \x01(\r\"\xae\x02\n\x10ResGangLevelInfo\x12\n\n\x02lv\x18\x01 \x01(\r\x12\x0f\n\x07lv_icon\x18\x02 \x01(\t\x12\x16\n\x0elv_corner_icon\x18\x0b \x01(\t\x12\x11\n\tlow_score\x18\x03 \x01(\r\x12\x12\n\nhigh_score\x18\x04 \x01(\r\x12\x1a\n\x12gang_mem_max_count\x18\x05 \x01(\r\x12\x1c\n\x14gang_elder_max_count\x18\x06 \x01(\r\x12\"\n\x1asmall_city_strongpoint_num\x18\x07 \x01(\r\x12%\n\x1dmoderate_city_strongpoint_num\x18\x08 \x01(\r\x12 \n\x18\x62ig_city_strongpoint_num\x18\t \x01(\r\x12\x17\n\x0f\x62less_max_count\x18\n \x01(\r\"0\n\x11ResGangBattleTime\x12\x0c\n\x04week\x18\x01 \x01(\r\x12\r\n\x05state\x18\x02 \x01(\r\"\x8f\x01\n\x13ResGangBattleReward\x12\n\n\x02lv\x18\x01 \x01(\r\x12\"\n\nwin_reward\x18\x02 \x03(\x0b\x32\x0e.ST_REWARD_RES\x12#\n\x0blose_reward\x18\x03 \x03(\x0b\x32\x0e.ST_REWARD_RES\x12#\n\x0b\x64raw_reward\x18\x04 \x03(\x0b\x32\x0e.ST_REWARD_RES\"\xb7\x02\n\rResRobotBuild\x12\x10\n\x08res_type\x18\x01 \x01(\r\x12\x18\n\x10\x63ur_born_res_low\x18\x02 \x01(\r\x12\x19\n\x11\x63ur_born_res_high\x18\x03 \x01(\r\x12\x13\n\x0bhero_lv_low\x18\x04 \x01(\r\x12\x14\n\x0chero_lv_high\x18\x05 \x01(\r\x12\x19\n\x11hero_strength_low\x18\x06 \x01(\r\x12\x1a\n\x12hero_strength_high\x18\x07 \x01(\r\x12\x18\n\x10hero_stamina_low\x18\x08 \x01(\r\x12\x19\n\x11hero_stamina_high\x18\t \x01(\r\x12\x12\n\nmonster_id\x18\n \x01(\r\x12\x12\n\nmonster_lv\x18\x0b \x01(\r\x12\x0f\n\x07trap_id\x18\x0c \x01(\r\x12\x0f\n\x07trap_lv\x18\r \x01(\r\"D\n\x0bResPvpRobot\x12\x0b\n\x03uid\x18\x01 \x01(\r\x12\x1a\n\x12max_fight_capacity\x18\x02 \x01(\r\x12\x0c\n\x04name\x18\x03 \x01(\t\"\x91\x01\n\nResPvpMisc\x12\x19\n\x11steal_res_percent\x18\x01 \x01(\r\x12\x16\n\x0e\x62roken_percent\x18\x02 \x01(\r\x12\x19\n\x11search_result_max\x18\x03 \x01(\r\x12\x17\n\x0fsearch_sect_max\x18\x04 \x01(\r\x12\x1c\n\x14search_time_interval\x18\x05 \x01(\r\"\xc5\x01\n\x10ResPvpSearchSect\x12\x1a\n\x12\x66ight_capacity_low\x18\x01 \x01(\r\x12\x1b\n\x13\x66ight_capacity_high\x18\x02 \x01(\r\x12,\n\x14pvp_robot_build_info\x18\x04 \x03(\x0b\x32\x0e.ResRobotBuild\x12\x19\n\x11pvp_search_offset\x18\x05 \x01(\x02\x12\x16\n\x0epvp_search_low\x18\x06 \x01(\x02\x12\x17\n\x0fpvp_search_high\x18\x07 \x01(\x02\"]\n\x17ResStealBattlePrizeDraw\x12\x17\n\x0flow_fight_power\x18\x01 \x01(\r\x12\x18\n\x10high_fight_power\x18\x02 \x01(\r\x12\x0f\n\x07\x64rop_id\x18\x03 \x01(\r\"2\n\x0bResDunLimit\x12\x0f\n\x07hero_id\x18\x01 \x01(\r\x12\x12\n\nhero_level\x18\x02 \x01(\r\"L\n\x0eResDunEvaluate\x12\x10\n\x08\x64un_time\x18\x01 \x01(\r\x12\x15\n\rremain_hprate\x18\x02 \x01(\r\x12\x11\n\tmax_combo\x18\x03 \x01(\r\"8\n\rResReliveCost\x12\x12\n\nrelive_cnt\x18\x01 \x01(\r\x12\x13\n\x0brelive_cost\x18\x02 \x01(\r\"*\n\nResPosInfo\x12\r\n\x05pos_x\x18\x01 \x01(\x05\x12\r\n\x05pos_y\x18\x02 \x01(\x05\"\"\n\x0cResDropIndex\x12\x12\n\ndrop_index\x18\x01 \x01(\r\"7\n\x12ResDungeonNeedItem\x12\x0f\n\x07item_id\x18\x01 \x01(\r\x12\x10\n\x08item_num\x18\x02 \x01(\r\" \n\x0bResEvaluate\x12\x11\n\tparameter\x18\x01 \x01(\r\"\xba\x07\n\x0eResDungeonInfo\x12\x12\n\ndungeon_id\x18\x01 \x01(\r\x12\x14\n\x0c\x64ungeon_name\x18\x02 \x01(\t\x12\x14\n\x0c\x64ungeon_type\x18\x03 \x01(\r\x12\x0c\n\x04mode\x18\x1e \x01(\r\x12\x18\n\x10required_ability\x18\x1f \x01(\r\x12\x12\n\nis_refresh\x18\x04 \x01(\r\x12\x12\n\ncost_power\x18\x05 \x01(\r\x12\x12\n\npre_dun_id\x18\x06 \x01(\r\x12\x16\n\x0eunlock_role_id\x18\x07 \x01(\r\x12\x12\n\ninit_level\x18\x08 \x01(\r\x12#\n\x0brelive_cost\x18\x0b \x03(\x0b\x32\x0e.ResReliveCost\x12\x11\n\tapperance\x18\x0c \x01(\r\x12\x1a\n\x06reward\x18\r \x03(\x0b\x32\n.ResReward\x12%\n\x0c\x64un_evaluate\x18\x0e \x01(\x0b\x32\x0f.ResDunEvaluate\x12&\n\x0f\x66irst_drop_info\x18\x0f \x03(\x0b\x32\r.ResDropIndex\x12*\n\x13non_first_drop_info\x18\x10 \x03(\x0b\x32\r.ResDropIndex\x12)\n\x12wipe_out_drop_info\x18\x14 \x03(\x0b\x32\r.ResDropIndex\x12&\n\tneed_item\x18\x11 \x03(\x0b\x32\x13.ResDungeonNeedItem\x12+\n\x11\x64rop_display_info\x18\x12 \x03(\x0b\x32\x10.ResResourceInfo\x12#\n\revaluate_info\x18\x13 \x03(\x0b\x32\x0c.ResEvaluate\x12\x15\n\ris_elite_drop\x18\x1a \x01(\r\x12\x16\n\x0e\x64rop_exp_limit\x18\x1b \x01(\r\x12\x14\n\x0c\x64rop_exp_add\x18\x1c \x01(\r\x12\x18\n\x10\x65lite_drop_index\x18\x1d \x01(\r\x12 \n\x18\x64isplay_elite_drop_equip\x18  \x01(\r\x12\x1d\n\x15new_role_buff_stamina\x18! \x01(\r\x12\x1e\n\x16new_role_buff_strength\x18\" \x01(\r\x12)\n\x12\x61\x63tivity_drop_info\x18# \x03(\x0b\x32\r.ResDropIndex\x12\x31\n\x17\x66irst_drop_display_info\x18$ \x03(\x0b\x32\x10.ResResourceInfo\x12\x1d\n\x15\x61\x63tivity_drop_exp_add\x18% \x01(\r\x12\'\n\x10manual_drop_info\x18& \x03(\x0b\x32\r.ResDropIndex\"[\n\x0eResDungeonData\x12\x12\n\ndungeon_id\x18\x01 \x01(\r\x12\x14\n\x0crelive_limit\x18\n \x01(\r\x12\x12\n\nscene_name\x18\x17 \x01(\t\x12\x0b\n\x03\x62gm\x18\x18 \x01(\t\"\xa8\x01\n\x1aResDungeonFightCapacityFix\x12\n\n\x02id\x18\x01 \x02(\r\x12\x13\n\x0b\x61\x62ility_low\x18\x02 \x02(\r\x12\x18\n\x10\x61\x62ility_min_diff\x18\x03 \x02(\r\x12\x0f\n\x07\x61tk_fix\x18\x04 \x02(\r\x12\x10\n\x08life_fix\x18\x05 \x02(\r\x12\x17\n\x0fsuper_armor_fix\x18\x06 \x02(\r\x12\x13\n\x0bis_hero_win\x18\x07 \x02(\r\"B\n\x10ResDungeonReward\x12\r\n\x05level\x18\x01 \x01(\r\x12\x1f\n\x0breward_info\x18\x02 \x03(\x0b\x32\n.ResReward\"\xab\x01\n\x0eResDungeonCity\x12\x0f\n\x07\x63ity_id\x18\x01 \x01(\r\x12\x0c\n\x04mode\x18\x02 \x02(\r\x12\x10\n\x08name_tag\x18\x05 \x01(\t\x12\x13\n\x0bpre_city_id\x18\x07 \x01(\r\x12\x16\n\x0eunlock_item_id\x18\x08 \x01(\r\x12\x19\n\x11unlock_item_count\x18\t \x01(\r\x12\x0e\n\x06\x64un_id\x18\x04 \x03(\r\x12\x10\n\x08icon_pos\x18\n \x03(\r\"$\n\x10ResPracticeLimit\x12\x10\n\x08skill_id\x18\x01 \x01(\r\"6\n\x11ResPracticeTarget\x12\x0e\n\x06\x61\x63tion\x18\x01 \x01(\t\x12\x11\n\toperation\x18\x02 \x01(\t\"\x9d\x02\n\x0eResPracticeDun\x12\x0f\n\x07hero_id\x18\x01 \x01(\r\x12\x12\n\nchapter_id\x18\x02 \x01(\r\x12\x12\n\nsection_id\x18\x03 \x01(\r\x12\x0c\n\x04\x64\x65sc\x18\x04 \x01(\t\x12\x0c\n\x04icon\x18\x05 \x01(\t\x12\x10\n\x08quest_id\x18\x06 \x01(\r\x12\x0e\n\x06\x64un_id\x18\x07 \x01(\r\x12\x12\n\npre_dun_id\x18\x08 \x01(\r\x12\x12\n\nhero_level\x18\t \x01(\r\x12$\n\tdun_limit\x18\n \x03(\x0b\x32\x11.ResPracticeLimit\x12\x1e\n\ndun_reward\x18\x0b \x03(\x0b\x32\n.ResReward\x12&\n\ndun_target\x18\x0c \x03(\x0b\x32\x12.ResPracticeTarget\"\"\n\rResTargetInfo\x12\x11\n\tparameter\x18\x01 \x01(\r\"\xc1\x02\n\x0eResAchievement\x12\x16\n\x0e\x61\x63hievement_id\x18\x01 \x01(\r\x12\x13\n\x0btarget_type\x18\x02 \x01(\r\x12\x0e\n\x06sub_id\x18\x03 \x01(\r\x12\x10\n\x08group_id\x18\x04 \x01(\r\x12\x0e\n\x06pre_id\x18\x05 \x01(\r\x12\x14\n\x0c\x64isplay_type\x18\x06 \x01(\r\x12\x18\n\x10\x64isplay_priority\x18\x07 \x01(\r\x12\x19\n\x11\x61\x63hievement_score\x18\x08 \x01(\r\x12\r\n\x05title\x18\t \x01(\t\x12\x0c\n\x04\x64\x65sc\x18\n \x01(\t\x12\x0c\n\x04icon\x18\x0b \x01(\t\x12\x14\n\x0cis_short_cut\x18\x0c \x01(\r\x12\x1f\n\x0breward_info\x18\r \x03(\x0b\x32\n.ResReward\x12#\n\x0btarget_info\x18\x0e \x03(\x0b\x32\x0e.ResTargetInfo\"N\n\x18ResAchievementGameCenter\x12\x0c\n\x04type\x18\x01 \x01(\r\x12\r\n\x05\x63ount\x18\x02 \x01(\r\x12\x15\n\rgamecenter_id\x18\x03 \x01(\t\"\x8e\x01\n\x12ResSpecialActivity\x12\n\n\x02id\x18\x01 \x01(\r\x12\x0c\n\x04type\x18\x02 \x01(\r\x12\x18\n\x10\x64isplay_priority\x18\x03 \x01(\r\x12\x1f\n\x0breward_info\x18\x04 \x03(\x0b\x32\n.ResReward\x12#\n\x0btarget_info\x18\x05 \x03(\x0b\x32\x0e.ResTargetInfo\"\xa8\x01\n\x0cResDailyTask\x12\x15\n\rdaily_task_id\x18\x01 \x01(\r\x12\x13\n\x0btarget_type\x18\x02 \x01(\r\x12\x18\n\x10\x64isplay_priority\x18\x03 \x01(\r\x12\x0c\n\x04icon\x18\x04 \x01(\t\x12\x1f\n\x0breward_info\x18\x05 \x03(\x0b\x32\n.ResReward\x12#\n\x0btarget_info\x18\x06 \x03(\x0b\x32\x0e.ResTargetInfo\"\xa5\x01\n\x0bResMainTask\x12\n\n\x02id\x18\x01 \x01(\r\x12\r\n\x05seqid\x18\x02 \x01(\r\x12\x0c\n\x04type\x18\x03 \x01(\r\x12\x10\n\x08group_id\x18\x04 \x01(\r\x12\x15\n\rremind_dun_id\x18\x05 \x01(\r\x12\x1f\n\x0breward_info\x18\x06 \x03(\x0b\x32\n.ResReward\x12#\n\x0btarget_info\x18\x07 \x03(\x0b\x32\x0e.ResTargetInfo\";\n\x12ResLoadingPicParam\x12\x11\n\tpic_index\x18\x01 \x01(\x05\x12\x12\n\ntips_index\x18\x02 \x01(\x05\"Q\n\rResLoadingPic\x12\x14\n\x0c\x64un_id_start\x18\x01 \x01(\x05\x12*\n\rloading_param\x18\x02 \x03(\x0b\x32\x13.ResLoadingPicParam\"X\n\x15ResColorMatchingParam\x12\x15\n\rhue_min_angle\x18\x01 \x01(\x05\x12\x15\n\rhue_max_angle\x18\x02 \x01(\x05\x12\x11\n\thue_angle\x18\x03 \x01(\x05\"E\n\x10ResColorMatching\x12\n\n\x02id\x18\x01 \x01(\r\x12%\n\x05param\x18\x02 \x03(\x0b\x32\x16.ResColorMatchingParam\"I\n\x14ResOnlineBattleTitle\x12\r\n\x05score\x18\x01 \x01(\r\x12\x10\n\x08title_id\x18\x02 \x01(\r\x12\x10\n\x08level_id\x18\x03 \x01(\r\"p\n\x15ResOfflineBattleTitle\x12\x10\n\x08title_id\x18\x01 \x01(\r\x12\x15\n\rrequire_score\x18\x02 \x01(\r\x12\x18\n\x10\x62onus_att_damage\x18\x03 \x01(\r\x12\x14\n\x0c\x62onus_att_hp\x18\x04 \x01(\r\"k\n\x0cResSceneInfo\x12\x12\n\nscene_name\x18\x01 \x01(\t\x12\x10\n\x08in_video\x18\x02 \x01(\r\x12\x11\n\tin_battle\x18\x03 \x01(\r\x12\x12\n\nin_endless\x18\x04 \x01(\r\x12\x0e\n\x06in_pvp\x18\x05 \x01(\r\"\xe3\x02\n\x11ResDungeonMonster\x12\x12\n\ndungeon_id\x18\x01 \x01(\r\x12\x0f\n\x07room_id\x18\x02 \x01(\r\x12\x12\n\nmonster_id\x18\x03 \x01(\r\x12\x17\n\x0fmonster_wave_id\x18\x04 \x01(\r\x12\x13\n\x0bmonster_cnt\x18\x05 \x01(\r\x12\x15\n\rmonster_level\x18\x06 \x01(\x05\x12\x19\n\x11monster_born_type\x18\x07 \x01(\r\x12\x1f\n\x17monster_born_type_param\x18\x08 \x01(\r\x12\x15\n\rmonster_pos_x\x18\t \x01(\x02\x12\x15\n\rmonster_pos_y\x18\n \x01(\x02\x12\x15\n\rmonster_group\x18\x0b \x01(\r\x12\x1b\n\x13monster_born_action\x18\x0c \x01(\t\x12\x19\n\x11monster_born_face\x18\r \x01(\r\x12\x17\n\x0fmonster_hp_rate\x18\x0e \x01(\x05\"\xb9\x03\n\x0eResDungeonRoom\x12\x12\n\ndungeon_id\x18\x01 \x01(\r\x12\x0f\n\x07room_id\x18\x02 \x01(\r\x12\x12\n\ntime_limit\x18\x04 \x01(\x05\x12\x15\n\rpass_add_time\x18\x05 \x01(\x05\x12!\n\x19wave_refresh_monster_type\x18\x06 \x01(\r\x12\"\n\x1awave_refresh_monster_param\x18\x07 \x01(\r\x12\x12\n\nborn_pos_x\x18\t \x01(\x02\x12\x11\n\tgravity_x\x18\n \x01(\x02\x12\x11\n\tgravity_y\x18\x0b \x01(\x02\x12\x13\n\x0b\x62order_left\x18\x0c \x01(\x02\x12\x14\n\x0c\x62order_right\x18\r \x01(\x02\x12\x14\n\x0c\x61\x63tion_limit\x18\x0e \x01(\r\x12\x19\n\x11\x63hamber_objective\x18\x11 \x01(\r\x12\x1a\n\x06reward\x18\x0f \x03(\x0b\x32\n.ResReward\x12 \n\tdrop_info\x18\x10 \x03(\x0b\x32\r.ResDropIndex\x12\x1a\n\x12\x61\x62ility_base_value\x18\x12 \x01(\r\x12 \n\x18\x63omplete_time_base_value\x18\x13 \x01(\r\"\x89\x01\n\x11ResConLoginReward\x12\x16\n\x0e\x63on_login_days\x18\x01 \x01(\r\x12\x16\n\x0e\x63on_login_type\x18\x02 \x01(\r\x12\x16\n\x0emuti_vip_limit\x18\x03 \x01(\r\x12\x10\n\x08muti_num\x18\x04 \x01(\r\x12\x1a\n\x06reward\x18\x05 \x03(\x0b\x32\n.ResReward\"3\n\x0fResHeroDropInfo\x12\x0f\n\x07hero_id\x18\x01 \x01(\r\x12\x0f\n\x07\x64rop_id\x18\x02 \x01(\r\"\xae\x01\n\x12ResScoreToResource\x12\r\n\x05\x66loor\x18\x01 \x01(\r\x12\x1f\n\x0breward_info\x18\x02 \x03(\x0b\x32\n.ResReward\x12#\n\tdrop_info\x18\x03 \x03(\x0b\x32\x10.ResHeroDropInfo\x12\x16\n\x0e\x64rop_box_class\x18\x04 \x01(\r\x12+\n\x11\x64rop_display_info\x18\x05 \x03(\x0b\x32\x10.ResResourceInfo\"i\n\x0eResTimeToMoney\x12\x0f\n\x07sort_id\x18\x01 \x01(\r\x12\x12\n\ndown_limit\x18\x02 \x01(\r\x12\x10\n\x08up_limit\x18\x03 \x01(\r\x12\r\n\x05ratio\x18\x04 \x01(\r\x12\x11\n\tmax_money\x18\x05 \x01(\r\"\xa8\x04\n\x0cResSkillData\x12\x10\n\x08skill_id\x18\x01 \x01(\r\x12\x0e\n\x06job_id\x18\x03 \x01(\r\x12\x10\n\x08tree_pos\x18\x04 \x01(\r\x12\x12\n\nskill_name\x18\x05 \x01(\t\x12\x18\n\x10skill_desc_param\x18\x07 \x01(\t\x12\x13\n\x0bskill_index\x18\x08 \x01(\r\x12\x13\n\x0bskill_level\x18\n \x01(\r\x12\x14\n\x0cskill_damage\x18\x0b \x01(\r\x12\x14\n\x0c\x65ndure_value\x18\x0c \x01(\r\x12\x14\n\x0csub_skill_id\x18\r \x01(\r\x12\x14\n\x0cskill_set_id\x18\x0e \x01(\r\x12\x11\n\toperation\x18\x0f \x01(\t\x12\x12\n\nhit_add_sp\x18\x10 \x01(\r\x12\x17\n\x0f\x64\x61mage_att_rate\x18\x11 \x01(\r\x12\x12\n\nskill_icon\x18\x12 \x01(\r\x12\x17\n\x0flevelup_cost_sp\x18\x13 \x01(\r\x12\x18\n\x10levelup_cost_res\x18\x14 \x01(\r\x12\x13\n\x0blimit_level\x18\x15 \x01(\r\x12\x17\n\x0fpre_skill_index\x18\x16 \x01(\r\x12\x1b\n\x13\x66inal_skill_cost_sp\x18\x17 \x01(\r\x12\x12\n\nskill_meta\x18\x18 \x01(\r\x12\x16\n\x0e\x66ight_capacity\x18\x19 \x01(\r\x12\x19\n\x11show_golden_frame\x18\x1a \x01(\x08\x12\x1b\n\x13skill_combat_damage\x18\x1b \x01(\x02\"\xd6\x01\n\x0cResSkillTree\x12\x0f\n\x07hero_id\x18\x01 \x01(\r\x12\x14\n\x0cskill_set_id\x18\x02 \x01(\r\x12\x19\n\x11relation_sequence\x18\x03 \x01(\t\x12\x1c\n\x14skill_index_sequence\x18\x04 \x01(\t\x12\x11\n\tskill_pos\x18\x05 \x01(\r\x12\x1e\n\x16skill_preview_offset_x\x18\x06 \x01(\x05\x12\x1e\n\x16skill_preview_offset_y\x18\x07 \x01(\x05\x12\x13\n\x0bskill_index\x18\x08 \x01(\x05\"i\n\x0eResRankValInfo\x12\x10\n\x08val_name\x18\x01 \x01(\t\x12\x10\n\x08val_type\x18\x02 \x01(\r\x12\x0f\n\x07min_val\x18\x03 \x01(\r\x12\x0f\n\x07max_val\x18\x04 \x01(\r\x12\x11\n\tsort_type\x18\x05 \x01(\r\"\xee\x03\n\x0bResRankInfo\x12\x0f\n\x07rank_id\x18\x01 \x01(\r\x12\x11\n\trank_name\x18\x02 \x01(\t\x12\x16\n\x0erank_base_type\x18\x03 \x01(\r\x12\x17\n\x0frank_flush_type\x18\x04 \x01(\r\x12\x15\n\rrank_capacity\x18\x05 \x01(\r\x12\x18\n\x10get_list_max_num\x18\r \x01(\r\x12\x16\n\x0e\x64\x61y_flush_hour\x18\x06 \x01(\r\x12\x15\n\rday_flush_min\x18\x07 \x01(\r\x12\x15\n\rday_flush_sec\x18\x08 \x01(\r\x12\x16\n\x0e\x64\x61y_flush_time\x18\t \x01(\r\x12\x11\n\tmin_level\x18\n \x01(\r\x12\x11\n\tmax_level\x18\x0b \x01(\r\x12&\n\rrank_val_info\x18\x0c \x03(\x0b\x32\x0f.ResRankValInfo\x12\x18\n\x10rank_flush_param\x18\x0e \x01(\r\x12\x1c\n\x14reward_dispatch_type\x18\x0f \x01(\r\x12\x1d\n\x15reward_dispatch_param\x18\x10 \x01(\r\x12\x1c\n\x14reward_dispatch_hour\x18\x11 \x01(\r\x12\x1b\n\x13reward_dispatch_min\x18\x12 \x01(\r\x12\x1b\n\x13reward_dispatch_sec\x18\x13 \x01(\r\":\n\x15ResRankBattleSectInfo\x12\x0f\n\x07low_val\x18\x01 \x01(\r\x12\x10\n\x08high_val\x18\x02 \x01(\r\"K\n\x11ResRankBattleInfo\x12\n\n\x02id\x18\x01 \x01(\r\x12\x10\n\x08\x63\x61pacity\x18\x02 \x01(\r\x12\x18\n\x10get_list_max_num\x18\x03 \x01(\r\"c\n\x11ResRankBattleSect\x12\x10\n\x08rank_low\x18\x01 \x01(\x05\x12\x11\n\trank_high\x18\x02 \x01(\x05\x12)\n\trank_sect\x18\x03 \x03(\x0b\x32\x16.ResRankBattleSectInfo\"\xb5\x01\n\x13ResRankBattleReward\x12\x10\n\x08rank_low\x18\x01 \x01(\x05\x12\x11\n\trank_high\x18\x02 \x01(\x05\x12(\n\x10\x65very_day_reward\x18\x03 \x03(\x0b\x32\x0e.ST_REWARD_RES\x12&\n\x0epromote_reward\x18\x04 \x03(\x0b\x32\x0e.ST_REWARD_RES\x12\'\n\x0f\x61\x63tivity_reward\x18\x05 \x03(\x0b\x32\x0e.ST_REWARD_RES\"\x98\x01\n\x1aResRankBattleRobotHeroInfo\x12\x0f\n\x07hero_id\x18\x01 \x01(\r\x12\x0f\n\x07hero_lv\x18\x02 \x01(\r\x12\x15\n\rhero_strength\x18\x03 \x01(\r\x12\x14\n\x0chero_stamina\x18\x04 \x01(\r\x12\x13\n\x0bhero_growup\x18\x05 \x01(\r\x12\x16\n\x0e\x66ight_capacity\x18\x06 \x01(\r\"y\n\x12ResRankBattleRobot\x12\x0b\n\x03uid\x18\x01 \x01(\r\x12\x12\n\nrobot_name\x18\x02 \x01(\t\x12\x12\n\nhead_photo\x18\x03 \x01(\r\x12.\n\thero_info\x18\x04 \x03(\x0b\x32\x1b.ResRankBattleRobotHeroInfo\"t\n\x1cResOnlineBattleRobotHeroInfo\x12\x0f\n\x07hero_id\x18\x01 \x01(\r\x12\x15\n\rhero_strength\x18\x02 \x01(\r\x12\x14\n\x0chero_stamina\x18\x03 \x01(\r\x12\x16\n\x0e\x66ight_capacity\x18\x04 \x01(\r\"x\n\x14ResOnlineBattleRobot\x12\x0b\n\x03uid\x18\x01 \x01(\r\x12\x12\n\nrobot_name\x18\x02 \x01(\t\x12\r\n\x05score\x18\x03 \x01(\r\x12\x30\n\thero_info\x18\x04 \x03(\x0b\x32\x1d.ResOnlineBattleRobotHeroInfo\"X\n\x16ResOnlineBattleShopBox\x12\x0b\n\x03pos\x18\x01 \x01(\r\x12\x0c\n\x04icon\x18\x02 \x01(\t\x12\r\n\x05price\x18\x03 \x01(\r\x12\x14\n\x0c\x62\x61se_drop_id\x18\x04 \x01(\r\"]\n\x12ResGrowUpCondition\x12\x11\n\tcondition\x18\x01 \x01(\r\x12\x19\n\x11\x63ondition_param_1\x18\x02 \x01(\x05\x12\x19\n\x11\x63ondition_param_2\x18\x03 \x01(\x05\"\xbc\x01\n\tResGrowUp\x12\x0f\n\x07hero_id\x18\x01 \x01(\r\x12\x12\n\ngrow_up_id\x18\x02 \x01(\r\x12.\n\x11grow_up_condition\x18\x03 \x03(\x0b\x32\x13.ResGrowUpCondition\x12.\n\x15grow_up_ned_chip_info\x18\x04 \x03(\x0b\x32\x0f.ResChipNumInfo\x12\x14\n\x0cgrow_up_name\x18\x05 \x01(\r\x12\x14\n\x0cgrow_up_icon\x18\x06 \x01(\r\"\xda\x02\n\x0bResPurchase\x12\x15\n\rproduct_index\x18\x01 \x01(\r\x12\x14\n\x0cproduct_name\x18\x02 \x01(\t\x12\x17\n\x0fproduct_picture\x18\x03 \x01(\t\x12\x12\n\nproduct_id\x18\x04 \x01(\t\x12\r\n\x05price\x18\x05 \x01(\x02\x12\x14\n\x0cproduct_type\x18\x06 \x01(\r\x12\x13\n\x0b\x61\x63tivity_id\x18\x07 \x01(\r\x12\r\n\x05\x63ount\x18\x08 \x01(\r\x12\x15\n\rpromotion_cnt\x18\t \x01(\r\x12\x1f\n\x0breward_info\x18\n \x03(\x0b\x32\n.ResReward\x12\x0f\n\x07\x63hannel\x18\x0b \x01(\r\x12\x12\n\nadditional\x18\x0c \x01(\r\x12\x19\n\x11\x66irst_reward_type\x18\r \x01(\r\x12\x17\n\x0flogin_plat_type\x18\x0e \x01(\r\x12\x17\n\x0flocalized_price\x18\x0f \x01(\t\"`\n\x0cResMonthCard\x12\n\n\x02id\x18\x01 \x01(\r\x12\x0c\n\x04type\x18\x02 \x01(\r\x12\x0c\n\x04name\x18\x03 \x01(\t\x12\x12\n\nvalid_time\x18\x04 \x01(\r\x12\x14\n\x0c\x64\x61ily_reward\x18\x05 \x01(\r\"\xa6\x02\n\x12ResBusinessRefresh\x12\x13\n\x0b\x62usiness_id\x18\x01 \x01(\r\x12\x15\n\rbusiness_name\x18\x02 \x01(\t\x12\x14\n\x0ctrigger_type\x18\x03 \x01(\r\x12\x14\n\x0crefresh_hour\x18\x04 \x01(\r\x12\x16\n\x0erefresh_minute\x18\x05 \x01(\r\x12\x16\n\x0erefresh_second\x18\x06 \x01(\r\x12\x15\n\rbeg_time_year\x18\x07 \x01(\r\x12\x16\n\x0e\x62\x65g_time_month\x18\x08 \x01(\r\x12\x14\n\x0c\x62\x65g_time_day\x18\t \x01(\r\x12\x15\n\rend_time_year\x18\n \x01(\r\x12\x16\n\x0e\x65nd_time_month\x18\x0b \x01(\r\x12\x14\n\x0c\x65nd_time_day\x18\x0c \x01(\r\"\xa7\x01\n\x0bResGroupBuy\x12\x14\n\x0cgroup_buy_id\x18\x01 \x01(\r\x12\x16\n\x0egroup_buy_desc\x18\x02 \x01(\t\x12\x10\n\x08\x62\x65g_time\x18\x03 \x01(\t\x12\x10\n\x08\x65nd_time\x18\x04 \x01(\t\x12\x12\n\ncost_money\x18\x05 \x01(\r\x12\x12\n\nis_refresh\x18\x06 \x01(\r\x12\x1e\n\nbuy_reward\x18\x07 \x03(\x0b\x32\n.ResReward\"S\n\x13ResGrowthFundReward\x12\n\n\x02id\x18\x01 \x01(\r\x12\x14\n\x0ctarget_dunid\x18\x02 \x01(\r\x12\x1a\n\x06reward\x18\x03 \x03(\x0b\x32\n.ResReward\"\xe6\x01\n\x13ResCumulateRecharge\x12\n\n\x02id\x18\x01 \x01(\r\x12\x15\n\rrecharge_name\x18\x02 \x01(\t\x12\x17\n\x0ftarget_recharge\x18\x03 \x01(\r\x12\x1a\n\x06reward\x18\x04 \x03(\x0b\x32\n.ResReward\x12 \n\x0c\x64\x61ily_reward\x18\x05 \x03(\x0b\x32\n.ResReward\x12\x16\n\x0e\x64\x61ily_buy_cost\x18\x06 \x01(\r\x12\x1d\n\tdaily_buy\x18\x07 \x03(\x0b\x32\n.ResReward\x12\x1e\n\ndaily_free\x18\x08 \x03(\x0b\x32\n.ResReward\"2\n\x0bResSlotInfo\x12\x0f\n\x07slot_id\x18\x01 \x01(\r\x12\x12\n\nopen_limit\x18\x02 \x01(\r\"!\n\x0cResParamInfo\x12\x11\n\tparameter\x18\x01 \x01(\r\"<\n\x0cResGiftGroup\x12\x15\n\rgift_group_id\x18\x01 \x01(\r\x12\x15\n\rex_change_cnt\x18\x02 \x01(\r\"\xba\x01\n\x07ResGift\x12\x0f\n\x07gift_id\x18\x01 \x01(\r\x12\x15\n\rgift_group_id\x18\x02 \x01(\r\x12\r\n\x05title\x18\x03 \x01(\t\x12\x0f\n\x07\x63ontent\x18\x04 \x01(\t\x12\x1a\n\x06reward\x18\x05 \x03(\x0b\x32\n.ResReward\x12\x0f\n\x07\x65nabled\x18\x06 \x01(\x08\x12\x14\n\x0cpre_group_id\x18\x07 \x01(\r\x12\x10\n\x08platform\x18\x08 \x01(\r\x12\x12\n\nchannel_id\x18\t \x01(\t\"\xbe\x03\n\x07ResItem\x12\x0f\n\x07item_id\x18\x01 \x01(\r\x12\x11\n\titem_name\x18\x02 \x01(\t\x12\x11\n\titem_desc\x18\x03 \x01(\t\x12\x12\n\nitem_level\x18\x04 \x01(\r\x12\x11\n\titem_type\x18\x05 \x01(\r\x12\x0f\n\x07\x63\x61n_use\x18\x06 \x01(\r\x12\x14\n\x0citem_quality\x18\x07 \x01(\r\x12\x16\n\x0eitem_use_level\x18\x08 \x01(\r\x12\x17\n\x0fitem_page_index\x18\t \x01(\r\x12\x17\n\x0fitem_slot_index\x18\n \x01(\r\x12\x11\n\tsort_type\x18\x0b \x01(\r\x12\x13\n\x0bis_can_drop\x18\x0c \x01(\r\x12\x14\n\x0cpackage_wrap\x18\r \x01(\r\x12\x0e\n\x06pic_id\x18\x0e \x01(\r\x12\x11\n\tfunc_type\x18\x0f \x01(\r\x12\x10\n\x08tab_type\x18\x10 \x01(\r\x12 \n\tparameter\x18\x11 \x03(\x0b\x32\r.ResParamInfo\x12\x13\n\x0b\x64rop_dun_id\x18\x12 \x03(\r\x12\x0e\n\x06output\x18\x13 \x03(\r\x12\x10\n\x08\x65valuate\x18\x14 \x02(\r\x12\x18\n\x10system_billboard\x18\x15 \x01(\x08\"Q\n\x11ResEquipAttrRatio\x12\x11\n\tattr_type\x18\x01 \x02(\r\x12\r\n\x05ratio\x18\x02 \x02(\x02\x12\x1a\n\x12relative_attr_type\x18\x03 \x02(\r\"\x7f\n\x0cResEquipAttr\x12\x11\n\tattr_type\x18\x01 \x02(\r\x12\x12\n\nattr_value\x18\x02 \x01(\r\x12\x10\n\x08is_ratio\x18\x03 \x01(\r\x12\x1a\n\x12\x61ttr_str_inc_value\x18\x04 \x01(\r\x12\x1a\n\x12\x61ttr_sta_inc_value\x18\x05 \x01(\r\"\xf0\x05\n\x08ResEquip\x12\x10\n\x08\x65quip_id\x18\x01 \x02(\r\x12\x13\n\x0bpack_pic_id\x18\x02 \x02(\r\x12\x10\n\x08\x65valuate\x18\x03 \x02(\r\x12\r\n\x05\x63olor\x18\x04 \x02(\r\x12\x0e\n\x06weight\x18\x05 \x02(\r\x12\x11\n\tequip_pos\x18\x06 \x02(\r\x12\x10\n\x08\x62\x61se_exp\x18\x07 \x02(\r\x12\x10\n\x08job_type\x18\x08 \x02(\r\x12\x1a\n\x12\x61ttr_base_strength\x18\t \x02(\r\x12\x19\n\x11\x61ttr_base_stamina\x18\n \x02(\r\x12\x1f\n\x0bsell_reward\x18\x10 \x02(\x0b\x32\n.ResReward\x12\x14\n\x0c\x61wesome_desc\x18\x11 \x02(\r\x12\x1c\n\x14levelup_strength_inc\x18\x0b \x02(\r\x12\x1b\n\x13levelup_stamina_inc\x18\x0c \x02(\r\x12\x19\n\x11levelup_max_level\x18\x1a \x02(\r\x12\x16\n\x0e\x63\x61n_batch_sell\x18\x19 \x02(\x08\x12\x14\n\x0c\x62ind_to_hero\x18\x16 \x02(\x08\x12\x17\n\x0fitem_slot_index\x18\x14 \x01(\r\x12\x18\n\x10return_gem_ratio\x18\x17 \x02(\r\x12!\n\nattr_color\x18\r \x03(\x0b\x32\r.ResEquipAttr\x12\"\n\x0b\x61ttr_wakeup\x18\x0e \x03(\x0b\x32\r.ResEquipAttr\x12\"\n\x0b\x61ttr_growup\x18\x0f \x03(\x0b\x32\r.ResEquipAttr\x12\x13\n\x0b\x64rop_dun_id\x18\x15 \x03(\r\x12\x0e\n\x06output\x18\x18 \x03(\r\x12\x13\n\x0bis_retrieve\x18\x1b \x01(\r\x12\x12\n\nis_rubbish\x18\x1c \x02(\r\x12\x0f\n\x07\x63\x61n_use\x18\x1d \x01(\r\x12\x14\n\x0crandom_index\x18\x1e \x01(\r\x12\x17\n\x0f\x62\x61se_purify_exp\x18\x1f \x01(\r\x12\x12\n\ncan_fusion\x18  \x01(\x08\x12\x11\n\tbox_color\x18! \x01(\r\x12\x10\n\x08\x62ox_type\x18\" \x01(\r\"\x9c\x01\n\rResPurifyAttr\x12\r\n\x05level\x18\x01 \x01(\r\x12\x19\n\x11\x61\x64\x64_strength_rate\x18\x02 \x01(\r\x12\x18\n\x10\x61\x64\x64_stamina_rate\x18\x03 \x01(\r\x12\x1a\n\x12\x61\x64\x64_strength_value\x18\x04 \x01(\r\x12\x19\n\x11\x61\x64\x64_stamina_value\x18\x05 \x01(\r\x12\x10\n\x08need_exp\x18\x06 \x01(\r\"G\n\x0eResPurifyLevel\x12\x11\n\tequip_pos\x18\x01 \x02(\r\x12\"\n\nlevel_attr\x18\x03 \x03(\x0b\x32\x0e.ResPurifyAttr\"A\n\x0bResEquipBox\x12\r\n\x05index\x18\x01 \x02(\r\x12\x0f\n\x07hero_id\x18\x02 \x02(\r\x12\x12\n\ndrop_index\x18\x03 \x02(\r\"\xb8\x01\n\x0eResEquipGrowup\x12\x10\n\x08\x65quip_id\x18\x01 \x02(\r\x12\x14\n\x0cgrowup_level\x18\x02 \x02(\r\x12\x1e\n\x08material\x18\x03 \x03(\x0b\x32\x0c.ResMaterial\x12\x12\n\nextra_gold\x18\x04 \x02(\r\x12\x1b\n\x04\x61ttr\x18\x05 \x03(\x0b\x32\r.ResEquipAttr\x12\x18\n\x10need_equip_level\x18\x06 \x02(\r\x12\x13\n\x0breset_money\x18\x07 \x01(\r\"L\n\x17ResEquipWakeupCondition\x12\x0b\n\x03\x63nt\x18\x02 \x02(\r\x12\x11\n\tmin_level\x18\x03 \x02(\r\x12\x11\n\tgold_cost\x18\x04 \x02(\r\"?\n\x17ResEquipGrowupCondition\x12\x11\n\tequip_cnt\x18\x02 \x02(\r\x12\x11\n\tgold_cost\x18\x04 \x02(\r\"\x96\x02\n\rResEquipColor\x12\r\n\x05\x63olor\x18\x01 \x02(\r\x12\x0b\n\x03pos\x18\x02 \x02(\r\x12\x13\n\x0b\x65xp_to_gold\x18\x04 \x02(\x02\x12\x1d\n\x15\x63hance_to_increase_sp\x18\x05 \x01(\r\x12\x16\n\x0ewakeup_item_id\x18\x06 \x02(\r\x12\x19\n\x11return_item_ratio\x18\t \x02(\x02\x12\x32\n\x10wakeup_condition\x18\x07 \x03(\x0b\x32\x18.ResEquipWakeupCondition\x12\x32\n\x10growup_condition\x18\x08 \x03(\x0b\x32\x18.ResEquipGrowupCondition\x12\x1a\n\x12\x65xp_to_reset_money\x18\n \x01(\x02\"7\n\x14ResEquipColorLevelup\x12\r\n\x05level\x18\x02 \x02(\r\x12\x10\n\x08need_exp\x18\x03 \x03(\r\"f\n\x16ResEquipColorLevelAttr\x12\r\n\x05\x63olor\x18\x01 \x02(\r\x12\x0b\n\x03pos\x18\x02 \x02(\r\x12\r\n\x05level\x18\x03 \x02(\r\x12\x10\n\x08strength\x18\x04 \x02(\r\x12\x0f\n\x07stamina\x18\x05 \x02(\r\"j\n\x11ResEquipRecommend\x12\x0f\n\x07hero_id\x18\x01 \x02(\r\x12\x14\n\x0c\x64un_id_start\x18\x02 \x02(\r\x12\x12\n\ndun_id_end\x18\x03 \x02(\r\x12\x1a\n\x12recommend_equip_id\x18\x04 \x03(\r\"\x9d\x02\n\x18ResEquipFusionTargetInfo\x12\x14\n\x0ctarget_price\x18\x01 \x01(\r\x12\x13\n\x0bretrieve_id\x18\x02 \x01(\r\x12\x18\n\x10\x61\x64\x64tion_res_type\x18\x03 \x01(\r\x12\x16\n\x0e\x61\x64\x64tion_res_id\x18\x04 \x01(\r\x12\x19\n\x11\x61\x64\x64tion_res_count\x18\x05 \x01(\r\x12\x1c\n\x14\x61\x64\x64tion_buy_res_type\x18\x08 \x01(\r\x12\x1a\n\x12\x61\x64\x64tion_buy_res_id\x18\t \x01(\r\x12\x1d\n\x15\x61\x64\x64tion_buy_res_count\x18\n \x01(\r\x12\x19\n\x11\x61\x64\x64tion_use_limit\x18\x06 \x01(\r\x12\x15\n\raddtion_ratio\x18\x07 \x01(\r\"|\n\x0eResEquipFusion\x12\x18\n\x10\x66usion_price_low\x18\x01 \x01(\r\x12\x19\n\x11\x66usion_price_high\x18\x02 \x01(\r\x12\x35\n\x12\x66usion_target_info\x18\x03 \x03(\x0b\x32\x19.ResEquipFusionTargetInfo\"{\n\x0bResDropElem\x12\x16\n\x0e\x64rop_item_type\x18\x01 \x01(\r\x12\x14\n\x0c\x64rop_item_id\x18\x02 \x01(\r\x12\x15\n\rdrop_item_num\x18\x03 \x01(\r\x12\x12\n\ndrop_ratio\x18\x04 \x01(\r\x12\x13\n\x0b\x64rop_grp_id\x18\x05 \x01(\r\"?\n\x0bResBaseDrop\x12\x0f\n\x07\x64rop_id\x18\x01 \x01(\r\x12\x1f\n\tdrop_elem\x18\x02 \x03(\x0b\x32\x0c.ResDropElem\"^\n\x0cResWorldDrop\x12\n\n\x02id\x18\x01 \x01(\r\x12\x10\n\x08\x62\x65g_time\x18\x02 \x01(\t\x12\x10\n\x08\x65nd_time\x18\x03 \x01(\t\x12\x1e\n\ndrop_limit\x18\x04 \x03(\x0b\x32\n.ResReward\"M\n\x0fResRetrieveInfo\x12\n\n\x02id\x18\x01 \x01(\r\x12\x0c\n\x04type\x18\x02 \x01(\r\x12 \n\tparameter\x18\x03 \x03(\x0b\x32\r.ResParamInfo\"\x1d\n\x08ResParam\x12\x11\n\tparametre\x18\x01 \x01(\r\"-\n\x0eResUserTipData\x12\n\n\x02id\x18\x01 \x01(\r\x12\x0f\n\x07tipText\x18\x02 \x01(\t\"\x95\x01\n\x0eResMailContent\x12\n\n\x02id\x18\x01 \x01(\r\x12\r\n\x05title\x18\x02 \x01(\t\x12\x0f\n\x07\x63ontent\x18\x03 \x01(\t\x12\x14\n\x0creward_money\x18\x04 \x01(\r\x12\x13\n\x0breward_gold\x18\x05 \x01(\r\x12\x16\n\x0ereward_crystal\x18\x06 \x01(\r\x12\x14\n\x0cpersist_time\x18\x07 \x01(\r\"T\n\x10ResPrizeDrawHero\x12\x0f\n\x07hero_id\x18\x01 \x01(\r\x12\x16\n\x0enormal_drop_id\x18\x02 \x01(\r\x12\x17\n\x0fspecial_drop_id\x18\x03 \x01(\r\"\xe1\x05\n\x0cResPrizeDraw\x12\n\n\x02id\x18\x01 \x01(\r\x12\x1c\n\x14prize_draw_cost_type\x18\x02 \x01(\r\x12\x1a\n\x12prize_draw_cost_id\x18\x03 \x01(\r\x12\x1d\n\x15prize_draw_cost_count\x18\x04 \x01(\r\x12\x11\n\tmall_type\x18\x06 \x01(\r\x12\x0f\n\x07mall_id\x18\x07 \x01(\r\x12\x12\n\nmall_count\x18\x08 \x01(\r\x12\x17\n\x0f\x63ounteract_type\x18\t \x01(\r\x12\x15\n\rcounteract_id\x18\n \x01(\r\x12\x18\n\x10\x63ounteract_count\x18\x0b \x01(\r\x12\x16\n\x0e\x66ree_max_count\x18\x0c \x01(\r\x12\x19\n\x11\x66ree_use_interval\x18\r \x01(\r\x12*\n\"free_refresh_time_by_last_use_time\x18\x0e \x01(\r\x12\x33\n+free_refresh_time_by_last_refresh_time_hour\x18\x0f \x01(\r\x12\x32\n*free_refresh_time_by_last_refresh_time_min\x18\x10 \x01(\r\x12\x32\n*free_refresh_time_by_last_refresh_time_sec\x18\x11 \x01(\r\x12\x34\n\x1b\x66irst_prize_draw_drop_index\x18\x12 \x01(\x0b\x32\x0f.ResDropIndexEx\x12.\n\x15prize_draw_drop_index\x18\x13 \x03(\x0b\x32\x0f.ResDropIndexEx\x12\x31\n\x17prize_draw_preview_info\x18\x14 \x03(\x0b\x32\x10.ResResourceInfo\x12$\n\x1cprize_draw_by_hero_cnt_limit\x18\x15 \x01(\r\x12/\n\x14prize_draw_hero_info\x18\x16 \x03(\x0b\x32\x11.ResPrizeDrawHero\"8\n\x0eResShopRefresh\x12\x0c\n\x04type\x18\x01 \x01(\r\x12\n\n\x02id\x18\x02 \x01(\r\x12\x0c\n\x04time\x18\x03 \x01(\t\"4\n\nResBuyRate\x12\x15\n\rcritical_rate\x18\x01 \x01(\r\x12\x0f\n\x07\x62uy_cnt\x18\x02 \x01(\r\"\xa8\x01\n\x0fResRefreshPrice\x12\x0c\n\x04type\x18\x01 \x01(\r\x12\r\n\x05\x63ount\x18\x02 \x01(\r\x12\x0e\n\x06is_vip\x18\x03 \x01(\r\x12\x10\n\x08res_type\x18\x04 \x01(\r\x12\x0e\n\x06res_id\x18\x05 \x01(\r\x12\x11\n\tres_count\x18\x06 \x01(\r\x12\x14\n\x0conce_buy_cnt\x18\x07 \x01(\r\x12\x1d\n\x08\x62uy_rate\x18\x08 \x03(\x0b\x32\x0b.ResBuyRate\"\xcd\x02\n\x0cResShopGoods\x12\n\n\x02id\x18\x01 \x01(\r\x12\x0c\n\x04type\x18\x02 \x01(\r\x12\x17\n\x0fvip_level_limit\x18\x0e \x01(\r\x12\x16\n\x0eis_first_goods\x18\x03 \x01(\r\x12\x16\n\x0egoods_res_type\x18\x04 \x01(\r\x12\x14\n\x0cgoods_res_id\x18\x05 \x01(\r\x12\x11\n\tgoods_cnt\x18\r \x01(\r\x12\x12\n\nprice_type\x18\x06 \x01(\r\x12\r\n\x05price\x18\x07 \x01(\r\x12\x10\n\x08\x64iscount\x18\x08 \x01(\r\x12\"\n\x1a\x64iscount_begin_time_string\x18\t \x01(\t\x12 \n\x18\x64iscount_end_time_string\x18\n \x01(\t\x12\x1b\n\x13\x64iscount_begin_time\x18\x0b \x01(\r\x12\x19\n\x11\x64iscount_end_time\x18\x0c \x01(\r\"E\n\x16ResShopRandomGoodsInfo\x12\x10\n\x08goods_id\x18\x01 \x01(\r\x12\x19\n\x11goods_probability\x18\x02 \x01(\r\"\x8d\x01\n\rResShopRandom\x12\x0c\n\x04type\x18\x01 \x01(\r\x12\x0f\n\x07hero_id\x18\x02 \x01(\r\x12\x13\n\x0bhero_lv_low\x18\x03 \x01(\r\x12\x14\n\x0chero_lv_high\x18\x04 \x01(\r\x12\x32\n\x11goods_random_info\x18\x05 \x03(\x0b\x32\x17.ResShopRandomGoodsInfo\"Q\n\x0fResTutorialRule\x12\x0e\n\x06\x64un_id\x18\x01 \x02(\r\x12\x0c\n\x04\x64\x65mo\x18\x02 \x02(\t\x12 \n\x07\x61\x63tions\x18\x03 \x03(\x0b\x32\x0f.ST_ACTION_DESC\"M\n\x08ResBible\x12\x13\n\x0b\x63\x61tegory_id\x18\x01 \x02(\r\x12\x15\n\rcategory_name\x18\x02 \x02(\t\x12\x15\n\rpage_contents\x18\x03 \x03(\t\"3\n\x16ResFriendRecommendInfo\x12\x0b\n\x03low\x18\x01 \x01(\r\x12\x0c\n\x04high\x18\x02 \x01(\r\"\x82\x01\n\x16ResFriendRecommendSect\x12\x1a\n\x12\x66ight_capacity_low\x18\x01 \x01(\r\x12\x1b\n\x13\x66ight_capacity_high\x18\x02 \x01(\r\x12/\n\x0erecommend_info\x18\x03 \x03(\x0b\x32\x17.ResFriendRecommendInfo\"\xee\x05\n\x0fResTutorialInfo\x12\x1a\n\x12tutorial_dugeon_id\x18\x01 \x01(\r\x12\x1c\n\x14tutorial_dugeon_hero\x18\x02 \x01(\t\x12\x18\n\x10\x66irst_steller_id\x18\x03 \x01(\r\x12\x17\n\x0f\x66irst_planet_id\x18\x04 \x01(\r\x12 \n\x18role_level_skill_upgrade\x18\x05 \x01(\r\x12\x18\n\x10hero_tower_level\x18\x06 \x01(\r\x12\x1d\n\x15role_level_hero_tower\x18\x07 \x01(\r\x12\x1d\n\x15gold_mine_building_id\x18\x08 \x01(\r\x12\x1c\n\x14unlock_dun_item_shop\x18\t \x01(\r\x12\x19\n\x11unlock_dun_emblem\x18\n \x01(\r\x12\x16\n\x0erole_id_emblem\x18\x0b \x01(\r\x12\x1f\n\x17unlock_dun_role_upgrade\x18\x0c \x01(\r\x12\x1e\n\x16role_level_skill_burst\x18\r \x01(\r\x12\x16\n\x0esp_skill_burst\x18\x0e \x01(\r\x12\x1a\n\x12sp_skill_ultimatet\x18\x0f \x01(\r\x12\x17\n\x0fsp_skill_charge\x18\x10 \x01(\r\x12\x1b\n\x13new_hero_steller_id\x18\x11 \x01(\r\x12\x1a\n\x12new_hero_planet_id\x18\x12 \x01(\r\x12\x1b\n\x13resource_store_type\x18\x13 \x01(\r\x12\x11\n\tisland_id\x18\x14 \x03(\r\x12 \n\x18role_level_equip_levelup\x18\x15 \x01(\r\x12\x1e\n\x16unlock_dun_join_league\x18\x16 \x01(\r\x12\x1c\n\x14\x65xp_mine_building_id\x18\x17 \x01(\r\x12\x1e\n\x16money_mine_building_id\x18\x18 \x01(\r\x12\x18\n\x10mall_building_id\x18\x19 \x01(\r\x12\x12\n\nexpitem_id\x18\x1a \x03(\r\"\xe1\x01\n\x10ResHeroImageInfo\x12\n\n\x02id\x18\x01 \x01(\r\x12 \n\x18share_hero_card_offset_x\x18\x02 \x01(\x02\x12 \n\x18share_hero_card_offset_y\x18\x03 \x01(\x02\x12\x1d\n\x15share_hero_card_scale\x18\x04 \x01(\x02\x12\x1f\n\x17share_hero_pve_offset_x\x18\x05 \x01(\x02\x12\x1f\n\x17share_hero_pve_offset_y\x18\x06 \x01(\x02\x12\x1c\n\x14share_hero_pve_scale\x18\x07 \x01(\x02\"F\n\x0eST_ACTION_DESC\x12\x0c\n\x04name\x18\x01 \x02(\t\x12\x10\n\x08tips_tag\x18\x02 \x02(\t\x12\x14\n\x0cguide_effect\x18\x03 \x02(\t\"{\n\x14ST_BATTLE_ROBOT_INFO\x12\x0f\n\x07hero_id\x18\x01 \x01(\r\x12\x0f\n\x07hero_lv\x18\x02 \x01(\r\x12\x14\n\x0chero_grow_up\x18\x03 \x01(\r\x12\x15\n\rhero_strength\x18\x04 \x01(\r\x12\x14\n\x0chero_stamina\x18\x05 \x01(\r\"v\n\x12ResRoleCommandList\x12\x0f\n\x07hero_id\x18\x01 \x02(\r\x12\x13\n\x0bitem_number\x18\x02 \x02(\r\x12\x15\n\rskill_name_id\x18\x03 \x02(\r\x12\x0f\n\x07\x63ommand\x18\x04 \x02(\t\x12\x12\n\nis_special\x18\x05 \x02(\r\"<\n\x0cResDailyTime\x12\x0c\n\x04hour\x18\x01 \x01(\r\x12\x0e\n\x06minute\x18\x02 \x01(\r\x12\x0e\n\x06second\x18\x03 \x01(\r\"\x88\x02\n\x0bResActivity\x12\x13\n\x0b\x61\x63tivity_id\x18\x01 \x02(\r\x12\x15\n\ractivity_name\x18\x02 \x02(\t\x12\x15\n\ractivity_type\x18\x03 \x02(\r\x12\x1a\n\x12\x61\x63tivity_parameter\x18\x04 \x02(\r\x12\x14\n\x0ctrigger_type\x18\x05 \x02(\r\x12\x10\n\x08\x62\x65g_time\x18\x06 \x01(\t\x12\x10\n\x08\x65nd_time\x18\x07 \x01(\t\x12\x12\n\nclose_time\x18\x08 \x01(\t\x12%\n\x0e\x64\x61ily_beg_time\x18\t \x03(\x0b\x32\r.ResDailyTime\x12%\n\x0e\x64\x61ily_end_time\x18\n \x03(\x0b\x32\r.ResDailyTime\"I\n\x0cResNameExtra\x12\n\n\x02id\x18\x01 \x02(\r\x12\x0c\n\x04type\x18\x02 \x02(\r\x12\x0e\n\x06prefix\x18\x03 \x01(\t\x12\x0f\n\x07postfix\x18\x04 \x01(\t\"8\n\x0bResZoneInfo\x12\x0f\n\x07zone_id\x18\x01 \x01(\r\x12\n\n\x02ip\x18\x02 \x01(\t\x12\x0c\n\x04port\x18\x03 \x01(\r\"A\n\x0cResWorldZone\x12\x10\n\x08world_id\x18\x01 \x02(\r\x12\x1f\n\tzone_info\x18\x02 \x03(\x0b\x32\x0c.ResZoneInfo\"~\n\x10ResRoleAttribute\x12\x0f\n\x07hero_id\x18\x01 \x02(\r\x12\x0e\n\x06\x61ttack\x18\x02 \x02(\x08\x12\x0f\n\x07\x61gility\x18\x03 \x02(\x08\x12\r\n\x05range\x18\x04 \x02(\x08\x12\r\n\x05\x63ombo\x18\x05 \x02(\x08\x12\x0e\n\x06\x65ndure\x18\x06 \x02(\x08\x12\n\n\x02hp\x18\x07 \x02(\x08\"P\n\x0fResCumulateCost\x12\n\n\x02id\x18\x01 \x02(\r\x12\x15\n\rcumulate_cost\x18\x02 \x02(\r\x12\x1a\n\x06reward\x18\x03 \x03(\x0b\x32\n.ResReward\"C\n\x12ResBossRushChapter\x12\x12\n\nchapter_id\x18\x01 \x02(\r\x12\x19\n\x11unlock_hero_level\x18\x02 \x02(\r\"\x93\x01\n\x0fResBossRushDrop\x12\x12\n\nmonster_id\x18\x01 \x02(\r\x12\x1d\n\tdrop_info\x18\x02 \x03(\x0b\x32\n.ResReward\x12!\n\ndrop_index\x18\x03 \x03(\x0b\x32\r.ResDropIndex\x12*\n\x13\x61\x63tivity_drop_index\x18\x04 \x03(\x0b\x32\r.ResDropIndex\"\xa8\x01\n\x12ResBossRushDungeon\x12\x12\n\nchapter_id\x18\x01 \x02(\r\x12\x10\n\x08sequence\x18\x02 \x02(\r\x12\x12\n\ndungeon_id\x18\x03 \x02(\r\x12\x0f\n\x07is_boss\x18\x04 \x02(\x08\x12\x12\n\nmonster_id\x18\x05 \x03(\r\x12\x1d\n\x15\x62oss_stage_monster_id\x18\x06 \x03(\r\x12\x14\n\x0cmonster_rank\x18\x07 \x03(\r\"r\n\x10ResFirstRecharge\x12\x1a\n\x06reward\x18\x01 \x03(\x0b\x32\n.ResReward\x12\n\n\x02id\x18\x02 \x01(\r\x12\x1b\n\x13target_recharge_cnt\x18\x03 \x01(\r\x12\x19\n\x11reward_equivalent\x18\x04 \x01(\r\"W\n\x10ResDailyRecharge\x12\n\n\x02id\x18\x01 \x02(\r\x12\x1b\n\x13target_recharge_cnt\x18\x02 \x02(\r\x12\x1a\n\x06reward\x18\x03 \x03(\x0b\x32\n.ResReward\"V\n\x0fResSectRecharge\x12\n\n\x02id\x18\x01 \x02(\r\x12\x1b\n\x13target_recharge_cnt\x18\x02 \x02(\r\x12\x1a\n\x06reward\x18\x03 \x03(\x0b\x32\n.ResReward\"H\n\rResTalentAttr\x12\x11\n\tattr_type\x18\x01 \x01(\r\x12\x12\n\nattr_value\x18\x02 \x01(\r\x12\x10\n\x08is_ratio\x18\x03 \x01(\x08\"_\n\x13ResTalentActiveInfo\x12\x17\n\x0f\x61\x63tive_res_type\x18\x01 \x01(\r\x12\x15\n\ractive_res_id\x18\x02 \x01(\r\x12\x18\n\x10\x61\x63tive_res_count\x18\x03 \x01(\r\"\xdd\x01\n\tResTalent\x12\x0f\n\x07hero_id\x18\x01 \x01(\r\x12\x11\n\ttalent_id\x18\x02 \x01(\r\x12\x15\n\rhero_lv_limit\x18\x03 \x01(\r\x12\r\n\x05level\x18\x04 \x01(\r\x12\x0c\n\x04type\x18\x05 \x01(\r\x12\x0f\n\x07stamina\x18\x06 \x01(\r\x12\x10\n\x08strength\x18\x07 \x01(\r\x12#\n\x0btalent_attr\x18\x08 \x03(\x0b\x32\x0e.ResTalentAttr\x12\x30\n\x12talent_active_info\x18\t \x03(\x0b\x32\x14.ResTalentActiveInfo\"\x87\x01\n\x14ResAssistantHeroRent\x12\x1b\n\x13high_fight_capacity\x18\x01 \x01(\r\x12\x15\n\rgold_per_hour\x18\x02 \x01(\x02\x12$\n\x1crent_gold_per_fight_capacity\x18\x03 \x01(\x02\x12\x15\n\rrent_gold_tax\x18\x04 \x01(\x02\"W\n\x10ResCountToReward\x12\x0c\n\x04type\x18\x01 \x01(\r\x12\n\n\x02id\x18\x02 \x01(\r\x12\r\n\x05\x63ount\x18\x03 \x01(\r\x12\x1a\n\x06reward\x18\x04 \x03(\x0b\x32\n.ResReward\"\xc5\x01\n\x10ResWorldActivity\x12\x13\n\x0b\x61\x63tivity_id\x18\x01 \x01(\r\x12\x14\n\x0ctrigger_type\x18\x02 \x01(\r\x12\x0f\n\x07param_1\x18\x03 \x01(\r\x12\x0f\n\x07param_2\x18\x04 \x01(\r\x12\x0f\n\x07param_3\x18\x05 \x01(\r\x12\x0f\n\x07param_4\x18\x06 \x01(\r\x12\x0f\n\x07param_5\x18\x07 \x01(\r\x12\x0f\n\x07param_6\x18\x08 \x01(\r\x12\x0f\n\x07param_7\x18\t \x01(\r\x12\x0f\n\x07param_8\x18\n \x01(\r\"E\n\x10ResActivityOrder\x12\n\n\x02id\x18\x01 \x01(\r\x12\r\n\x05order\x18\x02 \x01(\r\x12\x16\n\x0eshortcut_order\x18\x03 \x01(\r\"\x9a\x01\n\x16ResActivityResourceBox\x12\x0c\n\x04type\x18\x01 \x01(\r\x12\r\n\x05limit\x18\x02 \x01(\r\x12\x11\n\tcount_low\x18\x03 \x01(\r\x12\x12\n\ncount_high\x18\x04 \x01(\r\x12\x1f\n\x17material_box_drop_index\x18\x05 \x01(\r\x12\x1b\n\x05price\x18\x06 \x01(\x0b\x32\x0c.ResMaterial\",\n\x0bResErrorMsg\x12\n\n\x02id\x18\x01 \x01(\r\x12\x11\n\terror_msg\x18\x02 \x01(\t\"\xb5\x02\n\x13ResActivityDiscount\x12\x1c\n\x14\x63oin_single_discount\x18\x01 \x01(\r\x12\x1b\n\x13\x63oin_multi_discount\x18\x02 \x01(\r\x12\x1d\n\x15money_single_discount\x18\x03 \x01(\r\x12\x1c\n\x14money_multi_discount\x18\x04 \x01(\r\x12(\n coin_single_discount_no_activity\x18\x05 \x01(\r\x12\'\n\x1f\x63oin_multi_discount_no_activity\x18\x06 \x01(\r\x12)\n!money_single_discount_no_activity\x18\x07 \x01(\r\x12(\n money_multi_discount_no_activity\x18\x08 \x01(\r\"G\n\x13ResGameModeEntrance\x12\n\n\x02id\x18\x01 \x01(\r\x12\x11\n\trow_index\x18\x02 \x01(\r\x12\x11\n\tcol_index\x18\x03 \x01(\r*@\n\x18\x45NUM_SERVER_LOCOLIZATION\x12$\n ENUM_SERVER_LOCOLIZATION_CHINESE\x10\x00*\xe0\x01\n\x13ResChamberObjective\x12\x1f\n\x1b\x43HAMBER_OBJECTIVE_KILL_BOSS\x10\x01\x12\"\n\x1e\x43HAMBER_OBJECTIVE_KILL_MONSTER\x10\x02\x12%\n!CHAMBER_OBJECTIVE_REACH_WARPPOINT\x10\x03\x12\x1e\n\x1a\x43HAMBER_OBJECTIVE_SURVIVAL\x10\x04\x12\x1d\n\x19\x43HAMBER_OBJECTIVE_PROTECT\x10\x05\x12\x1e\n\x1a\x43HAMBER_OBJECTIVE_KILL_ALL\x10\x06*L\n\x13ResItemFunctionType\x12\x16\n\x12ITEM_FUNC_EXP_ITEM\x10\x01\x12\x1d\n\x19ITEM_FUNC_TALENT_RESOURCE\x10\x02*\x96\x01\n\x0fResSkillSetType\x12\x11\n\rSKILL_SET_TAP\x10\x01\x12\x16\n\x12SKILL_SET_UP_SLIDE\x10\x02\x12\x13\n\x0fSKILL_SET_SLIDE\x10\x03\x12\x18\n\x14SKILL_SET_DOWN_SLIDE\x10\x04\x12\x12\n\x0eSKILL_SET_DASH\x10\x05\x12\x15\n\x11SKILL_SET_SPECIAL\x10\x06*\xdd\x14\n\x0fResHeroAttrType\x12\x19\n\x15HERO_ATTR_COLOR_START\x10\x01\x12.\n*HERO_ATTR_COLOR_INCREASE_DAMAGE_TO_MONSTER\x10\x01\x12 \n\x1cHERO_ATTR_COLOR_SP_GET_SPEED\x10\x02\x12+\n\'HERO_ATTR_COLOR_INCREASE_DAMAGE_TO_BOSS\x10\x03\x12+\n\'HERO_ATTR_COLOR_INCREASE_DAMAGE_TO_HERO\x10\x04\x12\x1e\n\x1aHERO_ATTR_COLOR_SP_EXVALUE\x10\x05\x12\x32\n.HERO_ATTR_COLOR_INCREASE_DAMAGE_TO_MONSTER_TAP\x10\x0b\x12\x31\n-HERO_ATTR_COLOR_INCREASE_DAMAGE_TO_MONSTER_UP\x10\x0c\x12\x34\n0HERO_ATTR_COLOR_INCREASE_DAMAGE_TO_MONSTER_SLIDE\x10\r\x12\x33\n/HERO_ATTR_COLOR_INCREASE_DAMAGE_TO_MONSTER_DOWN\x10\x0e\x12\x33\n/HERO_ATTR_COLOR_INCREASE_DAMAGE_TO_MONSTER_DASH\x10\x0f\x12\x36\n2HERO_ATTR_COLOR_INCREASE_DAMAGE_TO_MONSTER_SPECIAL\x10\x10\x12$\n HERO_ATTR_COLOR_SP_GET_SPEED_TAP\x10\x15\x12#\n\x1fHERO_ATTR_COLOR_SP_GET_SPEED_UP\x10\x16\x12&\n\"HERO_ATTR_COLOR_SP_GET_SPEED_SLIDE\x10\x17\x12%\n!HERO_ATTR_COLOR_SP_GET_SPEED_DOWN\x10\x18\x12%\n!HERO_ATTR_COLOR_SP_GET_SPEED_DASH\x10\x19\x12(\n$HERO_ATTR_COLOR_SP_GET_SPEED_SPECIAL\x10\x1a\x12/\n+HERO_ATTR_COLOR_INCREASE_DAMAGE_TO_BOSS_TAP\x10\x1f\x12.\n*HERO_ATTR_COLOR_INCREASE_DAMAGE_TO_BOSS_UP\x10 \x12\x31\n-HERO_ATTR_COLOR_INCREASE_DAMAGE_TO_BOSS_SLIDE\x10!\x12\x30\n,HERO_ATTR_COLOR_INCREASE_DAMAGE_TO_BOSS_DOWN\x10\"\x12\x30\n,HERO_ATTR_COLOR_INCREASE_DAMAGE_TO_BOSS_DASH\x10#\x12\x33\n/HERO_ATTR_COLOR_INCREASE_DAMAGE_TO_BOSS_SPECIAL\x10$\x12/\n+HERO_ATTR_COLOR_INCREASE_DAMAGE_TO_HERO_TAP\x10)\x12.\n*HERO_ATTR_COLOR_INCREASE_DAMAGE_TO_HERO_UP\x10*\x12\x31\n-HERO_ATTR_COLOR_INCREASE_DAMAGE_TO_HERO_SLIDE\x10+\x12\x30\n,HERO_ATTR_COLOR_INCREASE_DAMAGE_TO_HERO_DOWN\x10,\x12\x30\n,HERO_ATTR_COLOR_INCREASE_DAMAGE_TO_HERO_DASH\x10-\x12\x33\n/HERO_ATTR_COLOR_INCREASE_DAMAGE_TO_HERO_SPECIAL\x10.\x12,\n(HERO_ATTR_LEVELUP_BURST_SUPER_ARMOR_TIME\x10\x64\x12\x1f\n\x1bHERO_ATTR_LEVELUP_BUFF_MOVE\x10\x65\x12&\n\"HERO_ATTR_LEVELUP_CD_DAMAGE_REDUCE\x10\x66\x12.\n*HERO_ATTR_LEVELUP_DEFENCE_SUPER_ARMOR_BUFF\x10g\x12!\n\x1dHERO_ATTR_LEVELUP_DAMAGE_BUFF\x10h\x12-\n)HERO_ATTR_LEVELUP_ATTACK_SUPER_ARMOR_BUFF\x10i\x12!\n\x1dHERO_ATTR_LEVELUP_INCREASE_SP\x10j\x12&\n\"HERO_ATTR_LEVELUP_MOVE_SUPER_ARMOR\x10k\x12 \n\x1cHERO_ATTR_LEVELUP_LIFE_STEAL\x10l\x12#\n\x1fHERO_ATTR_LEVELUP_DAMAGE_REDUCE\x10m\x12\x1c\n\x18HERO_ATTR_LEVELUP_SUMMON\x10n\x12(\n$HERO_ATTR_LEVELUP_GROUND_SUPER_ARMOR\x10o\x12(\n$HERO_ATTR_LEVELUP_INCREASE_SP_CHANCE\x10p\x12(\n#HERO_ATTR_GROWUP_BASE_ATTR_INCREASE\x10\xc8\x01\x12\x1e\n\x19HERO_ATTR_GROWUP_CRITICAL\x10\xc9\x01\x12&\n!HERO_ATTR_GROWUP_CRITICAL_DEFENCE\x10\xca\x01\x12%\n HERO_ATTR_GROWUP_CRITICAL_EFFECT\x10\xcb\x01\x12-\n(HERO_ATTR_GROWUP_CRITICAL_DEFENCE_EFFECT\x10\xcc\x01\x12\x1b\n\x16HERO_ATTR_BASE_DEFENSE\x10\xaa\x02\x12\x1e\n\x19HERO_ATTR_BASE_EXT_DAMAGE\x10\xab\x02\x12\x1c\n\x17HERO_ATTR_BASE_STRENGTH\x10\xac\x02\x12\x1b\n\x16HERO_ATTR_BASE_STAMINA\x10\xad\x02\x12\x1b\n\x16HERO_ATTR_BASE_ABILITY\x10\xb0\x02\x12\'\n\"HERO_ATTR_BASE_STRENGTH_ROLE_LEVEL\x10\xb1\x02\x12&\n!HERO_ATTR_BASE_STAMINA_ROLE_LEVEL\x10\xb2\x02\x12#\n\x1eHERO_ATTR_BASE_STRENGTH_EMBLEM\x10\xb3\x02\x12\"\n\x1dHERO_ATTR_BASE_STAMINA_EMBLEM\x10\xb4\x02\x12%\n HERO_ATTR_BASE_STRENGTH_RELATION\x10\xb5\x02\x12$\n\x1fHERO_ATTR_BASE_STAMINA_RELATION\x10\xb6\x02\x12)\n$HERO_ATTR_BASE_STRENGTH_BATTLE_TITLE\x10\xb7\x02\x12(\n#HERO_ATTR_BASE_STAMINA_BATTLE_TITLE\x10\xb8\x02\x12\"\n\x1dHERO_ATTR_BASE_STRENGTH_EQUIP\x10\xb9\x02\x12!\n\x1cHERO_ATTR_BASE_STAMINA_EQUIP\x10\xba\x02\x1a\x02\x10\x01*\xc4\x01\n\x0fResEquipPosType\x12\x11\n\rEQUIPPOS_HEAD\x10\x00\x12\x11\n\rEQUIPPOS_HAND\x10\x01\x12\x11\n\rEQUIPPOS_NECK\x10\x02\x12\x11\n\rEQUIPPOS_BODY\x10\x03\x12\x10\n\x0c\x45QUIPPOS_LEG\x10\x04\x12\x13\n\x0f\x45QUIPPOS_WEAPON\x10\x05\x12\x16\n\x12\x45QUIPPOS_MAX_COUNT\x10\x06\x12\x11\n\rEQUIPPOS_NONE\x10\x07\x12\x13\n\x0f\x45QUIPPOS_ALLPOS\x10\t*\xaa\x01\n\x11ResEquipColorType\x12\x14\n\x10\x45QUIPCOLOR_WHITE\x10\x00\x12\x14\n\x10\x45QUIPCOLOR_GREEN\x10\x01\x12\x13\n\x0f\x45QUIPCOLOR_BLUE\x10\x02\x12\x15\n\x11\x45QUIPCOLOR_PURPLE\x10\x03\x12\x15\n\x11\x45QUIPCOLOR_ORANGE\x10\x04\x12\x12\n\x0e\x45QUIPCOLOR_RED\x10\x05\x12\x12\n\x0e\x45QUIPCOLOR_MAX\x10\x06*\xd5\x01\n\x0e\x45numItemOutput\x12\x13\n\x0fOUTPUT_TREASURE\x10\x01\x12\x0f\n\x0bOUTPUT_SHOP\x10\x02\x12\x16\n\x12OUTPUT_BATTLE_SHOP\x10\x03\x12\x15\n\x11OUTPUT_NORAML_PVE\x10\x04\x12\x14\n\x10OUTPUT_ELITE_PVE\x10\x05\x12\x16\n\x12OUTPUT_VIP_PACKAGE\x10\x06\x12\x12\n\x0eOUTPUT_ENDLESS\x10\x07\x12\x13\n\x0fOUTPUT_VIP_SHOP\x10\x08\x12\x17\n\x13OUTPUT_EQUIP_FUSION\x10\t*Y\n\x19ResFriendInviteRewardType\x12\x1c\n\x18INVITEREWARDTYPE_BYCOUNT\x10\x01\x12\x1e\n\x1aINVITEREWARDTYPE_BYDUNGEON\x10\x02')
   ,
   dependencies=[rescommon_pb2.DESCRIPTOR,])
 _sym_db.RegisterFileDescriptor(DESCRIPTOR)
@@ -38,8 +38,8 @@ _ENUM_SERVER_LOCOLIZATION = _descriptor.EnumDescriptor(
   ],
   containing_type=None,
   options=None,
-  serialized_start=30122,
-  serialized_end=30186,
+  serialized_start=34401,
+  serialized_end=34465,
 )
 _sym_db.RegisterEnumDescriptor(_ENUM_SERVER_LOCOLIZATION)
 
@@ -77,12 +77,35 @@ _RESCHAMBEROBJECTIVE = _descriptor.EnumDescriptor(
   ],
   containing_type=None,
   options=None,
-  serialized_start=30189,
-  serialized_end=30413,
+  serialized_start=34468,
+  serialized_end=34692,
 )
 _sym_db.RegisterEnumDescriptor(_RESCHAMBEROBJECTIVE)
 
 ResChamberObjective = enum_type_wrapper.EnumTypeWrapper(_RESCHAMBEROBJECTIVE)
+_RESITEMFUNCTIONTYPE = _descriptor.EnumDescriptor(
+  name='ResItemFunctionType',
+  full_name='ResItemFunctionType',
+  filename=None,
+  file=DESCRIPTOR,
+  values=[
+    _descriptor.EnumValueDescriptor(
+      name='ITEM_FUNC_EXP_ITEM', index=0, number=1,
+      options=None,
+      type=None),
+    _descriptor.EnumValueDescriptor(
+      name='ITEM_FUNC_TALENT_RESOURCE', index=1, number=2,
+      options=None,
+      type=None),
+  ],
+  containing_type=None,
+  options=None,
+  serialized_start=34694,
+  serialized_end=34770,
+)
+_sym_db.RegisterEnumDescriptor(_RESITEMFUNCTIONTYPE)
+
+ResItemFunctionType = enum_type_wrapper.EnumTypeWrapper(_RESITEMFUNCTIONTYPE)
 _RESSKILLSETTYPE = _descriptor.EnumDescriptor(
   name='ResSkillSetType',
   full_name='ResSkillSetType',
@@ -116,8 +139,8 @@ _RESSKILLSETTYPE = _descriptor.EnumDescriptor(
   ],
   containing_type=None,
   options=None,
-  serialized_start=30416,
-  serialized_end=30566,
+  serialized_start=34773,
+  serialized_end=34923,
 )
 _sym_db.RegisterEnumDescriptor(_RESSKILLSETTYPE)
 
@@ -321,62 +344,70 @@ _RESHEROATTRTYPE = _descriptor.EnumDescriptor(
       options=None,
       type=None),
     _descriptor.EnumValueDescriptor(
-      name='HERO_ATTR_BASE_STRENGTH', index=48, number=300,
+      name='HERO_ATTR_BASE_DEFENSE', index=48, number=298,
       options=None,
       type=None),
     _descriptor.EnumValueDescriptor(
-      name='HERO_ATTR_BASE_STAMINA', index=49, number=301,
+      name='HERO_ATTR_BASE_EXT_DAMAGE', index=49, number=299,
       options=None,
       type=None),
     _descriptor.EnumValueDescriptor(
-      name='HERO_ATTR_BASE_ABILITY', index=50, number=304,
+      name='HERO_ATTR_BASE_STRENGTH', index=50, number=300,
       options=None,
       type=None),
     _descriptor.EnumValueDescriptor(
-      name='HERO_ATTR_BASE_STRENGTH_ROLE_LEVEL', index=51, number=305,
+      name='HERO_ATTR_BASE_STAMINA', index=51, number=301,
       options=None,
       type=None),
     _descriptor.EnumValueDescriptor(
-      name='HERO_ATTR_BASE_STAMINA_ROLE_LEVEL', index=52, number=306,
+      name='HERO_ATTR_BASE_ABILITY', index=52, number=304,
       options=None,
       type=None),
     _descriptor.EnumValueDescriptor(
-      name='HERO_ATTR_BASE_STRENGTH_EMBLEM', index=53, number=307,
+      name='HERO_ATTR_BASE_STRENGTH_ROLE_LEVEL', index=53, number=305,
       options=None,
       type=None),
     _descriptor.EnumValueDescriptor(
-      name='HERO_ATTR_BASE_STAMINA_EMBLEM', index=54, number=308,
+      name='HERO_ATTR_BASE_STAMINA_ROLE_LEVEL', index=54, number=306,
       options=None,
       type=None),
     _descriptor.EnumValueDescriptor(
-      name='HERO_ATTR_BASE_STRENGTH_RELATION', index=55, number=309,
+      name='HERO_ATTR_BASE_STRENGTH_EMBLEM', index=55, number=307,
       options=None,
       type=None),
     _descriptor.EnumValueDescriptor(
-      name='HERO_ATTR_BASE_STAMINA_RELATION', index=56, number=310,
+      name='HERO_ATTR_BASE_STAMINA_EMBLEM', index=56, number=308,
       options=None,
       type=None),
     _descriptor.EnumValueDescriptor(
-      name='HERO_ATTR_BASE_STRENGTH_BATTLE_TITLE', index=57, number=311,
+      name='HERO_ATTR_BASE_STRENGTH_RELATION', index=57, number=309,
       options=None,
       type=None),
     _descriptor.EnumValueDescriptor(
-      name='HERO_ATTR_BASE_STAMINA_BATTLE_TITLE', index=58, number=312,
+      name='HERO_ATTR_BASE_STAMINA_RELATION', index=58, number=310,
       options=None,
       type=None),
     _descriptor.EnumValueDescriptor(
-      name='HERO_ATTR_BASE_STRENGTH_EQUIP', index=59, number=313,
+      name='HERO_ATTR_BASE_STRENGTH_BATTLE_TITLE', index=59, number=311,
       options=None,
       type=None),
     _descriptor.EnumValueDescriptor(
-      name='HERO_ATTR_BASE_STAMINA_EQUIP', index=60, number=314,
+      name='HERO_ATTR_BASE_STAMINA_BATTLE_TITLE', index=60, number=312,
+      options=None,
+      type=None),
+    _descriptor.EnumValueDescriptor(
+      name='HERO_ATTR_BASE_STRENGTH_EQUIP', index=61, number=313,
+      options=None,
+      type=None),
+    _descriptor.EnumValueDescriptor(
+      name='HERO_ATTR_BASE_STAMINA_EQUIP', index=62, number=314,
       options=None,
       type=None),
   ],
   containing_type=None,
   options=_descriptor._ParseOptions(descriptor_pb2.EnumOptions(), _b('\020\001')),
-  serialized_start=30569,
-  serialized_end=33161,
+  serialized_start=34926,
+  serialized_end=37579,
 )
 _sym_db.RegisterEnumDescriptor(_RESHEROATTRTYPE)
 
@@ -426,8 +457,8 @@ _RESEQUIPPOSTYPE = _descriptor.EnumDescriptor(
   ],
   containing_type=None,
   options=None,
-  serialized_start=33164,
-  serialized_end=33360,
+  serialized_start=37582,
+  serialized_end=37778,
 )
 _sym_db.RegisterEnumDescriptor(_RESEQUIPPOSTYPE)
 
@@ -469,8 +500,8 @@ _RESEQUIPCOLORTYPE = _descriptor.EnumDescriptor(
   ],
   containing_type=None,
   options=None,
-  serialized_start=33363,
-  serialized_end=33533,
+  serialized_start=37781,
+  serialized_end=37951,
 )
 _sym_db.RegisterEnumDescriptor(_RESEQUIPCOLORTYPE)
 
@@ -513,11 +544,15 @@ _ENUMITEMOUTPUT = _descriptor.EnumDescriptor(
       name='OUTPUT_VIP_SHOP', index=7, number=8,
       options=None,
       type=None),
+    _descriptor.EnumValueDescriptor(
+      name='OUTPUT_EQUIP_FUSION', index=8, number=9,
+      options=None,
+      type=None),
   ],
   containing_type=None,
   options=None,
-  serialized_start=33536,
-  serialized_end=33724,
+  serialized_start=37954,
+  serialized_end=38167,
 )
 _sym_db.RegisterEnumDescriptor(_ENUMITEMOUTPUT)
 
@@ -539,8 +574,8 @@ _RESFRIENDINVITEREWARDTYPE = _descriptor.EnumDescriptor(
   ],
   containing_type=None,
   options=None,
-  serialized_start=33726,
-  serialized_end=33815,
+  serialized_start=38169,
+  serialized_end=38258,
 )
 _sym_db.RegisterEnumDescriptor(_RESFRIENDINVITEREWARDTYPE)
 
@@ -552,6 +587,8 @@ CHAMBER_OBJECTIVE_REACH_WARPPOINT = 3
 CHAMBER_OBJECTIVE_SURVIVAL = 4
 CHAMBER_OBJECTIVE_PROTECT = 5
 CHAMBER_OBJECTIVE_KILL_ALL = 6
+ITEM_FUNC_EXP_ITEM = 1
+ITEM_FUNC_TALENT_RESOURCE = 2
 SKILL_SET_TAP = 1
 SKILL_SET_UP_SLIDE = 2
 SKILL_SET_SLIDE = 3
@@ -606,6 +643,8 @@ HERO_ATTR_GROWUP_CRITICAL = 201
 HERO_ATTR_GROWUP_CRITICAL_DEFENCE = 202
 HERO_ATTR_GROWUP_CRITICAL_EFFECT = 203
 HERO_ATTR_GROWUP_CRITICAL_DEFENCE_EFFECT = 204
+HERO_ATTR_BASE_DEFENSE = 298
+HERO_ATTR_BASE_EXT_DAMAGE = 299
 HERO_ATTR_BASE_STRENGTH = 300
 HERO_ATTR_BASE_STAMINA = 301
 HERO_ATTR_BASE_ABILITY = 304
@@ -643,6 +682,7 @@ OUTPUT_ELITE_PVE = 5
 OUTPUT_VIP_PACKAGE = 6
 OUTPUT_ENDLESS = 7
 OUTPUT_VIP_SHOP = 8
+OUTPUT_EQUIP_FUSION = 9
 INVITEREWARDTYPE_BYCOUNT = 1
 INVITEREWARDTYPE_BYDUNGEON = 2
 
@@ -1905,6 +1945,13 @@ _RESMONSTERGL = _descriptor.Descriptor(
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
+    _descriptor.FieldDescriptor(
+      name='third_color_matching_id', full_name='ResMonsterGL.third_color_matching_id', index=40,
+      number=47, type=13, cpp_type=3, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
   ],
   extensions=[
   ],
@@ -1917,7 +1964,7 @@ _RESMONSTERGL = _descriptor.Descriptor(
   oneofs=[
   ],
   serialized_start=2306,
-  serialized_end=3193,
+  serialized_end=3226,
 )
 
 
@@ -1953,8 +2000,8 @@ _RESPREMONSTER = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=3195,
-  serialized_end=3250,
+  serialized_start=3228,
+  serialized_end=3283,
 )
 
 
@@ -2004,8 +2051,8 @@ _RESGROUPMONSTER = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=3252,
-  serialized_end=3340,
+  serialized_start=3285,
+  serialized_end=3373,
 )
 
 
@@ -2097,8 +2144,8 @@ _RESMONSTERLEVEL = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=3343,
-  serialized_end=3609,
+  serialized_start=3376,
+  serialized_end=3642,
 )
 
 
@@ -2141,8 +2188,8 @@ _RESMONSTERGROUPLEVEL = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=3611,
-  serialized_end=3715,
+  serialized_start=3644,
+  serialized_end=3748,
 )
 
 
@@ -2171,8 +2218,8 @@ _RESGAINSKILL = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=3717,
-  serialized_end=3754,
+  serialized_start=3750,
+  serialized_end=3787,
 )
 
 
@@ -2208,8 +2255,8 @@ _RESROLELEVELGROWUPATTR = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=3756,
-  serialized_end=3814,
+  serialized_start=3789,
+  serialized_end=3847,
 )
 
 
@@ -2280,8 +2327,8 @@ _RESROLELEVEL = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=3817,
-  serialized_end=3990,
+  serialized_start=3850,
+  serialized_end=4023,
 )
 
 
@@ -2380,8 +2427,8 @@ _RESBUILDINGGL = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=3993,
-  serialized_end=4243,
+  serialized_start=4026,
+  serialized_end=4276,
 )
 
 
@@ -2417,8 +2464,8 @@ _RESLEVELCOST = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=4245,
-  serialized_end=4296,
+  serialized_start=4278,
+  serialized_end=4329,
 )
 
 
@@ -2447,8 +2494,8 @@ _RESUNLOCKBUILDING = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=4298,
-  serialized_end=4338,
+  serialized_start=4331,
+  serialized_end=4371,
 )
 
 
@@ -2512,8 +2559,8 @@ _RESBUILDINGLEVEL = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=4341,
-  serialized_end=4524,
+  serialized_start=4374,
+  serialized_end=4557,
 )
 
 
@@ -2591,8 +2638,8 @@ _RESHEROTOWERLEVEL = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=4527,
-  serialized_end=4741,
+  serialized_start=4560,
+  serialized_end=4774,
 )
 
 
@@ -2649,8 +2696,8 @@ _RESISLANDPRODUCT = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=4743,
-  serialized_end=4853,
+  serialized_start=4776,
+  serialized_end=4886,
 )
 
 
@@ -2728,8 +2775,8 @@ _RESISLANDLEVEL = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=4856,
-  serialized_end=5073,
+  serialized_start=4889,
+  serialized_end=5106,
 )
 
 
@@ -2821,8 +2868,8 @@ _RESRESOURCESTORELEVEL = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=5076,
-  serialized_end=5342,
+  serialized_start=5109,
+  serialized_end=5375,
 )
 
 
@@ -2907,8 +2954,8 @@ _RESLEVELARR = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=5345,
-  serialized_end=5672,
+  serialized_start=5378,
+  serialized_end=5705,
 )
 
 
@@ -2937,8 +2984,8 @@ _RESINITHERO = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=5674,
-  serialized_end=5704,
+  serialized_start=5707,
+  serialized_end=5737,
 )
 
 
@@ -2967,8 +3014,8 @@ _RESINITSLOT = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=5706,
-  serialized_end=5736,
+  serialized_start=5739,
+  serialized_end=5769,
 )
 
 
@@ -3011,8 +3058,8 @@ _RESOVERHITPRODUCTION = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=5738,
-  serialized_end=5837,
+  serialized_start=5771,
+  serialized_end=5870,
 )
 
 
@@ -3048,8 +3095,8 @@ _RESINITMONSTER = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=5839,
-  serialized_end=5903,
+  serialized_start=5872,
+  serialized_end=5936,
 )
 
 
@@ -3078,8 +3125,8 @@ _RESINITUNLOCKDUN = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=5905,
-  serialized_end=5939,
+  serialized_start=5938,
+  serialized_end=5972,
 )
 
 
@@ -3115,8 +3162,8 @@ _RESUNLOCKTRAINSLOT = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=5941,
-  serialized_end=5998,
+  serialized_start=5974,
+  serialized_end=6031,
 )
 
 
@@ -3152,8 +3199,8 @@ _RESINITBUILDINGINFO = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=6000,
-  serialized_end=6063,
+  serialized_start=6033,
+  serialized_end=6096,
 )
 
 
@@ -3189,8 +3236,8 @@ _RESBUYWIPEOUTITEMINFO = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=6065,
-  serialized_end=6128,
+  serialized_start=6098,
+  serialized_end=6161,
 )
 
 
@@ -3233,8 +3280,8 @@ _RESPVEUNLOCKINFO = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=6130,
-  serialized_end=6189,
+  serialized_start=6163,
+  serialized_end=6222,
 )
 
 
@@ -3263,8 +3310,8 @@ _RESENDLESSMONSTERSCORE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=6191,
-  serialized_end=6230,
+  serialized_start=6224,
+  serialized_end=6263,
 )
 
 
@@ -3300,8 +3347,8 @@ _RESGAMEPLAYMODEDAMAGERATE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=6232,
-  serialized_end=6304,
+  serialized_start=6265,
+  serialized_end=6337,
 )
 
 
@@ -4257,6 +4304,195 @@ _RESMISCINFO = _descriptor.Descriptor(
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
+    _descriptor.FieldDescriptor(
+      name='gang_battle_search_sect', full_name='ResMiscInfo.gang_battle_search_sect', index=135,
+      number=148, type=13, cpp_type=3, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    _descriptor.FieldDescriptor(
+      name='gang_battle_search_score_diff', full_name='ResMiscInfo.gang_battle_search_score_diff', index=136,
+      number=149, type=13, cpp_type=3, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    _descriptor.FieldDescriptor(
+      name='gang_battle_search_fight_capacity_diff', full_name='ResMiscInfo.gang_battle_search_fight_capacity_diff', index=137,
+      number=150, type=13, cpp_type=3, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    _descriptor.FieldDescriptor(
+      name='endless_available_floor_count', full_name='ResMiscInfo.endless_available_floor_count', index=138,
+      number=153, type=13, cpp_type=3, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    _descriptor.FieldDescriptor(
+      name='boss_rush_assist_hero_tax_rate', full_name='ResMiscInfo.boss_rush_assist_hero_tax_rate', index=139,
+      number=154, type=2, cpp_type=6, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    _descriptor.FieldDescriptor(
+      name='boss_rush_reset_hour', full_name='ResMiscInfo.boss_rush_reset_hour', index=140,
+      number=155, type=13, cpp_type=3, label=3,
+      has_default_value=False, default_value=[],
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    _descriptor.FieldDescriptor(
+      name='assist_hero_unlock_vip_level', full_name='ResMiscInfo.assist_hero_unlock_vip_level', index=141,
+      number=156, type=13, cpp_type=3, label=3,
+      has_default_value=False, default_value=[],
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    _descriptor.FieldDescriptor(
+      name='use_assist_hero_unlock_vip_level', full_name='ResMiscInfo.use_assist_hero_unlock_vip_level', index=142,
+      number=157, type=13, cpp_type=3, label=3,
+      has_default_value=False, default_value=[],
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    _descriptor.FieldDescriptor(
+      name='boss_rush_replace_money', full_name='ResMiscInfo.boss_rush_replace_money', index=143,
+      number=158, type=13, cpp_type=3, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    _descriptor.FieldDescriptor(
+      name='burst_discount_damage', full_name='ResMiscInfo.burst_discount_damage', index=144,
+      number=160, type=13, cpp_type=3, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    _descriptor.FieldDescriptor(
+      name='burst_repeate_max_count', full_name='ResMiscInfo.burst_repeate_max_count', index=145,
+      number=161, type=13, cpp_type=3, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    _descriptor.FieldDescriptor(
+      name='repeate_discount_2', full_name='ResMiscInfo.repeate_discount_2', index=146,
+      number=162, type=13, cpp_type=3, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    _descriptor.FieldDescriptor(
+      name='repeate_discount_3', full_name='ResMiscInfo.repeate_discount_3', index=147,
+      number=163, type=13, cpp_type=3, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    _descriptor.FieldDescriptor(
+      name='repeate_discount_4', full_name='ResMiscInfo.repeate_discount_4', index=148,
+      number=164, type=13, cpp_type=3, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    _descriptor.FieldDescriptor(
+      name='sp_lack_add_repeate_count', full_name='ResMiscInfo.sp_lack_add_repeate_count', index=149,
+      number=165, type=13, cpp_type=3, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    _descriptor.FieldDescriptor(
+      name='hero_buff_superarmor_add', full_name='ResMiscInfo.hero_buff_superarmor_add', index=150,
+      number=167, type=13, cpp_type=3, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    _descriptor.FieldDescriptor(
+      name='burst_common_cd', full_name='ResMiscInfo.burst_common_cd', index=151,
+      number=168, type=13, cpp_type=3, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    _descriptor.FieldDescriptor(
+      name='serial_push_active_time', full_name='ResMiscInfo.serial_push_active_time', index=152,
+      number=169, type=13, cpp_type=3, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    _descriptor.FieldDescriptor(
+      name='serial_push_protect_time', full_name='ResMiscInfo.serial_push_protect_time', index=153,
+      number=170, type=13, cpp_type=3, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    _descriptor.FieldDescriptor(
+      name='hp_steal_max_distance', full_name='ResMiscInfo.hp_steal_max_distance', index=154,
+      number=171, type=13, cpp_type=3, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    _descriptor.FieldDescriptor(
+      name='default_superarmor_discount', full_name='ResMiscInfo.default_superarmor_discount', index=155,
+      number=172, type=13, cpp_type=3, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    _descriptor.FieldDescriptor(
+      name='pve_boss_superarmor_rate', full_name='ResMiscInfo.pve_boss_superarmor_rate', index=156,
+      number=173, type=13, cpp_type=3, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    _descriptor.FieldDescriptor(
+      name='other_boss_superarmor_rate', full_name='ResMiscInfo.other_boss_superarmor_rate', index=157,
+      number=174, type=13, cpp_type=3, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    _descriptor.FieldDescriptor(
+      name='multiplayer_invite_friend_wait_seconds', full_name='ResMiscInfo.multiplayer_invite_friend_wait_seconds', index=158,
+      number=175, type=13, cpp_type=3, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    _descriptor.FieldDescriptor(
+      name='equip_reset_growup_gold_off', full_name='ResMiscInfo.equip_reset_growup_gold_off', index=159,
+      number=176, type=2, cpp_type=6, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    _descriptor.FieldDescriptor(
+      name='equip_reset_growup_equip_off', full_name='ResMiscInfo.equip_reset_growup_equip_off', index=160,
+      number=177, type=2, cpp_type=6, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    _descriptor.FieldDescriptor(
+      name='equip_reset_levelup_exp_off', full_name='ResMiscInfo.equip_reset_levelup_exp_off', index=161,
+      number=178, type=2, cpp_type=6, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
   ],
   extensions=[
   ],
@@ -4268,8 +4504,8 @@ _RESMISCINFO = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=6307,
-  serialized_end=10971,
+  serialized_start=6340,
+  serialized_end=11980,
 )
 
 
@@ -4312,8 +4548,8 @@ _RESWORLDBOSSSTRENGTH = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=10973,
-  serialized_end=11056,
+  serialized_start=11982,
+  serialized_end=12065,
 )
 
 
@@ -4363,8 +4599,8 @@ _RESWORLDBOSSHEROTASK = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=11058,
-  serialized_end=11167,
+  serialized_start=12067,
+  serialized_end=12176,
 )
 
 
@@ -4421,8 +4657,8 @@ _RESWORLDBOSSREFRESHINFO = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=11170,
-  serialized_end=11338,
+  serialized_start=12179,
+  serialized_end=12347,
 )
 
 
@@ -4472,8 +4708,8 @@ _RESWORLDBOSSDAMAGEREWARD = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=11340,
-  serialized_end=11447,
+  serialized_start=12349,
+  serialized_end=12456,
 )
 
 
@@ -4537,8 +4773,117 @@ _RESWORLDBOSSNORMALREWARD = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=11450,
-  serialized_end=11599,
+  serialized_start=12459,
+  serialized_end=12608,
+)
+
+
+_RESMULTIPLAYERPVEHEROBUFF = _descriptor.Descriptor(
+  name='ResMultiplayerPVEHeroBuff',
+  full_name='ResMultiplayerPVEHeroBuff',
+  filename=None,
+  file=DESCRIPTOR,
+  containing_type=None,
+  fields=[
+    _descriptor.FieldDescriptor(
+      name='hero_id', full_name='ResMultiplayerPVEHeroBuff.hero_id', index=0,
+      number=1, type=13, cpp_type=3, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    _descriptor.FieldDescriptor(
+      name='ability', full_name='ResMultiplayerPVEHeroBuff.ability', index=1,
+      number=2, type=13, cpp_type=3, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    _descriptor.FieldDescriptor(
+      name='attr_type', full_name='ResMultiplayerPVEHeroBuff.attr_type', index=2,
+      number=3, type=13, cpp_type=3, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    _descriptor.FieldDescriptor(
+      name='is_ratio', full_name='ResMultiplayerPVEHeroBuff.is_ratio', index=3,
+      number=4, type=8, cpp_type=7, label=1,
+      has_default_value=False, default_value=False,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    _descriptor.FieldDescriptor(
+      name='value', full_name='ResMultiplayerPVEHeroBuff.value', index=4,
+      number=5, type=13, cpp_type=3, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+  ],
+  extensions=[
+  ],
+  nested_types=[],
+  enum_types=[
+  ],
+  options=None,
+  is_extendable=False,
+  extension_ranges=[],
+  oneofs=[
+  ],
+  serialized_start=12610,
+  serialized_end=12723,
+)
+
+
+_RESMULTIPLAYERPVEDUNGEONCONFIG = _descriptor.Descriptor(
+  name='ResMultiplayerPVEDungeonConfig',
+  full_name='ResMultiplayerPVEDungeonConfig',
+  filename=None,
+  file=DESCRIPTOR,
+  containing_type=None,
+  fields=[
+    _descriptor.FieldDescriptor(
+      name='group_id', full_name='ResMultiplayerPVEDungeonConfig.group_id', index=0,
+      number=1, type=13, cpp_type=3, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    _descriptor.FieldDescriptor(
+      name='times_per_day', full_name='ResMultiplayerPVEDungeonConfig.times_per_day', index=1,
+      number=2, type=13, cpp_type=3, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    _descriptor.FieldDescriptor(
+      name='is_open', full_name='ResMultiplayerPVEDungeonConfig.is_open', index=2,
+      number=3, type=8, cpp_type=7, label=3,
+      has_default_value=False, default_value=[],
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    _descriptor.FieldDescriptor(
+      name='dun_id', full_name='ResMultiplayerPVEDungeonConfig.dun_id', index=3,
+      number=4, type=13, cpp_type=3, label=3,
+      has_default_value=False, default_value=[],
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+  ],
+  extensions=[
+  ],
+  nested_types=[],
+  enum_types=[
+  ],
+  options=None,
+  is_extendable=False,
+  extension_ranges=[],
+  oneofs=[
+  ],
+  serialized_start=12725,
+  serialized_end=12831,
 )
 
 
@@ -4616,8 +4961,124 @@ _RESNEWBIEACTIVITY = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=11602,
-  serialized_end=11781,
+  serialized_start=12834,
+  serialized_end=13013,
+)
+
+
+_RESGAMEPLAYMODEACTIVITY = _descriptor.Descriptor(
+  name='ResGamePlayModeActivity',
+  full_name='ResGamePlayModeActivity',
+  filename=None,
+  file=DESCRIPTOR,
+  containing_type=None,
+  fields=[
+    _descriptor.FieldDescriptor(
+      name='dungeon_type', full_name='ResGamePlayModeActivity.dungeon_type', index=0,
+      number=1, type=13, cpp_type=3, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    _descriptor.FieldDescriptor(
+      name='daily_start_time', full_name='ResGamePlayModeActivity.daily_start_time', index=1,
+      number=2, type=13, cpp_type=3, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    _descriptor.FieldDescriptor(
+      name='daily_finish_time', full_name='ResGamePlayModeActivity.daily_finish_time', index=2,
+      number=3, type=13, cpp_type=3, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    _descriptor.FieldDescriptor(
+      name='extra_start_date', full_name='ResGamePlayModeActivity.extra_start_date', index=3,
+      number=4, type=9, cpp_type=9, label=1,
+      has_default_value=False, default_value=_b("").decode('utf-8'),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    _descriptor.FieldDescriptor(
+      name='extra_finish_date', full_name='ResGamePlayModeActivity.extra_finish_date', index=4,
+      number=5, type=9, cpp_type=9, label=1,
+      has_default_value=False, default_value=_b("").decode('utf-8'),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    _descriptor.FieldDescriptor(
+      name='regular_start_week_day', full_name='ResGamePlayModeActivity.regular_start_week_day', index=5,
+      number=6, type=13, cpp_type=3, label=3,
+      has_default_value=False, default_value=[],
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+  ],
+  extensions=[
+  ],
+  nested_types=[],
+  enum_types=[
+  ],
+  options=None,
+  is_extendable=False,
+  extension_ranges=[],
+  oneofs=[
+  ],
+  serialized_start=13016,
+  serialized_end=13201,
+)
+
+
+_RESRANKREWARD = _descriptor.Descriptor(
+  name='ResRankReward',
+  full_name='ResRankReward',
+  filename=None,
+  file=DESCRIPTOR,
+  containing_type=None,
+  fields=[
+    _descriptor.FieldDescriptor(
+      name='rank', full_name='ResRankReward.rank', index=0,
+      number=1, type=13, cpp_type=3, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    _descriptor.FieldDescriptor(
+      name='base_drop_id', full_name='ResRankReward.base_drop_id', index=1,
+      number=2, type=13, cpp_type=3, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    _descriptor.FieldDescriptor(
+      name='reward', full_name='ResRankReward.reward', index=2,
+      number=3, type=11, cpp_type=10, label=3,
+      has_default_value=False, default_value=[],
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    _descriptor.FieldDescriptor(
+      name='rank_id', full_name='ResRankReward.rank_id', index=3,
+      number=4, type=13, cpp_type=3, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+  ],
+  extensions=[
+  ],
+  nested_types=[],
+  enum_types=[
+  ],
+  options=None,
+  is_extendable=False,
+  extension_ranges=[],
+  oneofs=[
+  ],
+  serialized_start=13203,
+  serialized_end=13299,
 )
 
 
@@ -4667,8 +5128,8 @@ _RESHEROEVALUATE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=11783,
-  serialized_end=11885,
+  serialized_start=13301,
+  serialized_end=13403,
 )
 
 
@@ -4774,8 +5235,8 @@ _RESGANGMISCINFO = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=11888,
-  serialized_end=12347,
+  serialized_start=13406,
+  serialized_end=13865,
 )
 
 
@@ -4839,8 +5300,8 @@ _RESGANGBLESS = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=12349,
-  serialized_end=12468,
+  serialized_start=13867,
+  serialized_end=13986,
 )
 
 
@@ -4939,8 +5400,8 @@ _RESGANGLEVELINFO = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=12471,
-  serialized_end=12773,
+  serialized_start=13989,
+  serialized_end=14291,
 )
 
 
@@ -4976,8 +5437,8 @@ _RESGANGBATTLETIME = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=12775,
-  serialized_end=12823,
+  serialized_start=14293,
+  serialized_end=14341,
 )
 
 
@@ -5027,8 +5488,8 @@ _RESGANGBATTLEREWARD = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=12826,
-  serialized_end=12969,
+  serialized_start=14344,
+  serialized_end=14487,
 )
 
 
@@ -5141,8 +5602,8 @@ _RESROBOTBUILD = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=12972,
-  serialized_end=13283,
+  serialized_start=14490,
+  serialized_end=14801,
 )
 
 
@@ -5185,45 +5646,8 @@ _RESPVPROBOT = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=13285,
-  serialized_end=13353,
-)
-
-
-_RESPVPSERCHINFO = _descriptor.Descriptor(
-  name='ResPvpSerchInfo',
-  full_name='ResPvpSerchInfo',
-  filename=None,
-  file=DESCRIPTOR,
-  containing_type=None,
-  fields=[
-    _descriptor.FieldDescriptor(
-      name='low', full_name='ResPvpSerchInfo.low', index=0,
-      number=1, type=13, cpp_type=3, label=1,
-      has_default_value=False, default_value=0,
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      options=None),
-    _descriptor.FieldDescriptor(
-      name='high', full_name='ResPvpSerchInfo.high', index=1,
-      number=2, type=13, cpp_type=3, label=1,
-      has_default_value=False, default_value=0,
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      options=None),
-  ],
-  extensions=[
-  ],
-  nested_types=[],
-  enum_types=[
-  ],
-  options=None,
-  is_extendable=False,
-  extension_ranges=[],
-  oneofs=[
-  ],
-  serialized_start=13355,
-  serialized_end=13399,
+  serialized_start=14803,
+  serialized_end=14871,
 )
 
 
@@ -5262,6 +5686,13 @@ _RESPVPMISC = _descriptor.Descriptor(
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
+    _descriptor.FieldDescriptor(
+      name='search_time_interval', full_name='ResPvpMisc.search_time_interval', index=4,
+      number=5, type=13, cpp_type=3, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
   ],
   extensions=[
   ],
@@ -5273,8 +5704,8 @@ _RESPVPMISC = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=13401,
-  serialized_end=13516,
+  serialized_start=14874,
+  serialized_end=15019,
 )
 
 
@@ -5300,16 +5731,30 @@ _RESPVPSEARCHSECT = _descriptor.Descriptor(
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
-      name='pvp_serch_info', full_name='ResPvpSearchSect.pvp_serch_info', index=2,
-      number=3, type=11, cpp_type=10, label=3,
+      name='pvp_robot_build_info', full_name='ResPvpSearchSect.pvp_robot_build_info', index=2,
+      number=4, type=11, cpp_type=10, label=3,
       has_default_value=False, default_value=[],
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
-      name='pvp_robot_build_info', full_name='ResPvpSearchSect.pvp_robot_build_info', index=3,
-      number=4, type=11, cpp_type=10, label=3,
-      has_default_value=False, default_value=[],
+      name='pvp_search_offset', full_name='ResPvpSearchSect.pvp_search_offset', index=3,
+      number=5, type=2, cpp_type=6, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    _descriptor.FieldDescriptor(
+      name='pvp_search_low', full_name='ResPvpSearchSect.pvp_search_low', index=4,
+      number=6, type=2, cpp_type=6, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    _descriptor.FieldDescriptor(
+      name='pvp_search_high', full_name='ResPvpSearchSect.pvp_search_high', index=5,
+      number=7, type=2, cpp_type=6, label=1,
+      has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
@@ -5324,8 +5769,8 @@ _RESPVPSEARCHSECT = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=13519,
-  serialized_end=13682,
+  serialized_start=15022,
+  serialized_end=15219,
 )
 
 
@@ -5368,8 +5813,8 @@ _RESSTEALBATTLEPRIZEDRAW = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=13684,
-  serialized_end=13777,
+  serialized_start=15221,
+  serialized_end=15314,
 )
 
 
@@ -5405,8 +5850,8 @@ _RESDUNLIMIT = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=13779,
-  serialized_end=13829,
+  serialized_start=15316,
+  serialized_end=15366,
 )
 
 
@@ -5449,8 +5894,8 @@ _RESDUNEVALUATE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=13831,
-  serialized_end=13907,
+  serialized_start=15368,
+  serialized_end=15444,
 )
 
 
@@ -5486,8 +5931,8 @@ _RESRELIVECOST = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=13909,
-  serialized_end=13965,
+  serialized_start=15446,
+  serialized_end=15502,
 )
 
 
@@ -5523,8 +5968,8 @@ _RESPOSINFO = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=13967,
-  serialized_end=14009,
+  serialized_start=15504,
+  serialized_end=15546,
 )
 
 
@@ -5553,8 +5998,8 @@ _RESDROPINDEX = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=14011,
-  serialized_end=14045,
+  serialized_start=15548,
+  serialized_end=15582,
 )
 
 
@@ -5590,8 +6035,8 @@ _RESDUNGEONNEEDITEM = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=14047,
-  serialized_end=14102,
+  serialized_start=15584,
+  serialized_end=15639,
 )
 
 
@@ -5620,8 +6065,8 @@ _RESEVALUATE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=14104,
-  serialized_end=14136,
+  serialized_start=15641,
+  serialized_end=15673,
 )
 
 
@@ -5703,142 +6148,149 @@ _RESDUNGEONINFO = _descriptor.Descriptor(
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
-      name='relive_limit', full_name='ResDungeonInfo.relive_limit', index=10,
-      number=10, type=13, cpp_type=3, label=1,
-      has_default_value=False, default_value=0,
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      options=None),
-    _descriptor.FieldDescriptor(
-      name='relive_cost', full_name='ResDungeonInfo.relive_cost', index=11,
+      name='relive_cost', full_name='ResDungeonInfo.relive_cost', index=10,
       number=11, type=11, cpp_type=10, label=3,
       has_default_value=False, default_value=[],
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
-      name='apperance', full_name='ResDungeonInfo.apperance', index=12,
+      name='apperance', full_name='ResDungeonInfo.apperance', index=11,
       number=12, type=13, cpp_type=3, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
-      name='reward', full_name='ResDungeonInfo.reward', index=13,
+      name='reward', full_name='ResDungeonInfo.reward', index=12,
       number=13, type=11, cpp_type=10, label=3,
       has_default_value=False, default_value=[],
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
-      name='dun_evaluate', full_name='ResDungeonInfo.dun_evaluate', index=14,
+      name='dun_evaluate', full_name='ResDungeonInfo.dun_evaluate', index=13,
       number=14, type=11, cpp_type=10, label=1,
       has_default_value=False, default_value=None,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
-      name='first_drop_info', full_name='ResDungeonInfo.first_drop_info', index=15,
+      name='first_drop_info', full_name='ResDungeonInfo.first_drop_info', index=14,
       number=15, type=11, cpp_type=10, label=3,
       has_default_value=False, default_value=[],
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
-      name='non_first_drop_info', full_name='ResDungeonInfo.non_first_drop_info', index=16,
+      name='non_first_drop_info', full_name='ResDungeonInfo.non_first_drop_info', index=15,
       number=16, type=11, cpp_type=10, label=3,
       has_default_value=False, default_value=[],
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
-      name='wipe_out_drop_info', full_name='ResDungeonInfo.wipe_out_drop_info', index=17,
+      name='wipe_out_drop_info', full_name='ResDungeonInfo.wipe_out_drop_info', index=16,
       number=20, type=11, cpp_type=10, label=3,
       has_default_value=False, default_value=[],
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
-      name='need_item', full_name='ResDungeonInfo.need_item', index=18,
+      name='need_item', full_name='ResDungeonInfo.need_item', index=17,
       number=17, type=11, cpp_type=10, label=3,
       has_default_value=False, default_value=[],
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
-      name='drop_display_info', full_name='ResDungeonInfo.drop_display_info', index=19,
+      name='drop_display_info', full_name='ResDungeonInfo.drop_display_info', index=18,
       number=18, type=11, cpp_type=10, label=3,
       has_default_value=False, default_value=[],
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
-      name='evaluate_info', full_name='ResDungeonInfo.evaluate_info', index=20,
+      name='evaluate_info', full_name='ResDungeonInfo.evaluate_info', index=19,
       number=19, type=11, cpp_type=10, label=3,
       has_default_value=False, default_value=[],
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
-      name='scene_name', full_name='ResDungeonInfo.scene_name', index=21,
-      number=23, type=9, cpp_type=9, label=1,
-      has_default_value=False, default_value=_b("").decode('utf-8'),
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      options=None),
-    _descriptor.FieldDescriptor(
-      name='bgm', full_name='ResDungeonInfo.bgm', index=22,
-      number=24, type=9, cpp_type=9, label=1,
-      has_default_value=False, default_value=_b("").decode('utf-8'),
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      options=None),
-    _descriptor.FieldDescriptor(
-      name='is_elite_drop', full_name='ResDungeonInfo.is_elite_drop', index=23,
+      name='is_elite_drop', full_name='ResDungeonInfo.is_elite_drop', index=20,
       number=26, type=13, cpp_type=3, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
-      name='drop_exp_limit', full_name='ResDungeonInfo.drop_exp_limit', index=24,
+      name='drop_exp_limit', full_name='ResDungeonInfo.drop_exp_limit', index=21,
       number=27, type=13, cpp_type=3, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
-      name='drop_exp_add', full_name='ResDungeonInfo.drop_exp_add', index=25,
+      name='drop_exp_add', full_name='ResDungeonInfo.drop_exp_add', index=22,
       number=28, type=13, cpp_type=3, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
-      name='elite_drop_index', full_name='ResDungeonInfo.elite_drop_index', index=26,
+      name='elite_drop_index', full_name='ResDungeonInfo.elite_drop_index', index=23,
       number=29, type=13, cpp_type=3, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
-      name='display_elite_drop_equip', full_name='ResDungeonInfo.display_elite_drop_equip', index=27,
+      name='display_elite_drop_equip', full_name='ResDungeonInfo.display_elite_drop_equip', index=24,
       number=32, type=13, cpp_type=3, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
-      name='new_role_buff_stamina', full_name='ResDungeonInfo.new_role_buff_stamina', index=28,
+      name='new_role_buff_stamina', full_name='ResDungeonInfo.new_role_buff_stamina', index=25,
       number=33, type=13, cpp_type=3, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
-      name='new_role_buff_strength', full_name='ResDungeonInfo.new_role_buff_strength', index=29,
+      name='new_role_buff_strength', full_name='ResDungeonInfo.new_role_buff_strength', index=26,
       number=34, type=13, cpp_type=3, label=1,
       has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    _descriptor.FieldDescriptor(
+      name='activity_drop_info', full_name='ResDungeonInfo.activity_drop_info', index=27,
+      number=35, type=11, cpp_type=10, label=3,
+      has_default_value=False, default_value=[],
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    _descriptor.FieldDescriptor(
+      name='first_drop_display_info', full_name='ResDungeonInfo.first_drop_display_info', index=28,
+      number=36, type=11, cpp_type=10, label=3,
+      has_default_value=False, default_value=[],
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    _descriptor.FieldDescriptor(
+      name='activity_drop_exp_add', full_name='ResDungeonInfo.activity_drop_exp_add', index=29,
+      number=37, type=13, cpp_type=3, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    _descriptor.FieldDescriptor(
+      name='manual_drop_info', full_name='ResDungeonInfo.manual_drop_info', index=30,
+      number=38, type=11, cpp_type=10, label=3,
+      has_default_value=False, default_value=[],
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
@@ -5853,8 +6305,59 @@ _RESDUNGEONINFO = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=14139,
-  serialized_end=14982,
+  serialized_start=15676,
+  serialized_end=16630,
+)
+
+
+_RESDUNGEONDATA = _descriptor.Descriptor(
+  name='ResDungeonData',
+  full_name='ResDungeonData',
+  filename=None,
+  file=DESCRIPTOR,
+  containing_type=None,
+  fields=[
+    _descriptor.FieldDescriptor(
+      name='dungeon_id', full_name='ResDungeonData.dungeon_id', index=0,
+      number=1, type=13, cpp_type=3, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    _descriptor.FieldDescriptor(
+      name='relive_limit', full_name='ResDungeonData.relive_limit', index=1,
+      number=10, type=13, cpp_type=3, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    _descriptor.FieldDescriptor(
+      name='scene_name', full_name='ResDungeonData.scene_name', index=2,
+      number=23, type=9, cpp_type=9, label=1,
+      has_default_value=False, default_value=_b("").decode('utf-8'),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    _descriptor.FieldDescriptor(
+      name='bgm', full_name='ResDungeonData.bgm', index=3,
+      number=24, type=9, cpp_type=9, label=1,
+      has_default_value=False, default_value=_b("").decode('utf-8'),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+  ],
+  extensions=[
+  ],
+  nested_types=[],
+  enum_types=[
+  ],
+  options=None,
+  is_extendable=False,
+  extension_ranges=[],
+  oneofs=[
+  ],
+  serialized_start=16632,
+  serialized_end=16723,
 )
 
 
@@ -5925,8 +6428,8 @@ _RESDUNGEONFIGHTCAPACITYFIX = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=14985,
-  serialized_end=15153,
+  serialized_start=16726,
+  serialized_end=16894,
 )
 
 
@@ -5962,8 +6465,8 @@ _RESDUNGEONREWARD = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=15155,
-  serialized_end=15221,
+  serialized_start=16896,
+  serialized_end=16962,
 )
 
 
@@ -6041,8 +6544,8 @@ _RESDUNGEONCITY = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=15224,
-  serialized_end=15395,
+  serialized_start=16965,
+  serialized_end=17136,
 )
 
 
@@ -6071,8 +6574,8 @@ _RESPRACTICELIMIT = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=15397,
-  serialized_end=15433,
+  serialized_start=17138,
+  serialized_end=17174,
 )
 
 
@@ -6108,8 +6611,8 @@ _RESPRACTICETARGET = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=15435,
-  serialized_end=15489,
+  serialized_start=17176,
+  serialized_end=17230,
 )
 
 
@@ -6215,8 +6718,8 @@ _RESPRACTICEDUN = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=15492,
-  serialized_end=15777,
+  serialized_start=17233,
+  serialized_end=17518,
 )
 
 
@@ -6245,8 +6748,8 @@ _RESTARGETINFO = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=15779,
-  serialized_end=15813,
+  serialized_start=17520,
+  serialized_end=17554,
 )
 
 
@@ -6366,8 +6869,110 @@ _RESACHIEVEMENT = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=15816,
-  serialized_end=16137,
+  serialized_start=17557,
+  serialized_end=17878,
+)
+
+
+_RESACHIEVEMENTGAMECENTER = _descriptor.Descriptor(
+  name='ResAchievementGameCenter',
+  full_name='ResAchievementGameCenter',
+  filename=None,
+  file=DESCRIPTOR,
+  containing_type=None,
+  fields=[
+    _descriptor.FieldDescriptor(
+      name='type', full_name='ResAchievementGameCenter.type', index=0,
+      number=1, type=13, cpp_type=3, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    _descriptor.FieldDescriptor(
+      name='count', full_name='ResAchievementGameCenter.count', index=1,
+      number=2, type=13, cpp_type=3, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    _descriptor.FieldDescriptor(
+      name='gamecenter_id', full_name='ResAchievementGameCenter.gamecenter_id', index=2,
+      number=3, type=9, cpp_type=9, label=1,
+      has_default_value=False, default_value=_b("").decode('utf-8'),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+  ],
+  extensions=[
+  ],
+  nested_types=[],
+  enum_types=[
+  ],
+  options=None,
+  is_extendable=False,
+  extension_ranges=[],
+  oneofs=[
+  ],
+  serialized_start=17880,
+  serialized_end=17958,
+)
+
+
+_RESSPECIALACTIVITY = _descriptor.Descriptor(
+  name='ResSpecialActivity',
+  full_name='ResSpecialActivity',
+  filename=None,
+  file=DESCRIPTOR,
+  containing_type=None,
+  fields=[
+    _descriptor.FieldDescriptor(
+      name='id', full_name='ResSpecialActivity.id', index=0,
+      number=1, type=13, cpp_type=3, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    _descriptor.FieldDescriptor(
+      name='type', full_name='ResSpecialActivity.type', index=1,
+      number=2, type=13, cpp_type=3, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    _descriptor.FieldDescriptor(
+      name='display_priority', full_name='ResSpecialActivity.display_priority', index=2,
+      number=3, type=13, cpp_type=3, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    _descriptor.FieldDescriptor(
+      name='reward_info', full_name='ResSpecialActivity.reward_info', index=3,
+      number=4, type=11, cpp_type=10, label=3,
+      has_default_value=False, default_value=[],
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    _descriptor.FieldDescriptor(
+      name='target_info', full_name='ResSpecialActivity.target_info', index=4,
+      number=5, type=11, cpp_type=10, label=3,
+      has_default_value=False, default_value=[],
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+  ],
+  extensions=[
+  ],
+  nested_types=[],
+  enum_types=[
+  ],
+  options=None,
+  is_extendable=False,
+  extension_ranges=[],
+  oneofs=[
+  ],
+  serialized_start=17961,
+  serialized_end=18103,
 )
 
 
@@ -6431,8 +7036,8 @@ _RESDAILYTASK = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=16140,
-  serialized_end=16308,
+  serialized_start=18106,
+  serialized_end=18274,
 )
 
 
@@ -6503,8 +7108,8 @@ _RESMAINTASK = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=16311,
-  serialized_end=16476,
+  serialized_start=18277,
+  serialized_end=18442,
 )
 
 
@@ -6540,8 +7145,8 @@ _RESLOADINGPICPARAM = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=16478,
-  serialized_end=16537,
+  serialized_start=18444,
+  serialized_end=18503,
 )
 
 
@@ -6577,8 +7182,8 @@ _RESLOADINGPIC = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=16539,
-  serialized_end=16620,
+  serialized_start=18505,
+  serialized_end=18586,
 )
 
 
@@ -6621,8 +7226,8 @@ _RESCOLORMATCHINGPARAM = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=16622,
-  serialized_end=16710,
+  serialized_start=18588,
+  serialized_end=18676,
 )
 
 
@@ -6658,8 +7263,8 @@ _RESCOLORMATCHING = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=16712,
-  serialized_end=16781,
+  serialized_start=18678,
+  serialized_end=18747,
 )
 
 
@@ -6702,8 +7307,8 @@ _RESONLINEBATTLETITLE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=16783,
-  serialized_end=16856,
+  serialized_start=18749,
+  serialized_end=18822,
 )
 
 
@@ -6753,8 +7358,8 @@ _RESOFFLINEBATTLETITLE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=16858,
-  serialized_end=16970,
+  serialized_start=18824,
+  serialized_end=18936,
 )
 
 
@@ -6811,8 +7416,8 @@ _RESSCENEINFO = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=16972,
-  serialized_end=17079,
+  serialized_start=18938,
+  serialized_end=19045,
 )
 
 
@@ -6932,8 +7537,8 @@ _RESDUNGEONMONSTER = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=17082,
-  serialized_end=17437,
+  serialized_start=19048,
+  serialized_end=19403,
 )
 
 
@@ -7074,8 +7679,8 @@ _RESDUNGEONROOM = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=17440,
-  serialized_end=17881,
+  serialized_start=19406,
+  serialized_end=19847,
 )
 
 
@@ -7101,8 +7706,22 @@ _RESCONLOGINREWARD = _descriptor.Descriptor(
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
-      name='reward', full_name='ResConLoginReward.reward', index=2,
-      number=3, type=11, cpp_type=10, label=3,
+      name='muti_vip_limit', full_name='ResConLoginReward.muti_vip_limit', index=2,
+      number=3, type=13, cpp_type=3, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    _descriptor.FieldDescriptor(
+      name='muti_num', full_name='ResConLoginReward.muti_num', index=3,
+      number=4, type=13, cpp_type=3, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    _descriptor.FieldDescriptor(
+      name='reward', full_name='ResConLoginReward.reward', index=4,
+      number=5, type=11, cpp_type=10, label=3,
       has_default_value=False, default_value=[],
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
@@ -7118,8 +7737,8 @@ _RESCONLOGINREWARD = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=17883,
-  serialized_end=17978,
+  serialized_start=19850,
+  serialized_end=19987,
 )
 
 
@@ -7155,8 +7774,8 @@ _RESHERODROPINFO = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=17980,
-  serialized_end=18031,
+  serialized_start=19989,
+  serialized_end=20040,
 )
 
 
@@ -7213,8 +7832,8 @@ _RESSCORETORESOURCE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=18034,
-  serialized_end=18208,
+  serialized_start=20043,
+  serialized_end=20217,
 )
 
 
@@ -7271,8 +7890,8 @@ _RESTIMETOMONEY = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=18210,
-  serialized_end=18315,
+  serialized_start=20219,
+  serialized_end=20324,
 )
 
 
@@ -7462,8 +8081,8 @@ _RESSKILLDATA = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=18318,
-  serialized_end=18870,
+  serialized_start=20327,
+  serialized_end=20879,
 )
 
 
@@ -7541,8 +8160,8 @@ _RESSKILLTREE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=18873,
-  serialized_end=19087,
+  serialized_start=20882,
+  serialized_end=21096,
 )
 
 
@@ -7599,8 +8218,8 @@ _RESRANKVALINFO = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=19089,
-  serialized_end=19194,
+  serialized_start=21098,
+  serialized_end=21203,
 )
 
 
@@ -7702,6 +8321,48 @@ _RESRANKINFO = _descriptor.Descriptor(
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
+    _descriptor.FieldDescriptor(
+      name='rank_flush_param', full_name='ResRankInfo.rank_flush_param', index=13,
+      number=14, type=13, cpp_type=3, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    _descriptor.FieldDescriptor(
+      name='reward_dispatch_type', full_name='ResRankInfo.reward_dispatch_type', index=14,
+      number=15, type=13, cpp_type=3, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    _descriptor.FieldDescriptor(
+      name='reward_dispatch_param', full_name='ResRankInfo.reward_dispatch_param', index=15,
+      number=16, type=13, cpp_type=3, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    _descriptor.FieldDescriptor(
+      name='reward_dispatch_hour', full_name='ResRankInfo.reward_dispatch_hour', index=16,
+      number=17, type=13, cpp_type=3, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    _descriptor.FieldDescriptor(
+      name='reward_dispatch_min', full_name='ResRankInfo.reward_dispatch_min', index=17,
+      number=18, type=13, cpp_type=3, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    _descriptor.FieldDescriptor(
+      name='reward_dispatch_sec', full_name='ResRankInfo.reward_dispatch_sec', index=18,
+      number=19, type=13, cpp_type=3, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
   ],
   extensions=[
   ],
@@ -7713,8 +8374,8 @@ _RESRANKINFO = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=19197,
-  serialized_end=19516,
+  serialized_start=21206,
+  serialized_end=21700,
 )
 
 
@@ -7750,8 +8411,8 @@ _RESRANKBATTLESECTINFO = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=19518,
-  serialized_end=19576,
+  serialized_start=21702,
+  serialized_end=21760,
 )
 
 
@@ -7794,8 +8455,8 @@ _RESRANKBATTLEINFO = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=19578,
-  serialized_end=19653,
+  serialized_start=21762,
+  serialized_end=21837,
 )
 
 
@@ -7838,8 +8499,8 @@ _RESRANKBATTLESECT = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=19655,
-  serialized_end=19754,
+  serialized_start=21839,
+  serialized_end=21938,
 )
 
 
@@ -7878,6 +8539,13 @@ _RESRANKBATTLEREWARD = _descriptor.Descriptor(
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
+    _descriptor.FieldDescriptor(
+      name='activity_reward', full_name='ResRankBattleReward.activity_reward', index=4,
+      number=5, type=11, cpp_type=10, label=3,
+      has_default_value=False, default_value=[],
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
   ],
   extensions=[
   ],
@@ -7889,8 +8557,8 @@ _RESRANKBATTLEREWARD = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=19757,
-  serialized_end=19897,
+  serialized_start=21941,
+  serialized_end=22122,
 )
 
 
@@ -7954,8 +8622,8 @@ _RESRANKBATTLEROBOTHEROINFO = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=19900,
-  serialized_end=20052,
+  serialized_start=22125,
+  serialized_end=22277,
 )
 
 
@@ -8005,8 +8673,8 @@ _RESRANKBATTLEROBOT = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=20054,
-  serialized_end=20175,
+  serialized_start=22279,
+  serialized_end=22400,
 )
 
 
@@ -8056,8 +8724,8 @@ _RESONLINEBATTLEROBOTHEROINFO = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=20177,
-  serialized_end=20293,
+  serialized_start=22402,
+  serialized_end=22518,
 )
 
 
@@ -8107,8 +8775,8 @@ _RESONLINEBATTLEROBOT = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=20295,
-  serialized_end=20415,
+  serialized_start=22520,
+  serialized_end=22640,
 )
 
 
@@ -8158,8 +8826,8 @@ _RESONLINEBATTLESHOPBOX = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=20417,
-  serialized_end=20505,
+  serialized_start=22642,
+  serialized_end=22730,
 )
 
 
@@ -8202,8 +8870,8 @@ _RESGROWUPCONDITION = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=20507,
-  serialized_end=20600,
+  serialized_start=22732,
+  serialized_end=22825,
 )
 
 
@@ -8267,8 +8935,8 @@ _RESGROWUP = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=20603,
-  serialized_end=20791,
+  serialized_start=22828,
+  serialized_end=23016,
 )
 
 
@@ -8395,8 +9063,8 @@ _RESPURCHASE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=20794,
-  serialized_end=21140,
+  serialized_start=23019,
+  serialized_end=23365,
 )
 
 
@@ -8453,8 +9121,8 @@ _RESMONTHCARD = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=21142,
-  serialized_end=21238,
+  serialized_start=23367,
+  serialized_end=23463,
 )
 
 
@@ -8560,8 +9228,8 @@ _RESBUSINESSREFRESH = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=21241,
-  serialized_end=21535,
+  serialized_start=23466,
+  serialized_end=23760,
 )
 
 
@@ -8632,8 +9300,8 @@ _RESGROUPBUY = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=21538,
-  serialized_end=21705,
+  serialized_start=23763,
+  serialized_end=23930,
 )
 
 
@@ -8676,8 +9344,8 @@ _RESGROWTHFUNDREWARD = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=21707,
-  serialized_end=21790,
+  serialized_start=23932,
+  serialized_end=24015,
 )
 
 
@@ -8755,8 +9423,8 @@ _RESCUMULATERECHARGE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=21793,
-  serialized_end=22023,
+  serialized_start=24018,
+  serialized_end=24248,
 )
 
 
@@ -8792,8 +9460,8 @@ _RESSLOTINFO = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=22025,
-  serialized_end=22075,
+  serialized_start=24250,
+  serialized_end=24300,
 )
 
 
@@ -8822,8 +9490,8 @@ _RESPARAMINFO = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=22077,
-  serialized_end=22110,
+  serialized_start=24302,
+  serialized_end=24335,
 )
 
 
@@ -8859,8 +9527,8 @@ _RESGIFTGROUP = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=22112,
-  serialized_end=22172,
+  serialized_start=24337,
+  serialized_end=24397,
 )
 
 
@@ -8913,6 +9581,27 @@ _RESGIFT = _descriptor.Descriptor(
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
+    _descriptor.FieldDescriptor(
+      name='pre_group_id', full_name='ResGift.pre_group_id', index=6,
+      number=7, type=13, cpp_type=3, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    _descriptor.FieldDescriptor(
+      name='platform', full_name='ResGift.platform', index=7,
+      number=8, type=13, cpp_type=3, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    _descriptor.FieldDescriptor(
+      name='channel_id', full_name='ResGift.channel_id', index=8,
+      number=9, type=9, cpp_type=9, label=1,
+      has_default_value=False, default_value=_b("").decode('utf-8'),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
   ],
   extensions=[
   ],
@@ -8924,8 +9613,8 @@ _RESGIFT = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=22174,
-  serialized_end=22300,
+  serialized_start=24400,
+  serialized_end=24586,
 )
 
 
@@ -9076,6 +9765,13 @@ _RESITEM = _descriptor.Descriptor(
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
+    _descriptor.FieldDescriptor(
+      name='system_billboard', full_name='ResItem.system_billboard', index=20,
+      number=21, type=8, cpp_type=7, label=1,
+      has_default_value=False, default_value=False,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
   ],
   extensions=[
   ],
@@ -9087,8 +9783,8 @@ _RESITEM = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=22303,
-  serialized_end=22723,
+  serialized_start=24589,
+  serialized_end=25035,
 )
 
 
@@ -9113,6 +9809,13 @@ _RESEQUIPATTRRATIO = _descriptor.Descriptor(
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
+    _descriptor.FieldDescriptor(
+      name='relative_attr_type', full_name='ResEquipAttrRatio.relative_attr_type', index=2,
+      number=3, type=13, cpp_type=3, label=2,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
   ],
   extensions=[
   ],
@@ -9124,8 +9827,8 @@ _RESEQUIPATTRRATIO = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=22725,
-  serialized_end=22778,
+  serialized_start=25037,
+  serialized_end=25118,
 )
 
 
@@ -9182,8 +9885,8 @@ _RESEQUIPATTR = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=22780,
-  serialized_end=22907,
+  serialized_start=25120,
+  serialized_end=25247,
 )
 
 
@@ -9404,6 +10107,20 @@ _RESEQUIP = _descriptor.Descriptor(
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
+    _descriptor.FieldDescriptor(
+      name='box_color', full_name='ResEquip.box_color', index=30,
+      number=33, type=13, cpp_type=3, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    _descriptor.FieldDescriptor(
+      name='box_type', full_name='ResEquip.box_type', index=31,
+      number=34, type=13, cpp_type=3, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
   ],
   extensions=[
   ],
@@ -9415,8 +10132,8 @@ _RESEQUIP = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=22910,
-  serialized_end=23625,
+  serialized_start=25250,
+  serialized_end=26002,
 )
 
 
@@ -9480,8 +10197,8 @@ _RESPURIFYATTR = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=23628,
-  serialized_end=23784,
+  serialized_start=26005,
+  serialized_end=26161,
 )
 
 
@@ -9517,8 +10234,8 @@ _RESPURIFYLEVEL = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=23786,
-  serialized_end=23857,
+  serialized_start=26163,
+  serialized_end=26234,
 )
 
 
@@ -9561,8 +10278,8 @@ _RESEQUIPBOX = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=23859,
-  serialized_end=23924,
+  serialized_start=26236,
+  serialized_end=26301,
 )
 
 
@@ -9615,6 +10332,13 @@ _RESEQUIPGROWUP = _descriptor.Descriptor(
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
+    _descriptor.FieldDescriptor(
+      name='reset_money', full_name='ResEquipGrowup.reset_money', index=6,
+      number=7, type=13, cpp_type=3, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
   ],
   extensions=[
   ],
@@ -9626,8 +10350,8 @@ _RESEQUIPGROWUP = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=23927,
-  serialized_end=24090,
+  serialized_start=26304,
+  serialized_end=26488,
 )
 
 
@@ -9670,8 +10394,8 @@ _RESEQUIPWAKEUPCONDITION = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=24092,
-  serialized_end=24168,
+  serialized_start=26490,
+  serialized_end=26566,
 )
 
 
@@ -9707,8 +10431,8 @@ _RESEQUIPGROWUPCONDITION = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=24170,
-  serialized_end=24233,
+  serialized_start=26568,
+  serialized_end=26631,
 )
 
 
@@ -9775,6 +10499,13 @@ _RESEQUIPCOLOR = _descriptor.Descriptor(
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
+    _descriptor.FieldDescriptor(
+      name='exp_to_reset_money', full_name='ResEquipColor.exp_to_reset_money', index=8,
+      number=10, type=2, cpp_type=6, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
   ],
   extensions=[
   ],
@@ -9786,8 +10517,8 @@ _RESEQUIPCOLOR = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=24236,
-  serialized_end=24486,
+  serialized_start=26634,
+  serialized_end=26912,
 )
 
 
@@ -9823,8 +10554,8 @@ _RESEQUIPCOLORLEVELUP = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=24488,
-  serialized_end=24543,
+  serialized_start=26914,
+  serialized_end=26969,
 )
 
 
@@ -9881,8 +10612,8 @@ _RESEQUIPCOLORLEVELATTR = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=24545,
-  serialized_end=24647,
+  serialized_start=26971,
+  serialized_end=27073,
 )
 
 
@@ -9932,8 +10663,8 @@ _RESEQUIPRECOMMEND = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=24649,
-  serialized_end=24755,
+  serialized_start=27075,
+  serialized_end=27181,
 )
 
 
@@ -10025,8 +10756,8 @@ _RESEQUIPFUSIONTARGETINFO = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=24758,
-  serialized_end=25043,
+  serialized_start=27184,
+  serialized_end=27469,
 )
 
 
@@ -10069,8 +10800,8 @@ _RESEQUIPFUSION = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=25045,
-  serialized_end=25169,
+  serialized_start=27471,
+  serialized_end=27595,
 )
 
 
@@ -10127,8 +10858,8 @@ _RESDROPELEM = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=25171,
-  serialized_end=25294,
+  serialized_start=27597,
+  serialized_end=27720,
 )
 
 
@@ -10164,8 +10895,59 @@ _RESBASEDROP = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=25296,
-  serialized_end=25359,
+  serialized_start=27722,
+  serialized_end=27785,
+)
+
+
+_RESWORLDDROP = _descriptor.Descriptor(
+  name='ResWorldDrop',
+  full_name='ResWorldDrop',
+  filename=None,
+  file=DESCRIPTOR,
+  containing_type=None,
+  fields=[
+    _descriptor.FieldDescriptor(
+      name='id', full_name='ResWorldDrop.id', index=0,
+      number=1, type=13, cpp_type=3, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    _descriptor.FieldDescriptor(
+      name='beg_time', full_name='ResWorldDrop.beg_time', index=1,
+      number=2, type=9, cpp_type=9, label=1,
+      has_default_value=False, default_value=_b("").decode('utf-8'),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    _descriptor.FieldDescriptor(
+      name='end_time', full_name='ResWorldDrop.end_time', index=2,
+      number=3, type=9, cpp_type=9, label=1,
+      has_default_value=False, default_value=_b("").decode('utf-8'),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    _descriptor.FieldDescriptor(
+      name='drop_limit', full_name='ResWorldDrop.drop_limit', index=3,
+      number=4, type=11, cpp_type=10, label=3,
+      has_default_value=False, default_value=[],
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+  ],
+  extensions=[
+  ],
+  nested_types=[],
+  enum_types=[
+  ],
+  options=None,
+  is_extendable=False,
+  extension_ranges=[],
+  oneofs=[
+  ],
+  serialized_start=27787,
+  serialized_end=27881,
 )
 
 
@@ -10208,8 +10990,8 @@ _RESRETRIEVEINFO = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=25361,
-  serialized_end=25438,
+  serialized_start=27883,
+  serialized_end=27960,
 )
 
 
@@ -10238,8 +11020,8 @@ _RESPARAM = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=25440,
-  serialized_end=25469,
+  serialized_start=27962,
+  serialized_end=27991,
 )
 
 
@@ -10275,8 +11057,8 @@ _RESUSERTIPDATA = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=25471,
-  serialized_end=25516,
+  serialized_start=27993,
+  serialized_end=28038,
 )
 
 
@@ -10347,8 +11129,8 @@ _RESMAILCONTENT = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=25519,
-  serialized_end=25668,
+  serialized_start=28041,
+  serialized_end=28190,
 )
 
 
@@ -10391,8 +11173,8 @@ _RESPRIZEDRAWHERO = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=25670,
-  serialized_end=25754,
+  serialized_start=28192,
+  serialized_end=28276,
 )
 
 
@@ -10561,8 +11343,8 @@ _RESPRIZEDRAW = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=25757,
-  serialized_end=26494,
+  serialized_start=28279,
+  serialized_end=29016,
 )
 
 
@@ -10605,8 +11387,8 @@ _RESSHOPREFRESH = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=26496,
-  serialized_end=26552,
+  serialized_start=29018,
+  serialized_end=29074,
 )
 
 
@@ -10642,8 +11424,8 @@ _RESBUYRATE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=26554,
-  serialized_end=26606,
+  serialized_start=29076,
+  serialized_end=29128,
 )
 
 
@@ -10721,8 +11503,8 @@ _RESREFRESHPRICE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=26609,
-  serialized_end=26777,
+  serialized_start=29131,
+  serialized_end=29299,
 )
 
 
@@ -10842,8 +11624,8 @@ _RESSHOPGOODS = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=26780,
-  serialized_end=27113,
+  serialized_start=29302,
+  serialized_end=29635,
 )
 
 
@@ -10879,8 +11661,8 @@ _RESSHOPRANDOMGOODSINFO = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=27115,
-  serialized_end=27184,
+  serialized_start=29637,
+  serialized_end=29706,
 )
 
 
@@ -10937,8 +11719,8 @@ _RESSHOPRANDOM = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=27187,
-  serialized_end=27328,
+  serialized_start=29709,
+  serialized_end=29850,
 )
 
 
@@ -10981,8 +11763,8 @@ _RESTUTORIALRULE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=27330,
-  serialized_end=27411,
+  serialized_start=29852,
+  serialized_end=29933,
 )
 
 
@@ -11025,8 +11807,8 @@ _RESBIBLE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=27413,
-  serialized_end=27490,
+  serialized_start=29935,
+  serialized_end=30012,
 )
 
 
@@ -11062,8 +11844,8 @@ _RESFRIENDRECOMMENDINFO = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=27492,
-  serialized_end=27543,
+  serialized_start=30014,
+  serialized_end=30065,
 )
 
 
@@ -11106,8 +11888,8 @@ _RESFRIENDRECOMMENDSECT = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=27546,
-  serialized_end=27676,
+  serialized_start=30068,
+  serialized_end=30198,
 )
 
 
@@ -11311,8 +12093,8 @@ _RESTUTORIALINFO = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=27679,
-  serialized_end=28429,
+  serialized_start=30201,
+  serialized_end=30951,
 )
 
 
@@ -11383,8 +12165,8 @@ _RESHEROIMAGEINFO = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=28432,
-  serialized_end=28657,
+  serialized_start=30954,
+  serialized_end=31179,
 )
 
 
@@ -11427,8 +12209,8 @@ _ST_ACTION_DESC = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=28659,
-  serialized_end=28729,
+  serialized_start=31181,
+  serialized_end=31251,
 )
 
 
@@ -11485,8 +12267,8 @@ _ST_BATTLE_ROBOT_INFO = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=28731,
-  serialized_end=28854,
+  serialized_start=31253,
+  serialized_end=31376,
 )
 
 
@@ -11543,8 +12325,8 @@ _RESROLECOMMANDLIST = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=28856,
-  serialized_end=28974,
+  serialized_start=31378,
+  serialized_end=31496,
 )
 
 
@@ -11587,8 +12369,8 @@ _RESDAILYTIME = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=28976,
-  serialized_end=29036,
+  serialized_start=31498,
+  serialized_end=31558,
 )
 
 
@@ -11680,8 +12462,8 @@ _RESACTIVITY = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=29039,
-  serialized_end=29303,
+  serialized_start=31561,
+  serialized_end=31825,
 )
 
 
@@ -11731,8 +12513,8 @@ _RESNAMEEXTRA = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=29305,
-  serialized_end=29378,
+  serialized_start=31827,
+  serialized_end=31900,
 )
 
 
@@ -11775,8 +12557,8 @@ _RESZONEINFO = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=29380,
-  serialized_end=29436,
+  serialized_start=31902,
+  serialized_end=31958,
 )
 
 
@@ -11812,8 +12594,8 @@ _RESWORLDZONE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=29438,
-  serialized_end=29503,
+  serialized_start=31960,
+  serialized_end=32025,
 )
 
 
@@ -11884,8 +12666,8 @@ _RESROLEATTRIBUTE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=29505,
-  serialized_end=29631,
+  serialized_start=32027,
+  serialized_end=32153,
 )
 
 
@@ -11928,8 +12710,8 @@ _RESCUMULATECOST = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=29633,
-  serialized_end=29713,
+  serialized_start=32155,
+  serialized_end=32235,
 )
 
 
@@ -11948,7 +12730,7 @@ _RESBOSSRUSHCHAPTER = _descriptor.Descriptor(
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
-      name='unlock_dun_id', full_name='ResBossRushChapter.unlock_dun_id', index=1,
+      name='unlock_hero_level', full_name='ResBossRushChapter.unlock_hero_level', index=1,
       number=2, type=13, cpp_type=3, label=2,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
@@ -11965,8 +12747,59 @@ _RESBOSSRUSHCHAPTER = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=29715,
-  serialized_end=29778,
+  serialized_start=32237,
+  serialized_end=32304,
+)
+
+
+_RESBOSSRUSHDROP = _descriptor.Descriptor(
+  name='ResBossRushDrop',
+  full_name='ResBossRushDrop',
+  filename=None,
+  file=DESCRIPTOR,
+  containing_type=None,
+  fields=[
+    _descriptor.FieldDescriptor(
+      name='monster_id', full_name='ResBossRushDrop.monster_id', index=0,
+      number=1, type=13, cpp_type=3, label=2,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    _descriptor.FieldDescriptor(
+      name='drop_info', full_name='ResBossRushDrop.drop_info', index=1,
+      number=2, type=11, cpp_type=10, label=3,
+      has_default_value=False, default_value=[],
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    _descriptor.FieldDescriptor(
+      name='drop_index', full_name='ResBossRushDrop.drop_index', index=2,
+      number=3, type=11, cpp_type=10, label=3,
+      has_default_value=False, default_value=[],
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    _descriptor.FieldDescriptor(
+      name='activity_drop_index', full_name='ResBossRushDrop.activity_drop_index', index=3,
+      number=4, type=11, cpp_type=10, label=3,
+      has_default_value=False, default_value=[],
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+  ],
+  extensions=[
+  ],
+  nested_types=[],
+  enum_types=[
+  ],
+  options=None,
+  is_extendable=False,
+  extension_ranges=[],
+  oneofs=[
+  ],
+  serialized_start=32307,
+  serialized_end=32454,
 )
 
 
@@ -12012,6 +12845,20 @@ _RESBOSSRUSHDUNGEON = _descriptor.Descriptor(
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
+    _descriptor.FieldDescriptor(
+      name='boss_stage_monster_id', full_name='ResBossRushDungeon.boss_stage_monster_id', index=5,
+      number=6, type=13, cpp_type=3, label=3,
+      has_default_value=False, default_value=[],
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    _descriptor.FieldDescriptor(
+      name='monster_rank', full_name='ResBossRushDungeon.monster_rank', index=6,
+      number=7, type=13, cpp_type=3, label=3,
+      has_default_value=False, default_value=[],
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
   ],
   extensions=[
   ],
@@ -12023,8 +12870,8 @@ _RESBOSSRUSHDUNGEON = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=29780,
-  serialized_end=29895,
+  serialized_start=32457,
+  serialized_end=32625,
 )
 
 
@@ -12042,6 +12889,27 @@ _RESFIRSTRECHARGE = _descriptor.Descriptor(
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
+    _descriptor.FieldDescriptor(
+      name='id', full_name='ResFirstRecharge.id', index=1,
+      number=2, type=13, cpp_type=3, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    _descriptor.FieldDescriptor(
+      name='target_recharge_cnt', full_name='ResFirstRecharge.target_recharge_cnt', index=2,
+      number=3, type=13, cpp_type=3, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    _descriptor.FieldDescriptor(
+      name='reward_equivalent', full_name='ResFirstRecharge.reward_equivalent', index=3,
+      number=4, type=13, cpp_type=3, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
   ],
   extensions=[
   ],
@@ -12053,8 +12921,8 @@ _RESFIRSTRECHARGE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=29897,
-  serialized_end=29943,
+  serialized_start=32627,
+  serialized_end=32741,
 )
 
 
@@ -12097,8 +12965,8 @@ _RESDAILYRECHARGE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=29945,
-  serialized_end=30032,
+  serialized_start=32743,
+  serialized_end=32830,
 )
 
 
@@ -12141,8 +13009,646 @@ _RESSECTRECHARGE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=30034,
-  serialized_end=30120,
+  serialized_start=32832,
+  serialized_end=32918,
+)
+
+
+_RESTALENTATTR = _descriptor.Descriptor(
+  name='ResTalentAttr',
+  full_name='ResTalentAttr',
+  filename=None,
+  file=DESCRIPTOR,
+  containing_type=None,
+  fields=[
+    _descriptor.FieldDescriptor(
+      name='attr_type', full_name='ResTalentAttr.attr_type', index=0,
+      number=1, type=13, cpp_type=3, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    _descriptor.FieldDescriptor(
+      name='attr_value', full_name='ResTalentAttr.attr_value', index=1,
+      number=2, type=13, cpp_type=3, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    _descriptor.FieldDescriptor(
+      name='is_ratio', full_name='ResTalentAttr.is_ratio', index=2,
+      number=3, type=8, cpp_type=7, label=1,
+      has_default_value=False, default_value=False,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+  ],
+  extensions=[
+  ],
+  nested_types=[],
+  enum_types=[
+  ],
+  options=None,
+  is_extendable=False,
+  extension_ranges=[],
+  oneofs=[
+  ],
+  serialized_start=32920,
+  serialized_end=32992,
+)
+
+
+_RESTALENTACTIVEINFO = _descriptor.Descriptor(
+  name='ResTalentActiveInfo',
+  full_name='ResTalentActiveInfo',
+  filename=None,
+  file=DESCRIPTOR,
+  containing_type=None,
+  fields=[
+    _descriptor.FieldDescriptor(
+      name='active_res_type', full_name='ResTalentActiveInfo.active_res_type', index=0,
+      number=1, type=13, cpp_type=3, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    _descriptor.FieldDescriptor(
+      name='active_res_id', full_name='ResTalentActiveInfo.active_res_id', index=1,
+      number=2, type=13, cpp_type=3, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    _descriptor.FieldDescriptor(
+      name='active_res_count', full_name='ResTalentActiveInfo.active_res_count', index=2,
+      number=3, type=13, cpp_type=3, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+  ],
+  extensions=[
+  ],
+  nested_types=[],
+  enum_types=[
+  ],
+  options=None,
+  is_extendable=False,
+  extension_ranges=[],
+  oneofs=[
+  ],
+  serialized_start=32994,
+  serialized_end=33089,
+)
+
+
+_RESTALENT = _descriptor.Descriptor(
+  name='ResTalent',
+  full_name='ResTalent',
+  filename=None,
+  file=DESCRIPTOR,
+  containing_type=None,
+  fields=[
+    _descriptor.FieldDescriptor(
+      name='hero_id', full_name='ResTalent.hero_id', index=0,
+      number=1, type=13, cpp_type=3, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    _descriptor.FieldDescriptor(
+      name='talent_id', full_name='ResTalent.talent_id', index=1,
+      number=2, type=13, cpp_type=3, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    _descriptor.FieldDescriptor(
+      name='hero_lv_limit', full_name='ResTalent.hero_lv_limit', index=2,
+      number=3, type=13, cpp_type=3, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    _descriptor.FieldDescriptor(
+      name='level', full_name='ResTalent.level', index=3,
+      number=4, type=13, cpp_type=3, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    _descriptor.FieldDescriptor(
+      name='type', full_name='ResTalent.type', index=4,
+      number=5, type=13, cpp_type=3, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    _descriptor.FieldDescriptor(
+      name='stamina', full_name='ResTalent.stamina', index=5,
+      number=6, type=13, cpp_type=3, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    _descriptor.FieldDescriptor(
+      name='strength', full_name='ResTalent.strength', index=6,
+      number=7, type=13, cpp_type=3, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    _descriptor.FieldDescriptor(
+      name='talent_attr', full_name='ResTalent.talent_attr', index=7,
+      number=8, type=11, cpp_type=10, label=3,
+      has_default_value=False, default_value=[],
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    _descriptor.FieldDescriptor(
+      name='talent_active_info', full_name='ResTalent.talent_active_info', index=8,
+      number=9, type=11, cpp_type=10, label=3,
+      has_default_value=False, default_value=[],
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+  ],
+  extensions=[
+  ],
+  nested_types=[],
+  enum_types=[
+  ],
+  options=None,
+  is_extendable=False,
+  extension_ranges=[],
+  oneofs=[
+  ],
+  serialized_start=33092,
+  serialized_end=33313,
+)
+
+
+_RESASSISTANTHERORENT = _descriptor.Descriptor(
+  name='ResAssistantHeroRent',
+  full_name='ResAssistantHeroRent',
+  filename=None,
+  file=DESCRIPTOR,
+  containing_type=None,
+  fields=[
+    _descriptor.FieldDescriptor(
+      name='high_fight_capacity', full_name='ResAssistantHeroRent.high_fight_capacity', index=0,
+      number=1, type=13, cpp_type=3, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    _descriptor.FieldDescriptor(
+      name='gold_per_hour', full_name='ResAssistantHeroRent.gold_per_hour', index=1,
+      number=2, type=2, cpp_type=6, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    _descriptor.FieldDescriptor(
+      name='rent_gold_per_fight_capacity', full_name='ResAssistantHeroRent.rent_gold_per_fight_capacity', index=2,
+      number=3, type=2, cpp_type=6, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    _descriptor.FieldDescriptor(
+      name='rent_gold_tax', full_name='ResAssistantHeroRent.rent_gold_tax', index=3,
+      number=4, type=2, cpp_type=6, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+  ],
+  extensions=[
+  ],
+  nested_types=[],
+  enum_types=[
+  ],
+  options=None,
+  is_extendable=False,
+  extension_ranges=[],
+  oneofs=[
+  ],
+  serialized_start=33316,
+  serialized_end=33451,
+)
+
+
+_RESCOUNTTOREWARD = _descriptor.Descriptor(
+  name='ResCountToReward',
+  full_name='ResCountToReward',
+  filename=None,
+  file=DESCRIPTOR,
+  containing_type=None,
+  fields=[
+    _descriptor.FieldDescriptor(
+      name='type', full_name='ResCountToReward.type', index=0,
+      number=1, type=13, cpp_type=3, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    _descriptor.FieldDescriptor(
+      name='id', full_name='ResCountToReward.id', index=1,
+      number=2, type=13, cpp_type=3, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    _descriptor.FieldDescriptor(
+      name='count', full_name='ResCountToReward.count', index=2,
+      number=3, type=13, cpp_type=3, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    _descriptor.FieldDescriptor(
+      name='reward', full_name='ResCountToReward.reward', index=3,
+      number=4, type=11, cpp_type=10, label=3,
+      has_default_value=False, default_value=[],
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+  ],
+  extensions=[
+  ],
+  nested_types=[],
+  enum_types=[
+  ],
+  options=None,
+  is_extendable=False,
+  extension_ranges=[],
+  oneofs=[
+  ],
+  serialized_start=33453,
+  serialized_end=33540,
+)
+
+
+_RESWORLDACTIVITY = _descriptor.Descriptor(
+  name='ResWorldActivity',
+  full_name='ResWorldActivity',
+  filename=None,
+  file=DESCRIPTOR,
+  containing_type=None,
+  fields=[
+    _descriptor.FieldDescriptor(
+      name='activity_id', full_name='ResWorldActivity.activity_id', index=0,
+      number=1, type=13, cpp_type=3, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    _descriptor.FieldDescriptor(
+      name='trigger_type', full_name='ResWorldActivity.trigger_type', index=1,
+      number=2, type=13, cpp_type=3, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    _descriptor.FieldDescriptor(
+      name='param_1', full_name='ResWorldActivity.param_1', index=2,
+      number=3, type=13, cpp_type=3, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    _descriptor.FieldDescriptor(
+      name='param_2', full_name='ResWorldActivity.param_2', index=3,
+      number=4, type=13, cpp_type=3, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    _descriptor.FieldDescriptor(
+      name='param_3', full_name='ResWorldActivity.param_3', index=4,
+      number=5, type=13, cpp_type=3, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    _descriptor.FieldDescriptor(
+      name='param_4', full_name='ResWorldActivity.param_4', index=5,
+      number=6, type=13, cpp_type=3, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    _descriptor.FieldDescriptor(
+      name='param_5', full_name='ResWorldActivity.param_5', index=6,
+      number=7, type=13, cpp_type=3, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    _descriptor.FieldDescriptor(
+      name='param_6', full_name='ResWorldActivity.param_6', index=7,
+      number=8, type=13, cpp_type=3, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    _descriptor.FieldDescriptor(
+      name='param_7', full_name='ResWorldActivity.param_7', index=8,
+      number=9, type=13, cpp_type=3, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    _descriptor.FieldDescriptor(
+      name='param_8', full_name='ResWorldActivity.param_8', index=9,
+      number=10, type=13, cpp_type=3, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+  ],
+  extensions=[
+  ],
+  nested_types=[],
+  enum_types=[
+  ],
+  options=None,
+  is_extendable=False,
+  extension_ranges=[],
+  oneofs=[
+  ],
+  serialized_start=33543,
+  serialized_end=33740,
+)
+
+
+_RESACTIVITYORDER = _descriptor.Descriptor(
+  name='ResActivityOrder',
+  full_name='ResActivityOrder',
+  filename=None,
+  file=DESCRIPTOR,
+  containing_type=None,
+  fields=[
+    _descriptor.FieldDescriptor(
+      name='id', full_name='ResActivityOrder.id', index=0,
+      number=1, type=13, cpp_type=3, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    _descriptor.FieldDescriptor(
+      name='order', full_name='ResActivityOrder.order', index=1,
+      number=2, type=13, cpp_type=3, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    _descriptor.FieldDescriptor(
+      name='shortcut_order', full_name='ResActivityOrder.shortcut_order', index=2,
+      number=3, type=13, cpp_type=3, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+  ],
+  extensions=[
+  ],
+  nested_types=[],
+  enum_types=[
+  ],
+  options=None,
+  is_extendable=False,
+  extension_ranges=[],
+  oneofs=[
+  ],
+  serialized_start=33742,
+  serialized_end=33811,
+)
+
+
+_RESACTIVITYRESOURCEBOX = _descriptor.Descriptor(
+  name='ResActivityResourceBox',
+  full_name='ResActivityResourceBox',
+  filename=None,
+  file=DESCRIPTOR,
+  containing_type=None,
+  fields=[
+    _descriptor.FieldDescriptor(
+      name='type', full_name='ResActivityResourceBox.type', index=0,
+      number=1, type=13, cpp_type=3, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    _descriptor.FieldDescriptor(
+      name='limit', full_name='ResActivityResourceBox.limit', index=1,
+      number=2, type=13, cpp_type=3, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    _descriptor.FieldDescriptor(
+      name='count_low', full_name='ResActivityResourceBox.count_low', index=2,
+      number=3, type=13, cpp_type=3, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    _descriptor.FieldDescriptor(
+      name='count_high', full_name='ResActivityResourceBox.count_high', index=3,
+      number=4, type=13, cpp_type=3, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    _descriptor.FieldDescriptor(
+      name='material_box_drop_index', full_name='ResActivityResourceBox.material_box_drop_index', index=4,
+      number=5, type=13, cpp_type=3, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    _descriptor.FieldDescriptor(
+      name='price', full_name='ResActivityResourceBox.price', index=5,
+      number=6, type=11, cpp_type=10, label=1,
+      has_default_value=False, default_value=None,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+  ],
+  extensions=[
+  ],
+  nested_types=[],
+  enum_types=[
+  ],
+  options=None,
+  is_extendable=False,
+  extension_ranges=[],
+  oneofs=[
+  ],
+  serialized_start=33814,
+  serialized_end=33968,
+)
+
+
+_RESERRORMSG = _descriptor.Descriptor(
+  name='ResErrorMsg',
+  full_name='ResErrorMsg',
+  filename=None,
+  file=DESCRIPTOR,
+  containing_type=None,
+  fields=[
+    _descriptor.FieldDescriptor(
+      name='id', full_name='ResErrorMsg.id', index=0,
+      number=1, type=13, cpp_type=3, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    _descriptor.FieldDescriptor(
+      name='error_msg', full_name='ResErrorMsg.error_msg', index=1,
+      number=2, type=9, cpp_type=9, label=1,
+      has_default_value=False, default_value=_b("").decode('utf-8'),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+  ],
+  extensions=[
+  ],
+  nested_types=[],
+  enum_types=[
+  ],
+  options=None,
+  is_extendable=False,
+  extension_ranges=[],
+  oneofs=[
+  ],
+  serialized_start=33970,
+  serialized_end=34014,
+)
+
+
+_RESACTIVITYDISCOUNT = _descriptor.Descriptor(
+  name='ResActivityDiscount',
+  full_name='ResActivityDiscount',
+  filename=None,
+  file=DESCRIPTOR,
+  containing_type=None,
+  fields=[
+    _descriptor.FieldDescriptor(
+      name='coin_single_discount', full_name='ResActivityDiscount.coin_single_discount', index=0,
+      number=1, type=13, cpp_type=3, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    _descriptor.FieldDescriptor(
+      name='coin_multi_discount', full_name='ResActivityDiscount.coin_multi_discount', index=1,
+      number=2, type=13, cpp_type=3, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    _descriptor.FieldDescriptor(
+      name='money_single_discount', full_name='ResActivityDiscount.money_single_discount', index=2,
+      number=3, type=13, cpp_type=3, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    _descriptor.FieldDescriptor(
+      name='money_multi_discount', full_name='ResActivityDiscount.money_multi_discount', index=3,
+      number=4, type=13, cpp_type=3, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    _descriptor.FieldDescriptor(
+      name='coin_single_discount_no_activity', full_name='ResActivityDiscount.coin_single_discount_no_activity', index=4,
+      number=5, type=13, cpp_type=3, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    _descriptor.FieldDescriptor(
+      name='coin_multi_discount_no_activity', full_name='ResActivityDiscount.coin_multi_discount_no_activity', index=5,
+      number=6, type=13, cpp_type=3, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    _descriptor.FieldDescriptor(
+      name='money_single_discount_no_activity', full_name='ResActivityDiscount.money_single_discount_no_activity', index=6,
+      number=7, type=13, cpp_type=3, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    _descriptor.FieldDescriptor(
+      name='money_multi_discount_no_activity', full_name='ResActivityDiscount.money_multi_discount_no_activity', index=7,
+      number=8, type=13, cpp_type=3, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+  ],
+  extensions=[
+  ],
+  nested_types=[],
+  enum_types=[
+  ],
+  options=None,
+  is_extendable=False,
+  extension_ranges=[],
+  oneofs=[
+  ],
+  serialized_start=34017,
+  serialized_end=34326,
+)
+
+
+_RESGAMEMODEENTRANCE = _descriptor.Descriptor(
+  name='ResGameModeEntrance',
+  full_name='ResGameModeEntrance',
+  filename=None,
+  file=DESCRIPTOR,
+  containing_type=None,
+  fields=[
+    _descriptor.FieldDescriptor(
+      name='id', full_name='ResGameModeEntrance.id', index=0,
+      number=1, type=13, cpp_type=3, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    _descriptor.FieldDescriptor(
+      name='row_index', full_name='ResGameModeEntrance.row_index', index=1,
+      number=2, type=13, cpp_type=3, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    _descriptor.FieldDescriptor(
+      name='col_index', full_name='ResGameModeEntrance.col_index', index=2,
+      number=3, type=13, cpp_type=3, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+  ],
+  extensions=[
+  ],
+  nested_types=[],
+  enum_types=[
+  ],
+  options=None,
+  is_extendable=False,
+  extension_ranges=[],
+  oneofs=[
+  ],
+  serialized_start=34328,
+  serialized_end=34399,
 )
 
 _RESROLEGL.fields_by_name['init_skill_id'].message_type = _RESINITSKILL
@@ -12173,10 +13679,10 @@ _RESWORLDBOSSHEROTASK.fields_by_name['reward'].message_type = rescommon_pb2._RES
 _RESWORLDBOSSREFRESHINFO.fields_by_name['kill_reward_preview'].message_type = rescommon_pb2._RESREWARD
 _RESWORLDBOSSDAMAGEREWARD.fields_by_name['reward'].message_type = rescommon_pb2._RESREWARD
 _RESNEWBIEACTIVITY.fields_by_name['reward_info'].message_type = rescommon_pb2._RESREWARD
+_RESRANKREWARD.fields_by_name['reward'].message_type = rescommon_pb2._RESREWARD
 _RESGANGBATTLEREWARD.fields_by_name['win_reward'].message_type = rescommon_pb2._ST_REWARD_RES
 _RESGANGBATTLEREWARD.fields_by_name['lose_reward'].message_type = rescommon_pb2._ST_REWARD_RES
 _RESGANGBATTLEREWARD.fields_by_name['draw_reward'].message_type = rescommon_pb2._ST_REWARD_RES
-_RESPVPSEARCHSECT.fields_by_name['pvp_serch_info'].message_type = _RESPVPSERCHINFO
 _RESPVPSEARCHSECT.fields_by_name['pvp_robot_build_info'].message_type = _RESROBOTBUILD
 _RESDUNGEONINFO.fields_by_name['relive_cost'].message_type = _RESRELIVECOST
 _RESDUNGEONINFO.fields_by_name['reward'].message_type = rescommon_pb2._RESREWARD
@@ -12187,12 +13693,17 @@ _RESDUNGEONINFO.fields_by_name['wipe_out_drop_info'].message_type = _RESDROPINDE
 _RESDUNGEONINFO.fields_by_name['need_item'].message_type = _RESDUNGEONNEEDITEM
 _RESDUNGEONINFO.fields_by_name['drop_display_info'].message_type = _RESRESOURCEINFO
 _RESDUNGEONINFO.fields_by_name['evaluate_info'].message_type = _RESEVALUATE
+_RESDUNGEONINFO.fields_by_name['activity_drop_info'].message_type = _RESDROPINDEX
+_RESDUNGEONINFO.fields_by_name['first_drop_display_info'].message_type = _RESRESOURCEINFO
+_RESDUNGEONINFO.fields_by_name['manual_drop_info'].message_type = _RESDROPINDEX
 _RESDUNGEONREWARD.fields_by_name['reward_info'].message_type = rescommon_pb2._RESREWARD
 _RESPRACTICEDUN.fields_by_name['dun_limit'].message_type = _RESPRACTICELIMIT
 _RESPRACTICEDUN.fields_by_name['dun_reward'].message_type = rescommon_pb2._RESREWARD
 _RESPRACTICEDUN.fields_by_name['dun_target'].message_type = _RESPRACTICETARGET
 _RESACHIEVEMENT.fields_by_name['reward_info'].message_type = rescommon_pb2._RESREWARD
 _RESACHIEVEMENT.fields_by_name['target_info'].message_type = _RESTARGETINFO
+_RESSPECIALACTIVITY.fields_by_name['reward_info'].message_type = rescommon_pb2._RESREWARD
+_RESSPECIALACTIVITY.fields_by_name['target_info'].message_type = _RESTARGETINFO
 _RESDAILYTASK.fields_by_name['reward_info'].message_type = rescommon_pb2._RESREWARD
 _RESDAILYTASK.fields_by_name['target_info'].message_type = _RESTARGETINFO
 _RESMAINTASK.fields_by_name['reward_info'].message_type = rescommon_pb2._RESREWARD
@@ -12209,6 +13720,7 @@ _RESRANKINFO.fields_by_name['rank_val_info'].message_type = _RESRANKVALINFO
 _RESRANKBATTLESECT.fields_by_name['rank_sect'].message_type = _RESRANKBATTLESECTINFO
 _RESRANKBATTLEREWARD.fields_by_name['every_day_reward'].message_type = rescommon_pb2._ST_REWARD_RES
 _RESRANKBATTLEREWARD.fields_by_name['promote_reward'].message_type = rescommon_pb2._ST_REWARD_RES
+_RESRANKBATTLEREWARD.fields_by_name['activity_reward'].message_type = rescommon_pb2._ST_REWARD_RES
 _RESRANKBATTLEROBOT.fields_by_name['hero_info'].message_type = _RESRANKBATTLEROBOTHEROINFO
 _RESONLINEBATTLEROBOT.fields_by_name['hero_info'].message_type = _RESONLINEBATTLEROBOTHEROINFO
 _RESGROWUP.fields_by_name['grow_up_condition'].message_type = _RESGROWUPCONDITION
@@ -12233,6 +13745,7 @@ _RESEQUIPCOLOR.fields_by_name['wakeup_condition'].message_type = _RESEQUIPWAKEUP
 _RESEQUIPCOLOR.fields_by_name['growup_condition'].message_type = _RESEQUIPGROWUPCONDITION
 _RESEQUIPFUSION.fields_by_name['fusion_target_info'].message_type = _RESEQUIPFUSIONTARGETINFO
 _RESBASEDROP.fields_by_name['drop_elem'].message_type = _RESDROPELEM
+_RESWORLDDROP.fields_by_name['drop_limit'].message_type = rescommon_pb2._RESREWARD
 _RESRETRIEVEINFO.fields_by_name['parameter'].message_type = _RESPARAMINFO
 _RESPRIZEDRAW.fields_by_name['first_prize_draw_drop_index'].message_type = _RESDROPINDEXEX
 _RESPRIZEDRAW.fields_by_name['prize_draw_drop_index'].message_type = _RESDROPINDEXEX
@@ -12246,9 +13759,16 @@ _RESACTIVITY.fields_by_name['daily_beg_time'].message_type = _RESDAILYTIME
 _RESACTIVITY.fields_by_name['daily_end_time'].message_type = _RESDAILYTIME
 _RESWORLDZONE.fields_by_name['zone_info'].message_type = _RESZONEINFO
 _RESCUMULATECOST.fields_by_name['reward'].message_type = rescommon_pb2._RESREWARD
+_RESBOSSRUSHDROP.fields_by_name['drop_info'].message_type = rescommon_pb2._RESREWARD
+_RESBOSSRUSHDROP.fields_by_name['drop_index'].message_type = _RESDROPINDEX
+_RESBOSSRUSHDROP.fields_by_name['activity_drop_index'].message_type = _RESDROPINDEX
 _RESFIRSTRECHARGE.fields_by_name['reward'].message_type = rescommon_pb2._RESREWARD
 _RESDAILYRECHARGE.fields_by_name['reward'].message_type = rescommon_pb2._RESREWARD
 _RESSECTRECHARGE.fields_by_name['reward'].message_type = rescommon_pb2._RESREWARD
+_RESTALENT.fields_by_name['talent_attr'].message_type = _RESTALENTATTR
+_RESTALENT.fields_by_name['talent_active_info'].message_type = _RESTALENTACTIVEINFO
+_RESCOUNTTOREWARD.fields_by_name['reward'].message_type = rescommon_pb2._RESREWARD
+_RESACTIVITYRESOURCEBOX.fields_by_name['price'].message_type = rescommon_pb2._RESMATERIAL
 DESCRIPTOR.message_types_by_name['ResServerLocalization'] = _RESSERVERLOCALIZATION
 DESCRIPTOR.message_types_by_name['ResDropIndexEx'] = _RESDROPINDEXEX
 DESCRIPTOR.message_types_by_name['ResResourceInfo'] = _RESRESOURCEINFO
@@ -12299,7 +13819,11 @@ DESCRIPTOR.message_types_by_name['ResWorldBossHeroTask'] = _RESWORLDBOSSHEROTASK
 DESCRIPTOR.message_types_by_name['ResWorldBossRefreshInfo'] = _RESWORLDBOSSREFRESHINFO
 DESCRIPTOR.message_types_by_name['ResWorldBossDamageReward'] = _RESWORLDBOSSDAMAGEREWARD
 DESCRIPTOR.message_types_by_name['ResWorldBossNormalReward'] = _RESWORLDBOSSNORMALREWARD
+DESCRIPTOR.message_types_by_name['ResMultiplayerPVEHeroBuff'] = _RESMULTIPLAYERPVEHEROBUFF
+DESCRIPTOR.message_types_by_name['ResMultiplayerPVEDungeonConfig'] = _RESMULTIPLAYERPVEDUNGEONCONFIG
 DESCRIPTOR.message_types_by_name['ResNewbieActivity'] = _RESNEWBIEACTIVITY
+DESCRIPTOR.message_types_by_name['ResGamePlayModeActivity'] = _RESGAMEPLAYMODEACTIVITY
+DESCRIPTOR.message_types_by_name['ResRankReward'] = _RESRANKREWARD
 DESCRIPTOR.message_types_by_name['ResHeroEvaluate'] = _RESHEROEVALUATE
 DESCRIPTOR.message_types_by_name['ResGangMiscInfo'] = _RESGANGMISCINFO
 DESCRIPTOR.message_types_by_name['ResGangBless'] = _RESGANGBLESS
@@ -12308,7 +13832,6 @@ DESCRIPTOR.message_types_by_name['ResGangBattleTime'] = _RESGANGBATTLETIME
 DESCRIPTOR.message_types_by_name['ResGangBattleReward'] = _RESGANGBATTLEREWARD
 DESCRIPTOR.message_types_by_name['ResRobotBuild'] = _RESROBOTBUILD
 DESCRIPTOR.message_types_by_name['ResPvpRobot'] = _RESPVPROBOT
-DESCRIPTOR.message_types_by_name['ResPvpSerchInfo'] = _RESPVPSERCHINFO
 DESCRIPTOR.message_types_by_name['ResPvpMisc'] = _RESPVPMISC
 DESCRIPTOR.message_types_by_name['ResPvpSearchSect'] = _RESPVPSEARCHSECT
 DESCRIPTOR.message_types_by_name['ResStealBattlePrizeDraw'] = _RESSTEALBATTLEPRIZEDRAW
@@ -12320,6 +13843,7 @@ DESCRIPTOR.message_types_by_name['ResDropIndex'] = _RESDROPINDEX
 DESCRIPTOR.message_types_by_name['ResDungeonNeedItem'] = _RESDUNGEONNEEDITEM
 DESCRIPTOR.message_types_by_name['ResEvaluate'] = _RESEVALUATE
 DESCRIPTOR.message_types_by_name['ResDungeonInfo'] = _RESDUNGEONINFO
+DESCRIPTOR.message_types_by_name['ResDungeonData'] = _RESDUNGEONDATA
 DESCRIPTOR.message_types_by_name['ResDungeonFightCapacityFix'] = _RESDUNGEONFIGHTCAPACITYFIX
 DESCRIPTOR.message_types_by_name['ResDungeonReward'] = _RESDUNGEONREWARD
 DESCRIPTOR.message_types_by_name['ResDungeonCity'] = _RESDUNGEONCITY
@@ -12328,6 +13852,8 @@ DESCRIPTOR.message_types_by_name['ResPracticeTarget'] = _RESPRACTICETARGET
 DESCRIPTOR.message_types_by_name['ResPracticeDun'] = _RESPRACTICEDUN
 DESCRIPTOR.message_types_by_name['ResTargetInfo'] = _RESTARGETINFO
 DESCRIPTOR.message_types_by_name['ResAchievement'] = _RESACHIEVEMENT
+DESCRIPTOR.message_types_by_name['ResAchievementGameCenter'] = _RESACHIEVEMENTGAMECENTER
+DESCRIPTOR.message_types_by_name['ResSpecialActivity'] = _RESSPECIALACTIVITY
 DESCRIPTOR.message_types_by_name['ResDailyTask'] = _RESDAILYTASK
 DESCRIPTOR.message_types_by_name['ResMainTask'] = _RESMAINTASK
 DESCRIPTOR.message_types_by_name['ResLoadingPicParam'] = _RESLOADINGPICPARAM
@@ -12386,6 +13912,7 @@ DESCRIPTOR.message_types_by_name['ResEquipFusionTargetInfo'] = _RESEQUIPFUSIONTA
 DESCRIPTOR.message_types_by_name['ResEquipFusion'] = _RESEQUIPFUSION
 DESCRIPTOR.message_types_by_name['ResDropElem'] = _RESDROPELEM
 DESCRIPTOR.message_types_by_name['ResBaseDrop'] = _RESBASEDROP
+DESCRIPTOR.message_types_by_name['ResWorldDrop'] = _RESWORLDDROP
 DESCRIPTOR.message_types_by_name['ResRetrieveInfo'] = _RESRETRIEVEINFO
 DESCRIPTOR.message_types_by_name['ResParam'] = _RESPARAM
 DESCRIPTOR.message_types_by_name['ResUserTipData'] = _RESUSERTIPDATA
@@ -12415,12 +13942,25 @@ DESCRIPTOR.message_types_by_name['ResWorldZone'] = _RESWORLDZONE
 DESCRIPTOR.message_types_by_name['ResRoleAttribute'] = _RESROLEATTRIBUTE
 DESCRIPTOR.message_types_by_name['ResCumulateCost'] = _RESCUMULATECOST
 DESCRIPTOR.message_types_by_name['ResBossRushChapter'] = _RESBOSSRUSHCHAPTER
+DESCRIPTOR.message_types_by_name['ResBossRushDrop'] = _RESBOSSRUSHDROP
 DESCRIPTOR.message_types_by_name['ResBossRushDungeon'] = _RESBOSSRUSHDUNGEON
 DESCRIPTOR.message_types_by_name['ResFirstRecharge'] = _RESFIRSTRECHARGE
 DESCRIPTOR.message_types_by_name['ResDailyRecharge'] = _RESDAILYRECHARGE
 DESCRIPTOR.message_types_by_name['ResSectRecharge'] = _RESSECTRECHARGE
+DESCRIPTOR.message_types_by_name['ResTalentAttr'] = _RESTALENTATTR
+DESCRIPTOR.message_types_by_name['ResTalentActiveInfo'] = _RESTALENTACTIVEINFO
+DESCRIPTOR.message_types_by_name['ResTalent'] = _RESTALENT
+DESCRIPTOR.message_types_by_name['ResAssistantHeroRent'] = _RESASSISTANTHERORENT
+DESCRIPTOR.message_types_by_name['ResCountToReward'] = _RESCOUNTTOREWARD
+DESCRIPTOR.message_types_by_name['ResWorldActivity'] = _RESWORLDACTIVITY
+DESCRIPTOR.message_types_by_name['ResActivityOrder'] = _RESACTIVITYORDER
+DESCRIPTOR.message_types_by_name['ResActivityResourceBox'] = _RESACTIVITYRESOURCEBOX
+DESCRIPTOR.message_types_by_name['ResErrorMsg'] = _RESERRORMSG
+DESCRIPTOR.message_types_by_name['ResActivityDiscount'] = _RESACTIVITYDISCOUNT
+DESCRIPTOR.message_types_by_name['ResGameModeEntrance'] = _RESGAMEMODEENTRANCE
 DESCRIPTOR.enum_types_by_name['ENUM_SERVER_LOCOLIZATION'] = _ENUM_SERVER_LOCOLIZATION
 DESCRIPTOR.enum_types_by_name['ResChamberObjective'] = _RESCHAMBEROBJECTIVE
+DESCRIPTOR.enum_types_by_name['ResItemFunctionType'] = _RESITEMFUNCTIONTYPE
 DESCRIPTOR.enum_types_by_name['ResSkillSetType'] = _RESSKILLSETTYPE
 DESCRIPTOR.enum_types_by_name['ResHeroAttrType'] = _RESHEROATTRTYPE
 DESCRIPTOR.enum_types_by_name['ResEquipPosType'] = _RESEQUIPPOSTYPE
@@ -12778,12 +14318,40 @@ ResWorldBossNormalReward = _reflection.GeneratedProtocolMessageType('ResWorldBos
   ))
 _sym_db.RegisterMessage(ResWorldBossNormalReward)
 
+ResMultiplayerPVEHeroBuff = _reflection.GeneratedProtocolMessageType('ResMultiplayerPVEHeroBuff', (_message.Message,), dict(
+  DESCRIPTOR = _RESMULTIPLAYERPVEHEROBUFF,
+  __module__ = 'res_pb2'
+  # @@protoc_insertion_point(class_scope:ResMultiplayerPVEHeroBuff)
+  ))
+_sym_db.RegisterMessage(ResMultiplayerPVEHeroBuff)
+
+ResMultiplayerPVEDungeonConfig = _reflection.GeneratedProtocolMessageType('ResMultiplayerPVEDungeonConfig', (_message.Message,), dict(
+  DESCRIPTOR = _RESMULTIPLAYERPVEDUNGEONCONFIG,
+  __module__ = 'res_pb2'
+  # @@protoc_insertion_point(class_scope:ResMultiplayerPVEDungeonConfig)
+  ))
+_sym_db.RegisterMessage(ResMultiplayerPVEDungeonConfig)
+
 ResNewbieActivity = _reflection.GeneratedProtocolMessageType('ResNewbieActivity', (_message.Message,), dict(
   DESCRIPTOR = _RESNEWBIEACTIVITY,
   __module__ = 'res_pb2'
   # @@protoc_insertion_point(class_scope:ResNewbieActivity)
   ))
 _sym_db.RegisterMessage(ResNewbieActivity)
+
+ResGamePlayModeActivity = _reflection.GeneratedProtocolMessageType('ResGamePlayModeActivity', (_message.Message,), dict(
+  DESCRIPTOR = _RESGAMEPLAYMODEACTIVITY,
+  __module__ = 'res_pb2'
+  # @@protoc_insertion_point(class_scope:ResGamePlayModeActivity)
+  ))
+_sym_db.RegisterMessage(ResGamePlayModeActivity)
+
+ResRankReward = _reflection.GeneratedProtocolMessageType('ResRankReward', (_message.Message,), dict(
+  DESCRIPTOR = _RESRANKREWARD,
+  __module__ = 'res_pb2'
+  # @@protoc_insertion_point(class_scope:ResRankReward)
+  ))
+_sym_db.RegisterMessage(ResRankReward)
 
 ResHeroEvaluate = _reflection.GeneratedProtocolMessageType('ResHeroEvaluate', (_message.Message,), dict(
   DESCRIPTOR = _RESHEROEVALUATE,
@@ -12840,13 +14408,6 @@ ResPvpRobot = _reflection.GeneratedProtocolMessageType('ResPvpRobot', (_message.
   # @@protoc_insertion_point(class_scope:ResPvpRobot)
   ))
 _sym_db.RegisterMessage(ResPvpRobot)
-
-ResPvpSerchInfo = _reflection.GeneratedProtocolMessageType('ResPvpSerchInfo', (_message.Message,), dict(
-  DESCRIPTOR = _RESPVPSERCHINFO,
-  __module__ = 'res_pb2'
-  # @@protoc_insertion_point(class_scope:ResPvpSerchInfo)
-  ))
-_sym_db.RegisterMessage(ResPvpSerchInfo)
 
 ResPvpMisc = _reflection.GeneratedProtocolMessageType('ResPvpMisc', (_message.Message,), dict(
   DESCRIPTOR = _RESPVPMISC,
@@ -12925,6 +14486,13 @@ ResDungeonInfo = _reflection.GeneratedProtocolMessageType('ResDungeonInfo', (_me
   ))
 _sym_db.RegisterMessage(ResDungeonInfo)
 
+ResDungeonData = _reflection.GeneratedProtocolMessageType('ResDungeonData', (_message.Message,), dict(
+  DESCRIPTOR = _RESDUNGEONDATA,
+  __module__ = 'res_pb2'
+  # @@protoc_insertion_point(class_scope:ResDungeonData)
+  ))
+_sym_db.RegisterMessage(ResDungeonData)
+
 ResDungeonFightCapacityFix = _reflection.GeneratedProtocolMessageType('ResDungeonFightCapacityFix', (_message.Message,), dict(
   DESCRIPTOR = _RESDUNGEONFIGHTCAPACITYFIX,
   __module__ = 'res_pb2'
@@ -12980,6 +14548,20 @@ ResAchievement = _reflection.GeneratedProtocolMessageType('ResAchievement', (_me
   # @@protoc_insertion_point(class_scope:ResAchievement)
   ))
 _sym_db.RegisterMessage(ResAchievement)
+
+ResAchievementGameCenter = _reflection.GeneratedProtocolMessageType('ResAchievementGameCenter', (_message.Message,), dict(
+  DESCRIPTOR = _RESACHIEVEMENTGAMECENTER,
+  __module__ = 'res_pb2'
+  # @@protoc_insertion_point(class_scope:ResAchievementGameCenter)
+  ))
+_sym_db.RegisterMessage(ResAchievementGameCenter)
+
+ResSpecialActivity = _reflection.GeneratedProtocolMessageType('ResSpecialActivity', (_message.Message,), dict(
+  DESCRIPTOR = _RESSPECIALACTIVITY,
+  __module__ = 'res_pb2'
+  # @@protoc_insertion_point(class_scope:ResSpecialActivity)
+  ))
+_sym_db.RegisterMessage(ResSpecialActivity)
 
 ResDailyTask = _reflection.GeneratedProtocolMessageType('ResDailyTask', (_message.Message,), dict(
   DESCRIPTOR = _RESDAILYTASK,
@@ -13387,6 +14969,13 @@ ResBaseDrop = _reflection.GeneratedProtocolMessageType('ResBaseDrop', (_message.
   ))
 _sym_db.RegisterMessage(ResBaseDrop)
 
+ResWorldDrop = _reflection.GeneratedProtocolMessageType('ResWorldDrop', (_message.Message,), dict(
+  DESCRIPTOR = _RESWORLDDROP,
+  __module__ = 'res_pb2'
+  # @@protoc_insertion_point(class_scope:ResWorldDrop)
+  ))
+_sym_db.RegisterMessage(ResWorldDrop)
+
 ResRetrieveInfo = _reflection.GeneratedProtocolMessageType('ResRetrieveInfo', (_message.Message,), dict(
   DESCRIPTOR = _RESRETRIEVEINFO,
   __module__ = 'res_pb2'
@@ -13590,6 +15179,13 @@ ResBossRushChapter = _reflection.GeneratedProtocolMessageType('ResBossRushChapte
   ))
 _sym_db.RegisterMessage(ResBossRushChapter)
 
+ResBossRushDrop = _reflection.GeneratedProtocolMessageType('ResBossRushDrop', (_message.Message,), dict(
+  DESCRIPTOR = _RESBOSSRUSHDROP,
+  __module__ = 'res_pb2'
+  # @@protoc_insertion_point(class_scope:ResBossRushDrop)
+  ))
+_sym_db.RegisterMessage(ResBossRushDrop)
+
 ResBossRushDungeon = _reflection.GeneratedProtocolMessageType('ResBossRushDungeon', (_message.Message,), dict(
   DESCRIPTOR = _RESBOSSRUSHDUNGEON,
   __module__ = 'res_pb2'
@@ -13617,6 +15213,83 @@ ResSectRecharge = _reflection.GeneratedProtocolMessageType('ResSectRecharge', (_
   # @@protoc_insertion_point(class_scope:ResSectRecharge)
   ))
 _sym_db.RegisterMessage(ResSectRecharge)
+
+ResTalentAttr = _reflection.GeneratedProtocolMessageType('ResTalentAttr', (_message.Message,), dict(
+  DESCRIPTOR = _RESTALENTATTR,
+  __module__ = 'res_pb2'
+  # @@protoc_insertion_point(class_scope:ResTalentAttr)
+  ))
+_sym_db.RegisterMessage(ResTalentAttr)
+
+ResTalentActiveInfo = _reflection.GeneratedProtocolMessageType('ResTalentActiveInfo', (_message.Message,), dict(
+  DESCRIPTOR = _RESTALENTACTIVEINFO,
+  __module__ = 'res_pb2'
+  # @@protoc_insertion_point(class_scope:ResTalentActiveInfo)
+  ))
+_sym_db.RegisterMessage(ResTalentActiveInfo)
+
+ResTalent = _reflection.GeneratedProtocolMessageType('ResTalent', (_message.Message,), dict(
+  DESCRIPTOR = _RESTALENT,
+  __module__ = 'res_pb2'
+  # @@protoc_insertion_point(class_scope:ResTalent)
+  ))
+_sym_db.RegisterMessage(ResTalent)
+
+ResAssistantHeroRent = _reflection.GeneratedProtocolMessageType('ResAssistantHeroRent', (_message.Message,), dict(
+  DESCRIPTOR = _RESASSISTANTHERORENT,
+  __module__ = 'res_pb2'
+  # @@protoc_insertion_point(class_scope:ResAssistantHeroRent)
+  ))
+_sym_db.RegisterMessage(ResAssistantHeroRent)
+
+ResCountToReward = _reflection.GeneratedProtocolMessageType('ResCountToReward', (_message.Message,), dict(
+  DESCRIPTOR = _RESCOUNTTOREWARD,
+  __module__ = 'res_pb2'
+  # @@protoc_insertion_point(class_scope:ResCountToReward)
+  ))
+_sym_db.RegisterMessage(ResCountToReward)
+
+ResWorldActivity = _reflection.GeneratedProtocolMessageType('ResWorldActivity', (_message.Message,), dict(
+  DESCRIPTOR = _RESWORLDACTIVITY,
+  __module__ = 'res_pb2'
+  # @@protoc_insertion_point(class_scope:ResWorldActivity)
+  ))
+_sym_db.RegisterMessage(ResWorldActivity)
+
+ResActivityOrder = _reflection.GeneratedProtocolMessageType('ResActivityOrder', (_message.Message,), dict(
+  DESCRIPTOR = _RESACTIVITYORDER,
+  __module__ = 'res_pb2'
+  # @@protoc_insertion_point(class_scope:ResActivityOrder)
+  ))
+_sym_db.RegisterMessage(ResActivityOrder)
+
+ResActivityResourceBox = _reflection.GeneratedProtocolMessageType('ResActivityResourceBox', (_message.Message,), dict(
+  DESCRIPTOR = _RESACTIVITYRESOURCEBOX,
+  __module__ = 'res_pb2'
+  # @@protoc_insertion_point(class_scope:ResActivityResourceBox)
+  ))
+_sym_db.RegisterMessage(ResActivityResourceBox)
+
+ResErrorMsg = _reflection.GeneratedProtocolMessageType('ResErrorMsg', (_message.Message,), dict(
+  DESCRIPTOR = _RESERRORMSG,
+  __module__ = 'res_pb2'
+  # @@protoc_insertion_point(class_scope:ResErrorMsg)
+  ))
+_sym_db.RegisterMessage(ResErrorMsg)
+
+ResActivityDiscount = _reflection.GeneratedProtocolMessageType('ResActivityDiscount', (_message.Message,), dict(
+  DESCRIPTOR = _RESACTIVITYDISCOUNT,
+  __module__ = 'res_pb2'
+  # @@protoc_insertion_point(class_scope:ResActivityDiscount)
+  ))
+_sym_db.RegisterMessage(ResActivityDiscount)
+
+ResGameModeEntrance = _reflection.GeneratedProtocolMessageType('ResGameModeEntrance', (_message.Message,), dict(
+  DESCRIPTOR = _RESGAMEMODEENTRANCE,
+  __module__ = 'res_pb2'
+  # @@protoc_insertion_point(class_scope:ResGameModeEntrance)
+  ))
+_sym_db.RegisterMessage(ResGameModeEntrance)
 
 
 _RESHEROATTRTYPE.has_options = True

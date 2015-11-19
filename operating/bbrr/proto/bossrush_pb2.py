@@ -13,13 +13,15 @@ from google.protobuf import descriptor_pb2
 _sym_db = _symbol_database.Default()
 
 
+import rescommon_pb2
 
 
 DESCRIPTOR = _descriptor.FileDescriptor(
   name='bossrush.proto',
   package='',
-  serialized_pb=_b('\n\x0e\x62ossrush.proto\"0\n\x1d\x43SPKG_ENTER_BOSSRUSH_ROOM_REQ\x12\x0f\n\x07reserve\x18\x01 \x01(\r\"[\n\x13SCPKG_BOSSRUSH_INFO\x12\x16\n\x0e\x63ur_chaptor_id\x18\x02 \x02(\r\x12\x16\n\x0e\x63ur_monster_id\x18\x03 \x02(\r\x12\x14\n\x0c\x63ur_sequence\x18\x04 \x02(\r\"I\n\x18SCPKG_BOSSRUSH_HERO_INFO\x12\x14\n\x0cmain_hero_id\x18\x05 \x02(\r\x12\x17\n\x0fpartner_hero_id\x18\x06 \x03(\r\"\x81\x01\n\x1dSCPKG_ENTER_BOSSRUSH_ROOM_RES\x12\x0e\n\x06result\x18\x01 \x02(\x05\x12\"\n\x04info\x18\x02 \x01(\x0b\x32\x14.SCPKG_BOSSRUSH_INFO\x12,\n\thero_info\x18\x03 \x01(\x0b\x32\x19.SCPKG_BOSSRUSH_HERO_INFO\"2\n CSPKG_BOSSRUSH_REPLACE_MAIN_HERO\x12\x0e\n\x06heroid\x18\x01 \x02(\r\"B\n#CSPKG_BOSSRUSH_REPLACE_PARTNER_HERO\x12\x0b\n\x03pos\x18\x01 \x02(\r\x12\x0e\n\x06heroid\x18\x02 \x02(\r')
-)
+  serialized_pb=_b('\n\x0e\x62ossrush.proto\x1a\x0frescommon.proto\"0\n\x1d\x43SPKG_ENTER_BOSSRUSH_ROOM_REQ\x12\x0f\n\x07reserve\x18\x01 \x01(\r\"\xbd\x01\n\x13SCPKG_BOSSRUSH_INFO\x12\x16\n\x0e\x63ur_chaptor_id\x18\x02 \x02(\r\x12\x16\n\x0e\x63ur_monster_id\x18\x03 \x02(\r\x12\x14\n\x0c\x63ur_sequence\x18\x04 \x02(\r\x12 \n\x18last_clear_chaptor_index\x18\x05 \x01(\r\x12%\n\x1d\x61ssistant_hero_cnt_in_dungeon\x18\x06 \x01(\r\x12\x17\n\x0flast_clear_time\x18\x07 \x01(\r\"H\n\x16SCPKG_HP_REMAIN_CHANGE\x12.\n\thp_remain\x18\x04 \x02(\x0b\x32\x1b.ST_BOSSRUSH_HERO_HP_REMAIN\"I\n\x18SCPKG_BOSSRUSH_HERO_INFO\x12\x14\n\x0cmain_hero_id\x18\x05 \x02(\r\x12\x17\n\x0fpartner_hero_id\x18\x06 \x03(\r\"\\\n\x1fST_BOSS_RUSH_FRIEND_HERO_DETAIL\x12\x0b\n\x03uid\x18\x01 \x02(\r\x12,\n\tattr_info\x18\x03 \x01(\x0b\x32\x19.ST_BATTLE_HERO_ATTR_INFO\"\x9a\x01\n\x1dSCPKG_ENTER_BOSSRUSH_ROOM_RES\x12\x0e\n\x06result\x18\x01 \x02(\x05\x12\x17\n\x0flast_enter_time\x18\x04 \x01(\r\x12\"\n\x04info\x18\x02 \x01(\x0b\x32\x14.SCPKG_BOSSRUSH_INFO\x12,\n\thero_info\x18\x03 \x01(\x0b\x32\x19.SCPKG_BOSSRUSH_HERO_INFO\"2\n CSPKG_BOSSRUSH_REPLACE_MAIN_HERO\x12\x0e\n\x06heroid\x18\x01 \x02(\r\"B\n#CSPKG_BOSSRUSH_REPLACE_PARTNER_HERO\x12\x0b\n\x03pos\x18\x01 \x02(\r\x12\x0e\n\x06heroid\x18\x02 \x02(\r\".\n\x18\x43SPKG_BOSSRUSH_ENTER_DUN\x12\x12\n\nchapter_id\x18\x01 \x02(\r\"\x89\x01\n\x1cSCPKG_BOSSRUSH_ENTER_DUN_RES\x12\x12\n\ndungeon_id\x18\x01 \x02(\r\x12\x0f\n\x07is_boss\x18\x02 \x02(\x08\x12\x12\n\nmonster_id\x18\x03 \x02(\r\x12\x30\n\x06\x64\x65tail\x18\x05 \x03(\x0b\x32 .ST_BOSS_RUSH_FRIEND_HERO_DETAIL\"\x1d\n\x1b\x43SPKG_BOSSRUSH_REPLACE_BOSS\"$\n\"CSPKG_BOSSRUSH_SELECT_HERO_CONFIRM\"E\n\x1fSCPKG_BOSSRUSH_REPLACE_BOSS_RES\x12\"\n\x04info\x18\x01 \x02(\x0b\x32\x14.SCPKG_BOSSRUSH_INFO\"u\n\x1c\x43SPKG_REPLACE_ASSISTANT_HERO\x12\r\n\x05index\x18\x01 \x02(\r\x12\x0e\n\x06heroid\x18\x02 \x02(\r\x12\x0b\n\x03uid\x18\x04 \x01(\r\x12)\n\x0b\x62\x61ttle_info\x18\x03 \x01(\x0b\x32\x14.ST_HERO_BATTLE_INFO\"\x1c\n\x1a\x43SPKG_CLEAR_ASSISTANT_HERO\"#\n!CSPKG_CLAIM_ASSISTANT_HERO_REWARD\"\xa9\x01\n\x19SCPKG_ASSISTANT_HERO_INFO\x12\x0b\n\x03uid\x18\x03 \x02(\r\x12\x18\n\x10\x61ssistant_heroes\x18\x01 \x03(\r\x12\x0c\n\x04gold\x18\x02 \x02(\r\x12\x1d\n\x15total_assistant_count\x18\x04 \x02(\r\x12\x1b\n\x13\x63ur_assistant_count\x18\x05 \x02(\r\x12\x1b\n\x13\x61ssistant_calc_time\x18\x06 \x02(\r\"%\n#CSPKG_REQUEST_FRIEND_ASSISTANT_HERO\"\x1e\n\x1c\x43SPKG_RESET_CURRENT_BOSSRUSH\"\xa7\x01\n\x15\x46RIEND_ASSISTANT_HERO\x12\x0b\n\x03uid\x18\x01 \x02(\r\x12\x0e\n\x06heroid\x18\x02 \x01(\r\x12\x0c\n\x04name\x18\x04 \x01(\t\x12\x16\n\x0e\x66ight_capacity\x18\x05 \x01(\r\x12\x11\n\trent_gold\x18\x06 \x01(\r\x12\r\n\x05level\x18\t \x01(\r\x12)\n\x0b\x62\x61ttle_info\x18\x07 \x01(\x0b\x32\x14.ST_HERO_BATTLE_INFO\"Z\n$SCPKG_FRIEND_ASSISSTANT_HERO_CAN_USE\x12\x0b\n\x03uid\x18\x01 \x02(\r\x12%\n\x05heros\x18\x02 \x03(\x0b\x32\x16.FRIEND_ASSISTANT_HERO\"\\\n$CSPKGG_REPLACE_FRIEND_ASSISTANT_HERO\x12\r\n\x05index\x18\x01 \x02(\r\x12%\n\x05heros\x18\x02 \x02(\x0b\x32\x16.FRIEND_ASSISTANT_HERO\"M\n$SCPKG_FRIEND_CURRENT_ASSISSTANT_HERO\x12%\n\x05heros\x18\x02 \x03(\x0b\x32\x16.FRIEND_ASSISTANT_HERO')
+  ,
+  dependencies=[rescommon_pb2.DESCRIPTOR,])
 _sym_db.RegisterFileDescriptor(DESCRIPTOR)
 
 
@@ -50,8 +52,8 @@ _CSPKG_ENTER_BOSSRUSH_ROOM_REQ = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=18,
-  serialized_end=66,
+  serialized_start=35,
+  serialized_end=83,
 )
 
 
@@ -83,6 +85,27 @@ _SCPKG_BOSSRUSH_INFO = _descriptor.Descriptor(
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
+    _descriptor.FieldDescriptor(
+      name='last_clear_chaptor_index', full_name='SCPKG_BOSSRUSH_INFO.last_clear_chaptor_index', index=3,
+      number=5, type=13, cpp_type=3, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    _descriptor.FieldDescriptor(
+      name='assistant_hero_cnt_in_dungeon', full_name='SCPKG_BOSSRUSH_INFO.assistant_hero_cnt_in_dungeon', index=4,
+      number=6, type=13, cpp_type=3, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    _descriptor.FieldDescriptor(
+      name='last_clear_time', full_name='SCPKG_BOSSRUSH_INFO.last_clear_time', index=5,
+      number=7, type=13, cpp_type=3, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
   ],
   extensions=[
   ],
@@ -94,8 +117,38 @@ _SCPKG_BOSSRUSH_INFO = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=68,
-  serialized_end=159,
+  serialized_start=86,
+  serialized_end=275,
+)
+
+
+_SCPKG_HP_REMAIN_CHANGE = _descriptor.Descriptor(
+  name='SCPKG_HP_REMAIN_CHANGE',
+  full_name='SCPKG_HP_REMAIN_CHANGE',
+  filename=None,
+  file=DESCRIPTOR,
+  containing_type=None,
+  fields=[
+    _descriptor.FieldDescriptor(
+      name='hp_remain', full_name='SCPKG_HP_REMAIN_CHANGE.hp_remain', index=0,
+      number=4, type=11, cpp_type=10, label=2,
+      has_default_value=False, default_value=None,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+  ],
+  extensions=[
+  ],
+  nested_types=[],
+  enum_types=[
+  ],
+  options=None,
+  is_extendable=False,
+  extension_ranges=[],
+  oneofs=[
+  ],
+  serialized_start=277,
+  serialized_end=349,
 )
 
 
@@ -131,8 +184,45 @@ _SCPKG_BOSSRUSH_HERO_INFO = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=161,
-  serialized_end=234,
+  serialized_start=351,
+  serialized_end=424,
+)
+
+
+_ST_BOSS_RUSH_FRIEND_HERO_DETAIL = _descriptor.Descriptor(
+  name='ST_BOSS_RUSH_FRIEND_HERO_DETAIL',
+  full_name='ST_BOSS_RUSH_FRIEND_HERO_DETAIL',
+  filename=None,
+  file=DESCRIPTOR,
+  containing_type=None,
+  fields=[
+    _descriptor.FieldDescriptor(
+      name='uid', full_name='ST_BOSS_RUSH_FRIEND_HERO_DETAIL.uid', index=0,
+      number=1, type=13, cpp_type=3, label=2,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    _descriptor.FieldDescriptor(
+      name='attr_info', full_name='ST_BOSS_RUSH_FRIEND_HERO_DETAIL.attr_info', index=1,
+      number=3, type=11, cpp_type=10, label=1,
+      has_default_value=False, default_value=None,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+  ],
+  extensions=[
+  ],
+  nested_types=[],
+  enum_types=[
+  ],
+  options=None,
+  is_extendable=False,
+  extension_ranges=[],
+  oneofs=[
+  ],
+  serialized_start=426,
+  serialized_end=518,
 )
 
 
@@ -151,14 +241,21 @@ _SCPKG_ENTER_BOSSRUSH_ROOM_RES = _descriptor.Descriptor(
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
-      name='info', full_name='SCPKG_ENTER_BOSSRUSH_ROOM_RES.info', index=1,
+      name='last_enter_time', full_name='SCPKG_ENTER_BOSSRUSH_ROOM_RES.last_enter_time', index=1,
+      number=4, type=13, cpp_type=3, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    _descriptor.FieldDescriptor(
+      name='info', full_name='SCPKG_ENTER_BOSSRUSH_ROOM_RES.info', index=2,
       number=2, type=11, cpp_type=10, label=1,
       has_default_value=False, default_value=None,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
-      name='hero_info', full_name='SCPKG_ENTER_BOSSRUSH_ROOM_RES.hero_info', index=2,
+      name='hero_info', full_name='SCPKG_ENTER_BOSSRUSH_ROOM_RES.hero_info', index=3,
       number=3, type=11, cpp_type=10, label=1,
       has_default_value=False, default_value=None,
       message_type=None, enum_type=None, containing_type=None,
@@ -175,8 +272,8 @@ _SCPKG_ENTER_BOSSRUSH_ROOM_RES = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=237,
-  serialized_end=366,
+  serialized_start=521,
+  serialized_end=675,
 )
 
 
@@ -205,8 +302,8 @@ _CSPKG_BOSSRUSH_REPLACE_MAIN_HERO = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=368,
-  serialized_end=418,
+  serialized_start=677,
+  serialized_end=727,
 )
 
 
@@ -242,18 +339,585 @@ _CSPKG_BOSSRUSH_REPLACE_PARTNER_HERO = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=420,
-  serialized_end=486,
+  serialized_start=729,
+  serialized_end=795,
 )
 
+
+_CSPKG_BOSSRUSH_ENTER_DUN = _descriptor.Descriptor(
+  name='CSPKG_BOSSRUSH_ENTER_DUN',
+  full_name='CSPKG_BOSSRUSH_ENTER_DUN',
+  filename=None,
+  file=DESCRIPTOR,
+  containing_type=None,
+  fields=[
+    _descriptor.FieldDescriptor(
+      name='chapter_id', full_name='CSPKG_BOSSRUSH_ENTER_DUN.chapter_id', index=0,
+      number=1, type=13, cpp_type=3, label=2,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+  ],
+  extensions=[
+  ],
+  nested_types=[],
+  enum_types=[
+  ],
+  options=None,
+  is_extendable=False,
+  extension_ranges=[],
+  oneofs=[
+  ],
+  serialized_start=797,
+  serialized_end=843,
+)
+
+
+_SCPKG_BOSSRUSH_ENTER_DUN_RES = _descriptor.Descriptor(
+  name='SCPKG_BOSSRUSH_ENTER_DUN_RES',
+  full_name='SCPKG_BOSSRUSH_ENTER_DUN_RES',
+  filename=None,
+  file=DESCRIPTOR,
+  containing_type=None,
+  fields=[
+    _descriptor.FieldDescriptor(
+      name='dungeon_id', full_name='SCPKG_BOSSRUSH_ENTER_DUN_RES.dungeon_id', index=0,
+      number=1, type=13, cpp_type=3, label=2,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    _descriptor.FieldDescriptor(
+      name='is_boss', full_name='SCPKG_BOSSRUSH_ENTER_DUN_RES.is_boss', index=1,
+      number=2, type=8, cpp_type=7, label=2,
+      has_default_value=False, default_value=False,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    _descriptor.FieldDescriptor(
+      name='monster_id', full_name='SCPKG_BOSSRUSH_ENTER_DUN_RES.monster_id', index=2,
+      number=3, type=13, cpp_type=3, label=2,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    _descriptor.FieldDescriptor(
+      name='detail', full_name='SCPKG_BOSSRUSH_ENTER_DUN_RES.detail', index=3,
+      number=5, type=11, cpp_type=10, label=3,
+      has_default_value=False, default_value=[],
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+  ],
+  extensions=[
+  ],
+  nested_types=[],
+  enum_types=[
+  ],
+  options=None,
+  is_extendable=False,
+  extension_ranges=[],
+  oneofs=[
+  ],
+  serialized_start=846,
+  serialized_end=983,
+)
+
+
+_CSPKG_BOSSRUSH_REPLACE_BOSS = _descriptor.Descriptor(
+  name='CSPKG_BOSSRUSH_REPLACE_BOSS',
+  full_name='CSPKG_BOSSRUSH_REPLACE_BOSS',
+  filename=None,
+  file=DESCRIPTOR,
+  containing_type=None,
+  fields=[
+  ],
+  extensions=[
+  ],
+  nested_types=[],
+  enum_types=[
+  ],
+  options=None,
+  is_extendable=False,
+  extension_ranges=[],
+  oneofs=[
+  ],
+  serialized_start=985,
+  serialized_end=1014,
+)
+
+
+_CSPKG_BOSSRUSH_SELECT_HERO_CONFIRM = _descriptor.Descriptor(
+  name='CSPKG_BOSSRUSH_SELECT_HERO_CONFIRM',
+  full_name='CSPKG_BOSSRUSH_SELECT_HERO_CONFIRM',
+  filename=None,
+  file=DESCRIPTOR,
+  containing_type=None,
+  fields=[
+  ],
+  extensions=[
+  ],
+  nested_types=[],
+  enum_types=[
+  ],
+  options=None,
+  is_extendable=False,
+  extension_ranges=[],
+  oneofs=[
+  ],
+  serialized_start=1016,
+  serialized_end=1052,
+)
+
+
+_SCPKG_BOSSRUSH_REPLACE_BOSS_RES = _descriptor.Descriptor(
+  name='SCPKG_BOSSRUSH_REPLACE_BOSS_RES',
+  full_name='SCPKG_BOSSRUSH_REPLACE_BOSS_RES',
+  filename=None,
+  file=DESCRIPTOR,
+  containing_type=None,
+  fields=[
+    _descriptor.FieldDescriptor(
+      name='info', full_name='SCPKG_BOSSRUSH_REPLACE_BOSS_RES.info', index=0,
+      number=1, type=11, cpp_type=10, label=2,
+      has_default_value=False, default_value=None,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+  ],
+  extensions=[
+  ],
+  nested_types=[],
+  enum_types=[
+  ],
+  options=None,
+  is_extendable=False,
+  extension_ranges=[],
+  oneofs=[
+  ],
+  serialized_start=1054,
+  serialized_end=1123,
+)
+
+
+_CSPKG_REPLACE_ASSISTANT_HERO = _descriptor.Descriptor(
+  name='CSPKG_REPLACE_ASSISTANT_HERO',
+  full_name='CSPKG_REPLACE_ASSISTANT_HERO',
+  filename=None,
+  file=DESCRIPTOR,
+  containing_type=None,
+  fields=[
+    _descriptor.FieldDescriptor(
+      name='index', full_name='CSPKG_REPLACE_ASSISTANT_HERO.index', index=0,
+      number=1, type=13, cpp_type=3, label=2,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    _descriptor.FieldDescriptor(
+      name='heroid', full_name='CSPKG_REPLACE_ASSISTANT_HERO.heroid', index=1,
+      number=2, type=13, cpp_type=3, label=2,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    _descriptor.FieldDescriptor(
+      name='uid', full_name='CSPKG_REPLACE_ASSISTANT_HERO.uid', index=2,
+      number=4, type=13, cpp_type=3, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    _descriptor.FieldDescriptor(
+      name='battle_info', full_name='CSPKG_REPLACE_ASSISTANT_HERO.battle_info', index=3,
+      number=3, type=11, cpp_type=10, label=1,
+      has_default_value=False, default_value=None,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+  ],
+  extensions=[
+  ],
+  nested_types=[],
+  enum_types=[
+  ],
+  options=None,
+  is_extendable=False,
+  extension_ranges=[],
+  oneofs=[
+  ],
+  serialized_start=1125,
+  serialized_end=1242,
+)
+
+
+_CSPKG_CLEAR_ASSISTANT_HERO = _descriptor.Descriptor(
+  name='CSPKG_CLEAR_ASSISTANT_HERO',
+  full_name='CSPKG_CLEAR_ASSISTANT_HERO',
+  filename=None,
+  file=DESCRIPTOR,
+  containing_type=None,
+  fields=[
+  ],
+  extensions=[
+  ],
+  nested_types=[],
+  enum_types=[
+  ],
+  options=None,
+  is_extendable=False,
+  extension_ranges=[],
+  oneofs=[
+  ],
+  serialized_start=1244,
+  serialized_end=1272,
+)
+
+
+_CSPKG_CLAIM_ASSISTANT_HERO_REWARD = _descriptor.Descriptor(
+  name='CSPKG_CLAIM_ASSISTANT_HERO_REWARD',
+  full_name='CSPKG_CLAIM_ASSISTANT_HERO_REWARD',
+  filename=None,
+  file=DESCRIPTOR,
+  containing_type=None,
+  fields=[
+  ],
+  extensions=[
+  ],
+  nested_types=[],
+  enum_types=[
+  ],
+  options=None,
+  is_extendable=False,
+  extension_ranges=[],
+  oneofs=[
+  ],
+  serialized_start=1274,
+  serialized_end=1309,
+)
+
+
+_SCPKG_ASSISTANT_HERO_INFO = _descriptor.Descriptor(
+  name='SCPKG_ASSISTANT_HERO_INFO',
+  full_name='SCPKG_ASSISTANT_HERO_INFO',
+  filename=None,
+  file=DESCRIPTOR,
+  containing_type=None,
+  fields=[
+    _descriptor.FieldDescriptor(
+      name='uid', full_name='SCPKG_ASSISTANT_HERO_INFO.uid', index=0,
+      number=3, type=13, cpp_type=3, label=2,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    _descriptor.FieldDescriptor(
+      name='assistant_heroes', full_name='SCPKG_ASSISTANT_HERO_INFO.assistant_heroes', index=1,
+      number=1, type=13, cpp_type=3, label=3,
+      has_default_value=False, default_value=[],
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    _descriptor.FieldDescriptor(
+      name='gold', full_name='SCPKG_ASSISTANT_HERO_INFO.gold', index=2,
+      number=2, type=13, cpp_type=3, label=2,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    _descriptor.FieldDescriptor(
+      name='total_assistant_count', full_name='SCPKG_ASSISTANT_HERO_INFO.total_assistant_count', index=3,
+      number=4, type=13, cpp_type=3, label=2,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    _descriptor.FieldDescriptor(
+      name='cur_assistant_count', full_name='SCPKG_ASSISTANT_HERO_INFO.cur_assistant_count', index=4,
+      number=5, type=13, cpp_type=3, label=2,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    _descriptor.FieldDescriptor(
+      name='assistant_calc_time', full_name='SCPKG_ASSISTANT_HERO_INFO.assistant_calc_time', index=5,
+      number=6, type=13, cpp_type=3, label=2,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+  ],
+  extensions=[
+  ],
+  nested_types=[],
+  enum_types=[
+  ],
+  options=None,
+  is_extendable=False,
+  extension_ranges=[],
+  oneofs=[
+  ],
+  serialized_start=1312,
+  serialized_end=1481,
+)
+
+
+_CSPKG_REQUEST_FRIEND_ASSISTANT_HERO = _descriptor.Descriptor(
+  name='CSPKG_REQUEST_FRIEND_ASSISTANT_HERO',
+  full_name='CSPKG_REQUEST_FRIEND_ASSISTANT_HERO',
+  filename=None,
+  file=DESCRIPTOR,
+  containing_type=None,
+  fields=[
+  ],
+  extensions=[
+  ],
+  nested_types=[],
+  enum_types=[
+  ],
+  options=None,
+  is_extendable=False,
+  extension_ranges=[],
+  oneofs=[
+  ],
+  serialized_start=1483,
+  serialized_end=1520,
+)
+
+
+_CSPKG_RESET_CURRENT_BOSSRUSH = _descriptor.Descriptor(
+  name='CSPKG_RESET_CURRENT_BOSSRUSH',
+  full_name='CSPKG_RESET_CURRENT_BOSSRUSH',
+  filename=None,
+  file=DESCRIPTOR,
+  containing_type=None,
+  fields=[
+  ],
+  extensions=[
+  ],
+  nested_types=[],
+  enum_types=[
+  ],
+  options=None,
+  is_extendable=False,
+  extension_ranges=[],
+  oneofs=[
+  ],
+  serialized_start=1522,
+  serialized_end=1552,
+)
+
+
+_FRIEND_ASSISTANT_HERO = _descriptor.Descriptor(
+  name='FRIEND_ASSISTANT_HERO',
+  full_name='FRIEND_ASSISTANT_HERO',
+  filename=None,
+  file=DESCRIPTOR,
+  containing_type=None,
+  fields=[
+    _descriptor.FieldDescriptor(
+      name='uid', full_name='FRIEND_ASSISTANT_HERO.uid', index=0,
+      number=1, type=13, cpp_type=3, label=2,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    _descriptor.FieldDescriptor(
+      name='heroid', full_name='FRIEND_ASSISTANT_HERO.heroid', index=1,
+      number=2, type=13, cpp_type=3, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    _descriptor.FieldDescriptor(
+      name='name', full_name='FRIEND_ASSISTANT_HERO.name', index=2,
+      number=4, type=9, cpp_type=9, label=1,
+      has_default_value=False, default_value=_b("").decode('utf-8'),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    _descriptor.FieldDescriptor(
+      name='fight_capacity', full_name='FRIEND_ASSISTANT_HERO.fight_capacity', index=3,
+      number=5, type=13, cpp_type=3, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    _descriptor.FieldDescriptor(
+      name='rent_gold', full_name='FRIEND_ASSISTANT_HERO.rent_gold', index=4,
+      number=6, type=13, cpp_type=3, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    _descriptor.FieldDescriptor(
+      name='level', full_name='FRIEND_ASSISTANT_HERO.level', index=5,
+      number=9, type=13, cpp_type=3, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    _descriptor.FieldDescriptor(
+      name='battle_info', full_name='FRIEND_ASSISTANT_HERO.battle_info', index=6,
+      number=7, type=11, cpp_type=10, label=1,
+      has_default_value=False, default_value=None,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+  ],
+  extensions=[
+  ],
+  nested_types=[],
+  enum_types=[
+  ],
+  options=None,
+  is_extendable=False,
+  extension_ranges=[],
+  oneofs=[
+  ],
+  serialized_start=1555,
+  serialized_end=1722,
+)
+
+
+_SCPKG_FRIEND_ASSISSTANT_HERO_CAN_USE = _descriptor.Descriptor(
+  name='SCPKG_FRIEND_ASSISSTANT_HERO_CAN_USE',
+  full_name='SCPKG_FRIEND_ASSISSTANT_HERO_CAN_USE',
+  filename=None,
+  file=DESCRIPTOR,
+  containing_type=None,
+  fields=[
+    _descriptor.FieldDescriptor(
+      name='uid', full_name='SCPKG_FRIEND_ASSISSTANT_HERO_CAN_USE.uid', index=0,
+      number=1, type=13, cpp_type=3, label=2,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    _descriptor.FieldDescriptor(
+      name='heros', full_name='SCPKG_FRIEND_ASSISSTANT_HERO_CAN_USE.heros', index=1,
+      number=2, type=11, cpp_type=10, label=3,
+      has_default_value=False, default_value=[],
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+  ],
+  extensions=[
+  ],
+  nested_types=[],
+  enum_types=[
+  ],
+  options=None,
+  is_extendable=False,
+  extension_ranges=[],
+  oneofs=[
+  ],
+  serialized_start=1724,
+  serialized_end=1814,
+)
+
+
+_CSPKGG_REPLACE_FRIEND_ASSISTANT_HERO = _descriptor.Descriptor(
+  name='CSPKGG_REPLACE_FRIEND_ASSISTANT_HERO',
+  full_name='CSPKGG_REPLACE_FRIEND_ASSISTANT_HERO',
+  filename=None,
+  file=DESCRIPTOR,
+  containing_type=None,
+  fields=[
+    _descriptor.FieldDescriptor(
+      name='index', full_name='CSPKGG_REPLACE_FRIEND_ASSISTANT_HERO.index', index=0,
+      number=1, type=13, cpp_type=3, label=2,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    _descriptor.FieldDescriptor(
+      name='heros', full_name='CSPKGG_REPLACE_FRIEND_ASSISTANT_HERO.heros', index=1,
+      number=2, type=11, cpp_type=10, label=2,
+      has_default_value=False, default_value=None,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+  ],
+  extensions=[
+  ],
+  nested_types=[],
+  enum_types=[
+  ],
+  options=None,
+  is_extendable=False,
+  extension_ranges=[],
+  oneofs=[
+  ],
+  serialized_start=1816,
+  serialized_end=1908,
+)
+
+
+_SCPKG_FRIEND_CURRENT_ASSISSTANT_HERO = _descriptor.Descriptor(
+  name='SCPKG_FRIEND_CURRENT_ASSISSTANT_HERO',
+  full_name='SCPKG_FRIEND_CURRENT_ASSISSTANT_HERO',
+  filename=None,
+  file=DESCRIPTOR,
+  containing_type=None,
+  fields=[
+    _descriptor.FieldDescriptor(
+      name='heros', full_name='SCPKG_FRIEND_CURRENT_ASSISSTANT_HERO.heros', index=0,
+      number=2, type=11, cpp_type=10, label=3,
+      has_default_value=False, default_value=[],
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+  ],
+  extensions=[
+  ],
+  nested_types=[],
+  enum_types=[
+  ],
+  options=None,
+  is_extendable=False,
+  extension_ranges=[],
+  oneofs=[
+  ],
+  serialized_start=1910,
+  serialized_end=1987,
+)
+
+_SCPKG_HP_REMAIN_CHANGE.fields_by_name['hp_remain'].message_type = rescommon_pb2._ST_BOSSRUSH_HERO_HP_REMAIN
+_ST_BOSS_RUSH_FRIEND_HERO_DETAIL.fields_by_name['attr_info'].message_type = rescommon_pb2._ST_BATTLE_HERO_ATTR_INFO
 _SCPKG_ENTER_BOSSRUSH_ROOM_RES.fields_by_name['info'].message_type = _SCPKG_BOSSRUSH_INFO
 _SCPKG_ENTER_BOSSRUSH_ROOM_RES.fields_by_name['hero_info'].message_type = _SCPKG_BOSSRUSH_HERO_INFO
+_SCPKG_BOSSRUSH_ENTER_DUN_RES.fields_by_name['detail'].message_type = _ST_BOSS_RUSH_FRIEND_HERO_DETAIL
+_SCPKG_BOSSRUSH_REPLACE_BOSS_RES.fields_by_name['info'].message_type = _SCPKG_BOSSRUSH_INFO
+_CSPKG_REPLACE_ASSISTANT_HERO.fields_by_name['battle_info'].message_type = rescommon_pb2._ST_HERO_BATTLE_INFO
+_FRIEND_ASSISTANT_HERO.fields_by_name['battle_info'].message_type = rescommon_pb2._ST_HERO_BATTLE_INFO
+_SCPKG_FRIEND_ASSISSTANT_HERO_CAN_USE.fields_by_name['heros'].message_type = _FRIEND_ASSISTANT_HERO
+_CSPKGG_REPLACE_FRIEND_ASSISTANT_HERO.fields_by_name['heros'].message_type = _FRIEND_ASSISTANT_HERO
+_SCPKG_FRIEND_CURRENT_ASSISSTANT_HERO.fields_by_name['heros'].message_type = _FRIEND_ASSISTANT_HERO
 DESCRIPTOR.message_types_by_name['CSPKG_ENTER_BOSSRUSH_ROOM_REQ'] = _CSPKG_ENTER_BOSSRUSH_ROOM_REQ
 DESCRIPTOR.message_types_by_name['SCPKG_BOSSRUSH_INFO'] = _SCPKG_BOSSRUSH_INFO
+DESCRIPTOR.message_types_by_name['SCPKG_HP_REMAIN_CHANGE'] = _SCPKG_HP_REMAIN_CHANGE
 DESCRIPTOR.message_types_by_name['SCPKG_BOSSRUSH_HERO_INFO'] = _SCPKG_BOSSRUSH_HERO_INFO
+DESCRIPTOR.message_types_by_name['ST_BOSS_RUSH_FRIEND_HERO_DETAIL'] = _ST_BOSS_RUSH_FRIEND_HERO_DETAIL
 DESCRIPTOR.message_types_by_name['SCPKG_ENTER_BOSSRUSH_ROOM_RES'] = _SCPKG_ENTER_BOSSRUSH_ROOM_RES
 DESCRIPTOR.message_types_by_name['CSPKG_BOSSRUSH_REPLACE_MAIN_HERO'] = _CSPKG_BOSSRUSH_REPLACE_MAIN_HERO
 DESCRIPTOR.message_types_by_name['CSPKG_BOSSRUSH_REPLACE_PARTNER_HERO'] = _CSPKG_BOSSRUSH_REPLACE_PARTNER_HERO
+DESCRIPTOR.message_types_by_name['CSPKG_BOSSRUSH_ENTER_DUN'] = _CSPKG_BOSSRUSH_ENTER_DUN
+DESCRIPTOR.message_types_by_name['SCPKG_BOSSRUSH_ENTER_DUN_RES'] = _SCPKG_BOSSRUSH_ENTER_DUN_RES
+DESCRIPTOR.message_types_by_name['CSPKG_BOSSRUSH_REPLACE_BOSS'] = _CSPKG_BOSSRUSH_REPLACE_BOSS
+DESCRIPTOR.message_types_by_name['CSPKG_BOSSRUSH_SELECT_HERO_CONFIRM'] = _CSPKG_BOSSRUSH_SELECT_HERO_CONFIRM
+DESCRIPTOR.message_types_by_name['SCPKG_BOSSRUSH_REPLACE_BOSS_RES'] = _SCPKG_BOSSRUSH_REPLACE_BOSS_RES
+DESCRIPTOR.message_types_by_name['CSPKG_REPLACE_ASSISTANT_HERO'] = _CSPKG_REPLACE_ASSISTANT_HERO
+DESCRIPTOR.message_types_by_name['CSPKG_CLEAR_ASSISTANT_HERO'] = _CSPKG_CLEAR_ASSISTANT_HERO
+DESCRIPTOR.message_types_by_name['CSPKG_CLAIM_ASSISTANT_HERO_REWARD'] = _CSPKG_CLAIM_ASSISTANT_HERO_REWARD
+DESCRIPTOR.message_types_by_name['SCPKG_ASSISTANT_HERO_INFO'] = _SCPKG_ASSISTANT_HERO_INFO
+DESCRIPTOR.message_types_by_name['CSPKG_REQUEST_FRIEND_ASSISTANT_HERO'] = _CSPKG_REQUEST_FRIEND_ASSISTANT_HERO
+DESCRIPTOR.message_types_by_name['CSPKG_RESET_CURRENT_BOSSRUSH'] = _CSPKG_RESET_CURRENT_BOSSRUSH
+DESCRIPTOR.message_types_by_name['FRIEND_ASSISTANT_HERO'] = _FRIEND_ASSISTANT_HERO
+DESCRIPTOR.message_types_by_name['SCPKG_FRIEND_ASSISSTANT_HERO_CAN_USE'] = _SCPKG_FRIEND_ASSISSTANT_HERO_CAN_USE
+DESCRIPTOR.message_types_by_name['CSPKGG_REPLACE_FRIEND_ASSISTANT_HERO'] = _CSPKGG_REPLACE_FRIEND_ASSISTANT_HERO
+DESCRIPTOR.message_types_by_name['SCPKG_FRIEND_CURRENT_ASSISSTANT_HERO'] = _SCPKG_FRIEND_CURRENT_ASSISSTANT_HERO
 
 CSPKG_ENTER_BOSSRUSH_ROOM_REQ = _reflection.GeneratedProtocolMessageType('CSPKG_ENTER_BOSSRUSH_ROOM_REQ', (_message.Message,), dict(
   DESCRIPTOR = _CSPKG_ENTER_BOSSRUSH_ROOM_REQ,
@@ -269,12 +933,26 @@ SCPKG_BOSSRUSH_INFO = _reflection.GeneratedProtocolMessageType('SCPKG_BOSSRUSH_I
   ))
 _sym_db.RegisterMessage(SCPKG_BOSSRUSH_INFO)
 
+SCPKG_HP_REMAIN_CHANGE = _reflection.GeneratedProtocolMessageType('SCPKG_HP_REMAIN_CHANGE', (_message.Message,), dict(
+  DESCRIPTOR = _SCPKG_HP_REMAIN_CHANGE,
+  __module__ = 'bossrush_pb2'
+  # @@protoc_insertion_point(class_scope:SCPKG_HP_REMAIN_CHANGE)
+  ))
+_sym_db.RegisterMessage(SCPKG_HP_REMAIN_CHANGE)
+
 SCPKG_BOSSRUSH_HERO_INFO = _reflection.GeneratedProtocolMessageType('SCPKG_BOSSRUSH_HERO_INFO', (_message.Message,), dict(
   DESCRIPTOR = _SCPKG_BOSSRUSH_HERO_INFO,
   __module__ = 'bossrush_pb2'
   # @@protoc_insertion_point(class_scope:SCPKG_BOSSRUSH_HERO_INFO)
   ))
 _sym_db.RegisterMessage(SCPKG_BOSSRUSH_HERO_INFO)
+
+ST_BOSS_RUSH_FRIEND_HERO_DETAIL = _reflection.GeneratedProtocolMessageType('ST_BOSS_RUSH_FRIEND_HERO_DETAIL', (_message.Message,), dict(
+  DESCRIPTOR = _ST_BOSS_RUSH_FRIEND_HERO_DETAIL,
+  __module__ = 'bossrush_pb2'
+  # @@protoc_insertion_point(class_scope:ST_BOSS_RUSH_FRIEND_HERO_DETAIL)
+  ))
+_sym_db.RegisterMessage(ST_BOSS_RUSH_FRIEND_HERO_DETAIL)
 
 SCPKG_ENTER_BOSSRUSH_ROOM_RES = _reflection.GeneratedProtocolMessageType('SCPKG_ENTER_BOSSRUSH_ROOM_RES', (_message.Message,), dict(
   DESCRIPTOR = _SCPKG_ENTER_BOSSRUSH_ROOM_RES,
@@ -296,6 +974,111 @@ CSPKG_BOSSRUSH_REPLACE_PARTNER_HERO = _reflection.GeneratedProtocolMessageType('
   # @@protoc_insertion_point(class_scope:CSPKG_BOSSRUSH_REPLACE_PARTNER_HERO)
   ))
 _sym_db.RegisterMessage(CSPKG_BOSSRUSH_REPLACE_PARTNER_HERO)
+
+CSPKG_BOSSRUSH_ENTER_DUN = _reflection.GeneratedProtocolMessageType('CSPKG_BOSSRUSH_ENTER_DUN', (_message.Message,), dict(
+  DESCRIPTOR = _CSPKG_BOSSRUSH_ENTER_DUN,
+  __module__ = 'bossrush_pb2'
+  # @@protoc_insertion_point(class_scope:CSPKG_BOSSRUSH_ENTER_DUN)
+  ))
+_sym_db.RegisterMessage(CSPKG_BOSSRUSH_ENTER_DUN)
+
+SCPKG_BOSSRUSH_ENTER_DUN_RES = _reflection.GeneratedProtocolMessageType('SCPKG_BOSSRUSH_ENTER_DUN_RES', (_message.Message,), dict(
+  DESCRIPTOR = _SCPKG_BOSSRUSH_ENTER_DUN_RES,
+  __module__ = 'bossrush_pb2'
+  # @@protoc_insertion_point(class_scope:SCPKG_BOSSRUSH_ENTER_DUN_RES)
+  ))
+_sym_db.RegisterMessage(SCPKG_BOSSRUSH_ENTER_DUN_RES)
+
+CSPKG_BOSSRUSH_REPLACE_BOSS = _reflection.GeneratedProtocolMessageType('CSPKG_BOSSRUSH_REPLACE_BOSS', (_message.Message,), dict(
+  DESCRIPTOR = _CSPKG_BOSSRUSH_REPLACE_BOSS,
+  __module__ = 'bossrush_pb2'
+  # @@protoc_insertion_point(class_scope:CSPKG_BOSSRUSH_REPLACE_BOSS)
+  ))
+_sym_db.RegisterMessage(CSPKG_BOSSRUSH_REPLACE_BOSS)
+
+CSPKG_BOSSRUSH_SELECT_HERO_CONFIRM = _reflection.GeneratedProtocolMessageType('CSPKG_BOSSRUSH_SELECT_HERO_CONFIRM', (_message.Message,), dict(
+  DESCRIPTOR = _CSPKG_BOSSRUSH_SELECT_HERO_CONFIRM,
+  __module__ = 'bossrush_pb2'
+  # @@protoc_insertion_point(class_scope:CSPKG_BOSSRUSH_SELECT_HERO_CONFIRM)
+  ))
+_sym_db.RegisterMessage(CSPKG_BOSSRUSH_SELECT_HERO_CONFIRM)
+
+SCPKG_BOSSRUSH_REPLACE_BOSS_RES = _reflection.GeneratedProtocolMessageType('SCPKG_BOSSRUSH_REPLACE_BOSS_RES', (_message.Message,), dict(
+  DESCRIPTOR = _SCPKG_BOSSRUSH_REPLACE_BOSS_RES,
+  __module__ = 'bossrush_pb2'
+  # @@protoc_insertion_point(class_scope:SCPKG_BOSSRUSH_REPLACE_BOSS_RES)
+  ))
+_sym_db.RegisterMessage(SCPKG_BOSSRUSH_REPLACE_BOSS_RES)
+
+CSPKG_REPLACE_ASSISTANT_HERO = _reflection.GeneratedProtocolMessageType('CSPKG_REPLACE_ASSISTANT_HERO', (_message.Message,), dict(
+  DESCRIPTOR = _CSPKG_REPLACE_ASSISTANT_HERO,
+  __module__ = 'bossrush_pb2'
+  # @@protoc_insertion_point(class_scope:CSPKG_REPLACE_ASSISTANT_HERO)
+  ))
+_sym_db.RegisterMessage(CSPKG_REPLACE_ASSISTANT_HERO)
+
+CSPKG_CLEAR_ASSISTANT_HERO = _reflection.GeneratedProtocolMessageType('CSPKG_CLEAR_ASSISTANT_HERO', (_message.Message,), dict(
+  DESCRIPTOR = _CSPKG_CLEAR_ASSISTANT_HERO,
+  __module__ = 'bossrush_pb2'
+  # @@protoc_insertion_point(class_scope:CSPKG_CLEAR_ASSISTANT_HERO)
+  ))
+_sym_db.RegisterMessage(CSPKG_CLEAR_ASSISTANT_HERO)
+
+CSPKG_CLAIM_ASSISTANT_HERO_REWARD = _reflection.GeneratedProtocolMessageType('CSPKG_CLAIM_ASSISTANT_HERO_REWARD', (_message.Message,), dict(
+  DESCRIPTOR = _CSPKG_CLAIM_ASSISTANT_HERO_REWARD,
+  __module__ = 'bossrush_pb2'
+  # @@protoc_insertion_point(class_scope:CSPKG_CLAIM_ASSISTANT_HERO_REWARD)
+  ))
+_sym_db.RegisterMessage(CSPKG_CLAIM_ASSISTANT_HERO_REWARD)
+
+SCPKG_ASSISTANT_HERO_INFO = _reflection.GeneratedProtocolMessageType('SCPKG_ASSISTANT_HERO_INFO', (_message.Message,), dict(
+  DESCRIPTOR = _SCPKG_ASSISTANT_HERO_INFO,
+  __module__ = 'bossrush_pb2'
+  # @@protoc_insertion_point(class_scope:SCPKG_ASSISTANT_HERO_INFO)
+  ))
+_sym_db.RegisterMessage(SCPKG_ASSISTANT_HERO_INFO)
+
+CSPKG_REQUEST_FRIEND_ASSISTANT_HERO = _reflection.GeneratedProtocolMessageType('CSPKG_REQUEST_FRIEND_ASSISTANT_HERO', (_message.Message,), dict(
+  DESCRIPTOR = _CSPKG_REQUEST_FRIEND_ASSISTANT_HERO,
+  __module__ = 'bossrush_pb2'
+  # @@protoc_insertion_point(class_scope:CSPKG_REQUEST_FRIEND_ASSISTANT_HERO)
+  ))
+_sym_db.RegisterMessage(CSPKG_REQUEST_FRIEND_ASSISTANT_HERO)
+
+CSPKG_RESET_CURRENT_BOSSRUSH = _reflection.GeneratedProtocolMessageType('CSPKG_RESET_CURRENT_BOSSRUSH', (_message.Message,), dict(
+  DESCRIPTOR = _CSPKG_RESET_CURRENT_BOSSRUSH,
+  __module__ = 'bossrush_pb2'
+  # @@protoc_insertion_point(class_scope:CSPKG_RESET_CURRENT_BOSSRUSH)
+  ))
+_sym_db.RegisterMessage(CSPKG_RESET_CURRENT_BOSSRUSH)
+
+FRIEND_ASSISTANT_HERO = _reflection.GeneratedProtocolMessageType('FRIEND_ASSISTANT_HERO', (_message.Message,), dict(
+  DESCRIPTOR = _FRIEND_ASSISTANT_HERO,
+  __module__ = 'bossrush_pb2'
+  # @@protoc_insertion_point(class_scope:FRIEND_ASSISTANT_HERO)
+  ))
+_sym_db.RegisterMessage(FRIEND_ASSISTANT_HERO)
+
+SCPKG_FRIEND_ASSISSTANT_HERO_CAN_USE = _reflection.GeneratedProtocolMessageType('SCPKG_FRIEND_ASSISSTANT_HERO_CAN_USE', (_message.Message,), dict(
+  DESCRIPTOR = _SCPKG_FRIEND_ASSISSTANT_HERO_CAN_USE,
+  __module__ = 'bossrush_pb2'
+  # @@protoc_insertion_point(class_scope:SCPKG_FRIEND_ASSISSTANT_HERO_CAN_USE)
+  ))
+_sym_db.RegisterMessage(SCPKG_FRIEND_ASSISSTANT_HERO_CAN_USE)
+
+CSPKGG_REPLACE_FRIEND_ASSISTANT_HERO = _reflection.GeneratedProtocolMessageType('CSPKGG_REPLACE_FRIEND_ASSISTANT_HERO', (_message.Message,), dict(
+  DESCRIPTOR = _CSPKGG_REPLACE_FRIEND_ASSISTANT_HERO,
+  __module__ = 'bossrush_pb2'
+  # @@protoc_insertion_point(class_scope:CSPKGG_REPLACE_FRIEND_ASSISTANT_HERO)
+  ))
+_sym_db.RegisterMessage(CSPKGG_REPLACE_FRIEND_ASSISTANT_HERO)
+
+SCPKG_FRIEND_CURRENT_ASSISSTANT_HERO = _reflection.GeneratedProtocolMessageType('SCPKG_FRIEND_CURRENT_ASSISSTANT_HERO', (_message.Message,), dict(
+  DESCRIPTOR = _SCPKG_FRIEND_CURRENT_ASSISSTANT_HERO,
+  __module__ = 'bossrush_pb2'
+  # @@protoc_insertion_point(class_scope:SCPKG_FRIEND_CURRENT_ASSISSTANT_HERO)
+  ))
+_sym_db.RegisterMessage(SCPKG_FRIEND_CURRENT_ASSISSTANT_HERO)
 
 
 # @@protoc_insertion_point(module_scope)
