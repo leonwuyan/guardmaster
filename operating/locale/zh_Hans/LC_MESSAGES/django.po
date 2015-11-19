@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2015-11-19 16:33+0800\n"
+"POT-Creation-Date: 2015-11-19 17:28+0800\n"
 "PO-Revision-Date: 2015-11-19 16:33+0800\n"
 "Last-Translator: Raynor <raynor41@gmail.com>\n"
 "Language-Team: \n"
@@ -841,182 +841,191 @@ msgstr "复制以下列表给CDN服务器管理员"
 msgid "Return Notify List"
 msgstr "返回公告列表"
 
-#: templatetags/custom.py:25 templatetags/custom.py:191
+#: templatetags/custom.py:24 templatetags/custom.py:190
 msgid "Not Time"
 msgstr "无时间"
 
-#: templatetags/custom.py:43
+#: templatetags/custom.py:42
 #, python-format
 msgid "%(hour)s H %(minute)s M %(second)s S"
 msgstr "%(hour)s 小时 %(minute)s 分钟 %(second)s 秒"
 
-#: templatetags/custom.py:48
+#: templatetags/custom.py:47
 msgid "OFF LINE"
 msgstr "离线"
 
-#: templatetags/custom.py:50
+#: templatetags/custom.py:49
 msgid "ON LINE"
 msgstr "在线"
 
-#: templatetags/custom.py:120
+#: templatetags/custom.py:119
 msgid "Novice Dungeon List"
 msgstr "新手关卡"
 
-#: templatetags/custom.py:122
+#: templatetags/custom.py:121
 msgid "Normal Dungeon List"
 msgstr "普通关卡"
 
-#: templatetags/custom.py:124
+#: templatetags/custom.py:123
 msgid "Elite Dungeon List"
 msgstr "精英关卡"
 
-#: templatetags/custom.py:126
+#: templatetags/custom.py:125
 msgid "Endless Dungeon List"
 msgstr "无尽之塔"
 
-#: templatetags/custom.py:170
+#: templatetags/custom.py:169
 msgid "PvP Win Times"
 msgstr "掠夺胜利场次"
 
-#: templatetags/custom.py:170
+#: templatetags/custom.py:169
 msgid "PvP Total Times"
 msgstr "掠夺总场次"
 
-#: templatetags/custom.py:171
+#: templatetags/custom.py:170
 msgid "Endless Score"
 msgstr "无尽之塔积分"
 
-#: templatetags/custom.py:171
+#: templatetags/custom.py:170
 msgid "Endless Floor"
 msgstr "无尽之塔层数"
 
-#: templatetags/custom.py:172
+#: templatetags/custom.py:171
 msgid "Gang Score"
 msgstr "联盟当前积分"
 
-#: templatetags/custom.py:172
+#: templatetags/custom.py:171
 msgid "Gang History Score"
 msgstr "联盟历史最高积分"
 
-#: templatetags/custom.py:173
+#: templatetags/custom.py:172
 msgid "Achievement Score"
 msgstr "成就分数"
 
-#: templatetags/custom.py:173
+#: templatetags/custom.py:172
 msgid "Achievement Times"
 msgstr "成就完成数量"
 
-#: templatetags/custom.py:174
+#: templatetags/custom.py:173
 msgid "Fight Offline Name"
 msgstr "线下对战称号"
 
-#: templatetags/custom.py:174
+#: templatetags/custom.py:173
 msgid "Fight Offline Kill Man"
 msgstr "线下对战人头"
 
-#: templatetags/custom.py:175
+#: templatetags/custom.py:174
 msgid "Fight Online Score"
 msgstr "线上对战积分"
 
-#: templatetags/custom.py:175
+#: templatetags/custom.py:174
 msgid "Fight Online Win Times"
 msgstr "线上对战赢场"
 
-#: templatetags/custom.py:176
+#: templatetags/custom.py:175
 msgid "BOSS History Damage"
 msgstr "世界Boss历史伤害量"
 
-#: templatetags/custom.py:176 templatetags/custom.py:177
-#: templatetags/custom.py:178 templatetags/custom.py:179
-#: templatetags/custom.py:180 templatetags/custom.py:181
-#: templatetags/custom.py:182 templatetags/custom.py:183
-#: templatetags/custom.py:184
+#: templatetags/custom.py:175 templatetags/custom.py:176
+#: templatetags/custom.py:177 templatetags/custom.py:178
+#: templatetags/custom.py:179 templatetags/custom.py:180
+#: templatetags/custom.py:181 templatetags/custom.py:182
+#: templatetags/custom.py:183
 msgid "Unkown"
 msgstr "未知"
 
-#: templatetags/custom.py:177
+#: templatetags/custom.py:176
 msgid "1st BOSS Damage"
 msgstr "第一只Boss伤害量"
 
-#: templatetags/custom.py:178
+#: templatetags/custom.py:177
 msgid "2rd BOSS Damage"
 msgstr "第二只Boss伤害量"
 
-#: templatetags/custom.py:179
+#: templatetags/custom.py:178
 msgid "3th BOSS Damage"
 msgstr "第三只Boss伤害量"
 
-#: templatetags/custom.py:180
+#: templatetags/custom.py:179
 msgid "4th BOSS Damage"
 msgstr "第四只Boss伤害量"
 
-#: templatetags/custom.py:181
+#: templatetags/custom.py:180
 msgid "5th BOSS Damage"
 msgstr "第五只Boss伤害量"
 
-#: templatetags/custom.py:182
+#: templatetags/custom.py:181
 msgid "6th BOSS Damage"
 msgstr "第六只Boss伤害量"
 
-#: templatetags/custom.py:183
+#: templatetags/custom.py:182
 msgid "7th BOSS Damage"
 msgstr "第七只Boss伤害量"
 
-#: templatetags/custom.py:184
+#: templatetags/custom.py:183
 msgid "8th BOSS Damage"
 msgstr "第八只Boss伤害量"
 
-#: templatetags/custom.py:205
+#: templatetags/custom.py:204
 msgid "Order Is Locking"
 msgstr "请求已上锁"
 
-#: templatetags/custom.py:206
+#: templatetags/custom.py:205
 msgid "Successful"
 msgstr "成功"
 
-#: templatetags/custom.py:207
+#: templatetags/custom.py:206
 msgid "Dir Do Not Exists"
 msgstr "文件目录不存在"
 
-#: templatetags/custom.py:208
+#: templatetags/custom.py:207
 msgid "Not Any Files"
 msgstr "没有文件"
 
-#: templatetags/custom.py:209
+#: templatetags/custom.py:208
 msgid "Error In Scp"
 msgstr "上传错误"
 
-#: templatetags/custom.py:210
+#: templatetags/custom.py:209
 msgid "Working"
 msgstr "工作中"
 
-#: templatetags/custom.py:211
+#: templatetags/custom.py:210
 msgid "Error In Srcipt"
 msgstr "脚本错误"
 
-#~ msgid "t_crystal"
-#~ msgstr "魔素"
+#: templatetags/custom.py:229
+msgid "t_crystal"
+msgstr "魔素"
 
-#~ msgid "t_gold"
-#~ msgstr "金币"
+#: templatetags/custom.py:231
+msgid "t_gold"
+msgstr "金币"
 
-#~ msgid "t_money"
-#~ msgstr "宝石"
+#: templatetags/custom.py:233
+msgid "t_money"
+msgstr "宝石"
 
-#~ msgid "t_skill_point"
-#~ msgstr "技能点数"
+#: templatetags/custom.py:235
+msgid "t_skill_point"
+msgstr "技能点数"
 
-#~ msgid "t_item"
-#~ msgstr "道具"
+#: templatetags/custom.py:237
+msgid "t_item"
+msgstr "道具"
 
-#~ msgid "t_power"
-#~ msgstr "体力"
+#: templatetags/custom.py:242
+msgid "t_power"
+msgstr "体力"
 
-#~ msgid "t_equip"
-#~ msgstr "装备"
+#: templatetags/custom.py:244
+msgid "t_equip"
+msgstr "装备"
 
-#~ msgid "t_score_of_rank_battle"
-#~ msgstr "排位赛积分"
+#: templatetags/custom.py:252
+msgid "t_score_of_rank_battle"
+msgstr "排位赛积分"
 
-#~ msgid "t_winpoint"
-#~ msgstr "胜点"
+#: templatetags/custom.py:254
+msgid "t_winpoint"
+msgstr "胜点"
