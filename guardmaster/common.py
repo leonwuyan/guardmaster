@@ -83,7 +83,10 @@ def datetime2ts(t, tz=0):
 
 
 def string2ts(t, tz=0):
-    ts = time.mktime(time.strptime(t, '%Y-%m-%d %H:%M:%S')) + tz
+    if t:
+        ts = time.mktime(time.strptime(t, '%Y-%m-%d %H:%M:%S')) + tz
+    else:
+        ts = 0
     return int(ts)
 
 

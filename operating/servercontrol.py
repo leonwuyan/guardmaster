@@ -268,8 +268,12 @@ class ServerControl(object):
         title = post.get('title', 'Title')
         content = post.get('content', 'Content')
         acc = self._acc(post)
-        start_date = post.get('start', timezone.now())
-        end_date = post.get('end', timezone.now())
+        start_date = post.get('start')
+        end_date = post.get('end')
+        if not start_date:
+            start_date = None
+        if not end_date:
+            end_date = None
         zone = map(lambda x: int(x), post.getlist('zone'))
         version = post.get('version', '')
         ss = ServerSocket(self.server.ip, self.server.port, self.server.buf)
@@ -296,8 +300,8 @@ class ServerControl(object):
                 },
                 acc,
                 {
-                    'begin': Common.string2ts(r.start_date),
-                    'end': Common.string2ts(r.end_date),
+                    'begin': Common.string2ts(start_date),
+                    'end': Common.string2ts(end_date),
                     'version': version,
                     'channel': 0
                 },
