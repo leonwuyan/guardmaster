@@ -20,7 +20,7 @@ import continuelogin_pb2
 DESCRIPTOR = _descriptor.FileDescriptor(
   name='business.proto',
   package='',
-  serialized_pb=_b('\n\x0e\x62usiness.proto\x1a\x11protocommon.proto\x1a\x13\x63ontinuelogin.proto\"+\n\x18\x43SPKG_GET_MONTHLY_REWARD\x12\x0f\n\x07re_sign\x18\x01 \x01(\x08\"Q\n\x15\x43SDT_GROWTH_FUND_INFO\x12\x10\n\x08\x62uy_time\x18\x01 \x01(\r\x12\x12\n\ntarget_bit\x18\x02 \x01(\r\x12\x12\n\nreward_bit\x18\x03 \x01(\r\"\xcb\x01\n\x1b\x43SDT_CUMULATE_RECHARGE_INFO\x12\x1c\n\x14\x63umulate_recharge_id\x18\x01 \x01(\r\x12\x1d\n\x15\x63umulate_recharge_cnt\x18\x02 \x01(\r\x12\x18\n\x10last_reward_time\x18\x03 \x01(\r\x12\x12\n\ntarget_bit\x18\x04 \x01(\r\x12\x12\n\nreward_bit\x18\x05 \x01(\r\x12\x16\n\x0e\x64\x61ily_free_bit\x18\x06 \x01(\r\x12\x15\n\rdaily_buy_bit\x18\x07 \x01(\r\"K\n\x13\x43SDT_GROUP_BUY_INFO\x12\x1a\n\x12valid_group_buy_id\x18\x01 \x03(\r\x12\x18\n\x10has_buy_group_id\x18\x02 \x03(\r\"\x8c\x01\n\x14SCDT_MONTH_CARD_INFO\x12\x15\n\rmonth_card_id\x18\x01 \x01(\r\x12\x10\n\x08\x62uy_time\x18\x02 \x01(\r\x12\x18\n\x10last_reward_time\x18\x03 \x01(\r\x12\x1c\n\x14last_get_reward_time\x18\x04 \x01(\r\x12\x13\n\x0bremain_days\x18\x05 \x01(\x05\"[\n\x15\x43SDT_FIRSTREWARD_INFO\x12\x15\n\ris_get_reward\x18\x01 \x01(\r\x12\x0f\n\x07is_open\x18\x02 \x01(\x08\x12\x1a\n\x12\x66irst_recharge_cnt\x18\x03 \x01(\r\"J\n\x17\x43SDT_FIRSTPURCHASE_INFO\x12\x15\n\rproduct_index\x18\x01 \x01(\r\x12\x18\n\x10is_firstpurchase\x18\x02 \x01(\r\">\n\x13\x43SDT_MONTHCARD_INFO\x12\x15\n\rmonth_card_id\x18\x01 \x01(\r\x12\x10\n\x08\x62uy_time\x18\x02 \x01(\r\"\x82\x01\n\x1bSCPKG_GET_FIRSTPURCHASE_RES\x12\x34\n\x12\x66irstpurchase_list\x18\x01 \x03(\x0b\x32\x18.CSDT_FIRSTPURCHASE_INFO\x12-\n\x0emonthcard_info\x18\x02 \x01(\x0b\x32\x15.SCDT_MONTH_CARD_INFO\"\xf6\x03\n\x12\x43SDT_BUSINESS_INFO\x12\x37\n\x14\x63on_login_7days_info\x18\x01 \x01(\x0b\x32\x19.SCDT_CONTINUE_LOGIN_INFO\x12:\n\x17\x63on_login_cumulate_info\x18\x02 \x01(\x0b\x32\x19.SCDT_CONTINUE_LOGIN_INFO\x12\x33\n\x10month_login_info\x18\x03 \x01(\x0b\x32\x19.SCDT_CONTINUE_LOGIN_INFO\x12\x30\n\x10growth_fund_info\x18\x04 \x01(\x0b\x32\x16.CSDT_GROWTH_FUND_INFO\x12<\n\x16\x63umulate_recharge_info\x18\x05 \x01(\x0b\x32\x1c.CSDT_CUMULATE_RECHARGE_INFO\x12,\n\x0egroup_buy_info\x18\x06 \x01(\x0b\x32\x14.CSDT_GROUP_BUY_INFO\x12.\n\x0fmonth_card_info\x18\x07 \x01(\x0b\x32\x15.SCDT_MONTH_CARD_INFO\x12\x35\n\x13\x66irst_purchase_info\x18\x08 \x03(\x0b\x32\x18.CSDT_FIRSTPURCHASE_INFO\x12\x31\n\x11\x66irst_reward_info\x18\t \x01(\x0b\x32\x16.CSDT_FIRSTREWARD_INFO\"J\n\x16SCPKG_GROWTH_FUND_INFO\x12\x30\n\x10growth_fund_info\x18\x01 \x01(\x0b\x32\x16.CSDT_GROWTH_FUND_INFO\"6\n\x1c\x43SPKG_GET_GROWTH_FUND_REWARD\x12\x16\n\x0egrowth_fund_id\x18\x01 \x01(\r\"B\n\"CSPKG_GET_CUMULATE_RECHARGE_REWARD\x12\x1c\n\x14\x63umulate_recharge_id\x18\x01 \x01(\r\"\\\n\x1cSCPKG_CUMULATE_RECHARGE_INFO\x12<\n\x16\x63umulate_recharge_info\x18\x01 \x01(\x0b\x32\x1c.CSDT_CUMULATE_RECHARGE_INFO\"X\n(CSPKG_GET_CUMULATE_RECHARGE_DAILY_REWARD\x12\x1c\n\x14\x63umulate_recharge_id\x18\x01 \x01(\x05\x12\x0e\n\x06is_buy\x18\x02 \x01(\x05\"7\n\x16\x43SPKG_GET_FIRST_REWARD\x12\x1d\n\x15\x63omulate_recharge_cnt\x18\x01 \x01(\r\"G\n\x16SCPKG_GET_FIRST_REWARD\x12-\n\ris_get_reward\x18\x01 \x01(\x0b\x32\x16.CSDT_FIRSTREWARD_INFO\"Z\n\x18SCPKG_BUY_MONTH_CARD_RES\x12\x0e\n\x06result\x18\x01 \x01(\r\x12.\n\x0fmonth_card_info\x18\x02 \x01(\x0b\x32\x15.SCDT_MONTH_CARD_INFO\"0\n\x1d\x43SPKG_GET_CUMULATECOST_REWARD\x12\x0f\n\x07\x62it_pos\x18\x01 \x01(\r\"u\n\x1dSCPKG_GET_CUMULATECOST_REWARD\x12\x0e\n\x06result\x18\x01 \x01(\x05\x12\x0f\n\x07\x62it_pos\x18\x02 \x01(\r\x12\x33\n\x11\x63umulatecost_info\x18\x03 \x01(\x0b\x32\x18.SCDT_CUMULATE_COST_INFO\"M\n\x16SCPKG_NTF_CUMULATECOST\x12\x33\n\x11\x63umulatecost_info\x18\x01 \x01(\x0b\x32\x18.SCDT_CUMULATE_COST_INFO\"\x91\x01\n\x12SCPKG_DISP_CHATMSG\x12\x0c\n\x04\x66rom\x18\x01 \x01(\t\x12\x10\n\x08msg_type\x18\x03 \x01(\r\x12\x10\n\x08msg_data\x18\x04 \x01(\t\x12\x0e\n\x06result\x18\x05 \x01(\x05\x12\x14\n\x0c\x66rom_role_id\x18\x06 \x01(\r\x12#\n\x1bsender_cumulate_recharge_id\x18\x07 \x01(\r\"+\n\x13\x43SPKG_GROUP_BUY_REQ\x12\x14\n\x0cgroup_buy_id\x18\x01 \x01(\r\"1\n\x1e\x43SPKG_PRIZE_DRAW_FREE_INFO_REQ\x12\x0f\n\x07reverse\x18\x01 \x01(\x05\">\n\x18SCPKG_REMOVE_PRIVATE_MSG\x12\x0e\n\x06result\x18\x01 \x01(\x05\x12\x12\n\ntarget_uid\x18\x02 \x01(\r\"S\n\x13SCPKG_GROUP_BUY_RES\x12\x0e\n\x06result\x18\x01 \x01(\r\x12,\n\x0egroup_buy_info\x18\x02 \x01(\x0b\x32\x14.CSDT_GROUP_BUY_INFO\"6\n\x12SCDT_VIP_PRIVILEGE\x12\x0c\n\x04type\x18\x01 \x01(\r\x12\x12\n\nused_times\x18\x02 \x01(\r\"T\n\x15SCPKG_CMD_VIP_REFRESH\x12\x0e\n\x06result\x18\x01 \x01(\r\x12+\n\x0eprivilege_info\x18\x02 \x03(\x0b\x32\x13.SCDT_VIP_PRIVILEGE\"+\n\x13SCPKG_GROUP_BUY_BEG\x12\x14\n\x0cgroup_buy_id\x18\x01 \x01(\r\"+\n\x13SCPKG_GROUP_BUY_END\x12\x14\n\x0cgroup_buy_id\x18\x01 \x01(\r\"G\n\x17SCPKG_GROUP_BUY_REFRESH\x12,\n\x0egroup_buy_info\x18\x01 \x01(\x0b\x32\x14.CSDT_GROUP_BUY_INFO\"d\n\x1eSCPKG_FIRST_REWARD_ACHIEVEMENT\x12\x15\n\ris_get_reward\x18\x01 \x01(\r\x12\x0f\n\x07is_open\x18\x02 \x01(\x08\x12\x1a\n\x12\x66irst_recharge_cnt\x18\x03 \x01(\r\"N\n\x16SCPKG_SECT_REWARD_INFO\x12\x34\n\x12sect_recharge_info\x18\x01 \x01(\x0b\x32\x18.SCDT_SECT_RECHARGE_INFO\"Q\n\x17SCPKG_DAILY_REWARD_INFO\x12\x36\n\x13\x64\x61ily_recharge_info\x18\x01 \x01(\x0b\x32\x19.SCDT_DAILY_RECHARGE_INFO\"1\n\x1e\x43SPKG_GET_SECT_RECHARGE_REWARD\x12\x0f\n\x07\x62it_pos\x18\x01 \x01(\r\"w\n\x1eSCPKG_GET_SECT_RECHARGE_REWARD\x12\x0e\n\x06result\x18\x01 \x01(\x05\x12\x0f\n\x07\x62it_pos\x18\x02 \x01(\r\x12\x34\n\x12sect_recharge_info\x18\x03 \x01(\x0b\x32\x18.SCDT_SECT_RECHARGE_INFO\"2\n\x1f\x43SPKG_GET_DAILY_RECHARGE_REWARD\x12\x0f\n\x07\x62it_pos\x18\x01 \x01(\r\"z\n\x1fSCPKG_GET_DAILY_RECHARGE_REWARD\x12\x0e\n\x06result\x18\x01 \x01(\x05\x12\x0f\n\x07\x62it_pos\x18\x02 \x01(\r\x12\x36\n\x13\x64\x61ily_recharge_info\x18\x03 \x01(\x0b\x32\x19.SCDT_DAILY_RECHARGE_INFO\".\n\x1a\x43SPKG_GET_MONTHCARD_REWARD\x12\x10\n\x08reserved\x18\x01 \x01(\r\"\\\n\x1aSCPKG_GET_MONTHCARD_REWARD\x12\x0e\n\x06result\x18\x01 \x01(\x05\x12.\n\x0fmonth_card_info\x18\x02 \x01(\x0b\x32\x15.SCDT_MONTH_CARD_INFO\"L\n\x1bSCPKG_NTF_MONTHCARD_REFRESH\x12-\n\x0emonthcard_info\x18\x01 \x01(\x0b\x32\x15.SCDT_MONTH_CARD_INFO')
+  serialized_pb=_b('\n\x0e\x62usiness.proto\x1a\x11protocommon.proto\x1a\x13\x63ontinuelogin.proto\"+\n\x18\x43SPKG_GET_MONTHLY_REWARD\x12\x0f\n\x07re_sign\x18\x01 \x01(\x08\"Q\n\x15\x43SDT_GROWTH_FUND_INFO\x12\x10\n\x08\x62uy_time\x18\x01 \x01(\r\x12\x12\n\ntarget_bit\x18\x02 \x01(\r\x12\x12\n\nreward_bit\x18\x03 \x01(\r\"\xcb\x01\n\x1b\x43SDT_CUMULATE_RECHARGE_INFO\x12\x1c\n\x14\x63umulate_recharge_id\x18\x01 \x01(\r\x12\x1d\n\x15\x63umulate_recharge_cnt\x18\x02 \x01(\r\x12\x18\n\x10last_reward_time\x18\x03 \x01(\r\x12\x12\n\ntarget_bit\x18\x04 \x01(\r\x12\x12\n\nreward_bit\x18\x05 \x01(\r\x12\x16\n\x0e\x64\x61ily_free_bit\x18\x06 \x01(\r\x12\x15\n\rdaily_buy_bit\x18\x07 \x01(\r\"K\n\x13\x43SDT_GROUP_BUY_INFO\x12\x1a\n\x12valid_group_buy_id\x18\x01 \x03(\r\x12\x18\n\x10has_buy_group_id\x18\x02 \x03(\r\"\x8c\x01\n\x14SCDT_MONTH_CARD_INFO\x12\x15\n\rmonth_card_id\x18\x01 \x01(\r\x12\x10\n\x08\x62uy_time\x18\x02 \x01(\r\x12\x18\n\x10last_reward_time\x18\x03 \x01(\r\x12\x1c\n\x14last_get_reward_time\x18\x04 \x01(\r\x12\x13\n\x0bremain_days\x18\x05 \x01(\x05\"\x91\x01\n\x19SCDT_SUPERVALUE_CARD_INFO\x12\x15\n\rsuper_card_id\x18\x01 \x01(\r\x12\x10\n\x08\x62uy_time\x18\x02 \x01(\r\x12\x18\n\x10last_reward_time\x18\x03 \x01(\r\x12\x1c\n\x14last_get_reward_time\x18\x04 \x01(\r\x12\x13\n\x0bremain_days\x18\x05 \x01(\x05\"[\n\x15\x43SDT_FIRSTREWARD_INFO\x12\x15\n\ris_get_reward\x18\x01 \x01(\r\x12\x0f\n\x07is_open\x18\x02 \x01(\x08\x12\x1a\n\x12\x66irst_recharge_cnt\x18\x03 \x01(\r\"J\n\x17\x43SDT_FIRSTPURCHASE_INFO\x12\x15\n\rproduct_index\x18\x01 \x01(\r\x12\x18\n\x10is_firstpurchase\x18\x02 \x01(\r\">\n\x13\x43SDT_MONTHCARD_INFO\x12\x15\n\rmonth_card_id\x18\x01 \x01(\r\x12\x10\n\x08\x62uy_time\x18\x02 \x01(\r\"\xbb\x01\n\x1bSCPKG_GET_FIRSTPURCHASE_RES\x12\x34\n\x12\x66irstpurchase_list\x18\x01 \x03(\x0b\x32\x18.CSDT_FIRSTPURCHASE_INFO\x12-\n\x0emonthcard_info\x18\x02 \x01(\x0b\x32\x15.SCDT_MONTH_CARD_INFO\x12\x37\n\x13supervaluecard_info\x18\x03 \x03(\x0b\x32\x1a.SCDT_SUPERVALUE_CARD_INFO\"\xb0\x04\n\x12\x43SDT_BUSINESS_INFO\x12\x37\n\x14\x63on_login_7days_info\x18\x01 \x01(\x0b\x32\x19.SCDT_CONTINUE_LOGIN_INFO\x12:\n\x17\x63on_login_cumulate_info\x18\x02 \x01(\x0b\x32\x19.SCDT_CONTINUE_LOGIN_INFO\x12\x33\n\x10month_login_info\x18\x03 \x01(\x0b\x32\x19.SCDT_CONTINUE_LOGIN_INFO\x12\x30\n\x10growth_fund_info\x18\x04 \x01(\x0b\x32\x16.CSDT_GROWTH_FUND_INFO\x12<\n\x16\x63umulate_recharge_info\x18\x05 \x01(\x0b\x32\x1c.CSDT_CUMULATE_RECHARGE_INFO\x12,\n\x0egroup_buy_info\x18\x06 \x01(\x0b\x32\x14.CSDT_GROUP_BUY_INFO\x12.\n\x0fmonth_card_info\x18\x07 \x01(\x0b\x32\x15.SCDT_MONTH_CARD_INFO\x12\x35\n\x13\x66irst_purchase_info\x18\x08 \x03(\x0b\x32\x18.CSDT_FIRSTPURCHASE_INFO\x12\x31\n\x11\x66irst_reward_info\x18\t \x01(\x0b\x32\x16.CSDT_FIRSTREWARD_INFO\x12\x38\n\x14supervalue_card_info\x18\n \x03(\x0b\x32\x1a.SCDT_SUPERVALUE_CARD_INFO\"J\n\x16SCPKG_GROWTH_FUND_INFO\x12\x30\n\x10growth_fund_info\x18\x01 \x01(\x0b\x32\x16.CSDT_GROWTH_FUND_INFO\"6\n\x1c\x43SPKG_GET_GROWTH_FUND_REWARD\x12\x16\n\x0egrowth_fund_id\x18\x01 \x01(\r\"B\n\"CSPKG_GET_CUMULATE_RECHARGE_REWARD\x12\x1c\n\x14\x63umulate_recharge_id\x18\x01 \x01(\r\"\\\n\x1cSCPKG_CUMULATE_RECHARGE_INFO\x12<\n\x16\x63umulate_recharge_info\x18\x01 \x01(\x0b\x32\x1c.CSDT_CUMULATE_RECHARGE_INFO\"X\n(CSPKG_GET_CUMULATE_RECHARGE_DAILY_REWARD\x12\x1c\n\x14\x63umulate_recharge_id\x18\x01 \x01(\x05\x12\x0e\n\x06is_buy\x18\x02 \x01(\x05\"7\n\x16\x43SPKG_GET_FIRST_REWARD\x12\x1d\n\x15\x63omulate_recharge_cnt\x18\x01 \x01(\r\"G\n\x16SCPKG_GET_FIRST_REWARD\x12-\n\ris_get_reward\x18\x01 \x01(\x0b\x32\x16.CSDT_FIRSTREWARD_INFO\"Z\n\x18SCPKG_BUY_MONTH_CARD_RES\x12\x0e\n\x06result\x18\x01 \x01(\r\x12.\n\x0fmonth_card_info\x18\x02 \x01(\x0b\x32\x15.SCDT_MONTH_CARD_INFO\"i\n\x1dSCPKG_BUY_SUPERVALUE_CARD_RES\x12\x0e\n\x06result\x18\x01 \x01(\r\x12\x38\n\x14supervalue_card_info\x18\x02 \x03(\x0b\x32\x1a.SCDT_SUPERVALUE_CARD_INFO\"0\n\x1d\x43SPKG_GET_CUMULATECOST_REWARD\x12\x0f\n\x07\x62it_pos\x18\x01 \x01(\r\"u\n\x1dSCPKG_GET_CUMULATECOST_REWARD\x12\x0e\n\x06result\x18\x01 \x01(\x05\x12\x0f\n\x07\x62it_pos\x18\x02 \x01(\r\x12\x33\n\x11\x63umulatecost_info\x18\x03 \x01(\x0b\x32\x18.SCDT_CUMULATE_COST_INFO\"M\n\x16SCPKG_NTF_CUMULATECOST\x12\x33\n\x11\x63umulatecost_info\x18\x01 \x01(\x0b\x32\x18.SCDT_CUMULATE_COST_INFO\"\x91\x01\n\x12SCPKG_DISP_CHATMSG\x12\x0c\n\x04\x66rom\x18\x01 \x01(\t\x12\x10\n\x08msg_type\x18\x03 \x01(\r\x12\x10\n\x08msg_data\x18\x04 \x01(\t\x12\x0e\n\x06result\x18\x05 \x01(\x05\x12\x14\n\x0c\x66rom_role_id\x18\x06 \x01(\r\x12#\n\x1bsender_cumulate_recharge_id\x18\x07 \x01(\r\"+\n\x13\x43SPKG_GROUP_BUY_REQ\x12\x14\n\x0cgroup_buy_id\x18\x01 \x01(\r\"1\n\x1e\x43SPKG_PRIZE_DRAW_FREE_INFO_REQ\x12\x0f\n\x07reverse\x18\x01 \x01(\x05\">\n\x18SCPKG_REMOVE_PRIVATE_MSG\x12\x0e\n\x06result\x18\x01 \x01(\x05\x12\x12\n\ntarget_uid\x18\x02 \x01(\r\"S\n\x13SCPKG_GROUP_BUY_RES\x12\x0e\n\x06result\x18\x01 \x01(\r\x12,\n\x0egroup_buy_info\x18\x02 \x01(\x0b\x32\x14.CSDT_GROUP_BUY_INFO\"6\n\x12SCDT_VIP_PRIVILEGE\x12\x0c\n\x04type\x18\x01 \x01(\r\x12\x12\n\nused_times\x18\x02 \x01(\r\"T\n\x15SCPKG_CMD_VIP_REFRESH\x12\x0e\n\x06result\x18\x01 \x01(\r\x12+\n\x0eprivilege_info\x18\x02 \x03(\x0b\x32\x13.SCDT_VIP_PRIVILEGE\"+\n\x13SCPKG_GROUP_BUY_BEG\x12\x14\n\x0cgroup_buy_id\x18\x01 \x01(\r\"+\n\x13SCPKG_GROUP_BUY_END\x12\x14\n\x0cgroup_buy_id\x18\x01 \x01(\r\"G\n\x17SCPKG_GROUP_BUY_REFRESH\x12,\n\x0egroup_buy_info\x18\x01 \x01(\x0b\x32\x14.CSDT_GROUP_BUY_INFO\"d\n\x1eSCPKG_FIRST_REWARD_ACHIEVEMENT\x12\x15\n\ris_get_reward\x18\x01 \x01(\r\x12\x0f\n\x07is_open\x18\x02 \x01(\x08\x12\x1a\n\x12\x66irst_recharge_cnt\x18\x03 \x01(\r\"N\n\x16SCPKG_SECT_REWARD_INFO\x12\x34\n\x12sect_recharge_info\x18\x01 \x01(\x0b\x32\x18.SCDT_SECT_RECHARGE_INFO\"Q\n\x17SCPKG_DAILY_REWARD_INFO\x12\x36\n\x13\x64\x61ily_recharge_info\x18\x01 \x01(\x0b\x32\x19.SCDT_DAILY_RECHARGE_INFO\"1\n\x1e\x43SPKG_GET_SECT_RECHARGE_REWARD\x12\x0f\n\x07\x62it_pos\x18\x01 \x01(\r\"w\n\x1eSCPKG_GET_SECT_RECHARGE_REWARD\x12\x0e\n\x06result\x18\x01 \x01(\x05\x12\x0f\n\x07\x62it_pos\x18\x02 \x01(\r\x12\x34\n\x12sect_recharge_info\x18\x03 \x01(\x0b\x32\x18.SCDT_SECT_RECHARGE_INFO\"2\n\x1f\x43SPKG_GET_DAILY_RECHARGE_REWARD\x12\x0f\n\x07\x62it_pos\x18\x01 \x01(\r\"z\n\x1fSCPKG_GET_DAILY_RECHARGE_REWARD\x12\x0e\n\x06result\x18\x01 \x01(\x05\x12\x0f\n\x07\x62it_pos\x18\x02 \x01(\r\x12\x36\n\x13\x64\x61ily_recharge_info\x18\x03 \x01(\x0b\x32\x19.SCDT_DAILY_RECHARGE_INFO\".\n\x1a\x43SPKG_GET_MONTHCARD_REWARD\x12\x10\n\x08reserved\x18\x01 \x01(\r\"\\\n\x1aSCPKG_GET_MONTHCARD_REWARD\x12\x0e\n\x06result\x18\x01 \x01(\x05\x12.\n\x0fmonth_card_info\x18\x02 \x01(\x0b\x32\x15.SCDT_MONTH_CARD_INFO\"L\n\x1bSCPKG_NTF_MONTHCARD_REFRESH\x12-\n\x0emonthcard_info\x18\x01 \x01(\x0b\x32\x15.SCDT_MONTH_CARD_INFO\"=\n\x1f\x43SPKG_GET_SUPERVALUECARD_REWARD\x12\x1a\n\x12supervalue_card_id\x18\x01 \x01(\r\"k\n\x1fSCPKG_GET_SUPERVALUECARD_REWARD\x12\x0e\n\x06result\x18\x01 \x01(\x05\x12\x38\n\x14supervalue_card_info\x18\x02 \x03(\x0b\x32\x1a.SCDT_SUPERVALUE_CARD_INFO\"W\n SCPKG_NTF_SUPERVALUECARD_REFRESH\x12\x33\n\x0fsupervalue_info\x18\x01 \x03(\x0b\x32\x1a.SCDT_SUPERVALUE_CARD_INFO')
   ,
   dependencies=[protocommon_pb2.DESCRIPTOR,continuelogin_pb2.DESCRIPTOR,])
 _sym_db.RegisterFileDescriptor(DESCRIPTOR)
@@ -269,6 +269,64 @@ _SCDT_MONTH_CARD_INFO = _descriptor.Descriptor(
 )
 
 
+_SCDT_SUPERVALUE_CARD_INFO = _descriptor.Descriptor(
+  name='SCDT_SUPERVALUE_CARD_INFO',
+  full_name='SCDT_SUPERVALUE_CARD_INFO',
+  filename=None,
+  file=DESCRIPTOR,
+  containing_type=None,
+  fields=[
+    _descriptor.FieldDescriptor(
+      name='super_card_id', full_name='SCDT_SUPERVALUE_CARD_INFO.super_card_id', index=0,
+      number=1, type=13, cpp_type=3, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    _descriptor.FieldDescriptor(
+      name='buy_time', full_name='SCDT_SUPERVALUE_CARD_INFO.buy_time', index=1,
+      number=2, type=13, cpp_type=3, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    _descriptor.FieldDescriptor(
+      name='last_reward_time', full_name='SCDT_SUPERVALUE_CARD_INFO.last_reward_time', index=2,
+      number=3, type=13, cpp_type=3, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    _descriptor.FieldDescriptor(
+      name='last_get_reward_time', full_name='SCDT_SUPERVALUE_CARD_INFO.last_get_reward_time', index=3,
+      number=4, type=13, cpp_type=3, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    _descriptor.FieldDescriptor(
+      name='remain_days', full_name='SCDT_SUPERVALUE_CARD_INFO.remain_days', index=4,
+      number=5, type=5, cpp_type=1, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+  ],
+  extensions=[
+  ],
+  nested_types=[],
+  enum_types=[
+  ],
+  options=None,
+  is_extendable=False,
+  extension_ranges=[],
+  oneofs=[
+  ],
+  serialized_start=613,
+  serialized_end=758,
+)
+
+
 _CSDT_FIRSTREWARD_INFO = _descriptor.Descriptor(
   name='CSDT_FIRSTREWARD_INFO',
   full_name='CSDT_FIRSTREWARD_INFO',
@@ -308,8 +366,8 @@ _CSDT_FIRSTREWARD_INFO = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=612,
-  serialized_end=703,
+  serialized_start=760,
+  serialized_end=851,
 )
 
 
@@ -345,8 +403,8 @@ _CSDT_FIRSTPURCHASE_INFO = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=705,
-  serialized_end=779,
+  serialized_start=853,
+  serialized_end=927,
 )
 
 
@@ -382,8 +440,8 @@ _CSDT_MONTHCARD_INFO = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=781,
-  serialized_end=843,
+  serialized_start=929,
+  serialized_end=991,
 )
 
 
@@ -408,6 +466,13 @@ _SCPKG_GET_FIRSTPURCHASE_RES = _descriptor.Descriptor(
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
+    _descriptor.FieldDescriptor(
+      name='supervaluecard_info', full_name='SCPKG_GET_FIRSTPURCHASE_RES.supervaluecard_info', index=2,
+      number=3, type=11, cpp_type=10, label=3,
+      has_default_value=False, default_value=[],
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
   ],
   extensions=[
   ],
@@ -419,8 +484,8 @@ _SCPKG_GET_FIRSTPURCHASE_RES = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=846,
-  serialized_end=976,
+  serialized_start=994,
+  serialized_end=1181,
 )
 
 
@@ -494,6 +559,13 @@ _CSDT_BUSINESS_INFO = _descriptor.Descriptor(
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
+    _descriptor.FieldDescriptor(
+      name='supervalue_card_info', full_name='CSDT_BUSINESS_INFO.supervalue_card_info', index=9,
+      number=10, type=11, cpp_type=10, label=3,
+      has_default_value=False, default_value=[],
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
   ],
   extensions=[
   ],
@@ -505,8 +577,8 @@ _CSDT_BUSINESS_INFO = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=979,
-  serialized_end=1481,
+  serialized_start=1184,
+  serialized_end=1744,
 )
 
 
@@ -535,8 +607,8 @@ _SCPKG_GROWTH_FUND_INFO = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=1483,
-  serialized_end=1557,
+  serialized_start=1746,
+  serialized_end=1820,
 )
 
 
@@ -565,8 +637,8 @@ _CSPKG_GET_GROWTH_FUND_REWARD = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=1559,
-  serialized_end=1613,
+  serialized_start=1822,
+  serialized_end=1876,
 )
 
 
@@ -595,8 +667,8 @@ _CSPKG_GET_CUMULATE_RECHARGE_REWARD = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=1615,
-  serialized_end=1681,
+  serialized_start=1878,
+  serialized_end=1944,
 )
 
 
@@ -625,8 +697,8 @@ _SCPKG_CUMULATE_RECHARGE_INFO = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=1683,
-  serialized_end=1775,
+  serialized_start=1946,
+  serialized_end=2038,
 )
 
 
@@ -662,8 +734,8 @@ _CSPKG_GET_CUMULATE_RECHARGE_DAILY_REWARD = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=1777,
-  serialized_end=1865,
+  serialized_start=2040,
+  serialized_end=2128,
 )
 
 
@@ -692,8 +764,8 @@ _CSPKG_GET_FIRST_REWARD = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=1867,
-  serialized_end=1922,
+  serialized_start=2130,
+  serialized_end=2185,
 )
 
 
@@ -722,8 +794,8 @@ _SCPKG_GET_FIRST_REWARD = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=1924,
-  serialized_end=1995,
+  serialized_start=2187,
+  serialized_end=2258,
 )
 
 
@@ -759,8 +831,45 @@ _SCPKG_BUY_MONTH_CARD_RES = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=1997,
-  serialized_end=2087,
+  serialized_start=2260,
+  serialized_end=2350,
+)
+
+
+_SCPKG_BUY_SUPERVALUE_CARD_RES = _descriptor.Descriptor(
+  name='SCPKG_BUY_SUPERVALUE_CARD_RES',
+  full_name='SCPKG_BUY_SUPERVALUE_CARD_RES',
+  filename=None,
+  file=DESCRIPTOR,
+  containing_type=None,
+  fields=[
+    _descriptor.FieldDescriptor(
+      name='result', full_name='SCPKG_BUY_SUPERVALUE_CARD_RES.result', index=0,
+      number=1, type=13, cpp_type=3, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    _descriptor.FieldDescriptor(
+      name='supervalue_card_info', full_name='SCPKG_BUY_SUPERVALUE_CARD_RES.supervalue_card_info', index=1,
+      number=2, type=11, cpp_type=10, label=3,
+      has_default_value=False, default_value=[],
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+  ],
+  extensions=[
+  ],
+  nested_types=[],
+  enum_types=[
+  ],
+  options=None,
+  is_extendable=False,
+  extension_ranges=[],
+  oneofs=[
+  ],
+  serialized_start=2352,
+  serialized_end=2457,
 )
 
 
@@ -789,8 +898,8 @@ _CSPKG_GET_CUMULATECOST_REWARD = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=2089,
-  serialized_end=2137,
+  serialized_start=2459,
+  serialized_end=2507,
 )
 
 
@@ -833,8 +942,8 @@ _SCPKG_GET_CUMULATECOST_REWARD = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=2139,
-  serialized_end=2256,
+  serialized_start=2509,
+  serialized_end=2626,
 )
 
 
@@ -863,8 +972,8 @@ _SCPKG_NTF_CUMULATECOST = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=2258,
-  serialized_end=2335,
+  serialized_start=2628,
+  serialized_end=2705,
 )
 
 
@@ -928,8 +1037,8 @@ _SCPKG_DISP_CHATMSG = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=2338,
-  serialized_end=2483,
+  serialized_start=2708,
+  serialized_end=2853,
 )
 
 
@@ -958,8 +1067,8 @@ _CSPKG_GROUP_BUY_REQ = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=2485,
-  serialized_end=2528,
+  serialized_start=2855,
+  serialized_end=2898,
 )
 
 
@@ -988,8 +1097,8 @@ _CSPKG_PRIZE_DRAW_FREE_INFO_REQ = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=2530,
-  serialized_end=2579,
+  serialized_start=2900,
+  serialized_end=2949,
 )
 
 
@@ -1025,8 +1134,8 @@ _SCPKG_REMOVE_PRIVATE_MSG = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=2581,
-  serialized_end=2643,
+  serialized_start=2951,
+  serialized_end=3013,
 )
 
 
@@ -1062,8 +1171,8 @@ _SCPKG_GROUP_BUY_RES = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=2645,
-  serialized_end=2728,
+  serialized_start=3015,
+  serialized_end=3098,
 )
 
 
@@ -1099,8 +1208,8 @@ _SCDT_VIP_PRIVILEGE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=2730,
-  serialized_end=2784,
+  serialized_start=3100,
+  serialized_end=3154,
 )
 
 
@@ -1136,8 +1245,8 @@ _SCPKG_CMD_VIP_REFRESH = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=2786,
-  serialized_end=2870,
+  serialized_start=3156,
+  serialized_end=3240,
 )
 
 
@@ -1166,8 +1275,8 @@ _SCPKG_GROUP_BUY_BEG = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=2872,
-  serialized_end=2915,
+  serialized_start=3242,
+  serialized_end=3285,
 )
 
 
@@ -1196,8 +1305,8 @@ _SCPKG_GROUP_BUY_END = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=2917,
-  serialized_end=2960,
+  serialized_start=3287,
+  serialized_end=3330,
 )
 
 
@@ -1226,8 +1335,8 @@ _SCPKG_GROUP_BUY_REFRESH = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=2962,
-  serialized_end=3033,
+  serialized_start=3332,
+  serialized_end=3403,
 )
 
 
@@ -1270,8 +1379,8 @@ _SCPKG_FIRST_REWARD_ACHIEVEMENT = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=3035,
-  serialized_end=3135,
+  serialized_start=3405,
+  serialized_end=3505,
 )
 
 
@@ -1300,8 +1409,8 @@ _SCPKG_SECT_REWARD_INFO = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=3137,
-  serialized_end=3215,
+  serialized_start=3507,
+  serialized_end=3585,
 )
 
 
@@ -1330,8 +1439,8 @@ _SCPKG_DAILY_REWARD_INFO = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=3217,
-  serialized_end=3298,
+  serialized_start=3587,
+  serialized_end=3668,
 )
 
 
@@ -1360,8 +1469,8 @@ _CSPKG_GET_SECT_RECHARGE_REWARD = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=3300,
-  serialized_end=3349,
+  serialized_start=3670,
+  serialized_end=3719,
 )
 
 
@@ -1404,8 +1513,8 @@ _SCPKG_GET_SECT_RECHARGE_REWARD = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=3351,
-  serialized_end=3470,
+  serialized_start=3721,
+  serialized_end=3840,
 )
 
 
@@ -1434,8 +1543,8 @@ _CSPKG_GET_DAILY_RECHARGE_REWARD = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=3472,
-  serialized_end=3522,
+  serialized_start=3842,
+  serialized_end=3892,
 )
 
 
@@ -1478,8 +1587,8 @@ _SCPKG_GET_DAILY_RECHARGE_REWARD = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=3524,
-  serialized_end=3646,
+  serialized_start=3894,
+  serialized_end=4016,
 )
 
 
@@ -1508,8 +1617,8 @@ _CSPKG_GET_MONTHCARD_REWARD = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=3648,
-  serialized_end=3694,
+  serialized_start=4018,
+  serialized_end=4064,
 )
 
 
@@ -1545,8 +1654,8 @@ _SCPKG_GET_MONTHCARD_REWARD = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=3696,
-  serialized_end=3788,
+  serialized_start=4066,
+  serialized_end=4158,
 )
 
 
@@ -1575,12 +1684,110 @@ _SCPKG_NTF_MONTHCARD_REFRESH = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=3790,
-  serialized_end=3866,
+  serialized_start=4160,
+  serialized_end=4236,
+)
+
+
+_CSPKG_GET_SUPERVALUECARD_REWARD = _descriptor.Descriptor(
+  name='CSPKG_GET_SUPERVALUECARD_REWARD',
+  full_name='CSPKG_GET_SUPERVALUECARD_REWARD',
+  filename=None,
+  file=DESCRIPTOR,
+  containing_type=None,
+  fields=[
+    _descriptor.FieldDescriptor(
+      name='supervalue_card_id', full_name='CSPKG_GET_SUPERVALUECARD_REWARD.supervalue_card_id', index=0,
+      number=1, type=13, cpp_type=3, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+  ],
+  extensions=[
+  ],
+  nested_types=[],
+  enum_types=[
+  ],
+  options=None,
+  is_extendable=False,
+  extension_ranges=[],
+  oneofs=[
+  ],
+  serialized_start=4238,
+  serialized_end=4299,
+)
+
+
+_SCPKG_GET_SUPERVALUECARD_REWARD = _descriptor.Descriptor(
+  name='SCPKG_GET_SUPERVALUECARD_REWARD',
+  full_name='SCPKG_GET_SUPERVALUECARD_REWARD',
+  filename=None,
+  file=DESCRIPTOR,
+  containing_type=None,
+  fields=[
+    _descriptor.FieldDescriptor(
+      name='result', full_name='SCPKG_GET_SUPERVALUECARD_REWARD.result', index=0,
+      number=1, type=5, cpp_type=1, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    _descriptor.FieldDescriptor(
+      name='supervalue_card_info', full_name='SCPKG_GET_SUPERVALUECARD_REWARD.supervalue_card_info', index=1,
+      number=2, type=11, cpp_type=10, label=3,
+      has_default_value=False, default_value=[],
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+  ],
+  extensions=[
+  ],
+  nested_types=[],
+  enum_types=[
+  ],
+  options=None,
+  is_extendable=False,
+  extension_ranges=[],
+  oneofs=[
+  ],
+  serialized_start=4301,
+  serialized_end=4408,
+)
+
+
+_SCPKG_NTF_SUPERVALUECARD_REFRESH = _descriptor.Descriptor(
+  name='SCPKG_NTF_SUPERVALUECARD_REFRESH',
+  full_name='SCPKG_NTF_SUPERVALUECARD_REFRESH',
+  filename=None,
+  file=DESCRIPTOR,
+  containing_type=None,
+  fields=[
+    _descriptor.FieldDescriptor(
+      name='supervalue_info', full_name='SCPKG_NTF_SUPERVALUECARD_REFRESH.supervalue_info', index=0,
+      number=1, type=11, cpp_type=10, label=3,
+      has_default_value=False, default_value=[],
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+  ],
+  extensions=[
+  ],
+  nested_types=[],
+  enum_types=[
+  ],
+  options=None,
+  is_extendable=False,
+  extension_ranges=[],
+  oneofs=[
+  ],
+  serialized_start=4410,
+  serialized_end=4497,
 )
 
 _SCPKG_GET_FIRSTPURCHASE_RES.fields_by_name['firstpurchase_list'].message_type = _CSDT_FIRSTPURCHASE_INFO
 _SCPKG_GET_FIRSTPURCHASE_RES.fields_by_name['monthcard_info'].message_type = _SCDT_MONTH_CARD_INFO
+_SCPKG_GET_FIRSTPURCHASE_RES.fields_by_name['supervaluecard_info'].message_type = _SCDT_SUPERVALUE_CARD_INFO
 _CSDT_BUSINESS_INFO.fields_by_name['con_login_7days_info'].message_type = continuelogin_pb2._SCDT_CONTINUE_LOGIN_INFO
 _CSDT_BUSINESS_INFO.fields_by_name['con_login_cumulate_info'].message_type = continuelogin_pb2._SCDT_CONTINUE_LOGIN_INFO
 _CSDT_BUSINESS_INFO.fields_by_name['month_login_info'].message_type = continuelogin_pb2._SCDT_CONTINUE_LOGIN_INFO
@@ -1590,10 +1797,12 @@ _CSDT_BUSINESS_INFO.fields_by_name['group_buy_info'].message_type = _CSDT_GROUP_
 _CSDT_BUSINESS_INFO.fields_by_name['month_card_info'].message_type = _SCDT_MONTH_CARD_INFO
 _CSDT_BUSINESS_INFO.fields_by_name['first_purchase_info'].message_type = _CSDT_FIRSTPURCHASE_INFO
 _CSDT_BUSINESS_INFO.fields_by_name['first_reward_info'].message_type = _CSDT_FIRSTREWARD_INFO
+_CSDT_BUSINESS_INFO.fields_by_name['supervalue_card_info'].message_type = _SCDT_SUPERVALUE_CARD_INFO
 _SCPKG_GROWTH_FUND_INFO.fields_by_name['growth_fund_info'].message_type = _CSDT_GROWTH_FUND_INFO
 _SCPKG_CUMULATE_RECHARGE_INFO.fields_by_name['cumulate_recharge_info'].message_type = _CSDT_CUMULATE_RECHARGE_INFO
 _SCPKG_GET_FIRST_REWARD.fields_by_name['is_get_reward'].message_type = _CSDT_FIRSTREWARD_INFO
 _SCPKG_BUY_MONTH_CARD_RES.fields_by_name['month_card_info'].message_type = _SCDT_MONTH_CARD_INFO
+_SCPKG_BUY_SUPERVALUE_CARD_RES.fields_by_name['supervalue_card_info'].message_type = _SCDT_SUPERVALUE_CARD_INFO
 _SCPKG_GET_CUMULATECOST_REWARD.fields_by_name['cumulatecost_info'].message_type = protocommon_pb2._SCDT_CUMULATE_COST_INFO
 _SCPKG_NTF_CUMULATECOST.fields_by_name['cumulatecost_info'].message_type = protocommon_pb2._SCDT_CUMULATE_COST_INFO
 _SCPKG_GROUP_BUY_RES.fields_by_name['group_buy_info'].message_type = _CSDT_GROUP_BUY_INFO
@@ -1605,11 +1814,14 @@ _SCPKG_GET_SECT_RECHARGE_REWARD.fields_by_name['sect_recharge_info'].message_typ
 _SCPKG_GET_DAILY_RECHARGE_REWARD.fields_by_name['daily_recharge_info'].message_type = protocommon_pb2._SCDT_DAILY_RECHARGE_INFO
 _SCPKG_GET_MONTHCARD_REWARD.fields_by_name['month_card_info'].message_type = _SCDT_MONTH_CARD_INFO
 _SCPKG_NTF_MONTHCARD_REFRESH.fields_by_name['monthcard_info'].message_type = _SCDT_MONTH_CARD_INFO
+_SCPKG_GET_SUPERVALUECARD_REWARD.fields_by_name['supervalue_card_info'].message_type = _SCDT_SUPERVALUE_CARD_INFO
+_SCPKG_NTF_SUPERVALUECARD_REFRESH.fields_by_name['supervalue_info'].message_type = _SCDT_SUPERVALUE_CARD_INFO
 DESCRIPTOR.message_types_by_name['CSPKG_GET_MONTHLY_REWARD'] = _CSPKG_GET_MONTHLY_REWARD
 DESCRIPTOR.message_types_by_name['CSDT_GROWTH_FUND_INFO'] = _CSDT_GROWTH_FUND_INFO
 DESCRIPTOR.message_types_by_name['CSDT_CUMULATE_RECHARGE_INFO'] = _CSDT_CUMULATE_RECHARGE_INFO
 DESCRIPTOR.message_types_by_name['CSDT_GROUP_BUY_INFO'] = _CSDT_GROUP_BUY_INFO
 DESCRIPTOR.message_types_by_name['SCDT_MONTH_CARD_INFO'] = _SCDT_MONTH_CARD_INFO
+DESCRIPTOR.message_types_by_name['SCDT_SUPERVALUE_CARD_INFO'] = _SCDT_SUPERVALUE_CARD_INFO
 DESCRIPTOR.message_types_by_name['CSDT_FIRSTREWARD_INFO'] = _CSDT_FIRSTREWARD_INFO
 DESCRIPTOR.message_types_by_name['CSDT_FIRSTPURCHASE_INFO'] = _CSDT_FIRSTPURCHASE_INFO
 DESCRIPTOR.message_types_by_name['CSDT_MONTHCARD_INFO'] = _CSDT_MONTHCARD_INFO
@@ -1623,6 +1835,7 @@ DESCRIPTOR.message_types_by_name['CSPKG_GET_CUMULATE_RECHARGE_DAILY_REWARD'] = _
 DESCRIPTOR.message_types_by_name['CSPKG_GET_FIRST_REWARD'] = _CSPKG_GET_FIRST_REWARD
 DESCRIPTOR.message_types_by_name['SCPKG_GET_FIRST_REWARD'] = _SCPKG_GET_FIRST_REWARD
 DESCRIPTOR.message_types_by_name['SCPKG_BUY_MONTH_CARD_RES'] = _SCPKG_BUY_MONTH_CARD_RES
+DESCRIPTOR.message_types_by_name['SCPKG_BUY_SUPERVALUE_CARD_RES'] = _SCPKG_BUY_SUPERVALUE_CARD_RES
 DESCRIPTOR.message_types_by_name['CSPKG_GET_CUMULATECOST_REWARD'] = _CSPKG_GET_CUMULATECOST_REWARD
 DESCRIPTOR.message_types_by_name['SCPKG_GET_CUMULATECOST_REWARD'] = _SCPKG_GET_CUMULATECOST_REWARD
 DESCRIPTOR.message_types_by_name['SCPKG_NTF_CUMULATECOST'] = _SCPKG_NTF_CUMULATECOST
@@ -1646,6 +1859,9 @@ DESCRIPTOR.message_types_by_name['SCPKG_GET_DAILY_RECHARGE_REWARD'] = _SCPKG_GET
 DESCRIPTOR.message_types_by_name['CSPKG_GET_MONTHCARD_REWARD'] = _CSPKG_GET_MONTHCARD_REWARD
 DESCRIPTOR.message_types_by_name['SCPKG_GET_MONTHCARD_REWARD'] = _SCPKG_GET_MONTHCARD_REWARD
 DESCRIPTOR.message_types_by_name['SCPKG_NTF_MONTHCARD_REFRESH'] = _SCPKG_NTF_MONTHCARD_REFRESH
+DESCRIPTOR.message_types_by_name['CSPKG_GET_SUPERVALUECARD_REWARD'] = _CSPKG_GET_SUPERVALUECARD_REWARD
+DESCRIPTOR.message_types_by_name['SCPKG_GET_SUPERVALUECARD_REWARD'] = _SCPKG_GET_SUPERVALUECARD_REWARD
+DESCRIPTOR.message_types_by_name['SCPKG_NTF_SUPERVALUECARD_REFRESH'] = _SCPKG_NTF_SUPERVALUECARD_REFRESH
 
 CSPKG_GET_MONTHLY_REWARD = _reflection.GeneratedProtocolMessageType('CSPKG_GET_MONTHLY_REWARD', (_message.Message,), dict(
   DESCRIPTOR = _CSPKG_GET_MONTHLY_REWARD,
@@ -1681,6 +1897,13 @@ SCDT_MONTH_CARD_INFO = _reflection.GeneratedProtocolMessageType('SCDT_MONTH_CARD
   # @@protoc_insertion_point(class_scope:SCDT_MONTH_CARD_INFO)
   ))
 _sym_db.RegisterMessage(SCDT_MONTH_CARD_INFO)
+
+SCDT_SUPERVALUE_CARD_INFO = _reflection.GeneratedProtocolMessageType('SCDT_SUPERVALUE_CARD_INFO', (_message.Message,), dict(
+  DESCRIPTOR = _SCDT_SUPERVALUE_CARD_INFO,
+  __module__ = 'business_pb2'
+  # @@protoc_insertion_point(class_scope:SCDT_SUPERVALUE_CARD_INFO)
+  ))
+_sym_db.RegisterMessage(SCDT_SUPERVALUE_CARD_INFO)
 
 CSDT_FIRSTREWARD_INFO = _reflection.GeneratedProtocolMessageType('CSDT_FIRSTREWARD_INFO', (_message.Message,), dict(
   DESCRIPTOR = _CSDT_FIRSTREWARD_INFO,
@@ -1772,6 +1995,13 @@ SCPKG_BUY_MONTH_CARD_RES = _reflection.GeneratedProtocolMessageType('SCPKG_BUY_M
   # @@protoc_insertion_point(class_scope:SCPKG_BUY_MONTH_CARD_RES)
   ))
 _sym_db.RegisterMessage(SCPKG_BUY_MONTH_CARD_RES)
+
+SCPKG_BUY_SUPERVALUE_CARD_RES = _reflection.GeneratedProtocolMessageType('SCPKG_BUY_SUPERVALUE_CARD_RES', (_message.Message,), dict(
+  DESCRIPTOR = _SCPKG_BUY_SUPERVALUE_CARD_RES,
+  __module__ = 'business_pb2'
+  # @@protoc_insertion_point(class_scope:SCPKG_BUY_SUPERVALUE_CARD_RES)
+  ))
+_sym_db.RegisterMessage(SCPKG_BUY_SUPERVALUE_CARD_RES)
 
 CSPKG_GET_CUMULATECOST_REWARD = _reflection.GeneratedProtocolMessageType('CSPKG_GET_CUMULATECOST_REWARD', (_message.Message,), dict(
   DESCRIPTOR = _CSPKG_GET_CUMULATECOST_REWARD,
@@ -1933,6 +2163,27 @@ SCPKG_NTF_MONTHCARD_REFRESH = _reflection.GeneratedProtocolMessageType('SCPKG_NT
   # @@protoc_insertion_point(class_scope:SCPKG_NTF_MONTHCARD_REFRESH)
   ))
 _sym_db.RegisterMessage(SCPKG_NTF_MONTHCARD_REFRESH)
+
+CSPKG_GET_SUPERVALUECARD_REWARD = _reflection.GeneratedProtocolMessageType('CSPKG_GET_SUPERVALUECARD_REWARD', (_message.Message,), dict(
+  DESCRIPTOR = _CSPKG_GET_SUPERVALUECARD_REWARD,
+  __module__ = 'business_pb2'
+  # @@protoc_insertion_point(class_scope:CSPKG_GET_SUPERVALUECARD_REWARD)
+  ))
+_sym_db.RegisterMessage(CSPKG_GET_SUPERVALUECARD_REWARD)
+
+SCPKG_GET_SUPERVALUECARD_REWARD = _reflection.GeneratedProtocolMessageType('SCPKG_GET_SUPERVALUECARD_REWARD', (_message.Message,), dict(
+  DESCRIPTOR = _SCPKG_GET_SUPERVALUECARD_REWARD,
+  __module__ = 'business_pb2'
+  # @@protoc_insertion_point(class_scope:SCPKG_GET_SUPERVALUECARD_REWARD)
+  ))
+_sym_db.RegisterMessage(SCPKG_GET_SUPERVALUECARD_REWARD)
+
+SCPKG_NTF_SUPERVALUECARD_REFRESH = _reflection.GeneratedProtocolMessageType('SCPKG_NTF_SUPERVALUECARD_REFRESH', (_message.Message,), dict(
+  DESCRIPTOR = _SCPKG_NTF_SUPERVALUECARD_REFRESH,
+  __module__ = 'business_pb2'
+  # @@protoc_insertion_point(class_scope:SCPKG_NTF_SUPERVALUECARD_REFRESH)
+  ))
+_sym_db.RegisterMessage(SCPKG_NTF_SUPERVALUECARD_REFRESH)
 
 
 # @@protoc_insertion_point(module_scope)

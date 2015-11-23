@@ -30,12 +30,16 @@
 {% trans "Fail" as t_fail %}
 {% trans "Please Check The Input Is Correct" as t_p_c_t_i_i_c %}
 {% trans "Send" as t_send %}
+{% trans "Status" as t_status %}
 {% trans "The Response Of Sending Mail" as t_t_r_o_s_m %}
 {% trans "Server" as t_server %}
 {% trans "GuardMaster" as t_guardmaster %}
 {% trans "Start Date" as t_start_date %}
 {% trans "End Date" as t_end_date %}
 {% trans "Lastest 20 Mails By Every Server" as t_l_20_m_b_e_s %}
+{% trans "Only Old Players" as t_only_old_players %}
+{% trans "Only New Players" as t_only_new_players %}
+{% trans "All of Players" as t_all_of_players %}
 <script type="text/javascript">
  $(document).ready(function() {
    $('.input-datepicker > input').datetimepicker({
@@ -99,6 +103,14 @@
       <div class="form-group" style="margin-bottom:5px">
         <label for="version">{{t_version}}</label>&emsp;<span class="label label-danger">1.[23].19(713|060).(11|[0-3])&emsp;{{ t_match }}&emsp;1.2/3.19713/19060.0/1/2/3/11</span>
         <input type="text" class="form-control" id="version" name="version" value="{{ version|default:'' }}">
+      </div>
+      <div class="form-group" style="margin-bottom:5px">
+        <label>{{t_status}}</label>
+        <select class="form-control" name="status">
+          <option value="0">{{t_only_old_players}}</option>
+          <option value="1">{{t_only_new_players}}</option>
+          <option value="2">{{t_all_of_players}}</option>
+        </select>
       </div>
       <div class="form-group" style="margin-bottom:5px">
         <label for="title">{{ t_mail_title }}</label>&emsp;<span class="label label-danger">{{ t_4_words_limited }}</span>

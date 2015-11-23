@@ -276,6 +276,7 @@ class ServerControl(object):
             end_date = None
         zone = map(lambda x: int(x), post.getlist('zone'))
         version = post.get('version', '')
+        status = int(post.get('status', '0'))
         ss = ServerSocket(self.server.ip, self.server.port, self.server.buf)
         r = ResponseAllMail(
                 title=title,
@@ -283,6 +284,7 @@ class ServerControl(object):
                 server=self.server,
                 guardmaster=self.username,
                 version=version,
+                status=status,
                 zone=str(zone),
                 accessory=str(acc),
                 start_date=start_date,
@@ -303,7 +305,8 @@ class ServerControl(object):
                     'begin': Common.string2ts(start_date),
                     'end': Common.string2ts(end_date),
                     'version': version,
-                    'channel': 0
+                    'channel': 0,
+                    'status': status,
                 },
                 False)
 

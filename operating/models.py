@@ -66,6 +66,7 @@ class ResponseAllMail(models.Model):
     version = models.CharField(max_length=45)
     zone = models.CharField(max_length=256)
     accessory = models.TextField()
+    status = models.IntegerField()
     response_list = models.CharField(max_length=256)
     start_date = models.DateTimeField(blank=True, null=True)
     end_date = models.DateTimeField(blank=True, null=True)

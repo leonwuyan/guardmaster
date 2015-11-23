@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2015-11-19 17:28+0800\n"
-"PO-Revision-Date: 2015-11-19 16:33+0800\n"
+"POT-Creation-Date: 2015-11-23 19:19+0800\n"
+"PO-Revision-Date: 2015-11-23 19:20+0800\n"
 "Last-Translator: Raynor <raynor41@gmail.com>\n"
 "Language-Team: \n"
 "Language: zh_TW\n"
@@ -54,6 +54,184 @@ msgstr "GM指令端口,通常為9135"
 msgid "SSH Port, Usually Is 22"
 msgstr "SSH指令端口,通常為22"
 
+#: templates/operating/all_mail.html:4 templates/operating/contact.html:18
+#: templates/operating/mail.html:4
+msgid "Mail Title"
+msgstr "郵件題目"
+
+#: templates/operating/all_mail.html:5 templates/operating/contact.html:19
+#: templates/operating/mail.html:5
+msgid "Mail Content"
+msgstr "郵件內容"
+
+#: templates/operating/all_mail.html:6 templates/operating/contact.html:20
+#: templates/operating/mail.html:6 templates/operating/notify.html:4
+msgid "4 Words Limited"
+msgstr "最多可以4個文字"
+
+#: templates/operating/all_mail.html:7 templates/operating/contact.html:21
+#: templates/operating/mail.html:7
+msgid "120 Words Limited"
+msgstr "最多可以120個文字"
+
+#: templates/operating/all_mail.html:8 templates/operating/mail.html:10
+msgid "Accessory"
+msgstr "附件"
+
+#: templates/operating/all_mail.html:9 templates/operating/base_info.html:10
+#: templates/operating/mail.html:11
+msgid "Crystal"
+msgstr "魔素"
+
+#: templates/operating/all_mail.html:10 templates/operating/base_info.html:8
+#: templates/operating/mail.html:12
+msgid "Gold"
+msgstr "金幣"
+
+#: templates/operating/all_mail.html:11 templates/operating/base_info.html:12
+#: templates/operating/mail.html:13
+msgid "Money"
+msgstr "寶石"
+
+#: templates/operating/all_mail.html:12 templates/operating/base_info.html:16
+#: templates/operating/mail.html:14
+msgid "WinPoint"
+msgstr "胜点"
+
+#: templates/operating/all_mail.html:13 templates/operating/base_info.html:15
+#: templates/operating/mail.html:15
+msgid "Skill Point"
+msgstr "技能點數"
+
+#: templates/operating/all_mail.html:14 templates/operating/base_info.html:13
+#: templates/operating/mail.html:16
+msgid "Power"
+msgstr "體力"
+
+#: templates/operating/all_mail.html:15 templates/operating/base_info.html:20
+#: templates/operating/mail.html:17
+msgid "Score Of Rank Battle"
+msgstr "排行榜積分"
+
+#: templates/operating/all_mail.html:16 templates/operating/mail.html:18
+#: templates/operating/package_info.html:4
+msgid "Item"
+msgstr "道具"
+
+#: templates/operating/all_mail.html:17 templates/operating/mail.html:19
+msgid "Equip"
+msgstr "裝備"
+
+#: templates/operating/all_mail.html:18 templates/operating/mail.html:20
+#: templates/operating/package_info.html:7
+msgid "Count"
+msgstr "數量"
+
+#: templates/operating/all_mail.html:19 templates/operating/hero_info.html:5
+#: templates/operating/mail.html:21
+msgid "Exp."
+msgstr "經驗"
+
+#: templates/operating/all_mail.html:20 templates/operating/hero_info.html:11
+#: templates/operating/mail.html:22 templates/operating/package_info.html:6
+msgid "Level"
+msgstr "等級"
+
+#: templates/operating/all_mail.html:21 templates/operating/mail.html:23
+msgid "GrowUp"
+msgstr "升階"
+
+#: templates/operating/all_mail.html:22 templates/operating/base_info.html:27
+#: templates/operating/mail.html:24 templates/operating/notify.html:24
+msgid "Add"
+msgstr "添加"
+
+#: templates/operating/all_mail.html:23 templates/operating/mail.html:25
+msgid "None"
+msgstr "無"
+
+#: templates/operating/all_mail.html:24 templates/operating/contact.html:12
+#: templates/operating/notify.html:17
+msgid "Version"
+msgstr "客戶端版本"
+
+#: templates/operating/all_mail.html:25
+msgid "Match"
+msgstr "匹配"
+
+#: templates/operating/all_mail.html:26 templates/operating/mail.html:26
+msgid "Limited 6 Kind Of Accessory"
+msgstr "最多可以添加6種附件"
+
+#: templates/operating/all_mail.html:27 templates/operating/mail.html:27
+msgid "Accessory Include Item And Equip"
+msgstr "附件包含物品和裝備"
+
+#: templates/operating/all_mail.html:28 templates/operating/mail.html:28
+#: templates/operating/notify.html:25
+msgid "Success"
+msgstr "成功"
+
+#: templates/operating/all_mail.html:29 templates/operating/mail.html:29
+msgid "Please Check The Response Of Sending Mail"
+msgstr "請檢查發送郵件的回執狀態"
+
+#: templates/operating/all_mail.html:30 templates/operating/mail.html:30
+#: templates/operating/notify.html:27
+msgid "Fail"
+msgstr "失敗"
+
+#: templates/operating/all_mail.html:31 templates/operating/mail.html:31
+#: templates/operating/notify.html:28
+msgid "Please Check The Input Is Correct"
+msgstr "請檢查輸入是否正確"
+
+#: templates/operating/all_mail.html:32 templates/operating/mail.html:32
+msgid "Send"
+msgstr "發送"
+
+#: templates/operating/all_mail.html:33
+#: templates/operating/package_info.html:15
+#: templates/operating/pve_info.html:10
+msgid "Status"
+msgstr "狀態"
+
+#: templates/operating/all_mail.html:34 templates/operating/mail.html:33
+msgid "The Response Of Sending Mail"
+msgstr "郵件回執狀態"
+
+#: templates/operating/all_mail.html:35 templates/operating/mail.html:34
+msgid "Server"
+msgstr "伺服器"
+
+#: templates/operating/all_mail.html:36 templates/operating/mail.html:35
+msgid "GuardMaster"
+msgstr "操作員"
+
+#: templates/operating/all_mail.html:37 templates/operating/notify.html:8
+msgid "Start Date"
+msgstr "起始日期"
+
+#: templates/operating/all_mail.html:38 templates/operating/notify.html:9
+msgid "End Date"
+msgstr "結束日期"
+
+#: templates/operating/all_mail.html:39 templates/operating/mail.html:37
+msgid "Lastest 20 Mails By Every Server"
+msgstr "每個服務器顯示最後20條郵件"
+
+#: templates/operating/all_mail.html:40
+msgid "Only Old Players"
+msgstr "只有老玩家"
+
+#: templates/operating/all_mail.html:41
+msgid "Only New Players"
+msgstr "只有新玩家"
+
+#: templates/operating/all_mail.html:42
+msgid "All of Players"
+msgstr "所有玩家"
+
 #: templates/operating/base_info.html:2
 msgid "Player Base Info"
 msgstr "玩家基本信息"
@@ -78,41 +256,17 @@ msgstr "上次註銷時間"
 msgid "Total Online Time"
 msgstr "總在線時間"
 
-#: templates/operating/base_info.html:8 templates/operating/mail.html:12
-msgid "Gold"
-msgstr "金幣"
-
 #: templates/operating/base_info.html:9
 msgid "Times Of Buy Gold"
 msgstr "購買金幣次數"
-
-#: templates/operating/base_info.html:10 templates/operating/mail.html:11
-msgid "Crystal"
-msgstr "魔素"
 
 #: templates/operating/base_info.html:11
 msgid "Times Of Buy Crystal"
 msgstr "購買魔素次數"
 
-#: templates/operating/base_info.html:12 templates/operating/mail.html:13
-msgid "Money"
-msgstr "寶石"
-
-#: templates/operating/base_info.html:13 templates/operating/mail.html:16
-msgid "Power"
-msgstr "體力"
-
 #: templates/operating/base_info.html:14
 msgid "Times Of Buy Power"
 msgstr "購買體力次數"
-
-#: templates/operating/base_info.html:15 templates/operating/mail.html:15
-msgid "Skill Point"
-msgstr "技能點數"
-
-#: templates/operating/base_info.html:16 templates/operating/mail.html:14
-msgid "WinPoint"
-msgstr "胜点"
 
 #: templates/operating/base_info.html:17
 msgid "Times Of Buy Skill Point"
@@ -125,10 +279,6 @@ msgstr "無盡之塔層數"
 #: templates/operating/base_info.html:19
 msgid "Endless' Score"
 msgstr "無盡之塔積分"
-
-#: templates/operating/base_info.html:20 templates/operating/mail.html:17
-msgid "Score Of Rank Battle"
-msgstr "排行榜積分"
 
 #: templates/operating/base_info.html:21
 msgid "Times Of Growup"
@@ -153,11 +303,6 @@ msgstr "增加 100k"
 #: templates/operating/base_info.html:26
 msgid "Add 10k"
 msgstr "增加 10k"
-
-#: templates/operating/base_info.html:27 templates/operating/mail.html:24
-#: templates/operating/notify.html:24
-msgid "Add"
-msgstr "添加"
 
 #: templates/operating/base_info.html:28
 msgid "Reduce"
@@ -365,10 +510,6 @@ msgstr "渠道"
 msgid "Platform"
 msgstr "平台"
 
-#: templates/operating/contact.html:12 templates/operating/notify.html:17
-msgid "Version"
-msgstr "客戶端版本"
-
 #: templates/operating/contact.html:13
 msgid "Issue Type"
 msgstr "問題類型"
@@ -389,23 +530,6 @@ msgstr "歷史回覆列表"
 msgid "Reply Mail"
 msgstr "郵件回覆"
 
-#: templates/operating/contact.html:18 templates/operating/mail.html:4
-msgid "Mail Title"
-msgstr "郵件題目"
-
-#: templates/operating/contact.html:19 templates/operating/mail.html:5
-msgid "Mail Content"
-msgstr "郵件內容"
-
-#: templates/operating/contact.html:20 templates/operating/mail.html:6
-#: templates/operating/notify.html:4
-msgid "4 Words Limited"
-msgstr "最多可以4個文字"
-
-#: templates/operating/contact.html:21 templates/operating/mail.html:7
-msgid "120 Words Limited"
-msgstr "最多可以120個文字"
-
 #: templates/operating/contact.html:22
 msgid "Reply"
 msgstr "回覆"
@@ -421,10 +545,6 @@ msgstr "英雄信息"
 #: templates/operating/hero_info.html:3 templates/operating/pve_info.html:12
 msgid "Hero ID"
 msgstr "英雄ID"
-
-#: templates/operating/hero_info.html:5 templates/operating/mail.html:21
-msgid "Exp."
-msgstr "經驗"
 
 #: templates/operating/hero_info.html:6
 msgid "Emblem"
@@ -445,11 +565,6 @@ msgstr "裝備的"
 #: templates/operating/hero_info.html:10
 msgid "Item Pos"
 msgstr "道具位置"
-
-#: templates/operating/hero_info.html:11 templates/operating/mail.html:22
-#: templates/operating/package_info.html:6
-msgid "Level"
-msgstr "等級"
 
 #: templates/operating/hero_info.html:12
 #: templates/operating/package_info.html:8
@@ -484,77 +599,9 @@ msgstr "最多可以1000個UID"
 msgid "Split By ,"
 msgstr "以 , 分割"
 
-#: templates/operating/mail.html:10
-msgid "Accessory"
-msgstr "附件"
-
-#: templates/operating/mail.html:18 templates/operating/package_info.html:4
-msgid "Item"
-msgstr "道具"
-
-#: templates/operating/mail.html:19
-msgid "Equip"
-msgstr "裝備"
-
-#: templates/operating/mail.html:20 templates/operating/package_info.html:7
-msgid "Count"
-msgstr "數量"
-
-#: templates/operating/mail.html:23
-msgid "GrowUp"
-msgstr "升階"
-
-#: templates/operating/mail.html:25
-msgid "None"
-msgstr "無"
-
-#: templates/operating/mail.html:26
-msgid "Limited 6 Kind Of Accessory"
-msgstr "最多可以添加6種附件"
-
-#: templates/operating/mail.html:27
-msgid "Accessory Include Item And Equip"
-msgstr "附件包含物品和裝備"
-
-#: templates/operating/mail.html:28 templates/operating/notify.html:25
-msgid "Success"
-msgstr "成功"
-
-#: templates/operating/mail.html:29
-msgid "Please Check The Response Of Sending Mail"
-msgstr "請檢查發送郵件的回執狀態"
-
-#: templates/operating/mail.html:30 templates/operating/notify.html:27
-msgid "Fail"
-msgstr "失敗"
-
-#: templates/operating/mail.html:31 templates/operating/notify.html:28
-msgid "Please Check The Input Is Correct"
-msgstr "請檢查輸入是否正確"
-
-#: templates/operating/mail.html:32
-msgid "Send"
-msgstr "發送"
-
-#: templates/operating/mail.html:33
-msgid "The Response Of Sending Mail"
-msgstr "郵件回執狀態"
-
-#: templates/operating/mail.html:34
-msgid "Server"
-msgstr "伺服器"
-
-#: templates/operating/mail.html:35
-msgid "GuardMaster"
-msgstr "操作員"
-
 #: templates/operating/mail.html:36
 msgid "Pub Date"
 msgstr "發送日期"
-
-#: templates/operating/mail.html:37
-msgid "Lastest 20 Mails By Every Server"
-msgstr "每個服務器顯示最後20條郵件"
 
 #: templates/operating/notify.html:5
 msgid "Notify Info"
@@ -567,14 +614,6 @@ msgstr "公告標題"
 #: templates/operating/notify.html:7
 msgid "Notify Content"
 msgstr "公告內容"
-
-#: templates/operating/notify.html:8
-msgid "Start Date"
-msgstr "起始日期"
-
-#: templates/operating/notify.html:9
-msgid "End Date"
-msgstr "結束日期"
 
 #: templates/operating/notify.html:10
 msgid "Is Display"
@@ -683,11 +722,6 @@ msgstr "裝備ID"
 #: templates/operating/package_info.html:14
 msgid "Item Info"
 msgstr "道具信息"
-
-#: templates/operating/package_info.html:15
-#: templates/operating/pve_info.html:10
-msgid "Status"
-msgstr "狀態"
 
 #: templates/operating/package_info.html:16
 msgid "Function Type"

@@ -213,6 +213,9 @@ def create_pb(hash):
     if hash == StringHash.calculate_hash('SCDT_MONTH_CARD_INFO'):
         return getattr(guard_proto_pb2, 'SCDT_MONTH_CARD_INFO')()
     
+    if hash == StringHash.calculate_hash('SCDT_SUPERVALUE_CARD_INFO'):
+        return getattr(guard_proto_pb2, 'SCDT_SUPERVALUE_CARD_INFO')()
+    
     if hash == StringHash.calculate_hash('CSDT_FIRSTREWARD_INFO'):
         return getattr(guard_proto_pb2, 'CSDT_FIRSTREWARD_INFO')()
     
@@ -251,6 +254,9 @@ def create_pb(hash):
     
     if hash == StringHash.calculate_hash('SCPKG_BUY_MONTH_CARD_RES'):
         return getattr(guard_proto_pb2, 'SCPKG_BUY_MONTH_CARD_RES')()
+    
+    if hash == StringHash.calculate_hash('SCPKG_BUY_SUPERVALUE_CARD_RES'):
+        return getattr(guard_proto_pb2, 'SCPKG_BUY_SUPERVALUE_CARD_RES')()
     
     if hash == StringHash.calculate_hash('CSPKG_GET_CUMULATECOST_REWARD'):
         return getattr(guard_proto_pb2, 'CSPKG_GET_CUMULATECOST_REWARD')()
@@ -320,6 +326,15 @@ def create_pb(hash):
     
     if hash == StringHash.calculate_hash('SCPKG_NTF_MONTHCARD_REFRESH'):
         return getattr(guard_proto_pb2, 'SCPKG_NTF_MONTHCARD_REFRESH')()
+    
+    if hash == StringHash.calculate_hash('CSPKG_GET_SUPERVALUECARD_REWARD'):
+        return getattr(guard_proto_pb2, 'CSPKG_GET_SUPERVALUECARD_REWARD')()
+    
+    if hash == StringHash.calculate_hash('SCPKG_GET_SUPERVALUECARD_REWARD'):
+        return getattr(guard_proto_pb2, 'SCPKG_GET_SUPERVALUECARD_REWARD')()
+    
+    if hash == StringHash.calculate_hash('SCPKG_NTF_SUPERVALUECARD_REFRESH'):
+        return getattr(guard_proto_pb2, 'SCPKG_NTF_SUPERVALUECARD_REFRESH')()
     
     if hash == StringHash.calculate_hash('CSPKG_REMOVE_PRIVATE_MSG'):
         return getattr(guard_proto_pb2, 'CSPKG_REMOVE_PRIVATE_MSG')()
@@ -3219,6 +3234,9 @@ def create_pb(hash):
     if hash == StringHash.calculate_hash('PKG_SEARCH_PVP_PLAYER_RES'):
         return getattr(guard_proto_pb2, 'PKG_SEARCH_PVP_PLAYER_RES')()
     
+    if hash == StringHash.calculate_hash('ST_WIPE_OUT_STEAL_BATTLE_RESULT'):
+        return getattr(guard_proto_pb2, 'ST_WIPE_OUT_STEAL_BATTLE_RESULT')()
+    
     if hash == StringHash.calculate_hash('PKG_WIPE_OUT_STEAL_BATTLE_BALANCE_REQ'):
         return getattr(guard_proto_pb2, 'PKG_WIPE_OUT_STEAL_BATTLE_BALANCE_REQ')()
     
@@ -4116,6 +4134,9 @@ def create_pb(hash):
     if hash == StringHash.calculate_hash('CSPKG_CMD_WORLD_BOSS_CHANGE_HERO_REQ'):
         return getattr(guard_proto_pb2, 'CSPKG_CMD_WORLD_BOSS_CHANGE_HERO_REQ')()
     
+    if hash == StringHash.calculate_hash('SCPKG_CMD_WORLD_BOSS_CHANGE_HERO_RES'):
+        return getattr(guard_proto_pb2, 'SCPKG_CMD_WORLD_BOSS_CHANGE_HERO_RES')()
+    
     if hash == StringHash.calculate_hash('CSDT_WORLD_BOSS_HERO'):
         return getattr(guard_proto_pb2, 'CSDT_WORLD_BOSS_HERO')()
     
@@ -4344,6 +4365,9 @@ def get_pb_name(hash):
     if hash == StringHash.calculate_hash('SCDT_MONTH_CARD_INFO'):
         return 'SCDT_MONTH_CARD_INFO'
     
+    if hash == StringHash.calculate_hash('SCDT_SUPERVALUE_CARD_INFO'):
+        return 'SCDT_SUPERVALUE_CARD_INFO'
+    
     if hash == StringHash.calculate_hash('CSDT_FIRSTREWARD_INFO'):
         return 'CSDT_FIRSTREWARD_INFO'
     
@@ -4382,6 +4406,9 @@ def get_pb_name(hash):
     
     if hash == StringHash.calculate_hash('SCPKG_BUY_MONTH_CARD_RES'):
         return 'SCPKG_BUY_MONTH_CARD_RES'
+    
+    if hash == StringHash.calculate_hash('SCPKG_BUY_SUPERVALUE_CARD_RES'):
+        return 'SCPKG_BUY_SUPERVALUE_CARD_RES'
     
     if hash == StringHash.calculate_hash('CSPKG_GET_CUMULATECOST_REWARD'):
         return 'CSPKG_GET_CUMULATECOST_REWARD'
@@ -4451,6 +4478,15 @@ def get_pb_name(hash):
     
     if hash == StringHash.calculate_hash('SCPKG_NTF_MONTHCARD_REFRESH'):
         return 'SCPKG_NTF_MONTHCARD_REFRESH'
+    
+    if hash == StringHash.calculate_hash('CSPKG_GET_SUPERVALUECARD_REWARD'):
+        return 'CSPKG_GET_SUPERVALUECARD_REWARD'
+    
+    if hash == StringHash.calculate_hash('SCPKG_GET_SUPERVALUECARD_REWARD'):
+        return 'SCPKG_GET_SUPERVALUECARD_REWARD'
+    
+    if hash == StringHash.calculate_hash('SCPKG_NTF_SUPERVALUECARD_REFRESH'):
+        return 'SCPKG_NTF_SUPERVALUECARD_REFRESH'
     
     if hash == StringHash.calculate_hash('CSPKG_REMOVE_PRIVATE_MSG'):
         return 'CSPKG_REMOVE_PRIVATE_MSG'
@@ -7350,6 +7386,9 @@ def get_pb_name(hash):
     if hash == StringHash.calculate_hash('PKG_SEARCH_PVP_PLAYER_RES'):
         return 'PKG_SEARCH_PVP_PLAYER_RES'
     
+    if hash == StringHash.calculate_hash('ST_WIPE_OUT_STEAL_BATTLE_RESULT'):
+        return 'ST_WIPE_OUT_STEAL_BATTLE_RESULT'
+    
     if hash == StringHash.calculate_hash('PKG_WIPE_OUT_STEAL_BATTLE_BALANCE_REQ'):
         return 'PKG_WIPE_OUT_STEAL_BATTLE_BALANCE_REQ'
     
@@ -8247,6 +8286,9 @@ def get_pb_name(hash):
     if hash == StringHash.calculate_hash('CSPKG_CMD_WORLD_BOSS_CHANGE_HERO_REQ'):
         return 'CSPKG_CMD_WORLD_BOSS_CHANGE_HERO_REQ'
     
+    if hash == StringHash.calculate_hash('SCPKG_CMD_WORLD_BOSS_CHANGE_HERO_RES'):
+        return 'SCPKG_CMD_WORLD_BOSS_CHANGE_HERO_RES'
+    
     if hash == StringHash.calculate_hash('CSDT_WORLD_BOSS_HERO'):
         return 'CSDT_WORLD_BOSS_HERO'
     
@@ -8545,6 +8587,10 @@ def res(f, pb):
         attrs = ['month_card_id', 'buy_time', 'last_reward_time', 'last_get_reward_time', 'remain_days']
         return f(pb, attrs)
     
+    if p == 'SCDT_SUPERVALUE_CARD_INFO':
+        attrs = ['super_card_id', 'buy_time', 'last_reward_time', 'last_get_reward_time', 'remain_days']
+        return f(pb, attrs)
+    
     if p == 'CSDT_FIRSTREWARD_INFO':
         attrs = ['is_get_reward', 'is_open', 'first_recharge_cnt']
         return f(pb, attrs)
@@ -8558,11 +8604,11 @@ def res(f, pb):
         return f(pb, attrs)
     
     if p == 'SCPKG_GET_FIRSTPURCHASE_RES':
-        attrs = ['firstpurchase_list', 'monthcard_info']
+        attrs = ['firstpurchase_list', 'monthcard_info', 'supervaluecard_info']
         return f(pb, attrs)
     
     if p == 'CSDT_BUSINESS_INFO':
-        attrs = ['con_login_7days_info', 'con_login_cumulate_info', 'month_login_info', 'growth_fund_info', 'cumulate_recharge_info', 'group_buy_info', 'month_card_info', 'first_purchase_info', 'first_reward_info']
+        attrs = ['con_login_7days_info', 'con_login_cumulate_info', 'month_login_info', 'growth_fund_info', 'cumulate_recharge_info', 'group_buy_info', 'month_card_info', 'first_purchase_info', 'first_reward_info', 'supervalue_card_info']
         return f(pb, attrs)
     
     if p == 'SCPKG_GROWTH_FUND_INFO':
@@ -8595,6 +8641,10 @@ def res(f, pb):
     
     if p == 'SCPKG_BUY_MONTH_CARD_RES':
         attrs = ['result', 'month_card_info']
+        return f(pb, attrs)
+    
+    if p == 'SCPKG_BUY_SUPERVALUE_CARD_RES':
+        attrs = ['result', 'supervalue_card_info']
         return f(pb, attrs)
     
     if p == 'CSPKG_GET_CUMULATECOST_REWARD':
@@ -8687,6 +8737,18 @@ def res(f, pb):
     
     if p == 'SCPKG_NTF_MONTHCARD_REFRESH':
         attrs = ['monthcard_info']
+        return f(pb, attrs)
+    
+    if p == 'CSPKG_GET_SUPERVALUECARD_REWARD':
+        attrs = ['supervalue_card_id']
+        return f(pb, attrs)
+    
+    if p == 'SCPKG_GET_SUPERVALUECARD_REWARD':
+        attrs = ['result', 'supervalue_card_info']
+        return f(pb, attrs)
+    
+    if p == 'SCPKG_NTF_SUPERVALUECARD_REFRESH':
+        attrs = ['supervalue_info']
         return f(pb, attrs)
     
     if p == 'CSPKG_REMOVE_PRIVATE_MSG':
@@ -8878,7 +8940,7 @@ def res(f, pb):
         return f(pb, attrs)
     
     if p == 'SCPKG_DYNAMIC_CONFIG_REFRESH':
-        attrs = ['month_card_switch', 'growth_fund_switch', 'login_7day_switch', 'first_purchase_gift_switch', 'cdkey_switch', 'enable_pay_switch', 'user_action_switch', 'third_pay_switch', 'share_switch', 'buy_bless_count_switch', 'enable_friend_invite', 'world_boss_switch', 'cumulate_cost_switch', 'pve_double_switch', 'elite_double_switch', 'power_double_switch', 'skill_double_switch', 'boss_rush_switch', 'equip_fusion_switch', 'multiplayer_pve_switch', 'talent_switch', 'daily_recharge_reward', 'cumulate_recharge_reward', 'pve_activity_drop', 'elite_activity_drop', 'elite_activity_drop_exp', 'elite_exp_drop_double', 'prize_draw_activity', 'resource_box_activity', 'manul_drop', 'replay_switch', 'equip_reset_switch']
+        attrs = ['month_card_switch', 'growth_fund_switch', 'login_7day_switch', 'first_purchase_gift_switch', 'cdkey_switch', 'enable_pay_switch', 'user_action_switch', 'third_pay_switch', 'share_switch', 'buy_bless_count_switch', 'enable_friend_invite', 'world_boss_switch', 'cumulate_cost_switch', 'pve_double_switch', 'elite_double_switch', 'power_double_switch', 'skill_double_switch', 'boss_rush_switch', 'equip_fusion_switch', 'multiplayer_pve_switch', 'talent_switch', 'daily_recharge_reward', 'cumulate_recharge_reward', 'pve_activity_drop', 'elite_activity_drop', 'elite_activity_drop_exp', 'elite_exp_drop_double', 'prize_draw_activity', 'resource_box_activity', 'manul_drop', 'replay_switch', 'equip_reset_switch', 'special_activity_switch']
         return f(pb, attrs)
     
     if p == 'CSDT_UI_OPT':
@@ -9942,7 +10004,7 @@ def res(f, pb):
         return f(pb, attrs)
     
     if p == 'GM_GAMESERVER_MAIL_CONDITION':
-        attrs = ['effect_begin_time', 'effect_end_time', 'effect_clt_version', 'effect_channel_id']
+        attrs = ['effect_begin_time', 'effect_end_time', 'effect_clt_version', 'effect_channel_id', 'effect_player_state']
         return f(pb, attrs)
     
     if p == 'GM_SEND_GAMESERVER_MAIL_REQ':
@@ -11062,7 +11124,7 @@ def res(f, pb):
         return f(pb, attrs)
     
     if p == 'ResMiscInfo':
-        attrs = ['player_max_level', 'monster_max_level', 'init_crystal', 'init_gold', 'init_money', 'init_slot_id', 'init_building_info', 'init_hero_id', 'init_unlock_dun_id', 'endless_limit', 'combo_max_time', 'over_hit_max_time', 'over_hit_max_hp_percent', 'over_hit_add_score_ratio', 'left_time_add_score_ratio', 'over_hit_production', 'create_gang_cost_gold', 'fighting_hprate', 'fighting_atk_rate', 'gang_battle_dun_id', 'gang_battle_round_time_limit', 'endless_chamber_size_factor', 'endless_boss_hp_recover_drop_ratio', 'endless_boss_hp_recover_drop_count', 'rank_battle_dungeon_id', 'rank_battle_round_time_limit', 'rank_battle_base_count', 'rank_battle_buy_count_base_cost', 'rank_battle_unlock_role_cnt', 'daily_reset_time', 'endless_room_cnt', 'endless_floor_cnt_per_milestone', 'steal_battle_money_res_dun_id', 'steal_battle_gold_res_dun_id', 'steal_battle_crystal_res_dun_id', 'steal_battle_exp_res_dun_id', 'endless_refresh_hour', 'endless_refresh_min', 'endless_refresh_sec', 'wipe_out_need_item_id', 'buy_wipe_out_item_info', 'goods_common_count', 'goods_special_count', 'damage_ratio_factor', 'hp_ratio_factor', 'skill_point_display_item_id', 'pve_unlock_info', 'league_battle_small_city_lv', 'league_battle_mid_city_lv', 'league_battle_big_city_lv', 'rank_battle_hero_hide_level1', 'rank_battle_hero_hide_level2', 'rank_battle_hero_hide_level3', 'gang_bless_count_refresh_hour', 'gang_bless_count_refresh_min', 'gang_bless_count_refresh_sec', 'shop_count_refresh_hour', 'shop_count_refresh_min', 'shop_count_refresh_sec', 'fail_power', 'money_confirm_threshold', 'endless_monster_type_score', 'gang_battle_small_city_score', 'gang_battle_moderate_city_score', 'gang_battle_big_city_score', 'elite_mode_chances', 'elite_count_refresh_hour', 'elite_count_refresh_min', 'elite_count_refresh_sec', 'assist_fight_times_limit', 'online_battle_dun_id', 're_sign_cost_type', 're_sign_cost_price', 'init_hero_main_task_unlock_dun_id', 'normal_elite_hp_rate', 'normal_elite_st_rate', 'normal_boss_hp_rate', 'normal_boss_st_rate', 'endless_elite_hp_rate', 'endless_elite_st_rate', 'endless_boss_hp_rate', 'endless_boss_st_rate', 'elite_buy_count_cost_type', 'elite_buy_count_cost_id', 'elite_buy_count_cost_count', 'elite_buy_max_count', 'offline_battle_dun_id', 'role_relation_unlock_level', 'rank_battle_goods_common_count', 'rank_battle_goods_special_count', 'online_battle_init_score', 'online_battle_times_perday', 'online_battle_score_calc_ratio_a', 'online_battle_score_calc_ratio_b', 'online_battle_search_score', 'online_battle_match_wait_seconds', 'online_battle_win_point_ratio', 'online_battle_loseer_win_point_ratio', 'endless_wipeout_price_per_floor', 'game_play_mode_damage_rate', 'first_reward_info', 'loading_tip_count', 'vip_goods_common_count', 'vip_goods_special_count', 'vip_draw_all_unlock_level', 'steal_battle_times_limit', 'friend_power_cnt', 'damage_float_up', 'damage_float_down', 'max_recv_power_times_one_day', 'ten_wipeout_viplimit', 'vip_shop_unlock_viplevel', 'max_send_power_times_one_day', 'pve_autofight_unlock_viplevel', 'friend_max_recommend_num', 'pve_autofight_unlock_dungoen_id', 'vip_wipeout_count', 'chat_unlock_dun_id', 'eventtip_unlock_dun_id', 'world_boss_dun_id', 'reward_be_invited', 'world_boss_room_time_limit', 'rename_price', 'world_boss_qualified_hero_level', 'world_boss_reset_time', 'world_boss_start_time', 'world_boss_finish_time', 'world_boss_interval', 'world_boss_character_scale', 'equip_fusion_score_param', 'equip_fusion_ratio_param', 'equip_fusion_alloc_param', 'newbie_activity_lasts_seconds', 'rank_battle_max_pos', 'purify_cost_base_gold', 'gang_battle_search_sect', 'gang_battle_search_score_diff', 'gang_battle_search_fight_capacity_diff', 'endless_available_floor_count', 'boss_rush_assist_hero_tax_rate', 'boss_rush_reset_hour', 'assist_hero_unlock_vip_level', 'use_assist_hero_unlock_vip_level', 'boss_rush_replace_money', 'burst_discount_damage', 'burst_repeate_max_count', 'repeate_discount_2', 'repeate_discount_3', 'repeate_discount_4', 'sp_lack_add_repeate_count', 'hero_buff_superarmor_add', 'burst_common_cd', 'serial_push_active_time', 'serial_push_protect_time', 'hp_steal_max_distance', 'default_superarmor_discount', 'pve_boss_superarmor_rate', 'other_boss_superarmor_rate', 'multiplayer_invite_friend_wait_seconds', 'equip_reset_growup_gold_off', 'equip_reset_growup_equip_off', 'equip_reset_levelup_exp_off']
+        attrs = ['player_max_level', 'monster_max_level', 'init_crystal', 'init_gold', 'init_money', 'init_slot_id', 'init_building_info', 'init_hero_id', 'init_unlock_dun_id', 'endless_limit', 'combo_max_time', 'over_hit_max_time', 'over_hit_max_hp_percent', 'over_hit_add_score_ratio', 'left_time_add_score_ratio', 'over_hit_production', 'create_gang_cost_gold', 'fighting_hprate', 'fighting_atk_rate', 'gang_battle_dun_id', 'gang_battle_round_time_limit', 'endless_chamber_size_factor', 'endless_boss_hp_recover_drop_ratio', 'endless_boss_hp_recover_drop_count', 'rank_battle_dungeon_id', 'rank_battle_round_time_limit', 'rank_battle_base_count', 'rank_battle_buy_count_base_cost', 'rank_battle_unlock_role_cnt', 'daily_reset_time', 'endless_room_cnt', 'endless_floor_cnt_per_milestone', 'steal_battle_money_res_dun_id', 'steal_battle_gold_res_dun_id', 'steal_battle_crystal_res_dun_id', 'steal_battle_exp_res_dun_id', 'endless_refresh_hour', 'endless_refresh_min', 'endless_refresh_sec', 'wipe_out_need_item_id', 'buy_wipe_out_item_info', 'goods_common_count', 'goods_special_count', 'damage_ratio_factor', 'hp_ratio_factor', 'skill_point_display_item_id', 'pve_unlock_info', 'league_battle_small_city_lv', 'league_battle_mid_city_lv', 'league_battle_big_city_lv', 'rank_battle_hero_hide_level1', 'rank_battle_hero_hide_level2', 'rank_battle_hero_hide_level3', 'gang_bless_count_refresh_hour', 'gang_bless_count_refresh_min', 'gang_bless_count_refresh_sec', 'shop_count_refresh_hour', 'shop_count_refresh_min', 'shop_count_refresh_sec', 'fail_power', 'money_confirm_threshold', 'endless_monster_type_score', 'gang_battle_small_city_score', 'gang_battle_moderate_city_score', 'gang_battle_big_city_score', 'elite_mode_chances', 'elite_count_refresh_hour', 'elite_count_refresh_min', 'elite_count_refresh_sec', 'assist_fight_times_limit', 'online_battle_dun_id', 're_sign_cost_type', 're_sign_cost_price', 'init_hero_main_task_unlock_dun_id', 'normal_elite_hp_rate', 'normal_elite_st_rate', 'normal_boss_hp_rate', 'normal_boss_st_rate', 'endless_elite_hp_rate', 'endless_elite_st_rate', 'endless_boss_hp_rate', 'endless_boss_st_rate', 'elite_buy_count_cost_type', 'elite_buy_count_cost_id', 'elite_buy_count_cost_count', 'elite_buy_max_count', 'offline_battle_dun_id', 'role_relation_unlock_level', 'rank_battle_goods_common_count', 'rank_battle_goods_special_count', 'online_battle_init_score', 'online_battle_times_perday', 'online_battle_score_calc_ratio_a', 'online_battle_score_calc_ratio_b', 'online_battle_search_score', 'online_battle_match_wait_seconds', 'online_battle_win_point_ratio', 'online_battle_loseer_win_point_ratio', 'endless_wipeout_price_per_floor', 'game_play_mode_damage_rate', 'first_reward_info', 'loading_tip_count', 'vip_goods_common_count', 'vip_goods_special_count', 'vip_draw_all_unlock_level', 'steal_battle_times_limit', 'friend_power_cnt', 'damage_float_up', 'damage_float_down', 'max_recv_power_times_one_day', 'ten_wipeout_viplimit', 'vip_shop_unlock_viplevel', 'max_send_power_times_one_day', 'pve_autofight_unlock_viplevel', 'friend_max_recommend_num', 'pve_autofight_unlock_dungoen_id', 'vip_wipeout_count', 'chat_unlock_dun_id', 'eventtip_unlock_dun_id', 'world_boss_dun_id', 'reward_be_invited', 'world_boss_room_time_limit', 'rename_price', 'world_boss_qualified_hero_level', 'world_boss_reset_time', 'world_boss_start_time', 'world_boss_finish_time', 'world_boss_interval', 'world_boss_character_scale', 'equip_fusion_score_param', 'equip_fusion_ratio_param', 'equip_fusion_alloc_param', 'newbie_activity_lasts_seconds', 'rank_battle_max_pos', 'purify_cost_base_gold', 'gang_battle_search_sect', 'gang_battle_search_score_diff', 'gang_battle_search_fight_capacity_diff', 'endless_available_floor_count', 'boss_rush_assist_hero_tax_rate', 'boss_rush_reset_hour', 'assist_hero_unlock_vip_level', 'use_assist_hero_unlock_vip_level', 'boss_rush_replace_money', 'burst_discount_damage', 'burst_repeate_max_count', 'repeate_discount_2', 'repeate_discount_3', 'repeate_discount_4', 'sp_lack_add_repeate_count', 'hero_buff_superarmor_add', 'burst_common_cd', 'serial_push_active_time', 'serial_push_protect_time', 'hp_steal_max_distance', 'default_superarmor_discount', 'pve_boss_superarmor_rate', 'other_boss_superarmor_rate', 'multiplayer_invite_friend_wait_seconds', 'equip_reset_growup_gold_off', 'equip_reset_growup_equip_off', 'equip_reset_levelup_exp_off', 'wipe_out_steal_battle_cost', 'wipe_out_steal_battle_vip_limit']
         return f(pb, attrs)
     
     if p == 'ResWorldBossStrength':
@@ -12553,8 +12615,12 @@ def res(f, pb):
         attrs = ['result', 'target_info']
         return f(pb, attrs)
     
+    if p == 'ST_WIPE_OUT_STEAL_BATTLE_RESULT':
+        attrs = ['res_type', 'steal_res']
+        return f(pb, attrs)
+    
     if p == 'PKG_WIPE_OUT_STEAL_BATTLE_BALANCE_REQ':
-        attrs = ['attacker_role_id', 'role_name', 'target_role_id', 'self_hero_info']
+        attrs = ['attacker_role_id', 'role_name', 'target_role_id', 'wipe_out_result']
         return f(pb, attrs)
     
     if p == 'PKG_BALANCE_STEAL_BATTLE_REQ':
@@ -12594,7 +12660,7 @@ def res(f, pb):
         return f(pb, attrs)
     
     if p == 'PKG_ROLELOGIN_GET_MAIL_REQ':
-        attrs = ['role_id', 'zone_id', 'channel_id', 'clt_version']
+        attrs = ['role_id', 'zone_id', 'channel_id', 'clt_version', 'is_new_player']
         return f(pb, attrs)
     
     if p == 'PKG_ROLELOGIN_GET_MAIL_RES':
@@ -13747,6 +13813,10 @@ def res(f, pb):
     
     if p == 'CSPKG_CMD_WORLD_BOSS_CHANGE_HERO_REQ':
         attrs = ['param']
+        return f(pb, attrs)
+    
+    if p == 'SCPKG_CMD_WORLD_BOSS_CHANGE_HERO_RES':
+        attrs = ['param', 'hero_id']
         return f(pb, attrs)
     
     if p == 'CSDT_WORLD_BOSS_HERO':
