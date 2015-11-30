@@ -132,6 +132,22 @@ DATABASES = {
         'HOST': '192.168.1.76',
         'PORT': '3307',
     },
+    'db_cyzrads_statdb': {
+        'ENGINE': 'django.db.backends.mysql',
+        'NAME': 'db_cyzrads_statdb',
+        'USER': 'act',
+        'PASSWORD': '123456',
+        'HOST': '192.168.1.76',
+        'PORT': '3307',
+    },
+    'db_cyzrnginx_statdb': {
+        'ENGINE': 'django.db.backends.mysql',
+        'NAME': 'db_cyzrnginx_statdb',
+        'USER': 'act',
+        'PASSWORD': '123456',
+        'HOST': '192.168.1.76',
+        'PORT': '3307',
+    },
     'db_sszw_statdb': {
         'ENGINE': 'django.db.backends.mysql',
         'NAME': 'db_sszw_statdb',
