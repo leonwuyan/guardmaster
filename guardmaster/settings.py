@@ -212,6 +212,14 @@ DATABASES = {
         'HOST': '61.174.10.19',
         'PORT': '3306',
     },
+    'db_bbrr_control_2': {
+        'ENGINE': 'django.db.backends.mysql',
+        'NAME': 'db_bbrr_control',
+        'USER': '91act',
+        'PASSWORD': '8791act@b7',
+        'HOST': '120.132.92.165',
+        'PORT': '3306',
+    },
     'db_cyzrtx_statdb': {
         'ENGINE': 'django.db.backends.mysql',
         'NAME': 'db_cyzrtx_statdb',
