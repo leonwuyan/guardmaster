@@ -186,7 +186,7 @@ class ServerSocket(object):
         pb_mail_condition.effect_end_time = condition['end']
         pb_mail_condition.effect_clt_version = condition['version']
         pb_mail_condition.effect_channel_id = condition['channel']
-        # pb_mail_condition.effect_player_state = condition['status']
+        pb_mail_condition.effect_player_state = condition['status']
         pkggg = self.serialize_pkg(phash_mail, pb_mail.SerializeToString())
         return self.connect_server(self.ip, self.port, pkggg)
 
