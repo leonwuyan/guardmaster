@@ -12,6 +12,7 @@ class Server(models.Model):
         ('cdn', _('CDN Server')),
         ('normal', _('Normal Server')),
         ('update', _('Update Server')),
+        ('redundance', _('Redundance Update Server')),
         ('world', _('World Server')),
         ('zone', _('Zone Server')),
         ('all', _('GameAll Server')),
