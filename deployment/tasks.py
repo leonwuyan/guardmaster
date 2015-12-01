@@ -134,6 +134,33 @@ def _info_single_zip(addr_path, file_name):
     return local_size, checksum
 
 
+def sync_redundance(panel):
+    update = panel.server_set.filter(server_type='update')
+    if len(update) > 0:
+        update = update[0]
+    else:
+        return
+    redundance = panel.server_set.filter(server_type='redundance')
+    if len(redundance) < 1:
+        return
+
+    print 'sync_redundance start'
+    backup_cmd = "ssh -p {1} root@{0} 'sh /root/bbc/backup_db.sh'".format(
+        update.ip, update.ssh_port)
+    retcode, output = _sh(BASE_DIR, backup_cmd)
+    scp_cmd = "scp -P {1} root@{0}:/tmp/db_bbrr_control.sql /tmp/".format(
+        update.ip, update.ssh_port)
+    retcode, output = _sh(BASE_DIR, scp_cmd)
+    for r in redundance:
+        scp_cmd = "scp -P {1} /tmp/db_bbrr_control.sql root@{0}:/tmp/".format(
+            r.ip, r.ssh_port)
+        retcode, output = _sh(BASE_DIR, scp_cmd)
+        restore_cmd = "ssh -p {1} root@{0} 'sh /root/bbc/restore_db.sh'".format(
+            r.ip, r.ssh_port)
+        retcode, output = _sh(BASE_DIR, restore_cmd)
+    print 'sync_redundance finish'
+
+
 def get_client_id(panel, version):
     sub_menu = get_object_or_404(UISubMenu, url=Common.CLIENT_ID)
     condition = "concat(ver_l1,'.',ver_l2,'.' ,ver_l3,'.' ,ver_l4)='{0}'".format(version)
@@ -246,6 +273,7 @@ def _upload_patch(uploadworkorder_id, server_id, addr_path):
             if scp_patch(u, s, local_path, remote_path):
                 update_list = _update_bbc_list(u, local_path, addr_path)
                 u.update_list = str(update_list)
+                sync_redundance(u.panel)
                 update_upload_work_order(u, u.progress, 'Successful', SUCCESSFUL)
         except Exception as e:
             print 'Exception :', e
@@ -261,6 +289,7 @@ def _upload_app(uploadworkorder_id, app_url):
         try:
             client_id = clean_up_tb(u)
             udpate_id = insert_upt(u, client_id, None, None, app_url)
+            sync_redundance(u.panel)
             update_upload_work_order(u, 100, 'Successful', SUCCESSFUL)
         except Exception as e:
             print 'Exception :', e
@@ -365,6 +394,7 @@ def inherit_version(
                 _inherit(
                     panel, server, hostname, platform,
                     channel, version, user, update_id_con)
+            sync_redundance(panel)
         except Exception as e:
             print 'Exception :', e
         finally:
