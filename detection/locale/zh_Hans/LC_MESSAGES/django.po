@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2015-11-19 17:25+0800\n"
-"PO-Revision-Date: 2015-11-18 16:18+0800\n"
+"POT-Creation-Date: 2015-12-08 18:38+0800\n"
+"PO-Revision-Date: 2015-12-08 18:39+0800\n"
 "Last-Translator: Raynor <raynor41@gmail.com>\n"
 "Language-Team: \n"
 "Language: zh_CN\n"
@@ -63,98 +63,106 @@ msgid "chat_query"
 msgstr "聊天查询页面"
 
 #: models.py:91
+msgid "online"
+msgstr "查看在线页面"
+
+#: models.py:92
 msgid "notify"
 msgstr "系统公告页面"
 
-#: models.py:92
+#: models.py:93
 msgid "mail"
 msgstr "系统邮件页面"
 
-#: models.py:93
+#: models.py:94
+msgid "all_mail"
+msgstr "全区邮件页面"
+
+#: models.py:95
 msgid "single"
 msgstr "单一用户"
 
-#: models.py:94
+#: models.py:96
 msgid "rank"
 msgstr "排行榜页面"
 
-#: models.py:95
+#: models.py:97
 msgid "contact"
 msgstr "玩家联系客服页面"
 
-#: models.py:96
+#: models.py:98
 msgid "patch"
 msgstr "补丁页面"
 
-#: models.py:97
+#: models.py:99
 msgid "config"
 msgstr "配置页面"
 
-#: models.py:98
+#: models.py:100
 msgid "control"
 msgstr "控制页面"
 
-#: models.py:108
+#: models.py:110
 msgid "Category is required when Main menu is selected"
 msgstr "Main menu选择时，Category必须选择"
 
-#: models.py:142
+#: models.py:144
 msgid "date"
 msgstr "日期"
 
-#: models.py:143
+#: models.py:145
 msgid "time"
 msgstr "时间"
 
-#: models.py:144
+#: models.py:146
 msgid "timestamp to date"
 msgstr "时间戳转换日期"
 
-#: models.py:145
+#: models.py:147
 msgid "timestamp to time"
 msgstr "时间戳转换时间"
 
-#: models.py:146
+#: models.py:148
 msgid "float two"
 msgstr "保留两位小数"
 
-#: models.py:147
+#: models.py:149
 msgid "ratio two"
 msgstr "保留两位小数的百分比"
 
-#: models.py:148
+#: models.py:150
 msgid "channel list"
 msgstr "渠道列表"
 
-#: models.py:149
+#: models.py:151
 msgid "zone list"
 msgstr "区服列表"
 
-#: models.py:150
+#: models.py:152
 msgid "anything to string"
 msgstr "强行转换字符串"
 
-#: models.py:151
+#: models.py:153
 msgid "contact to reply"
 msgstr "玩家联系客服回复连接"
 
-#: models.py:152
+#: models.py:154
 msgid "ip to server"
 msgstr "IP地址转换DIR大区"
 
-#: models.py:153
+#: models.py:155
 msgid "pay channel list"
 msgstr "支付渠道列表"
 
-#: models.py:154
+#: models.py:156
 msgid "chat type list"
 msgstr "聊天类型列表"
 
-#: models.py:155
+#: models.py:157
 msgid "user status list"
 msgstr "用户状态列表"
 
-#: models.py:156
+#: models.py:158
 msgid "kick ban user"
 msgstr "禁封用户"
 

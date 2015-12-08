@@ -1,0 +1,45 @@
+{% extends "detection/base.html" %}
+{% block content %}
+<script type="text/javascript">
+ $(document).ready(function() {
+   $('.input-datepicker').datepicker({
+     format: "yyyy-mm-dd",
+     weekStart: 0,
+     language: gettext('en'),
+     autoclose: true,
+     todayHighlight: true
+   });
+ });
+</script>
+<div class="container-fluid white-bg">
+  <div class="row">
+    <ol class="breadcrumb">
+      <li><a href="{{servlet}}/">{{panel.label}}</a></li>
+      <li class="active">{{ title }}</li>
+    </ol>
+
+    <div class="col-md-4">
+      <div class="jumbotron">
+        <p>{{ output_ios|safe }}</p>
+      </div>
+    </div>
+    <div class="col-md-4">
+      <div class="jumbotron">
+        <p>{{ output_37|safe }}</p>
+      </div>
+    </div>
+    <div class="col-md-4">
+      <div class="jumbotron">
+        <p>{{ output_tx|safe }}</p>
+      </div>
+    </div>
+
+  </div>
+  <center style='color: #999; padding-top: 20px; font-family: "arial","NSimSun","SimSun","STSong","AR PL SungtiL GB","TW\-Sung","WenQuanYi Bitmap Song"; font-size: 14px; font-weight: bold;'>{{excuse}}</center>
+</div>
+<script type="text/javascript">
+ $(document).ready(function() {
+   queryButton.initDate('{{count_date.start}}', '{{count_date.end}}');
+ });
+</script>
+{% endblock %}

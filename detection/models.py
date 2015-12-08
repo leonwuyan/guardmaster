@@ -88,6 +88,7 @@ class UISubMenu(models.Model):
         ('detection:everyday_history_query', _('everyday_history_query')),
         ('detection:everyday_deal_query', _('everyday_deal_query')),
         ('detection:chat_query', _('chat_query')),
+        ('detection:online', _('online')),
         ('operating:notify', _('notify')),
         ('operating:mail', _('mail')),
         ('operating:all_mail', _('all_mail')),

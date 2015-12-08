@@ -41,6 +41,7 @@ def _sh(cmd):
     spend_time = str(time.time() - spend_time)
     logger = logging.getLogger(__name__)
     logger.info(path + '|' + cmd + '|' + str(retcode) + '|' + spend_time)
+    return output
 
 
 def sh_remote_log(panel, t_p, request_get):
@@ -261,4 +262,20 @@ def chat_query(request, panel_id, url=Common.URL):
     d['servers'] = panel.server_set.filter(server_type='dir')
     d['chat_type_list'] = chat_type_list
     d['user_status_list'] = user_status_list
+    return render(request, t, d)
+
+
+@Common.competence_required
+def online(request, panel_id, url=Common.URL):
+    t = "detection/online.html"
+    d = view_template(request, panel_id, url)
+    cmd = ["cat", "/tmp/online_ios.log"]
+    output_ios = _sh(cmd)
+    d['output_ios'] = output_ios[0].replace("\n", "<br/>")
+    cmd = ["cat", "/tmp/online_37.log"]
+    output_37 = _sh(cmd)
+    d['output_37'] = output_37[0].replace("\n", "<br/>")
+    cmd = ["cat", "/tmp/online_tx.log"]
+    output_tx = _sh(cmd)
+    d['output_tx'] = output_tx[0].replace("\n", "<br/>")
     return render(request, t, d)

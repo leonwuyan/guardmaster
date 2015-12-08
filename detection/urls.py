@@ -50,5 +50,9 @@ urlpatterns = [
         r'^(?P<panel_id>[0-9]+)/count_only_time/(?P<url>[_A-Za-z]+)$',
         views.count_only_time,
         name='count_only_time'),
+    url(
+        r'^(?P<panel_id>[0-9]+)/online/(?P<url>[_A-Za-z]+)$',
+        views.online,
+        name='online'),
     url(r'^$', auth_views.index, name='default_index'),
 ]
