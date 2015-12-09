@@ -1,5 +1,6 @@
 from itertools import chain
 from django.http import HttpResponseRedirect
+from django.utils import timezone
 from datetime import *
 import time
 import hotshot
@@ -75,6 +76,15 @@ def now(t=None):
 def datetime2string(t, tz=0):
     ts = time.mktime(t.timetuple()) + tz
     return time.strftime('%Y-%m-%d %H:%M:%S', time.localtime(ts))
+
+
+def calc_online_time(s='05:00'):
+    n = datetime2string(timezone.now(), 3600*8)
+    t = n[:-5] + s
+    if t > n:
+        t = datetime2string(timezone.now(), 3600*7)
+        t = t[:-5] + s
+    return t
 
 
 def datetime2ts(t, tz=0):

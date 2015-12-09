@@ -32,7 +32,8 @@ def view_init():
 
 
 def _sh(cmd):
-    path = '/root/bbc_statdb/tools/shells/'
+    # path = '/root/bbc_statdb/tools/shells/'
+    path = '/'
     spend_time = time.time()
     cmd = ' '.join(cmd)
     s = subprocess.Popen(cmd, shell=True, cwd=path, stdout=subprocess.PIPE)
@@ -278,4 +279,7 @@ def online(request, panel_id, url=Common.URL):
     cmd = ["cat", "/tmp/online_tx.log"]
     output_tx = _sh(cmd)
     d['output_tx'] = output_tx[0].replace("\n", "<br/>")
+    d['now_ios'] = Common.calc_online_time('05:00')
+    d['now_37'] = Common.calc_online_time('15:00')
+    d['now_tx'] = Common.calc_online_time('25:00')
     return render(request, t, d)
