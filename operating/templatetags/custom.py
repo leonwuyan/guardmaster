@@ -172,6 +172,7 @@ def rank_val(rank_id, pos):
         (_("Achievement Score"), _("Achievement Times"),),
         (_("Fight Offline Name"), _("Fight Offline Kill Man"),),
         (_("Fight Online Score"), _("Fight Online Win Times"),),
+        ('', '',),
         (_("BOSS History Damage"), _("Unkown"),),
         (_("1st BOSS Damage"), _("Unkown"),),
         (_("2rd BOSS Damage"), _("Unkown"),),
