@@ -32,8 +32,7 @@ def view_init():
 
 
 def _sh(cmd):
-    # path = '/root/bbc_statdb/tools/shells/'
-    path = '/'
+    path = '/root/bbc_statdb/tools/shells/'
     spend_time = time.time()
     cmd = ' '.join(cmd)
     s = subprocess.Popen(cmd, shell=True, cwd=path, stdout=subprocess.PIPE)
