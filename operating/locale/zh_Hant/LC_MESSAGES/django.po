@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2015-11-23 19:19+0800\n"
-"PO-Revision-Date: 2015-11-23 19:20+0800\n"
+"POT-Creation-Date: 2015-12-11 18:13+0800\n"
+"PO-Revision-Date: 2015-12-11 18:14+0800\n"
 "Last-Translator: Raynor <raynor41@gmail.com>\n"
 "Language-Team: \n"
 "Language: zh_TW\n"
@@ -35,22 +35,26 @@ msgid "Update Server"
 msgstr "更新伺服器"
 
 #: models.py:15
+msgid "Redundance Update Server"
+msgstr "冗餘更新伺服器"
+
+#: models.py:16
 msgid "World Server"
 msgstr "World伺服器"
 
-#: models.py:16
+#: models.py:17
 msgid "Zone Server"
 msgstr "Zone伺服器"
 
-#: models.py:17
+#: models.py:18
 msgid "GameAll Server"
 msgstr "GameAll伺服器"
 
-#: models.py:24
+#: models.py:25
 msgid "GM Port, Usually Is 9135"
 msgstr "GM指令端口,通常為9135"
 
-#: models.py:25
+#: models.py:26
 msgid "SSH Port, Usually Is 22"
 msgstr "SSH指令端口,通常為22"
 
@@ -371,6 +375,14 @@ msgstr "脫離宗家"
 #: templates/operating/base_info.html:44
 msgid "Off Rank"
 msgstr "踢出排行榜"
+
+#: templates/operating/base_info.html:45
+msgid "Remark Of Chat Ban"
+msgstr "此處填寫禁言玩家理由"
+
+#: templates/operating/base_info.html:46
+msgid "Remark Of Account Ban"
+msgstr "此處填寫鎖定賬戶理由"
 
 #: templates/operating/building_info.html:2
 msgid "Building Info"
@@ -875,7 +887,7 @@ msgstr "複製一下列表給CDN服務器管理員"
 msgid "Return Notify List"
 msgstr "返回公告列表"
 
-#: templatetags/custom.py:24 templatetags/custom.py:190
+#: templatetags/custom.py:24 templatetags/custom.py:191
 msgid "Not Time"
 msgstr "無時間"
 
@@ -956,110 +968,110 @@ msgstr "線上堆棧積分"
 msgid "Fight Online Win Times"
 msgstr "線上堆棧勝場"
 
-#: templatetags/custom.py:175
+#: templatetags/custom.py:176
 msgid "BOSS History Damage"
 msgstr "世界Boss歷史傷害量"
 
-#: templatetags/custom.py:175 templatetags/custom.py:176
-#: templatetags/custom.py:177 templatetags/custom.py:178
-#: templatetags/custom.py:179 templatetags/custom.py:180
-#: templatetags/custom.py:181 templatetags/custom.py:182
-#: templatetags/custom.py:183
+#: templatetags/custom.py:176 templatetags/custom.py:177
+#: templatetags/custom.py:178 templatetags/custom.py:179
+#: templatetags/custom.py:180 templatetags/custom.py:181
+#: templatetags/custom.py:182 templatetags/custom.py:183
+#: templatetags/custom.py:184
 msgid "Unkown"
 msgstr "未知"
 
-#: templatetags/custom.py:176
+#: templatetags/custom.py:177
 msgid "1st BOSS Damage"
 msgstr "第一支Boss傷害量"
 
-#: templatetags/custom.py:177
+#: templatetags/custom.py:178
 msgid "2rd BOSS Damage"
 msgstr "第二支Boss傷害量"
 
-#: templatetags/custom.py:178
+#: templatetags/custom.py:179
 msgid "3th BOSS Damage"
 msgstr "第三支Boss傷害量"
 
-#: templatetags/custom.py:179
+#: templatetags/custom.py:180
 msgid "4th BOSS Damage"
 msgstr "第四支Boss傷害量"
 
-#: templatetags/custom.py:180
+#: templatetags/custom.py:181
 msgid "5th BOSS Damage"
 msgstr "第五支Boss傷害量"
 
-#: templatetags/custom.py:181
+#: templatetags/custom.py:182
 msgid "6th BOSS Damage"
 msgstr "第六支Boss傷害量"
 
-#: templatetags/custom.py:182
+#: templatetags/custom.py:183
 msgid "7th BOSS Damage"
 msgstr "第七支Boss傷害量"
 
-#: templatetags/custom.py:183
+#: templatetags/custom.py:184
 msgid "8th BOSS Damage"
 msgstr "第八支Boss傷害量"
 
-#: templatetags/custom.py:204
+#: templatetags/custom.py:205
 msgid "Order Is Locking"
 msgstr "請求已上鎖"
 
-#: templatetags/custom.py:205
+#: templatetags/custom.py:206
 msgid "Successful"
 msgstr "成功"
 
-#: templatetags/custom.py:206
+#: templatetags/custom.py:207
 msgid "Dir Do Not Exists"
 msgstr "文件目錄不存在"
 
-#: templatetags/custom.py:207
+#: templatetags/custom.py:208
 msgid "Not Any Files"
 msgstr "沒有文件"
 
-#: templatetags/custom.py:208
+#: templatetags/custom.py:209
 msgid "Error In Scp"
 msgstr "上傳錯誤"
 
-#: templatetags/custom.py:209
+#: templatetags/custom.py:210
 msgid "Working"
 msgstr "工作中"
 
-#: templatetags/custom.py:210
+#: templatetags/custom.py:211
 msgid "Error In Srcipt"
 msgstr "腳本錯誤"
 
-#: templatetags/custom.py:229
+#: templatetags/custom.py:230
 msgid "t_crystal"
 msgstr "魔素"
 
-#: templatetags/custom.py:231
+#: templatetags/custom.py:232
 msgid "t_gold"
 msgstr "金幣"
 
-#: templatetags/custom.py:233
+#: templatetags/custom.py:234
 msgid "t_money"
 msgstr "寶石"
 
-#: templatetags/custom.py:235
+#: templatetags/custom.py:236
 msgid "t_skill_point"
 msgstr "技能點數"
 
-#: templatetags/custom.py:237
+#: templatetags/custom.py:238
 msgid "t_item"
 msgstr "道具"
 
-#: templatetags/custom.py:242
+#: templatetags/custom.py:243
 msgid "t_power"
 msgstr "體力"
 
-#: templatetags/custom.py:244
+#: templatetags/custom.py:245
 msgid "t_equip"
 msgstr "裝備"
 
-#: templatetags/custom.py:252
+#: templatetags/custom.py:253
 msgid "t_score_of_rank_battle"
 msgstr "排行榜積分"
 
-#: templatetags/custom.py:254
+#: templatetags/custom.py:255
 msgid "t_winpoint"
 msgstr "胜点"

@@ -96,6 +96,20 @@ class ValueFormat(object):
             self.user_status_list = Tabel.get_enum(self.panel_id, Common.E_USERSTATUS)
         return Common.filter_enum(self.user_status_list, int(id), id)
 
+    def _ban_type(self, x):
+        if x == 'account_ban':
+            return _('account_ban')
+        if x == 'chat_ban':
+            return _('chat_ban')
+        if x == 'kick_ban':
+            return _('kick_ban')
+
+    def _ban_time(self, t):
+        if t == '0':
+            return _('unban')
+        t = str(int(t) / (24*60*60))
+        return t + _('Day')
+
     def _f_v(self, f, v):
         if f is None:
             f = ''

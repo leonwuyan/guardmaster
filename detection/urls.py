@@ -23,6 +23,10 @@ urlpatterns = [
         views.history_query,
         name='history_query'),
     url(
+        r'^(?P<panel_id>[0-9]+)/ban_query/(?P<url>[_A-Za-z]+)$',
+        views.ban_query,
+        name='ban_query'),
+    url(
         r'^(?P<panel_id>[0-9]+)/everyday_history_query/(?P<url>[_A-Za-z]+)$',
         views.everyday_history_query,
         name='everyday_history_query'),

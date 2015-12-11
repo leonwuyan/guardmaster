@@ -42,6 +42,8 @@
 {% trans "Unlock 150 Dungeon" as t_unlock_150_dungeon %}
 {% trans "Off Gang" as t_off_gang %}
 {% trans "Off Rank" as t_off_rank %}
+{% trans "Remark Of Chat Ban" as t_remark_of_chat_ban %}
+{% trans "Remark Of Account Ban" as t_remark_of_account_ban %}
 <div class="panel panel-primary">
   <div class="panel-heading">{{ t_player_base_info }}</div>
   <!-- Table -->
@@ -177,6 +179,7 @@
         <td><b>{{ t_chat_ban_time }}</b></td>
         <td colspan="4">{{ player.world_info.chat_ban_time|ts2bantime }}
           <span class="pull-right">
+            <input type="text" id="chat_title" value="{{ t_remark_of_chat_ban }}">
             <button type="submit" class="btn btn-info btn-xs" onclick="dataAccess.addJSON({{server_id}},{{player.uid|default:0}},'chat_ban',0)">{{t_un_ban}}</button>
             <button type="submit" class="btn btn-warning btn-xs" onclick="dataAccess.addJSON({{server_id}},{{player.uid|default:0}},'chat_ban',1)">{{t_chat_ban_1_day}}</button>
             <button type="submit" class="btn btn-warning btn-xs" onclick="dataAccess.addJSON({{server_id}},{{player.uid|default:0}},'chat_ban',30)">{{t_chat_ban_30_days}}</button>
@@ -188,6 +191,7 @@
         <td><b>{{ t_account_ban_time }}</b></td>
         <td colspan="4">{{ player.world_info.account_ban_time|ts2bantime }}
           <span class="pull-right">
+            <input type="text" id="account_title" value="{{ t_remark_of_account_ban }}">
             <button type="submit" class="btn btn-info btn-xs" onclick="dataAccess.addJSON({{server_id}},{{player.uid|default:0}},'account_ban',0)">{{t_un_ban}}</button>
             <button type="submit" class="btn btn-warning btn-xs" onclick="dataAccess.addJSON({{server_id}},{{player.uid|default:0}},'account_ban',1)">{{t_account_ban_1_day}}</button>
             <button type="submit" class="btn btn-warning btn-xs" onclick="dataAccess.addJSON({{server_id}},{{player.uid|default:0}},'account_ban',30)">{{t_account_ban_30_days}}</button>

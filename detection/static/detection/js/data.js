@@ -362,6 +362,7 @@
           addData = {
             'server_id': server_id,
             'time': type_id*24*60*60,
+            'title': $('#chat_title').val(),
             'uid': uid
           };
           p = '/chat_ban.json';
@@ -375,6 +376,7 @@
           addData = {
             'server_id': server_id,
             'time': type_id*24*60*60,
+            'title': $('#account_title').val(),
             'uid': uid
           };
           p = '/account_ban.json';
@@ -534,6 +536,8 @@
     'kickbanUser': function(_url, server_id, uid){
       addData = {
         'server_id': server_id,
+        'time': 1000*24*60*60,
+        'title': gettext('Chat Query Kick And Ban'),
         'uid': uid
       }
       fmts = gettext('Confirm Kick And Account Ban Player UID :%(uid)s ?');

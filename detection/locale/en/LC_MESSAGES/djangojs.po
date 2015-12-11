@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2015-11-19 16:05+0800\n"
+"POT-Creation-Date: 2015-12-11 18:06+0800\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -41,42 +41,46 @@ msgstr ""
 msgid "Confirm Chat Ban Player %(type_id)s Day?"
 msgstr ""
 
-#: static/detection/js/data.js:370
+#: static/detection/js/data.js:371
 msgid "Confirm Account Ban Player %(type_id)s Day?"
 msgstr ""
 
-#: static/detection/js/data.js:383
+#: static/detection/js/data.js:385
 msgid "Confirm Player UID %(uid)s Off Gang?"
 msgstr ""
 
-#: static/detection/js/data.js:395
+#: static/detection/js/data.js:397
 msgid "Confirm Player UID %(uid)s Off Rank?"
 msgstr ""
 
-#: static/detection/js/data.js:437
+#: static/detection/js/data.js:439
 msgid "Confirm To Delete This Notify %(title)s?"
 msgstr ""
 
-#: static/detection/js/data.js:473
+#: static/detection/js/data.js:475
 msgid "Confirm To Synchronize All The Noitfy To The CDNServer?"
 msgstr ""
 
-#: static/detection/js/data.js:523
+#: static/detection/js/data.js:525
 msgid "Title And Content Is Required"
 msgstr ""
 
-#: static/detection/js/data.js:526
+#: static/detection/js/data.js:528
 msgid ""
 "Please Confirm This:\n"
 "Title :%(t)s\n"
 "Content :%(c)s"
 msgstr ""
 
-#: static/detection/js/data.js:539
+#: static/detection/js/data.js:540
+msgid "Chat Query Kick And Ban"
+msgstr ""
+
+#: static/detection/js/data.js:543
 msgid "Confirm Kick And Account Ban Player UID :%(uid)s ?"
 msgstr ""
 
-#: static/detection/js/data.js:634
+#: static/detection/js/data.js:638
 msgid ""
 "Please Confirm This:\n"
 "HostName :%(h)s\n"
@@ -85,7 +89,7 @@ msgid ""
 "Verseion :%(v)s"
 msgstr ""
 
-#: static/detection/js/data.js:647
+#: static/detection/js/data.js:651
 msgid ""
 "Please Confirm This:\n"
 "Server :%(se)s\n"
@@ -95,7 +99,7 @@ msgid ""
 "Version :%(ve)s"
 msgstr ""
 
-#: static/detection/js/data.js:661
+#: static/detection/js/data.js:665
 msgid ""
 "Please Confirm This:\n"
 "Server :%(se)s\n"

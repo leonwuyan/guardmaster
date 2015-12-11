@@ -168,6 +168,8 @@ def json_template(request, panel_id, t_p, url=Common.URL):
     if t_p == 'history_query' or t_p == 'everyday_history_query':
         sh_remote_log(panel, t_p, request.GET)
         ret = Tabel.history_query_select(sub_menu, panel, request.GET)
+    if t_p == 'ban_query':
+        ret = Tabel.ban_query_select(sub_menu, panel, request.GET)
     if t_p == 'contact':
         ret = Tabel.contact_select(sub_menu, panel, request.GET)
     if ret is None:
@@ -281,4 +283,11 @@ def online(request, panel_id, url=Common.URL):
     d['now_ios'] = Common.calc_online_time('05:00')
     d['now_37'] = Common.calc_online_time('15:00')
     d['now_tx'] = Common.calc_online_time('25:00')
+    return render(request, t, d)
+
+
+@Common.competence_required
+def ban_query(request, panel_id, url=Common.URL):
+    t = "detection/ban_query.html"
+    d = view_template(request, panel_id, url)
     return render(request, t, d)

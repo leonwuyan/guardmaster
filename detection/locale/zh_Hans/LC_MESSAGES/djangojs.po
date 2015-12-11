@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2015-11-19 16:05+0800\n"
-"PO-Revision-Date: 2015-11-19 16:07+0800\n"
+"POT-Creation-Date: 2015-12-11 18:06+0800\n"
+"PO-Revision-Date: 2015-12-11 18:10+0800\n"
 "Last-Translator: Raynor <raynor41@gmail.com>\n"
 "Language-Team: \n"
 "Language: zh_CN\n"
@@ -42,31 +42,31 @@ msgstr "确认踢掉玩家 UID %(uid)s 下线?"
 msgid "Confirm Chat Ban Player %(type_id)s Day?"
 msgstr "确认禁言玩家 %(type_id)s 天?"
 
-#: static/detection/js/data.js:370
+#: static/detection/js/data.js:371
 msgid "Confirm Account Ban Player %(type_id)s Day?"
 msgstr "确认锁定玩家 %(type_id)s 天?"
 
-#: static/detection/js/data.js:383
+#: static/detection/js/data.js:385
 msgid "Confirm Player UID %(uid)s Off Gang?"
 msgstr "确认让玩家 UID %(uid)s 脱离宗家?"
 
-#: static/detection/js/data.js:395
+#: static/detection/js/data.js:397
 msgid "Confirm Player UID %(uid)s Off Rank?"
 msgstr "确认把玩家 UID %(uid)s 踢出排行榜?"
 
-#: static/detection/js/data.js:437
+#: static/detection/js/data.js:439
 msgid "Confirm To Delete This Notify %(title)s?"
 msgstr "确认删除公告 %(title)s?"
 
-#: static/detection/js/data.js:473
+#: static/detection/js/data.js:475
 msgid "Confirm To Synchronize All The Noitfy To The CDNServer?"
 msgstr "确认将所有公告同步到CDN服务器?"
 
-#: static/detection/js/data.js:523
+#: static/detection/js/data.js:525
 msgid "Title And Content Is Required"
 msgstr "邮件题目和内容是必填的"
 
-#: static/detection/js/data.js:526
+#: static/detection/js/data.js:528
 msgid ""
 "Please Confirm This:\n"
 "Title :%(t)s\n"
@@ -76,11 +76,15 @@ msgstr ""
 "邮件题目 :%(t)s\n"
 "邮件内容 :%(c)s"
 
-#: static/detection/js/data.js:539
+#: static/detection/js/data.js:540
+msgid "Chat Query Kick And Ban"
+msgstr "聊天查询页面的封禁操作"
+
+#: static/detection/js/data.js:543
 msgid "Confirm Kick And Account Ban Player UID :%(uid)s ?"
 msgstr "确认禁封玩家 UID %(uid)s 并踢下线?"
 
-#: static/detection/js/data.js:634
+#: static/detection/js/data.js:638
 msgid ""
 "Please Confirm This:\n"
 "HostName :%(h)s\n"
@@ -94,7 +98,7 @@ msgstr ""
 "渠道 :%(c)s\n"
 "版本 :%(v)s"
 
-#: static/detection/js/data.js:647
+#: static/detection/js/data.js:651
 msgid ""
 "Please Confirm This:\n"
 "Server :%(se)s\n"
@@ -110,7 +114,7 @@ msgstr ""
 "CIWP :%(ci)s\n"
 "版本 :%(ve)s"
 
-#: static/detection/js/data.js:661
+#: static/detection/js/data.js:665
 msgid ""
 "Please Confirm This:\n"
 "Server :%(se)s\n"

@@ -278,11 +278,10 @@ def change_single(request, panel_id, url, type):
         ret = sc.account_ban(spend_time)
         log_str = str(spend_time)
     if type == 'kick_ban':
-        spend_time = 1000*24*60*60
+        spend_time = int(request.POST['time'])
         ret = sc.account_ban(spend_time)
         ret = sc.chat_ban(spend_time)
         ret = sc.kick()
-        is_log = False
     if type == 'off_gang':
         ret = sc.off_gang()
         is_log = False

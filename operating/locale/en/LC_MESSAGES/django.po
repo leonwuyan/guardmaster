@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2015-11-23 19:19+0800\n"
+"POT-Creation-Date: 2015-12-11 18:13+0800\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -34,22 +34,26 @@ msgid "Update Server"
 msgstr ""
 
 #: models.py:15
-msgid "World Server"
+msgid "Redundance Update Server"
 msgstr ""
 
 #: models.py:16
-msgid "Zone Server"
+msgid "World Server"
 msgstr ""
 
 #: models.py:17
+msgid "Zone Server"
+msgstr ""
+
+#: models.py:18
 msgid "GameAll Server"
 msgstr ""
 
-#: models.py:24
+#: models.py:25
 msgid "GM Port, Usually Is 9135"
 msgstr ""
 
-#: models.py:25
+#: models.py:26
 msgid "SSH Port, Usually Is 22"
 msgstr ""
 
@@ -369,6 +373,14 @@ msgstr ""
 
 #: templates/operating/base_info.html:44
 msgid "Off Rank"
+msgstr ""
+
+#: templates/operating/base_info.html:45
+msgid "Remark Of Chat Ban"
+msgstr ""
+
+#: templates/operating/base_info.html:46
+msgid "Remark Of Account Ban"
 msgstr ""
 
 #: templates/operating/building_info.html:2
@@ -874,7 +886,7 @@ msgstr ""
 msgid "Return Notify List"
 msgstr ""
 
-#: templatetags/custom.py:24 templatetags/custom.py:190
+#: templatetags/custom.py:24 templatetags/custom.py:191
 msgid "Not Time"
 msgstr ""
 
@@ -955,110 +967,110 @@ msgstr ""
 msgid "Fight Online Win Times"
 msgstr ""
 
-#: templatetags/custom.py:175
+#: templatetags/custom.py:176
 msgid "BOSS History Damage"
 msgstr ""
 
-#: templatetags/custom.py:175 templatetags/custom.py:176
-#: templatetags/custom.py:177 templatetags/custom.py:178
-#: templatetags/custom.py:179 templatetags/custom.py:180
-#: templatetags/custom.py:181 templatetags/custom.py:182
-#: templatetags/custom.py:183
+#: templatetags/custom.py:176 templatetags/custom.py:177
+#: templatetags/custom.py:178 templatetags/custom.py:179
+#: templatetags/custom.py:180 templatetags/custom.py:181
+#: templatetags/custom.py:182 templatetags/custom.py:183
+#: templatetags/custom.py:184
 msgid "Unkown"
 msgstr ""
 
-#: templatetags/custom.py:176
+#: templatetags/custom.py:177
 msgid "1st BOSS Damage"
 msgstr ""
 
-#: templatetags/custom.py:177
+#: templatetags/custom.py:178
 msgid "2rd BOSS Damage"
 msgstr ""
 
-#: templatetags/custom.py:178
+#: templatetags/custom.py:179
 msgid "3th BOSS Damage"
 msgstr ""
 
-#: templatetags/custom.py:179
+#: templatetags/custom.py:180
 msgid "4th BOSS Damage"
 msgstr ""
 
-#: templatetags/custom.py:180
+#: templatetags/custom.py:181
 msgid "5th BOSS Damage"
 msgstr ""
 
-#: templatetags/custom.py:181
+#: templatetags/custom.py:182
 msgid "6th BOSS Damage"
 msgstr ""
 
-#: templatetags/custom.py:182
+#: templatetags/custom.py:183
 msgid "7th BOSS Damage"
 msgstr ""
 
-#: templatetags/custom.py:183
+#: templatetags/custom.py:184
 msgid "8th BOSS Damage"
 msgstr ""
 
-#: templatetags/custom.py:204
+#: templatetags/custom.py:205
 msgid "Order Is Locking"
 msgstr ""
 
-#: templatetags/custom.py:205
+#: templatetags/custom.py:206
 msgid "Successful"
 msgstr ""
 
-#: templatetags/custom.py:206
+#: templatetags/custom.py:207
 msgid "Dir Do Not Exists"
 msgstr ""
 
-#: templatetags/custom.py:207
+#: templatetags/custom.py:208
 msgid "Not Any Files"
 msgstr ""
 
-#: templatetags/custom.py:208
+#: templatetags/custom.py:209
 msgid "Error In Scp"
 msgstr ""
 
-#: templatetags/custom.py:209
+#: templatetags/custom.py:210
 msgid "Working"
 msgstr ""
 
-#: templatetags/custom.py:210
+#: templatetags/custom.py:211
 msgid "Error In Srcipt"
 msgstr ""
 
-#: templatetags/custom.py:229
+#: templatetags/custom.py:230
 msgid "t_crystal"
 msgstr ""
 
-#: templatetags/custom.py:231
+#: templatetags/custom.py:232
 msgid "t_gold"
 msgstr ""
 
-#: templatetags/custom.py:233
+#: templatetags/custom.py:234
 msgid "t_money"
 msgstr ""
 
-#: templatetags/custom.py:235
+#: templatetags/custom.py:236
 msgid "t_skill_point"
 msgstr ""
 
-#: templatetags/custom.py:237
+#: templatetags/custom.py:238
 msgid "t_item"
 msgstr ""
 
-#: templatetags/custom.py:242
+#: templatetags/custom.py:243
 msgid "t_power"
 msgstr ""
 
-#: templatetags/custom.py:244
+#: templatetags/custom.py:245
 msgid "t_equip"
 msgstr ""
 
-#: templatetags/custom.py:252
+#: templatetags/custom.py:253
 msgid "t_score_of_rank_battle"
 msgstr ""
 
-#: templatetags/custom.py:254
+#: templatetags/custom.py:255
 msgid "t_winpoint"
 msgstr ""

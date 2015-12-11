@@ -85,6 +85,7 @@ class UISubMenu(models.Model):
         ('detection:gang_query', _('gang_query')),
         ('detection:deal_query', _('deal_query')),
         ('detection:history_query', _('history_query')),
+        ('detection:ban_query', _('ban_query')),
         ('detection:everyday_history_query', _('everyday_history_query')),
         ('detection:everyday_deal_query', _('everyday_deal_query')),
         ('detection:chat_query', _('chat_query')),
@@ -156,6 +157,8 @@ class UIColMap(models.Model):
         ('chat_type_list', _('chat type list')),
         ('user_status_list', _('user status list')),
         ('kick_ban', _('kick ban user')),
+        ('ban_type', _('type of ban')),
+        ('ban_time', _('time of ban')),
     }
     label = models.CharField(max_length=45)
     sub_menu = models.ForeignKey(UISubMenu)
@@ -380,6 +383,20 @@ class Tabel(object):
         if len(condition) > 0:
             condition = " AND ".join(condition)
             condition += " ORDER BY Server, UID, LogDt, LogTime, EventTyp"
+        ret = self.select(sub_menu, panel, condition)
+        return ret
+
+    @classmethod
+    def ban_query_select(self, sub_menu, panel, request_get):
+        condition = ()
+        if 'uid' in request_get:
+            r = "UID = " + request_get.get('uid')
+            condition = condition + (r,)
+            r = "(actType = 'account_ban' OR actType = 'chat_ban' OR actType = 'kick_ban')"
+            condition = condition + (r,)
+        if len(condition) > 0:
+            condition = " AND ".join(condition)
+            condition += " ORDER BY actDt DESC"
         ret = self.select(sub_menu, panel, condition)
         return ret
 
