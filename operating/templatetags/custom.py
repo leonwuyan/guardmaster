@@ -144,6 +144,12 @@ def enum_item(item_id, panel_id):
     return Common.filter_enum(Common.E_ITEMNAME_LIST, item_id)
 
 
+def enum_factor(factor_id, panel_id):
+    if Common.E_FACTOR_LIST is None:
+        Common.E_FACTOR_LIST = Tabel.get_enum(panel_id, Common.E_FACTOR)
+    return Common.filter_enum(Common.E_FACTOR_LIST, factor_id)
+
+
 def enum_restype(res_type_id, panel_id):
     if Common.E_RESTYPE_LIST is None:
         Common.E_RESTYPE_LIST = Tabel.get_enum(panel_id, Common.E_RESTYPE)
@@ -239,6 +245,11 @@ def format_accessory(x, panel_id):
             s += '[ {0} | {1} ]'.format(
                 item['res_id'],
                 enum_item(item['res_id'], panel_id).encode('utf-8'))
+        if item['res_type'] == 19:
+            s = _('t_factor').encode('utf-8')
+            s += '[ {0} | {1} ]'.format(
+                item['res_id'],
+                enum_factor(item['res_id'], panel_id).encode('utf-8'))
         if item['res_type'] == 6:
             s = _('t_power').encode('utf-8')
         if item['res_type'] == 10:
