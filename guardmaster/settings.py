@@ -244,6 +244,22 @@ DATABASES = {
         'HOST': '123.59.61.27',
         'PORT': '8791',
     },
+    'db_cyzrios_statdb_bak': {
+        'ENGINE': 'django.db.backends.mysql',
+        'NAME': 'db_cyzrios_statdb',
+        'USER': 'act',
+        'PASSWORD': '91act@b7',
+        'HOST': '123.59.82.43',
+        'PORT': '8792',
+    },
+    'db_cyzr37_statdb_bak': {
+        'ENGINE': 'django.db.backends.mysql',
+        'NAME': 'db_cyzr37_statdb',
+        'USER': 'act',
+        'PASSWORD': '91act@b7',
+        'HOST': '120.132.55.61',
+        'PORT': '8792',
+    },
 }
 
 

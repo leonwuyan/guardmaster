@@ -24,6 +24,7 @@ class Panel(models.Model):
     label = models.CharField(max_length=45, unique=True)
     groups = models.ManyToManyField(Group)
     db_aliases = models.CharField(max_length=256)
+    db_aliases_bak = models.CharField(max_length=256)
     start_date = models.DateField()
     symbol = models.CharField(max_length=45)
 
@@ -110,6 +111,7 @@ class UISubMenu(models.Model):
         null=True,
         help_text=_('Category is required when Main menu is selected'),
         choices=CATEGORY_LIST)
+    is_bak = models.BooleanField(default=False)
     seqid = models.IntegerField()
 
     def __unicode__(self):
@@ -180,7 +182,11 @@ class UIColMap(models.Model):
 class Tabel(object):
     @classmethod
     def select_unsafe(self, sub_menu, panel, condition=None):
-        cursor = connections[panel.db_aliases].cursor()
+        if sub_menu.is_bak:
+            db_name = panel.db_aliases_bak
+        else:
+            db_name = panel.db_aliases
+        cursor = connections[db_name].cursor()
         if condition:
             s = sub_menu.get_select_map()
             s['condition'] = condition

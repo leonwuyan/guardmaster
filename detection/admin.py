@@ -32,6 +32,7 @@ class UISubMenuAdmin(admin.ModelAdmin):
         'url',
         'table_name',
         'category',
+        'is_bak',
         'seqid')
     search_fields = ['label']
     list_filter = ['category']
@@ -64,7 +65,7 @@ class UIMainMenuAdmin(admin.ModelAdmin):
 
 
 class PanelAdmin(admin.ModelAdmin):
-    list_display = ('label', 'groups_list', 'db_aliases', 'symbol', 'start_date')
+    list_display = ('label', 'groups_list', 'db_aliases', 'db_aliases_bak', 'symbol', 'start_date')
     search_fields = ['label']
     list_filter = ['groups']
 
