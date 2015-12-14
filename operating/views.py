@@ -27,6 +27,12 @@ def enum_item_list(panel_id):
     return Common.E_ITEMNAME_LIST
 
 
+def enum_factor_list(panel_id):
+    if Common.E_FACTOR_LIST is None:
+        Common.E_FACTOR_LIST = Tabel.get_enum(panel_id, Common.E_FACTOR)
+    return Common.E_FACTOR_LIST
+
+
 def enum_channel_list(panel_id):
     if Common.E_CHANNELID_LIST is None:
         Common.E_CHANNELID_LIST = Tabel.get_enum(panel_id, Common.E_CHANNELID)
@@ -103,6 +109,7 @@ def mail(request, panel_id, url=Common.URL):
     d['servers'] = panel.server_set.filter(server_type='dir')
     d['equips'] = enum_equip_list(panel_id)
     d['items'] = enum_item_list(panel_id)
+    d['factors'] = enum_factor_list(panel_id)
     d['responsemails'] = Common.get_panel_response_mail(panel)
     d['url'] = url
     if request.method == 'POST':
@@ -144,6 +151,7 @@ def all_mail(request, panel_id, url=Common.URL):
     d['servers'] = panel.server_set.filter(server_type='dir')
     d['equips'] = enum_equip_list(panel_id)
     d['items'] = enum_item_list(panel_id)
+    d['factors'] = enum_factor_list(panel_id)
     d['responseallmails'] = Common.get_panel_response_all_mail(panel)
     if request.method == 'POST':
         server_id = int(request.POST['server'])

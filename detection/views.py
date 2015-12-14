@@ -12,6 +12,7 @@ import time
 
 
 def view_init():
+    Common.E_FACTOR_LIST = None
     Common.E_BUILDINGID_LIST = None
     Common.E_CHANNELID_LIST = None
     Common.E_CHGREASON_LIST = None

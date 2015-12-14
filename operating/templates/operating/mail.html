@@ -16,6 +16,7 @@
 {% trans "Power" as t_power %}
 {% trans "Score Of Rank Battle" as t_score_of_rank_battle %}
 {% trans "Item" as t_item %}
+{% trans "Factor" as t_factor %}
 {% trans "Equip" as t_equip %}
 {% trans "Count" as t_count %}
 {% trans "Exp." as t_exp %}
@@ -151,6 +152,25 @@
               </div>
             </div>
             <ul class="list-group" id="items"></ul>
+            <label for="uid">{{t_factor}}</label>
+            <div class="form-group">
+              <div class="col-md-7">
+                <select class="form-control" id="factors-select">
+                  <option value="-1" selected="selected">{{t_none}}</option>
+                  {% for factor in factors %}
+                  <option value="{{factor.EnumCd}}">{{factor.EnumCd}}&emsp;|&emsp;{{factor.EnumDes}}</option>
+                  {% endfor %}
+                </select>
+              </div>
+              <div class="input-group col-md-5">
+                <span class="input-group-addon" id="factor-count-addon">{{t_count}}</span>
+                <input type="text" class="form-control" placeholder="0" aria-describedby="factor-count-addon" id="factor-count">
+                <div class="input-group-btn">
+                  <button type="button" class="btn btn-info" onclick="management.addObject('#factors', '#factors-select', '#factor-count', '19')">{{t_add}}</button>
+                </div>
+              </div>
+            </div>
+            <ul class="list-group" id="factors"></ul>
           </div>
           <div class="col-md-8">
             <label for="uid">{{t_equip}}</label>

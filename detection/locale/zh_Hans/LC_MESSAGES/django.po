@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2015-12-11 18:06+0800\n"
+"POT-Creation-Date: 2015-12-14 17:35+0800\n"
 "PO-Revision-Date: 2015-12-11 18:09+0800\n"
 "Last-Translator: Raynor <raynor41@gmail.com>\n"
 "Language-Team: \n"
@@ -18,163 +18,163 @@ msgstr ""
 "Plural-Forms: nplurals=1; plural=0;\n"
 "X-Generator: Poedit 1.7.6\n"
 
-#: models.py:80
+#: models.py:81
 msgid "count"
 msgstr "统计页面"
 
-#: models.py:81
+#: models.py:82
 msgid "count_with_pay_channel"
 msgstr "统计页面（支付渠道）"
 
-#: models.py:82
+#: models.py:83
 msgid "count_without_time"
 msgstr "统计页面（没有时间选择）"
 
-#: models.py:83
+#: models.py:84
 msgid "count_only_time"
 msgstr "统计页面（只有时间选择）"
 
-#: models.py:84
+#: models.py:85
 msgid "user_query"
 msgstr "用户查询页面"
 
-#: models.py:85
+#: models.py:86
 msgid "gang_query"
 msgstr "联盟查询页面"
 
-#: models.py:86
+#: models.py:87
 msgid "deal_query"
 msgstr "充值查询页面"
 
-#: models.py:87
+#: models.py:88
 msgid "history_query"
 msgstr "历程查询页面"
 
-#: models.py:88
+#: models.py:89
 msgid "ban_query"
 msgstr "封禁查询页面"
 
-#: models.py:89
+#: models.py:90
 msgid "everyday_history_query"
 msgstr "每日历程查询页面"
 
-#: models.py:90
+#: models.py:91
 msgid "everyday_deal_query"
 msgstr "每日充值查询页面"
 
-#: models.py:91
+#: models.py:92
 msgid "chat_query"
 msgstr "聊天查询页面"
 
-#: models.py:92
+#: models.py:93
 msgid "online"
 msgstr "查看在线页面"
 
-#: models.py:93
+#: models.py:94
 msgid "notify"
 msgstr "系统公告页面"
 
-#: models.py:94
+#: models.py:95
 msgid "mail"
 msgstr "系统邮件页面"
 
-#: models.py:95
+#: models.py:96
 msgid "all_mail"
 msgstr "全区邮件页面"
 
-#: models.py:96
+#: models.py:97
 msgid "single"
 msgstr "单一用户"
 
-#: models.py:97
+#: models.py:98
 msgid "rank"
 msgstr "排行榜页面"
 
-#: models.py:98
+#: models.py:99
 msgid "contact"
 msgstr "玩家联系客服页面"
 
-#: models.py:99
+#: models.py:100
 msgid "patch"
 msgstr "补丁页面"
 
-#: models.py:100
+#: models.py:101
 msgid "config"
 msgstr "配置页面"
 
-#: models.py:101
+#: models.py:102
 msgid "control"
 msgstr "控制页面"
 
-#: models.py:111
+#: models.py:112
 msgid "Category is required when Main menu is selected"
 msgstr "Main menu选择时，Category必须选择"
 
-#: models.py:145
+#: models.py:147
 msgid "date"
 msgstr "日期"
 
-#: models.py:146
+#: models.py:148
 msgid "time"
 msgstr "时间"
 
-#: models.py:147
+#: models.py:149
 msgid "timestamp to date"
 msgstr "时间戳转换日期"
 
-#: models.py:148
+#: models.py:150
 msgid "timestamp to time"
 msgstr "时间戳转换时间"
 
-#: models.py:149
+#: models.py:151
 msgid "float two"
 msgstr "保留两位小数"
 
-#: models.py:150
+#: models.py:152
 msgid "ratio two"
 msgstr "保留两位小数的百分比"
 
-#: models.py:151
+#: models.py:153
 msgid "channel list"
 msgstr "渠道列表"
 
-#: models.py:152
+#: models.py:154
 msgid "zone list"
 msgstr "区服列表"
 
-#: models.py:153
+#: models.py:155
 msgid "anything to string"
 msgstr "强行转换字符串"
 
-#: models.py:154
+#: models.py:156
 msgid "contact to reply"
 msgstr "玩家联系客服回复连接"
 
-#: models.py:155
+#: models.py:157
 msgid "ip to server"
 msgstr "IP地址转换DIR大区"
 
-#: models.py:156
+#: models.py:158
 msgid "pay channel list"
 msgstr "支付渠道列表"
 
-#: models.py:157
+#: models.py:159
 msgid "chat type list"
 msgstr "聊天类型列表"
 
-#: models.py:158
+#: models.py:160
 msgid "user status list"
 msgstr "用户状态列表"
 
-#: models.py:159
+#: models.py:161
 msgid "kick ban user"
 msgstr "禁封用户"
 
-#: models.py:160
+#: models.py:162
 msgid "type of ban"
 msgstr "封禁类型"
 
-#: models.py:161
+#: models.py:163
 msgid "time of ban"
 msgstr "封禁时间"
 
