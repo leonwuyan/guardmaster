@@ -22,4 +22,8 @@ urlpatterns = [
         r'^(?P<panel_id>[0-9]+)/(?P<hostname_id>[0-9]+)/(?P<platform>[a-z]+)/(?P<channel>[0-9]+)/(?P<version>[a-zA-Z]+).json$',
         views.version,
         name='version'),
+    url(
+        r'^(?P<panel_id>[0-9]+)/pre_update/(?P<url>[_A-Za-z]+)/$',
+        views.pre_update,
+        name='pre_update'),
 ]

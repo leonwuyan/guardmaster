@@ -606,6 +606,23 @@
     }
   };
   var _deployment = {
+    'del_pre_update': function() {
+      s = gettext('Please Confirm CleanUp All The Pre-Update?');
+      if (!confirm(s)) {
+        return false;
+      }
+    },
+    'pre_update': function() {
+      fmts = gettext('Please Confirm This:\nIP :%(i)s\nChannel :%(c)s');
+      t = {
+        'i':$('#ip').val(),
+        'c':$('#channel').val()
+      }
+      s = interpolate(fmts, t, true);
+      if (!confirm(s)) {
+        return false;
+      }
+    },
     'last_version': function(hostname, platform, channel, inherit, i) {
       url = window.location.pathname
       url_arr = url.split("/", 3).concat([hostname, platform, channel])

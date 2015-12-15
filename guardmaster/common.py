@@ -11,6 +11,7 @@ import tempfile
 
 URL = 'contact'
 ENUM = 'enum'
+IP_CHANNEL = 'ip_channel'
 CONTACT_REPLY = 'contact_reply'
 MAX_CLIENT_ID = 'max_client_id'
 CLIENT_ID = 'client_id'

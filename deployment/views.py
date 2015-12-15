@@ -7,7 +7,7 @@ from django.http import HttpResponse, HttpResponseRedirect
 from django.core.urlresolvers import reverse
 from django.views.generic import View
 from deployment.tasks import upload_version, inherit_version, get_client_id, make_cfg
-from deployment.models import HostName, TplTemplate, TplItem
+from deployment.models import HostName, TplTemplate, TplItem, Ip, Channel
 from deployment.version import Version
 from deployment.control import server_control
 import json
@@ -200,4 +200,25 @@ def control(request, panel_id, url):
         server_control(fn, package)
         return HttpResponseRedirect(
             reverse('deployment:control', args=(panel_id, url)))
+    return render(request, t, d)
+
+
+@Common.competence_required
+def pre_update(request, panel_id, url):
+    t = "deployment/preupdate.html"
+    d = view_template_base(request, panel_id, url)
+    panel = get_object_or_404(Panel, pk=panel_id)
+    sub_menu = Common.get_user_sub_menu(request.user, url)
+    if request.method == 'POST':
+        if request.POST.get('submit') == 'del':
+            Tabel.delete(sub_menu, panel)
+        if request.POST.get('submit') == 'add':
+            vals = [request.POST.get('ip'), request.POST.get('channel')]
+            Tabel.pre_update_insert(panel, vals)
+    ip_channel = Tabel.select(sub_menu, panel)
+    ips = Ip.objects.filter(panel=panel)
+    channels = Channel.objects.filter(panel=panel)
+    d['ip_channels'] = ip_channel
+    d['channels'] = channels
+    d['ips'] = ips
     return render(request, t, d)

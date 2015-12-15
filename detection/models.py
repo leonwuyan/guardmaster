@@ -662,3 +662,14 @@ class Tabel(object):
             condition += " ORDER BY client_id"
         ret = self.select(sub_menu, panel, condition)
         return ret
+
+    @classmethod
+    def pre_update_insert(self, panel, vals):
+        vals = "', '".join(vals)
+        vals = "('" + vals + "')"
+        condition = {
+            'table_name': 'tb_ip_channel',
+            'cols': "(`ip`, `channel`)",
+            'vals': vals,
+        }
+        ret = self.insert(panel, condition)

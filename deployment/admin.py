@@ -1,5 +1,5 @@
 from django.contrib import admin
-from deployment.models import HostName, Platform, Channel, UpLoadWorkOrder, UpLoadWorkOrderLock, TplItem, TplTemplate, CIWP, ServerControlWorkOrder, ServerControlWorkOrderLock
+from deployment.models import *
 
 
 class HostNameAdmin(admin.ModelAdmin):
@@ -13,6 +13,11 @@ class PlatformAdmin(admin.ModelAdmin):
 
 
 class ChannelAdmin(admin.ModelAdmin):
+    list_display = ('label', 'panel')
+    list_filter = ['panel']
+
+
+class IpAdmin(admin.ModelAdmin):
     list_display = ('label', 'panel')
     list_filter = ['panel']
 
@@ -101,6 +106,7 @@ class ServerControlWorkOrderLockAdmin(admin.ModelAdmin):
 admin.site.register(HostName, HostNameAdmin)
 admin.site.register(Platform, PlatformAdmin)
 admin.site.register(Channel, ChannelAdmin)
+admin.site.register(Ip, IpAdmin)
 admin.site.register(CIWP, CIWPAdmin)
 admin.site.register(UpLoadWorkOrder, UpLoadworkOrderAdmin)
 admin.site.register(UpLoadWorkOrderLock, UpLoadworkOrderLockAdmin)
