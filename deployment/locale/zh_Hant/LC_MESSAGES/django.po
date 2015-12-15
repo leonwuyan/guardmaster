@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2015-10-16 17:03+0800\n"
-"PO-Revision-Date: 2015-11-11 21:37+0800\n"
+"POT-Creation-Date: 2015-12-15 11:25+0800\n"
+"PO-Revision-Date: 2015-12-15 11:27+0800\n"
 "Last-Translator: Raynor <raynor41@gmail.com>\n"
 "Language-Team: \n"
 "Language: zh_TW\n"
@@ -19,6 +19,7 @@ msgstr ""
 "X-Generator: Poedit 1.7.6\n"
 
 #: templates/deployment/config.html:4 templates/deployment/control.html:14
+#: templates/deployment/preupdate.html:4
 msgid "Deploy"
 msgstr "部署"
 
@@ -125,6 +126,34 @@ msgstr "下面的版本信息繼承于上面的版本信息"
 #: templates/deployment/patch.html:17
 msgid "Lastest 20 Upload Work Order By Every Server"
 msgstr "每個服務器顯示最後20條上傳工單"
+
+#: templates/deployment/preupdate.html:5
+msgid "CleanUp Pre-Update"
+msgstr "清空預更新"
+
+#: templates/deployment/preupdate.html:6
+msgid "List Of IPs"
+msgstr "IP地址列表"
+
+#: templates/deployment/preupdate.html:7
+msgid "List Of Channels"
+msgstr "渠道列表"
+
+#: templates/deployment/preupdate.html:8
+msgid "Current Pre-Update Status"
+msgstr "當前預更新狀態"
+
+#: templates/deployment/preupdate.html:9
+msgid "IP"
+msgstr "IP地址"
+
+#: templates/deployment/preupdate.html:10
+msgid "Channel"
+msgstr "渠道"
+
+#: templates/deployment/preupdate.html:11
+msgid "No Pre-Update"
+msgstr "沒有預更新"
 
 #~ msgid "Dir Server"
 #~ msgstr "Dir 伺服器"
@@ -488,9 +517,6 @@ msgstr "每個服務器顯示最後20條上傳工單"
 
 #~ msgid "Picture Height"
 #~ msgstr "圖片高度"
-
-#~ msgid "Channel"
-#~ msgstr "渠道"
 
 #~ msgid "Zone"
 #~ msgstr "區服"

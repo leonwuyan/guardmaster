@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2015-10-16 17:03+0800\n"
+"POT-Creation-Date: 2015-12-15 11:25+0800\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -18,6 +18,7 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 
 #: templates/deployment/config.html:4 templates/deployment/control.html:14
+#: templates/deployment/preupdate.html:4
 msgid "Deploy"
 msgstr ""
 
@@ -123,4 +124,32 @@ msgstr ""
 
 #: templates/deployment/patch.html:17
 msgid "Lastest 20 Upload Work Order By Every Server"
+msgstr ""
+
+#: templates/deployment/preupdate.html:5
+msgid "CleanUp Pre-Update"
+msgstr ""
+
+#: templates/deployment/preupdate.html:6
+msgid "List Of IPs"
+msgstr ""
+
+#: templates/deployment/preupdate.html:7
+msgid "List Of Channels"
+msgstr ""
+
+#: templates/deployment/preupdate.html:8
+msgid "Current Pre-Update Status"
+msgstr ""
+
+#: templates/deployment/preupdate.html:9
+msgid "IP"
+msgstr ""
+
+#: templates/deployment/preupdate.html:10
+msgid "Channel"
+msgstr ""
+
+#: templates/deployment/preupdate.html:11
+msgid "No Pre-Update"
 msgstr ""

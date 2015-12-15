@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2015-12-14 17:48+0800\n"
+"POT-Creation-Date: 2015-12-15 11:24+0800\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -105,75 +105,79 @@ msgstr ""
 msgid "control"
 msgstr ""
 
-#: models.py:112
+#: models.py:103
+msgid "pre_update"
+msgstr ""
+
+#: models.py:113
 msgid "Category is required when Main menu is selected"
 msgstr ""
 
-#: models.py:147
+#: models.py:148
 msgid "date"
 msgstr ""
 
-#: models.py:148
+#: models.py:149
 msgid "time"
 msgstr ""
 
-#: models.py:149
+#: models.py:150
 msgid "timestamp to date"
 msgstr ""
 
-#: models.py:150
+#: models.py:151
 msgid "timestamp to time"
 msgstr ""
 
-#: models.py:151
+#: models.py:152
 msgid "float two"
 msgstr ""
 
-#: models.py:152
+#: models.py:153
 msgid "ratio two"
 msgstr ""
 
-#: models.py:153
+#: models.py:154
 msgid "channel list"
 msgstr ""
 
-#: models.py:154
+#: models.py:155
 msgid "zone list"
 msgstr ""
 
-#: models.py:155
+#: models.py:156
 msgid "anything to string"
 msgstr ""
 
-#: models.py:156
+#: models.py:157
 msgid "contact to reply"
 msgstr ""
 
-#: models.py:157
+#: models.py:158
 msgid "ip to server"
 msgstr ""
 
-#: models.py:158
+#: models.py:159
 msgid "pay channel list"
 msgstr ""
 
-#: models.py:159
+#: models.py:160
 msgid "chat type list"
 msgstr ""
 
-#: models.py:160
+#: models.py:161
 msgid "user status list"
 msgstr ""
 
-#: models.py:161
+#: models.py:162
 msgid "kick ban user"
 msgstr ""
 
-#: models.py:162
+#: models.py:163
 msgid "type of ban"
 msgstr ""
 
-#: models.py:163
+#: models.py:164
 msgid "time of ban"
 msgstr ""
 
