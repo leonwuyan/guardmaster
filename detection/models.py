@@ -100,6 +100,7 @@ class UISubMenu(models.Model):
         ('deployment:patch', _('patch')),
         ('deployment:config', _('config')),
         ('deployment:control', _('control')),
+        ('deployment:pre_update', _('pre_update')),
     }
     label = models.CharField(max_length=45)
     main_menu = models.ForeignKey(UIMainMenu, blank=True, null=True)
@@ -218,6 +219,21 @@ class Tabel(object):
         return cursor.fetchall()
 
     @classmethod
+    def delete_unsafe(self, sub_menu, panel, condition=None):
+        cursor = connections[panel.db_aliases].cursor()
+        if condition:
+            s = sub_menu.get_select_map()
+            s['condition'] = condition
+            sql = "DELETE FROM %(table_name)s WHERE %(condition)s" % s
+        else:
+            s = sub_menu.get_select_map()
+            sql = "DELETE FROM %(table_name)s" % s
+        logger = logging.getLogger(__name__)
+        logger.info(sql)
+        cursor.execute(sql)
+        return cursor.lastrowid
+
+    @classmethod
     def select(self, sub_menu, panel, condition=None):
         try:
             ret = self.select_unsafe(sub_menu, panel, condition)
@@ -247,6 +263,16 @@ class Tabel(object):
             return []
         try:
             ret = self.update_unsafe(panel, condition)
+        except Exception as e:
+            ret = []
+            logger = logging.getLogger(__name__)
+            logger.error(e)
+        return ret
+
+    @classmethod
+    def delete(self, sub_menu, panel, condition=None):
+        try:
+            ret = self.delete_unsafe(sub_menu, panel, condition)
         except Exception as e:
             ret = []
             logger = logging.getLogger(__name__)
