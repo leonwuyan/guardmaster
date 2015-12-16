@@ -190,6 +190,9 @@ class ServerControl(object):
         if post.get('winpoint', None) and len(acc) < 6:
             winpoint = int(post.get('winpoint'))
             acc.append({'res_type': 14, 'res_id': 0, 'res_count': winpoint})
+        if post.get('recharge', None) and len(acc) < 6:
+            recharge = int(post.get('recharge'))
+            acc.append({'res_type': 18, 'res_id': 0, 'res_count': recharge})
         if len(post.getlist('acc', [])) > 0:
             for k in post.getlist('acc'):
                 if len(acc) < 6:

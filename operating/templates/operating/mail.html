@@ -11,6 +11,7 @@
 {% trans "Crystal" as t_crystal %}
 {% trans "Gold" as t_gold %}
 {% trans "Money" as t_money %}
+{% trans "Total Recharge (VIP Level)" as t_total_recharge_vip_level %}
 {% trans "WinPoint" as t_winpoint %}
 {% trans "Skill Point" as t_skill_point %}
 {% trans "Power" as t_power %}
@@ -82,22 +83,28 @@
       <div class="form-group" style="margin-bottom:5px">
         <label for="uid">{{t_accessory}}</label>&emsp;<span class="label label-danger">{{ t_limited_6_kind_of_accessory }}&emsp;|&emsp;{{ t_accessory_include_item_and_equip }}</span>
         <div class="row">
-          <div class="col-md-4">
+          <div class="col-md-3">
             <div class="input-group">
               <span class="input-group-addon" id="crystal-addon">{{t_crystal}}</span>
               <input type="text" class="form-control" placeholder="0" aria-describedby="crystal-addon" name="crystal">
             </div>
           </div>
-          <div class="col-md-4">
+          <div class="col-md-3">
             <div class="input-group">
               <span class="input-group-addon" id="gold-addon">{{t_gold}}</span>
               <input type="text" class="form-control" placeholder="0" aria-describedby="gold-addon" name="gold">
             </div>
           </div>
-          <div class="col-md-4">
+          <div class="col-md-3">
             <div class="input-group">
               <span class="input-group-addon" id="money-addon">{{t_money}}</span>
               <input type="text" class="form-control" placeholder="0" aria-describedby="money-addon" name="money">
+            </div>
+          </div>
+          <div class="col-md-3">
+            <div class="input-group">
+              <span class="input-group-addon" id="recharge-addon">{{t_total_recharge_vip_level}}</span>
+              <input type="text" class="form-control" placeholder="0" aria-describedby="recharge-addon" name="recharge">
             </div>
           </div>
         </div>
@@ -261,6 +268,7 @@
   management.numberOnly("input[name='money']");
   management.numberOnly("input[name='gold']");
   management.numberOnly("input[name='crystal']");
+  management.numberOnly("input[name='recharge']");
  });
 </script>
 {% endblock %}

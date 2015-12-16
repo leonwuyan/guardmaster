@@ -233,27 +233,27 @@ def format_accessory(x, panel_id):
     for item in d:
         s = ''
         if item['res_type'] == 1:
-            s = _('t_crystal').encode('utf-8')
+            s = _('Crystal').encode('utf-8')
         if item['res_type'] == 2:
-            s = _('t_gold').encode('utf-8')
+            s = _('Gold').encode('utf-8')
         if item['res_type'] == 3:
-            s = _('t_money').encode('utf-8')
+            s = _('Money').encode('utf-8')
         if item['res_type'] == 4:
-            s = _('t_skill_point').encode('utf-8')
+            s = _('Gold').encode('utf-8')
         if item['res_type'] == 5:
-            s = _('t_item').encode('utf-8')
+            s = _('Item').encode('utf-8')
             s += '[ {0} | {1} ]'.format(
                 item['res_id'],
                 enum_item(item['res_id'], panel_id).encode('utf-8'))
         if item['res_type'] == 19:
-            s = _('t_factor').encode('utf-8')
+            s = _('Factor').encode('utf-8')
             s += '[ {0} | {1} ]'.format(
                 item['res_id'],
                 enum_factor(item['res_id'], panel_id).encode('utf-8'))
         if item['res_type'] == 6:
-            s = _('t_power').encode('utf-8')
+            s = _('Power').encode('utf-8')
         if item['res_type'] == 10:
-            s = _('t_equip').encode('utf-8')
+            s = _('Equip').encode('utf-8')
             s += '[ {0} | {1} | {2} | {3} | {4} ]'.format(
                 item['res_id'],
                 enum_equip(item['res_id'], panel_id).encode('utf-8'),
@@ -261,9 +261,11 @@ def format_accessory(x, panel_id):
                 item.get('res_extern_param_2'),
                 item.get('res_extern_param_3'))
         if item['res_type'] == 11:
-            s = _('t_score_of_rank_battle').encode('utf-8')
+            s = _('Score Of Rank Battle').encode('utf-8')
         if item['res_type'] == 13:
-            s = _('t_winpoint').encode('utf-8')
+            s = _('WinPoint').encode('utf-8')
+        if item['res_type'] == 18:
+            s = _('Total Recharge (VIP Level)').encode('utf-8')
         tmp += '{0} :{1}<br/>'.format(s, item['res_count'])
     return tmp
 
