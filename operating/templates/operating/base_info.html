@@ -79,9 +79,11 @@
         <td width="200px">
         {% ifequal url 'single_query'  %}
           <input type="text" style="width: 80px;" value="0" name="add2">
-          <!--
+          <button type="submit" class="btn btn-default btn-xs" onclick="dataAccess.reduceJSON({{server_id}},{{player.uid|default:0}},'add',2)">{{t_reduce}}</button>
+        {% endifequal %}
+        {% ifequal url 'single_query_inner'  %}
+          <input type="text" style="width: 80px;" value="0" name="add2">
           <button type="submit" class="btn btn-default btn-xs" onclick="dataAccess.addJSON({{server_id}},{{player.uid|default:0}},'add',2)">{{t_add}}</button>
-          -->
           <button type="submit" class="btn btn-default btn-xs" onclick="dataAccess.reduceJSON({{server_id}},{{player.uid|default:0}},'add',2)">{{t_reduce}}</button>
         {% endifequal %}
         </td>
@@ -94,9 +96,11 @@
         <td>
         {% ifequal url 'single_query'  %}
           <input type="text" style="width: 80px;" value="0" name="add1">
-          <!--
+          <button type="submit" class="btn btn-default btn-xs" onclick="dataAccess.reduceJSON({{server_id}},{{player.uid|default:0}},'add',1)">{{t_reduce}}</button>
+        {% endifequal %}
+        {% ifequal url 'single_query_inner'  %}
+          <input type="text" style="width: 80px;" value="0" name="add1">
           <button type="submit" class="btn btn-default btn-xs" onclick="dataAccess.addJSON({{server_id}},{{player.uid|default:0}},'add',1)">{{t_add}}</button>
-          -->
           <button type="submit" class="btn btn-default btn-xs" onclick="dataAccess.reduceJSON({{server_id}},{{player.uid|default:0}},'add',1)">{{t_reduce}}</button>
         {% endifequal %}
         </td>
@@ -109,9 +113,11 @@
         <td>
         {% ifequal url 'single_query'  %}
           <input type="text" style="width: 80px;" value="0" name="add6">
-          <!--
+          <button type="submit" class="btn btn-default btn-xs" onclick="dataAccess.reduceJSON({{server_id}},{{player.uid|default:0}},'add',6)">{{t_reduce}}</button>
+        {% endifequal %}
+        {% ifequal url 'single_query_inner'  %}
+          <input type="text" style="width: 80px;" value="0" name="add6">
           <button type="submit" class="btn btn-default btn-xs" onclick="dataAccess.addJSON({{server_id}},{{player.uid|default:0}},'add',6)">{{t_add}}</button>
-          -->
           <button type="submit" class="btn btn-default btn-xs" onclick="dataAccess.reduceJSON({{server_id}},{{player.uid|default:0}},'add',6)">{{t_reduce}}</button>
         {% endifequal %}
         </td>
@@ -124,9 +130,11 @@
         <td>
         {% ifequal url 'single_query'  %}
           <input type="text" style="width: 80px;" value="0" name="add4">
-          <!--
+          <button type="submit" class="btn btn-default btn-xs" onclick="dataAccess.reduceJSON({{server_id}},{{player.uid|default:0}},'add',4)">{{t_reduce}}</button>
+        {% endifequal %}
+        {% ifequal url 'single_query_inner'  %}
+          <input type="text" style="width: 80px;" value="0" name="add4">
           <button type="submit" class="btn btn-default btn-xs" onclick="dataAccess.addJSON({{server_id}},{{player.uid|default:0}},'add',4)">{{t_add}}</button>
-          -->
           <button type="submit" class="btn btn-default btn-xs" onclick="dataAccess.reduceJSON({{server_id}},{{player.uid|default:0}},'add',4)">{{t_reduce}}</button>
         {% endifequal %}
         </td>
@@ -139,9 +147,11 @@
         <td>
         {% ifequal url 'single_query'  %}
           <input type="text" style="width: 80px;" value="0" name="add3">
-          <!--
+          <button type="submit" class="btn btn-default btn-xs" onclick="dataAccess.reduceJSON({{server_id}},{{player.uid|default:0}},'add',3)">{{t_reduce}}</button>
+        {% endifequal %}
+        {% ifequal url 'single_query_inner'  %}
+          <input type="text" style="width: 80px;" value="0" name="add3">
           <button type="submit" class="btn btn-default btn-xs" onclick="dataAccess.addJSON({{server_id}},{{player.uid|default:0}},'add',3)">{{t_add}}</button>
-          -->
           <button type="submit" class="btn btn-default btn-xs" onclick="dataAccess.reduceJSON({{server_id}},{{player.uid|default:0}},'add',3)">{{t_reduce}}</button>
         {% endifequal %}
         </td>
@@ -154,9 +164,11 @@
         <td>
         {% ifequal url 'single_query'  %}
           <input type="text" style="width: 80px;" value="0" name="add11">
-          <!--
+          <button type="submit" class="btn btn-default btn-xs" onclick="dataAccess.reduceJSON({{server_id}},{{player.uid|default:0}},'add',11)">{{t_reduce}}</button>
+        {% endifequal %}
+        {% ifequal url 'single_query_inner'  %}
+          <input type="text" style="width: 80px;" value="0" name="add11">
           <button type="submit" class="btn btn-default btn-xs" onclick="dataAccess.addJSON({{server_id}},{{player.uid|default:0}},'add',11)">{{t_add}}</button>
-          -->
           <button type="submit" class="btn btn-default btn-xs" onclick="dataAccess.reduceJSON({{server_id}},{{player.uid|default:0}},'add',11)">{{t_reduce}}</button>
         {% endifequal %}
         </td>
@@ -169,9 +181,11 @@
         <td>
         {% ifequal url 'single_query'  %}
           <input type="text" style="width: 80px;" value="0" name="add14">
-          <!--
+          <button type="submit" class="btn btn-default btn-xs" onclick="dataAccess.reduceJSON({{server_id}},{{player.uid|default:0}},'add',14)">{{t_reduce}}</button>
+        {% endifequal %}
+        {% ifequal url 'single_query_inner'  %}
+          <input type="text" style="width: 80px;" value="0" name="add14">
           <button type="submit" class="btn btn-default btn-xs" onclick="dataAccess.addJSON({{server_id}},{{player.uid|default:0}},'add',14)">{{t_add}}</button>
-          -->
           <button type="submit" class="btn btn-default btn-xs" onclick="dataAccess.reduceJSON({{server_id}},{{player.uid|default:0}},'add',14)">{{t_reduce}}</button>
         {% endifequal %}
         </td>
@@ -182,11 +196,9 @@
         <td><b>{{ t_total_recharge_vip_level }}</b></td>
         <td>{{ player.total_recharge }}</td>
         <td>
-        {% ifequal url 'single_query'  %}
-        <!--
+        {% ifequal url 'single_query_inner'  %}
           <input type="text" style="width: 80px;" value="0" name="recharge0">
           <button type="submit" class="btn btn-default btn-xs" onclick="dataAccess.addJSON({{server_id}},{{player.uid|default:0}},'recharge',0)">{{t_change}}</button>
-          -->
         {% endifequal %}
         </td>
         <td colspan="2"></td>
