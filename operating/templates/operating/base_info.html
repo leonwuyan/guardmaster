@@ -248,6 +248,17 @@
         </span></td>
       </tr>
       {% endifequal %}
+      {% ifequal url 'single_query_inner'  %}
+      <tr>
+        <td><b>{{ t_other_contorl }}</b></td>
+        <td colspan="4"><span class="pull-right">
+          <button type="submit" class="btn btn-default btn-xs" onclick="dataAccess.addJSON({{server_id}},{{player.uid|default:0}},'add',5)">{{t_add_100k_exp_items}}</button>
+          <button type="submit" class="btn btn-default btn-xs" onclick="dataAccess.addJSON({{server_id}},{{player.uid|default:0}},'dungeon',50)">{{t_unlock_50_dungeon}}</button>
+          <button type="submit" class="btn btn-default btn-xs" onclick="dataAccess.addJSON({{server_id}},{{player.uid|default:0}},'dungeon',100)">{{t_unlock_100_dungeon}}</button>
+          <button type="submit" class="btn btn-default btn-xs" onclick="dataAccess.addJSON({{server_id}},{{player.uid|default:0}},'dungeon',150)">{{t_unlock_150_dungeon}}</button>
+        </span></td>
+      </tr>
+      {% endifequal %}
     </tbody>
   </table>
   <!-- List -->
