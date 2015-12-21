@@ -46,6 +46,13 @@ def _sh(cmd):
 
 
 def sh_remote_log(panel, t_p, request_get):
+    if t_p == 'bind_account':
+        cmd = [
+            './check_account.sh',
+            '/tmp/{0}.log'.format(request_get.get('uid'))
+            request_get.get('uid')
+        ]
+        _sh(cmd)
     if 'start' not in request_get:
         return
     if 'end' not in request_get:
@@ -171,6 +178,9 @@ def json_template(request, panel_id, t_p, url=Common.URL):
         ret = Tabel.history_query_select(sub_menu, panel, request.GET)
     if t_p == 'ban_query':
         ret = Tabel.ban_query_select(sub_menu, panel, request.GET)
+    if t_p == 'bind_account':
+        sh_remote_log(panel, t_p, request.GET)
+        # ret = Tabel.ban_query_select(sub_menu, panel, request.GET)
     if t_p == 'contact':
         ret = Tabel.contact_select(sub_menu, panel, request.GET)
     if ret is None:

@@ -87,6 +87,7 @@ class UISubMenu(models.Model):
         ('detection:deal_query', _('deal_query')),
         ('detection:history_query', _('history_query')),
         ('detection:ban_query', _('ban_query')),
+        ('detection:bind_account', _('bind_account')),
         ('detection:everyday_history_query', _('everyday_history_query')),
         ('detection:everyday_deal_query', _('everyday_deal_query')),
         ('detection:chat_query', _('chat_query')),
