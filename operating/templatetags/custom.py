@@ -262,7 +262,7 @@ def format_accessory(x, panel_id):
                 item.get('res_extern_param_3'))
         if item['res_type'] == 11:
             s = _('Score Of Rank Battle').encode('utf-8')
-        if item['res_type'] == 13:
+        if item['res_type'] == 14:
             s = _('WinPoint').encode('utf-8')
         if item['res_type'] == 18:
             s = _('Total Recharge (VIP Level)').encode('utf-8')
