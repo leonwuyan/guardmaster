@@ -47,10 +47,11 @@ def _sh(cmd):
 
 def sh_remote_log(panel, t_p, request_get):
     if t_p == 'bind_account':
+        uid = request_get.get('uid', 'None')
         cmd = [
             './check_account.sh',
-            '/tmp/{0}.log'.format(request_get.get('uid'))
-            request_get.get('uid')
+            '/tmp/{0}.log'.format(uid),
+            uid
         ]
         _sh(cmd)
     if 'start' not in request_get:
@@ -181,6 +182,7 @@ def json_template(request, panel_id, t_p, url=Common.URL):
     if t_p == 'bind_account':
         sh_remote_log(panel, t_p, request.GET)
         # ret = Tabel.ban_query_select(sub_menu, panel, request.GET)
+        ret = []
     if t_p == 'contact':
         ret = Tabel.contact_select(sub_menu, panel, request.GET)
     if ret is None:
@@ -299,6 +301,13 @@ def online(request, panel_id, url=Common.URL):
 
 @Common.competence_required
 def ban_query(request, panel_id, url=Common.URL):
+    t = "detection/ban_query.html"
+    d = view_template(request, panel_id, url)
+    return render(request, t, d)
+
+
+@Common.competence_required
+def bind_account(request, panel_id, url=Common.URL):
     t = "detection/ban_query.html"
     d = view_template(request, panel_id, url)
     return render(request, t, d)

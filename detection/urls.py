@@ -27,6 +27,10 @@ urlpatterns = [
         views.ban_query,
         name='ban_query'),
     url(
+        r'^(?P<panel_id>[0-9]+)/bind_account/(?P<url>[_A-Za-z]+)$',
+        views.bind_account,
+        name='bind_account'),
+    url(
         r'^(?P<panel_id>[0-9]+)/everyday_history_query/(?P<url>[_A-Za-z]+)$',
         views.everyday_history_query,
         name='everyday_history_query'),
