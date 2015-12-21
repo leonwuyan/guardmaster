@@ -424,8 +424,8 @@ class Tabel(object):
         if 'uid' in request_get:
             r = "UID = " + request_get.get('uid')
             condition = condition + (r,)
-            r = "(actType = 'account_ban' OR actType = 'chat_ban' OR actType = 'kick_ban')"
-            condition = condition + (r,)
+        r = "(actType = 'account_ban' OR actType = 'chat_ban' OR actType = 'kick_ban')"
+        condition = condition + (r,)
         if len(condition) > 0:
             condition = " AND ".join(condition)
             condition += " ORDER BY actDt DESC"
