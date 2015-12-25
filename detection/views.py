@@ -50,7 +50,7 @@ def bind_account_sg(panel, t_p, request_get):
     if t_p == 'bind_account':
         uin = request_get.get('uin', 'None')
         update_uin = request_get.get('update_uin', 'None')
-        sw = request_get.get('sw', 1)
+        sw = int(request_get.get('sw', 1))
         if sw == 1:
             cmd = [
                 './check_account.sh',
