@@ -42,18 +42,36 @@ def _sh(cmd):
     spend_time = str(time.time() - spend_time)
     logger = logging.getLogger(__name__)
     logger.info(path + '|' + cmd + '|' + str(retcode) + '|' + spend_time)
+    print output
     return output
 
 
-def sh_remote_log(panel, t_p, request_get):
+def bind_account_sg(panel, t_p, request_get):
     if t_p == 'bind_account':
-        uid = request_get.get('uid', 'None')
-        cmd = [
-            './check_account.sh',
-            '/tmp/{0}.log'.format(uid),
-            uid
-        ]
-        _sh(cmd)
+        uin = request_get.get('uin', 'None')
+        update_uin = request_get.get('update_uin', 'None')
+        sw = request_get.get('sw', 1)
+        if sw == 1:
+            cmd = [
+                './check_account.sh',
+                '/tmp/{0}.log'.format(uin),
+                uin
+            ]
+            _sh(cmd)
+        if sw == 2:
+            cmd = [
+                './fix_account.sh',
+                '/tmp/{0}.log'.format(uin),
+                uin,
+                update_uin
+            ]
+            _sh(cmd)
+        cmd = ['cat', '/tmp/{0}.log'.format(uin)]
+        output = _sh(cmd)
+        return output[0].replace("\n", "<br/>")
+
+
+def sh_remote_log(panel, t_p, request_get):
     if 'start' not in request_get:
         return
     if 'end' not in request_get:
@@ -180,9 +198,7 @@ def json_template(request, panel_id, t_p, url=Common.URL):
     if t_p == 'ban_query':
         ret = Tabel.ban_query_select(sub_menu, panel, request.GET)
     if t_p == 'bind_account':
-        sh_remote_log(panel, t_p, request.GET)
-        # ret = Tabel.ban_query_select(sub_menu, panel, request.GET)
-        ret = []
+        ret = bind_account_sg(panel, t_p, request.GET)
     if t_p == 'contact':
         ret = Tabel.contact_select(sub_menu, panel, request.GET)
     if ret is None:
@@ -308,6 +324,6 @@ def ban_query(request, panel_id, url=Common.URL):
 
 @Common.competence_required
 def bind_account(request, panel_id, url=Common.URL):
-    t = "detection/ban_query.html"
+    t = "detection/bind_account.html"
     d = view_template(request, panel_id, url)
     return render(request, t, d)

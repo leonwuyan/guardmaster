@@ -1,10 +1,7 @@
 {% extends "detection/base.html" %}
+{% load custom i18n %}
 {% block content %}
-<script type="text/javascript">
- $(document).ready(function() {
-  //management.numberOnly("input[name='uid']");
- });
-</script>
+{% trans "Change" as t_change %}
 <div class="container-fluid white-bg">
   <div class="row">
     <ol class="breadcrumb">
@@ -13,24 +10,22 @@
     </ol>
     <form role="form" id="queryForm">
       <div class="form-group" style="margin-bottom:5px">
-        <label for="uid">{{t_player_id}}</label>
-        <input type="text" class="form-control" id="uid" name="uid">
+        <label for="uin">{{t_user_id}}</label>
+        <input type="text" class="form-control" id="uin" name="uin">
       </div>
-      <button type="submit" class="btn btn-default btn-sm" onclick="return dataAccess.history_queryJSON()">{{t_query}}</button>
+      <div class="form-group">
+        <label for="update-uin">UPDATE {{t_user_id}}</label>
+        <input type="text" class="form-control" id="update-uin" name="update-uin">
+      </div>
+      <button type="submit" class="btn btn-default btn-sm" onclick="return dataAccess.bind_accountJSON(1)">{{t_query}}</button>
+      <button type="submit" class="btn btn-primary btn-sm" onclick="return dataAccess.bind_accountJSON(2)">{{t_change}}</button>
     </form>
 
     <p class="sub-header"></p>
-    <div class="table-responsive">
-      <table class="table table-bordered table-striped" id="sources">
-        <thead>
-          <tr>
-            {% for table in table_head %}
-            <th>{{table.label}}</th>
-            {% endfor %}
-          </tr>
-        </thead>
-      </table>
-    </div>
+    <div class="col-md-12">
+      <div class="jumbotron">
+        <p>此处显示运行后结果</p>
+      </div>
   </div>
   <center style='color: #999; padding-top: 20px; font-family: "arial","NSimSun","SimSun","STSong","AR PL SungtiL GB","TW\-Sung","WenQuanYi Bitmap Song"; font-size: 14px; font-weight: bold;'>{{excuse}}</center>
 </div>

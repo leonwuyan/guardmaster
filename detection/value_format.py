@@ -129,6 +129,8 @@ class ValueFormat(object):
         return ret
 
     def execute(self, vals):
+        if vals.__class__.__name__ == 'str':
+            return vals
         return map(lambda x: self._fs_vs(self.format_list, x), vals)
 
     def set_server_id(self, server_id):

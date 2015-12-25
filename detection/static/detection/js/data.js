@@ -286,8 +286,6 @@
       });
       return false;
     },
-
-
     'addJSON': function(server_id, uid, type, type_id) {
       if (uid == 0 || server_id == 0) {
         return false
@@ -431,6 +429,45 @@
               //location.reload();
               break;
           }
+        }
+      });
+      return false;
+    },
+    'bind_accountJSON': function(sw) {
+      if ($('#uin').val().length < 1) {
+        return false
+      }
+      if (sw == 2 && $('#update-uin').val().length < 1) {
+        return false
+      }
+      _url = _askData + '.json'
+      d = {
+        'sw': sw,
+        'uin': $('#uin').val(),
+        'update_uin': $('#update-uin').val()
+      }
+      $.ajax({
+        url: _url,
+        type: 'GET',
+        data: d,
+        beforeSend: function(xhr, settings) {
+          if (!_csrfSafeMethod(settings.type) && !this.crossDomain) {
+            xhr.setRequestHeader("X-CSRFToken", _getCookie('csrftoken'));
+          }
+        },
+        success: function(msg){
+          $('.jumbotron').html(msg.data)
+        },
+        error: function(e){
+          switch (e.status) {
+            case 401:
+              //location.reload();
+              break;
+            default:
+              //location.reload();
+              break;
+          }
+          alert('Page Error Code : ' + e.status);
         }
       });
       return false;
