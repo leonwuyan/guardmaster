@@ -3,6 +3,7 @@
 
 import sys
 _b=sys.version_info[0]<3 and (lambda x:x) or (lambda x:x.encode('latin1'))
+from google.protobuf.internal import enum_type_wrapper
 from google.protobuf import descriptor as _descriptor
 from google.protobuf import message as _message
 from google.protobuf import reflection as _reflection
@@ -18,10 +19,190 @@ _sym_db = _symbol_database.Default()
 DESCRIPTOR = _descriptor.FileDescriptor(
   name='mail.proto',
   package='',
-  serialized_pb=_b('\n\nmail.proto\"K\n\x14\x43SDT_MAIL_SYSTEM_ACC\x12\x10\n\x08res_type\x18\x01 \x01(\r\x12\x0e\n\x06res_id\x18\x02 \x01(\r\x12\x11\n\tres_count\x18\x03 \x01(\r\"D\n\x19\x43SDT_MAIL_SYSTEM_ACC_INFO\x12\'\n\x08\x61\x63\x63_info\x18\x01 \x03(\x0b\x32\x15.CSDT_MAIL_SYSTEM_ACC\"\x8c\x01\n\x1a\x43SDT_MAIL_REVENGE_ACC_INFO\x12\x15\n\ratk_role_name\x18\x01 \x01(\t\x12\x13\n\x0b\x61tk_role_id\x18\x02 \x01(\r\x12\x15\n\rlose_res_type\x18\x03 \x01(\r\x12\x13\n\x0blose_res_id\x18\x04 \x01(\r\x12\x16\n\x0elose_res_count\x18\x05 \x01(\x05\"R\n\x12\x43SDT_MAIL_ACC_INFO\x12\x0c\n\x04type\x18\x01 \x01(\r\x12.\n\rmail_acc_info\x18\x02 \x01(\x0b\x32\x17.CS_UINON_MAIL_ACC_INFO\"\xe0\x01\n\x0e\x43SDT_MAIL_INFO\x12\x0f\n\x07mail_id\x18\x01 \x01(\x04\x12\x11\n\tmail_type\x18\x02 \x01(\r\x12\x13\n\x0bmail_status\x18\x03 \x01(\r\x12\x12\n\nmail_title\x18\x04 \x01(\t\x12\x14\n\x0cmail_content\x18\x05 \x01(\t\x12\x16\n\x0email_send_time\x18\x06 \x01(\r\x12\x15\n\rmail_end_time\x18\x07 \x01(\r\x12\x15\n\rmail_acc_type\x18\x08 \x01(\r\x12%\n\x08mail_acc\x18\t \x01(\x0b\x32\x13.CSDT_MAIL_ACC_INFO\"\xa9\x01\n\x14\x43SDT_BRIEF_MAIL_INFO\x12\x0f\n\x07mail_id\x18\x01 \x01(\x04\x12\x11\n\tmail_type\x18\x02 \x01(\r\x12\x13\n\x0bmail_status\x18\x03 \x01(\r\x12\x12\n\nmail_title\x18\x04 \x01(\t\x12\x16\n\x0email_send_time\x18\x05 \x01(\r\x12\x15\n\rmail_end_time\x18\x06 \x01(\r\x12\x15\n\rmail_acc_type\x18\x07 \x01(\r\"\xac\x01\n\x1cSCPKG_ROLELOGIN_GET_MAIL_RES\x12)\n\x10system_mail_list\x18\x01 \x03(\x0b\x32\x0f.CSDT_MAIL_INFO\x12*\n\x11revenge_mail_list\x18\x02 \x03(\x0b\x32\x0f.CSDT_MAIL_INFO\x12\x19\n\x11system_mail_count\x18\x03 \x01(\r\x12\x1a\n\x12revenge_mail_count\x18\x04 \x01(\r\"p\n\x13SCPKG_SEND_MAIL_RES\x12\"\n\tmail_info\x18\x01 \x01(\x0b\x32\x0f.CSDT_MAIL_INFO\x12\x19\n\x11system_mail_count\x18\x02 \x01(\r\x12\x1a\n\x12revenge_mail_count\x18\x03 \x01(\r\",\n\x17\x43SPKG_GET_MAIL_LIST_REQ\x12\x11\n\tmail_type\x18\x01 \x01(\r\"\x8f\x01\n\x17SCPKG_GET_MAIL_LIST_RES\x12\x11\n\tmail_type\x18\x01 \x01(\r\x12/\n\x10system_mail_info\x18\x02 \x03(\x0b\x32\x15.CSDT_BRIEF_MAIL_INFO\x12\x30\n\x11revenge_mail_info\x18\x03 \x03(\x0b\x32\x15.CSDT_BRIEF_MAIL_INFO\",\n\x19\x43SPKG_GET_MAIL_DETAIL_REQ\x12\x0f\n\x07mail_id\x18\x01 \x01(\x04\"P\n\x19SCPKG_GET_MAIL_DETAIL_RES\x12\x0f\n\x07mail_id\x18\x01 \x01(\x04\x12\"\n\tmail_info\x18\x02 \x01(\x0b\x32\x0f.CSDT_MAIL_INFO\"9\n\x13\x43SPKG_MAIL_READ_REQ\x12\x0f\n\x07mail_id\x18\x01 \x01(\x04\x12\x11\n\tmail_type\x18\x02 \x01(\r\"N\n\x13SCPKG_MAIL_READ_RES\x12\x0f\n\x07mail_id\x18\x01 \x01(\x04\x12\x11\n\tmail_type\x18\x02 \x01(\r\x12\x13\n\x0bmail_status\x18\x03 \x01(\r\"(\n\x15\x43SPKG_MAIL_DELETE_REQ\x12\x0f\n\x07mail_id\x18\x01 \x01(\x04\"\x81\x01\n\x15SCPKG_MAIL_DELETE_RES\x12\x0f\n\x07mail_id\x18\x01 \x01(\x04\x12\x11\n\tmail_type\x18\x02 \x01(\r\x12\x1c\n\x14is_have_new_mail_add\x18\x03 \x01(\r\x12&\n\radd_mail_info\x18\x04 \x01(\x0b\x32\x0f.CSDT_MAIL_INFO\")\n\x16\x43SPKG_MAIL_GET_ACC_REQ\x12\x0f\n\x07mail_id\x18\x01 \x01(\x04\"\x7f\n\x16SCPKG_MAIL_GET_ACC_RES\x12\x0e\n\x06result\x18\x01 \x01(\x05\x12\x0f\n\x07mail_id\x18\x02 \x01(\x04\x12\x1c\n\x14is_have_new_mail_add\x18\x03 \x01(\r\x12&\n\radd_mail_info\x18\x04 \x01(\x0b\x32\x0f.CSDT_MAIL_INFO\"(\n\x15\x43SDT_OVERTIME_MAIL_ID\x12\x0f\n\x07mail_id\x18\x01 \x01(\x04\"\x88\x01\n\x1bSCPKG_OVERTIME_MAIL_CLR_RES\x12\x33\n\x13system_mail_id_list\x18\x01 \x03(\x0b\x32\x16.CSDT_OVERTIME_MAIL_ID\x12\x34\n\x14revenge_mail_id_list\x18\x02 \x03(\x0b\x32\x16.CSDT_OVERTIME_MAIL_ID\"\x84\x01\n\x16\x43S_UINON_MAIL_ACC_INFO\x12\x33\n\x0fsystem_mail_acc\x18\x01 \x01(\x0b\x32\x1a.CSDT_MAIL_SYSTEM_ACC_INFO\x12\x35\n\x10revenge_mail_acc\x18\x02 \x01(\x0b\x32\x1b.CSDT_MAIL_REVENGE_ACC_INFO')
+  serialized_pb=_b('\n\nmail.proto\"K\n\x14\x43SDT_MAIL_SYSTEM_ACC\x12\x10\n\x08res_type\x18\x01 \x01(\r\x12\x0e\n\x06res_id\x18\x02 \x01(\r\x12\x11\n\tres_count\x18\x03 \x01(\r\"D\n\x19\x43SDT_MAIL_SYSTEM_ACC_INFO\x12\'\n\x08\x61\x63\x63_info\x18\x01 \x03(\x0b\x32\x15.CSDT_MAIL_SYSTEM_ACC\"\x8c\x01\n\x1a\x43SDT_MAIL_REVENGE_ACC_INFO\x12\x15\n\ratk_role_name\x18\x01 \x01(\t\x12\x13\n\x0b\x61tk_role_id\x18\x02 \x01(\r\x12\x15\n\rlose_res_type\x18\x03 \x01(\r\x12\x13\n\x0blose_res_id\x18\x04 \x01(\r\x12\x16\n\x0elose_res_count\x18\x05 \x01(\x05\"R\n\x12\x43SDT_MAIL_ACC_INFO\x12\x0c\n\x04type\x18\x01 \x01(\r\x12.\n\rmail_acc_info\x18\x02 \x01(\x0b\x32\x17.CS_UINON_MAIL_ACC_INFO\"\xe0\x01\n\x0e\x43SDT_MAIL_INFO\x12\x0f\n\x07mail_id\x18\x01 \x01(\x04\x12\x11\n\tmail_type\x18\x02 \x01(\r\x12\x13\n\x0bmail_status\x18\x03 \x01(\r\x12\x12\n\nmail_title\x18\x04 \x01(\t\x12\x14\n\x0cmail_content\x18\x05 \x01(\t\x12\x16\n\x0email_send_time\x18\x06 \x01(\r\x12\x15\n\rmail_end_time\x18\x07 \x01(\r\x12\x15\n\rmail_acc_type\x18\x08 \x01(\r\x12%\n\x08mail_acc\x18\t \x01(\x0b\x32\x13.CSDT_MAIL_ACC_INFO\"\xa9\x01\n\x14\x43SDT_BRIEF_MAIL_INFO\x12\x0f\n\x07mail_id\x18\x01 \x01(\x04\x12\x11\n\tmail_type\x18\x02 \x01(\r\x12\x13\n\x0bmail_status\x18\x03 \x01(\r\x12\x12\n\nmail_title\x18\x04 \x01(\t\x12\x16\n\x0email_send_time\x18\x05 \x01(\r\x12\x15\n\rmail_end_time\x18\x06 \x01(\r\x12\x15\n\rmail_acc_type\x18\x07 \x01(\r\"\xac\x01\n\x1cSCPKG_ROLELOGIN_GET_MAIL_RES\x12)\n\x10system_mail_list\x18\x01 \x03(\x0b\x32\x0f.CSDT_MAIL_INFO\x12*\n\x11revenge_mail_list\x18\x02 \x03(\x0b\x32\x0f.CSDT_MAIL_INFO\x12\x19\n\x11system_mail_count\x18\x03 \x01(\r\x12\x1a\n\x12revenge_mail_count\x18\x04 \x01(\r\"p\n\x13SCPKG_SEND_MAIL_RES\x12\"\n\tmail_info\x18\x01 \x01(\x0b\x32\x0f.CSDT_MAIL_INFO\x12\x19\n\x11system_mail_count\x18\x02 \x01(\r\x12\x1a\n\x12revenge_mail_count\x18\x03 \x01(\r\",\n\x17\x43SPKG_GET_MAIL_LIST_REQ\x12\x11\n\tmail_type\x18\x01 \x01(\r\"\x8f\x01\n\x17SCPKG_GET_MAIL_LIST_RES\x12\x11\n\tmail_type\x18\x01 \x01(\r\x12/\n\x10system_mail_info\x18\x02 \x03(\x0b\x32\x15.CSDT_BRIEF_MAIL_INFO\x12\x30\n\x11revenge_mail_info\x18\x03 \x03(\x0b\x32\x15.CSDT_BRIEF_MAIL_INFO\",\n\x19\x43SPKG_GET_MAIL_DETAIL_REQ\x12\x0f\n\x07mail_id\x18\x01 \x01(\x04\"P\n\x19SCPKG_GET_MAIL_DETAIL_RES\x12\x0f\n\x07mail_id\x18\x01 \x01(\x04\x12\"\n\tmail_info\x18\x02 \x01(\x0b\x32\x0f.CSDT_MAIL_INFO\"9\n\x13\x43SPKG_MAIL_READ_REQ\x12\x0f\n\x07mail_id\x18\x01 \x01(\x04\x12\x11\n\tmail_type\x18\x02 \x01(\r\"N\n\x13SCPKG_MAIL_READ_RES\x12\x0f\n\x07mail_id\x18\x01 \x01(\x04\x12\x11\n\tmail_type\x18\x02 \x01(\r\x12\x13\n\x0bmail_status\x18\x03 \x01(\r\"(\n\x15\x43SPKG_MAIL_DELETE_REQ\x12\x0f\n\x07mail_id\x18\x01 \x01(\x04\"\x81\x01\n\x15SCPKG_MAIL_DELETE_RES\x12\x0f\n\x07mail_id\x18\x01 \x01(\x04\x12\x11\n\tmail_type\x18\x02 \x01(\r\x12\x1c\n\x14is_have_new_mail_add\x18\x03 \x01(\r\x12&\n\radd_mail_info\x18\x04 \x01(\x0b\x32\x0f.CSDT_MAIL_INFO\")\n\x16\x43SPKG_MAIL_GET_ACC_REQ\x12\x0f\n\x07mail_id\x18\x01 \x01(\x04\"\x7f\n\x16SCPKG_MAIL_GET_ACC_RES\x12\x0e\n\x06result\x18\x01 \x01(\x05\x12\x0f\n\x07mail_id\x18\x02 \x01(\x04\x12\x1c\n\x14is_have_new_mail_add\x18\x03 \x01(\r\x12&\n\radd_mail_info\x18\x04 \x01(\x0b\x32\x0f.CSDT_MAIL_INFO\"(\n\x15\x43SDT_OVERTIME_MAIL_ID\x12\x0f\n\x07mail_id\x18\x01 \x01(\x04\"\x88\x01\n\x1bSCPKG_OVERTIME_MAIL_CLR_RES\x12\x33\n\x13system_mail_id_list\x18\x01 \x03(\x0b\x32\x16.CSDT_OVERTIME_MAIL_ID\x12\x34\n\x14revenge_mail_id_list\x18\x02 \x03(\x0b\x32\x16.CSDT_OVERTIME_MAIL_ID\"\x84\x01\n\x16\x43S_UINON_MAIL_ACC_INFO\x12\x33\n\x0fsystem_mail_acc\x18\x01 \x01(\x0b\x32\x1a.CSDT_MAIL_SYSTEM_ACC_INFO\x12\x35\n\x10revenge_mail_acc\x18\x02 \x01(\x0b\x32\x1b.CSDT_MAIL_REVENGE_ACC_INFO*\xbb\n\n\x0e\x45MailTitleType\x12\x1f\n\x1bRES_MAIL_TITLE_LOGIN_REWARD\x10\x01\x12\x1b\n\x17RES_MAIL_TITLE_PVP_LOSE\x10\x02\x12\x1a\n\x16RES_MAIL_TITLE_PVP_WIN\x10\x03\x12&\n\"RES_MAIL_TITLE_RANK_BATTLE_PROMOTE\x10\x04\x12\'\n#RES_MAIL_TITLE_RANK_BATTLE_EVERYDAY\x10\x05\x12&\n\"RES_MAIL_TITLE_STEAL_BATTLE_RESULT\x10\x06\x12)\n%RES_MAIL_TITLE_RANK_BATTLE_NOTIFY_WIN\x10\x07\x12*\n&RES_MAIL_TITLE_RANK_BATTLE_NOTIFY_LOSE\x10\x08\x12\x33\n/RES_MAIL_TITLE_RANK_BATTLE_NOTIFY_LOSE_OUT_RANK\x10\t\x12\x1b\n\x17RES_MAIL_TITLE_PURCHASE\x10\n\x12\'\n#RES_MAIL_TITLE_FIRSTPURCHASE_REWARD\x10\x0b\x12)\n%RES_MAIL_TITLE_MONTHCARD_DAILY_REWARD\x10\x0c\x12$\n RES_MAIL_TITLE_GROWTHFUND_REWARD\x10\r\x12#\n\x1fRES_MAIL_TITLE_PRIVILEGE_REWARD\x10\x0e\x12*\n&RES_MAIL_TITLE_MONTHCARD_DIRECT_REWARD\x10\x0f\x12\x1d\n\x19RES_MAIL_TITLE_MORE_EQUIP\x10\x10\x12(\n$RES_MAIL_TITLE_GANG_BATTLE_NOT_MATCH\x10\x14\x12\"\n\x1eRES_MAIL_TITLE_GANG_BATTLE_WIN\x10\x15\x12#\n\x1fRES_MAIL_TITLE_GANG_BATTLE_DRAW\x10\x16\x12#\n\x1fRES_MAIL_TITLE_GANG_BATTLE_LOSE\x10\x17\x12!\n\x1dRES_MAIL_TITLE_INVITED_REWARD\x10\x18\x12)\n%RES_MAIN_TITLE_WORLD_BOSS_KILL_REWARD\x10\x19\x12+\n\'RES_MAIN_TITLE_WORLD_BOSS_DAMAGE_REWARD\x10\x1a\x12)\n%RES_MAIN_TITLE_WORLD_HERO_TASK_REWARD\x10\x1b\x12,\n(RES_MAIN_TITLE_ONLINE_BATTLE_RANK_REWARD\x10\x1c\x12\'\n#RES_MAIL_TITLE_RANK_BATTLE_ACTIVITY\x10\x1d\x12-\n)RES_MAIL_TITLE_RANK_SYSTEM_BILLBOARD_ITEM\x10\x1e\x12*\n&RES_MAIN_TITLE_WORLD_BOSS_LUCKY_REWARD\x10\x1f\x12&\n\"RES_MAIL_TITLE_TOP_BATTLE_EVERYDAY\x10 \x12\"\n\x1eRES_MAIL_TITLE_TOP_BATTLE_WEEK\x10!\x12(\n$RES_MAIL_TITLE_TOP_BATTLE_NOTIFY_WIN\x10\"\x12)\n%RES_MAIL_TITLE_TOP_BATTLE_NOTIFY_LOSE\x10#\x12\x32\n.RES_MAIL_TITLE_TOP_BATTLE_NOTIFY_LOSE_OUT_RANK\x10$')
 )
 _sym_db.RegisterFileDescriptor(DESCRIPTOR)
 
+_EMAILTITLETYPE = _descriptor.EnumDescriptor(
+  name='EMailTitleType',
+  full_name='EMailTitleType',
+  filename=None,
+  file=DESCRIPTOR,
+  values=[
+    _descriptor.EnumValueDescriptor(
+      name='RES_MAIL_TITLE_LOGIN_REWARD', index=0, number=1,
+      options=None,
+      type=None),
+    _descriptor.EnumValueDescriptor(
+      name='RES_MAIL_TITLE_PVP_LOSE', index=1, number=2,
+      options=None,
+      type=None),
+    _descriptor.EnumValueDescriptor(
+      name='RES_MAIL_TITLE_PVP_WIN', index=2, number=3,
+      options=None,
+      type=None),
+    _descriptor.EnumValueDescriptor(
+      name='RES_MAIL_TITLE_RANK_BATTLE_PROMOTE', index=3, number=4,
+      options=None,
+      type=None),
+    _descriptor.EnumValueDescriptor(
+      name='RES_MAIL_TITLE_RANK_BATTLE_EVERYDAY', index=4, number=5,
+      options=None,
+      type=None),
+    _descriptor.EnumValueDescriptor(
+      name='RES_MAIL_TITLE_STEAL_BATTLE_RESULT', index=5, number=6,
+      options=None,
+      type=None),
+    _descriptor.EnumValueDescriptor(
+      name='RES_MAIL_TITLE_RANK_BATTLE_NOTIFY_WIN', index=6, number=7,
+      options=None,
+      type=None),
+    _descriptor.EnumValueDescriptor(
+      name='RES_MAIL_TITLE_RANK_BATTLE_NOTIFY_LOSE', index=7, number=8,
+      options=None,
+      type=None),
+    _descriptor.EnumValueDescriptor(
+      name='RES_MAIL_TITLE_RANK_BATTLE_NOTIFY_LOSE_OUT_RANK', index=8, number=9,
+      options=None,
+      type=None),
+    _descriptor.EnumValueDescriptor(
+      name='RES_MAIL_TITLE_PURCHASE', index=9, number=10,
+      options=None,
+      type=None),
+    _descriptor.EnumValueDescriptor(
+      name='RES_MAIL_TITLE_FIRSTPURCHASE_REWARD', index=10, number=11,
+      options=None,
+      type=None),
+    _descriptor.EnumValueDescriptor(
+      name='RES_MAIL_TITLE_MONTHCARD_DAILY_REWARD', index=11, number=12,
+      options=None,
+      type=None),
+    _descriptor.EnumValueDescriptor(
+      name='RES_MAIL_TITLE_GROWTHFUND_REWARD', index=12, number=13,
+      options=None,
+      type=None),
+    _descriptor.EnumValueDescriptor(
+      name='RES_MAIL_TITLE_PRIVILEGE_REWARD', index=13, number=14,
+      options=None,
+      type=None),
+    _descriptor.EnumValueDescriptor(
+      name='RES_MAIL_TITLE_MONTHCARD_DIRECT_REWARD', index=14, number=15,
+      options=None,
+      type=None),
+    _descriptor.EnumValueDescriptor(
+      name='RES_MAIL_TITLE_MORE_EQUIP', index=15, number=16,
+      options=None,
+      type=None),
+    _descriptor.EnumValueDescriptor(
+      name='RES_MAIL_TITLE_GANG_BATTLE_NOT_MATCH', index=16, number=20,
+      options=None,
+      type=None),
+    _descriptor.EnumValueDescriptor(
+      name='RES_MAIL_TITLE_GANG_BATTLE_WIN', index=17, number=21,
+      options=None,
+      type=None),
+    _descriptor.EnumValueDescriptor(
+      name='RES_MAIL_TITLE_GANG_BATTLE_DRAW', index=18, number=22,
+      options=None,
+      type=None),
+    _descriptor.EnumValueDescriptor(
+      name='RES_MAIL_TITLE_GANG_BATTLE_LOSE', index=19, number=23,
+      options=None,
+      type=None),
+    _descriptor.EnumValueDescriptor(
+      name='RES_MAIL_TITLE_INVITED_REWARD', index=20, number=24,
+      options=None,
+      type=None),
+    _descriptor.EnumValueDescriptor(
+      name='RES_MAIN_TITLE_WORLD_BOSS_KILL_REWARD', index=21, number=25,
+      options=None,
+      type=None),
+    _descriptor.EnumValueDescriptor(
+      name='RES_MAIN_TITLE_WORLD_BOSS_DAMAGE_REWARD', index=22, number=26,
+      options=None,
+      type=None),
+    _descriptor.EnumValueDescriptor(
+      name='RES_MAIN_TITLE_WORLD_HERO_TASK_REWARD', index=23, number=27,
+      options=None,
+      type=None),
+    _descriptor.EnumValueDescriptor(
+      name='RES_MAIN_TITLE_ONLINE_BATTLE_RANK_REWARD', index=24, number=28,
+      options=None,
+      type=None),
+    _descriptor.EnumValueDescriptor(
+      name='RES_MAIL_TITLE_RANK_BATTLE_ACTIVITY', index=25, number=29,
+      options=None,
+      type=None),
+    _descriptor.EnumValueDescriptor(
+      name='RES_MAIL_TITLE_RANK_SYSTEM_BILLBOARD_ITEM', index=26, number=30,
+      options=None,
+      type=None),
+    _descriptor.EnumValueDescriptor(
+      name='RES_MAIN_TITLE_WORLD_BOSS_LUCKY_REWARD', index=27, number=31,
+      options=None,
+      type=None),
+    _descriptor.EnumValueDescriptor(
+      name='RES_MAIL_TITLE_TOP_BATTLE_EVERYDAY', index=28, number=32,
+      options=None,
+      type=None),
+    _descriptor.EnumValueDescriptor(
+      name='RES_MAIL_TITLE_TOP_BATTLE_WEEK', index=29, number=33,
+      options=None,
+      type=None),
+    _descriptor.EnumValueDescriptor(
+      name='RES_MAIL_TITLE_TOP_BATTLE_NOTIFY_WIN', index=30, number=34,
+      options=None,
+      type=None),
+    _descriptor.EnumValueDescriptor(
+      name='RES_MAIL_TITLE_TOP_BATTLE_NOTIFY_LOSE', index=31, number=35,
+      options=None,
+      type=None),
+    _descriptor.EnumValueDescriptor(
+      name='RES_MAIL_TITLE_TOP_BATTLE_NOTIFY_LOSE_OUT_RANK', index=32, number=36,
+      options=None,
+      type=None),
+  ],
+  containing_type=None,
+  options=None,
+  serialized_start=2198,
+  serialized_end=3537,
+)
+_sym_db.RegisterEnumDescriptor(_EMAILTITLETYPE)
+
+EMailTitleType = enum_type_wrapper.EnumTypeWrapper(_EMAILTITLETYPE)
+RES_MAIL_TITLE_LOGIN_REWARD = 1
+RES_MAIL_TITLE_PVP_LOSE = 2
+RES_MAIL_TITLE_PVP_WIN = 3
+RES_MAIL_TITLE_RANK_BATTLE_PROMOTE = 4
+RES_MAIL_TITLE_RANK_BATTLE_EVERYDAY = 5
+RES_MAIL_TITLE_STEAL_BATTLE_RESULT = 6
+RES_MAIL_TITLE_RANK_BATTLE_NOTIFY_WIN = 7
+RES_MAIL_TITLE_RANK_BATTLE_NOTIFY_LOSE = 8
+RES_MAIL_TITLE_RANK_BATTLE_NOTIFY_LOSE_OUT_RANK = 9
+RES_MAIL_TITLE_PURCHASE = 10
+RES_MAIL_TITLE_FIRSTPURCHASE_REWARD = 11
+RES_MAIL_TITLE_MONTHCARD_DAILY_REWARD = 12
+RES_MAIL_TITLE_GROWTHFUND_REWARD = 13
+RES_MAIL_TITLE_PRIVILEGE_REWARD = 14
+RES_MAIL_TITLE_MONTHCARD_DIRECT_REWARD = 15
+RES_MAIL_TITLE_MORE_EQUIP = 16
+RES_MAIL_TITLE_GANG_BATTLE_NOT_MATCH = 20
+RES_MAIL_TITLE_GANG_BATTLE_WIN = 21
+RES_MAIL_TITLE_GANG_BATTLE_DRAW = 22
+RES_MAIL_TITLE_GANG_BATTLE_LOSE = 23
+RES_MAIL_TITLE_INVITED_REWARD = 24
+RES_MAIN_TITLE_WORLD_BOSS_KILL_REWARD = 25
+RES_MAIN_TITLE_WORLD_BOSS_DAMAGE_REWARD = 26
+RES_MAIN_TITLE_WORLD_HERO_TASK_REWARD = 27
+RES_MAIN_TITLE_ONLINE_BATTLE_RANK_REWARD = 28
+RES_MAIL_TITLE_RANK_BATTLE_ACTIVITY = 29
+RES_MAIL_TITLE_RANK_SYSTEM_BILLBOARD_ITEM = 30
+RES_MAIN_TITLE_WORLD_BOSS_LUCKY_REWARD = 31
+RES_MAIL_TITLE_TOP_BATTLE_EVERYDAY = 32
+RES_MAIL_TITLE_TOP_BATTLE_WEEK = 33
+RES_MAIL_TITLE_TOP_BATTLE_NOTIFY_WIN = 34
+RES_MAIL_TITLE_TOP_BATTLE_NOTIFY_LOSE = 35
+RES_MAIL_TITLE_TOP_BATTLE_NOTIFY_LOSE_OUT_RANK = 36
 
 
 
@@ -970,6 +1151,7 @@ DESCRIPTOR.message_types_by_name['SCPKG_MAIL_GET_ACC_RES'] = _SCPKG_MAIL_GET_ACC
 DESCRIPTOR.message_types_by_name['CSDT_OVERTIME_MAIL_ID'] = _CSDT_OVERTIME_MAIL_ID
 DESCRIPTOR.message_types_by_name['SCPKG_OVERTIME_MAIL_CLR_RES'] = _SCPKG_OVERTIME_MAIL_CLR_RES
 DESCRIPTOR.message_types_by_name['CS_UINON_MAIL_ACC_INFO'] = _CS_UINON_MAIL_ACC_INFO
+DESCRIPTOR.enum_types_by_name['EMailTitleType'] = _EMAILTITLETYPE
 
 CSDT_MAIL_SYSTEM_ACC = _reflection.GeneratedProtocolMessageType('CSDT_MAIL_SYSTEM_ACC', (_message.Message,), dict(
   DESCRIPTOR = _CSDT_MAIL_SYSTEM_ACC,

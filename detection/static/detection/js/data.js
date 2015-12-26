@@ -256,6 +256,24 @@
           };
           p = '/add.json';
           break;
+        case 'month':
+          count = $('input[name=month]').val() || 0;
+          Tcount = 0;
+          if(count > 0) Tcount = 0 - count;
+          $('input[name=month]').val(count);
+          fmts = gettext('Confirm Adding %(count)s ?');
+          s = interpolate(fmts, {'count':Tcount}, true);
+          if (!confirm(s)) {
+            return false;
+          }
+          addData = {
+            'server_id': server_id,
+            'type_id': type_id,
+            'count': Tcount,
+            'uid': uid
+          };
+          p = '/month.json';
+          break;
       }
       $.ajax({
         url: _askData + p,
@@ -402,6 +420,22 @@
             'uid': uid
           };
           p = '/off_rank.json';
+          break;
+        case 'month':
+          count = $('input[name=month]').val() || 0;
+          $('input[name=month]').val(count);
+          fmts = gettext('Confirm Adding %(count)s ?');
+          s = interpolate(fmts, {'count':count}, true);
+          if (!confirm(s)) {
+            return false;
+          }
+          addData = {
+            'server_id': server_id,
+            'type_id': type_id,
+            'count': count,
+            'uid': uid
+          };
+          p = '/month.json';
           break;
       }
       $.ajax({

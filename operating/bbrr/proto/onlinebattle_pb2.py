@@ -14,14 +14,15 @@ _sym_db = _symbol_database.Default()
 
 
 import protocommon_pb2
+import rescommon_pb2
 
 
 DESCRIPTOR = _descriptor.FileDescriptor(
   name='onlinebattle.proto',
   package='',
-  serialized_pb=_b('\n\x12onlinebattle.proto\x1a\x11protocommon.proto\"\xac\x01\n(SCPKG_CMD_PLAYER_ENTER_ONLINE_BATTLE_DUN\x12\x13\n\x0bscene_index\x18\x01 \x01(\r\x12\x34\n\x12online_battle_info\x18\x02 \x01(\x0b\x32\x18.CSDT_ONLINE_BATTLE_INFO\x12\x35\n\trole_info\x18\x03 \x03(\x0b\x32\".CSDT_ONLINE_BATTLE_ROOM_ROLE_INFO\"\xaa\x01\n!CSDT_ONLINE_BATTLE_ROOM_ROLE_INFO\x12\x0b\n\x03pos\x18\x01 \x01(\r\x12\x0f\n\x07role_id\x18\x02 \x01(\r\x12\x0f\n\x07role_lv\x18\x03 \x01(\r\x12\x14\n\x0crole_stamina\x18\x04 \x01(\r\x12\x15\n\rrole_strength\x18\x05 \x01(\r\x12\x14\n\x0crole_ability\x18\x06 \x01(\r\x12\x13\n\x0brole_skills\x18\x07 \x03(\r\"\xb8\x01\n#CSDT_ONLINE_BATTLE_ROOM_PLAYER_INFO\x12\x0c\n\x04host\x18\x01 \x01(\x08\x12\x0b\n\x03uid\x18\x02 \x01(\r\x12\x0c\n\x04name\x18\x03 \x01(\t\x12\r\n\x05score\x18\x04 \x01(\r\x12\x12\n\nwin_number\x18\x05 \x01(\r\x12\r\n\x05ready\x18\x06 \x01(\x08\x12\x36\n\nrole_infos\x18\x07 \x03(\x0b\x32\".CSDT_ONLINE_BATTLE_ROOM_ROLE_INFO\"\x80\x01\n\x1c\x43SDT_ONLINE_BATTLE_ROOM_INFO\x12\x0f\n\x07room_id\x18\x01 \x01(\r\x12\x13\n\x0bscene_index\x18\x02 \x01(\r\x12:\n\x0cplayer_infos\x18\x03 \x03(\x0b\x32$.CSDT_ONLINE_BATTLE_ROOM_PLAYER_INFO\"B\n\'SCDT_ONLINE_BATTLE_ROOM_COUNT_DOWN_TIME\x12\x17\n\x0f\x63ount_down_time\x18\x01 \x01(\r\"s\n\x1f\x43SPKG_ONLINE_BATTLE_ROOM_OP_REQ\x12\x0b\n\x03uid\x18\x01 \x01(\r\x12\x11\n\toperation\x18\x02 \x01(\r\x12\x30\n\troom_info\x18\x03 \x01(\x0b\x32\x1d.CSDT_ONLINE_BATTLE_ROOM_INFO\"\x85\x01\n\x1fSCPKG_ONLINE_BATTLE_ROOM_OP_RES\x12\x11\n\toperation\x18\x01 \x01(\r\x12\x0e\n\x06result\x18\x02 \x01(\r\x12\r\n\x05param\x18\x03 \x01(\r\x12\x30\n\troom_info\x18\x04 \x03(\x0b\x32\x1d.CSDT_ONLINE_BATTLE_ROOM_INFO\"3\n$CSPKG_ONLINE_BATTLE_SHOP_BOX_BUY_REQ\x12\x0b\n\x03pos\x18\x01 \x01(\r\"\x90\x01\n$SCPKG_ONLINE_BATTLE_SHOP_BOX_BUY_RES\x12\x0e\n\x06result\x18\x01 \x01(\r\x12\"\n\tdrop_info\x18\x02 \x01(\x0b\x32\x0f.CSDT_DROP_INFO\x12\x34\n\x12online_battle_info\x18\x03 \x01(\x0b\x32\x18.CSDT_ONLINE_BATTLE_INFO')
+  serialized_pb=_b('\n\x12onlinebattle.proto\x1a\x11protocommon.proto\x1a\x0frescommon.proto\"\xac\x01\n(SCPKG_CMD_PLAYER_ENTER_ONLINE_BATTLE_DUN\x12\x13\n\x0bscene_index\x18\x01 \x01(\r\x12\x34\n\x12online_battle_info\x18\x02 \x01(\x0b\x32\x18.CSDT_ONLINE_BATTLE_INFO\x12\x35\n\trole_info\x18\x03 \x03(\x0b\x32\".CSDT_ONLINE_BATTLE_ROOM_ROLE_INFO\"\xf6\x01\n!CSDT_ONLINE_BATTLE_ROOM_ROLE_INFO\x12\x0b\n\x03pos\x18\x01 \x01(\r\x12\x0f\n\x07role_id\x18\x02 \x01(\r\x12\x0f\n\x07role_lv\x18\x03 \x01(\r\x12\x14\n\x0crole_stamina\x18\x04 \x01(\r\x12\x15\n\rrole_strength\x18\x05 \x01(\r\x12\x14\n\x0crole_ability\x18\x06 \x01(\r\x12\x13\n\x0brole_skills\x18\x07 \x03(\r\x12\x17\n\x0f\x66\x61\x63tor_skill_id\x18\x08 \x01(\r\x12\x31\n\x0ehero_attr_info\x18\t \x01(\x0b\x32\x19.ST_BATTLE_HERO_ATTR_INFO\"\xb8\x01\n#CSDT_ONLINE_BATTLE_ROOM_PLAYER_INFO\x12\x0c\n\x04host\x18\x01 \x01(\x08\x12\x0b\n\x03uid\x18\x02 \x01(\r\x12\x0c\n\x04name\x18\x03 \x01(\t\x12\r\n\x05score\x18\x04 \x01(\r\x12\x12\n\nwin_number\x18\x05 \x01(\r\x12\r\n\x05ready\x18\x06 \x01(\x08\x12\x36\n\nrole_infos\x18\x07 \x03(\x0b\x32\".CSDT_ONLINE_BATTLE_ROOM_ROLE_INFO\"\x80\x01\n\x1c\x43SDT_ONLINE_BATTLE_ROOM_INFO\x12\x0f\n\x07room_id\x18\x01 \x01(\r\x12\x13\n\x0bscene_index\x18\x02 \x01(\r\x12:\n\x0cplayer_infos\x18\x03 \x03(\x0b\x32$.CSDT_ONLINE_BATTLE_ROOM_PLAYER_INFO\"B\n\'SCDT_ONLINE_BATTLE_ROOM_COUNT_DOWN_TIME\x12\x17\n\x0f\x63ount_down_time\x18\x01 \x01(\r\"s\n\x1f\x43SPKG_ONLINE_BATTLE_ROOM_OP_REQ\x12\x0b\n\x03uid\x18\x01 \x01(\r\x12\x11\n\toperation\x18\x02 \x01(\r\x12\x30\n\troom_info\x18\x03 \x01(\x0b\x32\x1d.CSDT_ONLINE_BATTLE_ROOM_INFO\"\x85\x01\n\x1fSCPKG_ONLINE_BATTLE_ROOM_OP_RES\x12\x11\n\toperation\x18\x01 \x01(\r\x12\x0e\n\x06result\x18\x02 \x01(\r\x12\r\n\x05param\x18\x03 \x01(\r\x12\x30\n\troom_info\x18\x04 \x03(\x0b\x32\x1d.CSDT_ONLINE_BATTLE_ROOM_INFO\"3\n$CSPKG_ONLINE_BATTLE_SHOP_BOX_BUY_REQ\x12\x0b\n\x03pos\x18\x01 \x01(\r\"\x90\x01\n$SCPKG_ONLINE_BATTLE_SHOP_BOX_BUY_RES\x12\x0e\n\x06result\x18\x01 \x01(\r\x12\"\n\tdrop_info\x18\x02 \x01(\x0b\x32\x0f.CSDT_DROP_INFO\x12\x34\n\x12online_battle_info\x18\x03 \x01(\x0b\x32\x18.CSDT_ONLINE_BATTLE_INFO')
   ,
-  dependencies=[protocommon_pb2.DESCRIPTOR,])
+  dependencies=[protocommon_pb2.DESCRIPTOR,rescommon_pb2.DESCRIPTOR,])
 _sym_db.RegisterFileDescriptor(DESCRIPTOR)
 
 
@@ -66,8 +67,8 @@ _SCPKG_CMD_PLAYER_ENTER_ONLINE_BATTLE_DUN = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=42,
-  serialized_end=214,
+  serialized_start=59,
+  serialized_end=231,
 )
 
 
@@ -127,6 +128,20 @@ _CSDT_ONLINE_BATTLE_ROOM_ROLE_INFO = _descriptor.Descriptor(
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
+    _descriptor.FieldDescriptor(
+      name='factor_skill_id', full_name='CSDT_ONLINE_BATTLE_ROOM_ROLE_INFO.factor_skill_id', index=7,
+      number=8, type=13, cpp_type=3, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    _descriptor.FieldDescriptor(
+      name='hero_attr_info', full_name='CSDT_ONLINE_BATTLE_ROOM_ROLE_INFO.hero_attr_info', index=8,
+      number=9, type=11, cpp_type=10, label=1,
+      has_default_value=False, default_value=None,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
   ],
   extensions=[
   ],
@@ -138,8 +153,8 @@ _CSDT_ONLINE_BATTLE_ROOM_ROLE_INFO = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=217,
-  serialized_end=387,
+  serialized_start=234,
+  serialized_end=480,
 )
 
 
@@ -210,8 +225,8 @@ _CSDT_ONLINE_BATTLE_ROOM_PLAYER_INFO = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=390,
-  serialized_end=574,
+  serialized_start=483,
+  serialized_end=667,
 )
 
 
@@ -254,8 +269,8 @@ _CSDT_ONLINE_BATTLE_ROOM_INFO = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=577,
-  serialized_end=705,
+  serialized_start=670,
+  serialized_end=798,
 )
 
 
@@ -284,8 +299,8 @@ _SCDT_ONLINE_BATTLE_ROOM_COUNT_DOWN_TIME = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=707,
-  serialized_end=773,
+  serialized_start=800,
+  serialized_end=866,
 )
 
 
@@ -328,8 +343,8 @@ _CSPKG_ONLINE_BATTLE_ROOM_OP_REQ = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=775,
-  serialized_end=890,
+  serialized_start=868,
+  serialized_end=983,
 )
 
 
@@ -379,8 +394,8 @@ _SCPKG_ONLINE_BATTLE_ROOM_OP_RES = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=893,
-  serialized_end=1026,
+  serialized_start=986,
+  serialized_end=1119,
 )
 
 
@@ -409,8 +424,8 @@ _CSPKG_ONLINE_BATTLE_SHOP_BOX_BUY_REQ = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=1028,
-  serialized_end=1079,
+  serialized_start=1121,
+  serialized_end=1172,
 )
 
 
@@ -453,12 +468,13 @@ _SCPKG_ONLINE_BATTLE_SHOP_BOX_BUY_RES = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=1082,
-  serialized_end=1226,
+  serialized_start=1175,
+  serialized_end=1319,
 )
 
 _SCPKG_CMD_PLAYER_ENTER_ONLINE_BATTLE_DUN.fields_by_name['online_battle_info'].message_type = protocommon_pb2._CSDT_ONLINE_BATTLE_INFO
 _SCPKG_CMD_PLAYER_ENTER_ONLINE_BATTLE_DUN.fields_by_name['role_info'].message_type = _CSDT_ONLINE_BATTLE_ROOM_ROLE_INFO
+_CSDT_ONLINE_BATTLE_ROOM_ROLE_INFO.fields_by_name['hero_attr_info'].message_type = rescommon_pb2._ST_BATTLE_HERO_ATTR_INFO
 _CSDT_ONLINE_BATTLE_ROOM_PLAYER_INFO.fields_by_name['role_infos'].message_type = _CSDT_ONLINE_BATTLE_ROOM_ROLE_INFO
 _CSDT_ONLINE_BATTLE_ROOM_INFO.fields_by_name['player_infos'].message_type = _CSDT_ONLINE_BATTLE_ROOM_PLAYER_INFO
 _CSPKG_ONLINE_BATTLE_ROOM_OP_REQ.fields_by_name['room_info'].message_type = _CSDT_ONLINE_BATTLE_ROOM_INFO

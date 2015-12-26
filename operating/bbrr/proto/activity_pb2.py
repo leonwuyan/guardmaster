@@ -15,14 +15,15 @@ _sym_db = _symbol_database.Default()
 
 import protocommon_pb2
 import rescommon_pb2
+import res_pb2
 
 
 DESCRIPTOR = _descriptor.FileDescriptor(
   name='activity.proto',
   package='',
-  serialized_pb=_b('\n\x0e\x61\x63tivity.proto\x1a\x11protocommon.proto\x1a\x0frescommon.proto\"\x9e\x01\n\x1fSCDT_ACTIVITY_RESOURCE_BOX_INFO\x12\x1d\n\x15last_box_refresh_time\x18\x01 \x01(\r\x12\x1b\n\x13gold_box_open_count\x18\x02 \x01(\r\x12\x1e\n\x16\x63rystal_box_open_count\x18\x04 \x01(\r\x12\x1f\n\x17material_box_open_count\x18\x06 \x01(\r\"\xb6\x02\n\x12SCDT_ACTIVITY_INFO\x12\x34\n\x12\x63umulate_cost_info\x18\x01 \x01(\x0b\x32\x18.SCDT_CUMULATE_COST_INFO\x12\x34\n\x12sect_recharge_info\x18\x02 \x01(\x0b\x32\x18.SCDT_SECT_RECHARGE_INFO\x12\x36\n\x13\x64\x61ily_recharge_info\x18\x03 \x01(\x0b\x32\x19.SCDT_DAILY_RECHARGE_INFO\x12;\n\x13\x61\x63tivity_prize_draw\x18\x04 \x01(\x0b\x32\x1e.SCDT_ACTIVITY_PRIZE_DRAW_INFO\x12?\n\x15\x61\x63tivity_resource_box\x18\x05 \x01(\x0b\x32 .SCDT_ACTIVITY_RESOURCE_BOX_INFO\"U\n\x15SCDT_ACTIVITY_CONTROL\x12\n\n\x02id\x18\x01 \x01(\r\x12\x0c\n\x04stat\x18\x02 \x01(\r\x12\x10\n\x08\x62\x65g_time\x18\x03 \x01(\r\x12\x10\n\x08\x65nd_time\x18\x04 \x01(\r\"\'\n\x17\x43SDT_ACTIVITY_BROADCAST\x12\x0c\n\x04info\x18\x01 \x01(\t\"W\n\x1e\x43SDT_ACTIVITY_STATUS_BROADCAST\x12\x13\n\x0b\x61\x63tivity_id\x18\x01 \x01(\r\x12\x0e\n\x06status\x18\x02 \x01(\r\x12\x10\n\x08hint_msg\x18\x03 \x01(\t\"e\n\x16SCPKG_ACTIVITY_CONTROL\x12\x30\n\x10\x61\x63tivity_control\x18\x01 \x01(\x0b\x32\x16.SCDT_ACTIVITY_CONTROL\x12\x19\n\x11is_world_activity\x18\x02 \x01(\x08\"\xab\x01\n\x13SCPKG_ACTIVITY_INFO\x12\x30\n\x10\x61\x63tivity_control\x18\x01 \x03(\x0b\x32\x16.SCDT_ACTIVITY_CONTROL\x12*\n\ractivity_info\x18\x02 \x01(\x0b\x32\x13.SCDT_ACTIVITY_INFO\x12\x36\n\x16world_activity_control\x18\x03 \x03(\x0b\x32\x16.SCDT_ACTIVITY_CONTROL\"\xa3\x01\n\x0e\x43SDT_BROAD_MSG\x12\x0e\n\x06gm_msg\x18\x01 \x01(\t\x12\x30\n\x0e\x62road_activity\x18\x02 \x01(\x0b\x32\x18.CSDT_ACTIVITY_BROADCAST\x12>\n\x15\x62road_activity_status\x18\x03 \x01(\x0b\x32\x1f.CSDT_ACTIVITY_STATUS_BROADCAST\x12\x0f\n\x07reserve\x18\x04 \x01(\x05\"[\n\x13SCPKG_NTF_BROADCAST\x12\x0e\n\x06msg_id\x18\x01 \x01(\r\x12\x10\n\x08show_pos\x18\x02 \x01(\r\x12\"\n\tbroad_msg\x18\x03 \x01(\x0b\x32\x0f.CSDT_BROAD_MSG\"A\n\"SCPKG_GAME_PLAY_MODE_ACTIVITY_INFO\x12\x1b\n\x13\x63losed_dungeon_type\x18\x01 \x03(\r\"+\n\x1b\x43SPKG_OPEN_RESOURCE_BOX_REQ\x12\x0c\n\x04type\x18\x01 \x01(\r\"W\n\x1bSCPKG_OPEN_RESOURCE_BOX_RES\x12\x0e\n\x06result\x18\x01 \x01(\x05\x12\x0c\n\x04type\x18\x02 \x01(\r\x12\x1a\n\x06reward\x18\x03 \x03(\x0b\x32\n.ResReward\"c\n SCPKG_ACTIVITY_RESOURCE_BOX_INFO\x12?\n\x15\x61\x63tivity_resource_box\x18\x01 \x01(\x0b\x32 .SCDT_ACTIVITY_RESOURCE_BOX_INFO\"9\n\x1d\x43SPKG_GET_COUNT_TO_REWARD_REQ\x12\x0c\n\x04type\x18\x01 \x01(\r\x12\n\n\x02id\x18\x02 \x01(\r\"e\n\x1dSCPKG_GET_COUNT_TO_REWARD_RES\x12\x0e\n\x06result\x18\x01 \x01(\x05\x12\x0c\n\x04type\x18\x02 \x01(\r\x12\n\n\x02id\x18\x03 \x01(\r\x12\x1a\n\x06reward\x18\x04 \x03(\x0b\x32\n.ResReward\"\x95\x01\n\x1bSCPKG_NTF_ACTIVITY_DISCOUNT\x12\x1c\n\x14\x63oin_single_discount\x18\x01 \x01(\r\x12\x1b\n\x13\x63oin_multi_discount\x18\x02 \x01(\r\x12\x1d\n\x15money_single_discount\x18\x03 \x01(\r\x12\x1c\n\x14money_multi_discount\x18\x04 \x01(\r')
+  serialized_pb=_b('\n\x0e\x61\x63tivity.proto\x1a\x11protocommon.proto\x1a\x0frescommon.proto\x1a\tres.proto\"\x9e\x01\n\x1fSCDT_ACTIVITY_RESOURCE_BOX_INFO\x12\x1d\n\x15last_box_refresh_time\x18\x01 \x01(\r\x12\x1b\n\x13gold_box_open_count\x18\x02 \x01(\r\x12\x1e\n\x16\x63rystal_box_open_count\x18\x04 \x01(\r\x12\x1f\n\x17material_box_open_count\x18\x06 \x01(\r\"n\n SCDT_ACTIVITY_TIME_RECHARGE_INFO\x12\n\n\x02id\x18\x01 \x01(\r\x12\x12\n\nproduct_id\x18\x02 \x01(\t\x12\x15\n\rrecharge_flag\x18\x03 \x01(\r\x12\x13\n\x0breward_flag\x18\x04 \x01(\r\"n\n SCDT_ACTIVITY_OPEN_RECHARGE_INFO\x12\n\n\x02id\x18\x01 \x01(\r\x12\x12\n\nproduct_id\x18\x02 \x01(\t\x12\x15\n\rrecharge_flag\x18\x03 \x01(\r\x12\x13\n\x0breward_flag\x18\x04 \x01(\r\"\xd0\x03\n\x12SCDT_ACTIVITY_INFO\x12\x34\n\x12\x63umulate_cost_info\x18\x01 \x01(\x0b\x32\x18.SCDT_CUMULATE_COST_INFO\x12\x34\n\x12sect_recharge_info\x18\x02 \x01(\x0b\x32\x18.SCDT_SECT_RECHARGE_INFO\x12\x36\n\x13\x64\x61ily_recharge_info\x18\x03 \x01(\x0b\x32\x19.SCDT_DAILY_RECHARGE_INFO\x12;\n\x13\x61\x63tivity_prize_draw\x18\x04 \x01(\x0b\x32\x1e.SCDT_ACTIVITY_PRIZE_DRAW_INFO\x12?\n\x15\x61\x63tivity_resource_box\x18\x05 \x01(\x0b\x32 .SCDT_ACTIVITY_RESOURCE_BOX_INFO\x12=\n\x12time_recharge_info\x18\x06 \x01(\x0b\x32!.SCDT_ACTIVITY_TIME_RECHARGE_INFO\x12=\n\x12open_recharge_info\x18\x07 \x01(\x0b\x32!.SCDT_ACTIVITY_OPEN_RECHARGE_INFO\x12\x1a\n\x12once_activity_flag\x18\x08 \x01(\r\"i\n\x15SCDT_ACTIVITY_CONTROL\x12\n\n\x02id\x18\x01 \x01(\r\x12\x0c\n\x04stat\x18\x02 \x01(\r\x12\x10\n\x08\x62\x65g_time\x18\x03 \x01(\r\x12\x10\n\x08\x65nd_time\x18\x04 \x01(\r\x12\x12\n\nclose_time\x18\x05 \x01(\r\"\'\n\x17\x43SDT_ACTIVITY_BROADCAST\x12\x0c\n\x04info\x18\x01 \x01(\t\"W\n\x1e\x43SDT_ACTIVITY_STATUS_BROADCAST\x12\x13\n\x0b\x61\x63tivity_id\x18\x01 \x01(\r\x12\x0e\n\x06status\x18\x02 \x01(\r\x12\x10\n\x08hint_msg\x18\x03 \x01(\t\"e\n\x16SCPKG_ACTIVITY_CONTROL\x12\x30\n\x10\x61\x63tivity_control\x18\x01 \x01(\x0b\x32\x16.SCDT_ACTIVITY_CONTROL\x12\x19\n\x11is_world_activity\x18\x02 \x01(\x08\"\xab\x01\n\x13SCPKG_ACTIVITY_INFO\x12\x30\n\x10\x61\x63tivity_control\x18\x01 \x03(\x0b\x32\x16.SCDT_ACTIVITY_CONTROL\x12*\n\ractivity_info\x18\x02 \x01(\x0b\x32\x13.SCDT_ACTIVITY_INFO\x12\x36\n\x16world_activity_control\x18\x03 \x03(\x0b\x32\x16.SCDT_ACTIVITY_CONTROL\"\xa3\x01\n\x0e\x43SDT_BROAD_MSG\x12\x0e\n\x06gm_msg\x18\x01 \x01(\t\x12\x30\n\x0e\x62road_activity\x18\x02 \x01(\x0b\x32\x18.CSDT_ACTIVITY_BROADCAST\x12>\n\x15\x62road_activity_status\x18\x03 \x01(\x0b\x32\x1f.CSDT_ACTIVITY_STATUS_BROADCAST\x12\x0f\n\x07reserve\x18\x04 \x01(\x05\"[\n\x13SCPKG_NTF_BROADCAST\x12\x0e\n\x06msg_id\x18\x01 \x01(\r\x12\x10\n\x08show_pos\x18\x02 \x01(\r\x12\"\n\tbroad_msg\x18\x03 \x01(\x0b\x32\x0f.CSDT_BROAD_MSG\"A\n\"SCPKG_GAME_PLAY_MODE_ACTIVITY_INFO\x12\x1b\n\x13\x63losed_dungeon_type\x18\x01 \x03(\r\"+\n\x1b\x43SPKG_OPEN_RESOURCE_BOX_REQ\x12\x0c\n\x04type\x18\x01 \x01(\r\"W\n\x1bSCPKG_OPEN_RESOURCE_BOX_RES\x12\x0e\n\x06result\x18\x01 \x01(\x05\x12\x0c\n\x04type\x18\x02 \x01(\r\x12\x1a\n\x06reward\x18\x03 \x03(\x0b\x32\n.ResReward\"c\n SCPKG_ACTIVITY_RESOURCE_BOX_INFO\x12?\n\x15\x61\x63tivity_resource_box\x18\x01 \x01(\x0b\x32 .SCDT_ACTIVITY_RESOURCE_BOX_INFO\"9\n\x1d\x43SPKG_GET_COUNT_TO_REWARD_REQ\x12\x0c\n\x04type\x18\x01 \x01(\r\x12\n\n\x02id\x18\x02 \x01(\r\"e\n\x1dSCPKG_GET_COUNT_TO_REWARD_RES\x12\x0e\n\x06result\x18\x01 \x01(\x05\x12\x0c\n\x04type\x18\x02 \x01(\r\x12\n\n\x02id\x18\x03 \x01(\r\x12\x1a\n\x06reward\x18\x04 \x03(\x0b\x32\n.ResReward\"\xb9\x01\n\x1bSCPKG_NTF_ACTIVITY_DISCOUNT\x12\x1c\n\x14\x63oin_single_discount\x18\x01 \x01(\r\x12\x1b\n\x13\x63oin_multi_discount\x18\x02 \x01(\r\x12\x1d\n\x15money_single_discount\x18\x03 \x01(\r\x12\x1c\n\x14money_multi_discount\x18\x04 \x01(\r\x12\"\n\x1asuper_money_multi_discount\x18\x05 \x01(\r\"[\n\x14SCDT_RECHARGE_REWARD\x12\n\n\x02id\x18\x01 \x02(\r\x12\x1b\n\x13target_recharge_cnt\x18\x02 \x02(\r\x12\x1a\n\x06reward\x18\x03 \x03(\x0b\x32\n.ResReward\"L\n\x1fSCPKG_NTF_REWARD_DAILY_RECHARGE\x12)\n\x0e\x64\x61ily_recharge\x18\x01 \x03(\x0b\x32\x11.ResDailyRecharge\"I\n\x1eSCPKG_NTF_REWARD_SECT_RECHARGE\x12\'\n\rsect_recharge\x18\x01 \x03(\x0b\x32\x10.ResSectRecharge\"G\n SCPKG_NTF_REWARD_PRIZEDROW_COUNT\x12#\n\x08\x63ount_to\x18\x01 \x03(\x0b\x32\x11.ResCountToReward\"N\n\x1dSCPKG_NTF_REWARD_RESOURCE_BOX\x12-\n\x0cresource_box\x18\x01 \x03(\x0b\x32\x17.ResActivityResourceBox\"I\n\x1eSCPKG_NTF_REWARD_TIME_RECHARGE\x12\'\n\rtime_recharge\x18\x01 \x03(\x0b\x32\x10.ResTimeRecharge\"I\n\x1eSCPKG_NTF_REWARD_OPEN_RECHARGE\x12\'\n\ropen_recharge\x18\x01 \x03(\x0b\x32\x10.ResOpenRecharge\"$\n\x16\x43SPKG_ITEM_COLLECT_REQ\x12\n\n\x02id\x18\x01 \x01(\r\"X\n\x16SCPKG_ITEM_COLLECT_RES\x12\x0e\n\x06result\x18\x01 \x01(\x05\x12\n\n\x02id\x18\x02 \x01(\r\x12\"\n\tdrop_info\x18\x03 \x01(\x0b\x32\x0f.CSDT_DROP_INFO\",\n\x1e\x43SPKG_TIME_RECHARGE_REWARD_REQ\x12\n\n\x02id\x18\x01 \x01(\r\"o\n\x1eSCPKG_TIME_RECHARGE_REWARD_RES\x12\x0e\n\x06result\x18\x01 \x01(\x05\x12=\n\x12time_recharge_info\x18\x02 \x01(\x0b\x32!.SCDT_ACTIVITY_TIME_RECHARGE_INFO\"X\n\x17SCPKG_NTF_TIME_RECHARGE\x12=\n\x12time_recharge_info\x18\x01 \x01(\x0b\x32!.SCDT_ACTIVITY_TIME_RECHARGE_INFO\",\n\x1e\x43SPKG_OPEN_RECHARGE_REWARD_REQ\x12\n\n\x02id\x18\x01 \x01(\r\"o\n\x1eSCPKG_OPEN_RECHARGE_REWARD_RES\x12\x0e\n\x06result\x18\x01 \x01(\x05\x12=\n\x12open_recharge_info\x18\x02 \x01(\x0b\x32!.SCDT_ACTIVITY_OPEN_RECHARGE_INFO\"X\n\x17SCPKG_NTF_OPEN_RECHARGE\x12=\n\x12open_recharge_info\x18\x01 \x01(\x0b\x32!.SCDT_ACTIVITY_OPEN_RECHARGE_INFO')
   ,
-  dependencies=[protocommon_pb2.DESCRIPTOR,rescommon_pb2.DESCRIPTOR,])
+  dependencies=[protocommon_pb2.DESCRIPTOR,rescommon_pb2.DESCRIPTOR,res_pb2.DESCRIPTOR,])
 _sym_db.RegisterFileDescriptor(DESCRIPTOR)
 
 
@@ -74,8 +75,110 @@ _SCDT_ACTIVITY_RESOURCE_BOX_INFO = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=55,
-  serialized_end=213,
+  serialized_start=66,
+  serialized_end=224,
+)
+
+
+_SCDT_ACTIVITY_TIME_RECHARGE_INFO = _descriptor.Descriptor(
+  name='SCDT_ACTIVITY_TIME_RECHARGE_INFO',
+  full_name='SCDT_ACTIVITY_TIME_RECHARGE_INFO',
+  filename=None,
+  file=DESCRIPTOR,
+  containing_type=None,
+  fields=[
+    _descriptor.FieldDescriptor(
+      name='id', full_name='SCDT_ACTIVITY_TIME_RECHARGE_INFO.id', index=0,
+      number=1, type=13, cpp_type=3, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    _descriptor.FieldDescriptor(
+      name='product_id', full_name='SCDT_ACTIVITY_TIME_RECHARGE_INFO.product_id', index=1,
+      number=2, type=9, cpp_type=9, label=1,
+      has_default_value=False, default_value=_b("").decode('utf-8'),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    _descriptor.FieldDescriptor(
+      name='recharge_flag', full_name='SCDT_ACTIVITY_TIME_RECHARGE_INFO.recharge_flag', index=2,
+      number=3, type=13, cpp_type=3, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    _descriptor.FieldDescriptor(
+      name='reward_flag', full_name='SCDT_ACTIVITY_TIME_RECHARGE_INFO.reward_flag', index=3,
+      number=4, type=13, cpp_type=3, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+  ],
+  extensions=[
+  ],
+  nested_types=[],
+  enum_types=[
+  ],
+  options=None,
+  is_extendable=False,
+  extension_ranges=[],
+  oneofs=[
+  ],
+  serialized_start=226,
+  serialized_end=336,
+)
+
+
+_SCDT_ACTIVITY_OPEN_RECHARGE_INFO = _descriptor.Descriptor(
+  name='SCDT_ACTIVITY_OPEN_RECHARGE_INFO',
+  full_name='SCDT_ACTIVITY_OPEN_RECHARGE_INFO',
+  filename=None,
+  file=DESCRIPTOR,
+  containing_type=None,
+  fields=[
+    _descriptor.FieldDescriptor(
+      name='id', full_name='SCDT_ACTIVITY_OPEN_RECHARGE_INFO.id', index=0,
+      number=1, type=13, cpp_type=3, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    _descriptor.FieldDescriptor(
+      name='product_id', full_name='SCDT_ACTIVITY_OPEN_RECHARGE_INFO.product_id', index=1,
+      number=2, type=9, cpp_type=9, label=1,
+      has_default_value=False, default_value=_b("").decode('utf-8'),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    _descriptor.FieldDescriptor(
+      name='recharge_flag', full_name='SCDT_ACTIVITY_OPEN_RECHARGE_INFO.recharge_flag', index=2,
+      number=3, type=13, cpp_type=3, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    _descriptor.FieldDescriptor(
+      name='reward_flag', full_name='SCDT_ACTIVITY_OPEN_RECHARGE_INFO.reward_flag', index=3,
+      number=4, type=13, cpp_type=3, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+  ],
+  extensions=[
+  ],
+  nested_types=[],
+  enum_types=[
+  ],
+  options=None,
+  is_extendable=False,
+  extension_ranges=[],
+  oneofs=[
+  ],
+  serialized_start=338,
+  serialized_end=448,
 )
 
 
@@ -121,6 +224,27 @@ _SCDT_ACTIVITY_INFO = _descriptor.Descriptor(
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
+    _descriptor.FieldDescriptor(
+      name='time_recharge_info', full_name='SCDT_ACTIVITY_INFO.time_recharge_info', index=5,
+      number=6, type=11, cpp_type=10, label=1,
+      has_default_value=False, default_value=None,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    _descriptor.FieldDescriptor(
+      name='open_recharge_info', full_name='SCDT_ACTIVITY_INFO.open_recharge_info', index=6,
+      number=7, type=11, cpp_type=10, label=1,
+      has_default_value=False, default_value=None,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    _descriptor.FieldDescriptor(
+      name='once_activity_flag', full_name='SCDT_ACTIVITY_INFO.once_activity_flag', index=7,
+      number=8, type=13, cpp_type=3, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
   ],
   extensions=[
   ],
@@ -132,8 +256,8 @@ _SCDT_ACTIVITY_INFO = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=216,
-  serialized_end=526,
+  serialized_start=451,
+  serialized_end=915,
 )
 
 
@@ -172,6 +296,13 @@ _SCDT_ACTIVITY_CONTROL = _descriptor.Descriptor(
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
+    _descriptor.FieldDescriptor(
+      name='close_time', full_name='SCDT_ACTIVITY_CONTROL.close_time', index=4,
+      number=5, type=13, cpp_type=3, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
   ],
   extensions=[
   ],
@@ -183,8 +314,8 @@ _SCDT_ACTIVITY_CONTROL = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=528,
-  serialized_end=613,
+  serialized_start=917,
+  serialized_end=1022,
 )
 
 
@@ -213,8 +344,8 @@ _CSDT_ACTIVITY_BROADCAST = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=615,
-  serialized_end=654,
+  serialized_start=1024,
+  serialized_end=1063,
 )
 
 
@@ -257,8 +388,8 @@ _CSDT_ACTIVITY_STATUS_BROADCAST = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=656,
-  serialized_end=743,
+  serialized_start=1065,
+  serialized_end=1152,
 )
 
 
@@ -294,8 +425,8 @@ _SCPKG_ACTIVITY_CONTROL = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=745,
-  serialized_end=846,
+  serialized_start=1154,
+  serialized_end=1255,
 )
 
 
@@ -338,8 +469,8 @@ _SCPKG_ACTIVITY_INFO = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=849,
-  serialized_end=1020,
+  serialized_start=1258,
+  serialized_end=1429,
 )
 
 
@@ -389,8 +520,8 @@ _CSDT_BROAD_MSG = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=1023,
-  serialized_end=1186,
+  serialized_start=1432,
+  serialized_end=1595,
 )
 
 
@@ -433,8 +564,8 @@ _SCPKG_NTF_BROADCAST = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=1188,
-  serialized_end=1279,
+  serialized_start=1597,
+  serialized_end=1688,
 )
 
 
@@ -463,8 +594,8 @@ _SCPKG_GAME_PLAY_MODE_ACTIVITY_INFO = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=1281,
-  serialized_end=1346,
+  serialized_start=1690,
+  serialized_end=1755,
 )
 
 
@@ -493,8 +624,8 @@ _CSPKG_OPEN_RESOURCE_BOX_REQ = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=1348,
-  serialized_end=1391,
+  serialized_start=1757,
+  serialized_end=1800,
 )
 
 
@@ -537,8 +668,8 @@ _SCPKG_OPEN_RESOURCE_BOX_RES = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=1393,
-  serialized_end=1480,
+  serialized_start=1802,
+  serialized_end=1889,
 )
 
 
@@ -567,8 +698,8 @@ _SCPKG_ACTIVITY_RESOURCE_BOX_INFO = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=1482,
-  serialized_end=1581,
+  serialized_start=1891,
+  serialized_end=1990,
 )
 
 
@@ -604,8 +735,8 @@ _CSPKG_GET_COUNT_TO_REWARD_REQ = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=1583,
-  serialized_end=1640,
+  serialized_start=1992,
+  serialized_end=2049,
 )
 
 
@@ -655,8 +786,8 @@ _SCPKG_GET_COUNT_TO_REWARD_RES = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=1642,
-  serialized_end=1743,
+  serialized_start=2051,
+  serialized_end=2152,
 )
 
 
@@ -695,6 +826,13 @@ _SCPKG_NTF_ACTIVITY_DISCOUNT = _descriptor.Descriptor(
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
+    _descriptor.FieldDescriptor(
+      name='super_money_multi_discount', full_name='SCPKG_NTF_ACTIVITY_DISCOUNT.super_money_multi_discount', index=4,
+      number=5, type=13, cpp_type=3, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
   ],
   extensions=[
   ],
@@ -706,8 +844,500 @@ _SCPKG_NTF_ACTIVITY_DISCOUNT = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=1746,
-  serialized_end=1895,
+  serialized_start=2155,
+  serialized_end=2340,
+)
+
+
+_SCDT_RECHARGE_REWARD = _descriptor.Descriptor(
+  name='SCDT_RECHARGE_REWARD',
+  full_name='SCDT_RECHARGE_REWARD',
+  filename=None,
+  file=DESCRIPTOR,
+  containing_type=None,
+  fields=[
+    _descriptor.FieldDescriptor(
+      name='id', full_name='SCDT_RECHARGE_REWARD.id', index=0,
+      number=1, type=13, cpp_type=3, label=2,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    _descriptor.FieldDescriptor(
+      name='target_recharge_cnt', full_name='SCDT_RECHARGE_REWARD.target_recharge_cnt', index=1,
+      number=2, type=13, cpp_type=3, label=2,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    _descriptor.FieldDescriptor(
+      name='reward', full_name='SCDT_RECHARGE_REWARD.reward', index=2,
+      number=3, type=11, cpp_type=10, label=3,
+      has_default_value=False, default_value=[],
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+  ],
+  extensions=[
+  ],
+  nested_types=[],
+  enum_types=[
+  ],
+  options=None,
+  is_extendable=False,
+  extension_ranges=[],
+  oneofs=[
+  ],
+  serialized_start=2342,
+  serialized_end=2433,
+)
+
+
+_SCPKG_NTF_REWARD_DAILY_RECHARGE = _descriptor.Descriptor(
+  name='SCPKG_NTF_REWARD_DAILY_RECHARGE',
+  full_name='SCPKG_NTF_REWARD_DAILY_RECHARGE',
+  filename=None,
+  file=DESCRIPTOR,
+  containing_type=None,
+  fields=[
+    _descriptor.FieldDescriptor(
+      name='daily_recharge', full_name='SCPKG_NTF_REWARD_DAILY_RECHARGE.daily_recharge', index=0,
+      number=1, type=11, cpp_type=10, label=3,
+      has_default_value=False, default_value=[],
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+  ],
+  extensions=[
+  ],
+  nested_types=[],
+  enum_types=[
+  ],
+  options=None,
+  is_extendable=False,
+  extension_ranges=[],
+  oneofs=[
+  ],
+  serialized_start=2435,
+  serialized_end=2511,
+)
+
+
+_SCPKG_NTF_REWARD_SECT_RECHARGE = _descriptor.Descriptor(
+  name='SCPKG_NTF_REWARD_SECT_RECHARGE',
+  full_name='SCPKG_NTF_REWARD_SECT_RECHARGE',
+  filename=None,
+  file=DESCRIPTOR,
+  containing_type=None,
+  fields=[
+    _descriptor.FieldDescriptor(
+      name='sect_recharge', full_name='SCPKG_NTF_REWARD_SECT_RECHARGE.sect_recharge', index=0,
+      number=1, type=11, cpp_type=10, label=3,
+      has_default_value=False, default_value=[],
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+  ],
+  extensions=[
+  ],
+  nested_types=[],
+  enum_types=[
+  ],
+  options=None,
+  is_extendable=False,
+  extension_ranges=[],
+  oneofs=[
+  ],
+  serialized_start=2513,
+  serialized_end=2586,
+)
+
+
+_SCPKG_NTF_REWARD_PRIZEDROW_COUNT = _descriptor.Descriptor(
+  name='SCPKG_NTF_REWARD_PRIZEDROW_COUNT',
+  full_name='SCPKG_NTF_REWARD_PRIZEDROW_COUNT',
+  filename=None,
+  file=DESCRIPTOR,
+  containing_type=None,
+  fields=[
+    _descriptor.FieldDescriptor(
+      name='count_to', full_name='SCPKG_NTF_REWARD_PRIZEDROW_COUNT.count_to', index=0,
+      number=1, type=11, cpp_type=10, label=3,
+      has_default_value=False, default_value=[],
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+  ],
+  extensions=[
+  ],
+  nested_types=[],
+  enum_types=[
+  ],
+  options=None,
+  is_extendable=False,
+  extension_ranges=[],
+  oneofs=[
+  ],
+  serialized_start=2588,
+  serialized_end=2659,
+)
+
+
+_SCPKG_NTF_REWARD_RESOURCE_BOX = _descriptor.Descriptor(
+  name='SCPKG_NTF_REWARD_RESOURCE_BOX',
+  full_name='SCPKG_NTF_REWARD_RESOURCE_BOX',
+  filename=None,
+  file=DESCRIPTOR,
+  containing_type=None,
+  fields=[
+    _descriptor.FieldDescriptor(
+      name='resource_box', full_name='SCPKG_NTF_REWARD_RESOURCE_BOX.resource_box', index=0,
+      number=1, type=11, cpp_type=10, label=3,
+      has_default_value=False, default_value=[],
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+  ],
+  extensions=[
+  ],
+  nested_types=[],
+  enum_types=[
+  ],
+  options=None,
+  is_extendable=False,
+  extension_ranges=[],
+  oneofs=[
+  ],
+  serialized_start=2661,
+  serialized_end=2739,
+)
+
+
+_SCPKG_NTF_REWARD_TIME_RECHARGE = _descriptor.Descriptor(
+  name='SCPKG_NTF_REWARD_TIME_RECHARGE',
+  full_name='SCPKG_NTF_REWARD_TIME_RECHARGE',
+  filename=None,
+  file=DESCRIPTOR,
+  containing_type=None,
+  fields=[
+    _descriptor.FieldDescriptor(
+      name='time_recharge', full_name='SCPKG_NTF_REWARD_TIME_RECHARGE.time_recharge', index=0,
+      number=1, type=11, cpp_type=10, label=3,
+      has_default_value=False, default_value=[],
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+  ],
+  extensions=[
+  ],
+  nested_types=[],
+  enum_types=[
+  ],
+  options=None,
+  is_extendable=False,
+  extension_ranges=[],
+  oneofs=[
+  ],
+  serialized_start=2741,
+  serialized_end=2814,
+)
+
+
+_SCPKG_NTF_REWARD_OPEN_RECHARGE = _descriptor.Descriptor(
+  name='SCPKG_NTF_REWARD_OPEN_RECHARGE',
+  full_name='SCPKG_NTF_REWARD_OPEN_RECHARGE',
+  filename=None,
+  file=DESCRIPTOR,
+  containing_type=None,
+  fields=[
+    _descriptor.FieldDescriptor(
+      name='open_recharge', full_name='SCPKG_NTF_REWARD_OPEN_RECHARGE.open_recharge', index=0,
+      number=1, type=11, cpp_type=10, label=3,
+      has_default_value=False, default_value=[],
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+  ],
+  extensions=[
+  ],
+  nested_types=[],
+  enum_types=[
+  ],
+  options=None,
+  is_extendable=False,
+  extension_ranges=[],
+  oneofs=[
+  ],
+  serialized_start=2816,
+  serialized_end=2889,
+)
+
+
+_CSPKG_ITEM_COLLECT_REQ = _descriptor.Descriptor(
+  name='CSPKG_ITEM_COLLECT_REQ',
+  full_name='CSPKG_ITEM_COLLECT_REQ',
+  filename=None,
+  file=DESCRIPTOR,
+  containing_type=None,
+  fields=[
+    _descriptor.FieldDescriptor(
+      name='id', full_name='CSPKG_ITEM_COLLECT_REQ.id', index=0,
+      number=1, type=13, cpp_type=3, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+  ],
+  extensions=[
+  ],
+  nested_types=[],
+  enum_types=[
+  ],
+  options=None,
+  is_extendable=False,
+  extension_ranges=[],
+  oneofs=[
+  ],
+  serialized_start=2891,
+  serialized_end=2927,
+)
+
+
+_SCPKG_ITEM_COLLECT_RES = _descriptor.Descriptor(
+  name='SCPKG_ITEM_COLLECT_RES',
+  full_name='SCPKG_ITEM_COLLECT_RES',
+  filename=None,
+  file=DESCRIPTOR,
+  containing_type=None,
+  fields=[
+    _descriptor.FieldDescriptor(
+      name='result', full_name='SCPKG_ITEM_COLLECT_RES.result', index=0,
+      number=1, type=5, cpp_type=1, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    _descriptor.FieldDescriptor(
+      name='id', full_name='SCPKG_ITEM_COLLECT_RES.id', index=1,
+      number=2, type=13, cpp_type=3, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    _descriptor.FieldDescriptor(
+      name='drop_info', full_name='SCPKG_ITEM_COLLECT_RES.drop_info', index=2,
+      number=3, type=11, cpp_type=10, label=1,
+      has_default_value=False, default_value=None,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+  ],
+  extensions=[
+  ],
+  nested_types=[],
+  enum_types=[
+  ],
+  options=None,
+  is_extendable=False,
+  extension_ranges=[],
+  oneofs=[
+  ],
+  serialized_start=2929,
+  serialized_end=3017,
+)
+
+
+_CSPKG_TIME_RECHARGE_REWARD_REQ = _descriptor.Descriptor(
+  name='CSPKG_TIME_RECHARGE_REWARD_REQ',
+  full_name='CSPKG_TIME_RECHARGE_REWARD_REQ',
+  filename=None,
+  file=DESCRIPTOR,
+  containing_type=None,
+  fields=[
+    _descriptor.FieldDescriptor(
+      name='id', full_name='CSPKG_TIME_RECHARGE_REWARD_REQ.id', index=0,
+      number=1, type=13, cpp_type=3, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+  ],
+  extensions=[
+  ],
+  nested_types=[],
+  enum_types=[
+  ],
+  options=None,
+  is_extendable=False,
+  extension_ranges=[],
+  oneofs=[
+  ],
+  serialized_start=3019,
+  serialized_end=3063,
+)
+
+
+_SCPKG_TIME_RECHARGE_REWARD_RES = _descriptor.Descriptor(
+  name='SCPKG_TIME_RECHARGE_REWARD_RES',
+  full_name='SCPKG_TIME_RECHARGE_REWARD_RES',
+  filename=None,
+  file=DESCRIPTOR,
+  containing_type=None,
+  fields=[
+    _descriptor.FieldDescriptor(
+      name='result', full_name='SCPKG_TIME_RECHARGE_REWARD_RES.result', index=0,
+      number=1, type=5, cpp_type=1, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    _descriptor.FieldDescriptor(
+      name='time_recharge_info', full_name='SCPKG_TIME_RECHARGE_REWARD_RES.time_recharge_info', index=1,
+      number=2, type=11, cpp_type=10, label=1,
+      has_default_value=False, default_value=None,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+  ],
+  extensions=[
+  ],
+  nested_types=[],
+  enum_types=[
+  ],
+  options=None,
+  is_extendable=False,
+  extension_ranges=[],
+  oneofs=[
+  ],
+  serialized_start=3065,
+  serialized_end=3176,
+)
+
+
+_SCPKG_NTF_TIME_RECHARGE = _descriptor.Descriptor(
+  name='SCPKG_NTF_TIME_RECHARGE',
+  full_name='SCPKG_NTF_TIME_RECHARGE',
+  filename=None,
+  file=DESCRIPTOR,
+  containing_type=None,
+  fields=[
+    _descriptor.FieldDescriptor(
+      name='time_recharge_info', full_name='SCPKG_NTF_TIME_RECHARGE.time_recharge_info', index=0,
+      number=1, type=11, cpp_type=10, label=1,
+      has_default_value=False, default_value=None,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+  ],
+  extensions=[
+  ],
+  nested_types=[],
+  enum_types=[
+  ],
+  options=None,
+  is_extendable=False,
+  extension_ranges=[],
+  oneofs=[
+  ],
+  serialized_start=3178,
+  serialized_end=3266,
+)
+
+
+_CSPKG_OPEN_RECHARGE_REWARD_REQ = _descriptor.Descriptor(
+  name='CSPKG_OPEN_RECHARGE_REWARD_REQ',
+  full_name='CSPKG_OPEN_RECHARGE_REWARD_REQ',
+  filename=None,
+  file=DESCRIPTOR,
+  containing_type=None,
+  fields=[
+    _descriptor.FieldDescriptor(
+      name='id', full_name='CSPKG_OPEN_RECHARGE_REWARD_REQ.id', index=0,
+      number=1, type=13, cpp_type=3, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+  ],
+  extensions=[
+  ],
+  nested_types=[],
+  enum_types=[
+  ],
+  options=None,
+  is_extendable=False,
+  extension_ranges=[],
+  oneofs=[
+  ],
+  serialized_start=3268,
+  serialized_end=3312,
+)
+
+
+_SCPKG_OPEN_RECHARGE_REWARD_RES = _descriptor.Descriptor(
+  name='SCPKG_OPEN_RECHARGE_REWARD_RES',
+  full_name='SCPKG_OPEN_RECHARGE_REWARD_RES',
+  filename=None,
+  file=DESCRIPTOR,
+  containing_type=None,
+  fields=[
+    _descriptor.FieldDescriptor(
+      name='result', full_name='SCPKG_OPEN_RECHARGE_REWARD_RES.result', index=0,
+      number=1, type=5, cpp_type=1, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    _descriptor.FieldDescriptor(
+      name='open_recharge_info', full_name='SCPKG_OPEN_RECHARGE_REWARD_RES.open_recharge_info', index=1,
+      number=2, type=11, cpp_type=10, label=1,
+      has_default_value=False, default_value=None,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+  ],
+  extensions=[
+  ],
+  nested_types=[],
+  enum_types=[
+  ],
+  options=None,
+  is_extendable=False,
+  extension_ranges=[],
+  oneofs=[
+  ],
+  serialized_start=3314,
+  serialized_end=3425,
+)
+
+
+_SCPKG_NTF_OPEN_RECHARGE = _descriptor.Descriptor(
+  name='SCPKG_NTF_OPEN_RECHARGE',
+  full_name='SCPKG_NTF_OPEN_RECHARGE',
+  filename=None,
+  file=DESCRIPTOR,
+  containing_type=None,
+  fields=[
+    _descriptor.FieldDescriptor(
+      name='open_recharge_info', full_name='SCPKG_NTF_OPEN_RECHARGE.open_recharge_info', index=0,
+      number=1, type=11, cpp_type=10, label=1,
+      has_default_value=False, default_value=None,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+  ],
+  extensions=[
+  ],
+  nested_types=[],
+  enum_types=[
+  ],
+  options=None,
+  is_extendable=False,
+  extension_ranges=[],
+  oneofs=[
+  ],
+  serialized_start=3427,
+  serialized_end=3515,
 )
 
 _SCDT_ACTIVITY_INFO.fields_by_name['cumulate_cost_info'].message_type = protocommon_pb2._SCDT_CUMULATE_COST_INFO
@@ -715,6 +1345,8 @@ _SCDT_ACTIVITY_INFO.fields_by_name['sect_recharge_info'].message_type = protocom
 _SCDT_ACTIVITY_INFO.fields_by_name['daily_recharge_info'].message_type = protocommon_pb2._SCDT_DAILY_RECHARGE_INFO
 _SCDT_ACTIVITY_INFO.fields_by_name['activity_prize_draw'].message_type = protocommon_pb2._SCDT_ACTIVITY_PRIZE_DRAW_INFO
 _SCDT_ACTIVITY_INFO.fields_by_name['activity_resource_box'].message_type = _SCDT_ACTIVITY_RESOURCE_BOX_INFO
+_SCDT_ACTIVITY_INFO.fields_by_name['time_recharge_info'].message_type = _SCDT_ACTIVITY_TIME_RECHARGE_INFO
+_SCDT_ACTIVITY_INFO.fields_by_name['open_recharge_info'].message_type = _SCDT_ACTIVITY_OPEN_RECHARGE_INFO
 _SCPKG_ACTIVITY_CONTROL.fields_by_name['activity_control'].message_type = _SCDT_ACTIVITY_CONTROL
 _SCPKG_ACTIVITY_INFO.fields_by_name['activity_control'].message_type = _SCDT_ACTIVITY_CONTROL
 _SCPKG_ACTIVITY_INFO.fields_by_name['activity_info'].message_type = _SCDT_ACTIVITY_INFO
@@ -725,7 +1357,21 @@ _SCPKG_NTF_BROADCAST.fields_by_name['broad_msg'].message_type = _CSDT_BROAD_MSG
 _SCPKG_OPEN_RESOURCE_BOX_RES.fields_by_name['reward'].message_type = rescommon_pb2._RESREWARD
 _SCPKG_ACTIVITY_RESOURCE_BOX_INFO.fields_by_name['activity_resource_box'].message_type = _SCDT_ACTIVITY_RESOURCE_BOX_INFO
 _SCPKG_GET_COUNT_TO_REWARD_RES.fields_by_name['reward'].message_type = rescommon_pb2._RESREWARD
+_SCDT_RECHARGE_REWARD.fields_by_name['reward'].message_type = rescommon_pb2._RESREWARD
+_SCPKG_NTF_REWARD_DAILY_RECHARGE.fields_by_name['daily_recharge'].message_type = res_pb2._RESDAILYRECHARGE
+_SCPKG_NTF_REWARD_SECT_RECHARGE.fields_by_name['sect_recharge'].message_type = res_pb2._RESSECTRECHARGE
+_SCPKG_NTF_REWARD_PRIZEDROW_COUNT.fields_by_name['count_to'].message_type = res_pb2._RESCOUNTTOREWARD
+_SCPKG_NTF_REWARD_RESOURCE_BOX.fields_by_name['resource_box'].message_type = res_pb2._RESACTIVITYRESOURCEBOX
+_SCPKG_NTF_REWARD_TIME_RECHARGE.fields_by_name['time_recharge'].message_type = res_pb2._RESTIMERECHARGE
+_SCPKG_NTF_REWARD_OPEN_RECHARGE.fields_by_name['open_recharge'].message_type = res_pb2._RESOPENRECHARGE
+_SCPKG_ITEM_COLLECT_RES.fields_by_name['drop_info'].message_type = protocommon_pb2._CSDT_DROP_INFO
+_SCPKG_TIME_RECHARGE_REWARD_RES.fields_by_name['time_recharge_info'].message_type = _SCDT_ACTIVITY_TIME_RECHARGE_INFO
+_SCPKG_NTF_TIME_RECHARGE.fields_by_name['time_recharge_info'].message_type = _SCDT_ACTIVITY_TIME_RECHARGE_INFO
+_SCPKG_OPEN_RECHARGE_REWARD_RES.fields_by_name['open_recharge_info'].message_type = _SCDT_ACTIVITY_OPEN_RECHARGE_INFO
+_SCPKG_NTF_OPEN_RECHARGE.fields_by_name['open_recharge_info'].message_type = _SCDT_ACTIVITY_OPEN_RECHARGE_INFO
 DESCRIPTOR.message_types_by_name['SCDT_ACTIVITY_RESOURCE_BOX_INFO'] = _SCDT_ACTIVITY_RESOURCE_BOX_INFO
+DESCRIPTOR.message_types_by_name['SCDT_ACTIVITY_TIME_RECHARGE_INFO'] = _SCDT_ACTIVITY_TIME_RECHARGE_INFO
+DESCRIPTOR.message_types_by_name['SCDT_ACTIVITY_OPEN_RECHARGE_INFO'] = _SCDT_ACTIVITY_OPEN_RECHARGE_INFO
 DESCRIPTOR.message_types_by_name['SCDT_ACTIVITY_INFO'] = _SCDT_ACTIVITY_INFO
 DESCRIPTOR.message_types_by_name['SCDT_ACTIVITY_CONTROL'] = _SCDT_ACTIVITY_CONTROL
 DESCRIPTOR.message_types_by_name['CSDT_ACTIVITY_BROADCAST'] = _CSDT_ACTIVITY_BROADCAST
@@ -741,6 +1387,21 @@ DESCRIPTOR.message_types_by_name['SCPKG_ACTIVITY_RESOURCE_BOX_INFO'] = _SCPKG_AC
 DESCRIPTOR.message_types_by_name['CSPKG_GET_COUNT_TO_REWARD_REQ'] = _CSPKG_GET_COUNT_TO_REWARD_REQ
 DESCRIPTOR.message_types_by_name['SCPKG_GET_COUNT_TO_REWARD_RES'] = _SCPKG_GET_COUNT_TO_REWARD_RES
 DESCRIPTOR.message_types_by_name['SCPKG_NTF_ACTIVITY_DISCOUNT'] = _SCPKG_NTF_ACTIVITY_DISCOUNT
+DESCRIPTOR.message_types_by_name['SCDT_RECHARGE_REWARD'] = _SCDT_RECHARGE_REWARD
+DESCRIPTOR.message_types_by_name['SCPKG_NTF_REWARD_DAILY_RECHARGE'] = _SCPKG_NTF_REWARD_DAILY_RECHARGE
+DESCRIPTOR.message_types_by_name['SCPKG_NTF_REWARD_SECT_RECHARGE'] = _SCPKG_NTF_REWARD_SECT_RECHARGE
+DESCRIPTOR.message_types_by_name['SCPKG_NTF_REWARD_PRIZEDROW_COUNT'] = _SCPKG_NTF_REWARD_PRIZEDROW_COUNT
+DESCRIPTOR.message_types_by_name['SCPKG_NTF_REWARD_RESOURCE_BOX'] = _SCPKG_NTF_REWARD_RESOURCE_BOX
+DESCRIPTOR.message_types_by_name['SCPKG_NTF_REWARD_TIME_RECHARGE'] = _SCPKG_NTF_REWARD_TIME_RECHARGE
+DESCRIPTOR.message_types_by_name['SCPKG_NTF_REWARD_OPEN_RECHARGE'] = _SCPKG_NTF_REWARD_OPEN_RECHARGE
+DESCRIPTOR.message_types_by_name['CSPKG_ITEM_COLLECT_REQ'] = _CSPKG_ITEM_COLLECT_REQ
+DESCRIPTOR.message_types_by_name['SCPKG_ITEM_COLLECT_RES'] = _SCPKG_ITEM_COLLECT_RES
+DESCRIPTOR.message_types_by_name['CSPKG_TIME_RECHARGE_REWARD_REQ'] = _CSPKG_TIME_RECHARGE_REWARD_REQ
+DESCRIPTOR.message_types_by_name['SCPKG_TIME_RECHARGE_REWARD_RES'] = _SCPKG_TIME_RECHARGE_REWARD_RES
+DESCRIPTOR.message_types_by_name['SCPKG_NTF_TIME_RECHARGE'] = _SCPKG_NTF_TIME_RECHARGE
+DESCRIPTOR.message_types_by_name['CSPKG_OPEN_RECHARGE_REWARD_REQ'] = _CSPKG_OPEN_RECHARGE_REWARD_REQ
+DESCRIPTOR.message_types_by_name['SCPKG_OPEN_RECHARGE_REWARD_RES'] = _SCPKG_OPEN_RECHARGE_REWARD_RES
+DESCRIPTOR.message_types_by_name['SCPKG_NTF_OPEN_RECHARGE'] = _SCPKG_NTF_OPEN_RECHARGE
 
 SCDT_ACTIVITY_RESOURCE_BOX_INFO = _reflection.GeneratedProtocolMessageType('SCDT_ACTIVITY_RESOURCE_BOX_INFO', (_message.Message,), dict(
   DESCRIPTOR = _SCDT_ACTIVITY_RESOURCE_BOX_INFO,
@@ -748,6 +1409,20 @@ SCDT_ACTIVITY_RESOURCE_BOX_INFO = _reflection.GeneratedProtocolMessageType('SCDT
   # @@protoc_insertion_point(class_scope:SCDT_ACTIVITY_RESOURCE_BOX_INFO)
   ))
 _sym_db.RegisterMessage(SCDT_ACTIVITY_RESOURCE_BOX_INFO)
+
+SCDT_ACTIVITY_TIME_RECHARGE_INFO = _reflection.GeneratedProtocolMessageType('SCDT_ACTIVITY_TIME_RECHARGE_INFO', (_message.Message,), dict(
+  DESCRIPTOR = _SCDT_ACTIVITY_TIME_RECHARGE_INFO,
+  __module__ = 'activity_pb2'
+  # @@protoc_insertion_point(class_scope:SCDT_ACTIVITY_TIME_RECHARGE_INFO)
+  ))
+_sym_db.RegisterMessage(SCDT_ACTIVITY_TIME_RECHARGE_INFO)
+
+SCDT_ACTIVITY_OPEN_RECHARGE_INFO = _reflection.GeneratedProtocolMessageType('SCDT_ACTIVITY_OPEN_RECHARGE_INFO', (_message.Message,), dict(
+  DESCRIPTOR = _SCDT_ACTIVITY_OPEN_RECHARGE_INFO,
+  __module__ = 'activity_pb2'
+  # @@protoc_insertion_point(class_scope:SCDT_ACTIVITY_OPEN_RECHARGE_INFO)
+  ))
+_sym_db.RegisterMessage(SCDT_ACTIVITY_OPEN_RECHARGE_INFO)
 
 SCDT_ACTIVITY_INFO = _reflection.GeneratedProtocolMessageType('SCDT_ACTIVITY_INFO', (_message.Message,), dict(
   DESCRIPTOR = _SCDT_ACTIVITY_INFO,
@@ -853,6 +1528,111 @@ SCPKG_NTF_ACTIVITY_DISCOUNT = _reflection.GeneratedProtocolMessageType('SCPKG_NT
   # @@protoc_insertion_point(class_scope:SCPKG_NTF_ACTIVITY_DISCOUNT)
   ))
 _sym_db.RegisterMessage(SCPKG_NTF_ACTIVITY_DISCOUNT)
+
+SCDT_RECHARGE_REWARD = _reflection.GeneratedProtocolMessageType('SCDT_RECHARGE_REWARD', (_message.Message,), dict(
+  DESCRIPTOR = _SCDT_RECHARGE_REWARD,
+  __module__ = 'activity_pb2'
+  # @@protoc_insertion_point(class_scope:SCDT_RECHARGE_REWARD)
+  ))
+_sym_db.RegisterMessage(SCDT_RECHARGE_REWARD)
+
+SCPKG_NTF_REWARD_DAILY_RECHARGE = _reflection.GeneratedProtocolMessageType('SCPKG_NTF_REWARD_DAILY_RECHARGE', (_message.Message,), dict(
+  DESCRIPTOR = _SCPKG_NTF_REWARD_DAILY_RECHARGE,
+  __module__ = 'activity_pb2'
+  # @@protoc_insertion_point(class_scope:SCPKG_NTF_REWARD_DAILY_RECHARGE)
+  ))
+_sym_db.RegisterMessage(SCPKG_NTF_REWARD_DAILY_RECHARGE)
+
+SCPKG_NTF_REWARD_SECT_RECHARGE = _reflection.GeneratedProtocolMessageType('SCPKG_NTF_REWARD_SECT_RECHARGE', (_message.Message,), dict(
+  DESCRIPTOR = _SCPKG_NTF_REWARD_SECT_RECHARGE,
+  __module__ = 'activity_pb2'
+  # @@protoc_insertion_point(class_scope:SCPKG_NTF_REWARD_SECT_RECHARGE)
+  ))
+_sym_db.RegisterMessage(SCPKG_NTF_REWARD_SECT_RECHARGE)
+
+SCPKG_NTF_REWARD_PRIZEDROW_COUNT = _reflection.GeneratedProtocolMessageType('SCPKG_NTF_REWARD_PRIZEDROW_COUNT', (_message.Message,), dict(
+  DESCRIPTOR = _SCPKG_NTF_REWARD_PRIZEDROW_COUNT,
+  __module__ = 'activity_pb2'
+  # @@protoc_insertion_point(class_scope:SCPKG_NTF_REWARD_PRIZEDROW_COUNT)
+  ))
+_sym_db.RegisterMessage(SCPKG_NTF_REWARD_PRIZEDROW_COUNT)
+
+SCPKG_NTF_REWARD_RESOURCE_BOX = _reflection.GeneratedProtocolMessageType('SCPKG_NTF_REWARD_RESOURCE_BOX', (_message.Message,), dict(
+  DESCRIPTOR = _SCPKG_NTF_REWARD_RESOURCE_BOX,
+  __module__ = 'activity_pb2'
+  # @@protoc_insertion_point(class_scope:SCPKG_NTF_REWARD_RESOURCE_BOX)
+  ))
+_sym_db.RegisterMessage(SCPKG_NTF_REWARD_RESOURCE_BOX)
+
+SCPKG_NTF_REWARD_TIME_RECHARGE = _reflection.GeneratedProtocolMessageType('SCPKG_NTF_REWARD_TIME_RECHARGE', (_message.Message,), dict(
+  DESCRIPTOR = _SCPKG_NTF_REWARD_TIME_RECHARGE,
+  __module__ = 'activity_pb2'
+  # @@protoc_insertion_point(class_scope:SCPKG_NTF_REWARD_TIME_RECHARGE)
+  ))
+_sym_db.RegisterMessage(SCPKG_NTF_REWARD_TIME_RECHARGE)
+
+SCPKG_NTF_REWARD_OPEN_RECHARGE = _reflection.GeneratedProtocolMessageType('SCPKG_NTF_REWARD_OPEN_RECHARGE', (_message.Message,), dict(
+  DESCRIPTOR = _SCPKG_NTF_REWARD_OPEN_RECHARGE,
+  __module__ = 'activity_pb2'
+  # @@protoc_insertion_point(class_scope:SCPKG_NTF_REWARD_OPEN_RECHARGE)
+  ))
+_sym_db.RegisterMessage(SCPKG_NTF_REWARD_OPEN_RECHARGE)
+
+CSPKG_ITEM_COLLECT_REQ = _reflection.GeneratedProtocolMessageType('CSPKG_ITEM_COLLECT_REQ', (_message.Message,), dict(
+  DESCRIPTOR = _CSPKG_ITEM_COLLECT_REQ,
+  __module__ = 'activity_pb2'
+  # @@protoc_insertion_point(class_scope:CSPKG_ITEM_COLLECT_REQ)
+  ))
+_sym_db.RegisterMessage(CSPKG_ITEM_COLLECT_REQ)
+
+SCPKG_ITEM_COLLECT_RES = _reflection.GeneratedProtocolMessageType('SCPKG_ITEM_COLLECT_RES', (_message.Message,), dict(
+  DESCRIPTOR = _SCPKG_ITEM_COLLECT_RES,
+  __module__ = 'activity_pb2'
+  # @@protoc_insertion_point(class_scope:SCPKG_ITEM_COLLECT_RES)
+  ))
+_sym_db.RegisterMessage(SCPKG_ITEM_COLLECT_RES)
+
+CSPKG_TIME_RECHARGE_REWARD_REQ = _reflection.GeneratedProtocolMessageType('CSPKG_TIME_RECHARGE_REWARD_REQ', (_message.Message,), dict(
+  DESCRIPTOR = _CSPKG_TIME_RECHARGE_REWARD_REQ,
+  __module__ = 'activity_pb2'
+  # @@protoc_insertion_point(class_scope:CSPKG_TIME_RECHARGE_REWARD_REQ)
+  ))
+_sym_db.RegisterMessage(CSPKG_TIME_RECHARGE_REWARD_REQ)
+
+SCPKG_TIME_RECHARGE_REWARD_RES = _reflection.GeneratedProtocolMessageType('SCPKG_TIME_RECHARGE_REWARD_RES', (_message.Message,), dict(
+  DESCRIPTOR = _SCPKG_TIME_RECHARGE_REWARD_RES,
+  __module__ = 'activity_pb2'
+  # @@protoc_insertion_point(class_scope:SCPKG_TIME_RECHARGE_REWARD_RES)
+  ))
+_sym_db.RegisterMessage(SCPKG_TIME_RECHARGE_REWARD_RES)
+
+SCPKG_NTF_TIME_RECHARGE = _reflection.GeneratedProtocolMessageType('SCPKG_NTF_TIME_RECHARGE', (_message.Message,), dict(
+  DESCRIPTOR = _SCPKG_NTF_TIME_RECHARGE,
+  __module__ = 'activity_pb2'
+  # @@protoc_insertion_point(class_scope:SCPKG_NTF_TIME_RECHARGE)
+  ))
+_sym_db.RegisterMessage(SCPKG_NTF_TIME_RECHARGE)
+
+CSPKG_OPEN_RECHARGE_REWARD_REQ = _reflection.GeneratedProtocolMessageType('CSPKG_OPEN_RECHARGE_REWARD_REQ', (_message.Message,), dict(
+  DESCRIPTOR = _CSPKG_OPEN_RECHARGE_REWARD_REQ,
+  __module__ = 'activity_pb2'
+  # @@protoc_insertion_point(class_scope:CSPKG_OPEN_RECHARGE_REWARD_REQ)
+  ))
+_sym_db.RegisterMessage(CSPKG_OPEN_RECHARGE_REWARD_REQ)
+
+SCPKG_OPEN_RECHARGE_REWARD_RES = _reflection.GeneratedProtocolMessageType('SCPKG_OPEN_RECHARGE_REWARD_RES', (_message.Message,), dict(
+  DESCRIPTOR = _SCPKG_OPEN_RECHARGE_REWARD_RES,
+  __module__ = 'activity_pb2'
+  # @@protoc_insertion_point(class_scope:SCPKG_OPEN_RECHARGE_REWARD_RES)
+  ))
+_sym_db.RegisterMessage(SCPKG_OPEN_RECHARGE_REWARD_RES)
+
+SCPKG_NTF_OPEN_RECHARGE = _reflection.GeneratedProtocolMessageType('SCPKG_NTF_OPEN_RECHARGE', (_message.Message,), dict(
+  DESCRIPTOR = _SCPKG_NTF_OPEN_RECHARGE,
+  __module__ = 'activity_pb2'
+  # @@protoc_insertion_point(class_scope:SCPKG_NTF_OPEN_RECHARGE)
+  ))
+_sym_db.RegisterMessage(SCPKG_NTF_OPEN_RECHARGE)
 
 
 # @@protoc_insertion_point(module_scope)

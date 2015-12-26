@@ -148,6 +148,9 @@ class ServerControl(object):
                 'rank_info': ss.get_rank_pos(self.uid, world_id, int(x['EnumCd'])),
             }, rank_list)
         ret['rank_list'] = rank_list
+
+        month_card = ss.get_player_month_card(self.uid, world_id)
+        ret['month_remain_days'] = month_card.get('month_remain_days', 0)
         return ret
 
     def _send_mail(self, title, content, acc=[]):
@@ -394,4 +397,11 @@ class ServerControl(object):
         for k in rank_list:
             if k['rank_id'] != 1 and k['rank_info']['rank_pos'] > 0:
                 ret = ss.del_player_from_rank(self.uid, world_id, k['rank_id'])
+        return ret
+
+    def change_month_card_remain_days(self, days):
+        (ss, uin, world_id, world_info) = self._params()
+        if ss is None:
+            return self.socketerror
+        ret = ss.change_player_month_card(self.uid, world_id, days)
         return ret

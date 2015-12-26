@@ -3,6 +3,7 @@
 
 import sys
 _b=sys.version_info[0]<3 and (lambda x:x) or (lambda x:x.encode('latin1'))
+from google.protobuf.internal import enum_type_wrapper
 from google.protobuf import descriptor as _descriptor
 from google.protobuf import message as _message
 from google.protobuf import reflection as _reflection
@@ -18,10 +19,50 @@ _sym_db = _symbol_database.Default()
 DESCRIPTOR = _descriptor.FileDescriptor(
   name='chat.proto',
   package='',
-  serialized_pb=_b('\n\nchat.proto\".\n\x18\x43SPKG_REMOVE_PRIVATE_MSG\x12\x12\n\ntarget_uid\x18\x01 \x01(\r\"K\n\x11\x43SPKG_CMD_CHATMSG\x12\x10\n\x08msg_data\x18\x01 \x01(\t\x12\x10\n\x08msg_type\x18\x02 \x01(\r\x12\x12\n\ntarget_uid\x18\x03 \x01(\r\"\xb9\x01\n\x11SCPKG_CMD_CHATMSG\x12\x14\n\x0c\x66rom_role_id\x18\x01 \x01(\r\x12\x0c\n\x04\x66rom\x18\x02 \x01(\t\x12\x10\n\x08msg_data\x18\x03 \x01(\t\x12\x10\n\x08msg_type\x18\x04 \x01(\r\x12\x10\n\x08msg_time\x18\x05 \x01(\r\x12#\n\x1bsender_cumulate_recharge_id\x18\x06 \x01(\r\x12\x12\n\nto_role_id\x18\x07 \x01(\r\x12\x11\n\tis_system\x18\x08 \x01(\x08\"2\n\x14SCPKG_CHAT_BAN_ERROR\x12\x1a\n\x12left_chat_ban_time\x18\x01 \x01(\r\"*\n\x15SCPKG_CHAT_FAST_ERROR\x12\x11\n\tleft_time\x18\x01 \x01(\r\"/\n\x1c\x43SPKG_REPORT_PLAYER_CHAT_REQ\x12\x0f\n\x07role_id\x18\x01 \x01(\r')
+  serialized_pb=_b('\n\nchat.proto\".\n\x18\x43SPKG_REMOVE_PRIVATE_MSG\x12\x12\n\ntarget_uid\x18\x01 \x01(\r\"K\n\x11\x43SPKG_CMD_CHATMSG\x12\x10\n\x08msg_data\x18\x01 \x01(\t\x12\x10\n\x08msg_type\x18\x02 \x01(\r\x12\x12\n\ntarget_uid\x18\x03 \x01(\r\"\xb9\x01\n\x11SCPKG_CMD_CHATMSG\x12\x14\n\x0c\x66rom_role_id\x18\x01 \x01(\r\x12\x0c\n\x04\x66rom\x18\x02 \x01(\t\x12\x10\n\x08msg_data\x18\x03 \x01(\t\x12\x10\n\x08msg_type\x18\x04 \x01(\r\x12\x10\n\x08msg_time\x18\x05 \x01(\r\x12#\n\x1bsender_cumulate_recharge_id\x18\x06 \x01(\r\x12\x12\n\nto_role_id\x18\x07 \x01(\r\x12\x11\n\tis_system\x18\x08 \x01(\x08\"2\n\x14SCPKG_CHAT_BAN_ERROR\x12\x1a\n\x12left_chat_ban_time\x18\x01 \x01(\r\"*\n\x15SCPKG_CHAT_FAST_ERROR\x12\x11\n\tleft_time\x18\x01 \x01(\r\"/\n\x1c\x43SPKG_REPORT_PLAYER_CHAT_REQ\x12\x0f\n\x07role_id\x18\x01 \x01(\r*\x94\x01\n\x11\x45NUM_CHAT_CHANNEL\x12\x16\n\x12\x43HAT_CHANNEL_WORLD\x10\x01\x12\x15\n\x11\x43HAT_CHANNEL_GANG\x10\x02\x12\x18\n\x14\x43HAT_CHANNEL_PRIVATE\x10\x03\x12 \n\x1c\x43HAT_CHANNEL_MULTIPLAYER_PVE\x10\x04\x12\x14\n\x10\x43HAT_CHANNEL_MAX\x10\x05')
 )
 _sym_db.RegisterFileDescriptor(DESCRIPTOR)
 
+_ENUM_CHAT_CHANNEL = _descriptor.EnumDescriptor(
+  name='ENUM_CHAT_CHANNEL',
+  full_name='ENUM_CHAT_CHANNEL',
+  filename=None,
+  file=DESCRIPTOR,
+  values=[
+    _descriptor.EnumValueDescriptor(
+      name='CHAT_CHANNEL_WORLD', index=0, number=1,
+      options=None,
+      type=None),
+    _descriptor.EnumValueDescriptor(
+      name='CHAT_CHANNEL_GANG', index=1, number=2,
+      options=None,
+      type=None),
+    _descriptor.EnumValueDescriptor(
+      name='CHAT_CHANNEL_PRIVATE', index=2, number=3,
+      options=None,
+      type=None),
+    _descriptor.EnumValueDescriptor(
+      name='CHAT_CHANNEL_MULTIPLAYER_PVE', index=3, number=4,
+      options=None,
+      type=None),
+    _descriptor.EnumValueDescriptor(
+      name='CHAT_CHANNEL_MAX', index=4, number=5,
+      options=None,
+      type=None),
+  ],
+  containing_type=None,
+  options=None,
+  serialized_start=473,
+  serialized_end=621,
+)
+_sym_db.RegisterEnumDescriptor(_ENUM_CHAT_CHANNEL)
+
+ENUM_CHAT_CHANNEL = enum_type_wrapper.EnumTypeWrapper(_ENUM_CHAT_CHANNEL)
+CHAT_CHANNEL_WORLD = 1
+CHAT_CHANNEL_GANG = 2
+CHAT_CHANNEL_PRIVATE = 3
+CHAT_CHANNEL_MULTIPLAYER_PVE = 4
+CHAT_CHANNEL_MAX = 5
 
 
 
@@ -273,6 +314,7 @@ DESCRIPTOR.message_types_by_name['SCPKG_CMD_CHATMSG'] = _SCPKG_CMD_CHATMSG
 DESCRIPTOR.message_types_by_name['SCPKG_CHAT_BAN_ERROR'] = _SCPKG_CHAT_BAN_ERROR
 DESCRIPTOR.message_types_by_name['SCPKG_CHAT_FAST_ERROR'] = _SCPKG_CHAT_FAST_ERROR
 DESCRIPTOR.message_types_by_name['CSPKG_REPORT_PLAYER_CHAT_REQ'] = _CSPKG_REPORT_PLAYER_CHAT_REQ
+DESCRIPTOR.enum_types_by_name['ENUM_CHAT_CHANNEL'] = _ENUM_CHAT_CHANNEL
 
 CSPKG_REMOVE_PRIVATE_MSG = _reflection.GeneratedProtocolMessageType('CSPKG_REMOVE_PRIVATE_MSG', (_message.Message,), dict(
   DESCRIPTOR = _CSPKG_REMOVE_PRIVATE_MSG,

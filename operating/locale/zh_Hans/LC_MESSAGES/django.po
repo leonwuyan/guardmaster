@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2015-12-16 15:24+0800\n"
-"PO-Revision-Date: 2015-12-16 15:21+0800\n"
+"POT-Creation-Date: 2015-12-26 15:59+0800\n"
+"PO-Revision-Date: 2015-12-26 16:00+0800\n"
 "Last-Translator: Raynor <raynor41@gmail.com>\n"
 "Language-Team: \n"
 "Language: zh_CN\n"
@@ -143,98 +143,103 @@ msgstr "经验"
 msgid "Level"
 msgstr "等级"
 
-#: templates/operating/all_mail.html:21 templates/operating/mail.html:25
+#: templates/operating/all_mail.html:21 templates/operating/mail.html:20
+#: templatetags/custom.py:249
+msgid "Factor"
+msgstr "因子"
+
+#: templates/operating/all_mail.html:22 templates/operating/mail.html:25
 msgid "GrowUp"
 msgstr "升阶"
 
-#: templates/operating/all_mail.html:22 templates/operating/base_info.html:27
+#: templates/operating/all_mail.html:23 templates/operating/base_info.html:27
 #: templates/operating/mail.html:26 templates/operating/notify.html:24
 msgid "Add"
 msgstr "添加"
 
-#: templates/operating/all_mail.html:23 templates/operating/mail.html:27
+#: templates/operating/all_mail.html:24 templates/operating/mail.html:27
 msgid "None"
 msgstr "无"
 
-#: templates/operating/all_mail.html:24 templates/operating/contact.html:12
+#: templates/operating/all_mail.html:25 templates/operating/contact.html:12
 #: templates/operating/notify.html:17
 msgid "Version"
 msgstr "客户端版本"
 
-#: templates/operating/all_mail.html:25
+#: templates/operating/all_mail.html:26
 msgid "Match"
 msgstr "匹配"
 
-#: templates/operating/all_mail.html:26 templates/operating/mail.html:28
+#: templates/operating/all_mail.html:27 templates/operating/mail.html:28
 msgid "Limited 6 Kind Of Accessory"
 msgstr "最多只能添加6种附件"
 
-#: templates/operating/all_mail.html:27 templates/operating/mail.html:29
+#: templates/operating/all_mail.html:28 templates/operating/mail.html:29
 msgid "Accessory Include Item And Equip"
 msgstr "附件包含物品和装备"
 
-#: templates/operating/all_mail.html:28 templates/operating/mail.html:30
+#: templates/operating/all_mail.html:29 templates/operating/mail.html:30
 #: templates/operating/notify.html:25
 msgid "Success"
 msgstr "成功"
 
-#: templates/operating/all_mail.html:29 templates/operating/mail.html:31
+#: templates/operating/all_mail.html:30 templates/operating/mail.html:31
 msgid "Please Check The Response Of Sending Mail"
 msgstr "请检查发送邮件的回执状态"
 
-#: templates/operating/all_mail.html:30 templates/operating/mail.html:32
+#: templates/operating/all_mail.html:31 templates/operating/mail.html:32
 #: templates/operating/notify.html:27
 msgid "Fail"
 msgstr "失败"
 
-#: templates/operating/all_mail.html:31 templates/operating/mail.html:33
+#: templates/operating/all_mail.html:32 templates/operating/mail.html:33
 #: templates/operating/notify.html:28
 msgid "Please Check The Input Is Correct"
 msgstr "请检查输入是否正确"
 
-#: templates/operating/all_mail.html:32 templates/operating/mail.html:34
+#: templates/operating/all_mail.html:33 templates/operating/mail.html:34
 msgid "Send"
 msgstr "发送"
 
-#: templates/operating/all_mail.html:33
+#: templates/operating/all_mail.html:34
 #: templates/operating/package_info.html:15
 #: templates/operating/pve_info.html:10
 msgid "Status"
 msgstr "状态"
 
-#: templates/operating/all_mail.html:34 templates/operating/mail.html:35
+#: templates/operating/all_mail.html:35 templates/operating/mail.html:35
 msgid "The Response Of Sending Mail"
 msgstr "邮件回执状态"
 
-#: templates/operating/all_mail.html:35 templates/operating/mail.html:36
+#: templates/operating/all_mail.html:36 templates/operating/mail.html:36
 msgid "Server"
 msgstr "服务器"
 
-#: templates/operating/all_mail.html:36 templates/operating/mail.html:37
+#: templates/operating/all_mail.html:37 templates/operating/mail.html:37
 msgid "GuardMaster"
 msgstr "操作员"
 
-#: templates/operating/all_mail.html:37 templates/operating/notify.html:8
+#: templates/operating/all_mail.html:38 templates/operating/notify.html:8
 msgid "Start Date"
 msgstr "开始时间"
 
-#: templates/operating/all_mail.html:38 templates/operating/notify.html:9
+#: templates/operating/all_mail.html:39 templates/operating/notify.html:9
 msgid "End Date"
 msgstr "结束时间"
 
-#: templates/operating/all_mail.html:39 templates/operating/mail.html:39
+#: templates/operating/all_mail.html:40 templates/operating/mail.html:39
 msgid "Lastest 20 Mails By Every Server"
 msgstr "每个服务器显示最后20条邮件"
 
-#: templates/operating/all_mail.html:40
+#: templates/operating/all_mail.html:41
 msgid "Only Old Players"
 msgstr "只有老玩家"
 
-#: templates/operating/all_mail.html:41
+#: templates/operating/all_mail.html:42
 msgid "Only New Players"
 msgstr "只有新玩家"
 
-#: templates/operating/all_mail.html:42
+#: templates/operating/all_mail.html:43
 msgid "All of Players"
 msgstr "所有玩家"
 
@@ -386,6 +391,10 @@ msgstr "此处填写禁言玩家理由"
 #: templates/operating/base_info.html:46
 msgid "Remark Of Account Ban"
 msgstr "此处填写锁定账号理由"
+
+#: templates/operating/base_info.html:47
+msgid "Month Card Remain Days"
+msgstr "月卡剩余天数"
 
 #: templates/operating/building_info.html:2
 msgid "Building Info"
@@ -613,10 +622,6 @@ msgstr "最多可写1000个UID"
 #: templates/operating/mail.html:9
 msgid "Split By ,"
 msgstr "以 , 分割"
-
-#: templates/operating/mail.html:20 templatetags/custom.py:249
-msgid "Factor"
-msgstr "因子"
 
 #: templates/operating/mail.html:38
 msgid "Pub Date"

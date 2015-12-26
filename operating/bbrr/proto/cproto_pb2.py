@@ -19,7 +19,7 @@ _sym_db = _symbol_database.Default()
 DESCRIPTOR = _descriptor.FileDescriptor(
   name='cproto.proto',
   package='',
-  serialized_pb=_b('\n\x0c\x63proto.proto\"S\n\x1a\x43S_3RD_PLAFFORM_FRIEND_GET\x12\x10\n\x08platform\x18\x01 \x02(\r\x12\x0f\n\x07uid_3rd\x18\x02 \x03(\t\x12\x12\n\ntime_stamp\x18\x03 \x02(\r\"<\n\x17\x43S_BIND_3RD_PLATFORM_ID\x12\x0f\n\x07uid_3rd\x18\x01 \x02(\t\x12\x10\n\x08platform\x18\x02 \x02(\r\"\"\n\x12SCPKG_CONNECT_KEEP\x12\x0c\n\x04text\x18\x01 \x01(\t\"4\n\x1c\x43SPKG_CMD_CLT_SETBITMARK_REQ\x12\x14\n\x0c\x63lt_bit_mark\x18\x01 \x01(\x04\"?\n\x1a\x43SPKG_CMD_SET_STORYBIT_REQ\x12\x0e\n\x06\x64un_id\x18\x01 \x01(\r\x12\x11\n\tstory_bit\x18\x02 \x01(\r\" \n\x10\x43SPKG_CMD_GM_REQ\x12\x0c\n\x04type\x18\x01 \x01(\r\"7\n\x15\x43SPKG_CMD_GM_TEXT_REQ\x12\x0f\n\x07gm_text\x18\x01 \x01(\t\x12\r\n\x05param\x18\x02 \x03(\x05\"&\n\x10\x43SDT_GM_PARAMOBJ\x12\x12\n\nparam_info\x18\x01 \x01(\t\"\xac\x02\n\x1f\x43SPKG_VERIFY_ROOM_COMPLETE_TIME\x12\x0e\n\x06result\x18\x01 \x01(\r\x12\x0e\n\x06\x64un_id\x18\x02 \x01(\r\x12\x10\n\x08\x64un_type\x18\x03 \x01(\r\x12\x0f\n\x07room_id\x18\x04 \x01(\r\x12\x13\n\x0b\x61\x63tual_time\x18\x05 \x01(\r\x12\x1d\n\x15limited_complete_time\x18\x06 \x01(\r\x12\x14\n\x0chero_ability\x18\x07 \x01(\r\x12\x19\n\x11room_base_ability\x18\x08 \x01(\r\x12 \n\x18\x63omplete_time_base_value\x18\t \x01(\r\x12\x0f\n\x07hero_id\x18\n \x01(\r\x12\x12\n\nhero_level\x18\x0b \x01(\r\x12\x1a\n\x12hero_buffer_dun_id\x18\x0c \x01(\r\"5\n#SCPKG_VERIFY_ROOM_COMPLETE_TIME_RES\x12\x0e\n\x06result\x18\x01 \x01(\r\"#\n\x13\x43SPKG_CMD_HEARTBEAT\x12\x0c\n\x04text\x18\x01 \x01(\t\"%\n\x0fSCPKG_NTF_ERROR\x12\x12\n\nerror_code\x18\x01 \x01(\x05\"6\n\x0fSCPKG_ERROR_MSG\x12\x11\n\terror_msg\x18\x01 \x01(\t\x12\x10\n\x08msg_hash\x18\x02 \x01(\r\"@\n\x10SCDT_NOTIFY_DATA\x12\r\n\x05title\x18\x01 \x01(\t\x12\x0c\n\x04link\x18\x02 \x01(\t\x12\x0f\n\x07\x63ontent\x18\x03 \x01(\t\"\x8e\x01\n\x10SCDT_NOTIFY_INFO\x12\x11\n\tnotify_id\x18\x01 \x01(\r\x12\x0c\n\x04name\x18\x02 \x01(\t\x12\x10\n\x08\x62\x65g_time\x18\x03 \x01(\r\x12\x10\n\x08\x65nd_time\x18\x04 \x01(\r\x12\x12\n\nis_display\x18\x05 \x01(\r\x12!\n\x06notify\x18\x06 \x01(\x0b\x32\x11.SCDT_NOTIFY_DATA\"-\n\x1bSCPKG_CMD_UNLOCKDUN_UNTILID\x12\x0e\n\x06\x64un_id\x18\x01 \x01(\r\"H\n\x12\x43SPKG_CMD_USE_ITEM\x12\x0f\n\x07hero_id\x18\x01 \x01(\r\x12\x0f\n\x07item_id\x18\x02 \x01(\r\x12\x10\n\x08item_cnt\x18\x03 \x01(\r\"\x89\x01\n\x15\x43SDT_PACKOBJ_CHG_INFO\x12\x0f\n\x07tab_pos\x18\x01 \x01(\r\x12\x10\n\x08item_pos\x18\x02 \x01(\r\x12\x0c\n\x04type\x18\x03 \x01(\r\x12\x0c\n\x04stat\x18\x04 \x01(\r\x12\x0f\n\x07\x62\x61se_id\x18\x05 \x01(\r\x12\r\n\x05\x63ount\x18\x06 \x01(\r\x12\x11\n\tfunc_type\x18\x07 \x01(\r\"X\n\x15SCPKG_ACT_PACKOBJ_CHG\x12\x0c\n\x04type\x18\x01 \x02(\r\x12\x31\n\x11pack_obj_chg_info\x18\x02 \x03(\x0b\x32\x16.CSDT_PACKOBJ_CHG_INFO\"1\n\x13\x43SDT_POS_COUNT_INFO\x12\x0b\n\x03pos\x18\x01 \x01(\x05\x12\r\n\x05\x63ount\x18\x02 \x01(\x05\"T\n\x15\x43SDT_PACKAGE_POS_INFO\x12\x0f\n\x07tab_pos\x18\x01 \x01(\x05\x12*\n\x0cst_pos_count\x18\x02 \x03(\x0b\x32\x14.CSDT_POS_COUNT_INFO\"@\n\x0e\x43SDT_POS_COUNT\x12.\n\x0est_package_pos\x18\x01 \x03(\x0b\x32\x16.CSDT_PACKAGE_POS_INFO\"4\n\x13SCPKG_CMD_SLOT_OPEN\x12\x0f\n\x07slot_id\x18\x01 \x03(\r\x12\x0c\n\x04type\x18\x02 \x01(\r\"K\n\x14SCPKG_CMD_EXP_CHANGE\x12\x0f\n\x07hero_id\x18\x01 \x01(\r\x12\x11\n\tcur_level\x18\x02 \x01(\r\x12\x0f\n\x07\x63ur_exp\x18\x03 \x01(\r\"n\n\x0c\x43S_RECONNECT\x12\x15\n\rreconnect_key\x18\x01 \x02(\r\x12\x15\n\rreconnect_pos\x18\x02 \x02(\r\x12\x17\n\x0f\x63lient_send_seq\x18\x03 \x02(\r\x12\x17\n\x0f\x63lient_recv_seq\x18\x04 \x02(\r\"\xb7\x01\n\x17SCNOTIFY_RECONNECT_INFO\x12\x13\n\x0b\x63\x61n_connect\x18\x01 \x02(\x08\x12\x15\n\rcan_reconnect\x18\x02 \x02(\x08\x12\x15\n\rreconnect_pos\x18\x03 \x02(\r\x12\x15\n\rreconnect_key\x18\x04 \x02(\r\x12\x10\n\x08game_key\x18\x05 \x02(\r\x12\x17\n\x0fserver_send_seq\x18\x06 \x02(\r\x12\x17\n\x0fserver_recv_seq\x18\x07 \x02(\r\"9\n\x13\x43SPKG_GIFT_CODE_REQ\x12\x11\n\tgift_code\x18\x01 \x01(\t\x12\x0f\n\x07gift_id\x18\x02 \x01(\r\"%\n\x13SCPKG_GIFT_CODE_RES\x12\x0e\n\x06result\x18\x01 \x01(\x05\"(\n\x12\x43SPKG_PURCHASE_REQ\x12\x12\n\nproduct_id\x18\x01 \x01(\t\"O\n\x15SCPKG_PURCHASE_ACCEPT\x12\x0e\n\x06result\x18\x01 \x02(\x05\x12\x12\n\ntrade_code\x18\x02 \x02(\t\x12\x12\n\nproduct_id\x18\x03 \x02(\t\"\x91\x01\n\x1e\x43SDT_PURCHASE_REQUEST_DELIVERY\x12\x12\n\nproduct_id\x18\x01 \x01(\t\x12\n\n\x02sn\x18\x02 \x01(\t\x12\x12\n\ntrade_code\x18\x03 \x01(\t\x12\x1a\n\x12transactionReceipt\x18\x05 \x01(\t\x12\x1f\n\x08platform\x18\x04 \x01(\x0e\x32\r.DealPlatform\"3\n%SCDT_PURCHASE_REQUEST_DELIVERY_FINISH\x12\n\n\x02sn\x18\x01 \x02(\t\"y\n\tCSPkgHead\x12\x10\n\x08head_len\x18\x01 \x01(\r\x12\x10\n\x08\x62ody_len\x18\x02 \x01(\r\x12\x11\n\tunique_id\x18\x03 \x01(\t\x12\x0b\n\x03\x63md\x18\x04 \x01(\x05\x12\x15\n\rupward_seq_no\x18\x05 \x01(\r\x12\x11\n\tcheck_sum\x18\x06 \x01(\r\"\x1d\n\nCSDT_ERROR\x12\x0f\n\x07reserve\x18\x01 \x01(\x05\"\xc5\x07\n\x1cSCPKG_DYNAMIC_CONFIG_REFRESH\x12\x19\n\x11month_card_switch\x18\x01 \x01(\x05\x12\x1a\n\x12growth_fund_switch\x18\x02 \x01(\x05\x12\x19\n\x11login_7day_switch\x18\x03 \x01(\x05\x12\"\n\x1a\x66irst_purchase_gift_switch\x18\x04 \x01(\x05\x12\x14\n\x0c\x63\x64key_switch\x18\x05 \x01(\x05\x12\x19\n\x11\x65nable_pay_switch\x18\x06 \x01(\x05\x12\x1a\n\x12user_action_switch\x18\x07 \x01(\x05\x12\x18\n\x10third_pay_switch\x18\x08 \x01(\x05\x12\x14\n\x0cshare_switch\x18\t \x01(\x05\x12\x1e\n\x16\x62uy_bless_count_switch\x18\n \x01(\x05\x12\x1c\n\x14\x65nable_friend_invite\x18\x0b \x01(\x05\x12\x19\n\x11world_boss_switch\x18\x0c \x01(\x05\x12\x1c\n\x14\x63umulate_cost_switch\x18\r \x01(\x05\x12\x19\n\x11pve_double_switch\x18\x0e \x01(\x05\x12\x1b\n\x13\x65lite_double_switch\x18\x0f \x01(\x05\x12\x1b\n\x13power_double_switch\x18\x10 \x01(\x05\x12\x1b\n\x13skill_double_switch\x18\x11 \x01(\x05\x12\x18\n\x10\x62oss_rush_switch\x18\x12 \x01(\x05\x12\x1b\n\x13\x65quip_fusion_switch\x18\x13 \x01(\x05\x12\x1e\n\x16multiplayer_pve_switch\x18\x14 \x01(\x05\x12\x15\n\rtalent_switch\x18\x15 \x01(\x05\x12\x1d\n\x15\x64\x61ily_recharge_reward\x18\x16 \x01(\x05\x12 \n\x18\x63umulate_recharge_reward\x18\x17 \x01(\x05\x12\x19\n\x11pve_activity_drop\x18\x19 \x01(\x05\x12\x1b\n\x13\x65lite_activity_drop\x18\x1a \x01(\x05\x12\x1f\n\x17\x65lite_activity_drop_exp\x18\x1b \x01(\x05\x12\x1d\n\x15\x65lite_exp_drop_double\x18\x1c \x01(\x05\x12\x1b\n\x13prize_draw_activity\x18\x1d \x01(\x05\x12\x1d\n\x15resource_box_activity\x18\x1e \x01(\x05\x12\x12\n\nmanul_drop\x18\x1f \x01(\x05\x12\x15\n\rreplay_switch\x18  \x01(\x05\x12\x1a\n\x12\x65quip_reset_switch\x18! \x01(\x05\x12\x1f\n\x17special_activity_switch\x18\" \x01(\x05\"Z\n\x0b\x43SDT_UI_OPT\x12\x0f\n\x07ui_type\x18\x01 \x01(\r\x12\x14\n\x0cui_from_type\x18\x02 \x01(\r\x12\x11\n\tclick_num\x18\x03 \x01(\r\x12\x11\n\tstay_time\x18\x04 \x01(\r\";\n\x15\x43SPKG_USER_ACTION_LOG\x12\x0e\n\x06\x61\x63tion\x18\x01 \x01(\r\x12\x12\n\nsub_action\x18\x02 \x01(\x05\"0\n\x11\x43SPKG_USER_CONFIG\x12\x1b\n\x13\x65nable_notification\x18\x01 \x02(\x08\"%\n\x12\x43SPKG_SELL_RUBBISH\x12\x0f\n\x07reserve\x18\x01 \x01(\r\"&\n\x12SCPKG_DO_SOMETHING\x12\x10\n\x08\x66ilePath\x18\x01 \x03(\t\"(\n\x16\x43SPKG_DO_SOMETHING_RES\x12\x0e\n\x06result\x18\x01 \x03(\x08*h\n\x14\x43S_3RD_PLATFORM_ENUM\x12\x18\n\x14\x43S_3RD_PLATFORM_NONE\x10\x00\x12\x1c\n\x18\x43S_3RD_PLATFORM_FACEBOOK\x10\x01\x12\x18\n\x14\x43S_3RD_PLATFORM_LINE\x10\x02*\xb6\x01\n\x0c\x44\x65\x61lPlatform\x12\x15\n\x11\x44\x65\x61lPlatform_none\x10\x00\x12\x13\n\x0f\x44\x65\x61lPlatform_37\x10\x01\x12\x13\n\x0f\x44\x65\x61lPlatform_fl\x10\x02\x12\x17\n\x13\x44\x65\x61lPlatform_friday\x10\x03\x12\x18\n\x14\x44\x65\x61lPlatform_offline\x10\x04\x12\x19\n\x15\x44\x65\x61lPlatform_twmobile\x10\x05\x12\x17\n\x13\x44\x65\x61lPlatform_iap_cn\x10\x06')
+  serialized_pb=_b('\n\x0c\x63proto.proto\"S\n\x1a\x43S_3RD_PLAFFORM_FRIEND_GET\x12\x10\n\x08platform\x18\x01 \x02(\r\x12\x0f\n\x07uid_3rd\x18\x02 \x03(\t\x12\x12\n\ntime_stamp\x18\x03 \x02(\r\"<\n\x17\x43S_BIND_3RD_PLATFORM_ID\x12\x0f\n\x07uid_3rd\x18\x01 \x02(\t\x12\x10\n\x08platform\x18\x02 \x02(\r\"H\n\x0bMessageData\x12\x11\n\ttype_hash\x18\x01 \x02(\r\x12\x0f\n\x07msg_str\x18\x02 \x02(\t\x12\x15\n\x06is_zip\x18\x03 \x01(\x08:\x05\x66\x61lse\")\n\x0bMessagePack\x12\x1a\n\x04msgs\x18\x01 \x03(\x0b\x32\x0c.MessageData\"\"\n\x12SCPKG_CONNECT_KEEP\x12\x0c\n\x04text\x18\x01 \x01(\t\"4\n\x1c\x43SPKG_CMD_CLT_SETBITMARK_REQ\x12\x14\n\x0c\x63lt_bit_mark\x18\x01 \x01(\x04\"?\n\x1a\x43SPKG_CMD_SET_STORYBIT_REQ\x12\x0e\n\x06\x64un_id\x18\x01 \x01(\r\x12\x11\n\tstory_bit\x18\x02 \x01(\r\" \n\x10\x43SPKG_CMD_GM_REQ\x12\x0c\n\x04type\x18\x01 \x01(\r\"7\n\x15\x43SPKG_CMD_GM_TEXT_REQ\x12\x0f\n\x07gm_text\x18\x01 \x01(\t\x12\r\n\x05param\x18\x02 \x03(\x05\"&\n\x10\x43SDT_GM_PARAMOBJ\x12\x12\n\nparam_info\x18\x01 \x01(\t\"\xac\x02\n\x1f\x43SPKG_VERIFY_ROOM_COMPLETE_TIME\x12\x0e\n\x06result\x18\x01 \x01(\r\x12\x0e\n\x06\x64un_id\x18\x02 \x01(\r\x12\x10\n\x08\x64un_type\x18\x03 \x01(\r\x12\x0f\n\x07room_id\x18\x04 \x01(\r\x12\x13\n\x0b\x61\x63tual_time\x18\x05 \x01(\r\x12\x1d\n\x15limited_complete_time\x18\x06 \x01(\r\x12\x14\n\x0chero_ability\x18\x07 \x01(\r\x12\x19\n\x11room_base_ability\x18\x08 \x01(\r\x12 \n\x18\x63omplete_time_base_value\x18\t \x01(\r\x12\x0f\n\x07hero_id\x18\n \x01(\r\x12\x12\n\nhero_level\x18\x0b \x01(\r\x12\x1a\n\x12hero_buffer_dun_id\x18\x0c \x01(\r\"5\n#SCPKG_VERIFY_ROOM_COMPLETE_TIME_RES\x12\x0e\n\x06result\x18\x01 \x01(\r\"#\n\x13\x43SPKG_CMD_HEARTBEAT\x12\x0c\n\x04text\x18\x01 \x01(\t\"%\n\x0fSCPKG_NTF_ERROR\x12\x12\n\nerror_code\x18\x01 \x01(\x05\"6\n\x0fSCPKG_ERROR_MSG\x12\x11\n\terror_msg\x18\x01 \x01(\t\x12\x10\n\x08msg_hash\x18\x02 \x01(\r\"@\n\x10SCDT_NOTIFY_DATA\x12\r\n\x05title\x18\x01 \x01(\t\x12\x0c\n\x04link\x18\x02 \x01(\t\x12\x0f\n\x07\x63ontent\x18\x03 \x01(\t\"\x8e\x01\n\x10SCDT_NOTIFY_INFO\x12\x11\n\tnotify_id\x18\x01 \x01(\r\x12\x0c\n\x04name\x18\x02 \x01(\t\x12\x10\n\x08\x62\x65g_time\x18\x03 \x01(\r\x12\x10\n\x08\x65nd_time\x18\x04 \x01(\r\x12\x12\n\nis_display\x18\x05 \x01(\r\x12!\n\x06notify\x18\x06 \x01(\x0b\x32\x11.SCDT_NOTIFY_DATA\"-\n\x1bSCPKG_CMD_UNLOCKDUN_UNTILID\x12\x0e\n\x06\x64un_id\x18\x01 \x01(\r\"H\n\x12\x43SPKG_CMD_USE_ITEM\x12\x0f\n\x07hero_id\x18\x01 \x01(\r\x12\x0f\n\x07item_id\x18\x02 \x01(\r\x12\x10\n\x08item_cnt\x18\x03 \x01(\r\"\x89\x01\n\x15\x43SDT_PACKOBJ_CHG_INFO\x12\x0f\n\x07tab_pos\x18\x01 \x01(\r\x12\x10\n\x08item_pos\x18\x02 \x01(\r\x12\x0c\n\x04type\x18\x03 \x01(\r\x12\x0c\n\x04stat\x18\x04 \x01(\r\x12\x0f\n\x07\x62\x61se_id\x18\x05 \x01(\r\x12\r\n\x05\x63ount\x18\x06 \x01(\r\x12\x11\n\tfunc_type\x18\x07 \x01(\r\"X\n\x15SCPKG_ACT_PACKOBJ_CHG\x12\x0c\n\x04type\x18\x01 \x02(\r\x12\x31\n\x11pack_obj_chg_info\x18\x02 \x03(\x0b\x32\x16.CSDT_PACKOBJ_CHG_INFO\"1\n\x13\x43SDT_POS_COUNT_INFO\x12\x0b\n\x03pos\x18\x01 \x01(\x05\x12\r\n\x05\x63ount\x18\x02 \x01(\x05\"T\n\x15\x43SDT_PACKAGE_POS_INFO\x12\x0f\n\x07tab_pos\x18\x01 \x01(\x05\x12*\n\x0cst_pos_count\x18\x02 \x03(\x0b\x32\x14.CSDT_POS_COUNT_INFO\"@\n\x0e\x43SDT_POS_COUNT\x12.\n\x0est_package_pos\x18\x01 \x03(\x0b\x32\x16.CSDT_PACKAGE_POS_INFO\"4\n\x13SCPKG_CMD_SLOT_OPEN\x12\x0f\n\x07slot_id\x18\x01 \x03(\r\x12\x0c\n\x04type\x18\x02 \x01(\r\"K\n\x14SCPKG_CMD_EXP_CHANGE\x12\x0f\n\x07hero_id\x18\x01 \x01(\r\x12\x11\n\tcur_level\x18\x02 \x01(\r\x12\x0f\n\x07\x63ur_exp\x18\x03 \x01(\r\"n\n\x0c\x43S_RECONNECT\x12\x15\n\rreconnect_key\x18\x01 \x02(\r\x12\x15\n\rreconnect_pos\x18\x02 \x02(\r\x12\x17\n\x0f\x63lient_send_seq\x18\x03 \x02(\r\x12\x17\n\x0f\x63lient_recv_seq\x18\x04 \x02(\r\"\xb7\x01\n\x17SCNOTIFY_RECONNECT_INFO\x12\x13\n\x0b\x63\x61n_connect\x18\x01 \x02(\x08\x12\x15\n\rcan_reconnect\x18\x02 \x02(\x08\x12\x15\n\rreconnect_pos\x18\x03 \x02(\r\x12\x15\n\rreconnect_key\x18\x04 \x02(\r\x12\x10\n\x08game_key\x18\x05 \x02(\r\x12\x17\n\x0fserver_send_seq\x18\x06 \x02(\r\x12\x17\n\x0fserver_recv_seq\x18\x07 \x02(\r\"V\n\x17SC_RECONNECT_EXTRA_INFO\x12\x14\n\x0cmax_hang_sec\x18\x01 \x02(\r\x12\x10\n\x08zip_byte\x18\x02 \x01(\r\x12\x13\n\x0b\x65nable_pack\x18\x03 \x01(\x08\"9\n\x13\x43SPKG_GIFT_CODE_REQ\x12\x11\n\tgift_code\x18\x01 \x01(\t\x12\x0f\n\x07gift_id\x18\x02 \x01(\r\"%\n\x13SCPKG_GIFT_CODE_RES\x12\x0e\n\x06result\x18\x01 \x01(\x05\"(\n\x12\x43SPKG_PURCHASE_REQ\x12\x12\n\nproduct_id\x18\x01 \x01(\t\"O\n\x15SCPKG_PURCHASE_ACCEPT\x12\x0e\n\x06result\x18\x01 \x02(\x05\x12\x12\n\ntrade_code\x18\x02 \x02(\t\x12\x12\n\nproduct_id\x18\x03 \x02(\t\"\x91\x01\n\x1e\x43SDT_PURCHASE_REQUEST_DELIVERY\x12\x12\n\nproduct_id\x18\x01 \x01(\t\x12\n\n\x02sn\x18\x02 \x01(\t\x12\x12\n\ntrade_code\x18\x03 \x01(\t\x12\x1a\n\x12transactionReceipt\x18\x05 \x01(\t\x12\x1f\n\x08platform\x18\x04 \x01(\x0e\x32\r.DealPlatform\"3\n%SCDT_PURCHASE_REQUEST_DELIVERY_FINISH\x12\n\n\x02sn\x18\x01 \x02(\t\"y\n\tCSPkgHead\x12\x10\n\x08head_len\x18\x01 \x01(\r\x12\x10\n\x08\x62ody_len\x18\x02 \x01(\r\x12\x11\n\tunique_id\x18\x03 \x01(\t\x12\x0b\n\x03\x63md\x18\x04 \x01(\x05\x12\x15\n\rupward_seq_no\x18\x05 \x01(\r\x12\x11\n\tcheck_sum\x18\x06 \x01(\r\"\x1d\n\nCSDT_ERROR\x12\x0f\n\x07reserve\x18\x01 \x01(\x05\"\xfb\x07\n\x1cSCPKG_DYNAMIC_CONFIG_REFRESH\x12\x19\n\x11month_card_switch\x18\x01 \x01(\x05\x12\x1a\n\x12growth_fund_switch\x18\x02 \x01(\x05\x12\x19\n\x11login_7day_switch\x18\x03 \x01(\x05\x12\"\n\x1a\x66irst_purchase_gift_switch\x18\x04 \x01(\x05\x12\x14\n\x0c\x63\x64key_switch\x18\x05 \x01(\x05\x12\x19\n\x11\x65nable_pay_switch\x18\x06 \x01(\x05\x12\x1a\n\x12user_action_switch\x18\x07 \x01(\x05\x12\x18\n\x10third_pay_switch\x18\x08 \x01(\x05\x12\x14\n\x0cshare_switch\x18\t \x01(\x05\x12\x1e\n\x16\x62uy_bless_count_switch\x18\n \x01(\x05\x12\x1c\n\x14\x65nable_friend_invite\x18\x0b \x01(\x05\x12\x19\n\x11world_boss_switch\x18\x0c \x01(\x05\x12\x1c\n\x14\x63umulate_cost_switch\x18\r \x01(\x05\x12\x19\n\x11pve_double_switch\x18\x0e \x01(\x05\x12\x1b\n\x13\x65lite_double_switch\x18\x0f \x01(\x05\x12\x1b\n\x13power_double_switch\x18\x10 \x01(\x05\x12\x1b\n\x13skill_double_switch\x18\x11 \x01(\x05\x12\x18\n\x10\x62oss_rush_switch\x18\x12 \x01(\x05\x12\x1b\n\x13\x65quip_fusion_switch\x18\x13 \x01(\x05\x12\x1e\n\x16multiplayer_pve_switch\x18\x14 \x01(\x05\x12\x15\n\rtalent_switch\x18\x15 \x01(\x05\x12\x1d\n\x15\x64\x61ily_recharge_reward\x18\x16 \x01(\x05\x12 \n\x18\x63umulate_recharge_reward\x18\x17 \x01(\x05\x12\x19\n\x11pve_activity_drop\x18\x19 \x01(\x05\x12\x1b\n\x13\x65lite_activity_drop\x18\x1a \x01(\x05\x12\x1f\n\x17\x65lite_activity_drop_exp\x18\x1b \x01(\x05\x12\x1d\n\x15\x65lite_exp_drop_double\x18\x1c \x01(\x05\x12\x1b\n\x13prize_draw_activity\x18\x1d \x01(\x05\x12\x1d\n\x15resource_box_activity\x18\x1e \x01(\x05\x12\x12\n\nmanul_drop\x18\x1f \x01(\x05\x12\x15\n\rreplay_switch\x18  \x01(\x05\x12\x1a\n\x12\x65quip_reset_switch\x18! \x01(\x05\x12\x1f\n\x17special_activity_switch\x18\" \x01(\x05\x12\x15\n\rfactor_switch\x18# \x01(\x05\x12\x1d\n\x15top_battle_3v3_switch\x18$ \x01(\x05\"Z\n\x0b\x43SDT_UI_OPT\x12\x0f\n\x07ui_type\x18\x01 \x01(\r\x12\x14\n\x0cui_from_type\x18\x02 \x01(\r\x12\x11\n\tclick_num\x18\x03 \x01(\r\x12\x11\n\tstay_time\x18\x04 \x01(\r\";\n\x15\x43SPKG_USER_ACTION_LOG\x12\x0e\n\x06\x61\x63tion\x18\x01 \x01(\r\x12\x12\n\nsub_action\x18\x02 \x01(\x05\"0\n\x11\x43SPKG_USER_CONFIG\x12\x1b\n\x13\x65nable_notification\x18\x01 \x02(\x08\"%\n\x12\x43SPKG_SELL_RUBBISH\x12\x0f\n\x07reserve\x18\x01 \x01(\r\"#\n\x11\x43SPKG_KICK_CLIENT\x12\x0e\n\x06reason\x18\x01 \x01(\r\"&\n\x12SCPKG_DO_SOMETHING\x12\x10\n\x08\x66ilePath\x18\x01 \x03(\t\"(\n\x16\x43SPKG_DO_SOMETHING_RES\x12\x0e\n\x06result\x18\x01 \x03(\x08*h\n\x14\x43S_3RD_PLATFORM_ENUM\x12\x18\n\x14\x43S_3RD_PLATFORM_NONE\x10\x00\x12\x1c\n\x18\x43S_3RD_PLATFORM_FACEBOOK\x10\x01\x12\x18\n\x14\x43S_3RD_PLATFORM_LINE\x10\x02*\xd1\x01\n\x0c\x44\x65\x61lPlatform\x12\x15\n\x11\x44\x65\x61lPlatform_none\x10\x00\x12\x13\n\x0f\x44\x65\x61lPlatform_37\x10\x01\x12\x13\n\x0f\x44\x65\x61lPlatform_fl\x10\x02\x12\x17\n\x13\x44\x65\x61lPlatform_friday\x10\x03\x12\x18\n\x14\x44\x65\x61lPlatform_offline\x10\x04\x12\x19\n\x15\x44\x65\x61lPlatform_twmobile\x10\x05\x12\x17\n\x13\x44\x65\x61lPlatform_iap_cn\x10\x06\x12\x19\n\x15\x44\x65\x61lPlatform_91Alipay\x10\x07')
 )
 _sym_db.RegisterFileDescriptor(DESCRIPTOR)
 
@@ -44,8 +44,8 @@ _CS_3RD_PLATFORM_ENUM = _descriptor.EnumDescriptor(
   ],
   containing_type=None,
   options=None,
-  serialized_start=4001,
-  serialized_end=4105,
+  serialized_start=4297,
+  serialized_end=4401,
 )
 _sym_db.RegisterEnumDescriptor(_CS_3RD_PLATFORM_ENUM)
 
@@ -84,11 +84,15 @@ _DEALPLATFORM = _descriptor.EnumDescriptor(
       name='DealPlatform_iap_cn', index=6, number=6,
       options=None,
       type=None),
+    _descriptor.EnumValueDescriptor(
+      name='DealPlatform_91Alipay', index=7, number=7,
+      options=None,
+      type=None),
   ],
   containing_type=None,
   options=None,
-  serialized_start=4108,
-  serialized_end=4290,
+  serialized_start=4404,
+  serialized_end=4613,
 )
 _sym_db.RegisterEnumDescriptor(_DEALPLATFORM)
 
@@ -103,6 +107,7 @@ DealPlatform_friday = 3
 DealPlatform_offline = 4
 DealPlatform_twmobile = 5
 DealPlatform_iap_cn = 6
+DealPlatform_91Alipay = 7
 
 
 
@@ -187,6 +192,80 @@ _CS_BIND_3RD_PLATFORM_ID = _descriptor.Descriptor(
 )
 
 
+_MESSAGEDATA = _descriptor.Descriptor(
+  name='MessageData',
+  full_name='MessageData',
+  filename=None,
+  file=DESCRIPTOR,
+  containing_type=None,
+  fields=[
+    _descriptor.FieldDescriptor(
+      name='type_hash', full_name='MessageData.type_hash', index=0,
+      number=1, type=13, cpp_type=3, label=2,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    _descriptor.FieldDescriptor(
+      name='msg_str', full_name='MessageData.msg_str', index=1,
+      number=2, type=9, cpp_type=9, label=2,
+      has_default_value=False, default_value=_b("").decode('utf-8'),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    _descriptor.FieldDescriptor(
+      name='is_zip', full_name='MessageData.is_zip', index=2,
+      number=3, type=8, cpp_type=7, label=1,
+      has_default_value=True, default_value=False,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+  ],
+  extensions=[
+  ],
+  nested_types=[],
+  enum_types=[
+  ],
+  options=None,
+  is_extendable=False,
+  extension_ranges=[],
+  oneofs=[
+  ],
+  serialized_start=163,
+  serialized_end=235,
+)
+
+
+_MESSAGEPACK = _descriptor.Descriptor(
+  name='MessagePack',
+  full_name='MessagePack',
+  filename=None,
+  file=DESCRIPTOR,
+  containing_type=None,
+  fields=[
+    _descriptor.FieldDescriptor(
+      name='msgs', full_name='MessagePack.msgs', index=0,
+      number=1, type=11, cpp_type=10, label=3,
+      has_default_value=False, default_value=[],
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+  ],
+  extensions=[
+  ],
+  nested_types=[],
+  enum_types=[
+  ],
+  options=None,
+  is_extendable=False,
+  extension_ranges=[],
+  oneofs=[
+  ],
+  serialized_start=237,
+  serialized_end=278,
+)
+
+
 _SCPKG_CONNECT_KEEP = _descriptor.Descriptor(
   name='SCPKG_CONNECT_KEEP',
   full_name='SCPKG_CONNECT_KEEP',
@@ -212,8 +291,8 @@ _SCPKG_CONNECT_KEEP = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=163,
-  serialized_end=197,
+  serialized_start=280,
+  serialized_end=314,
 )
 
 
@@ -242,8 +321,8 @@ _CSPKG_CMD_CLT_SETBITMARK_REQ = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=199,
-  serialized_end=251,
+  serialized_start=316,
+  serialized_end=368,
 )
 
 
@@ -279,8 +358,8 @@ _CSPKG_CMD_SET_STORYBIT_REQ = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=253,
-  serialized_end=316,
+  serialized_start=370,
+  serialized_end=433,
 )
 
 
@@ -309,8 +388,8 @@ _CSPKG_CMD_GM_REQ = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=318,
-  serialized_end=350,
+  serialized_start=435,
+  serialized_end=467,
 )
 
 
@@ -346,8 +425,8 @@ _CSPKG_CMD_GM_TEXT_REQ = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=352,
-  serialized_end=407,
+  serialized_start=469,
+  serialized_end=524,
 )
 
 
@@ -376,8 +455,8 @@ _CSDT_GM_PARAMOBJ = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=409,
-  serialized_end=447,
+  serialized_start=526,
+  serialized_end=564,
 )
 
 
@@ -483,8 +562,8 @@ _CSPKG_VERIFY_ROOM_COMPLETE_TIME = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=450,
-  serialized_end=750,
+  serialized_start=567,
+  serialized_end=867,
 )
 
 
@@ -513,8 +592,8 @@ _SCPKG_VERIFY_ROOM_COMPLETE_TIME_RES = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=752,
-  serialized_end=805,
+  serialized_start=869,
+  serialized_end=922,
 )
 
 
@@ -543,8 +622,8 @@ _CSPKG_CMD_HEARTBEAT = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=807,
-  serialized_end=842,
+  serialized_start=924,
+  serialized_end=959,
 )
 
 
@@ -573,8 +652,8 @@ _SCPKG_NTF_ERROR = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=844,
-  serialized_end=881,
+  serialized_start=961,
+  serialized_end=998,
 )
 
 
@@ -610,8 +689,8 @@ _SCPKG_ERROR_MSG = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=883,
-  serialized_end=937,
+  serialized_start=1000,
+  serialized_end=1054,
 )
 
 
@@ -654,8 +733,8 @@ _SCDT_NOTIFY_DATA = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=939,
-  serialized_end=1003,
+  serialized_start=1056,
+  serialized_end=1120,
 )
 
 
@@ -719,8 +798,8 @@ _SCDT_NOTIFY_INFO = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=1006,
-  serialized_end=1148,
+  serialized_start=1123,
+  serialized_end=1265,
 )
 
 
@@ -749,8 +828,8 @@ _SCPKG_CMD_UNLOCKDUN_UNTILID = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=1150,
-  serialized_end=1195,
+  serialized_start=1267,
+  serialized_end=1312,
 )
 
 
@@ -793,8 +872,8 @@ _CSPKG_CMD_USE_ITEM = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=1197,
-  serialized_end=1269,
+  serialized_start=1314,
+  serialized_end=1386,
 )
 
 
@@ -865,8 +944,8 @@ _CSDT_PACKOBJ_CHG_INFO = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=1272,
-  serialized_end=1409,
+  serialized_start=1389,
+  serialized_end=1526,
 )
 
 
@@ -902,8 +981,8 @@ _SCPKG_ACT_PACKOBJ_CHG = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=1411,
-  serialized_end=1499,
+  serialized_start=1528,
+  serialized_end=1616,
 )
 
 
@@ -939,8 +1018,8 @@ _CSDT_POS_COUNT_INFO = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=1501,
-  serialized_end=1550,
+  serialized_start=1618,
+  serialized_end=1667,
 )
 
 
@@ -976,8 +1055,8 @@ _CSDT_PACKAGE_POS_INFO = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=1552,
-  serialized_end=1636,
+  serialized_start=1669,
+  serialized_end=1753,
 )
 
 
@@ -1006,8 +1085,8 @@ _CSDT_POS_COUNT = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=1638,
-  serialized_end=1702,
+  serialized_start=1755,
+  serialized_end=1819,
 )
 
 
@@ -1043,8 +1122,8 @@ _SCPKG_CMD_SLOT_OPEN = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=1704,
-  serialized_end=1756,
+  serialized_start=1821,
+  serialized_end=1873,
 )
 
 
@@ -1087,8 +1166,8 @@ _SCPKG_CMD_EXP_CHANGE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=1758,
-  serialized_end=1833,
+  serialized_start=1875,
+  serialized_end=1950,
 )
 
 
@@ -1138,8 +1217,8 @@ _CS_RECONNECT = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=1835,
-  serialized_end=1945,
+  serialized_start=1952,
+  serialized_end=2062,
 )
 
 
@@ -1210,8 +1289,52 @@ _SCNOTIFY_RECONNECT_INFO = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=1948,
-  serialized_end=2131,
+  serialized_start=2065,
+  serialized_end=2248,
+)
+
+
+_SC_RECONNECT_EXTRA_INFO = _descriptor.Descriptor(
+  name='SC_RECONNECT_EXTRA_INFO',
+  full_name='SC_RECONNECT_EXTRA_INFO',
+  filename=None,
+  file=DESCRIPTOR,
+  containing_type=None,
+  fields=[
+    _descriptor.FieldDescriptor(
+      name='max_hang_sec', full_name='SC_RECONNECT_EXTRA_INFO.max_hang_sec', index=0,
+      number=1, type=13, cpp_type=3, label=2,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    _descriptor.FieldDescriptor(
+      name='zip_byte', full_name='SC_RECONNECT_EXTRA_INFO.zip_byte', index=1,
+      number=2, type=13, cpp_type=3, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    _descriptor.FieldDescriptor(
+      name='enable_pack', full_name='SC_RECONNECT_EXTRA_INFO.enable_pack', index=2,
+      number=3, type=8, cpp_type=7, label=1,
+      has_default_value=False, default_value=False,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+  ],
+  extensions=[
+  ],
+  nested_types=[],
+  enum_types=[
+  ],
+  options=None,
+  is_extendable=False,
+  extension_ranges=[],
+  oneofs=[
+  ],
+  serialized_start=2250,
+  serialized_end=2336,
 )
 
 
@@ -1247,8 +1370,8 @@ _CSPKG_GIFT_CODE_REQ = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=2133,
-  serialized_end=2190,
+  serialized_start=2338,
+  serialized_end=2395,
 )
 
 
@@ -1277,8 +1400,8 @@ _SCPKG_GIFT_CODE_RES = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=2192,
-  serialized_end=2229,
+  serialized_start=2397,
+  serialized_end=2434,
 )
 
 
@@ -1307,8 +1430,8 @@ _CSPKG_PURCHASE_REQ = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=2231,
-  serialized_end=2271,
+  serialized_start=2436,
+  serialized_end=2476,
 )
 
 
@@ -1351,8 +1474,8 @@ _SCPKG_PURCHASE_ACCEPT = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=2273,
-  serialized_end=2352,
+  serialized_start=2478,
+  serialized_end=2557,
 )
 
 
@@ -1409,8 +1532,8 @@ _CSDT_PURCHASE_REQUEST_DELIVERY = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=2355,
-  serialized_end=2500,
+  serialized_start=2560,
+  serialized_end=2705,
 )
 
 
@@ -1439,8 +1562,8 @@ _SCDT_PURCHASE_REQUEST_DELIVERY_FINISH = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=2502,
-  serialized_end=2553,
+  serialized_start=2707,
+  serialized_end=2758,
 )
 
 
@@ -1504,8 +1627,8 @@ _CSPKGHEAD = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=2555,
-  serialized_end=2676,
+  serialized_start=2760,
+  serialized_end=2881,
 )
 
 
@@ -1534,8 +1657,8 @@ _CSDT_ERROR = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=2678,
-  serialized_end=2707,
+  serialized_start=2883,
+  serialized_end=2912,
 )
 
 
@@ -1777,6 +1900,20 @@ _SCPKG_DYNAMIC_CONFIG_REFRESH = _descriptor.Descriptor(
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
+    _descriptor.FieldDescriptor(
+      name='factor_switch', full_name='SCPKG_DYNAMIC_CONFIG_REFRESH.factor_switch', index=33,
+      number=35, type=5, cpp_type=1, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    _descriptor.FieldDescriptor(
+      name='top_battle_3v3_switch', full_name='SCPKG_DYNAMIC_CONFIG_REFRESH.top_battle_3v3_switch', index=34,
+      number=36, type=5, cpp_type=1, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
   ],
   extensions=[
   ],
@@ -1788,8 +1925,8 @@ _SCPKG_DYNAMIC_CONFIG_REFRESH = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=2710,
-  serialized_end=3675,
+  serialized_start=2915,
+  serialized_end=3934,
 )
 
 
@@ -1839,8 +1976,8 @@ _CSDT_UI_OPT = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=3677,
-  serialized_end=3767,
+  serialized_start=3936,
+  serialized_end=4026,
 )
 
 
@@ -1876,8 +2013,8 @@ _CSPKG_USER_ACTION_LOG = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=3769,
-  serialized_end=3828,
+  serialized_start=4028,
+  serialized_end=4087,
 )
 
 
@@ -1906,8 +2043,8 @@ _CSPKG_USER_CONFIG = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=3830,
-  serialized_end=3878,
+  serialized_start=4089,
+  serialized_end=4137,
 )
 
 
@@ -1936,8 +2073,38 @@ _CSPKG_SELL_RUBBISH = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=3880,
-  serialized_end=3917,
+  serialized_start=4139,
+  serialized_end=4176,
+)
+
+
+_CSPKG_KICK_CLIENT = _descriptor.Descriptor(
+  name='CSPKG_KICK_CLIENT',
+  full_name='CSPKG_KICK_CLIENT',
+  filename=None,
+  file=DESCRIPTOR,
+  containing_type=None,
+  fields=[
+    _descriptor.FieldDescriptor(
+      name='reason', full_name='CSPKG_KICK_CLIENT.reason', index=0,
+      number=1, type=13, cpp_type=3, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+  ],
+  extensions=[
+  ],
+  nested_types=[],
+  enum_types=[
+  ],
+  options=None,
+  is_extendable=False,
+  extension_ranges=[],
+  oneofs=[
+  ],
+  serialized_start=4178,
+  serialized_end=4213,
 )
 
 
@@ -1966,8 +2133,8 @@ _SCPKG_DO_SOMETHING = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=3919,
-  serialized_end=3957,
+  serialized_start=4215,
+  serialized_end=4253,
 )
 
 
@@ -1996,10 +2163,11 @@ _CSPKG_DO_SOMETHING_RES = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=3959,
-  serialized_end=3999,
+  serialized_start=4255,
+  serialized_end=4295,
 )
 
+_MESSAGEPACK.fields_by_name['msgs'].message_type = _MESSAGEDATA
 _SCDT_NOTIFY_INFO.fields_by_name['notify'].message_type = _SCDT_NOTIFY_DATA
 _SCPKG_ACT_PACKOBJ_CHG.fields_by_name['pack_obj_chg_info'].message_type = _CSDT_PACKOBJ_CHG_INFO
 _CSDT_PACKAGE_POS_INFO.fields_by_name['st_pos_count'].message_type = _CSDT_POS_COUNT_INFO
@@ -2007,6 +2175,8 @@ _CSDT_POS_COUNT.fields_by_name['st_package_pos'].message_type = _CSDT_PACKAGE_PO
 _CSDT_PURCHASE_REQUEST_DELIVERY.fields_by_name['platform'].enum_type = _DEALPLATFORM
 DESCRIPTOR.message_types_by_name['CS_3RD_PLAFFORM_FRIEND_GET'] = _CS_3RD_PLAFFORM_FRIEND_GET
 DESCRIPTOR.message_types_by_name['CS_BIND_3RD_PLATFORM_ID'] = _CS_BIND_3RD_PLATFORM_ID
+DESCRIPTOR.message_types_by_name['MessageData'] = _MESSAGEDATA
+DESCRIPTOR.message_types_by_name['MessagePack'] = _MESSAGEPACK
 DESCRIPTOR.message_types_by_name['SCPKG_CONNECT_KEEP'] = _SCPKG_CONNECT_KEEP
 DESCRIPTOR.message_types_by_name['CSPKG_CMD_CLT_SETBITMARK_REQ'] = _CSPKG_CMD_CLT_SETBITMARK_REQ
 DESCRIPTOR.message_types_by_name['CSPKG_CMD_SET_STORYBIT_REQ'] = _CSPKG_CMD_SET_STORYBIT_REQ
@@ -2031,6 +2201,7 @@ DESCRIPTOR.message_types_by_name['SCPKG_CMD_SLOT_OPEN'] = _SCPKG_CMD_SLOT_OPEN
 DESCRIPTOR.message_types_by_name['SCPKG_CMD_EXP_CHANGE'] = _SCPKG_CMD_EXP_CHANGE
 DESCRIPTOR.message_types_by_name['CS_RECONNECT'] = _CS_RECONNECT
 DESCRIPTOR.message_types_by_name['SCNOTIFY_RECONNECT_INFO'] = _SCNOTIFY_RECONNECT_INFO
+DESCRIPTOR.message_types_by_name['SC_RECONNECT_EXTRA_INFO'] = _SC_RECONNECT_EXTRA_INFO
 DESCRIPTOR.message_types_by_name['CSPKG_GIFT_CODE_REQ'] = _CSPKG_GIFT_CODE_REQ
 DESCRIPTOR.message_types_by_name['SCPKG_GIFT_CODE_RES'] = _SCPKG_GIFT_CODE_RES
 DESCRIPTOR.message_types_by_name['CSPKG_PURCHASE_REQ'] = _CSPKG_PURCHASE_REQ
@@ -2044,6 +2215,7 @@ DESCRIPTOR.message_types_by_name['CSDT_UI_OPT'] = _CSDT_UI_OPT
 DESCRIPTOR.message_types_by_name['CSPKG_USER_ACTION_LOG'] = _CSPKG_USER_ACTION_LOG
 DESCRIPTOR.message_types_by_name['CSPKG_USER_CONFIG'] = _CSPKG_USER_CONFIG
 DESCRIPTOR.message_types_by_name['CSPKG_SELL_RUBBISH'] = _CSPKG_SELL_RUBBISH
+DESCRIPTOR.message_types_by_name['CSPKG_KICK_CLIENT'] = _CSPKG_KICK_CLIENT
 DESCRIPTOR.message_types_by_name['SCPKG_DO_SOMETHING'] = _SCPKG_DO_SOMETHING
 DESCRIPTOR.message_types_by_name['CSPKG_DO_SOMETHING_RES'] = _CSPKG_DO_SOMETHING_RES
 DESCRIPTOR.enum_types_by_name['CS_3RD_PLATFORM_ENUM'] = _CS_3RD_PLATFORM_ENUM
@@ -2062,6 +2234,20 @@ CS_BIND_3RD_PLATFORM_ID = _reflection.GeneratedProtocolMessageType('CS_BIND_3RD_
   # @@protoc_insertion_point(class_scope:CS_BIND_3RD_PLATFORM_ID)
   ))
 _sym_db.RegisterMessage(CS_BIND_3RD_PLATFORM_ID)
+
+MessageData = _reflection.GeneratedProtocolMessageType('MessageData', (_message.Message,), dict(
+  DESCRIPTOR = _MESSAGEDATA,
+  __module__ = 'cproto_pb2'
+  # @@protoc_insertion_point(class_scope:MessageData)
+  ))
+_sym_db.RegisterMessage(MessageData)
+
+MessagePack = _reflection.GeneratedProtocolMessageType('MessagePack', (_message.Message,), dict(
+  DESCRIPTOR = _MESSAGEPACK,
+  __module__ = 'cproto_pb2'
+  # @@protoc_insertion_point(class_scope:MessagePack)
+  ))
+_sym_db.RegisterMessage(MessagePack)
 
 SCPKG_CONNECT_KEEP = _reflection.GeneratedProtocolMessageType('SCPKG_CONNECT_KEEP', (_message.Message,), dict(
   DESCRIPTOR = _SCPKG_CONNECT_KEEP,
@@ -2231,6 +2417,13 @@ SCNOTIFY_RECONNECT_INFO = _reflection.GeneratedProtocolMessageType('SCNOTIFY_REC
   ))
 _sym_db.RegisterMessage(SCNOTIFY_RECONNECT_INFO)
 
+SC_RECONNECT_EXTRA_INFO = _reflection.GeneratedProtocolMessageType('SC_RECONNECT_EXTRA_INFO', (_message.Message,), dict(
+  DESCRIPTOR = _SC_RECONNECT_EXTRA_INFO,
+  __module__ = 'cproto_pb2'
+  # @@protoc_insertion_point(class_scope:SC_RECONNECT_EXTRA_INFO)
+  ))
+_sym_db.RegisterMessage(SC_RECONNECT_EXTRA_INFO)
+
 CSPKG_GIFT_CODE_REQ = _reflection.GeneratedProtocolMessageType('CSPKG_GIFT_CODE_REQ', (_message.Message,), dict(
   DESCRIPTOR = _CSPKG_GIFT_CODE_REQ,
   __module__ = 'cproto_pb2'
@@ -2321,6 +2514,13 @@ CSPKG_SELL_RUBBISH = _reflection.GeneratedProtocolMessageType('CSPKG_SELL_RUBBIS
   # @@protoc_insertion_point(class_scope:CSPKG_SELL_RUBBISH)
   ))
 _sym_db.RegisterMessage(CSPKG_SELL_RUBBISH)
+
+CSPKG_KICK_CLIENT = _reflection.GeneratedProtocolMessageType('CSPKG_KICK_CLIENT', (_message.Message,), dict(
+  DESCRIPTOR = _CSPKG_KICK_CLIENT,
+  __module__ = 'cproto_pb2'
+  # @@protoc_insertion_point(class_scope:CSPKG_KICK_CLIENT)
+  ))
+_sym_db.RegisterMessage(CSPKG_KICK_CLIENT)
 
 SCPKG_DO_SOMETHING = _reflection.GeneratedProtocolMessageType('SCPKG_DO_SOMETHING', (_message.Message,), dict(
   DESCRIPTOR = _SCPKG_DO_SOMETHING,

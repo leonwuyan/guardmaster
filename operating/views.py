@@ -296,6 +296,10 @@ def change_single(request, panel_id, url, type):
     if type == 'off_rank':
         ret = sc.off_rank()
         is_log = False
+    if type == 'month':
+        count = int(request.POST['count'])
+        ret = sc.change_month_card_remain_days(count)
+        log_str = str(count)
     if ret['result'] == 0:
         s = type + "|" + log_str
         sc.log(s)

@@ -403,3 +403,22 @@ class ServerSocket(object):
         p = 'GM_DEL_PLAYER_FROM_RANK_REQ'
         r = {'world_id': world_id, 'role_id': uid, 'rank_id': rank_id}
         return self._get(p, r)
+
+    def get_player_month_card(self, uid, world_id):
+        if world_id is None or uid is None:
+            return self.empty
+        p = 'GM_GET_PLAYER_MONTH_CARD_REQ'
+        r = {'world_id': world_id, 'uid': uid}
+        return self._get(p, r)
+
+    def change_player_month_card(self, uid, world_id, change_days, card_id=1):
+        if world_id is None or uid is None:
+            return self.empty
+        p = 'GM_CHG_PLAYER_MONTH_CARD_REQ'
+        r = {
+            'world_id': world_id,
+            'uid': uid,
+            'card_id': card_id,
+            'change_days': change_days
+        }
+        return self._get(p, r)

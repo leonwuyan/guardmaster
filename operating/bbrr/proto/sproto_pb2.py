@@ -44,19 +44,21 @@ import pvpsteal_pb2
 import quest_pb2
 import rank_pb2
 import rankbattle_pb2
+import topbattle_pb2
 import shop_pb2
 import viewplayer_pb2
 import worldboss_pb2
 import multiplayer_pb2
 import specialactivity_pb2
+import factor_pb2
 
 
 DESCRIPTOR = _descriptor.FileDescriptor(
   name='sproto.proto',
   package='',
-  serialized_pb=_b('\n\x0csproto.proto\x1a\x0frescommon.proto\x1a\tres.proto\x1a\x11\x61\x63hievement.proto\x1a\x0e\x61\x63tivity.proto\x1a\x0e\x62ossrush.proto\x1a\x0e\x62uilding.proto\x1a\x0e\x62usiness.proto\x1a\nchat.proto\x1a\x10\x63ityreward.proto\x1a\x13\x63ontinuelogin.proto\x1a\x0c\x63proto.proto\x1a\x0f\x64irserver.proto\x1a\rdungeon.proto\x1a\rendless.proto\x1a\x0b\x65quip.proto\x1a\x0c\x66riend.proto\x1a\ngang.proto\x1a\nhero.proto\x1a\x0blogin.proto\x1a\nmail.proto\x1a\rmonster.proto\x1a\x12onlinebattle.proto\x1a\x13playerprofile.proto\x1a\x14playerresource.proto\x1a\x0fprizedraw.proto\x1a\x11protocommon.proto\x1a\x0epvpsteal.proto\x1a\x0bquest.proto\x1a\nrank.proto\x1a\x10rankbattle.proto\x1a\nshop.proto\x1a\x10viewplayer.proto\x1a\x0fworldboss.proto\x1a\x11multiplayer.proto\x1a\x15specialactivity.proto\"V\n\x0fSSDT_NOTIFY_MSG\x12\x0e\n\x06msg_id\x18\x01 \x01(\r\x12\x11\n\tsend_time\x18\x02 \x01(\r\x12\x10\n\x08msg_type\x18\x03 \x01(\r\x12\x0e\n\x06sender\x18\x04 \x01(\t\"\xa1\x06\n\x10SSDT_ROLE_ONLINE\x12\x0f\n\x07grow_up\x18\x01 \x01(\r\x12\r\n\x05level\x18\x02 \x01(\r\x12\r\n\x05money\x18\x03 \x01(\r\x12\x11\n\tcur_power\x18\x04 \x01(\r\x12\x1e\n\x16power_recover_beg_time\x18\x05 \x01(\r\x12 \n\x18power_recover_total_time\x18\x06 \x01(\r\x12\x1f\n\x17power_last_refresh_time\x18\x07 \x01(\r\x12\x17\n\x0f\x62uy_power_times\x18\x08 \x01(\r\x12\x16\n\x0e\x63ur_achi_point\x18\t \x01(\r\x12\x13\n\x0b\x63ur_crystal\x18\n \x01(\r\x12\x10\n\x08\x63ur_gold\x18\x0b \x01(\r\x12\x0e\n\x06\x63ur_sp\x18\x0c \x01(\r\x12\x1b\n\x13\x63ur_spborn_beg_time\x18\r \x01(\r\x12\x1d\n\x15\x63ur_spborn_total_time\x18\x0e \x01(\r\x12\x14\n\x0c\x62uy_sp_times\x18\x0f \x01(\r\x12\x1a\n\x12max_end_less_score\x18\x10 \x01(\r\x12\x1a\n\x12max_end_less_floor\x18\x11 \x01(\r\x12\x1b\n\x13\x63ur_notify_beg_time\x18\x12 \x01(\r\x12\x10\n\x08\x62it_mark\x18\x13 \x01(\r\x12\x14\n\x0c\x63lt_bit_mark\x18\x14 \x01(\x04\x12\x13\n\x0bgrow_up_cnt\x18\x15 \x01(\r\x12\x1b\n\x13last_quit_gang_time\x18\x16 \x01(\r\x12\x17\n\x0flast_login_time\x18\x17 \x01(\r\x12\x17\n\x0flast_leave_time\x18\x18 \x01(\r\x12\x18\n\x10last_logout_time\x18\x19 \x01(\r\x12\x1d\n\x15last_gang_battle_time\x18\x1a \x01(\r\x12\x19\n\x11total_online_time\x18\x1b \x01(\r\x12\x13\n\x0b\x63reate_time\x18\x1c \x01(\r\x12\x1d\n\x15\x63ur_rank_battle_score\x18\x1d \x01(\r\x12\x19\n\x11\x62uy_crystal_times\x18\x1e \x01(\r\x12\x16\n\x0e\x62uy_gold_times\x18\x1f \x01(\r\x12\x12\n\nhead_photo\x18  \x01(\r\"\x1f\n\x0fSSDT_ROLE_QUEST\x12\x0c\n\x04\x64\x61ta\x18\x01 \x01(\t\"!\n\x11SSDT_ROLE_PACKAGE\x12\x0c\n\x04\x64\x61ta\x18\x01 \x01(\t\"\x1f\n\x0fSSDT_ROLE_SKILL\x12\x0c\n\x04\x64\x61ta\x18\x01 \x01(\t\"&\n\x16SSDT_ROLE_DUNGEON_DATA\x12\x0c\n\x04\x64\x61ta\x18\x01 \x01(\t\"#\n\x13SSDT_ROLE_MISC_DATA\x12\x0c\n\x04\x64\x61ta\x18\x01 \x01(\t\"&\n\x16SSDT_ROLE_DATASET_HERO\x12\x0c\n\x04\x64\x61ta\x18\x01 \x01(\t\"*\n\x1aSSDT_ROLE_DATASET_BUILDING\x12\x0c\n\x04\x64\x61ta\x18\x01 \x01(\t\")\n\x19SSDT_ROLE_DATASET_DUNDATA\x12\x0c\n\x04\x64\x61ta\x18\x01 \x01(\t\" \n\x10SSDT_NOTIFY_DATA\x12\x0c\n\x04\x64\x61ta\x18\x01 \x01(\t\"0\n\x10\x44\x42\x42LOB_ATTR_INFO\x12\x0c\n\x04type\x18\x01 \x01(\r\x12\x0e\n\x06parm_1\x18\x02 \x01(\x05\"5\n\x1e\x44\x42\x42LOB_ITEM_EXTRA_INFO_RECOVER\x12\x13\n\x0brecover_val\x18\x01 \x01(\r\"L\n\x19\x44\x42\x42LOB_FIRSTPURCHASE_INFO\x12\x15\n\rproduct_index\x18\x01 \x01(\r\x12\x18\n\x10is_firstpurchase\x18\x02 \x01(\r\"@\n\x15\x44\x42\x42LOB_MONTHCARD_INFO\x12\x15\n\rmonth_card_id\x18\x01 \x01(\r\x12\x10\n\x08\x62uy_time\x18\x02 \x01(\r\"N\n\x19\x44\x42\x42LOB_FIRSTPURCHASE_LIST\x12\x31\n\rpurchase_info\x18\x01 \x03(\x0b\x32\x1a.DBBLOB_FIRSTPURCHASE_INFO\"\x9f\x01\n\x11\x44\x42\x42LOB_EQUIP_INFO\x12\x13\n\x0bpackage_pos\x18\x01 \x02(\r\x12\x10\n\x08\x65quip_id\x18\x02 \x02(\r\x12\r\n\x05\x63ount\x18\x03 \x02(\r\x12\x0f\n\x07\x63ur_exp\x18\x04 \x02(\r\x12\r\n\x05level\x18\x05 \x02(\r\x12\x0e\n\x06wakeup\x18\x06 \x02(\r\x12\x0e\n\x06growup\x18\x07 \x02(\r\x12\x14\n\x0c\x62ind_to_hero\x18\x08 \x02(\r\"q\n\x10\x44\x42\x42LOB_EQUIP_TAB\x12\x0c\n\x04size\x18\x01 \x01(\r\x12\"\n\x06\x65quips\x18\x02 \x03(\x0b\x32\x12.DBBLOB_EQUIP_INFO\x12\x12\n\ngot_record\x18\x03 \x03(\r\x12\x17\n\x0fgot_record_used\x18\x04 \x01(\r\"x\n\x12\x44\x42\x42LOB_PACKAGE_OBJ\x12\x13\n\x0bpackage_pos\x18\x01 \x01(\r\x12\x0c\n\x04type\x18\x02 \x01(\r\x12\x0c\n\x04stat\x18\x03 \x01(\r\x12\x0f\n\x07\x62\x61se_id\x18\x04 \x01(\r\x12\r\n\x05\x63ount\x18\x05 \x01(\r\x12\x11\n\tfunc_type\x18\x06 \x01(\r\"I\n\x12\x44\x42\x42LOB_PACKAGE_TAB\x12\x0c\n\x04size\x18\x01 \x01(\r\x12%\n\x08obj_info\x18\x02 \x03(\x0b\x32\x13.DBBLOB_PACKAGE_OBJ\"T\n\x17\x44\x42\x42LOBHERO_EQUIPED_INFO\x12\x0f\n\x07hero_id\x18\x01 \x02(\r\x12(\n\x0c\x65quiped_info\x18\x02 \x03(\x0b\x32\x12.CSDT_EQUIPED_INFO\"\x97\x01\n\x13\x44\x42\x42LOB_PACKAGE_INFO\x12%\n\x08tab_info\x18\x01 \x03(\x0b\x32\x13.DBBLOB_PACKAGE_TAB\x12$\n\tequip_tab\x18\x02 \x01(\x0b\x32\x11.DBBLOB_EQUIP_TAB\x12\x33\n\x11hero_equiped_info\x18\x03 \x03(\x0b\x32\x18.DBBLOBHERO_EQUIPED_INFO\"C\n\x11\x44\x42\x42LOB_TIME_VALUE\x12\x13\n\x0btime_second\x18\x01 \x01(\r\x12\x19\n\x11time_milli_second\x18\x02 \x01(\r\"C\n\x1f\x44\x42\x42LOB_PLAYER_PRACTICEDUN_QUEST\x12 \n\x18practice_dun_quest_flags\x18\x01 \x03(\r\"K\n\x19\x44\x42\x42LOB_PLAYER_ACHIEVEMENT\x12\x1b\n\x13\x61\x63hievemented_flags\x18\x01 \x03(\r\x12\x11\n\tget_flags\x18\x02 \x03(\r\"9\n\x1a\x44\x42\x42LOB_PLAYER_FIRSTPURCHAE\x12\x1b\n\x13\x66irstpurchase_flags\x18\x01 \x03(\r\"\x89\x01\n\x1c\x44\x42\x42LOB_PLAYER_DAILYTASK_ITEM\x12\x15\n\rdaily_task_id\x18\x01 \x01(\r\x12\x17\n\x0f\x64\x61ily_task_done\x18\x02 \x01(\x08\x12\x16\n\x0e\x64\x61ily_task_get\x18\x03 \x01(\x08\x12!\n\x19\x64\x61ily_task_complete_count\x18\x04 \x01(\r\"q\n\x17\x44\x42\x42LOB_PLAYER_DAILYTASK\x12\x37\n\x10\x64\x61ily_task_items\x18\x01 \x03(\x0b\x32\x1d.DBBLOB_PLAYER_DAILYTASK_ITEM\x12\x1d\n\x15\x64\x61ily_task_reset_time\x18\x02 \x01(\r\"^\n\x1c\x44\x42\x42LOB_PLAYER_MAIN_TASK_ITEM\x12\x10\n\x08group_id\x18\x01 \x01(\r\x12\n\n\x02id\x18\x02 \x01(\r\x12\x0e\n\x06seq_id\x18\x03 \x01(\r\x12\x10\n\x08progress\x18\x04 \x01(\r\"q\n\x17\x44\x42\x42LOB_PLAYER_MAIN_TASK\x12+\n\x04item\x18\x01 \x03(\x0b\x32\x1d.DBBLOB_PLAYER_MAIN_TASK_ITEM\x12\x16\n\x0e\x63omplete_flags\x18\x02 \x03(\r\x12\x11\n\tget_flags\x18\x03 \x03(\r\"\xda\x01\n\x12\x44\x42\x42LOB_PLAYER_SHOP\x12\x15\n\rrefresh_count\x18\x02 \x01(\r\x12%\n\x1drefresh_rankbattle_shop_count\x18\x04 \x01(\r\x12 \n\x18normal_shop_free_use_cnt\x18\x05 \x01(\r\x12%\n\x1drank_battle_shop_free_use_cnt\x18\x06 \x01(\r\x12\x1e\n\x16refresh_vip_shop_count\x18\x07 \x01(\r\x12\x1d\n\x15vip_shop_free_use_cnt\x18\x08 \x01(\r\"\xa2\x04\n\x18\x44\x42\x42LOB_PLAYER_PRIZE_DRAW\x12*\n\"coin_one_prize_draw_free_use_count\x18\x01 \x01(\r\x12.\n&coin_one_prize_draw_free_last_use_time\x18\x02 \x01(\r\x12\x38\n0coin_one_prize_draw_free_count_last_refresh_time\x18\x03 \x01(\r\x12+\n#money_one_prize_draw_free_use_count\x18\x04 \x01(\r\x12/\n\'money_one_prize_draw_free_last_use_time\x18\x05 \x01(\r\x12\x18\n\x10gang_bless_count\x18\n \x01(\r\x12\x1c\n\x14\x62uy_gang_bless_count\x18\x0b \x01(\r\x12&\n\x1elast_buy_gang_bless_count_time\x18\x0c \x01(\r\x12$\n\x1cleft_extern_gang_bless_count\x18\r \x01(\r\x12!\n\x19\x63oin_one_prize_draw_count\x18\x0e \x01(\r\x12!\n\x19\x63oin_ten_prize_draw_count\x18\x0f \x01(\r\x12\"\n\x1amoney_one_prize_draw_count\x18\x10 \x01(\r\x12\"\n\x1amoney_ten_prize_draw_count\x18\x11 \x01(\r\"\xcd\x02\n\x13\x44\x42\x42LOB_PLAYER_QUEST\x12\x38\n\x0epractice_quest\x18\x01 \x01(\x0b\x32 .DBBLOB_PLAYER_PRACTICEDUN_QUEST\x12/\n\x0b\x61\x63hievement\x18\x02 \x01(\x0b\x32\x1a.DBBLOB_PLAYER_ACHIEVEMENT\x12,\n\ndaily_task\x18\x03 \x01(\x0b\x32\x18.DBBLOB_PLAYER_DAILYTASK\x12+\n\tmain_task\x18\x04 \x01(\x0b\x32\x18.DBBLOB_PLAYER_MAIN_TASK\x12\x37\n\x0fnewbie_activity\x18\x05 \x01(\x0b\x32\x1e.DBBLOB_NEWBIE_ACTIVITY_STATUS\x12\x37\n\x10special_activity\x18\x06 \x01(\x0b\x32\x1d.DBBLOB_SPECIAL_ACTIVITY_INFO\"/\n\x17\x44\x42\x42LOB_GIFT_ACCEPT_INFO\x12\x14\n\x0c\x61\x63\x63\x65pt_count\x18\x01 \x03(\r\"\xf8\x01\n#DBBLOB_OFFLINE_BATTLE_DEFEATED_INFO\x12\x15\n\ropponent_name\x18\x01 \x01(\t\x12$\n\x1copponent_title_when_defeated\x18\x02 \x01(\r\x12/\n\'opponent_gold_medal_count_when_defeated\x18\x03 \x01(\r\x12\x31\n)opponent_silver_medal_count_when_defeated\x18\x04 \x01(\r\x12\x1e\n\x16got_opponent_medal_bit\x18\x05 \x01(\r\x12\x10\n\x08mode_bit\x18\x06 \x01(\r\"\x86\x02\n\x1a\x44\x42\x42LOB_OFFLINE_BATTLE_INFO\x12J\n\x1coffline_battle_defeated_info\x18\x01 \x03(\x0b\x32$.DBBLOB_OFFLINE_BATTLE_DEFEATED_INFO\x12&\n\x1emy_gold_medal_holder_role_name\x18\x02 \x01(\t\x12(\n my_silver_medal_holder_role_name\x18\x03 \x01(\t\x12\x1c\n\x14title_index_selected\x18\x04 \x01(\r\x12\x13\n\x0btotal_count\x18\x05 \x01(\r\x12\x17\n\x0ftotal_win_count\x18\x06 \x01(\r\"\xbd\x01\n\x19\x44\x42\x42LOB_ONLINE_BATTLE_INFO\x12\x13\n\x0binitialized\x18\x01 \x01(\x08\x12\x0f\n\x07tickets\x18\x02 \x01(\r\x12\r\n\x05score\x18\x03 \x01(\r\x12\x13\n\x0btotal_count\x18\x04 \x01(\r\x12\x17\n\x0ftotal_win_count\x18\x05 \x01(\r\x12\x11\n\twin_point\x18\x06 \x01(\r\x12\x15\n\rbrought_times\x18\x07 \x01(\r\x12\x13\n\x0btickets_max\x18\x08 \x01(\r\"M\n\x16\x44\x42\x42LOB_DAILYQUEST_INFO\x12\x10\n\x08quest_id\x18\x01 \x01(\r\x12\x12\n\nstart_time\x18\x02 \x01(\r\x12\r\n\x05\x63ount\x18\x03 \x01(\r\"K\n\x1d\x44\x42\x42LOB_DUNGEON_CHALLENGE_INFO\x12\x12\n\ndungeon_id\x18\x01 \x01(\r\x12\x16\n\x0e\x63hallenge_data\x18\x02 \x01(\r\"\\\n\x1a\x44\x42\x42LOB_DUNGEON_UNLOCK_INFO\x12\x12\n\ndungeon_id\x18\x01 \x01(\r\x12\x15\n\rdiffic_degree\x18\x02 \x01(\r\x12\x13\n\x0bunlock_type\x18\x03 \x01(\r\"L\n\x19\x44\x42\x42LOB_DUNGEON_COUNT_INFO\x12\x12\n\ndungeon_id\x18\x01 \x01(\r\x12\x0c\n\x04time\x18\x02 \x01(\r\x12\r\n\x05\x63ount\x18\x03 \x01(\r\"\x93\x02\n\x18\x44\x42\x42LOB_DUNGEON_DATA_INFO\x12\x11\n\tpvp_point\x18\x01 \x01(\r\x12\x11\n\tpvp_score\x18\x02 \x01(\r\x12\x0e\n\x06\x64un_id\x18\x03 \x01(\r\x12\x0f\n\x07\x63\x61mp_id\x18\x04 \x01(\r\x12>\n\x16\x64ungeon_challenge_data\x18\x05 \x03(\x0b\x32\x1e.DBBLOB_DUNGEON_CHALLENGE_INFO\x12\x38\n\x13\x64ungeon_unlock_data\x18\x06 \x03(\x0b\x32\x1b.DBBLOB_DUNGEON_UNLOCK_INFO\x12\x36\n\x12\x64ungeon_count_info\x18\x07 \x03(\x0b\x32\x1a.DBBLOB_DUNGEON_COUNT_INFO\"}\n\x15\x44\x42\x42LOB_HERO_STAT_DATA\x12\x0c\n\x04stat\x18\x01 \x01(\r\x12\x0e\n\x06\x64un_id\x18\x02 \x01(\r\x12\x16\n\x0e\x65nter_dun_time\x18\x03 \x01(\r\x12\x15\n\rlv_cdbeg_time\x18\x04 \x01(\r\x12\x17\n\x0flv_cdtotal_time\x18\x05 \x01(\r\"?\n\x16\x44\x42\x42LOB_SKILL_INFO_DATA\x12\x13\n\x0bskill_index\x18\x01 \x01(\r\x12\x10\n\x08skill_id\x18\x02 \x01(\r\"R\n\x16\x44\x42\x42LOB_EMBLEMINFO_DATA\x12\x11\n\temblem_id\x18\x01 \x01(\r\x12\x11\n\temblem_lv\x18\x02 \x01(\r\x12\x12\n\nemblem_exp\x18\x03 \x01(\r\"\xe1\x02\n\x15\x44\x42\x42LOB_HERO_INFO_DATA\x12\x0f\n\x07hero_id\x18\x01 \x01(\r\x12\x0f\n\x07grow_up\x18\x02 \x01(\r\x12\r\n\x05level\x18\x03 \x01(\r\x12\x0b\n\x03\x65xp\x18\x04 \x01(\r\x12\x0e\n\x06\x63ur_hp\x18\x05 \x01(\r\x12\x0e\n\x06\x63ur_sp\x18\x06 \x01(\r\x12\x0e\n\x06max_hp\x18\x07 \x01(\r\x12\x0e\n\x06\x64\x61mage\x18\x08 \x01(\r\x12+\n\nskill_info\x18\t \x03(\x0b\x32\x17.DBBLOB_SKILL_INFO_DATA\x12,\n\x0b\x65mblem_info\x18\n \x03(\x0b\x32\x17.DBBLOB_EMBLEMINFO_DATA\x12\x19\n\x11new_role_buff_cnt\x18\x0b \x01(\r\x12\'\n\x1fgreatest_dungeon_id_when_unlock\x18\x0c \x01(\r\x12\x16\n\x0e\x66ight_capacity\x18\r \x01(\r\x12\x13\n\x0btalent_info\x18\x0e \x01(\x04\"E\n\x1d\x44\x42\x42LOB_HERO_TRAININGSLOT_INFO\x12\r\n\x05state\x18\x01 \x01(\r\x12\x15\n\rlv_up_hero_id\x18\x02 \x01(\r\":\n\x15\x44\x42\x42LOB_CHIP_INFO_DATA\x12\x0f\n\x07\x63hip_id\x18\x01 \x01(\r\x12\x10\n\x08\x63hip_cnt\x18\x02 \x01(\r\"D\n\x17\x44\x42\x42LOB_PLAYER_HERO_DATA\x12)\n\thero_info\x18\x01 \x03(\x0b\x32\x16.DBBLOB_HERO_INFO_DATA\"_\n\"DBBLOB_PLAYER_HERO_GANGBATTLE_DATA\x12\x1b\n\x13gang_battle_win_cnt\x18\x01 \x01(\r\x12\x1c\n\x14gang_battle_lost_cnt\x18\x02 \x01(\r\"\xa4\x01\n\x1e\x44\x42\x42LOB_PLAYER_RANK_BATTLE_DATA\x12\x1d\n\x15last_rank_battle_time\x18\x01 \x01(\r\x12\x1e\n\x16left_rank_battle_count\x18\x02 \x01(\r\x12\x1d\n\x15\x62uy_rank_battle_count\x18\x03 \x01(\r\x12$\n\x1clast_refresh_left_count_time\x18\x04 \x01(\r\"C\n\x18RANK_BATTLE_DEFENSE_DATA\x12\'\n\thero_info\x18\x01 \x03(\x0b\x32\x14.ST_HERO_BATTLE_INFO\"X\n\x18\x44\x42\x42LOB_MONSTER_STAT_DATA\x12\x0c\n\x04stat\x18\x01 \x01(\r\x12\x15\n\rlv_cdbeg_time\x18\x02 \x01(\r\x12\x17\n\x0flv_cdtotal_time\x18\x03 \x01(\r\"s\n\x18\x44\x42\x42LOB_MONSTER_INFO_DATA\x12\x16\n\x0emonster_grp_id\x18\x01 \x01(\r\x12\x11\n\tgrp_level\x18\x02 \x01(\r\x12,\n\tstat_info\x18\x03 \x01(\x0b\x32\x19.DBBLOB_MONSTER_STAT_DATA\"Q\n\x1a\x44\x42\x42LOB_PLAYER_MONSTER_DATA\x12\x33\n\x10monster_grp_info\x18\x01 \x03(\x0b\x32\x19.DBBLOB_MONSTER_INFO_DATA\"\xdf\x01\n\x16\x44\x42\x42LOB_DUN_UNLOCK_DATA\x12\x12\n\ndungeon_id\x18\x01 \x01(\r\x12\x11\n\tdun_level\x18\x02 \x01(\r\x12\x0c\n\x04stat\x18\x03 \x01(\r\x12\x16\n\x0e\x63hallenge_time\x18\x04 \x01(\r\x12\x15\n\rchallenge_cnt\x18\x05 \x01(\r\x12\x11\n\tstory_bit\x18\x06 \x01(\r\x12\x17\n\x0f\x62\x65st_evaluation\x18\x07 \x01(\r\x12\x1d\n\x15\x65lite_challenge_count\x18\x08 \x01(\r\x12\x16\n\x0e\x65lite_drop_exp\x18\t \x01(\r\"\x87\x01\n\x19\x44\x42\x42LOB_PVE_CHALLENGE_DATA\x12\x0f\n\x07npc_cnt\x18\x01 \x01(\r\x12\x12\n\nplayer_cnt\x18\x02 \x01(\r\x12,\n\x0bunlock_data\x18\x03 \x03(\x0b\x32\x17.DBBLOB_DUN_UNLOCK_DATA\x12\x17\n\x0f\x65lite_buy_count\x18\x05 \x01(\r\"\xf7\x01\n\x11\x44\x42\x42LOB_TOWER_HERO\x12\x0f\n\x07hero_id\x18\x01 \x01(\r\x12\x14\n\x0chero_grow_up\x18\x02 \x01(\r\x12\x0f\n\x07hero_lv\x18\x03 \x01(\r\x12\x11\n\tremain_hp\x18\x04 \x01(\r\x12\x11\n\tmax_score\x18\x05 \x01(\r\x12\x11\n\tmax_floor\x18\x06 \x01(\r\x12\x16\n\x0emax_score_ever\x18\x07 \x01(\r\x12\x16\n\x0emax_floor_ever\x18\x08 \x01(\r\x12\x15\n\rentered_today\x18\t \x01(\x08\x12\x15\n\rwipeout_today\x18\n \x01(\x08\x12\x13\n\x0bmatch_index\x18\x0b \x01(\r\"=\n\x16\x44\x42\x42LOB_TOWER_HERO_INFO\x12#\n\x07hero_hp\x18\x01 \x03(\x0b\x32\x12.DBBLOB_TOWER_HERO\"\\\n\x1b\x44\x42\x42LOB_TOWER_CHALLENGE_DATA\x12\x11\n\treset_cnt\x18\x01 \x01(\r\x12*\n\thero_info\x18\x02 \x01(\x0b\x32\x17.DBBLOB_TOWER_HERO_INFO\"v\n\x1b\x44\x42\x42LOB_WORLD_BOSS_HERO_DATA\x12\x0f\n\x07hero_id\x18\x01 \x01(\r\x12\x1e\n\x16hero_hp_remain_percent\x18\x02 \x01(\r\x12\x16\n\x0eremain_seconds\x18\x03 \x01(\r\x12\x0e\n\x06\x64\x61mage\x18\x04 \x01(\r\"\x89\x02\n DBBLOB_WORLD_BOSS_CHALLENGE_DATA\x12\x19\n\x11last_refresh_time\x18\x01 \x01(\r\x12\x18\n\x10world_boss_index\x18\x02 \x01(\r\x12\x12\n\nhero_index\x18\x03 \x01(\r\x12\x19\n\x11hero_selected_cnt\x18\x04 \x01(\r\x12/\n\thero_data\x18\x05 \x03(\x0b\x32\x1c.DBBLOB_WORLD_BOSS_HERO_DATA\x12\x1e\n\x16history_damage_highest\x18\x06 \x01(\r\x12\x1a\n\x12history_damage_sum\x18\x07 \x01(\r\x12\x14\n\x0c\x64\x61ily_damage\x18\x08 \x03(\r\"\xf4\x01\n\x1bSSPKG_CMD_UPDATE_WORLD_BOSS\x12\x0b\n\x03uid\x18\x01 \x01(\r\x12\x13\n\x0bplayer_name\x18\x02 \x01(\t\x12\x0f\n\x07hero_id\x18\x03 \x01(\r\x12\x12\n\nboss_index\x18\x04 \x01(\r\x12\x17\n\x0fhero_hp_percent\x18\x05 \x01(\r\x12\x18\n\x10hero_time_remain\x18\x06 \x01(\r\x12\x17\n\x0f\x62oss_got_damage\x18\x07 \x01(\r\x12\x1e\n\x16hero_hp_remain_percent\x18\x08 \x01(\r\x12\x0f\n\x07zone_id\x18\t \x01(\r\x12\x11\n\tvip_level\x18\n \x01(\r\"\xba\x01\n\x19SSPKG_CMD_WORLD_BOSS_DEAD\x12\x10\n\x08week_day\x18\x01 \x01(\r\x12\x0f\n\x07\x62oss_id\x18\x02 \x01(\r\x12\x12\n\nboss_index\x18\x03 \x01(\r\x12\x12\n\nkiller_uid\x18\x04 \x01(\r\x12\x13\n\x0bkiller_name\x18\x05 \x01(\t\x12\x1d\n\x15process_killer_reward\x18\x06 \x01(\x08\x12\x1e\n\x16player_damage_info_cnt\x18\x07 \x01(\r\"t\n,SSPKG_CMD_WORLD_BOSS_DEAD_PLAYER_DAMAGE_INFO\x12\x44\n\x12player_damage_info\x18\x01 \x03(\x0b\x32(.SSPKG_CMD_WORLD_BOSS_PLAYER_DAMAGE_INFO\"H\n%SSPKG_CMD_WORLD_BOSS_HERO_DAMAGE_INFO\x12\x0f\n\x07hero_id\x18\x01 \x01(\r\x12\x0e\n\x06\x64\x61mage\x18\x02 \x01(\r\"\x9f\x01\n\'SSPKG_CMD_WORLD_BOSS_PLAYER_DAMAGE_INFO\x12\x0b\n\x03uid\x18\x01 \x01(\r\x12\x0c\n\x04rank\x18\x02 \x01(\r\x12\x17\n\x0f\x63ur_boss_damage\x18\x03 \x01(\r\x12@\n\x10hero_damage_info\x18\x04 \x03(\x0b\x32&.SSPKG_CMD_WORLD_BOSS_HERO_DAMAGE_INFO\"\x9a\x01\n\"SSPKG_CMD_WORLD_BOSS_DAMAGE_PLAYER\x12\x0b\n\x03uid\x18\x01 \x01(\r\x12\x0c\n\x04name\x18\x02 \x01(\t\x12\x17\n\x0f\x63ur_boss_damage\x18\x03 \x01(\r\x12@\n\x10hero_damage_info\x18\x04 \x03(\x0b\x32&.SSPKG_CMD_WORLD_BOSS_HERO_DAMAGE_INFO\"Z\n\"DBBLOB_WORLD_BOSS_HERO_DAMAGE_INFO\x12\x0f\n\x07hero_id\x18\x01 \x01(\r\x12\x0e\n\x06\x64\x61mage\x18\x02 \x01(\r\x12\x13\n\x0btime_remain\x18\x03 \x01(\r\"\xba\x01\n$DBBLOB_WORLD_BOSS_PLAYER_DAMAGE_INFO\x12\x0b\n\x03uid\x18\x01 \x01(\r\x12\x0f\n\x07zone_id\x18\x02 \x01(\r\x12\x16\n\x0e\x63ur_boss_index\x18\x03 \x01(\r\x12\x0c\n\x04name\x18\x04 \x01(\t\x12\x38\n\x0bhero_damage\x18\x05 \x03(\x0b\x32#.DBBLOB_WORLD_BOSS_HERO_DAMAGE_INFO\x12\x14\n\x0ctotal_damage\x18\x06 \x01(\r\"k\n SSPKG_CMD_WORLD_BOSS_DAMAGE_INFO\x12\x12\n\nboss_index\x18\x01 \x01(\r\x12\x33\n\x06player\x18\x02 \x03(\x0b\x32#.SSPKG_CMD_WORLD_BOSS_DAMAGE_PLAYER\"O\n$SSPKG_WORLD_BOSS_QUALIFIED_HERO_INFO\x12\x0b\n\x03uid\x18\x01 \x01(\r\x12\x1a\n\x12qualified_hero_cnt\x18\x02 \x01(\r\"0\n\x1aSSPKG_CMD_WORLD_BOSS_RESET\x12\x12\n\nboss_index\x18\x01 \x01(\r\"c\n SSPKG_WORLD_BOSS_KILLER_INFO_RES\x12\x0b\n\x03uid\x18\x01 \x01(\r\x12\x32\n\x0bkiller_info\x18\x02 \x01(\x0b\x32\x1d.SCPKG_WORLD_BOSS_KILLER_INFO\"t\n%DBBLOB_MULTIPLAYER_PVE_CHALLENGE_DATA\x12\x19\n\x11last_refresh_time\x18\x01 \x01(\r\x12\x10\n\x08week_day\x18\x03 \x01(\r\x12\x1e\n\x16group_challenged_times\x18\x02 \x03(\r\"\x93\x01\n\x1b\x44\x42\x42LOB_NEWBIE_ACTIVITY_ITEM\x12\n\n\x02id\x18\x01 \x01(\r\x12\x10\n\x08progress\x18\x02 \x01(\r\x12\x12\n\nis_claimed\x18\x03 \x01(\x08\x12\x14\n\x0c\x63laimed_time\x18\x04 \x01(\r\x12\x14\n\x0cis_completed\x18\x05 \x01(\x08\x12\x16\n\x0e\x63ompleted_time\x18\x06 \x01(\r\"e\n\x1d\x44\x42\x42LOB_NEWBIE_ACTIVITY_STATUS\x12\x12\n\nlimit_date\x18\x01 \x01(\r\x12\x30\n\nitem_array\x18\x02 \x03(\x0b\x32\x1c.DBBLOB_NEWBIE_ACTIVITY_ITEM\"{\n\x1c\x44\x42\x42LOB_SPECIAL_ACTIVITY_ITEM\x12\n\n\x02id\x18\x01 \x01(\r\x12\x10\n\x08progress\x18\x02 \x01(\r\x12\x14\n\x0cis_completed\x18\x03 \x01(\x08\x12\x12\n\nis_claimed\x18\x04 \x01(\x08\x12\x13\n\x0bupdate_time\x18\x05 \x01(\r\"L\n\x1c\x44\x42\x42LOB_SPECIAL_ACTIVITY_INFO\x12,\n\x05items\x18\x01 \x03(\x0b\x32\x1d.DBBLOB_SPECIAL_ACTIVITY_ITEM\":\n\x18\x44\x42\x42LOB_SELFDUN_HERO_INFO\x12\r\n\x05state\x18\x01 \x01(\r\x12\x0f\n\x07hero_id\x18\x02 \x01(\r\"\x81\x01\n\x14\x44\x42\x42LOB_SELF_DUN_DATA\x12\x34\n\x11\x64\x65\x66\x65nse_hero_info\x18\x01 \x03(\x0b\x32\x19.DBBLOB_SELFDUN_HERO_INFO\x12\x33\n\x10\x61ttack_hero_info\x18\x02 \x03(\x0b\x32\x19.DBBLOB_SELFDUN_HERO_INFO\"\x83\x01\n\x12\x44\x42\x42LOB_PVPDUN_INFO\x12\x0b\n\x03uid\x18\x01 \x01(\r\x12\x0c\n\x04name\x18\x02 \x01(\t\x12\r\n\x05level\x18\x03 \x01(\r\x12\x0e\n\x06online\x18\x04 \x01(\r\x12\x0f\n\x07gang_id\x18\x05 \x01(\r\x12\x11\n\tgang_name\x18\x06 \x01(\t\x12\x0f\n\x07is_done\x18\x07 \x01(\r\"\xce\x01\n\x19\x44\x42\x42LOB_PLAYER_PVPDUN_DATA\x12\x1a\n\x12pvp_attack_win_cnt\x18\x01 \x01(\r\x12\x15\n\rpvp_total_cnt\x18\x02 \x01(\r\x12\x15\n\rpvp_gain_gold\x18\x03 \x01(\r\x12\x18\n\x10pvp_gain_crystal\x18\x04 \x01(\r\x12\x16\n\x0epvp_gain_money\x18\x05 \x01(\r\x12\x19\n\x11pvp_gain_exp_item\x18\x06 \x01(\r\x12\x1a\n\x12steal_battle_times\x18\x07 \x01(\r\"<\n\x18\x44\x42\x42LOB_ENDLESS_HERO_INFO\x12\x0f\n\x07hero_id\x18\x01 \x01(\r\x12\x0f\n\x07hero_lv\x18\x02 \x01(\r\"K\n\x18\x44\x42\x42LOB_ENDLESS_HERO_DATA\x12/\n\x0c\x65ndless_hero\x18\x01 \x03(\x0b\x32\x19.DBBLOB_ENDLESS_HERO_INFO\"u\n\x13\x44\x42\x42LOB_HERO_DATASET\x12+\n\thero_data\x18\x01 \x01(\x0b\x32\x18.DBBLOB_PLAYER_HERO_DATA\x12\x31\n\x0cmonster_data\x18\x02 \x01(\x0b\x32\x1b.DBBLOB_PLAYER_MONSTER_DATA\"w\n\x19\x44\x42\x42LOB_BUILDING_BASE_INFO\x12\x13\n\x0b\x62uilding_id\x18\x01 \x01(\r\x12\x13\n\x0b\x62uilding_lv\x18\x02 \x01(\r\x12\x16\n\x0elevel_beg_time\x18\x03 \x01(\r\x12\x18\n\x10level_total_time\x18\x04 \x01(\r\"o\n\x15\x44\x42\x42LOB_RES_STORE_INFO\x12\x11\n\tres_limit\x18\x01 \x01(\r\x12\x10\n\x08res_type\x18\x02 \x01(\r\x12\x31\n\rbuilding_info\x18\x03 \x01(\x0b\x32\x1a.DBBLOB_BUILDING_BASE_INFO\"\x87\x01\n\x19\x44\x42\x42LOB_ISLAND_DEFEND_INFO\x12\x0f\n\x07hero_id\x18\x01 \x01(\r\x12\x0f\n\x07hero_lv\x18\x02 \x01(\r\x12\x12\n\nmonster_id\x18\x03 \x01(\r\x12\x12\n\nmonster_lv\x18\x04 \x01(\r\x12\x0f\n\x07trap_id\x18\x05 \x01(\r\x12\x0f\n\x07trap_lv\x18\x06 \x01(\r\"\x9f\x01\n\x16\x44\x42\x42LOB_ISLAND_BORNINFO\x12\x12\n\nborn_speed\x18\x01 \x01(\r\x12\x12\n\nborn_limit\x18\x02 \x01(\r\x12\x16\n\x0elast_born_time\x18\x03 \x01(\r\x12\x14\n\x0c\x63ur_born_res\x18\x04 \x01(\r\x12/\n\x0b\x64\x65\x66\x65nd_info\x18\x05 \x01(\x0b\x32\x1a.DBBLOB_ISLAND_DEFEND_INFO\"\x85\x01\n\x12\x44\x42\x42LOB_ISLAND_INFO\x12\x10\n\x08res_type\x18\x01 \x01(\r\x12\x31\n\rbuilding_info\x18\x02 \x03(\x0b\x32\x1a.DBBLOB_BUILDING_BASE_INFO\x12*\n\tborn_info\x18\x03 \x01(\x0b\x32\x17.DBBLOB_ISLAND_BORNINFO\"|\n\x16\x44\x42\x42LOB_ISLAND_GAININFO\x12\x15\n\rpvp_gain_gold\x18\x01 \x01(\r\x12\x18\n\x10pvp_gain_crystal\x18\x02 \x01(\r\x12\x16\n\x0epvp_gain_money\x18\x03 \x01(\r\x12\x19\n\x11pvp_gain_exp_item\x18\x04 \x01(\r\"\xd3\x01\n\x14\x44\x42\x42LOB_BUILDING_INFO\x12\x33\n\x0fhero_tower_data\x18\x01 \x01(\x0b\x32\x1a.DBBLOB_BUILDING_BASE_INFO\x12.\n\x0eres_store_data\x18\x02 \x03(\x0b\x32\x16.DBBLOB_RES_STORE_INFO\x12(\n\x0bisland_data\x18\x03 \x03(\x0b\x32\x13.DBBLOB_ISLAND_INFO\x12,\n\x0bisland_gain\x18\x04 \x01(\x0b\x32\x17.DBBLOB_ISLAND_GAININFO\"\x9b\x01\n\x14\x44\x42\x42LOB_PVP_HERO_INFO\x12\x10\n\x08res_type\x18\x01 \x01(\r\x12\'\n\thero_info\x18\x02 \x01(\x0b\x32\x14.ST_HERO_BATTLE_INFO\x12\x12\n\nmonster_id\x18\x03 \x01(\r\x12\x12\n\nmonster_lv\x18\x04 \x01(\r\x12\x0f\n\x07trap_id\x18\x05 \x01(\r\x12\x0f\n\x07trap_lv\x18\x06 \x01(\r\"S\n\x1d\x44\x42\x42LOB_PVP_ISLAND_DEFEND_INFO\x12\x32\n\x13island_defense_data\x18\x01 \x03(\x0b\x32\x15.DBBLOB_PVP_HERO_INFO\"\x80\x01\n\x16\x44\x42\x42LOB_PVP_ISLAND_INFO\x12\x10\n\x08res_type\x18\x01 \x01(\r\x12\x14\n\x0c\x63ur_born_res\x18\x02 \x01(\r\x12\x16\n\x0elast_born_time\x18\x03 \x01(\r\x12\x12\n\nborn_speed\x18\x04 \x01(\r\x12\x12\n\nborn_limit\x18\x05 \x01(\r\"E\n\x15\x44\x42\x42LOB_PVP_BUILD_INFO\x12,\n\x0bisland_data\x18\x01 \x03(\x0b\x32\x17.DBBLOB_PVP_ISLAND_INFO\"s\n\x17\x44\x42\x42LOB_BUILDING_DATASET\x12*\n\x0cpackage_data\x18\x01 \x01(\x0b\x32\x14.DBBLOB_PACKAGE_INFO\x12,\n\rbuilding_data\x18\x02 \x01(\x0b\x32\x15.DBBLOB_BUILDING_INFO\";\n\x12\x44\x42\x42LOB_CITY_REWARD\x12\x0e\n\x06\x63ityId\x18\x01 \x01(\r\x12\x15\n\rcomplete_star\x18\x02 \x01(\r\"B\n\x16\x44\x42\x42LOB_CITY_REWARD_SET\x12(\n\x0b\x63ity_reward\x18\x01 \x03(\x0b\x32\x13.DBBLOB_CITY_REWARD\"\xb5\x04\n\x12\x44\x42\x42LOB_DUN_DATASET\x12+\n\x07pve_dun\x18\x01 \x01(\x0b\x32\x1a.DBBLOB_PVE_CHALLENGE_DATA\x12/\n\ttower_dun\x18\x02 \x01(\x0b\x32\x1c.DBBLOB_TOWER_CHALLENGE_DATA\x12\'\n\x08self_dun\x18\x03 \x01(\x0b\x32\x15.DBBLOB_SELF_DUN_DATA\x12+\n\x07pvp_dun\x18\x04 \x01(\x0b\x32\x1a.DBBLOB_PLAYER_PVPDUN_DATA\x12\x38\n\x0bgang_battle\x18\x05 \x01(\x0b\x32#.DBBLOB_PLAYER_HERO_GANGBATTLE_DATA\x12\x34\n\x0brank_battle\x18\x06 \x01(\x0b\x32\x1f.DBBLOB_PLAYER_RANK_BATTLE_DATA\x12\x30\n\x0f\x63ity_reward_set\x18\x07 \x01(\x0b\x32\x17.DBBLOB_CITY_REWARD_SET\x12\x44\n\x19world_boss_challenge_data\x18\x08 \x01(\x0b\x32!.DBBLOB_WORLD_BOSS_CHALLENGE_DATA\x12\x33\n\rbossrush_info\x18\t \x01(\x0b\x32\x1c.DBBLOB_PLAYER_BOSSRUSH_INFO\x12N\n\x1emultiplayer_pve_challenge_data\x18\n \x01(\x0b\x32&.DBBLOB_MULTIPLAYER_PVE_CHALLENGE_DATA\"\x99\x03\n\x17\x44\x42\x42LOB_PLAYER_BEHAVIOUR\x12\x1b\n\x13total_skilllvup_cnt\x18\x01 \x01(\r\x12\x1a\n\x12total_archlvup_cnt\x18\x02 \x01(\r\x12\x18\n\x10total_growup_cnt\x18\x03 \x01(\r\x12\x1b\n\x13total_endless_score\x18\x04 \x01(\r\x12\x1e\n\x16total_buildinglvup_cnt\x18\x05 \x01(\r\x12\x12\n\ntry_to_pay\x18\x06 \x01(\r\x12\"\n\x1atotal_equip_level_up_level\x18\x07 \x01(\r\x12\x1f\n\x17total_equip_grow_up_cnt\x18\x08 \x01(\r\x12\x1f\n\x17total_equip_wake_up_cnt\x18\t \x01(\r\x12\x19\n\x11total_endless_cnt\x18\n \x01(\r\x12\x1c\n\x14total_rankbattle_cnt\x18\x0b \x01(\r\x12\x1a\n\x12win_rankbattle_cnt\x18\x0c \x01(\r\x12\x1f\n\x17total_world_boss_damage\x18\r \x01(\r\"\xac\x01\n\x16\x44\x42\x42LOB_MONTH_CARD_INFO\x12\x15\n\rmonth_card_id\x18\x01 \x01(\r\x12\x10\n\x08\x62uy_time\x18\x02 \x01(\r\x12\x18\n\x10last_reward_time\x18\x03 \x01(\r\x12\x1c\n\x14last_get_reward_time\x18\x04 \x01(\r\x12\x1c\n\x14total_get_reward_cnt\x18\x05 \x01(\r\x12\x13\n\x0bremain_days\x18\x06 \x01(\x05\"\xc4\x01\n\x1a\x44\x42\x42LOB_CONTINUE_LOGIN_INFO\x12\x15\n\rcontinue_days\x18\x01 \x01(\r\x12\x18\n\x10last_record_time\x18\x02 \x01(\r\x12\x11\n\tlogin_bit\x18\x03 \x01(\r\x12\x16\n\x0eget_reward_bit\x18\x04 \x01(\r\x12\x18\n\x10re_signable_days\x18\x05 \x01(\r\x12\x19\n\x11re_sign_last_time\x18\x06 \x01(\r\x12\x15\n\rcur_month_num\x18\x07 \x01(\r\"S\n\x17\x44\x42\x42LOB_GROWTH_FUND_INFO\x12\x10\n\x08\x62uy_time\x18\x01 \x01(\r\x12\x12\n\ntarget_bit\x18\x02 \x01(\r\x12\x12\n\nreward_bit\x18\x03 \x01(\r\"\xcd\x01\n\x1d\x44\x42\x42LOB_CUMULATE_RECHARGE_INFO\x12\x1c\n\x14\x63umulate_recharge_id\x18\x01 \x01(\r\x12\x1d\n\x15\x63umulate_recharge_cnt\x18\x02 \x01(\r\x12\x18\n\x10last_reward_time\x18\x03 \x01(\r\x12\x12\n\ntarget_bit\x18\x04 \x01(\r\x12\x12\n\nreward_bit\x18\x05 \x01(\r\x12\x16\n\x0e\x64\x61ily_free_bit\x18\x06 \x01(\r\x12\x15\n\rdaily_buy_bit\x18\x07 \x01(\r\"d\n\x15\x44\x42\x42LOB_GROUP_BUY_INFO\x12\x15\n\rlast_buy_time\x18\x01 \x01(\r\x12\x1a\n\x12valid_group_buy_id\x18\x02 \x03(\r\x12\x18\n\x10has_buy_group_id\x18\x03 \x03(\r\"c\n\x17\x44\x42\x42LOB_FIRSTREWARD_INFO\x12\x15\n\ris_get_reward\x18\x01 \x01(\r\x12\x15\n\ris_first_open\x18\x02 \x01(\r\x12\x1a\n\x12\x66irst_recharge_cnt\x18\x03 \x01(\r\"\x8b\x04\n\x14\x44\x42\x42LOB_BUSINESS_INFO\x12\x30\n\x0fmonth_card_info\x18\x01 \x01(\x0b\x32\x17.DBBLOB_MONTH_CARD_INFO\x12\x39\n\x14\x63on_login_7days_info\x18\x02 \x01(\x0b\x32\x1b.DBBLOB_CONTINUE_LOGIN_INFO\x12\x35\n\x10month_login_info\x18\x03 \x01(\x0b\x32\x1b.DBBLOB_CONTINUE_LOGIN_INFO\x12=\n\x18open_cumulate_login_info\x18\x04 \x01(\x0b\x32\x1b.DBBLOB_CONTINUE_LOGIN_INFO\x12\x32\n\x10growth_fund_info\x18\x05 \x01(\x0b\x32\x18.DBBLOB_GROWTH_FUND_INFO\x12>\n\x16\x63umulate_recharge_info\x18\x06 \x01(\x0b\x32\x1e.DBBLOB_CUMULATE_RECHARGE_INFO\x12.\n\x0egroup_buy_info\x18\x07 \x01(\x0b\x32\x16.DBBLOB_GROUP_BUY_INFO\x12\x37\n\x13\x66irst_purchase_info\x18\x08 \x01(\x0b\x32\x1a.DBBLOB_FIRSTPURCHASE_LIST\x12\x33\n\x11\x66irst_reward_info\x18\t \x01(\x0b\x32\x18.DBBLOB_FIRSTREWARD_INFO\"\x91\x01\n\x16SSDT_PRIVATE_CHAT_INFO\x12\x10\n\x08msg_data\x18\x01 \x01(\t\x12\x10\n\x08msg_time\x18\x02 \x01(\r\x12\x11\n\tfrom_name\x18\x03 \x01(\t\x12\x14\n\x0c\x66rom_role_id\x18\x04 \x01(\r\x12\x16\n\x0e\x66rom_vip_level\x18\x05 \x01(\r\x12\x12\n\nto_role_id\x18\x06 \x01(\r\"C\n\x16SSPKG_PRIVATE_CHAT_REQ\x12)\n\x08msg_info\x18\x01 \x01(\x0b\x32\x17.SSDT_PRIVATE_CHAT_INFO\"C\n\x16SSPKG_PRIVATE_CHAT_RES\x12)\n\x08msg_info\x18\x02 \x01(\x0b\x32\x17.SSDT_PRIVATE_CHAT_INFO\"{\n\x1eSSPKG_OFFLINE_PRIVATE_CHAT_MSG\x12\x12\n\nto_role_id\x18\x01 \x01(\r\x12\x1a\n\x12msg_target_role_id\x18\x02 \x01(\r\x12)\n\x08msg_info\x18\x03 \x03(\x0b\x32\x17.SSDT_PRIVATE_CHAT_INFO\"a\n\x1b\x44\x42\x42LOB_OFFLIEN_PRIVATE_CHAT\x12\x42\n\x19offline_private_chat_info\x18\x01 \x03(\x0b\x32\x1f.SSPKG_OFFLINE_PRIVATE_CHAT_MSG\"c\n\x14\x44\x42\x42LOB_RANK_POS_INFO\x12%\n\x1dhistory_high_endless_rank_pos\x18\x01 \x01(\r\x12$\n\x1chistory_high_rank_battle_pos\x18\x02 \x01(\r\"\xbe\x04\n\x10\x44\x42\x42LOB_MISC_DATA\x12(\n\nquest_info\x18\x01 \x01(\x0b\x32\x14.DBBLOB_PLAYER_QUEST\x12\x32\n\x10gift_accept_info\x18\x02 \x01(\x0b\x32\x18.DBBLOB_GIFT_ACCEPT_INFO\x12&\n\tshop_info\x18\x03 \x01(\x0b\x32\x13.DBBLOB_PLAYER_SHOP\x12\x30\n\x0e\x62\x65haviour_info\x18\x04 \x01(\x0b\x32\x18.DBBLOB_PLAYER_BEHAVIOUR\x12\x38\n\x13offline_battle_info\x18\x05 \x01(\x0b\x32\x1b.DBBLOB_OFFLINE_BATTLE_INFO\x12\x36\n\x12online_battle_info\x18\x06 \x01(\x0b\x32\x1a.DBBLOB_ONLINE_BATTLE_INFO\x12,\n\rbusiness_info\x18\x07 \x01(\x0b\x32\x15.DBBLOB_BUSINESS_INFO\x12\x32\n\x0fprize_draw_info\x18\x08 \x01(\x0b\x32\x19.DBBLOB_PLAYER_PRIZE_DRAW\x12?\n\x19offline_private_chat_info\x18\t \x01(\x0b\x32\x1c.DBBLOB_OFFLIEN_PRIVATE_CHAT\x12,\n\rrank_pos_info\x18\n \x01(\x0b\x32\x15.DBBLOB_RANK_POS_INFO\x12/\n\x0frank_reset_info\x18\x0b \x01(\x0b\x32\x16.SSPKG_RANK_RESET_INFO\"B\n\x12\x44\x42\x42LOB_NOTIFY_DATA\x12\r\n\x05title\x18\x01 \x01(\t\x12\x0c\n\x04link\x18\x02 \x01(\t\x12\x0f\n\x07\x63ontent\x18\x03 \x01(\t\"\'\n\x13\x44\x42\x42LOB_RANK_VALINFO\x12\x10\n\x08rank_val\x18\x01 \x01(\r\"_\n\x10\x44\x42\x42LOB_RANK_DATA\x12\x0f\n\x07rank_id\x18\x01 \x01(\r\x12&\n\x08rank_val\x18\x02 \x03(\x0b\x32\x14.DBBLOB_RANK_VALINFO\x12\x12\n\ntime_stamp\x18\x03 \x01(\r\"\x88\x01\n\x15\x44\x42\x42LOG_RANK_STAT_INFO\x12\x11\n\trole_name\x18\x01 \x01(\t\x12\x0f\n\x07gang_id\x18\x02 \x01(\r\x12\x11\n\tgang_name\x18\x03 \x01(\t\x12\x12\n\ngang_level\x18\x04 \x01(\r\x12$\n\trank_data\x18\x05 \x03(\x0b\x32\x11.DBBLOB_RANK_DATA\"I\n\x13\x44\x42\x42LOB_DIRHERO_INFO\x12\x0e\n\x06heroid\x18\x01 \x01(\r\x12\x0e\n\x06herolv\x18\x02 \x01(\r\x12\x12\n\nherogrowup\x18\x03 \x01(\r\"\x8c\x01\n\x11\x44\x42\x42LOB_WORLD_INFO\x12\x0b\n\x03uid\x18\x01 \x01(\r\x12\x11\n\trole_name\x18\x02 \x01(\t\x12\x0f\n\x07worldid\x18\x03 \x01(\r\x12\x0e\n\x06zoneid\x18\x04 \x01(\r\x12\x0e\n\x06\x63urpve\x18\x05 \x01(\r\x12&\n\x08heroinfo\x18\x06 \x03(\x0b\x32\x14.DBBLOB_DIRHERO_INFO\"?\n\x15\x44\x42\x42LOB_DIR_WORLD_INFO\x12&\n\nworld_info\x18\x01 \x03(\x0b\x32\x12.DBBLOB_WORLD_INFO\"\x98\x02\n\x12SSDT_WHOLE_GAMEOBJ\x12-\n\x12player_online_info\x18\x01 \x01(\x0b\x32\x11.SSDT_ROLE_ONLINE\x12\'\n\thero_info\x18\x02 \x01(\x0b\x32\x14.DBBLOB_HERO_DATASET\x12/\n\rbuilding_info\x18\x03 \x01(\x0b\x32\x18.DBBLOB_BUILDING_DATASET\x12%\n\x08\x64un_info\x18\x04 \x01(\x0b\x32\x13.DBBLOB_DUN_DATASET\x12$\n\tmisc_data\x18\x05 \x01(\x0b\x32\x11.DBBLOB_MISC_DATA\x12,\n\ractivity_data\x18\x06 \x01(\x0b\x32\x15.DBBLOB_ACTIVITY_INFO\"\x1b\n\x0c\x45RR_RESPONSE\x12\x0b\n\x03\x65rr\x18\x01 \x01(\x05\"\xe1\x01\n\x0fSSDT_ROLE_BRIEF\x12\x0b\n\x03uid\x18\x01 \x01(\r\x12\x11\n\trole_name\x18\x02 \x01(\t\x12\x0e\n\x06gender\x18\x03 \x01(\r\x12\x12\n\nmain_level\x18\x04 \x01(\r\x12\x0e\n\x06map_id\x18\x05 \x01(\r\x12\x16\n\x0e\x62ody_info_data\x18\x06 \x03(\r\x12\x13\n\x0b\x63reate_time\x18\x07 \x01(\r\x12\x10\n\x08\x62it_mark\x18\x08 \x01(\r\x12\x14\n\x0c\x63lt_bit_mark\x18\t \x01(\x04\x12\x13\n\x0b\x61vatar_list\x18\n \x03(\r\x12\x10\n\x08\x62\x61n_time\x18\x0b \x01(\r\"\x88\x01\n\x12SUCC_ROLE_LIST_RES\x12\x11\n\tunique_id\x18\x01 \x01(\t\x12$\n\nrole_brief\x18\x02 \x03(\x0b\x32\x10.SSDT_ROLE_BRIEF\x12\x10\n\x08set_time\x18\x03 \x01(\x05\x12\x10\n\x08world_id\x18\x04 \x01(\r\x12\x15\n\rlast_role_uid\x18\x05 \x01(\r\"\xa1\x01\n\x12SSDT_WHOLE_ACCOUNT\x12\x14\n\x0cgmpermission\x18\x01 \x01(\r\x12\x10\n\x08\x62\x61n_time\x18\x02 \x01(\r\x12\x15\n\rban_chat_time\x18\x03 \x01(\r\x12\x10\n\x08schedule\x18\x04 \x01(\r\x12\x0e\n\x06\x61\x63tive\x18\x05 \x01(\r\x12\x17\n\x0f\x61\x63t_create_time\x18\x06 \x01(\r\x12\x11\n\tacc_quest\x18\x07 \x01(\r\".\n\x16SSPKG_SHUTDOWN_ZONESVR\x12\x14\n\x0c\x64own_aft_sec\x18\x01 \x01(\r\"&\n\x16SSDT_ROLE_SELFDUN_DATA\x12\x0c\n\x04\x64\x61ta\x18\x01 \x01(\t\"%\n\x15SSDT_ROLE_PVEDUN_DATA\x12\x0c\n\x04\x64\x61ta\x18\x01 \x01(\t\"&\n\x16SSDT_ENDLESS_HERO_DATA\x12\x0c\n\x04\x64\x61ta\x18\x01 \x01(\t\"\xa0\x02\n\x13SSDT_PVPPLAYER_INFO\x12\x0b\n\x03uid\x18\x01 \x01(\r\x12\r\n\x05level\x18\x02 \x01(\r\x12\x0f\n\x07gang_id\x18\x03 \x01(\r\x12\x11\n\trole_name\x18\x04 \x01(\t\x12\x0e\n\x06online\x18\x05 \x01(\r\x12\x11\n\tpvp_score\x18\x06 \x01(\r\x12\x1a\n\x12max_fight_capacity\x18\x07 \x01(\r\x12\x13\n\x0b\x63ur_crystal\x18\x08 \x01(\r\x12\x10\n\x08\x63ur_gold\x18\t \x01(\r\x12\x0f\n\x07is_done\x18\n \x01(\r\x12)\n\x08self_dun\x18\x0b \x01(\x0b\x32\x17.SSDT_ROLE_SELFDUN_DATA\x12\'\n\x07pve_dun\x18\x0c \x01(\x0b\x32\x16.SSDT_ROLE_PVEDUN_DATA\"\\\n\x19SSDT_PLAYER_LOGIN_PVPINFO\x12\x0e\n\x06result\x18\x01 \x01(\r\x12/\n\x0fpvp_island_info\x18\x02 \x01(\x0b\x32\x16.DBBLOB_PVP_BUILD_INFO\"\x93\x01\n\x12PKG_ROLE_LOGIN_REQ\x12\x11\n\tunique_id\x18\x01 \x01(\t\x12\x0b\n\x03uid\x18\x02 \x01(\r\x12\x12\n\nchannel_id\x18\x03 \x01(\r\x12\x32\n\x0epvp_login_info\x18\x04 \x01(\x0b\x32\x1a.SSDT_PLAYER_LOGIN_PVPINFO\x12\x15\n\rban_chat_time\x18\x05 \x01(\r\"\xfa\x01\n\x12PKG_ROLE_LOGIN_RES\x12\x0e\n\x06result\x18\x01 \x01(\x05\x12\x11\n\tunique_id\x18\x02 \x01(\t\x12\x0b\n\x03uid\x18\x03 \x01(\r\x12\x11\n\trole_name\x18\x04 \x01(\t\x12\x12\n\nchannel_id\x18\x05 \x01(\r\x12+\n\x0ewhole_game_obj\x18\x06 \x01(\x0b\x32\x13.SSDT_WHOLE_GAMEOBJ\x12\x32\n\x0epvp_login_info\x18\x07 \x01(\x0b\x32\x1a.SSDT_PLAYER_LOGIN_PVPINFO\x12\x15\n\rleft_ban_time\x18\x08 \x01(\r\x12\x15\n\rban_chat_time\x18\t \x01(\r\"Y\n\x18PKG_VIEW_PLAYER_INFO_REQ\x12\x14\n\x0cview_role_id\x18\x01 \x01(\r\x12\x14\n\x0cis_from_gang\x18\x02 \x01(\x08\x12\x11\n\tvip_level\x18\x03 \x01(\r\"\x8a\x01\n&PKG_VIEW_PLAYER_INFO_RSP_FROM_GANG_SVR\x12\x0e\n\x06result\x18\x01 \x01(\x05\x12\x14\n\x0cview_role_id\x18\x02 \x01(\r\x12\x14\n\x0cis_from_gang\x18\x03 \x01(\x08\x12\x11\n\tgang_name\x18\x04 \x01(\t\x12\x11\n\tvip_level\x18\x05 \x01(\r\"\xaa\x01\n-PKG_VIEW_PLAYER_INFO_RSP_FROM_RANK_BATTLE_SVR\x12\x0e\n\x06result\x18\x01 \x01(\x05\x12\x14\n\x0cview_role_id\x18\x02 \x01(\r\x12\x14\n\x0cis_from_gang\x18\x03 \x01(\x08\x12\x11\n\tgang_name\x18\x04 \x01(\t\x12\x17\n\x0frank_battle_pos\x18\x05 \x01(\x05\x12\x11\n\tvip_level\x18\x06 \x01(\r\"\xc1\x01\n&PKG_VIEW_PLAYER_INFO_RSP_FROM_RANK_SVR\x12\x0e\n\x06result\x18\x01 \x01(\x05\x12\x14\n\x0cview_role_id\x18\x02 \x01(\r\x12\x14\n\x0cis_from_gang\x18\x03 \x01(\x08\x12\x11\n\tgang_name\x18\x04 \x01(\t\x12\x17\n\x0frank_battle_pos\x18\x05 \x01(\x05\x12\x1c\n\x14\x61\x63hievement_rank_pos\x18\x06 \x01(\x05\x12\x11\n\tvip_level\x18\x07 \x01(\r\"\xb3\x03\n&PKG_VIEW_PLAYER_INFO_RSP_FROM_ROLE_SVR\x12\x0e\n\x06result\x18\x01 \x01(\x05\x12\x14\n\x0cview_role_id\x18\x02 \x01(\r\x12\x14\n\x0cis_from_gang\x18\x03 \x01(\x08\x12\x11\n\tgang_name\x18\x04 \x01(\t\x12\x17\n\x0frank_battle_pos\x18\x05 \x01(\x05\x12\x1c\n\x14\x61\x63hievement_rank_pos\x18\x06 \x01(\x05\x12\x11\n\trole_name\x18\x07 \x01(\t\x12\x19\n\x11\x65ndless_max_floor\x18\x08 \x01(\r\x12*\n\rdun_data_info\x18\t \x01(\x0b\x32\x13.DBBLOB_DUN_DATASET\x12\'\n\thero_info\x18\n \x01(\x0b\x32\x14.DBBLOB_HERO_DATASET\x12$\n\tmisc_data\x18\x0b \x01(\x0b\x32\x11.DBBLOB_MISC_DATA\x12\x33\n\x11hero_equiped_info\x18\x0c \x03(\x0b\x32\x18.DBBLOBHERO_EQUIPED_INFO\x12\x11\n\tvip_level\x18\r \x01(\r\x12\x12\n\nhead_photo\x18\x0e \x01(\r\"5\n\x13PKG_ROLE_LOGOUT_REQ\x12\x11\n\tunique_id\x18\x01 \x01(\t\x12\x0b\n\x03uid\x18\x02 \x01(\r\"s\n\x14PKG_REQ_PLAYER_LOGIN\x12\x11\n\tunique_id\x18\x01 \x01(\t\x12\x0b\n\x03uid\x18\x02 \x01(\r\x12\x12\n\nchannel_id\x18\x03 \x01(\r\x12\x10\n\x08world_id\x18\x04 \x01(\x05\x12\x15\n\rban_chat_time\x18\x05 \x01(\r\"\xa5\x01\n\x14PKG_RES_PLAYER_LOGIN\x12\x0e\n\x06result\x18\x01 \x01(\r\x12\x11\n\tunique_id\x18\x02 \x01(\t\x12\x0b\n\x03uid\x18\x03 \x01(\r\x12\x12\n\nchannel_id\x18\x04 \x01(\r\x12\x32\n\x0epvp_login_info\x18\x05 \x01(\x0b\x32\x1a.SSDT_PLAYER_LOGIN_PVPINFO\x12\x15\n\rban_chat_time\x18\x06 \x01(\r\"\xd7\x01\n\x15PKG_REQ_PLAYER_LOGOUT\x12\x0b\n\x03uid\x18\x01 \x01(\r\x12\x1a\n\x12max_fight_capacity\x18\x02 \x01(\r\x12\x11\n\trole_name\x18\x03 \x01(\t\x12/\n\x0fpvp_island_info\x18\x04 \x01(\x0b\x32\x16.DBBLOB_PVP_BUILD_INFO\x12?\n\x17pvp_island_defense_info\x18\x05 \x01(\x0b\x32\x1e.DBBLOB_PVP_ISLAND_DEFEND_INFO\x12\x10\n\x08world_id\x18\x06 \x01(\x05\"\xc0\x02\n\x15PKG_ACCOUNT_LOGIN_REQ\x12\x10\n\x08log_type\x18\x01 \x01(\r\x12\x10\n\x08log_plat\x18\x02 \x01(\r\x12\x13\n\x0b\x64\x65vice_type\x18\x03 \x01(\t\x12\x16\n\x0e\x64\x65vice_sys_ver\x18\x04 \x01(\t\x12\x17\n\x0fresolution_wide\x18\x05 \x01(\x05\x12\x17\n\x0fresolution_high\x18\x06 \x01(\x05\x12\x0f\n\x07\x61non_id\x18\x07 \x01(\t\x12\x11\n\tunique_id\x18\x08 \x01(\t\x12\x12\n\nchannel_id\x18\t \x01(\r\x12\n\n\x02ip\x18\n \x01(\r\x12\x10\n\x08world_id\x18\x0b \x01(\r\x12\x0f\n\x07zone_id\x18\x0c \x01(\r\x12\x12\n\nre_connect\x18\r \x01(\r\x12\x16\n\x0enet_re_connect\x18\x0e \x01(\r\x12\x11\n\tdevice_id\x18\x0f \x01(\t\"b\n\x15PKG_ACCOUNT_LOGIN_RES\x12\x0e\n\x06result\x18\x01 \x01(\r\x12\x16\n\x0enet_re_connect\x18\x02 \x01(\r\x12!\n\x04\x64\x61ta\x18\x03 \x01(\x0b\x32\x13.SSDT_ROLE_LIST_RES\"O\n\x16PKG_ACCOUNT_LOGOUT_REQ\x12\x11\n\tunique_id\x18\x01 \x01(\t\x12\x11\n\trole_name\x18\x02 \x01(\t\x12\x0f\n\x07zone_id\x18\x03 \x01(\r\"\xb3\x01\n\x0fPKG_CREATE_NAME\x12\x0e\n\x06result\x18\x01 \x01(\r\x12\x11\n\tunique_id\x18\x02 \x01(\t\x12\x11\n\trole_name\x18\x03 \x01(\t\x12\x0b\n\x03uid\x18\x04 \x01(\r\x12\x0f\n\x07zone_id\x18\x05 \x01(\r\x12\x10\n\x08world_id\x18\x06 \x01(\r\x12\x13\n\x0b\x63reate_time\x18\x07 \x01(\r\x12\x12\n\nhead_photo\x18\x08 \x01(\r\x12\x11\n\tis_rename\x18\t \x01(\x08\"#\n\x13SSDT_RECOMMAND_NAME\x12\x0c\n\x04name\x18\x01 \x01(\t\"\xd0\x01\n\x13PKG_CREATE_NAME_RES\x12\x0e\n\x06result\x18\x01 \x01(\r\x12\x11\n\tis_rename\x18\t \x01(\x08\x12\x11\n\tunique_id\x18\x02 \x01(\t\x12\x11\n\trole_name\x18\x03 \x01(\t\x12\x12\n\nhead_photo\x18\x04 \x01(\r\x12\x0b\n\x03uid\x18\x05 \x01(\r\x12\x0f\n\x07zone_id\x18\x06 \x01(\r\x12\x10\n\x08world_id\x18\x07 \x01(\r\x12,\n\x0erecommand_name\x18\x08 \x03(\x0b\x32\x14.SSDT_RECOMMAND_NAME\"\"\n\x13PKG_RANDOM_NAME_REQ\x12\x0b\n\x03uid\x18\x01 \x01(\r\"0\n\x13PKG_RANDOM_NAME_RES\x12\x0b\n\x03uid\x18\x01 \x01(\r\x12\x0c\n\x04name\x18\x02 \x01(\t\"\xe1\x01\n\x0fPKG_VERIFY_NAME\x12\x0e\n\x06result\x18\x01 \x01(\r\x12\x11\n\tunique_id\x18\x02 \x01(\t\x12\x11\n\trole_name\x18\x03 \x01(\t\x12\x0b\n\x03uid\x18\x04 \x01(\r\x12\x0f\n\x07zone_id\x18\x05 \x01(\r\x12\x10\n\x08world_id\x18\x06 \x01(\r\x12\x13\n\x0b\x63reate_time\x18\x07 \x01(\r\x12\x12\n\nhead_photo\x18\x08 \x01(\r\x12,\n\x0erecommand_name\x18\t \x03(\x0b\x32\x14.SSDT_RECOMMAND_NAME\x12\x11\n\tis_rename\x18\n \x01(\x08\"\xa7\x01\n\x14PKG_CREATE_WORLDROLE\x12\x0e\n\x06result\x18\x01 \x01(\r\x12\x11\n\tis_rename\x18\t \x01(\x08\x12\x11\n\tunique_id\x18\x02 \x01(\t\x12\x11\n\trole_name\x18\x03 \x01(\t\x12\x0b\n\x03uid\x18\x04 \x01(\r\x12\x10\n\x08world_id\x18\x05 \x01(\r\x12\x13\n\x0b\x63reate_time\x18\x06 \x01(\r\x12\x12\n\nhead_photo\x18\x07 \x01(\r\"s\n\x18PKG_BIND_PLATACCOUNT_REQ\x12\x10\n\x08log_plat\x18\x01 \x01(\r\x12\x0f\n\x07\x61non_id\x18\x02 \x01(\t\x12\x0f\n\x07\x62ind_id\x18\x03 \x01(\t\x12\x10\n\x08world_id\x18\x04 \x01(\r\x12\x11\n\trole_name\x18\x05 \x01(\t\"L\n\x18PKG_BIND_PLATACCOUNT_RES\x12\x0e\n\x06result\x18\x01 \x01(\r\x12\x0f\n\x07\x61non_id\x18\x02 \x01(\t\x12\x0f\n\x07\x62ind_id\x18\x03 \x01(\t\"i\n PKG_BIND_CLUSTER_PLATACCOUNT_REQ\x12\x10\n\x08log_plat\x18\x01 \x01(\r\x12\x0f\n\x07\x61non_id\x18\x02 \x01(\t\x12\x0f\n\x07\x62ind_id\x18\x03 \x01(\t\x12\x11\n\trole_name\x18\x04 \x01(\t\"T\n PKG_BIND_CLUSTER_PLATACCOUNT_RES\x12\x0e\n\x06result\x18\x01 \x01(\r\x12\x0f\n\x07\x61non_id\x18\x02 \x03(\r\x12\x0f\n\x07\x62ind_id\x18\x03 \x03(\r\"x\n\x1dPKG_BIND_ROLE_PLATACCOUNT_REQ\x12\x10\n\x08log_plat\x18\x01 \x01(\r\x12\x0f\n\x07\x61non_id\x18\x02 \x03(\r\x12\x0f\n\x07\x62ind_id\x18\x03 \x03(\r\x12\x10\n\x08world_id\x18\x04 \x01(\r\x12\x11\n\trole_name\x18\x05 \x01(\t\"u\n\x1dPKG_BIND_ROLE_PLATACCOUNT_RES\x12\x0e\n\x06result\x18\x01 \x01(\r\x12\x10\n\x08log_plat\x18\x02 \x01(\r\x12\x10\n\x08world_id\x18\x03 \x01(\r\x12\x0f\n\x07\x61non_id\x18\x04 \x03(\r\x12\x0f\n\x07\x62ind_id\x18\x05 \x03(\r\"`\n\x17PKG_BIND_ACCOUNTSVR_REQ\x12\x10\n\x08log_plat\x18\x01 \x01(\r\x12\x0f\n\x07\x61non_id\x18\x02 \x03(\r\x12\x0f\n\x07\x62ind_id\x18\x03 \x03(\r\x12\x11\n\trole_name\x18\x04 \x01(\t\"^\n\x17PKG_BIND_ACCOUNTSVR_RES\x12\x0e\n\x06result\x18\x01 \x01(\r\x12\x0f\n\x07\x61non_id\x18\x02 \x01(\t\x12\x0f\n\x07\x62ind_id\x18\x03 \x01(\t\x12\x11\n\trole_name\x18\x04 \x01(\t\"\xbc\x02\n\x16PKG_GAMEOBJ_UPDATE_REQ\x12\x11\n\tunique_id\x18\x01 \x01(\t\x12\x0b\n\x03uid\x18\x02 \x01(\r\x12-\n\x12player_online_info\x18\x03 \x01(\x0b\x32\x11.SSDT_ROLE_ONLINE\x12\'\n\thero_info\x18\x04 \x01(\x0b\x32\x14.DBBLOB_HERO_DATASET\x12/\n\rbuilding_info\x18\x05 \x01(\x0b\x32\x18.DBBLOB_BUILDING_DATASET\x12%\n\x08\x64un_info\x18\x06 \x01(\x0b\x32\x13.DBBLOB_DUN_DATASET\x12$\n\tmisc_data\x18\x07 \x01(\x0b\x32\x11.DBBLOB_MISC_DATA\x12,\n\ractivity_info\x18\x08 \x01(\x0b\x32\x15.DBBLOB_ACTIVITY_INFO\"5\n\x16PKG_GAMEOBJ_UPDATE_RSP\x12\x0e\n\x06result\x18\x01 \x01(\x05\x12\x0b\n\x03\x65rr\x18\x02 \x01(\x05\"\x96\x01\n\x1bSSDT_CMD_PLAYER_SELFDUNINFO\x12\x0e\n\x06result\x18\x01 \x01(\r\x12\x0e\n\x06\x64un_id\x18\x02 \x01(\r\x12\x11\n\tis_online\x18\x03 \x01(\r\x12\x17\n\x0fother_unique_id\x18\x04 \x01(\t\x12\x16\n\x0eobtain_crystal\x18\x05 \x01(\r\x12\x13\n\x0bobtain_gold\x18\x06 \x01(\r\"@\n\x15SSDT_ROOMMONSTER_INFO\x12\x12\n\nmonster_id\x18\x01 \x01(\r\x12\x13\n\x0bmonster_cnt\x18\x02 \x01(\r\"O\n\x0eSSDT_ROOM_INFO\x12\x0f\n\x07room_id\x18\x01 \x01(\r\x12,\n\x0cmonster_info\x18\x02 \x03(\x0b\x32\x16.SSDT_ROOMMONSTER_INFO\"7\n\x11SSDT_DUNGEON_INFO\x12\"\n\troom_info\x18\x01 \x03(\x0b\x32\x0f.SSDT_ROOM_INFO\"\x98\x01\n\x18SSDT_PLAYER_ENTERDUN_RES\x12\x11\n\tunique_id\x18\x01 \x01(\t\x12\x0f\n\x07hero_id\x18\x02 \x01(\r\x12\x0e\n\x06\x64un_id\x18\x03 \x01(\r\x12\x0e\n\x06result\x18\x04 \x01(\x05\x12\r\n\x05level\x18\x05 \x01(\r\x12)\n\x08\x64un_info\x18\x06 \x01(\x0b\x32\x17.SSDT_ROLE_SELFDUN_DATA\"\x83\x01\n\x15PKG_SELFDUN_ENTER_REQ\x12\x17\n\x0fother_unique_id\x18\x01 \x01(\t\x12\x11\n\tunique_id\x18\x02 \x01(\t\x12\x0f\n\x07hero_id\x18\x03 \x01(\r\x12\x0e\n\x06\x64un_id\x18\x04 \x01(\r\x12\x0e\n\x06result\x18\x05 \x01(\x05\x12\r\n\x05level\x18\x06 \x01(\r\"f\n\x15PKG_SELFDUN_ENTER_RSP\x12\x0e\n\x06result\x18\x01 \x01(\x05\x12\x0b\n\x03\x65rr\x18\x02 \x01(\x05\x12\x30\n\renter_dun_res\x18\x03 \x01(\x0b\x32\x19.SSDT_PLAYER_ENTERDUN_RES\"7\n\x15PKG_ROLE_DEL_ROLE_REQ\x12\x11\n\tunique_id\x18\x01 \x01(\t\x12\x0b\n\x03uid\x18\x02 \x01(\r\"U\n\x15PKG_ROLE_DEL_ROLE_RES\x12\x0e\n\x06result\x18\x01 \x01(\r\x12\x11\n\tunique_id\x18\x02 \x01(\t\x12\x0b\n\x03uid\x18\x03 \x01(\r\x12\x0c\n\x04name\x18\x04 \x01(\t\"5\n\x0fPKG_KICK_PLAYER\x12\x11\n\tunique_id\x18\x01 \x01(\t\x12\x0f\n\x07zone_id\x18\x02 \x01(\x05\"\xbf\x01\n\x14PKG_ACCOUNT_INFO_RES\x12\x10\n\x08log_type\x18\x01 \x01(\r\x12\x10\n\x08log_plat\x18\x02 \x01(\r\x12\x0f\n\x07\x61non_id\x18\x03 \x01(\t\x12\x11\n\tunique_id\x18\x04 \x01(\t\x12\x0b\n\x03uid\x18\x05 \x01(\r\x12\x12\n\nchannel_id\x18\x06 \x01(\r\x12\x12\n\nis_new_acc\x18\x07 \x01(\r\x12*\n\rwhole_account\x18\x08 \x01(\x0b\x32\x13.SSDT_WHOLE_ACCOUNT\"[\n\x14PKG_NEW_ROLE_CLUSTER\x12\x11\n\tunique_id\x18\x01 \x01(\t\x12\x0b\n\x03uid\x18\x02 \x01(\r\x12\x11\n\trole_name\x18\x03 \x01(\t\x12\x10\n\x08world_id\x18\x04 \x01(\r\"F\n\x11PKG_ROLE_DEL_NAME\x12\x11\n\trole_name\x18\x01 \x01(\t\x12\x0b\n\x03uid\x18\x02 \x01(\r\x12\x11\n\tunique_id\x18\x03 \x01(\t\"N\n\x10PKG_DISP_PACKAGE\x12\x0b\n\x03uid\x18\x04 \x01(\x05\x12\x0c\n\x04\x61\x64\x64r\x18\x05 \x01(\x05\x12\x11\n\ttype_hash\x18\x07 \x01(\x05\x12\x0c\n\x04\x64\x61ta\x18\x06 \x01(\t\"\xce\x01\n\x1cSSDT_PVP_ISLAND_DEFENSE_INFO\x12\x10\n\x08res_type\x18\x01 \x01(\r\x12)\n\nrobot_info\x18\x02 \x01(\x0b\x32\x15.ST_BATTLE_ROBOT_INFO\x12\'\n\thero_info\x18\x03 \x01(\x0b\x32\x14.ST_HERO_BATTLE_INFO\x12\x12\n\nmonster_id\x18\x04 \x01(\r\x12\x12\n\nmonster_lv\x18\x05 \x01(\r\x12\x0f\n\x07trap_id\x18\x06 \x01(\r\x12\x0f\n\x07trap_lv\x18\x07 \x01(\r\"T\n\x14SSDT_PVP_ISLAND_INFO\x12\x13\n\x0b\x62uilding_id\x18\x01 \x01(\r\x12\x10\n\x08res_type\x18\x02 \x01(\r\x12\x15\n\rcan_steal_res\x18\x03 \x01(\r\"\xd0\x01\n\x1aSSDT_PVP_STEAL_ISLAND_INFO\x12\x0f\n\x07role_id\x18\x01 \x01(\r\x12\x11\n\trole_name\x18\x02 \x01(\t\x12\x1b\n\x13role_fight_capacity\x18\x03 \x01(\r\x12*\n\x0bisland_data\x18\x04 \x03(\x0b\x32\x15.SSDT_PVP_ISLAND_INFO\x12\x33\n\x0c\x64\x65\x66\x65nse_info\x18\x05 \x03(\x0b\x32\x1d.SSDT_PVP_ISLAND_DEFENSE_INFO\x12\x10\n\x08is_robot\x18\x06 \x01(\x08\"\xaa\x01\n!SSDT_ONLINE_BATTLE_ROOM_ROLE_INFO\x12\x0b\n\x03pos\x18\x01 \x01(\r\x12\x0f\n\x07role_id\x18\x02 \x01(\r\x12\x0f\n\x07role_lv\x18\x03 \x01(\r\x12\x14\n\x0crole_stamina\x18\x04 \x01(\r\x12\x15\n\rrole_strength\x18\x05 \x01(\r\x12\x14\n\x0crole_ability\x18\x06 \x01(\r\x12\x13\n\x0brole_skills\x18\x07 \x03(\r\"\xb8\x01\n#SSDT_ONLINE_BATTLE_ROOM_PLAYER_INFO\x12\x0c\n\x04host\x18\x01 \x01(\x08\x12\x0b\n\x03uid\x18\x02 \x01(\r\x12\x0c\n\x04name\x18\x03 \x01(\t\x12\r\n\x05score\x18\x04 \x01(\r\x12\x12\n\nwin_number\x18\x05 \x01(\r\x12\r\n\x05ready\x18\x06 \x01(\x08\x12\x36\n\nrole_infos\x18\x07 \x03(\x0b\x32\".SSDT_ONLINE_BATTLE_ROOM_ROLE_INFO\"\x80\x01\n\x1cSSDT_ONLINE_BATTLE_ROOM_INFO\x12\x0f\n\x07room_id\x18\x01 \x01(\r\x12\x13\n\x0bscene_index\x18\x02 \x01(\r\x12:\n\x0cplayer_infos\x18\x03 \x03(\x0b\x32$.SSDT_ONLINE_BATTLE_ROOM_PLAYER_INFO\"`\n\'SSDT_ONLINE_BATTLE_ROOM_COUNT_DOWN_TIME\x12\x0f\n\x07zone_id\x18\x01 \x01(\r\x12\x0b\n\x03uid\x18\x02 \x01(\r\x12\x17\n\x0f\x63ount_down_time\x18\x03 \x01(\r\"\xa9\x01\n#SSPKG_CREATE_ONLINE_BATTLE_ROOM_REQ\x12\x10\n\x08world_id\x18\x01 \x01(\r\x12\x0f\n\x07zone_id\x18\x02 \x01(\r\x12\x0b\n\x03uid\x18\x03 \x01(\r\x12\x1b\n\x13online_battle_score\x18\x04 \x01(\r\x12\x12\n\nwin_number\x18\x05 \x01(\r\x12\x0c\n\x04name\x18\x06 \x01(\t\x12\x13\n\x0bscene_index\x18\x07 \x01(\r\"d\n#SSPKG_CREATE_ONLINE_BATTLE_ROOM_RES\x12\x0f\n\x07zone_id\x18\x01 \x01(\r\x12\x0b\n\x03uid\x18\x02 \x01(\r\x12\x0e\n\x06result\x18\x03 \x01(\r\x12\x0f\n\x07room_id\x18\x04 \x01(\r\"A\n!SSPKG_QUIT_ONLINE_BATTLE_ROOM_REQ\x12\x0f\n\x07room_id\x18\x01 \x01(\r\x12\x0b\n\x03uid\x18\x02 \x01(\r\"\x9b\x01\n!SSPKG_QUIT_ONLINE_BATTLE_ROOM_RES\x12\x0f\n\x07zone_id\x18\x01 \x01(\r\x12\x0b\n\x03uid\x18\x02 \x01(\r\x12\x0e\n\x06result\x18\x03 \x01(\r\x12\r\n\x05param\x18\x04 \x01(\r\x12\x39\n\x0bplayer_info\x18\x05 \x01(\x0b\x32$.SSDT_ONLINE_BATTLE_ROOM_PLAYER_INFO\"2\n!SSPKG_LIST_ONLINE_BATTLE_ROOM_REQ\x12\r\n\x05score\x18\x01 \x01(\r\"a\n!SSPKG_LIST_ONLINE_BATTLE_ROOM_RES\x12\x0e\n\x06result\x18\x01 \x01(\r\x12,\n\x05rooms\x18\x02 \x03(\x0b\x32\x1d.SSDT_ONLINE_BATTLE_ROOM_INFO\"\xb5\x01\n!SSPKG_JOIN_ONLINE_BATTLE_ROOM_REQ\x12\x10\n\x08world_id\x18\x01 \x01(\r\x12\x0f\n\x07zone_id\x18\x02 \x01(\r\x12\x0b\n\x03uid\x18\x03 \x01(\r\x12\x1b\n\x13online_battle_score\x18\x04 \x01(\r\x12\x12\n\nwin_number\x18\x05 \x01(\r\x12\x0c\n\x04name\x18\x06 \x01(\t\x12\x0f\n\x07room_id\x18\x07 \x01(\r\x12\x10\n\x08host_uid\x18\x08 \x01(\r\"\x83\x01\n!SSPKG_JOIN_ONLINE_BATTLE_ROOM_RES\x12\x0f\n\x07zone_id\x18\x01 \x01(\r\x12\x0b\n\x03uid\x18\x02 \x01(\r\x12\x0e\n\x06result\x18\x03 \x01(\r\x12\x30\n\troom_info\x18\x04 \x01(\x0b\x32\x1d.SSDT_ONLINE_BATTLE_ROOM_INFO\"q\n#SSPKG_UPDATE_ONLINE_BATTLE_ROOM_REQ\x12\x0f\n\x07room_id\x18\x01 \x01(\r\x12\x39\n\x0bplayer_info\x18\x02 \x01(\x0b\x32$.SSDT_ONLINE_BATTLE_ROOM_PLAYER_INFO\"\x99\x01\n(SSPKG_ONLINE_BATTLE_ROOM_QUICK_MATCH_REQ\x12\x10\n\x08world_id\x18\x01 \x01(\r\x12\x0f\n\x07zone_id\x18\x02 \x01(\r\x12\x0b\n\x03uid\x18\x03 \x01(\r\x12\x1b\n\x13online_battle_score\x18\x04 \x01(\r\x12\x12\n\nwin_number\x18\x05 \x01(\r\x12\x0c\n\x04name\x18\x06 \x01(\t\"G\n\'SSPKG_ONLINE_BATTLE_ROOM_KICK_GUEST_REQ\x12\x0b\n\x03uid\x18\x01 \x01(\r\x12\x0f\n\x07room_id\x18\x02 \x01(\r\"G\n\'SSPKG_ONLINE_BATTLE_ROOM_HEART_BEAT_REQ\x12\x0b\n\x03uid\x18\x01 \x01(\r\x12\x0f\n\x07room_id\x18\x02 \x01(\r\"~\n#SSPKG_UPDATE_ONLINE_BATTLE_ROOM_RES\x12\x0f\n\x07zone_id\x18\x01 \x01(\r\x12\x0b\n\x03uid\x18\x02 \x01(\r\x12\x39\n\x0bplayer_info\x18\x03 \x01(\x0b\x32$.SSDT_ONLINE_BATTLE_ROOM_PLAYER_INFO\"|\n\x19SSPKG_ONLINE_BATTLE_BEGIN\x12\x0f\n\x07zone_id\x18\x01 \x01(\r\x12\x0b\n\x03uid\x18\x02 \x01(\r\x12\x0f\n\x07is_host\x18\x03 \x01(\x08\x12\x30\n\troom_info\x18\x04 \x01(\x0b\x32\x1d.SSDT_ONLINE_BATTLE_ROOM_INFO\"D\n\x19PKG_SEARCH_PVP_PLAYER_REQ\x12\x0b\n\x03uid\x18\x01 \x01(\r\x12\x1a\n\x12max_fight_capacity\x18\x02 \x01(\r\"]\n\x19PKG_SEARCH_PVP_PLAYER_RES\x12\x0e\n\x06result\x18\x01 \x01(\x05\x12\x30\n\x0btarget_info\x18\x02 \x01(\x0b\x32\x1b.SSDT_PVP_STEAL_ISLAND_INFO\"F\n\x1fST_WIPE_OUT_STEAL_BATTLE_RESULT\x12\x10\n\x08res_type\x18\x01 \x01(\r\x12\x11\n\tsteal_res\x18\x02 \x01(\r\"\xa7\x01\n%PKG_WIPE_OUT_STEAL_BATTLE_BALANCE_REQ\x12\x18\n\x10\x61ttacker_role_id\x18\x01 \x01(\r\x12\x11\n\trole_name\x18\x02 \x01(\t\x12\x16\n\x0etarget_role_id\x18\x03 \x01(\r\x12\x39\n\x0fwipe_out_result\x18\x04 \x03(\x0b\x32 .ST_WIPE_OUT_STEAL_BATTLE_RESULT\"\x85\x02\n\x1cPKG_BALANCE_STEAL_BATTLE_REQ\x12\x18\n\x10\x61ttacker_role_id\x18\x01 \x01(\r\x12\x11\n\trole_name\x18\x02 \x01(\t\x12\x14\n\x0cself_hero_id\x18\x03 \x01(\r\x12\x1c\n\x14self_hero_hp_percent\x18\x04 \x01(\r\x12\x16\n\x0etarget_role_id\x18\x05 \x01(\r\x12\x16\n\x0etarget_hero_id\x18\x06 \x01(\r\x12\x16\n\x0etarget_hero_hp\x18\x07 \x01(\r\x12\x10\n\x08res_type\x18\x08 \x01(\r\x12*\n\x0bisland_data\x18\t \x03(\x0b\x32\x15.SSDT_PVP_ISLAND_INFO\"\xbc\x01\n\x1cPKG_BALANCE_STEAL_BATTLE_RES\x12\x0e\n\x06result\x18\x01 \x01(\x05\x12\x16\n\x0etarget_role_id\x18\x02 \x01(\r\x12\x10\n\x08res_type\x18\x03 \x01(\r\x12\x14\n\x0cself_hero_id\x18\x04 \x01(\r\x12\x1c\n\x14self_hero_hp_percent\x18\x05 \x01(\r\x12\x16\n\x0etarget_hero_id\x18\x06 \x01(\r\x12\x16\n\x0etarget_hero_hp\x18\x07 \x01(\r\"\xc2\x01\n PKG_STEAL_BATTLE_RESULT_MAIL_REQ\x12\x17\n\x0f\x64\x65\x66\x65nse_role_id\x18\x01 \x01(\r\x12\x15\n\rbattle_result\x18\x02 \x01(\r\x12\x15\n\ratk_role_name\x18\x03 \x01(\t\x12\x13\n\x0b\x61tk_role_id\x18\x04 \x01(\r\x12\x15\n\rlose_res_type\x18\x05 \x01(\r\x12\x13\n\x0blose_res_id\x18\x06 \x01(\r\x12\x16\n\x0elose_res_count\x18\x07 \x01(\x05\"\xb1\x01\n\x14SSDT_MAIL_SYSTEM_ACC\x12\x10\n\x08res_type\x18\x01 \x01(\r\x12\x0e\n\x06res_id\x18\x02 \x01(\r\x12\x0f\n\x07res_cnt\x18\x03 \x01(\r\x12\x12\n\nchg_reason\x18\x04 \x01(\r\x12\x1a\n\x12res_extern_param_1\x18\x05 \x01(\r\x12\x1a\n\x12res_extern_param_2\x18\x06 \x01(\r\x12\x1a\n\x12res_extern_param_3\x18\x07 \x01(\r\"D\n\x19SSDT_MAIL_SYSTEM_ACC_INFO\x12\'\n\x08\x61\x63\x63_info\x18\x01 \x03(\x0b\x32\x15.SSDT_MAIL_SYSTEM_ACC\"\x8c\x01\n\x1aSSDT_MAIL_REVENGE_ACC_INFO\x12\x15\n\ratk_role_name\x18\x01 \x01(\t\x12\x13\n\x0b\x61tk_role_id\x18\x02 \x01(\r\x12\x15\n\rlose_res_type\x18\x03 \x01(\r\x12\x13\n\x0blose_res_id\x18\x04 \x01(\r\x12\x16\n\x0elose_res_count\x18\x05 \x01(\x05\"O\n\x12SSDT_MAIL_ACC_INFO\x12\x0c\n\x04type\x18\x01 \x01(\r\x12+\n\rmail_acc_info\x18\x02 \x01(\x0b\x32\x14.UINON_MAIL_ACC_INFO\"\x8e\x02\n\x0eSSDT_MAIL_INFO\x12\x14\n\x0csend_rold_id\x18\x01 \x01(\r\x12\x16\n\x0esend_role_name\x18\x02 \x01(\t\x12\x0f\n\x07mail_id\x18\x03 \x01(\x04\x12\x11\n\tmail_type\x18\x04 \x01(\r\x12\x13\n\x0bmail_status\x18\x05 \x01(\r\x12\x12\n\nmail_title\x18\x06 \x01(\t\x12\x14\n\x0cmail_content\x18\x07 \x01(\t\x12\x16\n\x0email_send_time\x18\x08 \x01(\r\x12\x15\n\rmail_end_time\x18\t \x01(\r\x12\x15\n\rmail_acc_type\x18\n \x01(\r\x12%\n\x08mail_acc\x18\x0b \x01(\x0b\x32\x13.SSDT_MAIL_ACC_INFO\"\xa9\x01\n\x14SSDT_BRIEF_MAIL_INFO\x12\x0f\n\x07mail_id\x18\x01 \x01(\x04\x12\x11\n\tmail_type\x18\x02 \x01(\r\x12\x13\n\x0bmail_status\x18\x03 \x01(\r\x12\x12\n\nmail_title\x18\x04 \x01(\t\x12\x16\n\x0email_send_time\x18\x05 \x01(\r\x12\x15\n\rmail_end_time\x18\x06 \x01(\r\x12\x15\n\rmail_acc_type\x18\x07 \x01(\r\"~\n\x1aPKG_ROLELOGIN_GET_MAIL_REQ\x12\x0f\n\x07role_id\x18\x01 \x01(\r\x12\x0f\n\x07zone_id\x18\x02 \x01(\x05\x12\x12\n\nchannel_id\x18\x03 \x01(\r\x12\x13\n\x0b\x63lt_version\x18\x04 \x01(\t\x12\x15\n\ris_new_player\x18\x05 \x01(\x08\"\x85\x02\n\x1aPKG_ROLELOGIN_GET_MAIL_RES\x12\x0e\n\x06result\x18\x01 \x01(\x05\x12\x0f\n\x07role_id\x18\x02 \x01(\r\x12\x0f\n\x07zone_id\x18\x03 \x01(\x05\x12)\n\x10system_mail_info\x18\x04 \x03(\x0b\x32\x0f.SSDT_MAIL_INFO\x12*\n\x11revenge_mail_info\x18\x05 \x03(\x0b\x32\x0f.SSDT_MAIL_INFO\x12\x19\n\x11system_mail_count\x18\x06 \x01(\r\x12\x1a\n\x12revenge_mail_count\x18\x07 \x01(\r\x12\x12\n\nchannel_id\x18\x08 \x01(\r\x12\x13\n\x0b\x63lt_version\x18\t \x01(\t\",\n\x19PKG_ROLELOGOUT_TO_MAILSVR\x12\x0f\n\x07role_id\x18\x01 \x01(\r\"a\n\x11PKG_SEND_MAIL_REQ\x12\x14\n\x0crecv_role_id\x18\x01 \x01(\r\x12\"\n\tmail_info\x18\x02 \x01(\x0b\x32\x0f.SSDT_MAIL_INFO\x12\x12\n\nneed_first\x18\x03 \x01(\x08\"\x94\x01\n\x11PKG_SEND_MAIL_RES\x12\x0e\n\x06result\x18\x01 \x01(\x05\x12\x14\n\x0crecv_role_id\x18\x02 \x01(\r\x12\"\n\tmail_info\x18\x03 \x01(\x0b\x32\x0f.SSDT_MAIL_INFO\x12\x19\n\x11system_mail_count\x18\x04 \x01(\r\x12\x1a\n\x12revenge_mail_count\x18\x05 \x01(\r\":\n\x12SSDT_MAIL_CLR_INFO\x12\x0f\n\x07mail_id\x18\x01 \x01(\x04\x12\x13\n\x0bneed_delete\x18\x02 \x01(\r\"S\n\x19PKG_OVERTIME_MAIL_CLR_REQ\x12\x0f\n\x07role_id\x18\x01 \x01(\r\x12%\n\x08\x63lr_info\x18\x02 \x03(\x0b\x32\x13.SSDT_MAIL_CLR_INFO\"g\n\x19PKG_OVERTIME_MAIL_CLR_RES\x12\x0f\n\x07role_id\x18\x01 \x01(\r\x12\x1b\n\x13system_mail_id_list\x18\x02 \x03(\x04\x12\x1c\n\x14revenge_mail_id_list\x18\x03 \x03(\x04\";\n\x15PKG_GET_MAIL_LIST_REQ\x12\x0f\n\x07role_id\x18\x01 \x01(\r\x12\x11\n\tmail_type\x18\x02 \x01(\r\"\xae\x01\n\x15PKG_GET_MAIL_LIST_RES\x12\x0e\n\x06result\x18\x01 \x01(\x05\x12\x0f\n\x07role_id\x18\x02 \x01(\r\x12\x11\n\tmail_type\x18\x03 \x01(\r\x12/\n\x10system_mail_info\x18\x04 \x03(\x0b\x32\x15.SSDT_BRIEF_MAIL_INFO\x12\x30\n\x11revenge_mail_info\x18\x05 \x03(\x0b\x32\x15.SSDT_BRIEF_MAIL_INFO\";\n\x17PKG_GET_MAIL_DETAIL_REQ\x12\x0f\n\x07role_id\x18\x01 \x01(\r\x12\x0f\n\x07mail_id\x18\x02 \x01(\x04\"o\n\x17PKG_GET_MAIL_DETAIL_RES\x12\x0e\n\x06result\x18\x01 \x01(\x05\x12\x0f\n\x07role_id\x18\x02 \x01(\r\x12\x0f\n\x07mail_id\x18\x03 \x01(\x04\x12\"\n\tmail_info\x18\x04 \x01(\x0b\x32\x0f.SSDT_MAIL_INFO\"H\n\x11PKG_MAIL_READ_REQ\x12\x0f\n\x07role_id\x18\x01 \x01(\r\x12\x0f\n\x07mail_id\x18\x02 \x01(\x04\x12\x11\n\tmail_type\x18\x03 \x01(\r\"m\n\x11PKG_MAIL_READ_RES\x12\x0e\n\x06result\x18\x01 \x01(\x05\x12\x0f\n\x07role_id\x18\x02 \x01(\r\x12\x0f\n\x07mail_id\x18\x03 \x01(\x04\x12\x11\n\tmail_type\x18\x04 \x01(\r\x12\x13\n\x0bmail_status\x18\x05 \x01(\r\"8\n\x14PKG_MAIL_GET_ACC_REQ\x12\x0f\n\x07role_id\x18\x01 \x01(\r\x12\x0f\n\x07mail_id\x18\x02 \x01(\x04\"\xb5\x01\n\x14PKG_MAIL_GET_ACC_RES\x12\x0e\n\x06result\x18\x01 \x01(\x05\x12\x0f\n\x07role_id\x18\x02 \x01(\r\x12\x0f\n\x07mail_id\x18\x03 \x01(\x04\x12%\n\x08mail_acc\x18\x04 \x01(\x0b\x32\x13.SSDT_MAIL_ACC_INFO\x12\x1c\n\x14is_have_new_mail_add\x18\x05 \x01(\r\x12&\n\radd_mail_info\x18\x06 \x01(\x0b\x32\x0f.SSDT_MAIL_INFO\"7\n\x13PKG_MAIL_DELETE_REQ\x12\x0f\n\x07role_id\x18\x01 \x01(\r\x12\x0f\n\x07mail_id\x18\x02 \x01(\x04\"\xb5\x01\n\x13PKG_MAIL_DELETE_RES\x12\x0e\n\x06result\x18\x01 \x01(\x05\x12\x0f\n\x07role_id\x18\x02 \x01(\r\x12\x0f\n\x07mail_id\x18\x03 \x01(\x04\x12\x11\n\tmail_type\x18\x04 \x01(\r\x12\x13\n\x0bmail_status\x18\x05 \x01(\r\x12\x1c\n\x14is_have_new_mail_add\x18\x06 \x01(\r\x12&\n\radd_mail_info\x18\x07 \x01(\x0b\x32\x0f.SSDT_MAIL_INFO\"\xf8\x01\n\x14SSDT_GANGSIMPLE_INFO\x12\x11\n\tgang_name\x18\x01 \x01(\t\x12\x0f\n\x07gang_id\x18\x02 \x01(\r\x12\x18\n\x10gang_leader_name\x18\x03 \x01(\t\x12\x18\n\x10gang_apply_state\x18\x04 \x01(\r\x12\x12\n\ngang_level\x18\x05 \x01(\r\x12\x12\n\ngang_score\x18\x06 \x01(\r\x12\x15\n\rcond_rank_pos\x18\x07 \x01(\r\x12\x16\n\x0egang_mem_count\x18\x08 \x01(\r\x12\x13\n\x0bgang_notify\x18\t \x01(\t\x12\x1c\n\x14is_auto_apply_battle\x18\n \x01(\r\"=\n\x13SSDT_GANG_SELF_INFO\x12\x10\n\x08position\x18\x01 \x01(\r\x12\x14\n\x0c\x63ontribution\x18\x02 \x01(\r\"B\n\x17SSDT_GANG_MEM_BLOB_INFO\x12\'\n\x0fgang_bless_info\x18\x01 \x01(\x0b\x32\x0e.ST_BLESS_INFO\"\xfc\x01\n\x11SSDT_GANGMEM_INFO\x12\x13\n\x0bmem_role_id\x18\x01 \x01(\r\x12\x10\n\x08mem_name\x18\x02 \x01(\t\x12\x13\n\x0bmem_postion\x18\x03 \x01(\r\x12!\n\x19mem_gang_battle_win_score\x18\x04 \x01(\r\x12\x14\n\x0cmem_rank_pos\x18\x05 \x01(\r\x12\x17\n\x0flast_leave_time\x18\x06 \x01(\r\x12\x1c\n\x14\x63umulate_recharge_id\x18\x07 \x01(\r\x12\'\n\x0fgang_bless_info\x18\x08 \x01(\x0b\x32\x0e.ST_BLESS_INFO\x12\x12\n\nhead_photo\x18\t \x01(\r\"\xfd\x01\n\x12SSDT_GANGLIST_INFO\x12\x0f\n\x07gang_id\x18\x01 \x01(\r\x12\x11\n\tgang_name\x18\x02 \x01(\t\x12\x18\n\x10gang_leader_name\x18\x03 \x01(\t\x12\x18\n\x10gang_apply_state\x18\x04 \x01(\r\x12\x12\n\ngang_level\x18\x05 \x01(\r\x12\x18\n\x10is_in_apply_list\x18\x06 \x01(\r\x12\x12\n\ngang_score\x18\x07 \x01(\r\x12\x19\n\x11gang_avg_rank_pos\x18\x08 \x01(\r\x12\x16\n\x0egang_mem_count\x18\t \x01(\r\x12\x1a\n\x12gang_cond_rank_pos\x18\n \x01(\r\"\xc2\x01\n\x18SSDT_GANG_APPLYLIST_INFO\x12\x10\n\x08mem_name\x18\x01 \x01(\t\x12\x13\n\x0bmem_role_id\x18\x02 \x01(\r\x12\x12\n\napply_time\x18\x03 \x01(\r\x12\x14\n\x0cmem_rank_pos\x18\x04 \x01(\r\x12#\n\x1b\x61pplyer_gang_battle_win_cnt\x18\x05 \x01(\r\x12\x1c\n\x14\x63umulate_recharge_id\x18\x07 \x01(\r\x12\x12\n\nhead_photo\x18\x08 \x01(\r\"I\n\x1aSSDT_GANG_APPLYLIST_DBINFO\x12+\n\x08mem_info\x18\x01 \x03(\x0b\x32\x19.SSDT_GANG_APPLYLIST_INFO\"e\n\x10PKG_GANGLIST_REQ\x12\x0f\n\x07role_id\x18\x01 \x01(\r\x12\x15\n\rrole_rank_pos\x18\x02 \x01(\r\x12\x15\n\rpage_start_id\x18\x03 \x01(\r\x12\x12\n\npage_count\x18\x04 \x01(\r\"O\n\x10PKG_GANGLIST_RES\x12&\n\tgang_list\x18\x01 \x03(\x0b\x32\x13.SSDT_GANGLIST_INFO\x12\x13\n\x0btotal_count\x18\x02 \x01(\r\";\n\x17PKG_CMD_SEARCH_GANG_REQ\x12\x0f\n\x07gang_id\x18\x01 \x01(\r\x12\x0f\n\x07role_id\x18\x02 \x01(\r\"b\n\x17PKG_CMD_SEARCH_GANG_RES\x12\x0e\n\x06result\x18\x01 \x01(\x05\x12\x0f\n\x07gang_id\x18\x02 \x01(\r\x12&\n\tgang_info\x18\x03 \x01(\x0b\x32\x13.SSDT_GANGLIST_INFO\"\x9e\x01\n\x16PKG_ROLELOGIN_GANG_REQ\x12\x0f\n\x07role_id\x18\x01 \x01(\r\x12\x1d\n\x15gang_battle_win_score\x18\x02 \x01(\r\x12\x0f\n\x07zone_id\x18\x03 \x01(\x05\x12\x1c\n\x14\x63umulate_recharge_id\x18\x04 \x01(\r\x12\x12\n\nhead_photo\x18\x05 \x01(\r\x12\x11\n\trole_name\x18\x06 \x01(\t\"\xa2\x01\n\x16PKG_ROLELOGIN_GANG_RES\x12/\n\x10gang_simple_info\x18\x01 \x01(\x0b\x32\x15.SSDT_GANGSIMPLE_INFO\x12\'\n\tself_info\x18\x02 \x01(\x0b\x32\x14.SSDT_GANG_SELF_INFO\x12\x18\n\x10\x61pply_list_count\x18\x03 \x01(\r\x12\x14\n\x0cis_have_gang\x18\x04 \x01(\r\"\xf2\x01\n\x15SSDT_CREATE_GANG_INFO\x12\x11\n\tgang_name\x18\x01 \x01(\t\x12\x19\n\x11gang_creator_name\x18\x02 \x01(\t\x12\x13\n\x0bgang_notify\x18\x03 \x01(\t\x12\x1c\n\x14gang_creator_role_id\x18\x04 \x01(\r\x12\x15\n\ris_auto_apply\x18\x05 \x01(\r\x12\x15\n\rcond_rank_pos\x18\x06 \x01(\r\x12\x18\n\x10gang_create_time\x18\x07 \x01(\r\x12\x1c\n\x14\x63umulate_recharge_id\x18\x08 \x01(\r\x12\x12\n\nhead_photo\x18\t \x01(\r\"G\n\x13PKG_CREATE_GANG_REQ\x12\x30\n\x10\x63reate_gang_info\x18\x01 \x01(\x0b\x32\x16.SSDT_CREATE_GANG_INFO\"v\n&PKG_CREATE_GANG_NAME_RSP_FROM_NAME_SVR\x12\x1a\n\x12is_gang_name_exist\x18\x01 \x01(\x08\x12\x30\n\x10\x63reate_gang_info\x18\x02 \x01(\x0b\x32\x16.SSDT_CREATE_GANG_INFO\"\x87\x01\n)PKG_CREATE_GANG_NAME_RSP_FROM_ACCOUNT_SVR\x12\x0e\n\x06result\x18\x01 \x01(\x05\x12\x18\n\x10gang_id_generate\x18\x02 \x01(\r\x12\x30\n\x10\x63reate_gang_info\x18\x03 \x01(\x0b\x32\x16.SSDT_CREATE_GANG_INFO\"8\n\x13PKG_CREATE_GANG_RES\x12\x0e\n\x06result\x18\x01 \x01(\x05\x12\x11\n\tgang_name\x18\x02 \x01(\t\"t\n\x1ePKG_GANG_UPDATE_BASIC_INFO_REQ\x12\x0f\n\x07role_id\x18\x01 \x01(\r\x12\x13\n\x0bgang_notify\x18\x02 \x01(\t\x12\x15\n\ris_auto_apply\x18\x03 \x01(\r\x12\x15\n\rcond_rank_pos\x18\x04 \x01(\r\"0\n\x1ePKG_GANG_UPDATE_BASIC_INFO_RES\x12\x0e\n\x06result\x18\x01 \x01(\x05\"\x87\x02\n\x12PKG_APPLY_GANG_REQ\x12\x11\n\tgang_name\x18\x01 \x01(\t\x12\x0f\n\x07gang_id\x18\x02 \x01(\r\x12\x19\n\x11\x61pplyer_unique_id\x18\x03 \x01(\t\x12\x14\n\x0c\x61pplyer_name\x18\x04 \x01(\t\x12\x17\n\x0f\x61pplyer_role_id\x18\x05 \x01(\r\x12\x12\n\napply_time\x18\x06 \x01(\r\x12\x18\n\x10\x61pplyer_rank_pos\x18\x07 \x01(\r\x12#\n\x1b\x61pplyer_gang_battle_win_cnt\x18\x08 \x01(\r\x12\x1c\n\x14\x63umulate_recharge_id\x18\t \x01(\r\x12\x12\n\nhead_photo\x18\n \x01(\r\"\x7f\n\x12PKG_APPLY_GANG_RES\x12\x0e\n\x06result\x18\x01 \x01(\x05\x12\x0f\n\x07gang_id\x18\x02 \x01(\r\x12\x16\n\x0eleader_role_id\x18\x03 \x01(\r\x12\x16\n\x0eleader_zone_id\x18\x04 \x01(\x05\x12\x18\n\x10\x61pply_list_count\x18\x05 \x01(\r\"\x87\x01\n\x1bPKG_APPLY_GANG_AUTOJOIN_RES\x12\x0e\n\x06result\x18\x01 \x01(\x05\x12/\n\x10gang_simple_info\x18\x02 \x01(\x0b\x32\x15.SSDT_GANGSIMPLE_INFO\x12\'\n\tself_info\x18\x03 \x01(\x0b\x32\x14.SSDT_GANG_SELF_INFO\"$\n\x11PKG_QUIT_GANG_REQ\x12\x0f\n\x07role_id\x18\x01 \x01(\r\"4\n\x11PKG_QUIT_GANG_RES\x12\x0e\n\x06result\x18\x01 \x01(\x05\x12\x0f\n\x07role_id\x18\x02 \x01(\r\"\'\n\x14PKG_GANG_MEMLIST_REQ\x12\x0f\n\x07gang_id\x18\x01 \x01(\r\"^\n\x14PKG_GANG_MEMLIST_RES\x12\x0e\n\x06result\x18\x01 \x01(\x05\x12\x0f\n\x07gang_id\x18\x02 \x01(\r\x12%\n\tlist_info\x18\x03 \x03(\x0b\x32\x12.SSDT_GANGMEM_INFO\"&\n\x13PKG_GANG_DETAIL_REQ\x12\x0f\n\x07gang_id\x18\x01 \x01(\r\"\x8e\x01\n\x13PKG_GANG_DETAIL_RES\x12\x0e\n\x06result\x18\x01 \x01(\x05\x12\x0f\n\x07gang_id\x18\x02 \x01(\r\x12/\n\x10gang_simple_info\x18\x03 \x01(\x0b\x32\x15.SSDT_GANGSIMPLE_INFO\x12%\n\tlist_info\x18\x04 \x03(\x0b\x32\x12.SSDT_GANGMEM_INFO\"m\n\x19PKG_GANG_MEM_LIST_CHG_RES\x12\x0b\n\x03\x64\x65l\x18\x01 \x01(\r\x12\x10\n\x08\x64\x65l_type\x18\x02 \x01(\r\x12\x0b\n\x03\x61\x64\x64\x18\x03 \x01(\r\x12$\n\x08mem_info\x18\x04 \x01(\x0b\x32\x12.SSDT_GANGMEM_INFO\"0\n\x1dPKG_GANG_BLESS_RANK_CLEAR_RES\x12\x0f\n\x07gang_id\x18\x01 \x01(\r\"\x8b\x01\n\x1bPKG_GANG_BASIC_INFO_CHG_RES\x12\x13\n\x0bgang_notify\x18\x01 \x01(\t\x12\x18\n\x10gang_apply_state\x18\x02 \x01(\r\x12\x15\n\rcond_rank_pos\x18\x03 \x01(\r\x12\x12\n\ngang_score\x18\x04 \x01(\r\x12\x12\n\ngang_level\x18\x05 \x01(\r\"\x92\x01\n\x19PKG_GANG_MEM_INFO_CHG_REQ\x12\x0f\n\x07role_id\x18\x01 \x01(\r\x12\x0c\n\x04type\x18\x02 \x01(\r\x12\x0e\n\x06reason\x18\x03 \x01(\r\x12\x0f\n\x07value_1\x18\x04 \x01(\r\x12\x0f\n\x07value_2\x18\x05 \x01(\r\x12$\n\x0c\x62less_reslut\x18\x06 \x01(\x0b\x32\x0e.ST_BLESS_INFO\"D\n\x13PKG_GANG_MEMCHG_RES\x12\x0e\n\x06result\x18\x01 \x01(\x05\x12\x0c\n\x04type\x18\x02 \x01(\r\x12\x0f\n\x07value_1\x18\x03 \x01(\r\")\n\x16PKG_GANG_APPLYLIST_REQ\x12\x0f\n\x07role_id\x18\x01 \x01(\r\"G\n\x16PKG_GANG_APPLYLIST_RES\x12-\n\napply_list\x18\x01 \x03(\x0b\x32\x19.SSDT_GANG_APPLYLIST_INFO\"M\n\x14PKG_GANG_APPROVE_REQ\x12\x0f\n\x07iresult\x18\x01 \x01(\x05\x12\x0f\n\x07role_id\x18\x02 \x01(\r\x12\x13\n\x0bmem_role_id\x18\x03 \x01(\r\"\xcb\x01\n\x14PKG_GANG_APPROVE_RES\x12\x0e\n\x06result\x18\x01 \x01(\x05\x12\x10\n\x08mem_name\x18\x02 \x01(\t\x12\x0f\n\x07role_id\x18\x03 \x01(\r\x12\x0c\n\x04type\x18\x04 \x01(\r\x12/\n\x10gang_simple_info\x18\x05 \x01(\x0b\x32\x15.SSDT_GANGSIMPLE_INFO\x12\'\n\tself_info\x18\x06 \x01(\x0b\x32\x14.SSDT_GANG_SELF_INFO\x12\x18\n\x10\x61pply_list_count\x18\x07 \x01(\r\"\x97\x01\n\x19PKG_GANG_APPROVETOMEM_RES\x12\x0e\n\x06result\x18\x01 \x01(\x05\x12\x10\n\x08mem_name\x18\x02 \x01(\t\x12/\n\x10gang_simple_info\x18\x03 \x01(\x0b\x32\x15.SSDT_GANGSIMPLE_INFO\x12\'\n\tself_info\x18\x04 \x01(\x0b\x32\x14.SSDT_GANG_SELF_INFO\"z\n\x11PKG_GANG_CHAT_REQ\x12\x0f\n\x07gang_id\x18\x01 \x01(\r\x12\x0f\n\x07role_id\x18\x02 \x01(\r\x12\x11\n\tfrom_name\x18\x03 \x01(\t\x12\x0b\n\x03msg\x18\x04 \x01(\t\x12#\n\x1bsender_cumulate_recharge_id\x18\x05 \x01(\r\"\x81\x01\n\x11PKG_GANG_CHAT_RES\x12\x11\n\tfrom_name\x18\x01 \x01(\t\x12\x14\n\x0c\x66rom_role_id\x18\x04 \x01(\r\x12\x0b\n\x03msg\x18\x02 \x01(\t\x12\x11\n\tsend_time\x18\x03 \x01(\r\x12#\n\x1bsender_cumulate_recharge_id\x18\x05 \x01(\r\"B\n\x15PKG_GANG_KICK_MEM_REQ\x12\x0f\n\x07role_id\x18\x01 \x01(\r\x12\x18\n\x10kick_mem_role_id\x18\x02 \x01(\r\"Q\n\x15PKG_GANG_KICK_MEM_RES\x12\x0e\n\x06result\x18\x01 \x01(\x05\x12\x13\n\x0bmem_role_id\x18\x02 \x01(\r\x12\x13\n\x0bmem_zone_id\x18\x03 \x01(\x05\"U\n\x16PKG_GANG_SET_ELDER_REQ\x12\x0f\n\x07role_id\x18\x01 \x01(\r\x12\x13\n\x0bmem_role_id\x18\x02 \x01(\r\x12\x15\n\rset_or_cancle\x18\x03 \x01(\r\"=\n\x16PKG_GANG_SET_ELDER_RES\x12\x0e\n\x06result\x18\x01 \x01(\x05\x12\x13\n\x0bmem_role_id\x18\x02 \x01(\r\"+\n\x18PKG_LOGOUT_UPDZONEID_REQ\x12\x0f\n\x07role_id\x18\x01 \x01(\r\"/\n\x0bMemZoneInfo\x12\x0f\n\x07role_id\x18\x01 \x01(\r\x12\x0f\n\x07zone_id\x18\x02 \x01(\x05\"+\n\x18PKG_GANG_BLESS_CHECK_REQ\x12\x0f\n\x07role_id\x18\x01 \x01(\r\"C\n\x18PKG_GANG_BLESS_CHECK_RES\x12\x0e\n\x06result\x18\x01 \x01(\x05\x12\x17\n\x0fmax_bless_count\x18\x02 \x01(\r\">\n\'PKG_SET_GANG_AUTO_APPLY_GANG_BATTLE_REQ\x12\x13\n\x0bmem_role_id\x18\x01 \x01(\r\"G\n\'PKG_SET_GANG_AUTO_APPLY_GANG_BATTLE_RES\x12\x1c\n\x14is_auto_apply_battle\x18\x01 \x01(\x05\"[\n\x1fPKG_PLAYER_HERO_CHG_TO_GANG_REQ\x12\x0f\n\x07role_id\x18\x01 \x01(\r\x12\'\n\thero_info\x18\x04 \x03(\x0b\x32\x14.ST_HERO_BATTLE_INFO\"\xbf\x01\n\'PKG_SET_GANG_CITY_STRONG_POINT_HERO_REQ\x12\x13\n\x0bmem_role_id\x18\x01 \x01(\r\x12\x10\n\x08\x63hg_type\x18\x02 \x01(\x05\x12\x0f\n\x07\x63ity_id\x18\x03 \x01(\r\x12\x1a\n\x12strong_point_index\x18\x04 \x01(\x05\x12\x17\n\x0fhero_slot_index\x18\x05 \x01(\x05\x12\'\n\thero_info\x18\x06 \x01(\x0b\x32\x14.ST_HERO_BATTLE_INFO\"9\n\'PKG_SET_GANG_CITY_STRONG_POINT_HERO_RES\x12\x0e\n\x06result\x18\x01 \x01(\x05\"\xba\x01\n\'PKG_GANG_CITY_STRONG_POINT_HERO_CHG_RES\x12\x10\n\x08\x63hg_type\x18\x01 \x01(\x05\x12\x0f\n\x07\x63ity_id\x18\x02 \x01(\r\x12\x1a\n\x12strong_point_index\x18\x03 \x01(\x05\x12\x17\n\x0fhero_slot_index\x18\x04 \x01(\x05\x12\x37\n\thero_info\x18\x05 \x01(\x0b\x32$.ST_GANG_CITY_STRONG_POINT_HERO_INFO\"1\n\x1aPKG_GET_GANG_CITY_INFO_REQ\x12\x13\n\x0bmem_role_id\x18\x01 \x01(\r\"N\n\x1aPKG_GET_GANG_CITY_INFO_RES\x12\x0e\n\x06result\x18\x01 \x01(\x05\x12 \n\tcity_info\x18\x02 \x01(\x0b\x32\r.ST_GANG_CITY\"9\n(PKG_BROAD_GANG_BATTTLE_STATE_TO_GANG_SVR\x12\r\n\x05state\x18\x01 \x01(\r\",\n\x19PKG_APPLY_GANG_BATTLE_REQ\x12\x0f\n\x07role_id\x18\x01 \x01(\r\"\xf2\x02\n(PKG_APPLY_GANG_BATTLE_REQ_TO_GANG_BATTLE\x12\x0f\n\x07gang_id\x18\x01 \x01(\r\x12\x0f\n\x07role_id\x18\x02 \x01(\r\x12\x10\n\x08world_id\x18\x03 \x01(\x05\x12\x11\n\tgang_name\x18\x04 \x01(\t\x12\x12\n\ngang_level\x18\x05 \x01(\r\x12\x12\n\ngang_score\x18\x06 \x01(\r\x12*\n\x08mem_list\x18\x07 \x01(\x0b\x32\x18.ST_GANG_BATTLE_MEM_LIST\x12\x14\n\x0cis_send_city\x18\x08 \x01(\x08\x12\x1c\n\x14small_city_start_pos\x18\t \x01(\x05\x12\x1f\n\x17moderate_city_start_pos\x18\n \x01(\x05\x12\x1a\n\x12\x62ig_city_start_pos\x18\x0b \x01(\x05\x12 \n\tcity_info\x18\x0c \x01(\x0b\x32\r.ST_GANG_CITY\x12\x18\n\x10is_send_city_end\x18\r \x01(\x08\"m\n*PKG_APPLY_GANG_BATTLE_RES_FROM_GANG_BATTLE\x12\x0e\n\x06result\x18\x01 \x01(\r\x12\x0f\n\x07role_id\x18\x02 \x01(\r\x12\x0f\n\x07gang_id\x18\x03 \x01(\r\x12\r\n\x05state\x18\x04 \x01(\r\"+\n\x19PKG_APPLY_GANG_BATTLE_RES\x12\x0e\n\x06result\x18\x01 \x01(\r\",\n\x1bPKG_GANG_BATTLE_STATE_BROAD\x12\r\n\x05state\x18\x01 \x01(\r\"D\n\x1cPKG_GET_GANG_BATTLE_CITY_REQ\x12\x0f\n\x07gang_id\x18\x01 \x01(\r\x12\x13\n\x0bis_get_self\x18\x02 \x01(\x08\"\xc4\x01\n\x1cPKG_GET_GANG_BATTLE_CITY_RES\x12\x0e\n\x06result\x18\x01 \x01(\x05\x12\x13\n\x0bis_get_self\x18\x02 \x01(\x08\x12\x12\n\nself_score\x18\x03 \x01(\r\x12\x14\n\x0ctarget_score\x18\x04 \x01(\r\x12\x18\n\x10target_gang_name\x18\x05 \x01(\t\x12\x19\n\x11target_gang_level\x18\x06 \x01(\r\x12 \n\tcity_info\x18\x07 \x01(\x0b\x32\r.ST_GANG_CITY\"\x98\x01\n\x1eST_GANG_BATTLE_ATTACK_MEM_INFO\x12\x13\n\x0bmem_role_id\x18\x01 \x01(\r\x12\x17\n\x0f\x66ight_win_count\x18\x02 \x01(\r\x12\x19\n\x11\x66ight_total_count\x18\x03 \x01(\r\x12\x14\n\x0cpre_get_gold\x18\x04 \x01(\r\x12\x17\n\x0fpre_get_crystal\x18\x05 \x01(\r\"\xcc\x01\n!PKG_GANG_BATTLE_TOTAL_BALANCE_REQ\x12\x0f\n\x07gang_id\x18\x01 \x01(\r\x12\x10\n\x08is_match\x18\x02 \x01(\x08\x12\x19\n\x11self_battle_score\x18\x03 \x01(\r\x12\x1b\n\x13target_battle_score\x18\x04 \x01(\r\x12\x19\n\x11target_gang_score\x18\x05 \x01(\r\x12\x31\n\x08mem_info\x18\x06 \x03(\x0b\x32\x1f.ST_GANG_BATTLE_ATTACK_MEM_INFO\"\xc1\x01\n,PKG_BROAD_GANG_BATTTLE_POINT_CHG_TO_GANG_SVR\x12\x0f\n\x07gang_id\x18\x01 \x01(\r\x12\x12\n\nself_score\x18\x02 \x01(\r\x12\x14\n\x0ctarget_score\x18\x03 \x01(\r\x12\x0f\n\x07\x63ity_id\x18\x04 \x01(\r\x12\x1a\n\x12strong_point_index\x18\x05 \x01(\x05\x12\x13\n\x0bpoint_state\x18\x06 \x01(\r\x12\x14\n\x0cis_self_city\x18\x07 \x01(\x08\"\xa0\x01\n\x1cPKG_GANG_BATTTLE_POINT_BROAD\x12\x12\n\nself_score\x18\x01 \x01(\r\x12\x14\n\x0ctarget_score\x18\x02 \x01(\r\x12\x14\n\x0cis_self_city\x18\x03 \x01(\x08\x12\x0f\n\x07\x63ity_id\x18\x04 \x01(\r\x12\x1a\n\x12strong_point_index\x18\x05 \x01(\x05\x12\x13\n\x0bpoint_state\x18\x06 \x01(\r\"\x96\x01\n!PKG_ENTER_GANG_BATTLE_DUNGEON_REQ\x12\x0f\n\x07gang_id\x18\x01 \x01(\r\x12\x0f\n\x07role_id\x18\x02 \x01(\r\x12\x14\n\x0cself_hero_id\x18\x03 \x01(\r\x12\x16\n\x0etarget_city_id\x18\x05 \x01(\r\x12!\n\x19target_strong_point_index\x18\x06 \x01(\x05\"\xe9\x01\n!PKG_ENTER_GANG_BATTLE_DUNGEON_RES\x12\x0e\n\x06result\x18\x01 \x01(\x05\x12\x14\n\x0cself_hero_id\x18\x02 \x01(\r\x12\x16\n\x0etarget_gang_id\x18\x03 \x01(\r\x12\x16\n\x0etarget_city_id\x18\x04 \x01(\r\x12!\n\x19target_strong_point_index\x18\x05 \x01(\x05\x12K\n\x1dtarget_strong_point_hero_info\x18\x06 \x03(\x0b\x32$.ST_GANG_CITY_STRONG_POINT_HERO_INFO\"\xb6\x01\n\x1bPKG_GANG_BATTLE_BALANCE_REQ\x12\x0f\n\x07gang_id\x18\x01 \x01(\r\x12\x0f\n\x07role_id\x18\x02 \x01(\r\x12\x14\n\x0cself_hero_id\x18\x03 \x01(\r\x12\x14\n\x0cself_hero_lv\x18\x04 \x01(\r\x12\x16\n\x0etarget_city_id\x18\x05 \x01(\r\x12!\n\x19target_strong_point_index\x18\x06 \x01(\x05\x12\x0e\n\x06is_win\x18\x07 \x01(\x08\"Z\n\x1bPKG_GANG_BATTLE_BALANCE_RES\x12\x0e\n\x06result\x18\x01 \x01(\x05\x12\x13\n\x0breward_gold\x18\x02 \x01(\r\x12\x16\n\x0ereward_crystal\x18\x03 \x01(\r\"\xcf\x01\n+PKG_GANG_STRONG_POINT_CHG_TO_GANGBATTLE_REQ\x12\x0f\n\x07gang_id\x18\x01 \x01(\r\x12\x10\n\x08\x63hg_type\x18\x02 \x01(\x05\x12\x0f\n\x07\x63ity_id\x18\x03 \x01(\r\x12\x1a\n\x12strong_point_index\x18\x04 \x01(\x05\x12\x17\n\x0fhero_slot_index\x18\x05 \x01(\x05\x12\x37\n\thero_info\x18\x06 \x01(\x0b\x32$.ST_GANG_CITY_STRONG_POINT_HERO_INFO\"\x87\x01\n\"PKG_GANG_MEM_CHG_TO_GANGBATTLE_REQ\x12\x0f\n\x07gang_id\x18\x01 \x01(\r\x12\x0f\n\x07role_id\x18\x02 \x01(\r\x12\x11\n\trole_name\x18\x03 \x01(\t\x12\x1c\n\x14\x63umulate_recharge_id\x18\x04 \x01(\r\x12\x0e\n\x06is_add\x18\x05 \x01(\x08\":\n\'PKG_GET_GANG_BATTLE_MEM_ATTACK_INFO_REQ\x12\x0f\n\x07gang_id\x18\x01 \x01(\r\"r\n\'PKG_GET_GANG_BATTLE_MEM_ATTACK_INFO_RES\x12\x0e\n\x06result\x18\x01 \x01(\x05\x12\x37\n\x0emem_attck_info\x18\x02 \x01(\x0b\x32\x1f.ST_GANG_BATTLE_MEM_ATTACK_LIST\"W\n\"PKG_GET_GANG_BATTLE_STATE_INFO_REQ\x12\x0f\n\x07role_id\x18\x01 \x01(\r\x12\x0f\n\x07gang_id\x18\x02 \x01(\r\x12\x0f\n\x07hero_id\x18\x03 \x03(\r\"t\n\"PKG_GET_GANG_BATTLE_STATE_INFO_RES\x12\x17\n\x0fis_battle_start\x18\x01 \x01(\x08\x12\x17\n\x0f\x61ttack_hero_num\x18\x02 \x01(\x08\x12\x1c\n\x14has_can_attack_point\x18\x03 \x01(\x08\"\xfc\x03\n\x15GANG_BROADCAST_DETAIL\x12:\n\x14gang_simple_info_chg\x18\x01 \x01(\x0b\x32\x1c.PKG_GANG_BASIC_INFO_CHG_RES\x12\x35\n\x11gang_mem_list_chg\x18\x02 \x01(\x0b\x32\x1a.PKG_GANG_MEM_LIST_CHG_RES\x12)\n\rgang_chat_msg\x18\x03 \x01(\x0b\x32\x12.PKG_GANG_CHAT_RES\x12?\n\rgang_city_chg\x18\x04 \x01(\x0b\x32(.PKG_GANG_CITY_STRONG_POINT_HERO_CHG_RES\x12L\n\x1agang_auto_apply_battle_chg\x18\x05 \x01(\x0b\x32(.PKG_SET_GANG_AUTO_APPLY_GANG_BATTLE_RES\x12\x37\n\x11gang_battle_state\x18\x06 \x01(\x0b\x32\x1c.PKG_GANG_BATTLE_STATE_BROAD\x12>\n\x17gang_battle_point_state\x18\x07 \x01(\x0b\x32\x1d.PKG_GANG_BATTTLE_POINT_BROAD\x12=\n\x15gang_bless_rank_clear\x18\x08 \x01(\x0b\x32\x1e.PKG_GANG_BLESS_RANK_CLEAR_RES\"q\n\x12PKG_GANG_BROADCAST\x12#\n\rmem_name_list\x18\x01 \x03(\x0b\x32\x0c.MemZoneInfo\x12\x0e\n\x06msg_id\x18\x02 \x01(\r\x12&\n\x06\x64\x65tail\x18\x03 \x01(\x0b\x32\x16.GANG_BROADCAST_DETAIL\"6\n#DB_GANG_BATTLE_MEM_ATTACK_HERO_INFO\x12\x0f\n\x07hero_id\x18\x01 \x01(\r\"\xb5\x02\n\x17\x44\x42_GANG_BATTLE_MEM_INFO\x12\x13\n\x0bmem_role_id\x18\x01 \x01(\r\x12\x10\n\x08mem_name\x18\x02 \x01(\t\x12\x17\n\x0f\x66ight_win_count\x18\x03 \x01(\r\x12\x19\n\x11\x66ight_total_count\x18\x04 \x01(\r\x12\x14\n\x0cpre_get_gold\x18\x05 \x01(\r\x12\x17\n\x0fpre_get_crystal\x18\x06 \x01(\r\x12\x1c\n\x14\x63umulate_recharge_id\x18\x07 \x01(\r\x12\x39\n\x0b\x61ttack_hero\x18\x08 \x03(\x0b\x32$.DB_GANG_BATTLE_MEM_ATTACK_HERO_INFO\x12\x37\n\x0c\x61ttack_point\x18\t \x03(\x0b\x32!.ST_GANG_BATTLE_ATTACK_POINT_INFO\"E\n\x17\x44\x42_GANG_BATTLE_MEM_LIST\x12*\n\x08mem_info\x18\x01 \x03(\x0b\x32\x18.DB_GANG_BATTLE_MEM_INFO\"\x92\x01\n\x1f\x44\x42_GANG_BATTLE_HISTORY_MEM_INFO\x12\x13\n\x0bmem_role_id\x18\x01 \x01(\r\x12\x10\n\x08mem_name\x18\x02 \x01(\t\x12\x13\n\x0bmem_win_cnt\x18\x03 \x01(\r\x12\x15\n\rmem_total_cnt\x18\x04 \x01(\r\x12\x1c\n\x14\x63umulate_recharge_id\x18\x05 \x01(\r\"Z\n\x1f\x44\x42_GANG_BATTLE_HISTORY_MEM_LIST\x12\x37\n\rgang_mem_list\x18\x01 \x03(\x0b\x32 .DB_GANG_BATTLE_HISTORY_MEM_INFO\"\x8a\x02\n\x1dSSDT_GANG_BATTLE_HISTORY_INFO\x12\x13\n\x0b\x62\x61ttle_time\x18\x01 \x01(\r\x12\x12\n\ngang_level\x18\x02 \x01(\r\x12\x17\n\x0f\x64\x65\x66\x65nse_gang_id\x18\x03 \x01(\r\x12\x19\n\x11\x64\x65\x66\x65nse_gang_name\x18\x04 \x01(\t\x12\x1a\n\x12\x64\x65\x66\x65nse_gang_level\x18\x05 \x01(\r\x12\x19\n\x11self_battle_score\x18\x06 \x01(\r\x12\x1c\n\x14\x64\x65\x66\x65nse_battle_score\x18\x07 \x01(\r\x12\x37\n\rmem_list_info\x18\x08 \x01(\x0b\x32 .DB_GANG_BATTLE_HISTORY_MEM_LIST\"A\n\x1dPKG_GET_GANG_BATTLE_STATE_REQ\x12\x0f\n\x07role_id\x18\x01 \x01(\r\x12\x0f\n\x07gang_id\x18\x02 \x01(\r\"\xbe\x01\n\x1dPKG_GET_GANG_BATTLE_STATE_RES\x12\r\n\x05state\x18\x01 \x01(\r\x12\x11\n\tsub_state\x18\x02 \x01(\r\x12\x14\n\x0cpre_get_gold\x18\x03 \x01(\r\x12\x17\n\x0fpre_get_crystal\x18\x04 \x01(\r\x12\x13\n\x0b\x61ttack_hero\x18\x05 \x03(\r\x12\x37\n\x0c\x61ttack_point\x18\x06 \x03(\x0b\x32!.ST_GANG_BATTLE_ATTACK_POINT_INFO\"2\n\x1fPKG_GET_GANG_BATTLE_HISTORY_REQ\x12\x0f\n\x07gang_id\x18\x01 \x01(\r\"W\n\x1fPKG_GET_GANG_BATTLE_HISTORY_RES\x12\x34\n\x0chistory_info\x18\x01 \x03(\x0b\x32\x1e.SSDT_GANG_BATTLE_HISTORY_INFO\"\\\n\x1cSSDT_GANG_MEM_MAIL_USER_INFO\x12\x13\n\x0bmem_role_id\x18\x01 \x01(\r\x12\'\n\x08\x61\x63\x63_info\x18\x02 \x03(\x0b\x32\x15.SSDT_MAIL_SYSTEM_ACC\"\x92\x01\n\x1aPKG_GANG_SEND_MEM_MAIL_REQ\x12\x10\n\x08is_match\x18\x01 \x01(\x08\x12\x0f\n\x07is_draw\x18\x02 \x01(\x08\x12\x0e\n\x06is_win\x18\x03 \x01(\x08\x12\x0f\n\x07is_lose\x18\x04 \x01(\x08\x12\x30\n\tuser_info\x18\x05 \x03(\x0b\x32\x1d.SSDT_GANG_MEM_MAIL_USER_INFO\",\n\rSSDT_RANK_VAL\x12\x0e\n\x06val_id\x18\x01 \x01(\r\x12\x0b\n\x03val\x18\x02 \x01(\r\"Z\n\x1bSSDT_RANK_BATTLE_HERO_BRIEF\x12\x0f\n\x07hero_id\x18\x01 \x01(\r\x12\x0f\n\x07hero_lv\x18\x02 \x01(\r\x12\x19\n\x11\x66ighting_capacity\x18\x03 \x01(\r\"\xcf\x01\n\x15SSDT_PLAYER_BASE_INFO\x12\x0f\n\x07role_id\x18\x01 \x01(\r\x12\x11\n\trole_name\x18\x02 \x01(\t\x12\x12\n\nrole_level\x18\x03 \x01(\r\x12\x1c\n\x14\x63umulate_recharge_id\x18\x04 \x01(\r\x12\x36\n\x10rank_battle_hero\x18\x05 \x03(\x0b\x32\x1c.SSDT_RANK_BATTLE_HERO_BRIEF\x12\x10\n\x08is_robot\x18\x06 \x01(\x08\x12\x16\n\x0e\x66ight_capacity\x18\x07 \x01(\r\"\xaa\x01\n\x13SSDT_GANG_BASE_INFO\x12\x0f\n\x07gang_id\x18\x01 \x01(\r\x12\x11\n\tgang_name\x18\x02 \x01(\t\x12\x12\n\ngang_level\x18\x03 \x01(\r\x12\x18\n\x10leader_unique_id\x18\x04 \x01(\t\x12\x16\n\x0eleader_role_id\x18\x05 \x01(\r\x12\x13\n\x0bleader_name\x18\x06 \x01(\t\x12\x14\n\x0cleader_level\x18\x07 \x01(\r\"\x8b\x01\n\x0eSSDT_RANK_DATA\x12\x16\n\x0erank_base_type\x18\x01 \x01(\r\x12+\n\x0erank_base_info\x18\x02 \x01(\x0b\x32\x13.SSDT_RANK_BASEINFO\x12\x12\n\nrank_trend\x18\x03 \x01(\r\x12 \n\x08rank_val\x18\x04 \x03(\x0b\x32\x0e.SSDT_RANK_VAL\"{\n\x16SSPKG_GET_RANKLIST_REQ\x12\x12\n\nflush_time\x18\x01 \x01(\r\x12\x0f\n\x07rank_id\x18\x02 \x01(\r\x12\x11\n\trank_type\x18\x03 \x01(\r\x12\x15\n\rpage_start_id\x18\x04 \x01(\r\x12\x12\n\npage_count\x18\x05 \x01(\r\"\xdb\x01\n\x16SSPKG_GET_RANKLIST_RES\x12\x0e\n\x06result\x18\x01 \x01(\r\x12\x12\n\nflush_time\x18\x03 \x01(\r\x12\x0f\n\x07rank_id\x18\x05 \x01(\r\x12\x11\n\trank_type\x18\x06 \x01(\r\x12\x11\n\trank_yday\x18\x07 \x01(\r\x12\x13\n\x0btotal_count\x18\x08 \x01(\r\x12\x15\n\rpage_start_id\x18\t \x01(\r\x12\x16\n\x0emax_show_count\x18\n \x01(\r\x12\"\n\trank_list\x18\x0b \x03(\x0b\x32\x0f.SSDT_RANK_DATA\"~\n\x15SSPKG_GET_RANKPOS_REQ\x12\x0f\n\x07rank_id\x18\x01 \x01(\r\x12\x11\n\trank_type\x18\x02 \x01(\r\x12\x13\n\x0bsearch_type\x18\x03 \x01(\r\x12,\n\nsearch_key\x18\x04 \x01(\x0b\x32\x18.SSDT_RANKPOS_SEARCH_KEY\"\x99\x01\n\x15SSPKG_GET_RANKPOS_RES\x12\x0f\n\x07rank_id\x18\x01 \x01(\r\x12\x11\n\trank_type\x18\x02 \x01(\r\x12\x13\n\x0bsearch_type\x18\x03 \x01(\r\x12\x11\n\trank_yday\x18\x04 \x01(\r\x12\x10\n\x08rank_pos\x18\x05 \x01(\r\x12\"\n\trank_info\x18\x06 \x01(\x0b\x32\x0f.SSDT_RANK_DATA\"\xb1\x01\n\"SSPKG_UPDATE_ACHIEVEMENT_SCORE_REQ\x12\x0b\n\x03uid\x18\x01 \x01(\r\x12\x11\n\trole_name\x18\x02 \x01(\t\x12\x12\n\nrole_level\x18\x03 \x01(\r\x12\x1c\n\x14\x63umulate_recharge_id\x18\x04 \x01(\r\x12\x1e\n\x16\x61\x63hievement_finish_num\x18\x05 \x01(\r\x12\x19\n\x11\x61\x63hievement_score\x18\x06 \x01(\r\"\xa2\x01\n\x1bSSPKG_UPDATE_GANG_SCORE_REQ\x12\x0b\n\x03uid\x18\x01 \x01(\r\x12\x11\n\trole_name\x18\x02 \x01(\t\x12\x0f\n\x07gang_id\x18\x03 \x01(\r\x12\x11\n\tgang_name\x18\x04 \x01(\t\x12\x0f\n\x07gang_lv\x18\x05 \x01(\r\x12\x12\n\ngang_score\x18\x06 \x01(\r\x12\x1a\n\x12gang_history_score\x18\x07 \x01(\r\"\xb5\x01\n\x1fSSPKG_UPDATE_OFFLINE_BATTLE_REQ\x12\x0b\n\x03uid\x18\x01 \x01(\r\x12\x11\n\trole_name\x18\x02 \x01(\t\x12\x12\n\nrole_level\x18\x03 \x01(\r\x12\x1c\n\x14\x63umulate_recharge_id\x18\x04 \x01(\r\x12\x1f\n\x17offline_battle_title_lv\x18\x05 \x01(\r\x12\x1f\n\x17offline_battle_kill_num\x18\x06 \x01(\r\"\xb5\x01\n#SSPKG_UPDATE_ONLINE_BATTLE_RANK_REQ\x12\x0b\n\x03uid\x18\x01 \x01(\r\x12\x11\n\trole_name\x18\x02 \x01(\t\x12\x12\n\nrole_level\x18\x03 \x01(\r\x12\x1c\n\x14\x63umulate_recharge_id\x18\x04 \x01(\r\x12\x1b\n\x13online_battle_score\x18\x05 \x01(\r\x12\x1f\n\x17online_battle_win_count\x18\x06 \x01(\r\"\x9f\x01\n\'SSPKG_UPDATE_WORLD_BOSS_DAMAGE_RANK_REQ\x12\x0b\n\x03uid\x18\x01 \x01(\r\x12\x11\n\trole_name\x18\x02 \x01(\t\x12\x12\n\nrole_level\x18\x03 \x01(\r\x12\x1c\n\x14\x63umulate_recharge_id\x18\x04 \x01(\r\x12\x12\n\nboss_index\x18\x05 \x01(\r\x12\x0e\n\x06\x64\x61mage\x18\x06 \x01(\r\"\xaf\x01\n\x1dSSPKG_UPDATE_STEAL_BATTLE_REQ\x12\x0b\n\x03uid\x18\x01 \x01(\r\x12\x11\n\trole_name\x18\x02 \x01(\t\x12\x12\n\nrole_level\x18\x04 \x01(\r\x12\x1c\n\x14\x63umulate_recharge_id\x18\x05 \x01(\r\x12\x1c\n\x14steal_battle_win_cnt\x18\x06 \x01(\r\x12\x1e\n\x16steal_battle_total_cnt\x18\x07 \x01(\r\"\x9c\x01\n\x18SSPKG_UPDATE_ENDLESS_REQ\x12\x0b\n\x03uid\x18\x01 \x01(\r\x12\x11\n\trole_name\x18\x02 \x01(\t\x12\x12\n\nrole_level\x18\x04 \x01(\r\x12\x1c\n\x14\x63umulate_recharge_id\x18\x05 \x01(\r\x12\x16\n\x0e\x65nd_less_score\x18\x06 \x01(\r\x12\x16\n\x0e\x65nd_less_floor\x18\x07 \x01(\r\"\x93\x01\n#SSPKG_UPDATE_PVE_EVALUATE_STATS_REQ\x12\x0b\n\x03uid\x18\x01 \x01(\r\x12\x11\n\trole_name\x18\x02 \x01(\t\x12\x12\n\nrole_level\x18\x04 \x01(\r\x12\x1c\n\x14\x63umulate_recharge_id\x18\x05 \x01(\r\x12\x1a\n\x12pve_evaluate_stars\x18\x06 \x01(\r\"<\n\x1aSSPKG_RANK_CHANGE_NAME_REQ\x12\x0b\n\x03uid\x18\x01 \x01(\r\x12\x11\n\trole_name\x18\x02 \x01(\t\"\xcc\x01\n\x14SSDT_RANK_ONE_UPDATE\x12\x0f\n\x07rank_id\x18\x01 \x01(\r\x12\x16\n\x0e\x66lush_day_time\x18\x02 \x01(\r\x12\x1b\n\x13next_flush_day_time\x18\x03 \x01(\r\x12\x17\n\x0f\x66lush_week_time\x18\x04 \x01(\r\x12\x1c\n\x14next_flush_week_time\x18\x05 \x01(\r\x12\x18\n\x10\x66lush_month_time\x18\x06 \x01(\r\x12\x1d\n\x15next_flush_month_time\x18\x07 \x01(\r\"U\n\x1aSSPKG_RANK_UPDATE_INFO_REQ\x12\x0f\n\x07op_type\x18\x01 \x01(\r\x12\x12\n\nparam_int1\x18\x02 \x01(\r\x12\x12\n\nparam_int2\x18\x03 \x01(\r\"L\n\x1aSSPKG_RANK_UPDATE_INFO_RES\x12.\n\x0frank_one_update\x18\x01 \x03(\x0b\x32\x15.SSDT_RANK_ONE_UPDATE\"\x86\x01\n\x19SSPKG_RANKDATA_REPORT_REQ\x12\x16\n\x0erank_base_type\x18\x01 \x01(\r\x12+\n\x0erank_base_info\x18\x02 \x01(\x0b\x32\x13.SSDT_RANK_BASEINFO\x12$\n\trank_data\x18\x03 \x03(\x0b\x32\x11.DBBLOB_RANK_DATA\"W\n\x1bSSPKG_GET_GANG_RANKSTAT_REQ\x12\x0f\n\x07gang_id\x18\x01 \x01(\r\x12\x0f\n\x07rank_id\x18\x02 \x01(\r\x12\x16\n\x0erank_base_type\x18\x03 \x01(\r\"i\n\x1bSSPKG_GET_GANG_RANKSTAT_RES\x12\x0f\n\x07gang_id\x18\x01 \x01(\r\x12\x0f\n\x07rank_id\x18\x02 \x01(\r\x12\x16\n\x0erank_base_type\x18\x03 \x01(\r\x12\x10\n\x08rank_val\x18\x04 \x03(\r\"\xe3\x01\n\x1fSSPKG_RANK_BATTLE_ROLELOGIN_REQ\x12\x0f\n\x07role_id\x18\x01 \x01(\r\x12\x1c\n\x14\x63\x61n_join_rank_battle\x18\x02 \x01(\r\x12\x11\n\trole_name\x18\x03 \x01(\t\x12\x1c\n\x14\x63umulate_recharge_id\x18\x04 \x01(\r\x12\x34\n\x11\x64\x65\x66\x65nse_hero_info\x18\x05 \x01(\x0b\x32\x19.RANK_BATTLE_DEFENSE_DATA\x12\x12\n\nhead_photo\x18\x06 \x01(\r\x12\x16\n\x0e\x66ight_capacity\x18\x07 \x01(\r\"R\n\x1fSSPKG_RANK_BATTLE_ROLELOGIN_RES\x12\x10\n\x08rank_pos\x18\x01 \x01(\x05\x12\x1d\n\x15high_history_rank_pos\x18\x02 \x01(\x05\"9\n&SSPKG_RANK_BATTLE_GET_FIGHT_TARGET_REQ\x12\x0f\n\x07role_id\x18\x01 \x01(\r\"\xbc\x01\n\"SSDT_RANK_BATTLE_FIGHT_TARGET_INFO\x12\x0f\n\x07role_id\x18\x01 \x01(\r\x12\x11\n\trole_name\x18\x02 \x01(\t\x12\x10\n\x08rank_pos\x18\x03 \x01(\x05\x12\x34\n\x11\x64\x65\x66\x65nse_hero_info\x18\x04 \x01(\x0b\x32\x19.RANK_BATTLE_DEFENSE_DATA\x12\x12\n\nhead_photo\x18\x05 \x01(\r\x12\x16\n\x0e\x66ight_capacity\x18\x06 \x01(\r\"r\n&SSPKG_RANK_BATTLE_GET_FIGHT_TARGET_RES\x12\x0e\n\x06result\x18\x01 \x01(\x05\x12\x38\n\x0btarget_info\x18\x02 \x03(\x0b\x32#.SSDT_RANK_BATTLE_FIGHT_TARGET_INFO\"l\n#SSPKG_RANK_BATTLE_ENTER_DUNGEON_REQ\x12\x17\n\x0f\x64\x65\x66\x65nse_role_id\x18\x01 \x01(\r\x12\x18\n\x10\x61ttacker_role_id\x18\x02 \x01(\r\x12\x12\n\ndungeon_id\x18\x03 \x01(\r\"\x98\x01\n#SSPKG_RANK_BATTLE_ENTER_DUNGEON_RES\x12\x0e\n\x06result\x18\x01 \x01(\x05\x12\x12\n\ndungeon_id\x18\x02 \x01(\r\x12\x17\n\x0f\x64\x65\x66\x65nse_role_id\x18\x03 \x01(\r\x12\x34\n\x11\x64\x65\x66\x65nse_hero_info\x18\x04 \x01(\x0b\x32\x19.RANK_BATTLE_DEFENSE_DATA\"Q\n\x1cSSPKG_RANK_BATTLE_UNLOCK_REQ\x12\x18\n\x10\x61ttacker_role_id\x18\x01 \x01(\r\x12\x17\n\x0f\x64\x65\x66\x65nse_role_id\x18\x02 \x01(\r\"\xb4\x02\n\x1dSSPKG_RANK_BATTLE_BALANCE_REQ\x12\x1c\n\x14\x61ttacker_mem_role_id\x18\x01 \x01(\r\x12\x19\n\x11\x61ttacker_mem_name\x18\x02 \x01(\t\x12%\n\x1d\x61ttacker_cumulate_recharge_id\x18\x03 \x01(\r\x12\x41\n\x1e\x61ttacker_mem_defense_hero_info\x18\x04 \x01(\x0b\x32\x19.RANK_BATTLE_DEFENSE_DATA\x12\x1b\n\x13\x61ttacker_head_photo\x18\x05 \x01(\r\x12\x1b\n\x13\x64\x65\x66\x65nse_mem_role_id\x18\x06 \x01(\r\x12\x15\n\rbattle_result\x18\x07 \x03(\r\x12\x1f\n\x17\x61ttacker_fight_capacity\x18\x08 \x01(\r\"\xbf\x01\n\x1dSSPKG_RANK_BATTLE_BALANCE_RES\x12\x0e\n\x06result\x18\x01 \x01(\x05\x12\x1b\n\x13\x64\x65\x66\x65nse_mem_role_id\x18\x02 \x01(\r\x12\x0f\n\x07old_pos\x18\x03 \x01(\x05\x12\x0f\n\x07new_pos\x18\x04 \x01(\x05\x12\x12\n\nis_promote\x18\x05 \x01(\r\x12\x13\n\x0bhistory_pos\x18\x06 \x01(\x05\x12&\n\x0epromote_reward\x18\x07 \x03(\x0b\x32\x0e.ST_REWARD_RES\"h\n\x1fSSDT_RANK_BATTLE_MAIL_USER_INFO\x12\x13\n\x0bmem_role_id\x18\x01 \x01(\r\x12\x10\n\x08rank_pos\x18\x02 \x01(\x05\x12\x1e\n\x06reward\x18\x03 \x03(\x0b\x32\x0e.ST_REWARD_RES\"q\n%SSPKG_RANK_BATTLE_REWARD_EVERYDAY_REQ\x12\x33\n\tuser_info\x18\x01 \x03(\x0b\x32 .SSDT_RANK_BATTLE_MAIL_USER_INFO\x12\x13\n\x0b\x61\x63tivity_id\x18\x02 \x01(\r\"\x8f\x01\n$SSPKG_RANK_BATTLE_REWARD_PROMOTE_REQ\x12\x13\n\x0bmem_role_id\x18\x01 \x01(\r\x12\x14\n\x0crank_new_pos\x18\x02 \x01(\x05\x12\x14\n\x0crank_old_pos\x18\x03 \x01(\x05\x12&\n\x0epromote_reward\x18\x04 \x03(\x0b\x32\x0e.ST_REWARD_RES\"\xa7\x01\n%SSPKG_RANK_BATTLE_POS_DOWN_NOTIFY_REQ\x12\x13\n\x0bmem_role_id\x18\x01 \x01(\r\x12\x14\n\x0c\x61tk_mem_name\x18\x02 \x01(\t\x12\x17\n\x0f\x61tk_mem_role_id\x18\x03 \x01(\r\x12\x14\n\x0crank_new_pos\x18\x04 \x01(\x05\x12\x14\n\x0crank_old_pos\x18\x05 \x01(\x05\x12\x0e\n\x06is_win\x18\x06 \x01(\r\";\n\x12PKG_GET_NOTIFY_REQ\x12\x0b\n\x03uid\x18\x01 \x01(\r\x12\x18\n\x10\x63ur_max_beg_time\x18\x02 \x01(\r\"?\n\x0fPKG_NOTIFY_DATA\x12\r\n\x05title\x18\x01 \x01(\t\x12\x0c\n\x04link\x18\x02 \x01(\t\x12\x0f\n\x07\x63ontent\x18\x03 \x01(\t\"\x8c\x01\n\x0fPKG_NOTIFY_INFO\x12\x11\n\tnotify_id\x18\x01 \x01(\r\x12\x0c\n\x04name\x18\x02 \x01(\t\x12\x10\n\x08\x62\x65g_time\x18\x03 \x01(\r\x12\x10\n\x08\x65nd_time\x18\x04 \x01(\r\x12\x12\n\nis_display\x18\x05 \x01(\r\x12 \n\x06notify\x18\x06 \x01(\x0b\x32\x10.PKG_NOTIFY_DATA\"h\n\x12PKG_GET_NOTIFY_RES\x12\x11\n\tnew_count\x18\x01 \x01(\r\x12\x18\n\x10new_max_beg_time\x18\x02 \x01(\r\x12%\n\x0bnotify_info\x18\x03 \x03(\x0b\x32\x10.PKG_NOTIFY_INFO\"\xa9\x02\n\x15SSPKG_PURCHASE_FINISH\x12\x0e\n\x06result\x18\x01 \x01(\x05\x12\x0b\n\x03uid\x18\x02 \x01(\r\x12\x11\n\tunique_id\x18\x03 \x01(\t\x12\x13\n\x0bhttp_handle\x18\x04 \x01(\x05\x12\x18\n\x10is_firstpurchase\x18\x05 \x01(\x05\x12\x12\n\nproduct_id\x18\x06 \x01(\t\x12\x12\n\ntrade_code\x18\x07 \x01(\t\x12\x10\n\x08world_id\x18\x08 \x01(\x05\x12\x16\n\x0etransaction_id\x18\t \x01(\t\x12\x10\n\x08platform\x18\n \x01(\x05\x12\x12\n\nextra_flag\x18\x0c \x01(\x05\x12\x17\n\x0fis_first_reward\x18\r \x01(\x08\x12\x0c\n\x04time\x18\x0e \x01(\r\x12\x12\n\nchannel_id\x18\x0f \x01(\r\"\xd9\x01\n\x1aSSPKG_PURCHASE_FINISH_DISP\x12\x0e\n\x06result\x18\x01 \x01(\x05\x12\x0b\n\x03uid\x18\x02 \x01(\r\x12\x11\n\tunique_id\x18\x03 \x01(\t\x12\x13\n\x0bhttp_handle\x18\x04 \x01(\x05\x12\x12\n\nproduct_id\x18\x06 \x01(\t\x12\x12\n\ntrade_code\x18\x07 \x01(\t\x12\x10\n\x08world_id\x18\x08 \x01(\x05\x12\x16\n\x0etransaction_id\x18\t \x01(\t\x12\x10\n\x08platform\x18\n \x01(\x05\x12\x12\n\nextra_flag\x18\x0c \x01(\x05\"\x81\x01\n\x12SSPKG_PURCHASE_REQ\x12\x16\n\x0etransaction_id\x18\x01 \x01(\t\x12\x0b\n\x03uid\x18\x02 \x01(\r\x12\x11\n\tunique_id\x18\x03 \x01(\t\x12\x0e\n\x06praram\x18\x04 \x01(\r\x12\x12\n\nproduct_id\x18\x05 \x01(\t\x12\x0f\n\x07receipt\x18\x06 \x01(\t\"m\n\x13SSPKG_PURCHASE_INFO\x12\x12\n\ntrade_code\x18\x02 \x02(\t\x12\x16\n\x0etransaction_id\x18\x03 \x02(\t\x12\x10\n\x08platform\x18\x01 \x02(\r\x12\x0b\n\x03uin\x18\x04 \x01(\t\x12\x0b\n\x03uid\x18\x05 \x01(\r\"E\n\x1fSSPKG_PURCHASE_REQUEST_DELIVERY\x12\"\n\x04info\x18\x01 \x02(\x0b\x32\x14.SSPKG_PURCHASE_INFO\"\x9a\x01\n#SSPKG_PURCHASE_REQUEST_DELIVERY_IAP\x12\x16\n\x0etransaction_id\x18\x02 \x02(\t\x12\x1b\n\x13transaction_receipt\x18\x03 \x02(\t\x12\x10\n\x08platform\x18\x01 \x02(\r\x12\x0b\n\x03uin\x18\x04 \x01(\t\x12\x0b\n\x03uid\x18\x05 \x01(\r\x12\x12\n\ntrade_code\x18\x06 \x01(\t\"`\n+SSPKG_PURCHASE_REQUEST_DELIVERY_IAP_CHECKED\x12\x31\n\x03req\x18\x01 \x02(\x0b\x32$.SSPKG_PURCHASE_REQUEST_DELIVERY_IAP\"B\n\x1bSSPKG_PURCHASE_IAP_FINISHED\x12\x16\n\x0etransaction_id\x18\x02 \x02(\t\x12\x0b\n\x03uid\x18\x05 \x01(\r\"]\n\x13SSPKG_PURCHASE_DONE\x12\x12\n\ntrade_code\x18\x01 \x01(\t\x12\x0b\n\x03uid\x18\x02 \x01(\r\x12\x11\n\tunique_id\x18\x03 \x01(\t\x12\x12\n\nproduct_id\x18\x07 \x01(\t\"\x9d\x03\n\x12SSPKG_PURCHASE_RES\x12\x0b\n\x03uid\x18\x01 \x01(\r\x12\x11\n\tunique_id\x18\x02 \x01(\t\x12\x0e\n\x06result\x18\x03 \x01(\r\x12\x12\n\nproduct_id\x18\x04 \x01(\t\x12\x13\n\x0bhttp_handle\x18\x05 \x01(\x05\x12\x18\n\x10is_firstpurchase\x18\x06 \x01(\x05\x12\x12\n\ntrade_code\x18\x07 \x01(\t\x12\x1d\n\x15\x63ur_cumulate_recharge\x18\x08 \x01(\r\x12\x16\n\x0etransaction_id\x18\t \x01(\t\x12\x10\n\x08platform\x18\n \x01(\x05\x12\x12\n\nextra_flag\x18\x0c \x01(\x05\x12\x17\n\x0fis_first_reward\x18\r \x01(\x08\x12\x0c\n\x04time\x18\x0e \x01(\r\x12\x42\n\x18newbie_activity_recharge\x18\x0f \x01(\x0b\x32 .DBBLOB_NEWBIE_ACTIVITY_RECHARGE\x12\x1a\n\x12\x63ur_first_recharge\x18\x10 \x01(\r\x12\x1c\n\x14gold_in_any_purchase\x18\x11 \x01(\r\"\xff\x01\n\x17SSPKG_PURCHASE_DISP_REQ\x12\x0b\n\x03uid\x18\x01 \x01(\r\x12\x11\n\tunique_id\x18\x02 \x01(\t\x12\x11\n\tserver_id\x18\x03 \x01(\r\x12\x16\n\x0etransaction_id\x18\x04 \x01(\t\x12\x12\n\nproduct_id\x18\x05 \x01(\t\x12\x12\n\ntrade_code\x18\x06 \x01(\t\x12\x0c\n\x04\x63oin\x18\x07 \x01(\r\x12\r\n\x05money\x18\x08 \x01(\x02\x12\x0c\n\x04time\x18\t \x01(\r\x12\x13\n\x0bhttp_handle\x18\n \x01(\x05\x12\x10\n\x08platform\x18\x0b \x01(\x05\x12\x12\n\nextra_flag\x18\x0c \x01(\x05\x12\x0b\n\x03pid\x18\r \x01(\x05\"-\n\x1eSSPKG_GET_PURCHASEACTIVITY_REQ\x12\x0b\n\x03uid\x18\x01 \x01(\r\"\xeb\x03\n\x1eSSPKG_GET_PURCHASEACTIVITY_RES\x12\x0b\n\x03uid\x18\x01 \x01(\r\x12\x36\n\x12\x66irstpurchase_list\x18\x02 \x01(\x0b\x32\x1a.DBBLOB_FIRSTPURCHASE_LIST\x12.\n\x0emonthcard_info\x18\x03 \x01(\x0b\x32\x16.DBBLOB_MONTHCARD_INFO\x12\x1a\n\x12growthfund_buytime\x18\x04 \x01(\r\x12\x19\n\x11\x63umulate_recharge\x18\x05 \x01(\r\x12\x19\n\x11\x66irst_reward_time\x18\x06 \x01(\r\x12\x17\n\x0fis_first_reward\x18\x07 \x01(\x08\x12\x1a\n\x12sect_recharge_time\x18\x08 \x01(\r\x12\x19\n\x11sect_recharge_cnt\x18\t \x01(\r\x12\x35\n\x0e\x64\x61ily_recharge\x18\n \x01(\x0b\x32\x1d.DBBLOB_DAILY_RECHARGE_REWARD\x12\x1b\n\x13\x64\x61ily_recharge_time\x18\x0b \x01(\r\x12\x42\n\x18newbie_activity_recharge\x18\x0c \x01(\x0b\x32 .DBBLOB_NEWBIE_ACTIVITY_RECHARGE\x12\x1a\n\x12\x66irst_recharge_cnt\x18\r \x01(\r\"\x81\x01\n\x1aSSPKG_RECORD_TRADE_SUCCESS\x12\x12\n\ntrade_code\x18\x01 \x01(\t\x12\x0b\n\x03uid\x18\x02 \x01(\r\x12\x11\n\tunique_id\x18\x03 \x01(\t\x12\x12\n\nproduct_id\x18\x04 \x01(\t\x12\r\n\x05money\x18\x05 \x01(\r\x12\x0c\n\x04gold\x18\x06 \x01(\r\"\x87\x01\n\x13SSPKG_GIFT_CODE_REQ\x12\x0b\n\x03uid\x18\x01 \x01(\r\x12\x11\n\tunique_id\x18\x02 \x01(\t\x12\x11\n\tgift_code\x18\x03 \x01(\t\x12\x0f\n\x07gift_id\x18\x04 \x01(\r\x12\x12\n\nchannel_id\x18\x05 \x01(\r\x12\x18\n\x10pre_condition_id\x18\x06 \x03(\r\"v\n\x1cSSPKG_GIFT_UPDATE_ACCEPT_REQ\x12\x0b\n\x03uid\x18\x01 \x01(\r\x12\x11\n\tunique_id\x18\x02 \x01(\t\x12\x11\n\tgift_code\x18\x03 \x01(\t\x12\x0f\n\x07gift_id\x18\x04 \x01(\r\x12\x12\n\nchannel_id\x18\x05 \x01(\r\"}\n\x13SSPKG_GIFT_CODE_RES\x12\x0b\n\x03uid\x18\x01 \x01(\r\x12\x11\n\tunique_id\x18\x02 \x01(\t\x12\x0e\n\x06result\x18\x03 \x01(\x05\x12\x11\n\tgift_code\x18\x04 \x01(\t\x12\x0f\n\x07gift_id\x18\x05 \x01(\r\x12\x12\n\nchannel_id\x18\x06 \x01(\r\"i\n\x12SSDT_ROLE_LIST_RES\x12$\n\x07success\x18\x01 \x01(\x0b\x32\x13.SUCC_ROLE_LIST_RES\x12\x1c\n\x05\x65rror\x18\x02 \x01(\x0b\x32\r.ERR_RESPONSE\x12\x0f\n\x07reserve\x18\x03 \x01(\x05\"\x81\x01\n\x13UINON_MAIL_ACC_INFO\x12\x33\n\x0fsystem_mail_acc\x18\x01 \x01(\x0b\x32\x1a.SSDT_MAIL_SYSTEM_ACC_INFO\x12\x35\n\x10revenge_mail_acc\x18\x02 \x01(\x0b\x32\x1b.SSDT_MAIL_REVENGE_ACC_INFO\"t\n\x12SSDT_RANK_BASEINFO\x12\x30\n\x10player_base_info\x18\x01 \x01(\x0b\x32\x16.SSDT_PLAYER_BASE_INFO\x12,\n\x0egang_base_info\x18\x02 \x01(\x0b\x32\x14.SSDT_GANG_BASE_INFO\"`\n\x17SSDT_RANKPOS_SEARCH_KEY\x12\x0f\n\x07uniq_id\x18\x01 \x01(\r\x12\x10\n\x08rank_pos\x18\x02 \x01(\r\x12\x11\n\tuniq_name\x18\x03 \x01(\t\x12\x0f\n\x07reserve\x18\x04 \x01(\x05\"U\n\x17SSPKG_GAMESVR_STAT_INFO\x12\x0f\n\x07worldid\x18\x01 \x01(\r\x12\x0e\n\x06zoneid\x18\x02 \x01(\r\x12\x19\n\x11online_player_cnt\x18\x03 \x01(\r\"f\n\x17SSPKG_GAMESVR_ACC_LOGIN\x12\x0f\n\x07uniq_id\x18\x01 \x01(\t\x12\x0b\n\x03uid\x18\x02 \x01(\r\x12\x0c\n\x04name\x18\x03 \x01(\t\x12\x0f\n\x07worldid\x18\x04 \x01(\r\x12\x0e\n\x06zoneid\x18\x05 \x01(\r\"S\n\x18SSPKG_GAMESVR_ACC_LOGOUT\x12\x0f\n\x07uniq_id\x18\x01 \x01(\t\x12&\n\nworld_info\x18\x02 \x01(\x0b\x32\x12.DBBLOB_WORLD_INFO\"<\n\x18\x44\x42_PLAYER_SHOP_HERO_INFO\x12\x0f\n\x07hero_id\x18\x01 \x01(\r\x12\x0f\n\x07hero_lv\x18\x02 \x01(\r\"E\n\x19\x44\x42_PLAYER_SHOP_GOODS_INFO\x12\x10\n\x08goods_id\x18\x01 \x01(\r\x12\x16\n\x0eis_already_buy\x18\x02 \x01(\r\"\xdd\x01\n\x18\x44\x42_PlAYER_SHOP_INFO_BLOB\x12:\n\x16player_shop_goods_info\x18\x01 \x03(\x0b\x32\x1a.DB_PLAYER_SHOP_GOODS_INFO\x12\x45\n!player_rankbattle_shop_goods_info\x18\x02 \x03(\x0b\x32\x1a.DB_PLAYER_SHOP_GOODS_INFO\x12>\n\x1aplayer_vip_shop_goods_info\x18\x03 \x03(\x0b\x32\x1a.DB_PLAYER_SHOP_GOODS_INFO\"j\n\x18SS_SHOP_PLAYER_LOGIN_REQ\x12\x0f\n\x07role_id\x18\x01 \x01(\r\x12\x0f\n\x07zone_id\x18\x02 \x01(\x05\x12,\n\thero_info\x18\x03 \x03(\x0b\x32\x19.DB_PLAYER_SHOP_HERO_INFO\",\n\x19SS_SHOP_PLAYER_LOGOUT_REQ\x12\x0f\n\x07role_id\x18\x01 \x01(\r\"\x99\x01\n\x18SS_SHOP_PLAYER_LOGIN_RES\x12\x0e\n\x06result\x18\x01 \x01(\x05\x12\x11\n\tshop_type\x18\x02 \x01(\r\x12\x19\n\x11next_refresh_time\x18\x03 \x01(\r\x12\'\n\x0fshop_goods_info\x18\x04 \x01(\x0b\x32\x0e.ST_SHOP_GOODS\x12\x16\n\x0e\x61uto_refreshed\x18\x05 \x01(\x08\"F\n SS_SHOP_PLAYER_REFRESH_GOODS_REQ\x12\x0f\n\x07role_id\x18\x01 \x01(\r\x12\x11\n\tshop_type\x18\x02 \x01(\r\"\xa1\x01\n SS_SHOP_PLAYER_REFRESH_GOODS_RES\x12\x11\n\tshop_type\x18\x01 \x01(\r\x12\'\n\x0fshop_goods_info\x18\x02 \x01(\x0b\x32\x0e.ST_SHOP_GOODS\x12\x19\n\x11next_refresh_time\x18\x03 \x01(\r\x12\x0e\n\x06result\x18\x04 \x01(\x05\x12\x16\n\x0e\x61uto_refreshed\x18\x05 \x01(\x08\"\xc9\x01\n\"SS_SHOP_PLAYER_BUY_GOODS_CHECK_REQ\x12\x0f\n\x07role_id\x18\x01 \x01(\r\x12\x11\n\tshop_type\x18\x02 \x01(\r\x12\x10\n\x08goods_id\x18\x03 \x01(\r\x12\x12\n\nleft_money\x18\x04 \x01(\r\x12\x11\n\tleft_gold\x18\x05 \x01(\r\x12\x14\n\x0cleft_crystal\x18\x06 \x01(\r\x12\x1d\n\x15left_rankbattle_score\x18\x07 \x01(\r\x12\x11\n\tvip_level\x18\x08 \x01(\r\"\x93\x01\n\"SS_SHOP_PlAYER_BUY_GOODS_CHECK_RES\x12\x0e\n\x06result\x18\x01 \x01(\x05\x12\x11\n\tshop_type\x18\x02 \x01(\r\x12\x0f\n\x07role_id\x18\x03 \x01(\r\x12\x10\n\x08\x63ur_time\x18\x04 \x01(\r\x12\'\n\ngoods_info\x18\x05 \x01(\x0b\x32\x13.ST_SHOP_GOODS_INFO\"_\n\x1eSS_SHOP_PLAYER_UPDATE_HERO_REQ\x12\x0f\n\x07role_id\x18\x01 \x01(\r\x12,\n\thero_info\x18\x03 \x03(\x0b\x32\x19.DB_PLAYER_SHOP_HERO_INFO\"c\n+SS_SHOP_PLAYER_BUY_GOODS_FAILE_ROLLBACK_REQ\x12\x0f\n\x07role_id\x18\x01 \x01(\r\x12\x11\n\tshop_type\x18\x02 \x01(\r\x12\x10\n\x08goods_id\x18\x03 \x01(\r\"f\n\x16SSDT_FRIEND_CROSS_INFO\x12\x0b\n\x03uid\x18\x01 \x01(\r\x12\x0b\n\x03uin\x18\x02 \x01(\t\x12\x0e\n\x06uin3rd\x18\x03 \x01(\t\x12\x10\n\x08world_id\x18\x04 \x01(\r\x12\x10\n\x08platform\x18\x05 \x01(\r\"H\n\x1aSSPKG_BIND_3RD_PLATFORM_ID\x12*\n\tbind_info\x18\x01 \x02(\x0b\x32\x17.SSDT_FRIEND_CROSS_INFO\"R\n$SSPKG_BIND_3RD_PLATFORM_ID_TO_FRIEND\x12*\n\tbind_info\x18\x01 \x02(\x0b\x32\x17.SSDT_FRIEND_CROSS_INFO\"p\n\x17SSPKG_INVITE_STATE_INFO\x12\x10\n\x08world_id\x18\x03 \x02(\r\x12\x0f\n\x07zone_id\x18\x02 \x02(\x05\x12\x0b\n\x03uid\x18\x04 \x02(\r\x12%\n\x04\x64\x61ta\x18\x01 \x02(\x0b\x32\x17.SCDT_INVITE_STATE_INFO\"T\n SSPKG_HANDLE_INVITED_CODE_REWARD\x12\x0e\n\x06result\x18\x01 \x02(\r\x12\x0f\n\x07role_id\x18\x02 \x02(\r\x12\x0f\n\x07zone_id\x18\x03 \x02(\x05\"`\n\x18SSPKG_APPLY_INVITED_CODE\x12\x14\n\x0cinvited_code\x18\x01 \x02(\t\x12\x0b\n\x03uid\x18\x02 \x02(\r\x12\x10\n\x08world_id\x18\x03 \x02(\r\x12\x0f\n\x07zone_id\x18\x04 \x02(\r\"]\n!SSPKG_APPLY_INVITED_CODE_TO_CROSS\x12\x10\n\x08world_id\x18\x02 \x02(\r\x12&\n\x03msg\x18\x01 \x02(\x0b\x32\x19.SSPKG_APPLY_INVITED_CODE\"d\n(SSPKG_APPLY_INVITED_CODE_CROSS_TO_FRIEND\x12\x10\n\x08world_id\x18\x02 \x02(\r\x12&\n\x03msg\x18\x01 \x02(\x0b\x32\x19.SSPKG_APPLY_INVITED_CODE\"_\n%SSPKG_APPLY_INVITED_CODE_RES_TO_CROSS\x12\x0e\n\x06result\x18\x02 \x02(\x05\x12&\n\x03msg\x18\x01 \x02(\x0b\x32\x19.SSPKG_APPLY_INVITED_CODE\"i\n/SSPKG_APPLY_INVITED_CODE_RES_TO_CROSS_TO_FRIEND\x12\x0e\n\x06result\x18\x02 \x02(\x05\x12&\n\x03msg\x18\x01 \x02(\x0b\x32\x19.SSPKG_APPLY_INVITED_CODE\"w\n\x17SSPKG_NTF_INVITED_ERROR\x12,\n\nerror_code\x18\x01 \x02(\x0e\x32\x18.ENUM_INVITED_ERROR_CODE\x12\x10\n\x08world_id\x18\x02 \x02(\r\x12\x0f\n\x07zone_id\x18\x03 \x02(\r\x12\x0b\n\x03uid\x18\x04 \x02(\r\"\x90\x01\n\x19SSPKG_INVITED_FRIEND_INFO\x12\x12\n\ntime_stamp\x18\x02 \x02(\r\x12\x0b\n\x03uid\x18\x01 \x02(\r\x12\x10\n\x08world_id\x18\x03 \x02(\r\x12\x0f\n\x07zone_id\x18\x05 \x02(\r\x12/\n\rsocial_friend\x18\x04 \x03(\x0b\x32\x18.SSDT_SOCIAL_FRIEND_INFO\"b\n\x1cSSPKG_REQUEST_INVITED_FRIEND\x12\x12\n\ntime_stamp\x18\x01 \x02(\r\x12\x0b\n\x03uid\x18\x02 \x02(\r\x12\x10\n\x08world_id\x18\x03 \x02(\r\x12\x0f\n\x07zone_id\x18\x05 \x02(\r\"z\n\x11SSDT_INVITED_INFO\x12\r\n\x05state\x18\x05 \x02(\r\x12\x15\n\rfrom_world_id\x18\x01 \x02(\r\x12\x10\n\x08\x66rom_uid\x18\x02 \x02(\r\x12\x13\n\x0buid_of_code\x18\x03 \x02(\r\x12\x18\n\x10world_id_of_code\x18\x04 \x01(\r\"x\n\x1eSSPKG_REQUEST_INVITED_TO_CROSS\x12*\n\x03req\x18\x01 \x02(\x0b\x32\x1d.SSPKG_REQUEST_INVITED_FRIEND\x12*\n\x07\x66riends\x18\x02 \x03(\x0b\x32\x19.SSDT_INVITED_FRIEND_INFO\"~\n$SSPKG_REQUES_INVITED_CROSS_TO_FRIEND\x12*\n\x03req\x18\x01 \x02(\x0b\x32\x1d.SSPKG_REQUEST_INVITED_FRIEND\x12*\n\x07\x66riends\x18\x02 \x03(\x0b\x32\x19.SSDT_INVITED_FRIEND_INFO\"\x7f\n&SSPKG_RESPONSE_INVITED_FRIEND_TO_CROSS\x12*\n\x03req\x18\x01 \x02(\x0b\x32\x1d.SSPKG_REQUEST_INVITED_FRIEND\x12)\n\x07\x66riends\x18\x02 \x03(\x0b\x32\x18.SSDT_SOCIAL_FRIEND_INFO\"\x7f\n&SSPKG_RESPONSE_INVITED_CROSS_TO_FRIEND\x12*\n\x03req\x18\x01 \x02(\x0b\x32\x1d.SSPKG_REQUEST_INVITED_FRIEND\x12)\n\x07\x66riends\x18\x02 \x03(\x0b\x32\x18.SSDT_SOCIAL_FRIEND_INFO\"r\n\x1aSSDT_REQUEST_SOCIAL_FRIEND\x12\x12\n\ntime_stamp\x18\x03 \x02(\r\x12\x0b\n\x03uid\x18\x01 \x02(\r\x12\x10\n\x08platform\x18\x05 \x02(\r\x12\x10\n\x08world_id\x18\x04 \x02(\r\x12\x0f\n\x07uid_3rd\x18\x02 \x03(\t\"H\n\x1bSSPKG_REQUEST_SOCIAL_FRIEND\x12)\n\x04\x64\x61ta\x18\x01 \x02(\x0b\x32\x1b.SSDT_REQUEST_SOCIAL_FRIEND\"N\n!SSPKG_REQUEST_SOCIAL_FRIEND_CROSS\x12)\n\x04\x64\x61ta\x18\x01 \x02(\x0b\x32\x1b.SSDT_REQUEST_SOCIAL_FRIEND\"r\n\x10SSDT_FRIEND_INFO\x12)\n\tbase_info\x18\x01 \x01(\x0b\x32\x16.SCDT_FRIEND_BASE_INFO\x12\x1b\n\x13receive_power_state\x18\x02 \x01(\r\x12\x16\n\x0ehas_send_power\x18\x03 \x01(\x08\"n\n\x17SSDT_SOCIAL_FRIEND_INFO\x12+\n\ncross_info\x18\x01 \x01(\x0b\x32\x17.SSDT_FRIEND_CROSS_INFO\x12&\n\x0b\x66riend_info\x18\x02 \x01(\x0b\x32\x11.SSDT_FRIEND_INFO\"\x81\x01\n\x16SSDT_FRIEND_INFO_CROSS\x12\x12\n\ntime_stamp\x18\x03 \x02(\r\x12\x0b\n\x03uid\x18\x01 \x02(\r\x12\x10\n\x08world_id\x18\x04 \x02(\r\x12\x34\n\x12social_friend_info\x18\x02 \x03(\x0b\x32\x18.SSDT_SOCIAL_FRIEND_INFO\"[\n\x1bSSPKG_REQUEST_INVITE_REWARD\x12\x0f\n\x07role_id\x18\x01 \x02(\r\x12+\n\x0breward_info\x18\x04 \x02(\x0b\x32\x16.ResFriendInviteReward\"p\n\x1cSSPKG_RESPONSE_INVITE_REWARD\x12\x0f\n\x07role_id\x18\x01 \x02(\r\x12\x12\n\nstate_code\x18\x02 \x02(\x05\x12+\n\x0breward_info\x18\x04 \x02(\x0b\x32\x16.ResFriendInviteReward\"6\n SSPKG_NOTIFY_SOCIAL_FRIEND_ERROR\x12\x12\n\nerror_code\x18\x01 \x02(\r\"G\n\x15SSDT_SOCIAL_FRIEND_ID\x12\x0b\n\x03uid\x18\x01 \x02(\r\x12\x0f\n\x07uid_3rd\x18\x02 \x02(\t\x12\x10\n\x08world_id\x18\x03 \x02(\r\"Z\n!SSPKG_SEND_POWER_TO_SOCIAL_FRIEND\x12$\n\x04\x66rom\x18\x02 \x01(\x0b\x32\x16.SSDT_SOCIAL_FRIEND_ID\x12\x0f\n\x07uid_3rd\x18\x01 \x03(\t\"x\n,SSPKG_SEND_POWER_TO_SOCIAL_FRIEND_FROM_CROSS\x12$\n\x04\x66rom\x18\x02 \x01(\x0b\x32\x16.SSDT_SOCIAL_FRIEND_ID\x12\"\n\x02to\x18\x01 \x03(\x0b\x32\x16.SSDT_SOCIAL_FRIEND_ID\"s\n\'SSPKG_SEND_POWER_TO_SOCIAL_FRIEND_CROSS\x12$\n\x04\x66rom\x18\x02 \x02(\x0b\x32\x16.SSDT_SOCIAL_FRIEND_ID\x12\"\n\x02to\x18\x01 \x03(\x0b\x32\x16.SSDT_SOCIAL_FRIEND_ID\"S\n\x1dSSPKG_SOCIAL_FRIEND_POWER_ADD\x12\x0b\n\x03uid\x18\x01 \x02(\r\x12\x0f\n\x07zone_id\x18\x02 \x02(\r\x12\x14\n\x0cuid_3rd_from\x18\x03 \x02(\t\"\x83\x01\n SSDT_SEND_POSER_TO_SOCIAL_FRIEND\x12\x10\n\x08uid_from\x18\x01 \x02(\r\x12\x14\n\x0cuid_3rd_from\x18\x02 \x02(\t\x12\x13\n\x0bworld_id_to\x18\x03 \x02(\r\x12\x12\n\nuid_3rd_to\x18\x04 \x03(\t\x12\x0e\n\x06uid_to\x18\x05 \x03(\t\"C\n#SSPKG_RECV_POWER_FROM_SOCIAL_FRIEND\x12\x0b\n\x03uid\x18\x02 \x02(\r\x12\x0f\n\x07uid_3rd\x18\x01 \x03(\t\"p\n\x1fSSPKG_SOCIAL_FRIEND_INFO_CHANGE\x12\x0b\n\x03uid\x18\x01 \x02(\r\x12\x0f\n\x07zone_id\x18\x02 \x02(\r\x12/\n\rsocial_friend\x18\x03 \x03(\x0b\x32\x18.SSDT_SOCIAL_FRIEND_INFO\"B\n\x19SSPKG_FRIEND_INFO_REQUEST\x12%\n\x04\x64\x61ta\x18\x01 \x02(\x0b\x32\x17.SSDT_FRIEND_INFO_CROSS\"R\n)SSPKG_FRIEND_CROSS_INFO_RESPONSE_TO_CROSS\x12%\n\x04\x64\x61ta\x18\x01 \x02(\x0b\x32\x17.SSDT_FRIEND_INFO_CROSS\"\\\n3SSPKG_FRIEND_CROSS_INFO_RESPONSE_TO_CROSS_TO_FRIEND\x12%\n\x04\x64\x61ta\x18\x01 \x02(\x0b\x32\x17.SSDT_FRIEND_INFO_CROSS\"Z\n SSPKG_FRIEND_CROSS_INFO_RESPONSE\x12\x0f\n\x07zone_id\x18\x02 \x02(\r\x12%\n\x04\x64\x61ta\x18\x01 \x02(\x0b\x32\x17.SSDT_FRIEND_INFO_CROSS\"W\n\x16SSDT_FRIEND_APPLY_INFO\x12)\n\tbase_info\x18\x01 \x01(\x0b\x32\x16.SCDT_FRIEND_BASE_INFO\x12\x12\n\napply_time\x18\x02 \x01(\r\"[\n\x1aSSDT_FRIEND_RECOMMAND_INFO\x12)\n\tbase_info\x18\x01 \x01(\x0b\x32\x16.SCDT_FRIEND_BASE_INFO\x12\x12\n\nis_applied\x18\x02 \x01(\x08\"n\n\x17SSDT_PLAYER_FRIEND_INFO\x12&\n\x0b\x66riend_info\x18\x01 \x03(\x0b\x32\x11.SSDT_FRIEND_INFO\x12+\n\napply_info\x18\x02 \x03(\x0b\x32\x17.SSDT_FRIEND_APPLY_INFO\"I\n\x14SSPKG_OPT_FRIEND_REQ\x12\x0b\n\x03uid\x18\x01 \x01(\r\x12\x10\n\x08opt_type\x18\x02 \x01(\r\x12\x12\n\ntarget_uid\x18\x03 \x01(\r\"r\n\x14SSPKG_OPT_FRIEND_RES\x12\x0e\n\x06result\x18\x01 \x01(\x05\x12\x0b\n\x03uid\x18\x02 \x01(\r\x12\x10\n\x08opt_type\x18\x03 \x01(\r\x12+\n\x0btarget_info\x18\x04 \x01(\x0b\x32\x16.SCDT_FRIEND_BASE_INFO\"\xf6\x01\n\x1aSSPKG_LOGIN_FRIEND_SVR_REQ\x12\x0b\n\x03uid\x18\x01 \x01(\r\x12\x0b\n\x03uin\x18\x02 \x01(\t\x12\'\n\thero_info\x18\x03 \x03(\x0b\x32\x14.ST_HERO_BATTLE_INFO\x12\x11\n\trole_name\x18\x04 \x01(\t\x12\x11\n\tvip_level\x18\x05 \x01(\r\x12\x12\n\nhead_photo\x18\x06 \x01(\r\x12\x0f\n\x07zone_id\x18\x07 \x01(\x05\x12\x15\n\rendless_score\x18\x08 \x01(\r\x12\x1b\n\x13greatest_pve_dun_id\x18\t \x01(\r\x12\x16\n\x0e\x66ight_capacity\x18\n \x01(\r\"\xa1\x01\n\x1aSSPKG_LOGIN_FRIEND_SVR_RES\x12\x0e\n\x06result\x18\x01 \x01(\x05\x12\x1e\n\x16recv_power_times_today\x18\x02 \x01(\r\x12-\n\x0b\x66riend_info\x18\x03 \x01(\x0b\x32\x18.SSDT_PLAYER_FRIEND_INFO\x12$\n\tself_info\x18\x04 \x01(\x0b\x32\x11.SSDT_FRIEND_INFO\"j\n\x15SSPKG_FRIEND_INFO_CHG\x12\x0b\n\x03uid\x18\x01 \x01(\r\x12\x0c\n\x04type\x18\x02 \x01(\x05\x12\r\n\x05value\x18\x03 \x01(\r\x12\'\n\thero_info\x18\x04 \x03(\x0b\x32\x14.ST_HERO_BATTLE_INFO\"\x8b\x01\n\x12SSDT_RELATION_INFO\x12\x0f\n\x07role_id\x18\x01 \x01(\r\x12)\n!recv_power_from_this_friend_state\x18\x02 \x01(\r\x12%\n\x1dhas_send_power_to_this_friend\x18\x03 \x01(\x08\x12\x12\n\nagree_time\x18\x04 \x01(\r\"~\n\x19SSDT_SOCIAL_RELATION_INFO\x12\x0f\n\x07uid_3rd\x18\x01 \x01(\t\x12)\n!recv_power_from_this_friend_state\x18\x02 \x01(\r\x12%\n\x1dhas_send_power_to_this_friend\x18\x03 \x01(\x08\":\n\x17SSDT_INVITED_REWARD_GOT\x12\x11\n\tused_size\x18\x01 \x01(\r\x12\x0c\n\x04\x64\x61ta\x18\x02 \x03(\r\"R\n\x18SSDT_INVITED_FRIEND_INFO\x12\x0f\n\x07role_id\x18\x01 \x02(\r\x12\x10\n\x08world_id\x18\x02 \x02(\r\x12\x13\n\x0bmax_pve_dun\x18\x03 \x01(\r\"\xa4\x01\n\x17SSDT_INVITED_TOTAL_INFO\x12-\n\x0breward_info\x18\x01 \x01(\x0b\x32\x18.SSDT_INVITED_REWARD_GOT\x12\x15\n\rapply_invited\x18\x02 \x01(\x08\x12\x13\n\x0binvited_num\x18\x03 \x01(\r\x12.\n\x0b\x66riend_info\x18\x04 \x03(\x0b\x32\x19.SSDT_INVITED_FRIEND_INFO\"\x86\x01\n\x18SSDT_ASSISTANT_HERO_INFO\x12\x16\n\x0ehire_cnt_total\x18\x01 \x01(\r\x12\x18\n\x10hire_cnt_not_get\x18\x02 \x01(\r\x12\x1b\n\x13\x61ssistant_hero_gold\x18\x03 \x01(\r\x12\x1b\n\x13\x61ssistant_calc_time\x18\x04 \x01(\r\")\n\x16SSDT_SEND_POWER_RECORD\x12\x0f\n\x07role_id\x18\x01 \x01(\r\"\xe7\x02\n\x0e\x44\x42_FRIEND_BLOB\x12+\n\napply_info\x18\x01 \x03(\x0b\x32\x17.SSDT_FRIEND_APPLY_INFO\x12\'\n\thero_info\x18\x0c \x03(\x0b\x32\x14.ST_HERO_BATTLE_INFO\x12*\n\rrelation_info\x18\x03 \x03(\x0b\x32\x13.SSDT_RELATION_INFO\x12\x38\n\x14social_relation_info\x18\x05 \x03(\x0b\x32\x1a.SSDT_SOCIAL_RELATION_INFO\x12\x32\n\x11send_power_record\x18\x04 \x03(\x0b\x32\x17.SSDT_SEND_POWER_RECORD\x12-\n\x0binvite_info\x18\x06 \x01(\x0b\x32\x18.SSDT_INVITED_TOTAL_INFO\x12\x36\n\x13\x61ssistant_hero_info\x18\x08 \x01(\x0b\x32\x19.SSDT_ASSISTANT_HERO_INFO\"~\n!SSPKG_FRIEND_NOTIFY_APPLYLIST_CHG\x12+\n\napply_info\x18\x01 \x01(\x0b\x32\x17.SSDT_FRIEND_APPLY_INFO\x12\x0f\n\x07zone_id\x18\x02 \x01(\x05\x12\x0e\n\x06is_add\x18\x03 \x01(\x08\x12\x0b\n\x03uid\x18\x04 \x01(\r\"{\n#SSPKG_FRIEND_NOTIFY_FRIEND_LIST_CHG\x12\x0f\n\x07zone_id\x18\x01 \x01(\x05\x12\x0e\n\x06is_add\x18\x02 \x01(\x08\x12&\n\x0b\x66riend_info\x18\x03 \x01(\x0b\x32\x11.SSDT_FRIEND_INFO\x12\x0b\n\x03uid\x18\x04 \x01(\r\"q\n%SSPKG_FRIEND_NOTIFY_FRIEND_SEND_POWER\x12\x0b\n\x03uid\x18\x01 \x01(\r\x12\x0f\n\x07zone_id\x18\x02 \x01(\x05\x12\x11\n\tsend_time\x18\x03 \x01(\r\x12\x17\n\x0fsend_friend_uid\x18\x04 \x01(\r\"\x89\x01\n%SSPKG_FRIEND_NOTIFY_FRIEND_RECV_POWER\x12\x0b\n\x03uid\x18\x01 \x01(\r\x12\x0f\n\x07zone_id\x18\x02 \x01(\x05\x12\x1e\n\x16recv_power_times_today\x18\x03 \x01(\r\x12\"\n\x1arecv_power_from_friend_uid\x18\x04 \x01(\r\"K\n+SSPKG_FRIEND_NOTIFY_POWER_REFRESH_CROSS_DAY\x12\x0b\n\x03uid\x18\x01 \x01(\r\x12\x0f\n\x07zone_id\x18\x02 \x01(\r\"M\n\x1fSSPKG_FRIEND_RECV_POWER_ALL_REQ\x12\x0b\n\x03uid\x18\x01 \x01(\r\x12\x1d\n\x15recv_power_friend_uid\x18\x02 \x03(\r\"\x8d\x01\n\x1fSSPKG_FRIEND_RECV_POWER_ALL_RES\x12%\n\x1drecv_power_success_friend_uid\x18\x01 \x03(\r\x12#\n\x1brecv_power_faild_friend_uid\x18\x02 \x03(\r\x12\x1e\n\x16recv_power_times_today\x18\x03 \x01(\r\"M\n\x1fSSPKG_FRIEND_SEND_POWER_ALL_REQ\x12\x0b\n\x03uid\x18\x01 \x01(\r\x12\x1d\n\x15send_power_friend_uid\x18\x02 \x03(\r\"m\n\x1fSSPKG_FRIEND_SEND_POWER_ALL_RES\x12%\n\x1dsend_power_success_friend_uid\x18\x01 \x03(\r\x12#\n\x1bsend_power_faild_friend_uid\x18\x02 \x03(\r\"\xb7\x01\n\x18PKG_FRIEND_DISP_INFO_CHG\x12\x0b\n\x03uid\x18\x01 \x01(\r\x12\x18\n\x10last_logout_time\x18\x02 \x01(\r\x12\x11\n\tvip_level\x18\x03 \x01(\r\x12\x12\n\nhead_photo\x18\x04 \x01(\r\x12\x19\n\x11\x66ighting_capacity\x18\x05 \x01(\r\x12\x15\n\rendless_score\x18\x06 \x01(\r\x12\x1b\n\x13greatest_pve_dun_id\x18\x07 \x01(\r\"M\n\x17\x46RIEND_BROADCAST_DETAIL\x12\x32\n\x0f\x66riend_info_chg\x18\x01 \x01(\x0b\x32\x19.PKG_FRIEND_DISP_INFO_CHG\"p\n\x14PKG_FRIEND_BROADCAST\x12\x1e\n\x08mem_list\x18\x01 \x03(\x0b\x32\x0c.MemZoneInfo\x12\x0e\n\x06msg_id\x18\x02 \x01(\r\x12(\n\x06\x64\x65tail\x18\x03 \x01(\x0b\x32\x18.FRIEND_BROADCAST_DETAIL\"E\n\x1eSSPKG_GET_RECOMMAND_FRIEND_REQ\x12\x0b\n\x03uid\x18\x01 \x01(\r\x12\x16\n\x0euid_to_be_find\x18\x02 \x01(\r\"}\n\x1eSSPKG_GET_RECOMMAND_FRIEND_RES\x12\x0e\n\x06result\x18\x01 \x01(\x05\x12\x33\n\x0erecommand_info\x18\x02 \x03(\x0b\x32\x1b.SSDT_FRIEND_RECOMMAND_INFO\x12\x16\n\x0euid_to_be_find\x18\x03 \x01(\r\"/\n\x1aSSPKG_KICK_PLAYER_ALL_ZONE\x12\x11\n\tunique_id\x18\x01 \x02(\t\"t\n\x14\x44\x42\x42LOB_ACTIVITY_INFO\x12\x30\n\x10\x61\x63tivity_control\x18\x01 \x03(\x0b\x32\x16.SCDT_ACTIVITY_CONTROL\x12*\n\ractivity_info\x18\x02 \x01(\x0b\x32\x13.SCDT_ACTIVITY_INFO\"A\n\x18SSDT_DAILY_RECHARGE_INFO\x12\x0f\n\x07\x64\x61y_num\x18\x01 \x01(\r\x12\x14\n\x0crecharge_cnt\x18\x02 \x01(\r\"V\n\x1c\x44\x42\x42LOB_DAILY_RECHARGE_REWARD\x12\x36\n\x13\x64\x61ily_recharge_info\x18\x01 \x03(\x0b\x32\x19.SSDT_DAILY_RECHARGE_INFO\"Q\n\"SSDT_NEWBIE_ACTIVITY_RECHARGE_INFO\x12\x15\n\rrecharge_time\x18\x01 \x01(\r\x12\x14\n\x0crecharge_cnt\x18\x02 \x01(\r\"]\n\x1f\x44\x42\x42LOB_NEWBIE_ACTIVITY_RECHARGE\x12:\n\rrecharge_info\x18\x01 \x03(\x0b\x32#.SSDT_NEWBIE_ACTIVITY_RECHARGE_INFO\"9\n\x14SSPKG_NTF_VIP_CHANGE\x12\x0b\n\x03uid\x18\x01 \x02(\r\x12\x14\n\x0crecharge_cnt\x18\x02 \x02(\r\"y\n\x1e\x44\x42\x42LOB_FRIEND_ASSIST_HERO_INFO\x12\x12\n\nfriend_uid\x18\x01 \x01(\r\x12\x0c\n\x04gold\x18\x02 \x01(\r\x12\x35\n\x17\x66riend_hero_battle_info\x18\x03 \x01(\x0b\x32\x14.ST_HERO_BATTLE_INFO\"\xc6\x02\n\x1b\x44\x42\x42LOB_PLAYER_BOSSRUSH_INFO\x12\x17\n\x0flast_clear_time\x18\x01 \x02(\r\x12 \n\x18\x63ur_boss_rush_chaptor_id\x18\x02 \x02(\r\x12\x16\n\x0e\x63ur_monster_id\x18\x03 \x02(\r\x12\x14\n\x0c\x63ur_sequence\x18\x04 \x02(\r\x12\x14\n\x0cmain_hero_id\x18\x05 \x02(\r\x12\x14\n\x0cpartner_hero\x18\x06 \x03(\r\x12.\n\thp_remain\x18\x07 \x01(\x0b\x32\x1b.ST_BOSSRUSH_HERO_HP_REMAIN\x12@\n\x17\x66riend_assist_hero_info\x18\t \x03(\x0b\x32\x1f.DBBLOB_FRIEND_ASSIST_HERO_INFO\x12 \n\x18last_clear_chaptor_index\x18\n \x02(\r\">\n!SSPKG_CLAIM_ASSISTANT_HERO_REWARD\x12\x0b\n\x03uid\x18\x01 \x02(\r\x12\x0c\n\x04gold\x18\x02 \x02(\r\"p\n\x18SSPKG_BOSSRUSH_HIRE_HERO\x12\x0b\n\x03uid\x18\x01 \x02(\r\x12\x12\n\nuid_friend\x18\x02 \x02(\r\x12\x16\n\x0ehero_id_friend\x18\x03 \x02(\r\x12\x1b\n\x13hero_fight_capacity\x18\x04 \x02(\r\"o\n\x18SSDT_WORLD_ACTIVITY_INFO\x12\x13\n\x0b\x61\x63tivity_id\x18\x01 \x01(\r\x12\x0c\n\x04stat\x18\x02 \x01(\r\x12\x19\n\x11last_trigger_time\x18\x03 \x01(\r\x12\x15\n\rtrigger_times\x18\x04 \x01(\r\"`\n\x14SSDT_WORLD_DROP_INFO\x12\n\n\x02id\x18\x01 \x01(\r\x12\x15\n\rlast_beg_time\x18\x02 \x01(\t\x12%\n\x11\x61lready_drop_info\x18\x03 \x03(\x0b\x32\n.ResReward\"\x84\x01\n\x1aSSDT_GAME_SERVER_MISC_INFO\x12\x36\n\x13world_activity_info\x18\x01 \x03(\x0b\x32\x19.SSDT_WORLD_ACTIVITY_INFO\x12.\n\x0fworld_drop_info\x18\x02 \x03(\x0b\x32\x15.SSDT_WORLD_DROP_INFO\"Z\n!SSPKG_UPDATE_GAME_SERVER_MISC_REQ\x12\x35\n\x10game_server_misc\x18\x01 \x01(\x0b\x32\x1b.SSDT_GAME_SERVER_MISC_INFO\"-\n\x1aSSPKG_GET_GAMESVR_MISC_REQ\x12\x0f\n\x07reverse\x18\x01 \x01(\x08\"j\n\x1aSSPKG_GET_GAMESVR_MISC_RES\x12\x19\n\x11gamesvr_open_time\x18\x01 \x01(\r\x12\x31\n\x0cgamesvr_misc\x18\x02 \x01(\x0b\x32\x1b.SSDT_GAME_SERVER_MISC_INFO\"5\n\x1eSSPKG_RANK_BATTLE_ACTIVITY_REQ\x12\x13\n\x0b\x61\x63tivity_id\x18\x01 \x01(\r\"A\n\x1cSSPKG_REPORT_PLAYER_CHAT_REQ\x12\x0f\n\x07role_id\x18\x01 \x01(\r\x12\x10\n\x08world_id\x18\x02 \x01(\r\"S\n\x1cSSPKG_REPORT_PLAYER_CHAT_RES\x12\x0b\n\x03uid\x18\x01 \x01(\r\x12\x10\n\x08world_id\x18\x02 \x01(\x05\x12\x14\n\x0c\x62\x61n_end_time\x18\x03 \x01(\r*\xf2\x37\n\x0cSSPROTOCONST\x12\r\n\tSS_ID_REQ\x10\x01\x12\r\n\tSS_ID_RES\x10\x02\x12\x15\n\x0fMAX_PACKAGE_LEN\x10\x80\x80\x10\x12\x11\n\rMAX_ROLE_NAME\x10 \x12\x10\n\x0cMAX_ROLE_NUM\x10\x10\x12\x11\n\rMAX_ARMY_NAME\x10@\x12\x15\n\x10MAX_CHAT_MSG_LEN\x10\x80\x01\x12\x1c\n\x18MAX_PRIVATE_CHAT_MSG_NUM\x10\x05\x12\x15\n\x11SS_MAX_UIN3RD_LEN\x10 \x12\x14\n\x10SS_ROLE_NAME_LEN\x10 \x12\x14\n\x10SS_ERROR_BAN_UIN\x10m\x12\x19\n\x15SS_MAX_ROOMCNT_ONEDUN\x10\x05\x12\x1d\n\x19SS_MAX_MONSTERCNT_ONEROOM\x10\n\x12\x1b\n\x17MAX_PVPMATCH_PLAYER_NUM\x10\x01\x12\x10\n\x0c\x44\x41TE_STR_LEN\x10 \x12\x16\n\x12SS_MAX_UNQUEID_LEN\x10@\x12\x15\n\x11SS_MAX_FRIEND_NUM\x10\x1e\x12\'\n#SS_MAX_FRIEND_SEND_POWER_RECORD_NUM\x10\x32\x12\x17\n\x13SS_ENDLESS_MAX_HERO\x10\x04\x12\x17\n\x13\x44\x42_MAX_ENDLESS_HERO\x10\x04\x12$\n\x1fSS_PURCHASE_PRODUCT_RECEIPT_MAX\x10\x80P\x12\x1f\n\x1b\x44\x42\x42LOB_PURCHASE_STATUS_INIT\x10\x00\x12$\n DBBLOB_PURCHASE_STATUS_VERIFYING\x10\x01\x12$\n DBBLOB_PURCHASE_STATUS_PROCESSED\x10\x02\x12\"\n\x1eSS_PURCHASE_TRANSACTION_ID_MAX\x10@\x12\'\n#PURCHACE_VERIFY_REUSLT_CODE_SUCCESS\x10\x00\x12+\n\'PURCHACE_VERIFY_REUSLT_CODE_PARSE_ERROR\x10\x01\x12-\n)PURCHACE_VERIFY_REUSLT_CODE_REQUEST_ERROR\x10\x02\x12\x30\n,PURCHACE_VERIFY_REUSLT_CODE_PRODUCT_ID_ERROR\x10\x03\x12\x33\n/PURCHACE_VERIFY_REUSLT_CODE_TRANSACTIONID_ERROR\x10\x04\x12\x31\n-PURCHACE_VERIFY_REUSLT_CODE_ALREADY_PROCESSED\x10\x05\x12\x1b\n\x17PURCHACE_DB_STATUS_INIT\x10\x00\x12\x1f\n\x1bPURCHACE_DB_STATUS_VERIFIED\x10\x01\x12 \n\x1cPURCHACE_DB_STATUS_PROCESSED\x10\x02\x12(\n$PURCHACE_DB_STATUS_PROCESSED_SANDBOX\x10\x03\x12 \n\x1c\x44\x42_MAX_BUILDING_RESSTORE_CNT\x10\x04\x12\x1e\n\x1a\x44\x42_MAX_BUILDING_ISLAND_CNT\x10\x06\x12\x1a\n\x16\x44\x42_MAX_ISLAND_TYPE_CNT\x10\x04\x12\x1b\n\x17SS_MAX_NOTIFY_VALID_NUM\x10\n\x12\x1c\n\x17\x44\x42_MAX_NOTIFY_TITLE_LEN\x10\x80\x04\x12\x1b\n\x16\x44\x42_MAX_NOTIFY_LINK_LEN\x10\x80\x04\x12\x1f\n\x19\x44\x42_MAX_NOTIFY_CONTENT_LEN\x10\xd0\x8c\x01\x12\x1d\n\x19\x44\x42_MAX_MAIL_SYS_ACC_COUNT\x10\x06\x12\x1b\n\x17SS_GIFT_CODE_LENGTH_MAX\x10\x10\x12$\n SS_MAX_GANG_BATTLE_HERO_JOIN_NUM\x10\x03\x12\"\n\x1eSS_MAX_GANG_BATTLE_HISTORY_NUM\x10\x07\x12\x1b\n\x17SS_GANG_BATTLE_UNATTACK\x10\x00\x12\x16\n\x12SS_GANG_BATTLE_WIN\x10\x01\x12\x17\n\x13SS_GANG_BATTLE_LOSE\x10\x02\x12\x1f\n\x1bGANG_BATTLE_BALANCE_SUCCESS\x10\x00\x12)\n%GANG_BATTLE_BALANCE_NOT_IN_FIGHTSTATE\x10\x01\x12%\n!GANG_BATTLE_BALANCE_INVALID_FIGHT\x10\x02\x12\"\n\x1eGANG_UPDATE_BASIC_INFO_SUCCESS\x10\x00\x12!\n\x1dGANG_UPDATE_BASIC_INFO_FAILED\x10\x01\x12\x18\n\x14GANG_APPLY_AUTO_JOIN\x10\x00\x12\x19\n\x15GANG_APPLY_NEED_APPLY\x10\x01\x12\x11\n\rMAX_GANG_NAME\x10 \x12\x14\n\x0fMAX_GANG_NOTIFY\x10\x80\x01\x12\x1c\n\x18MAX_GANG_APPLYLIST_COUNT\x10\x0f\x12\x16\n\x12MAX_GANGLIST_COUNT\x10\x32\x12\x18\n\x14GANG_POSITION_LEADER\x10\x01\x12\x17\n\x13GANG_POSITION_ELDER\x10\x02\x12\x18\n\x14GANG_POSITION_NORMAL\x10\x03\x12\x16\n\x12GANG_MEM_MAX_COUNT\x10#\x12\x19\n\x15SS_GANG_APPROVE_AGREE\x10\x01\x12\x1a\n\x16SS_GANG_APPROVE_REJECT\x10\x00\x12\x1c\n\x18SS_GANG_KICK_MEM_SUCCESS\x10\x00\x12\x1b\n\x17SS_GANG_KICK_MEM_FAILED\x10\x01\x12\x1d\n\x19SS_GANG_SET_ELDER_SUCCESS\x10\x00\x12\x1c\n\x18SS_GANG_SET_ELDER_FAILED\x10\x01\x12\x1a\n\x16SS_GANG_SET_ELDER_FULL\x10\x02\x12\"\n\x1eSS_GANG_MEM_CHG_RANKBATTLE_POS\x10\x01\x12$\n SS_GANG_MEM_CHG_GANGBATTLE_SCORE\x10\x02\x12\x1f\n\x1bSS_GANG_MEM_CHG_UPDATE_HERO\x10\x03\x12 \n\x1cSS_GANG_MEM_CHG_BLESS_RESULT\x10\x04\x12\"\n\x1eSS_GANG_MEM_CHG_HEAD_PHOTO_CHG\x10\x05\x12\x17\n\x13SUCCESS_GANG_CREATE\x10\x01\x12\x16\n\x12\x46\x41ILED_GANG_CREATE\x10\x02\x12\x19\n\x15\x45RROR_GANG_NAME_EXIST\x10\x03\x12\x1e\n\x1a\x45RROR_GANG_NAME_EQUAL_ROLE\x10\x04\x12\x17\n\x13\x45RROR_GANG_HAS_GANG\x10\x05\x12\x1b\n\x17\x45RROR_GANG_NAME_DISABLE\x10\x06\x12 \n\x1c\x45RROR_GANG_CREATE_SERVERFULL\x10\x07\x12\x18\n\x14SUCCESS_GANG_APPROVE\x10\x01\x12\x17\n\x13\x46\x41ILED_GANG_APPROVE\x10\x02\x12\x1b\n\x17\x45RROR_APPROVE_NOTLEADER\x10\x03\x12\x19\n\x15\x45RROR_APPROVE_HASGANG\x10\x04\x12\x1b\n\x17\x45RROR_APPROVE_NOTINLIST\x10\x05\x12\x19\n\x15\x45RROR_APPROVE_MEMFULL\x10\x06\x12\x18\n\x14\x45RROR_APPROVE_REJECT\x10\x07\x12\x16\n\x12SUCCESS_GANG_APPLY\x10\x01\x12\x15\n\x11\x46\x41ILED_GANG_APPLY\x10\x02\x12\x1c\n\x18\x45RROR_GANG_APPLY_MEMFULL\x10\x03\x12\x1c\n\x18\x45RROR_GANG_APPLY_HASGANG\x10\x04\x12\x1e\n\x1a\x45RROR_GANG_APPLY_NOTINLIST\x10\x05\x12\x1d\n\x19\x45RROR_GANG_APPLY_MAXCOUNT\x10\x08\x12\x15\n\x11QUIT_GANG_SUCCESS\x10\x01\x12\x14\n\x10QUIT_GANG_FAILED\x10\x02\x12\x0e\n\nSS_SUCCESS\x10\x00\x12\t\n\x05\x45RROR\x10\x01\x12\r\n\tSYS_ERROR\x10\x01\x12\x0c\n\x08\x44\x42_ERROR\x10\x02\x12\x1f\n\x1bSS_VIEW_PLAYER_INFO_SUCCESS\x10\x00\x12\x1e\n\x1aSS_VIEW_PLAYER_INFO_FAILED\x10\x01\x12 \n\x1cSS_VIEW_PLAYER_INFO_NOTEXIST\x10\x02\x12!\n\x1cSS_ERROR_RELATION_BUDDY_FULL\x10\x97\n\x12 \n\x1bSS_ERROR_RELATION_NOT_EXIST\x10\x99\n\x12\x15\n\x10SS_QUESTDATA_LEN\x10\xd8\x36\x12\x1c\n\x18SS_MAX_DAILY_QUEST_COUNT\x10\x64\x12\x15\n\x10SS_SKILLDATA_LEN\x10\xf0.\x12\x18\n\x12SS_PACKAGEDATA_LEN\x10\xa0\x9c\x01\x12\x10\n\x0bSS_HERO_LEN\x10\x80@\x12\x17\n\x12SS_ENDLESSHERO_LEN\x10\x80\x02\x12\x16\n\x11SS_GANGBATTLE_LEN\x10\x80\x02\x12\x1a\n\x15SS_GANG_APPLYLIST_LEN\x10\x80\x08\x12\x16\n\x10SS_GANG_CITY_LEN\x10\x90\xbf\x05\x12\x19\n\x14SS_GANG_MEM_BLOB_LEN\x10\x80\x08\x12\x1c\n\x17SS_FRIEND_ROLE_INFO_LEN\x10\x80@\x12 \n\x1bSS_GANG_BATTLE_MEM_INFO_LEN\x10\x80\x10\x12(\n#SS_GANG_BATTLE_HISTORY_MEM_INFO_LEN\x10\x80\x10\x12\x13\n\x0eSS_MONSTER_LEN\x10\x80@\x12\x13\n\rSS_PVEDUN_LEN\x10\x80\x80\x01\x12\x14\n\x0fSS_TOWERDUN_LEN\x10\x80\x10\x12\x13\n\x0eSS_SELFDUN_LEN\x10\x80\x10\x12\x15\n\x0fSS_MISCDATA_LEN\x10\xff\xff\x03\x12\x18\n\x13SS_ACTIVITYDATA_LEN\x10\x80 \x12\x14\n\x0fSS_MAIL_ACC_LEN\x10\x80\x10\x12\x16\n\x11SS_PVP_ISLAND_LEN\x10\x80\x08\x12\x17\n\x12SS_PVP_DEFENSE_LEN\x10\xc0>\x12\x19\n\x14SS_FIRSTPURCHASE_LEN\x10\x80\x10\x12!\n\x1cSS_DAILY_RECHARGE_REWARD_LEN\x10\x80\x10\x12$\n\x1fSS_DATASET_GAME_SERVER_MISC_LEN\x10\x80 \x12\x19\n\x13SS_DATASET_HERO_LEN\x10\xa0\x9c\x01\x12\x1d\n\x17SS_DATASET_BUILDING_LEN\x10\xb0\xea\x01\x12\x1c\n\x16SS_DATASET_DUNDATA_LEN\x10\xa0\x9c\x01\x12\x13\n\rSS_NOTIFY_LEN\x10\xa0\x9c\x01\x12\x16\n\x11SS_WORLD_INFO_LEN\x10\x80\x10\x12\x15\n\x0fSS_DATASET1_LEN\x10\xb0\xea\x01\x12\x14\n\x0fSS_DATASET2_LEN\x10\xe0]\x12\x18\n\x14SS_MAX_NOTIFYMSG_NUM\x10\x32\x12\x16\n\x11SS_MAX_WORLDS_NUM\x10\xc8\x01\x12\x1d\n\x19SS_MAX_GANG_MAIL_USER_NUM\x10\x64\x12\x1d\n\x19SS_MAX_GANG_MAIL_ITEM_NUM\x10\x08\x12\x17\n\x13SS_MAX_MAILNAME_LEN\x10@\x12\x1b\n\x16SS_MAX_MAILCONTENT_LEN\x10\x80\x10\x12\x12\n\rDISP_MAX_DEST\x10\x80\x01\x12\x16\n\x10\x44ISP_MAX_PKG_LEN\x10\xe8\x87\x04\x12\x12\n\x0e\x44ISP_DEST_ADDR\x10\x00\x12\x12\n\x0e\x44ISP_DEST_NAME\x10\x01\x12\x18\n\x14\x44ISP_FLAG_FAILNOTIFY\x10\x01\x12\x17\n\x13\x44ISP_FLAG_FROM_DISP\x10\x02\x12\x12\n\x0e\x44ISP_DEST_SOLO\x10\x00\x12\x12\n\x0e\x44ISP_DEST_LINE\x10\x01\x12\x13\n\x0f\x44ISP_DEST_WORLD\x10\x02\x12\x19\n\x14SS_MAX_SZCONTENT_LEN\x10\x80\x04\x12\x16\n\x11SS_MAX_SZLINK_LEN\x10\x80\x02\x12\x1a\n\x15SS_MAIL_TOTAL_MAX_NUM\x10\x96\x01\x12\x1b\n\x17SS_MAIL_REVENGE_MAX_NUM\x10\x64\x12\x1a\n\x16SS_MAIL_SYSTEM_MAX_NUM\x10\x64\x12\x17\n\x13SS_MAIL_TYPE_SYSTEM\x10\x00\x12\x18\n\x14SS_MAIL_TYPE_REVENGE\x10\x01\x12\x1a\n\x16SS_MAIL_TITLE_MAX_CHAR\x10 \x12\x1d\n\x18SS_MAIL_CONTENT_MAX_CHAR\x10\x80\x10\x12 \n\x1cSS_MAIL_STATUS_SYSTEM_UNREAD\x10\x00\x12\x1e\n\x1aSS_MAIL_STATUS_SYSTEM_READ\x10\x01\x12\x1d\n\x19SS_MAIL_STATUS_SYSTEM_GOT\x10\x02\x12!\n\x1dSS_MAIL_STATUS_REVENGE_UNREAD\x10\x03\x12\x1f\n\x1bSS_MAIL_STATUS_REVENGE_READ\x10\x04\x12\x1e\n\x1aSS_MAIL_STATUS_REVENGE_GOT\x10\x05\x12\x14\n\x10SS_MAIL_ACC_NONE\x10\x00\x12\x1b\n\x17SS_MAIL_ACC_REVENGE_WIN\x10\x01\x12\x1c\n\x18SS_MAIL_ACC_REVENGE_LOSE\x10\x02\x12!\n\x1dSS_MAIL_GETACC_ERROR_OVERTIME\x10\x01\x12\x1f\n\x1bSS_MAIL_GETACC_ERROR_NOTACC\x10\x02\x12)\n%SS_MAIL_GETACC_ERROR_DB_UNPACK_FAILED\x10\x03\x12 \n\x1cSS_MAIL_GETACC_ERROR_HAS_GOT\x10\x04\x12#\n\x1fSS_MAIL_GETACC_ERROR_TYPE_ERROR\x10\x05\x12\x0f\n\x0bSYS_IPLIMIT\x10\x03\x12\x16\n\x12SS_MAX_TIME_STRING\x10 \x12\x1d\n\x19MSG_GANG_MEM_LIST_CHG_RES\x10\x01\x12\x1f\n\x1bMSG_GANG_BASIC_INFO_CHG_RES\x10\x02\x12\x15\n\x11MSG_GANG_CHAT_RES\x10\x03\x12+\n\'MSG_GANG_CITY_STRONG_POINT_HERO_CHG_RES\x10\x04\x12+\n\'MSG_GANG_AUTO_APPLY_GANG_BATTLE_CHG_RES\x10\x05\x12#\n\x1fMSG_GANG_BATTLE_STATE_BROAD_RES\x10\x06\x12)\n%MSG_GANG_BATTLE_POINT_STATE_BROAD_RES\x10\x07\x12!\n\x1dMSG_GANG_BLESS_RANK_CLEAR_RES\x10\x08\x12\x1c\n\x18SS_RANK_BASE_TYPE_PLAYER\x10\x01\x12\x1a\n\x16SS_RANK_BASE_TYPE_GANG\x10\x02\x12\x1d\n\x19SS_MAX_RANKLIST_PAGECOUNT\x10\x64\x12\x1a\n\x16SS_MAX_RANK_REWARD_NUM\x10\x05\x12\x1d\n\x19SS_RANKLIST_TYPE_REALTIME\x10\x00\x12\x18\n\x14SS_RANKLIST_TYPE_DAY\x10\x01\x12\x1b\n\x17SS_RANKLIST_TYPE_HISDAY\x10\x02\x12\x1c\n\x18SS_RANKLIST_TYPE_HISWEEK\x10\x03\x12\x1d\n\x19SS_RANKLIST_TYPE_HISMONTH\x10\x04\x12\x1c\n\x18SS_RANKPOS_SEARCH_UNIQID\x10\x01\x12\x19\n\x15SS_RANKPOS_SEARCH_POS\x10\x02\x12\x1e\n\x1aSS_RANKPOS_SEARCH_UNIQNAME\x10\x03\x12\x1c\n\x18SS_MAX_SECTIONRANK_COUNT\x10\x32\x12\x13\n\x0f\x44\x42_MAX_ATTR_NUM\x10\n\x12\x1a\n\x16\x44\x42_MAX_RANDOM_ATTR_NUM\x10\n\x12\x1c\n\x17\x44\x42_MAX_PLAYER_STORE_NUM\x10\x8e\x02\x12\x1d\n\x19\x44\x42_ITEM_FUNC_TYPE_RECOVER\x10\x01\x12\x13\n\x0f\x44\x42_TAB_LIST_NUM\x10\x05\x12 \n\x1c\x44\x42_MAX_PRACTICEDUN_FLAGS_NUM\x10\x32\x12 \n\x1c\x44\x42_MAX_ACHIEVEMENT_FLAGS_NUM\x10\x32\x12\x1e\n\x1a\x44\x42_MAX_DAILYTASK_FLAGS_NUM\x10\x32\x12\x1d\n\x19\x44\x42_MAX_HERO_NUM_ONEPLAYER\x10\x1e\x12\x17\n\x13MAX_ONLINE_GIFT_NUM\x10\n\x12\x17\n\x13\x44\x42_MAX_PLAYER_SKILL\x10\x38\x12\x14\n\x10\x44\x42_EQUIP_POS_MAX\x10\x10\x12\x15\n\x11\x44\x42_AVATAR_POS_MAX\x10\x08\x12\x1e\n\x1a\x44\x42_MAX_SKILL_NUM_ONEPLAYER\x10\x64\x12\x1a\n\x16\x44\x42_MAX_ROOM_NUM_ONEDUN\x10\x05\x12\"\n\x1e\x44\x42_MAX_MONSTERTYPE_NUM_ONEROOM\x10\n\x12\x1b\n\x17\x44\x42_MAX_ENDLESS_HERO_NUM\x10\x04\x12 \n\x1c\x44\x42_MAX_MONSTER_NUM_ONEPLAYER\x10\x14\x12\x1f\n\x1b\x44\x42_MAX_SKILL_NUM_ONEMONSTER\x10\x0f\x12\x17\n\x13\x44\x42_MAX_SLOT_SELFDUN\x10\x06\x12\x19\n\x15\x44\x42_MAX_PVPPLAYER_ONCE\x10\x01\x12\x1c\n\x18SS_MAX_SELFDUN_MAX_ROUND\x10\x03\x12\x1e\n\x1aSS_MAX_HERO_NUM_ONE_BATTLE\x10\x03\x12$\n\x1fMAX_RANK_BATTLE_REWARD_MAIL_NUM\x10\xc8\x01\x12$\n SS_RANK_BATTLE_ENTER_DUN_SUCCESS\x10\x00\x12\"\n\x1eSS_RANK_BATTLE_ENTER_DUN_ERROR\x10\x01\x12(\n$SS_RANK_BATTLE_ENTER_DUN_TARGET_LOCK\x10\x02\x12&\n\"SS_RANK_BATTLE_ENTER_DUN_SELF_LOCK\x10\x03\x12\x1e\n\x1aSS_RANK_BATTLE_RESULT_NULL\x10\x00\x12\x1d\n\x19SS_RANK_BATTLE_RESULT_WIN\x10\x01\x12\x1e\n\x1aSS_RANK_BATTLE_RESULT_LOSE\x10\x02\x12$\n\x1fSS_RANK_BATTLE_DEFENSE_DATA_LEN\x10\x80\x10\x12&\n SS_MAX_RANK_BATTLE_CONTAINER_CNT\x10\xa0\x8d\x06\x12\x1e\n\x19\x44\x42_MAX_DUNGEON_DATA_COUNT\x10\xac\x02\x12\x14\n\x10\x44\x42_MAX_TITLE_NUM\x10\x64\x12\x15\n\x11\x44\x42_MAX_RANK_COUNT\x10\x14\x12\x19\n\x15\x44\x42_MAX_RANK_VAL_COUNT\x10\x05\x12 \n\x1cSS_MAX_PLAYER_SHOP_GOODS_CNT\x10\x10\x12 \n\x1bSS_MAX_SHOP_PLAYER_INFO_LEN\x10\x80 \x12\x1b\n\x17SS_REFRESH_SHOP_SUCCESS\x10\x01\x12\x1a\n\x16SS_REFRESH_SHOP_FAILED\x10\x02\x12,\n(SS_REFRESH_SHOP_SUCCESS_NOT_BUY_ANYTHING\x10\x03\x12%\n!SS_REFRESH_SHOP_SUCCESS_IN_UPDATE\x10\x04\x12\x17\n\x13MAX_CLT_VERSION_LEN\x10\x10\x1a\x02\x10\x01*\x94\x01\n\x11SS_PURCHASE_ERROR\x12&\n\x19SS_PURCHASE_ERROR_UNKNOWN\x10\xff\xff\xff\xff\xff\xff\xff\xff\xff\x01\x12/\n\"SS_PURCHASE_ERROR_PRICE_NOT_ENOUGH\x10\xfe\xff\xff\xff\xff\xff\xff\xff\xff\x01\x12&\n\x19SS_PURCHASE_ERROR_PRODUCT\x10\xfd\xff\xff\xff\xff\xff\xff\xff\xff\x01')
+  serialized_pb=_b('\n\x0csproto.proto\x1a\x0frescommon.proto\x1a\tres.proto\x1a\x11\x61\x63hievement.proto\x1a\x0e\x61\x63tivity.proto\x1a\x0e\x62ossrush.proto\x1a\x0e\x62uilding.proto\x1a\x0e\x62usiness.proto\x1a\nchat.proto\x1a\x10\x63ityreward.proto\x1a\x13\x63ontinuelogin.proto\x1a\x0c\x63proto.proto\x1a\x0f\x64irserver.proto\x1a\rdungeon.proto\x1a\rendless.proto\x1a\x0b\x65quip.proto\x1a\x0c\x66riend.proto\x1a\ngang.proto\x1a\nhero.proto\x1a\x0blogin.proto\x1a\nmail.proto\x1a\rmonster.proto\x1a\x12onlinebattle.proto\x1a\x13playerprofile.proto\x1a\x14playerresource.proto\x1a\x0fprizedraw.proto\x1a\x11protocommon.proto\x1a\x0epvpsteal.proto\x1a\x0bquest.proto\x1a\nrank.proto\x1a\x10rankbattle.proto\x1a\x0ftopbattle.proto\x1a\nshop.proto\x1a\x10viewplayer.proto\x1a\x0fworldboss.proto\x1a\x11multiplayer.proto\x1a\x15specialactivity.proto\x1a\x0c\x66\x61\x63tor.proto\"V\n\x0fSSDT_NOTIFY_MSG\x12\x0e\n\x06msg_id\x18\x01 \x01(\r\x12\x11\n\tsend_time\x18\x02 \x01(\r\x12\x10\n\x08msg_type\x18\x03 \x01(\r\x12\x0e\n\x06sender\x18\x04 \x01(\t\"\xa1\x06\n\x10SSDT_ROLE_ONLINE\x12\x0f\n\x07grow_up\x18\x01 \x01(\r\x12\r\n\x05level\x18\x02 \x01(\r\x12\r\n\x05money\x18\x03 \x01(\r\x12\x11\n\tcur_power\x18\x04 \x01(\r\x12\x1e\n\x16power_recover_beg_time\x18\x05 \x01(\r\x12 \n\x18power_recover_total_time\x18\x06 \x01(\r\x12\x1f\n\x17power_last_refresh_time\x18\x07 \x01(\r\x12\x17\n\x0f\x62uy_power_times\x18\x08 \x01(\r\x12\x16\n\x0e\x63ur_achi_point\x18\t \x01(\r\x12\x13\n\x0b\x63ur_crystal\x18\n \x01(\r\x12\x10\n\x08\x63ur_gold\x18\x0b \x01(\r\x12\x0e\n\x06\x63ur_sp\x18\x0c \x01(\r\x12\x1b\n\x13\x63ur_spborn_beg_time\x18\r \x01(\r\x12\x1d\n\x15\x63ur_spborn_total_time\x18\x0e \x01(\r\x12\x14\n\x0c\x62uy_sp_times\x18\x0f \x01(\r\x12\x1a\n\x12max_end_less_score\x18\x10 \x01(\r\x12\x1a\n\x12max_end_less_floor\x18\x11 \x01(\r\x12\x1b\n\x13\x63ur_notify_beg_time\x18\x12 \x01(\r\x12\x10\n\x08\x62it_mark\x18\x13 \x01(\r\x12\x14\n\x0c\x63lt_bit_mark\x18\x14 \x01(\x04\x12\x13\n\x0bgrow_up_cnt\x18\x15 \x01(\r\x12\x1b\n\x13last_quit_gang_time\x18\x16 \x01(\r\x12\x17\n\x0flast_login_time\x18\x17 \x01(\r\x12\x17\n\x0flast_leave_time\x18\x18 \x01(\r\x12\x18\n\x10last_logout_time\x18\x19 \x01(\r\x12\x1d\n\x15last_gang_battle_time\x18\x1a \x01(\r\x12\x19\n\x11total_online_time\x18\x1b \x01(\r\x12\x13\n\x0b\x63reate_time\x18\x1c \x01(\r\x12\x1d\n\x15\x63ur_rank_battle_score\x18\x1d \x01(\r\x12\x19\n\x11\x62uy_crystal_times\x18\x1e \x01(\r\x12\x16\n\x0e\x62uy_gold_times\x18\x1f \x01(\r\x12\x12\n\nhead_photo\x18  \x01(\r\"\x1f\n\x0fSSDT_ROLE_QUEST\x12\x0c\n\x04\x64\x61ta\x18\x01 \x01(\t\"!\n\x11SSDT_ROLE_PACKAGE\x12\x0c\n\x04\x64\x61ta\x18\x01 \x01(\t\"\x1f\n\x0fSSDT_ROLE_SKILL\x12\x0c\n\x04\x64\x61ta\x18\x01 \x01(\t\"&\n\x16SSDT_ROLE_DUNGEON_DATA\x12\x0c\n\x04\x64\x61ta\x18\x01 \x01(\t\"#\n\x13SSDT_ROLE_MISC_DATA\x12\x0c\n\x04\x64\x61ta\x18\x01 \x01(\t\"&\n\x16SSDT_ROLE_DATASET_HERO\x12\x0c\n\x04\x64\x61ta\x18\x01 \x01(\t\"*\n\x1aSSDT_ROLE_DATASET_BUILDING\x12\x0c\n\x04\x64\x61ta\x18\x01 \x01(\t\")\n\x19SSDT_ROLE_DATASET_DUNDATA\x12\x0c\n\x04\x64\x61ta\x18\x01 \x01(\t\" \n\x10SSDT_NOTIFY_DATA\x12\x0c\n\x04\x64\x61ta\x18\x01 \x01(\t\"0\n\x10\x44\x42\x42LOB_ATTR_INFO\x12\x0c\n\x04type\x18\x01 \x01(\r\x12\x0e\n\x06parm_1\x18\x02 \x01(\x05\"5\n\x1e\x44\x42\x42LOB_ITEM_EXTRA_INFO_RECOVER\x12\x13\n\x0brecover_val\x18\x01 \x01(\r\"L\n\x19\x44\x42\x42LOB_FIRSTPURCHASE_INFO\x12\x15\n\rproduct_index\x18\x01 \x01(\r\x12\x18\n\x10is_firstpurchase\x18\x02 \x01(\r\"@\n\x15\x44\x42\x42LOB_MONTHCARD_INFO\x12\x15\n\rmonth_card_id\x18\x01 \x01(\r\x12\x10\n\x08\x62uy_time\x18\x02 \x01(\r\"\\\n\x1a\x44\x42\x42LOB_SUPERVALUECARD_INFO\x12\x1a\n\x12supervalue_card_id\x18\x01 \x01(\r\x12\x10\n\x08\x62uy_time\x18\x02 \x01(\r\x12\x10\n\x08\x65nd_time\x18\x03 \x01(\r\"N\n\x19\x44\x42\x42LOB_FIRSTPURCHASE_LIST\x12\x31\n\rpurchase_info\x18\x01 \x03(\x0b\x32\x1a.DBBLOB_FIRSTPURCHASE_INFO\"\x9f\x01\n\x11\x44\x42\x42LOB_EQUIP_INFO\x12\x13\n\x0bpackage_pos\x18\x01 \x02(\r\x12\x10\n\x08\x65quip_id\x18\x02 \x02(\r\x12\r\n\x05\x63ount\x18\x03 \x02(\r\x12\x0f\n\x07\x63ur_exp\x18\x04 \x02(\r\x12\r\n\x05level\x18\x05 \x02(\r\x12\x0e\n\x06wakeup\x18\x06 \x02(\r\x12\x0e\n\x06growup\x18\x07 \x02(\r\x12\x14\n\x0c\x62ind_to_hero\x18\x08 \x02(\r\"q\n\x10\x44\x42\x42LOB_EQUIP_TAB\x12\x0c\n\x04size\x18\x01 \x01(\r\x12\"\n\x06\x65quips\x18\x02 \x03(\x0b\x32\x12.DBBLOB_EQUIP_INFO\x12\x12\n\ngot_record\x18\x03 \x03(\r\x12\x17\n\x0fgot_record_used\x18\x04 \x01(\r\"x\n\x12\x44\x42\x42LOB_PACKAGE_OBJ\x12\x13\n\x0bpackage_pos\x18\x01 \x01(\r\x12\x0c\n\x04type\x18\x02 \x01(\r\x12\x0c\n\x04stat\x18\x03 \x01(\r\x12\x0f\n\x07\x62\x61se_id\x18\x04 \x01(\r\x12\r\n\x05\x63ount\x18\x05 \x01(\r\x12\x11\n\tfunc_type\x18\x06 \x01(\r\"I\n\x12\x44\x42\x42LOB_PACKAGE_TAB\x12\x0c\n\x04size\x18\x01 \x01(\r\x12%\n\x08obj_info\x18\x02 \x03(\x0b\x32\x13.DBBLOB_PACKAGE_OBJ\"T\n\x17\x44\x42\x42LOBHERO_EQUIPED_INFO\x12\x0f\n\x07hero_id\x18\x01 \x02(\r\x12(\n\x0c\x65quiped_info\x18\x02 \x03(\x0b\x32\x12.CSDT_EQUIPED_INFO\"I\n\x1c\x44\x42\x42LOB_DATA_HERO_FACTOR_DATA\x12\x0f\n\x07hero_id\x18\x01 \x02(\r\x12\x18\n\x10\x66\x61\x63tor_slot_info\x18\x02 \x03(\r\"}\n\x12\x44\x42\x42LOB_FACTOR_INFO\x12\x38\n\x11\x65mbed_factor_info\x18\x01 \x03(\x0b\x32\x1d.DBBLOB_DATA_HERO_FACTOR_DATA\x12-\n\x0b\x66\x61\x63tor_data\x18\x02 \x03(\x0b\x32\x18.SCDT_NOTIFY_FACTOR_DATA\"\xc1\x01\n\x13\x44\x42\x42LOB_PACKAGE_INFO\x12%\n\x08tab_info\x18\x01 \x03(\x0b\x32\x13.DBBLOB_PACKAGE_TAB\x12$\n\tequip_tab\x18\x02 \x01(\x0b\x32\x11.DBBLOB_EQUIP_TAB\x12\x33\n\x11hero_equiped_info\x18\x03 \x03(\x0b\x32\x18.DBBLOBHERO_EQUIPED_INFO\x12(\n\x0b\x66\x61\x63tor_info\x18\x04 \x01(\x0b\x32\x13.DBBLOB_FACTOR_INFO\"C\n\x11\x44\x42\x42LOB_TIME_VALUE\x12\x13\n\x0btime_second\x18\x01 \x01(\r\x12\x19\n\x11time_milli_second\x18\x02 \x01(\r\"C\n\x1f\x44\x42\x42LOB_PLAYER_PRACTICEDUN_QUEST\x12 \n\x18practice_dun_quest_flags\x18\x01 \x03(\r\"K\n\x19\x44\x42\x42LOB_PLAYER_ACHIEVEMENT\x12\x1b\n\x13\x61\x63hievemented_flags\x18\x01 \x03(\r\x12\x11\n\tget_flags\x18\x02 \x03(\r\"9\n\x1a\x44\x42\x42LOB_PLAYER_FIRSTPURCHAE\x12\x1b\n\x13\x66irstpurchase_flags\x18\x01 \x03(\r\"\x89\x01\n\x1c\x44\x42\x42LOB_PLAYER_DAILYTASK_ITEM\x12\x15\n\rdaily_task_id\x18\x01 \x01(\r\x12\x17\n\x0f\x64\x61ily_task_done\x18\x02 \x01(\x08\x12\x16\n\x0e\x64\x61ily_task_get\x18\x03 \x01(\x08\x12!\n\x19\x64\x61ily_task_complete_count\x18\x04 \x01(\r\"q\n\x17\x44\x42\x42LOB_PLAYER_DAILYTASK\x12\x37\n\x10\x64\x61ily_task_items\x18\x01 \x03(\x0b\x32\x1d.DBBLOB_PLAYER_DAILYTASK_ITEM\x12\x1d\n\x15\x64\x61ily_task_reset_time\x18\x02 \x01(\r\"^\n\x1c\x44\x42\x42LOB_PLAYER_MAIN_TASK_ITEM\x12\x10\n\x08group_id\x18\x01 \x01(\r\x12\n\n\x02id\x18\x02 \x01(\r\x12\x0e\n\x06seq_id\x18\x03 \x01(\r\x12\x10\n\x08progress\x18\x04 \x01(\r\"q\n\x17\x44\x42\x42LOB_PLAYER_MAIN_TASK\x12+\n\x04item\x18\x01 \x03(\x0b\x32\x1d.DBBLOB_PLAYER_MAIN_TASK_ITEM\x12\x16\n\x0e\x63omplete_flags\x18\x02 \x03(\r\x12\x11\n\tget_flags\x18\x03 \x03(\r\"\xda\x01\n\x12\x44\x42\x42LOB_PLAYER_SHOP\x12\x15\n\rrefresh_count\x18\x02 \x01(\r\x12%\n\x1drefresh_rankbattle_shop_count\x18\x04 \x01(\r\x12 \n\x18normal_shop_free_use_cnt\x18\x05 \x01(\r\x12%\n\x1drank_battle_shop_free_use_cnt\x18\x06 \x01(\r\x12\x1e\n\x16refresh_vip_shop_count\x18\x07 \x01(\r\x12\x1d\n\x15vip_shop_free_use_cnt\x18\x08 \x01(\r\"\xcd\x04\n\x18\x44\x42\x42LOB_PLAYER_PRIZE_DRAW\x12*\n\"coin_one_prize_draw_free_use_count\x18\x01 \x01(\r\x12.\n&coin_one_prize_draw_free_last_use_time\x18\x02 \x01(\r\x12\x38\n0coin_one_prize_draw_free_count_last_refresh_time\x18\x03 \x01(\r\x12+\n#money_one_prize_draw_free_use_count\x18\x04 \x01(\r\x12/\n\'money_one_prize_draw_free_last_use_time\x18\x05 \x01(\r\x12\x18\n\x10gang_bless_count\x18\n \x01(\r\x12\x1c\n\x14\x62uy_gang_bless_count\x18\x0b \x01(\r\x12&\n\x1elast_buy_gang_bless_count_time\x18\x0c \x01(\r\x12$\n\x1cleft_extern_gang_bless_count\x18\r \x01(\r\x12!\n\x19\x63oin_one_prize_draw_count\x18\x0e \x01(\r\x12!\n\x19\x63oin_ten_prize_draw_count\x18\x0f \x01(\r\x12\"\n\x1amoney_one_prize_draw_count\x18\x10 \x01(\r\x12\"\n\x1amoney_ten_prize_draw_count\x18\x11 \x01(\r\x12)\n!super_money_five_prize_draw_count\x18\x12 \x01(\r\"\xcd\x02\n\x13\x44\x42\x42LOB_PLAYER_QUEST\x12\x38\n\x0epractice_quest\x18\x01 \x01(\x0b\x32 .DBBLOB_PLAYER_PRACTICEDUN_QUEST\x12/\n\x0b\x61\x63hievement\x18\x02 \x01(\x0b\x32\x1a.DBBLOB_PLAYER_ACHIEVEMENT\x12,\n\ndaily_task\x18\x03 \x01(\x0b\x32\x18.DBBLOB_PLAYER_DAILYTASK\x12+\n\tmain_task\x18\x04 \x01(\x0b\x32\x18.DBBLOB_PLAYER_MAIN_TASK\x12\x37\n\x0fnewbie_activity\x18\x05 \x01(\x0b\x32\x1e.DBBLOB_NEWBIE_ACTIVITY_STATUS\x12\x37\n\x10special_activity\x18\x06 \x01(\x0b\x32\x1d.DBBLOB_SPECIAL_ACTIVITY_INFO\"/\n\x17\x44\x42\x42LOB_GIFT_ACCEPT_INFO\x12\x14\n\x0c\x61\x63\x63\x65pt_count\x18\x01 \x03(\r\"=\n\x1b\x44\x42\x42LOB_GIFT_CLAIM_ITEM_INFO\x12\n\n\x02id\x18\x01 \x01(\r\x12\x12\n\nclaim_time\x18\x02 \x01(\r\"E\n\x16\x44\x42\x42LOB_GIFT_CLAIM_INFO\x12+\n\x05items\x18\x01 \x03(\x0b\x32\x1c.DBBLOB_GIFT_CLAIM_ITEM_INFO\"\xf8\x01\n#DBBLOB_OFFLINE_BATTLE_DEFEATED_INFO\x12\x15\n\ropponent_name\x18\x01 \x01(\t\x12$\n\x1copponent_title_when_defeated\x18\x02 \x01(\r\x12/\n\'opponent_gold_medal_count_when_defeated\x18\x03 \x01(\r\x12\x31\n)opponent_silver_medal_count_when_defeated\x18\x04 \x01(\r\x12\x1e\n\x16got_opponent_medal_bit\x18\x05 \x01(\r\x12\x10\n\x08mode_bit\x18\x06 \x01(\r\"\x86\x02\n\x1a\x44\x42\x42LOB_OFFLINE_BATTLE_INFO\x12J\n\x1coffline_battle_defeated_info\x18\x01 \x03(\x0b\x32$.DBBLOB_OFFLINE_BATTLE_DEFEATED_INFO\x12&\n\x1emy_gold_medal_holder_role_name\x18\x02 \x01(\t\x12(\n my_silver_medal_holder_role_name\x18\x03 \x01(\t\x12\x1c\n\x14title_index_selected\x18\x04 \x01(\r\x12\x13\n\x0btotal_count\x18\x05 \x01(\r\x12\x17\n\x0ftotal_win_count\x18\x06 \x01(\r\"\xd8\x01\n\x19\x44\x42\x42LOB_ONLINE_BATTLE_INFO\x12\x13\n\x0binitialized\x18\x01 \x01(\x08\x12\x0f\n\x07tickets\x18\x02 \x01(\r\x12\r\n\x05score\x18\x03 \x01(\r\x12\x13\n\x0btotal_count\x18\x04 \x01(\r\x12\x17\n\x0ftotal_win_count\x18\x05 \x01(\r\x12\x11\n\twin_point\x18\x06 \x01(\r\x12\x15\n\rbrought_times\x18\x07 \x01(\r\x12\x13\n\x0btickets_max\x18\x08 \x01(\r\x12\x19\n\x11next_refresh_time\x18\t \x01(\r\"M\n\x16\x44\x42\x42LOB_DAILYQUEST_INFO\x12\x10\n\x08quest_id\x18\x01 \x01(\r\x12\x12\n\nstart_time\x18\x02 \x01(\r\x12\r\n\x05\x63ount\x18\x03 \x01(\r\"K\n\x1d\x44\x42\x42LOB_DUNGEON_CHALLENGE_INFO\x12\x12\n\ndungeon_id\x18\x01 \x01(\r\x12\x16\n\x0e\x63hallenge_data\x18\x02 \x01(\r\"\\\n\x1a\x44\x42\x42LOB_DUNGEON_UNLOCK_INFO\x12\x12\n\ndungeon_id\x18\x01 \x01(\r\x12\x15\n\rdiffic_degree\x18\x02 \x01(\r\x12\x13\n\x0bunlock_type\x18\x03 \x01(\r\"L\n\x19\x44\x42\x42LOB_DUNGEON_COUNT_INFO\x12\x12\n\ndungeon_id\x18\x01 \x01(\r\x12\x0c\n\x04time\x18\x02 \x01(\r\x12\r\n\x05\x63ount\x18\x03 \x01(\r\"\x93\x02\n\x18\x44\x42\x42LOB_DUNGEON_DATA_INFO\x12\x11\n\tpvp_point\x18\x01 \x01(\r\x12\x11\n\tpvp_score\x18\x02 \x01(\r\x12\x0e\n\x06\x64un_id\x18\x03 \x01(\r\x12\x0f\n\x07\x63\x61mp_id\x18\x04 \x01(\r\x12>\n\x16\x64ungeon_challenge_data\x18\x05 \x03(\x0b\x32\x1e.DBBLOB_DUNGEON_CHALLENGE_INFO\x12\x38\n\x13\x64ungeon_unlock_data\x18\x06 \x03(\x0b\x32\x1b.DBBLOB_DUNGEON_UNLOCK_INFO\x12\x36\n\x12\x64ungeon_count_info\x18\x07 \x03(\x0b\x32\x1a.DBBLOB_DUNGEON_COUNT_INFO\"}\n\x15\x44\x42\x42LOB_HERO_STAT_DATA\x12\x0c\n\x04stat\x18\x01 \x01(\r\x12\x0e\n\x06\x64un_id\x18\x02 \x01(\r\x12\x16\n\x0e\x65nter_dun_time\x18\x03 \x01(\r\x12\x15\n\rlv_cdbeg_time\x18\x04 \x01(\r\x12\x17\n\x0flv_cdtotal_time\x18\x05 \x01(\r\"?\n\x16\x44\x42\x42LOB_SKILL_INFO_DATA\x12\x13\n\x0bskill_index\x18\x01 \x01(\r\x12\x10\n\x08skill_id\x18\x02 \x01(\r\"R\n\x16\x44\x42\x42LOB_EMBLEMINFO_DATA\x12\x11\n\temblem_id\x18\x01 \x01(\r\x12\x11\n\temblem_lv\x18\x02 \x01(\r\x12\x12\n\nemblem_exp\x18\x03 \x01(\r\"\x9d\x03\n\x15\x44\x42\x42LOB_HERO_INFO_DATA\x12\x0f\n\x07hero_id\x18\x01 \x01(\r\x12\x0f\n\x07grow_up\x18\x02 \x01(\r\x12\r\n\x05level\x18\x03 \x01(\r\x12\x0b\n\x03\x65xp\x18\x04 \x01(\r\x12\x0e\n\x06\x63ur_hp\x18\x05 \x01(\r\x12\x0e\n\x06\x63ur_sp\x18\x06 \x01(\r\x12\x0e\n\x06max_hp\x18\x07 \x01(\r\x12\x0e\n\x06\x64\x61mage\x18\x08 \x01(\r\x12+\n\nskill_info\x18\t \x03(\x0b\x32\x17.DBBLOB_SKILL_INFO_DATA\x12,\n\x0b\x65mblem_info\x18\n \x03(\x0b\x32\x17.DBBLOB_EMBLEMINFO_DATA\x12\x19\n\x11new_role_buff_cnt\x18\x0b \x01(\r\x12\'\n\x1fgreatest_dungeon_id_when_unlock\x18\x0c \x01(\r\x12\x16\n\x0e\x66ight_capacity\x18\r \x01(\r\x12\x13\n\x0btalent_info\x18\x0e \x01(\x04\x12:\n\x10talent_hide_info\x18\x0f \x03(\x0b\x32 .ST_HERO_BATTLE_TALENT_HIDE_INFO\"E\n\x1d\x44\x42\x42LOB_HERO_TRAININGSLOT_INFO\x12\r\n\x05state\x18\x01 \x01(\r\x12\x15\n\rlv_up_hero_id\x18\x02 \x01(\r\":\n\x15\x44\x42\x42LOB_CHIP_INFO_DATA\x12\x0f\n\x07\x63hip_id\x18\x01 \x01(\r\x12\x10\n\x08\x63hip_cnt\x18\x02 \x01(\r\"D\n\x17\x44\x42\x42LOB_PLAYER_HERO_DATA\x12)\n\thero_info\x18\x01 \x03(\x0b\x32\x16.DBBLOB_HERO_INFO_DATA\"_\n\"DBBLOB_PLAYER_HERO_GANGBATTLE_DATA\x12\x1b\n\x13gang_battle_win_cnt\x18\x01 \x01(\r\x12\x1c\n\x14gang_battle_lost_cnt\x18\x02 \x01(\r\"\x88\x01\n\x1f\x44\x42\x42LOB_PLAYER_TOP_BATTLE_ROCKET\x12\x0b\n\x03uid\x18\x01 \x01(\r\x12\x11\n\trocket_id\x18\x02 \x01(\r\x12\x16\n\x0egot_reward_cnt\x18\x03 \x01(\r\x12\x19\n\x11last_refresh_time\x18\x04 \x01(\r\x12\x12\n\nnotify_cnt\x18\x05 \x01(\r\"\xca\x02\n\x1e\x44\x42\x42LOB_PLAYER_RANK_BATTLE_DATA\x12\x1d\n\x15last_rank_battle_time\x18\x01 \x01(\r\x12\x1e\n\x16left_rank_battle_count\x18\x02 \x01(\r\x12\x1d\n\x15\x62uy_rank_battle_count\x18\x03 \x01(\r\x12$\n\x1clast_refresh_left_count_time\x18\x04 \x01(\r\x12\x1d\n\x15left_top_battle_count\x18\x05 \x01(\r\x12\x1c\n\x14\x62uy_top_battle_count\x18\x06 \x01(\r\x12*\n\"last_refresh_top_battle_count_time\x18\x07 \x01(\r\x12;\n\x11top_battle_rocket\x18\x08 \x03(\x0b\x32 .DBBLOB_PLAYER_TOP_BATTLE_ROCKET\"C\n\x18RANK_BATTLE_DEFENSE_DATA\x12\'\n\thero_info\x18\x01 \x03(\x0b\x32\x14.ST_HERO_BATTLE_INFO\"X\n\x18\x44\x42\x42LOB_MONSTER_STAT_DATA\x12\x0c\n\x04stat\x18\x01 \x01(\r\x12\x15\n\rlv_cdbeg_time\x18\x02 \x01(\r\x12\x17\n\x0flv_cdtotal_time\x18\x03 \x01(\r\"s\n\x18\x44\x42\x42LOB_MONSTER_INFO_DATA\x12\x16\n\x0emonster_grp_id\x18\x01 \x01(\r\x12\x11\n\tgrp_level\x18\x02 \x01(\r\x12,\n\tstat_info\x18\x03 \x01(\x0b\x32\x19.DBBLOB_MONSTER_STAT_DATA\"Q\n\x1a\x44\x42\x42LOB_PLAYER_MONSTER_DATA\x12\x33\n\x10monster_grp_info\x18\x01 \x03(\x0b\x32\x19.DBBLOB_MONSTER_INFO_DATA\"\xdf\x01\n\x16\x44\x42\x42LOB_DUN_UNLOCK_DATA\x12\x12\n\ndungeon_id\x18\x01 \x01(\r\x12\x11\n\tdun_level\x18\x02 \x01(\r\x12\x0c\n\x04stat\x18\x03 \x01(\r\x12\x16\n\x0e\x63hallenge_time\x18\x04 \x01(\r\x12\x15\n\rchallenge_cnt\x18\x05 \x01(\r\x12\x11\n\tstory_bit\x18\x06 \x01(\r\x12\x17\n\x0f\x62\x65st_evaluation\x18\x07 \x01(\r\x12\x1d\n\x15\x65lite_challenge_count\x18\x08 \x01(\r\x12\x16\n\x0e\x65lite_drop_exp\x18\t \x01(\r\"\x87\x01\n\x19\x44\x42\x42LOB_PVE_CHALLENGE_DATA\x12\x0f\n\x07npc_cnt\x18\x01 \x01(\r\x12\x12\n\nplayer_cnt\x18\x02 \x01(\r\x12,\n\x0bunlock_data\x18\x03 \x03(\x0b\x32\x17.DBBLOB_DUN_UNLOCK_DATA\x12\x17\n\x0f\x65lite_buy_count\x18\x05 \x01(\r\"\xf7\x01\n\x11\x44\x42\x42LOB_TOWER_HERO\x12\x0f\n\x07hero_id\x18\x01 \x01(\r\x12\x14\n\x0chero_grow_up\x18\x02 \x01(\r\x12\x0f\n\x07hero_lv\x18\x03 \x01(\r\x12\x11\n\tremain_hp\x18\x04 \x01(\r\x12\x11\n\tmax_score\x18\x05 \x01(\r\x12\x11\n\tmax_floor\x18\x06 \x01(\r\x12\x16\n\x0emax_score_ever\x18\x07 \x01(\r\x12\x16\n\x0emax_floor_ever\x18\x08 \x01(\r\x12\x15\n\rentered_today\x18\t \x01(\x08\x12\x15\n\rwipeout_today\x18\n \x01(\x08\x12\x13\n\x0bmatch_index\x18\x0b \x01(\r\"=\n\x16\x44\x42\x42LOB_TOWER_HERO_INFO\x12#\n\x07hero_hp\x18\x01 \x03(\x0b\x32\x12.DBBLOB_TOWER_HERO\"\\\n\x1b\x44\x42\x42LOB_TOWER_CHALLENGE_DATA\x12\x11\n\treset_cnt\x18\x01 \x01(\r\x12*\n\thero_info\x18\x02 \x01(\x0b\x32\x17.DBBLOB_TOWER_HERO_INFO\"v\n\x1b\x44\x42\x42LOB_WORLD_BOSS_HERO_DATA\x12\x0f\n\x07hero_id\x18\x01 \x01(\r\x12\x1e\n\x16hero_hp_remain_percent\x18\x02 \x01(\r\x12\x16\n\x0eremain_seconds\x18\x03 \x01(\r\x12\x0e\n\x06\x64\x61mage\x18\x04 \x01(\r\"\x89\x02\n DBBLOB_WORLD_BOSS_CHALLENGE_DATA\x12\x19\n\x11last_refresh_time\x18\x01 \x01(\r\x12\x18\n\x10world_boss_index\x18\x02 \x01(\r\x12\x12\n\nhero_index\x18\x03 \x01(\r\x12\x19\n\x11hero_selected_cnt\x18\x04 \x01(\r\x12/\n\thero_data\x18\x05 \x03(\x0b\x32\x1c.DBBLOB_WORLD_BOSS_HERO_DATA\x12\x1e\n\x16history_damage_highest\x18\x06 \x01(\r\x12\x1a\n\x12history_damage_sum\x18\x07 \x01(\r\x12\x14\n\x0c\x64\x61ily_damage\x18\x08 \x03(\r\"\xf4\x01\n\x1bSSPKG_CMD_UPDATE_WORLD_BOSS\x12\x0b\n\x03uid\x18\x01 \x01(\r\x12\x13\n\x0bplayer_name\x18\x02 \x01(\t\x12\x0f\n\x07hero_id\x18\x03 \x01(\r\x12\x12\n\nboss_index\x18\x04 \x01(\r\x12\x17\n\x0fhero_hp_percent\x18\x05 \x01(\r\x12\x18\n\x10hero_time_remain\x18\x06 \x01(\r\x12\x17\n\x0f\x62oss_got_damage\x18\x07 \x01(\r\x12\x1e\n\x16hero_hp_remain_percent\x18\x08 \x01(\r\x12\x0f\n\x07zone_id\x18\t \x01(\r\x12\x11\n\tvip_level\x18\n \x01(\r\"\xd4\x01\n\x19SSPKG_CMD_WORLD_BOSS_DEAD\x12\x10\n\x08week_day\x18\x01 \x01(\r\x12\x0f\n\x07\x62oss_id\x18\x02 \x01(\r\x12\x12\n\nboss_index\x18\x03 \x01(\r\x12\x12\n\nkiller_uid\x18\x04 \x01(\r\x12\x13\n\x0bkiller_name\x18\x05 \x01(\t\x12\x1d\n\x15process_killer_reward\x18\x06 \x01(\x08\x12\x1e\n\x16player_damage_info_cnt\x18\x07 \x01(\r\x12\x18\n\x10lucky_reward_uid\x18\x08 \x01(\r\"t\n,SSPKG_CMD_WORLD_BOSS_DEAD_PLAYER_DAMAGE_INFO\x12\x44\n\x12player_damage_info\x18\x01 \x03(\x0b\x32(.SSPKG_CMD_WORLD_BOSS_PLAYER_DAMAGE_INFO\"H\n%SSPKG_CMD_WORLD_BOSS_HERO_DAMAGE_INFO\x12\x0f\n\x07hero_id\x18\x01 \x01(\r\x12\x0e\n\x06\x64\x61mage\x18\x02 \x01(\r\"\x9f\x01\n\'SSPKG_CMD_WORLD_BOSS_PLAYER_DAMAGE_INFO\x12\x0b\n\x03uid\x18\x01 \x01(\r\x12\x0c\n\x04rank\x18\x02 \x01(\r\x12\x17\n\x0f\x63ur_boss_damage\x18\x03 \x01(\r\x12@\n\x10hero_damage_info\x18\x04 \x03(\x0b\x32&.SSPKG_CMD_WORLD_BOSS_HERO_DAMAGE_INFO\"\x9a\x01\n\"SSPKG_CMD_WORLD_BOSS_DAMAGE_PLAYER\x12\x0b\n\x03uid\x18\x01 \x01(\r\x12\x0c\n\x04name\x18\x02 \x01(\t\x12\x17\n\x0f\x63ur_boss_damage\x18\x03 \x01(\r\x12@\n\x10hero_damage_info\x18\x04 \x03(\x0b\x32&.SSPKG_CMD_WORLD_BOSS_HERO_DAMAGE_INFO\"Z\n\"DBBLOB_WORLD_BOSS_HERO_DAMAGE_INFO\x12\x0f\n\x07hero_id\x18\x01 \x01(\r\x12\x0e\n\x06\x64\x61mage\x18\x02 \x01(\r\x12\x13\n\x0btime_remain\x18\x03 \x01(\r\"\xba\x01\n$DBBLOB_WORLD_BOSS_PLAYER_DAMAGE_INFO\x12\x0b\n\x03uid\x18\x01 \x01(\r\x12\x0f\n\x07zone_id\x18\x02 \x01(\r\x12\x16\n\x0e\x63ur_boss_index\x18\x03 \x01(\r\x12\x0c\n\x04name\x18\x04 \x01(\t\x12\x38\n\x0bhero_damage\x18\x05 \x03(\x0b\x32#.DBBLOB_WORLD_BOSS_HERO_DAMAGE_INFO\x12\x14\n\x0ctotal_damage\x18\x06 \x01(\r\"k\n SSPKG_CMD_WORLD_BOSS_DAMAGE_INFO\x12\x12\n\nboss_index\x18\x01 \x01(\r\x12\x33\n\x06player\x18\x02 \x03(\x0b\x32#.SSPKG_CMD_WORLD_BOSS_DAMAGE_PLAYER\"O\n$SSPKG_WORLD_BOSS_QUALIFIED_HERO_INFO\x12\x0b\n\x03uid\x18\x01 \x01(\r\x12\x1a\n\x12qualified_hero_cnt\x18\x02 \x01(\r\"0\n\x1aSSPKG_CMD_WORLD_BOSS_RESET\x12\x12\n\nboss_index\x18\x01 \x01(\r\"c\n SSPKG_WORLD_BOSS_KILLER_INFO_RES\x12\x0b\n\x03uid\x18\x01 \x01(\r\x12\x32\n\x0bkiller_info\x18\x02 \x01(\x0b\x32\x1d.SCPKG_WORLD_BOSS_KILLER_INFO\"\xae\x01\n%DBBLOB_MULTIPLAYER_PVE_CHALLENGE_DATA\x12\x10\n\x08week_day\x18\x01 \x01(\r\x12\x1a\n\x12\x63omplete_dun_index\x18\x02 \x03(\r\x12\x1e\n\x16\x66ree_ticket_limit_time\x18\x03 \x01(\r\x12\x1c\n\x14ticket_brought_times\x18\x04 \x01(\r\x12\x19\n\x11next_refresh_time\x18\x05 \x01(\r\"\x93\x01\n\x1b\x44\x42\x42LOB_NEWBIE_ACTIVITY_ITEM\x12\n\n\x02id\x18\x01 \x01(\r\x12\x10\n\x08progress\x18\x02 \x01(\r\x12\x12\n\nis_claimed\x18\x03 \x01(\x08\x12\x14\n\x0c\x63laimed_time\x18\x04 \x01(\r\x12\x14\n\x0cis_completed\x18\x05 \x01(\x08\x12\x16\n\x0e\x63ompleted_time\x18\x06 \x01(\r\"e\n\x1d\x44\x42\x42LOB_NEWBIE_ACTIVITY_STATUS\x12\x12\n\nlimit_date\x18\x01 \x01(\r\x12\x30\n\nitem_array\x18\x02 \x03(\x0b\x32\x1c.DBBLOB_NEWBIE_ACTIVITY_ITEM\"{\n\x1c\x44\x42\x42LOB_SPECIAL_ACTIVITY_ITEM\x12\n\n\x02id\x18\x01 \x01(\r\x12\x10\n\x08progress\x18\x02 \x01(\r\x12\x14\n\x0cis_completed\x18\x03 \x01(\x08\x12\x12\n\nis_claimed\x18\x04 \x01(\x08\x12\x13\n\x0bupdate_time\x18\x05 \x01(\r\"L\n\x1c\x44\x42\x42LOB_SPECIAL_ACTIVITY_INFO\x12,\n\x05items\x18\x01 \x03(\x0b\x32\x1d.DBBLOB_SPECIAL_ACTIVITY_ITEM\":\n\x18\x44\x42\x42LOB_SELFDUN_HERO_INFO\x12\r\n\x05state\x18\x01 \x01(\r\x12\x0f\n\x07hero_id\x18\x02 \x01(\r\"\x82\x02\n\x14\x44\x42\x42LOB_SELF_DUN_DATA\x12\x34\n\x11\x64\x65\x66\x65nse_hero_info\x18\x01 \x03(\x0b\x32\x19.DBBLOB_SELFDUN_HERO_INFO\x12\x33\n\x10\x61ttack_hero_info\x18\x02 \x03(\x0b\x32\x19.DBBLOB_SELFDUN_HERO_INFO\x12?\n\x1ctop_battle_defense_hero_info\x18\x03 \x03(\x0b\x32\x19.DBBLOB_SELFDUN_HERO_INFO\x12>\n\x1btop_battle_attack_hero_info\x18\x04 \x03(\x0b\x32\x19.DBBLOB_SELFDUN_HERO_INFO\"\x83\x01\n\x12\x44\x42\x42LOB_PVPDUN_INFO\x12\x0b\n\x03uid\x18\x01 \x01(\r\x12\x0c\n\x04name\x18\x02 \x01(\t\x12\r\n\x05level\x18\x03 \x01(\r\x12\x0e\n\x06online\x18\x04 \x01(\r\x12\x0f\n\x07gang_id\x18\x05 \x01(\r\x12\x11\n\tgang_name\x18\x06 \x01(\t\x12\x0f\n\x07is_done\x18\x07 \x01(\r\"\xce\x01\n\x19\x44\x42\x42LOB_PLAYER_PVPDUN_DATA\x12\x1a\n\x12pvp_attack_win_cnt\x18\x01 \x01(\r\x12\x15\n\rpvp_total_cnt\x18\x02 \x01(\r\x12\x15\n\rpvp_gain_gold\x18\x03 \x01(\r\x12\x18\n\x10pvp_gain_crystal\x18\x04 \x01(\r\x12\x16\n\x0epvp_gain_money\x18\x05 \x01(\r\x12\x19\n\x11pvp_gain_exp_item\x18\x06 \x01(\r\x12\x1a\n\x12steal_battle_times\x18\x07 \x01(\r\"<\n\x18\x44\x42\x42LOB_ENDLESS_HERO_INFO\x12\x0f\n\x07hero_id\x18\x01 \x01(\r\x12\x0f\n\x07hero_lv\x18\x02 \x01(\r\"K\n\x18\x44\x42\x42LOB_ENDLESS_HERO_DATA\x12/\n\x0c\x65ndless_hero\x18\x01 \x03(\x0b\x32\x19.DBBLOB_ENDLESS_HERO_INFO\"u\n\x13\x44\x42\x42LOB_HERO_DATASET\x12+\n\thero_data\x18\x01 \x01(\x0b\x32\x18.DBBLOB_PLAYER_HERO_DATA\x12\x31\n\x0cmonster_data\x18\x02 \x01(\x0b\x32\x1b.DBBLOB_PLAYER_MONSTER_DATA\"w\n\x19\x44\x42\x42LOB_BUILDING_BASE_INFO\x12\x13\n\x0b\x62uilding_id\x18\x01 \x01(\r\x12\x13\n\x0b\x62uilding_lv\x18\x02 \x01(\r\x12\x16\n\x0elevel_beg_time\x18\x03 \x01(\r\x12\x18\n\x10level_total_time\x18\x04 \x01(\r\"o\n\x15\x44\x42\x42LOB_RES_STORE_INFO\x12\x11\n\tres_limit\x18\x01 \x01(\r\x12\x10\n\x08res_type\x18\x02 \x01(\r\x12\x31\n\rbuilding_info\x18\x03 \x01(\x0b\x32\x1a.DBBLOB_BUILDING_BASE_INFO\"\x87\x01\n\x19\x44\x42\x42LOB_ISLAND_DEFEND_INFO\x12\x0f\n\x07hero_id\x18\x01 \x01(\r\x12\x0f\n\x07hero_lv\x18\x02 \x01(\r\x12\x12\n\nmonster_id\x18\x03 \x01(\r\x12\x12\n\nmonster_lv\x18\x04 \x01(\r\x12\x0f\n\x07trap_id\x18\x05 \x01(\r\x12\x0f\n\x07trap_lv\x18\x06 \x01(\r\"\x9f\x01\n\x16\x44\x42\x42LOB_ISLAND_BORNINFO\x12\x12\n\nborn_speed\x18\x01 \x01(\r\x12\x12\n\nborn_limit\x18\x02 \x01(\r\x12\x16\n\x0elast_born_time\x18\x03 \x01(\r\x12\x14\n\x0c\x63ur_born_res\x18\x04 \x01(\r\x12/\n\x0b\x64\x65\x66\x65nd_info\x18\x05 \x01(\x0b\x32\x1a.DBBLOB_ISLAND_DEFEND_INFO\"\x85\x01\n\x12\x44\x42\x42LOB_ISLAND_INFO\x12\x10\n\x08res_type\x18\x01 \x01(\r\x12\x31\n\rbuilding_info\x18\x02 \x03(\x0b\x32\x1a.DBBLOB_BUILDING_BASE_INFO\x12*\n\tborn_info\x18\x03 \x01(\x0b\x32\x17.DBBLOB_ISLAND_BORNINFO\"|\n\x16\x44\x42\x42LOB_ISLAND_GAININFO\x12\x15\n\rpvp_gain_gold\x18\x01 \x01(\r\x12\x18\n\x10pvp_gain_crystal\x18\x02 \x01(\r\x12\x16\n\x0epvp_gain_money\x18\x03 \x01(\r\x12\x19\n\x11pvp_gain_exp_item\x18\x04 \x01(\r\"\xd3\x01\n\x14\x44\x42\x42LOB_BUILDING_INFO\x12\x33\n\x0fhero_tower_data\x18\x01 \x01(\x0b\x32\x1a.DBBLOB_BUILDING_BASE_INFO\x12.\n\x0eres_store_data\x18\x02 \x03(\x0b\x32\x16.DBBLOB_RES_STORE_INFO\x12(\n\x0bisland_data\x18\x03 \x03(\x0b\x32\x13.DBBLOB_ISLAND_INFO\x12,\n\x0bisland_gain\x18\x04 \x01(\x0b\x32\x17.DBBLOB_ISLAND_GAININFO\"\x9b\x01\n\x14\x44\x42\x42LOB_PVP_HERO_INFO\x12\x10\n\x08res_type\x18\x01 \x01(\r\x12\'\n\thero_info\x18\x02 \x01(\x0b\x32\x14.ST_HERO_BATTLE_INFO\x12\x12\n\nmonster_id\x18\x03 \x01(\r\x12\x12\n\nmonster_lv\x18\x04 \x01(\r\x12\x0f\n\x07trap_id\x18\x05 \x01(\r\x12\x0f\n\x07trap_lv\x18\x06 \x01(\r\"S\n\x1d\x44\x42\x42LOB_PVP_ISLAND_DEFEND_INFO\x12\x32\n\x13island_defense_data\x18\x01 \x03(\x0b\x32\x15.DBBLOB_PVP_HERO_INFO\"\x80\x01\n\x16\x44\x42\x42LOB_PVP_ISLAND_INFO\x12\x10\n\x08res_type\x18\x01 \x01(\r\x12\x14\n\x0c\x63ur_born_res\x18\x02 \x01(\r\x12\x16\n\x0elast_born_time\x18\x03 \x01(\r\x12\x12\n\nborn_speed\x18\x04 \x01(\r\x12\x12\n\nborn_limit\x18\x05 \x01(\r\"E\n\x15\x44\x42\x42LOB_PVP_BUILD_INFO\x12,\n\x0bisland_data\x18\x01 \x03(\x0b\x32\x17.DBBLOB_PVP_ISLAND_INFO\"s\n\x17\x44\x42\x42LOB_BUILDING_DATASET\x12*\n\x0cpackage_data\x18\x01 \x01(\x0b\x32\x14.DBBLOB_PACKAGE_INFO\x12,\n\rbuilding_data\x18\x02 \x01(\x0b\x32\x15.DBBLOB_BUILDING_INFO\";\n\x12\x44\x42\x42LOB_CITY_REWARD\x12\x0e\n\x06\x63ityId\x18\x01 \x01(\r\x12\x15\n\rcomplete_star\x18\x02 \x01(\r\"B\n\x16\x44\x42\x42LOB_CITY_REWARD_SET\x12(\n\x0b\x63ity_reward\x18\x01 \x03(\x0b\x32\x13.DBBLOB_CITY_REWARD\"\xb5\x04\n\x12\x44\x42\x42LOB_DUN_DATASET\x12+\n\x07pve_dun\x18\x01 \x01(\x0b\x32\x1a.DBBLOB_PVE_CHALLENGE_DATA\x12/\n\ttower_dun\x18\x02 \x01(\x0b\x32\x1c.DBBLOB_TOWER_CHALLENGE_DATA\x12\'\n\x08self_dun\x18\x03 \x01(\x0b\x32\x15.DBBLOB_SELF_DUN_DATA\x12+\n\x07pvp_dun\x18\x04 \x01(\x0b\x32\x1a.DBBLOB_PLAYER_PVPDUN_DATA\x12\x38\n\x0bgang_battle\x18\x05 \x01(\x0b\x32#.DBBLOB_PLAYER_HERO_GANGBATTLE_DATA\x12\x34\n\x0brank_battle\x18\x06 \x01(\x0b\x32\x1f.DBBLOB_PLAYER_RANK_BATTLE_DATA\x12\x30\n\x0f\x63ity_reward_set\x18\x07 \x01(\x0b\x32\x17.DBBLOB_CITY_REWARD_SET\x12\x44\n\x19world_boss_challenge_data\x18\x08 \x01(\x0b\x32!.DBBLOB_WORLD_BOSS_CHALLENGE_DATA\x12\x33\n\rbossrush_info\x18\t \x01(\x0b\x32\x1c.DBBLOB_PLAYER_BOSSRUSH_INFO\x12N\n\x1emultiplayer_pve_challenge_data\x18\n \x01(\x0b\x32&.DBBLOB_MULTIPLAYER_PVE_CHALLENGE_DATA\"\x99\x03\n\x17\x44\x42\x42LOB_PLAYER_BEHAVIOUR\x12\x1b\n\x13total_skilllvup_cnt\x18\x01 \x01(\r\x12\x1a\n\x12total_archlvup_cnt\x18\x02 \x01(\r\x12\x18\n\x10total_growup_cnt\x18\x03 \x01(\r\x12\x1b\n\x13total_endless_score\x18\x04 \x01(\r\x12\x1e\n\x16total_buildinglvup_cnt\x18\x05 \x01(\r\x12\x12\n\ntry_to_pay\x18\x06 \x01(\r\x12\"\n\x1atotal_equip_level_up_level\x18\x07 \x01(\r\x12\x1f\n\x17total_equip_grow_up_cnt\x18\x08 \x01(\r\x12\x1f\n\x17total_equip_wake_up_cnt\x18\t \x01(\r\x12\x19\n\x11total_endless_cnt\x18\n \x01(\r\x12\x1c\n\x14total_rankbattle_cnt\x18\x0b \x01(\r\x12\x1a\n\x12win_rankbattle_cnt\x18\x0c \x01(\r\x12\x1f\n\x17total_world_boss_damage\x18\r \x01(\r\"\xac\x01\n\x16\x44\x42\x42LOB_MONTH_CARD_INFO\x12\x15\n\rmonth_card_id\x18\x01 \x01(\r\x12\x10\n\x08\x62uy_time\x18\x02 \x01(\r\x12\x18\n\x10last_reward_time\x18\x03 \x01(\r\x12\x1c\n\x14last_get_reward_time\x18\x04 \x01(\r\x12\x1c\n\x14total_get_reward_cnt\x18\x05 \x01(\r\x12\x13\n\x0bremain_days\x18\x06 \x01(\x05\"\xc3\x01\n\x1b\x44\x42\x42LOB_SUPERVALUE_CARD_INFO\x12\x15\n\rsuper_card_id\x18\x01 \x01(\r\x12\x10\n\x08\x62uy_time\x18\x02 \x01(\r\x12\x18\n\x10last_reward_time\x18\x03 \x01(\r\x12\x1c\n\x14last_get_reward_time\x18\x04 \x01(\r\x12\x1c\n\x14total_get_reward_cnt\x18\x05 \x01(\r\x12\x13\n\x0bremain_days\x18\x06 \x01(\x05\x12\x10\n\x08\x65nd_time\x18\x07 \x01(\r\"\xc4\x01\n\x1a\x44\x42\x42LOB_CONTINUE_LOGIN_INFO\x12\x15\n\rcontinue_days\x18\x01 \x01(\r\x12\x18\n\x10last_record_time\x18\x02 \x01(\r\x12\x11\n\tlogin_bit\x18\x03 \x01(\r\x12\x16\n\x0eget_reward_bit\x18\x04 \x01(\r\x12\x18\n\x10re_signable_days\x18\x05 \x01(\r\x12\x19\n\x11re_sign_last_time\x18\x06 \x01(\r\x12\x15\n\rcur_month_num\x18\x07 \x01(\r\"S\n\x17\x44\x42\x42LOB_GROWTH_FUND_INFO\x12\x10\n\x08\x62uy_time\x18\x01 \x01(\r\x12\x12\n\ntarget_bit\x18\x02 \x01(\r\x12\x12\n\nreward_bit\x18\x03 \x01(\r\"\xcd\x01\n\x1d\x44\x42\x42LOB_CUMULATE_RECHARGE_INFO\x12\x1c\n\x14\x63umulate_recharge_id\x18\x01 \x01(\r\x12\x1d\n\x15\x63umulate_recharge_cnt\x18\x02 \x01(\r\x12\x18\n\x10last_reward_time\x18\x03 \x01(\r\x12\x12\n\ntarget_bit\x18\x04 \x01(\r\x12\x12\n\nreward_bit\x18\x05 \x01(\r\x12\x16\n\x0e\x64\x61ily_free_bit\x18\x06 \x01(\r\x12\x15\n\rdaily_buy_bit\x18\x07 \x01(\r\"d\n\x15\x44\x42\x42LOB_GROUP_BUY_INFO\x12\x15\n\rlast_buy_time\x18\x01 \x01(\r\x12\x1a\n\x12valid_group_buy_id\x18\x02 \x03(\r\x12\x18\n\x10has_buy_group_id\x18\x03 \x03(\r\"c\n\x17\x44\x42\x42LOB_FIRSTREWARD_INFO\x12\x15\n\ris_get_reward\x18\x01 \x01(\r\x12\x15\n\ris_first_open\x18\x02 \x01(\r\x12\x1a\n\x12\x66irst_recharge_cnt\x18\x03 \x01(\r\"\xc7\x04\n\x14\x44\x42\x42LOB_BUSINESS_INFO\x12\x30\n\x0fmonth_card_info\x18\x01 \x01(\x0b\x32\x17.DBBLOB_MONTH_CARD_INFO\x12\x39\n\x14\x63on_login_7days_info\x18\x02 \x01(\x0b\x32\x1b.DBBLOB_CONTINUE_LOGIN_INFO\x12\x35\n\x10month_login_info\x18\x03 \x01(\x0b\x32\x1b.DBBLOB_CONTINUE_LOGIN_INFO\x12=\n\x18open_cumulate_login_info\x18\x04 \x01(\x0b\x32\x1b.DBBLOB_CONTINUE_LOGIN_INFO\x12\x32\n\x10growth_fund_info\x18\x05 \x01(\x0b\x32\x18.DBBLOB_GROWTH_FUND_INFO\x12>\n\x16\x63umulate_recharge_info\x18\x06 \x01(\x0b\x32\x1e.DBBLOB_CUMULATE_RECHARGE_INFO\x12.\n\x0egroup_buy_info\x18\x07 \x01(\x0b\x32\x16.DBBLOB_GROUP_BUY_INFO\x12\x37\n\x13\x66irst_purchase_info\x18\x08 \x01(\x0b\x32\x1a.DBBLOB_FIRSTPURCHASE_LIST\x12\x33\n\x11\x66irst_reward_info\x18\t \x01(\x0b\x32\x18.DBBLOB_FIRSTREWARD_INFO\x12:\n\x14supervalue_card_info\x18\n \x03(\x0b\x32\x1c.DBBLOB_SUPERVALUE_CARD_INFO\"\x91\x01\n\x16SSDT_PRIVATE_CHAT_INFO\x12\x10\n\x08msg_data\x18\x01 \x01(\t\x12\x10\n\x08msg_time\x18\x02 \x01(\r\x12\x11\n\tfrom_name\x18\x03 \x01(\t\x12\x14\n\x0c\x66rom_role_id\x18\x04 \x01(\r\x12\x16\n\x0e\x66rom_vip_level\x18\x05 \x01(\r\x12\x12\n\nto_role_id\x18\x06 \x01(\r\"C\n\x16SSPKG_PRIVATE_CHAT_REQ\x12)\n\x08msg_info\x18\x01 \x01(\x0b\x32\x17.SSDT_PRIVATE_CHAT_INFO\"C\n\x16SSPKG_PRIVATE_CHAT_RES\x12)\n\x08msg_info\x18\x02 \x01(\x0b\x32\x17.SSDT_PRIVATE_CHAT_INFO\"{\n\x1eSSPKG_OFFLINE_PRIVATE_CHAT_MSG\x12\x12\n\nto_role_id\x18\x01 \x01(\r\x12\x1a\n\x12msg_target_role_id\x18\x02 \x01(\r\x12)\n\x08msg_info\x18\x03 \x03(\x0b\x32\x17.SSDT_PRIVATE_CHAT_INFO\"a\n\x1b\x44\x42\x42LOB_OFFLIEN_PRIVATE_CHAT\x12\x42\n\x19offline_private_chat_info\x18\x01 \x03(\x0b\x32\x1f.SSPKG_OFFLINE_PRIVATE_CHAT_MSG\"c\n\x14\x44\x42\x42LOB_RANK_POS_INFO\x12%\n\x1dhistory_high_endless_rank_pos\x18\x01 \x01(\r\x12$\n\x1chistory_high_rank_battle_pos\x18\x02 \x01(\r\"\x82\x05\n\x10\x44\x42\x42LOB_MISC_DATA\x12(\n\nquest_info\x18\x01 \x01(\x0b\x32\x14.DBBLOB_PLAYER_QUEST\x12\x32\n\x10gift_accept_info\x18\x02 \x01(\x0b\x32\x18.DBBLOB_GIFT_ACCEPT_INFO\x12&\n\tshop_info\x18\x03 \x01(\x0b\x32\x13.DBBLOB_PLAYER_SHOP\x12\x30\n\x0e\x62\x65haviour_info\x18\x04 \x01(\x0b\x32\x18.DBBLOB_PLAYER_BEHAVIOUR\x12\x38\n\x13offline_battle_info\x18\x05 \x01(\x0b\x32\x1b.DBBLOB_OFFLINE_BATTLE_INFO\x12\x36\n\x12online_battle_info\x18\x06 \x01(\x0b\x32\x1a.DBBLOB_ONLINE_BATTLE_INFO\x12,\n\rbusiness_info\x18\x07 \x01(\x0b\x32\x15.DBBLOB_BUSINESS_INFO\x12\x32\n\x0fprize_draw_info\x18\x08 \x01(\x0b\x32\x19.DBBLOB_PLAYER_PRIZE_DRAW\x12?\n\x19offline_private_chat_info\x18\t \x01(\x0b\x32\x1c.DBBLOB_OFFLIEN_PRIVATE_CHAT\x12,\n\rrank_pos_info\x18\n \x01(\x0b\x32\x15.DBBLOB_RANK_POS_INFO\x12/\n\x0frank_reset_info\x18\x0b \x01(\x0b\x32\x16.SSPKG_RANK_RESET_INFO\x12\x42\n\x19multiplayer_pve_chat_info\x18\x0c \x01(\x0b\x32\x1f.SSPKG_OFFLINE_PRIVATE_CHAT_MSG\"B\n\x12\x44\x42\x42LOB_NOTIFY_DATA\x12\r\n\x05title\x18\x01 \x01(\t\x12\x0c\n\x04link\x18\x02 \x01(\t\x12\x0f\n\x07\x63ontent\x18\x03 \x01(\t\"\'\n\x13\x44\x42\x42LOB_RANK_VALINFO\x12\x10\n\x08rank_val\x18\x01 \x01(\r\"_\n\x10\x44\x42\x42LOB_RANK_DATA\x12\x0f\n\x07rank_id\x18\x01 \x01(\r\x12&\n\x08rank_val\x18\x02 \x03(\x0b\x32\x14.DBBLOB_RANK_VALINFO\x12\x12\n\ntime_stamp\x18\x03 \x01(\r\"\x88\x01\n\x15\x44\x42\x42LOG_RANK_STAT_INFO\x12\x11\n\trole_name\x18\x01 \x01(\t\x12\x0f\n\x07gang_id\x18\x02 \x01(\r\x12\x11\n\tgang_name\x18\x03 \x01(\t\x12\x12\n\ngang_level\x18\x04 \x01(\r\x12$\n\trank_data\x18\x05 \x03(\x0b\x32\x11.DBBLOB_RANK_DATA\"I\n\x13\x44\x42\x42LOB_DIRHERO_INFO\x12\x0e\n\x06heroid\x18\x01 \x01(\r\x12\x0e\n\x06herolv\x18\x02 \x01(\r\x12\x12\n\nherogrowup\x18\x03 \x01(\r\"\x8c\x01\n\x11\x44\x42\x42LOB_WORLD_INFO\x12\x0b\n\x03uid\x18\x01 \x01(\r\x12\x11\n\trole_name\x18\x02 \x01(\t\x12\x0f\n\x07worldid\x18\x03 \x01(\r\x12\x0e\n\x06zoneid\x18\x04 \x01(\r\x12\x0e\n\x06\x63urpve\x18\x05 \x01(\r\x12&\n\x08heroinfo\x18\x06 \x03(\x0b\x32\x14.DBBLOB_DIRHERO_INFO\"?\n\x15\x44\x42\x42LOB_DIR_WORLD_INFO\x12&\n\nworld_info\x18\x01 \x03(\x0b\x32\x12.DBBLOB_WORLD_INFO\"\x98\x02\n\x12SSDT_WHOLE_GAMEOBJ\x12-\n\x12player_online_info\x18\x01 \x01(\x0b\x32\x11.SSDT_ROLE_ONLINE\x12\'\n\thero_info\x18\x02 \x01(\x0b\x32\x14.DBBLOB_HERO_DATASET\x12/\n\rbuilding_info\x18\x03 \x01(\x0b\x32\x18.DBBLOB_BUILDING_DATASET\x12%\n\x08\x64un_info\x18\x04 \x01(\x0b\x32\x13.DBBLOB_DUN_DATASET\x12$\n\tmisc_data\x18\x05 \x01(\x0b\x32\x11.DBBLOB_MISC_DATA\x12,\n\ractivity_data\x18\x06 \x01(\x0b\x32\x15.DBBLOB_ACTIVITY_INFO\"\x1b\n\x0c\x45RR_RESPONSE\x12\x0b\n\x03\x65rr\x18\x01 \x01(\x05\"\xe1\x01\n\x0fSSDT_ROLE_BRIEF\x12\x0b\n\x03uid\x18\x01 \x01(\r\x12\x11\n\trole_name\x18\x02 \x01(\t\x12\x0e\n\x06gender\x18\x03 \x01(\r\x12\x12\n\nmain_level\x18\x04 \x01(\r\x12\x0e\n\x06map_id\x18\x05 \x01(\r\x12\x16\n\x0e\x62ody_info_data\x18\x06 \x03(\r\x12\x13\n\x0b\x63reate_time\x18\x07 \x01(\r\x12\x10\n\x08\x62it_mark\x18\x08 \x01(\r\x12\x14\n\x0c\x63lt_bit_mark\x18\t \x01(\x04\x12\x13\n\x0b\x61vatar_list\x18\n \x03(\r\x12\x10\n\x08\x62\x61n_time\x18\x0b \x01(\r\"\x88\x01\n\x12SUCC_ROLE_LIST_RES\x12\x11\n\tunique_id\x18\x01 \x01(\t\x12$\n\nrole_brief\x18\x02 \x03(\x0b\x32\x10.SSDT_ROLE_BRIEF\x12\x10\n\x08set_time\x18\x03 \x01(\x05\x12\x10\n\x08world_id\x18\x04 \x01(\r\x12\x15\n\rlast_role_uid\x18\x05 \x01(\r\"\xa1\x01\n\x12SSDT_WHOLE_ACCOUNT\x12\x14\n\x0cgmpermission\x18\x01 \x01(\r\x12\x10\n\x08\x62\x61n_time\x18\x02 \x01(\r\x12\x15\n\rban_chat_time\x18\x03 \x01(\r\x12\x10\n\x08schedule\x18\x04 \x01(\r\x12\x0e\n\x06\x61\x63tive\x18\x05 \x01(\r\x12\x17\n\x0f\x61\x63t_create_time\x18\x06 \x01(\r\x12\x11\n\tacc_quest\x18\x07 \x01(\r\".\n\x16SSPKG_SHUTDOWN_ZONESVR\x12\x14\n\x0c\x64own_aft_sec\x18\x01 \x01(\r\"&\n\x16SSDT_ROLE_SELFDUN_DATA\x12\x0c\n\x04\x64\x61ta\x18\x01 \x01(\t\"%\n\x15SSDT_ROLE_PVEDUN_DATA\x12\x0c\n\x04\x64\x61ta\x18\x01 \x01(\t\"&\n\x16SSDT_ENDLESS_HERO_DATA\x12\x0c\n\x04\x64\x61ta\x18\x01 \x01(\t\"\xa0\x02\n\x13SSDT_PVPPLAYER_INFO\x12\x0b\n\x03uid\x18\x01 \x01(\r\x12\r\n\x05level\x18\x02 \x01(\r\x12\x0f\n\x07gang_id\x18\x03 \x01(\r\x12\x11\n\trole_name\x18\x04 \x01(\t\x12\x0e\n\x06online\x18\x05 \x01(\r\x12\x11\n\tpvp_score\x18\x06 \x01(\r\x12\x1a\n\x12max_fight_capacity\x18\x07 \x01(\r\x12\x13\n\x0b\x63ur_crystal\x18\x08 \x01(\r\x12\x10\n\x08\x63ur_gold\x18\t \x01(\r\x12\x0f\n\x07is_done\x18\n \x01(\r\x12)\n\x08self_dun\x18\x0b \x01(\x0b\x32\x17.SSDT_ROLE_SELFDUN_DATA\x12\'\n\x07pve_dun\x18\x0c \x01(\x0b\x32\x16.SSDT_ROLE_PVEDUN_DATA\"\\\n\x19SSDT_PLAYER_LOGIN_PVPINFO\x12\x0e\n\x06result\x18\x01 \x01(\r\x12/\n\x0fpvp_island_info\x18\x02 \x01(\x0b\x32\x16.DBBLOB_PVP_BUILD_INFO\"\x93\x01\n\x12PKG_ROLE_LOGIN_REQ\x12\x11\n\tunique_id\x18\x01 \x01(\t\x12\x0b\n\x03uid\x18\x02 \x01(\r\x12\x12\n\nchannel_id\x18\x03 \x01(\r\x12\x32\n\x0epvp_login_info\x18\x04 \x01(\x0b\x32\x1a.SSDT_PLAYER_LOGIN_PVPINFO\x12\x15\n\rban_chat_time\x18\x05 \x01(\r\"\xfa\x01\n\x12PKG_ROLE_LOGIN_RES\x12\x0e\n\x06result\x18\x01 \x01(\x05\x12\x11\n\tunique_id\x18\x02 \x01(\t\x12\x0b\n\x03uid\x18\x03 \x01(\r\x12\x11\n\trole_name\x18\x04 \x01(\t\x12\x12\n\nchannel_id\x18\x05 \x01(\r\x12+\n\x0ewhole_game_obj\x18\x06 \x01(\x0b\x32\x13.SSDT_WHOLE_GAMEOBJ\x12\x32\n\x0epvp_login_info\x18\x07 \x01(\x0b\x32\x1a.SSDT_PLAYER_LOGIN_PVPINFO\x12\x15\n\rleft_ban_time\x18\x08 \x01(\r\x12\x15\n\rban_chat_time\x18\t \x01(\r\"Y\n\x18PKG_VIEW_PLAYER_INFO_REQ\x12\x14\n\x0cview_role_id\x18\x01 \x01(\r\x12\x14\n\x0cis_from_gang\x18\x02 \x01(\x08\x12\x11\n\tvip_level\x18\x03 \x01(\r\"\x8a\x01\n&PKG_VIEW_PLAYER_INFO_RSP_FROM_GANG_SVR\x12\x0e\n\x06result\x18\x01 \x01(\x05\x12\x14\n\x0cview_role_id\x18\x02 \x01(\r\x12\x14\n\x0cis_from_gang\x18\x03 \x01(\x08\x12\x11\n\tgang_name\x18\x04 \x01(\t\x12\x11\n\tvip_level\x18\x05 \x01(\r\"\xaa\x01\n-PKG_VIEW_PLAYER_INFO_RSP_FROM_RANK_BATTLE_SVR\x12\x0e\n\x06result\x18\x01 \x01(\x05\x12\x14\n\x0cview_role_id\x18\x02 \x01(\r\x12\x14\n\x0cis_from_gang\x18\x03 \x01(\x08\x12\x11\n\tgang_name\x18\x04 \x01(\t\x12\x17\n\x0frank_battle_pos\x18\x05 \x01(\x05\x12\x11\n\tvip_level\x18\x06 \x01(\r\"\xc1\x01\n&PKG_VIEW_PLAYER_INFO_RSP_FROM_RANK_SVR\x12\x0e\n\x06result\x18\x01 \x01(\x05\x12\x14\n\x0cview_role_id\x18\x02 \x01(\r\x12\x14\n\x0cis_from_gang\x18\x03 \x01(\x08\x12\x11\n\tgang_name\x18\x04 \x01(\t\x12\x17\n\x0frank_battle_pos\x18\x05 \x01(\x05\x12\x1c\n\x14\x61\x63hievement_rank_pos\x18\x06 \x01(\x05\x12\x11\n\tvip_level\x18\x07 \x01(\r\"\xb3\x03\n&PKG_VIEW_PLAYER_INFO_RSP_FROM_ROLE_SVR\x12\x0e\n\x06result\x18\x01 \x01(\x05\x12\x14\n\x0cview_role_id\x18\x02 \x01(\r\x12\x14\n\x0cis_from_gang\x18\x03 \x01(\x08\x12\x11\n\tgang_name\x18\x04 \x01(\t\x12\x17\n\x0frank_battle_pos\x18\x05 \x01(\x05\x12\x1c\n\x14\x61\x63hievement_rank_pos\x18\x06 \x01(\x05\x12\x11\n\trole_name\x18\x07 \x01(\t\x12\x19\n\x11\x65ndless_max_floor\x18\x08 \x01(\r\x12*\n\rdun_data_info\x18\t \x01(\x0b\x32\x13.DBBLOB_DUN_DATASET\x12\'\n\thero_info\x18\n \x01(\x0b\x32\x14.DBBLOB_HERO_DATASET\x12$\n\tmisc_data\x18\x0b \x01(\x0b\x32\x11.DBBLOB_MISC_DATA\x12\x33\n\x11hero_equiped_info\x18\x0c \x03(\x0b\x32\x18.DBBLOBHERO_EQUIPED_INFO\x12\x11\n\tvip_level\x18\r \x01(\r\x12\x12\n\nhead_photo\x18\x0e \x01(\r\"5\n\x13PKG_ROLE_LOGOUT_REQ\x12\x11\n\tunique_id\x18\x01 \x01(\t\x12\x0b\n\x03uid\x18\x02 \x01(\r\"s\n\x14PKG_REQ_PLAYER_LOGIN\x12\x11\n\tunique_id\x18\x01 \x01(\t\x12\x0b\n\x03uid\x18\x02 \x01(\r\x12\x12\n\nchannel_id\x18\x03 \x01(\r\x12\x10\n\x08world_id\x18\x04 \x01(\x05\x12\x15\n\rban_chat_time\x18\x05 \x01(\r\"\xa5\x01\n\x14PKG_RES_PLAYER_LOGIN\x12\x0e\n\x06result\x18\x01 \x01(\r\x12\x11\n\tunique_id\x18\x02 \x01(\t\x12\x0b\n\x03uid\x18\x03 \x01(\r\x12\x12\n\nchannel_id\x18\x04 \x01(\r\x12\x32\n\x0epvp_login_info\x18\x05 \x01(\x0b\x32\x1a.SSDT_PLAYER_LOGIN_PVPINFO\x12\x15\n\rban_chat_time\x18\x06 \x01(\r\"\xd7\x01\n\x15PKG_REQ_PLAYER_LOGOUT\x12\x0b\n\x03uid\x18\x01 \x01(\r\x12\x1a\n\x12max_fight_capacity\x18\x02 \x01(\r\x12\x11\n\trole_name\x18\x03 \x01(\t\x12/\n\x0fpvp_island_info\x18\x04 \x01(\x0b\x32\x16.DBBLOB_PVP_BUILD_INFO\x12?\n\x17pvp_island_defense_info\x18\x05 \x01(\x0b\x32\x1e.DBBLOB_PVP_ISLAND_DEFEND_INFO\x12\x10\n\x08world_id\x18\x06 \x01(\x05\"\xc0\x02\n\x15PKG_ACCOUNT_LOGIN_REQ\x12\x10\n\x08log_type\x18\x01 \x01(\r\x12\x10\n\x08log_plat\x18\x02 \x01(\r\x12\x13\n\x0b\x64\x65vice_type\x18\x03 \x01(\t\x12\x16\n\x0e\x64\x65vice_sys_ver\x18\x04 \x01(\t\x12\x17\n\x0fresolution_wide\x18\x05 \x01(\x05\x12\x17\n\x0fresolution_high\x18\x06 \x01(\x05\x12\x0f\n\x07\x61non_id\x18\x07 \x01(\t\x12\x11\n\tunique_id\x18\x08 \x01(\t\x12\x12\n\nchannel_id\x18\t \x01(\r\x12\n\n\x02ip\x18\n \x01(\r\x12\x10\n\x08world_id\x18\x0b \x01(\r\x12\x0f\n\x07zone_id\x18\x0c \x01(\r\x12\x12\n\nre_connect\x18\r \x01(\r\x12\x16\n\x0enet_re_connect\x18\x0e \x01(\r\x12\x11\n\tdevice_id\x18\x0f \x01(\t\"b\n\x15PKG_ACCOUNT_LOGIN_RES\x12\x0e\n\x06result\x18\x01 \x01(\r\x12\x16\n\x0enet_re_connect\x18\x02 \x01(\r\x12!\n\x04\x64\x61ta\x18\x03 \x01(\x0b\x32\x13.SSDT_ROLE_LIST_RES\"O\n\x16PKG_ACCOUNT_LOGOUT_REQ\x12\x11\n\tunique_id\x18\x01 \x01(\t\x12\x11\n\trole_name\x18\x02 \x01(\t\x12\x0f\n\x07zone_id\x18\x03 \x01(\r\"\xb3\x01\n\x0fPKG_CREATE_NAME\x12\x0e\n\x06result\x18\x01 \x01(\r\x12\x11\n\tunique_id\x18\x02 \x01(\t\x12\x11\n\trole_name\x18\x03 \x01(\t\x12\x0b\n\x03uid\x18\x04 \x01(\r\x12\x0f\n\x07zone_id\x18\x05 \x01(\r\x12\x10\n\x08world_id\x18\x06 \x01(\r\x12\x13\n\x0b\x63reate_time\x18\x07 \x01(\r\x12\x12\n\nhead_photo\x18\x08 \x01(\r\x12\x11\n\tis_rename\x18\t \x01(\x08\"#\n\x13SSDT_RECOMMAND_NAME\x12\x0c\n\x04name\x18\x01 \x01(\t\"\xd0\x01\n\x13PKG_CREATE_NAME_RES\x12\x0e\n\x06result\x18\x01 \x01(\r\x12\x11\n\tis_rename\x18\t \x01(\x08\x12\x11\n\tunique_id\x18\x02 \x01(\t\x12\x11\n\trole_name\x18\x03 \x01(\t\x12\x12\n\nhead_photo\x18\x04 \x01(\r\x12\x0b\n\x03uid\x18\x05 \x01(\r\x12\x0f\n\x07zone_id\x18\x06 \x01(\r\x12\x10\n\x08world_id\x18\x07 \x01(\r\x12,\n\x0erecommand_name\x18\x08 \x03(\x0b\x32\x14.SSDT_RECOMMAND_NAME\"\"\n\x13PKG_RANDOM_NAME_REQ\x12\x0b\n\x03uid\x18\x01 \x01(\r\"0\n\x13PKG_RANDOM_NAME_RES\x12\x0b\n\x03uid\x18\x01 \x01(\r\x12\x0c\n\x04name\x18\x02 \x01(\t\"\xe1\x01\n\x0fPKG_VERIFY_NAME\x12\x0e\n\x06result\x18\x01 \x01(\r\x12\x11\n\tunique_id\x18\x02 \x01(\t\x12\x11\n\trole_name\x18\x03 \x01(\t\x12\x0b\n\x03uid\x18\x04 \x01(\r\x12\x0f\n\x07zone_id\x18\x05 \x01(\r\x12\x10\n\x08world_id\x18\x06 \x01(\r\x12\x13\n\x0b\x63reate_time\x18\x07 \x01(\r\x12\x12\n\nhead_photo\x18\x08 \x01(\r\x12,\n\x0erecommand_name\x18\t \x03(\x0b\x32\x14.SSDT_RECOMMAND_NAME\x12\x11\n\tis_rename\x18\n \x01(\x08\"\xa7\x01\n\x14PKG_CREATE_WORLDROLE\x12\x0e\n\x06result\x18\x01 \x01(\r\x12\x11\n\tis_rename\x18\t \x01(\x08\x12\x11\n\tunique_id\x18\x02 \x01(\t\x12\x11\n\trole_name\x18\x03 \x01(\t\x12\x0b\n\x03uid\x18\x04 \x01(\r\x12\x10\n\x08world_id\x18\x05 \x01(\r\x12\x13\n\x0b\x63reate_time\x18\x06 \x01(\r\x12\x12\n\nhead_photo\x18\x07 \x01(\r\"s\n\x18PKG_BIND_PLATACCOUNT_REQ\x12\x10\n\x08log_plat\x18\x01 \x01(\r\x12\x0f\n\x07\x61non_id\x18\x02 \x01(\t\x12\x0f\n\x07\x62ind_id\x18\x03 \x01(\t\x12\x10\n\x08world_id\x18\x04 \x01(\r\x12\x11\n\trole_name\x18\x05 \x01(\t\"L\n\x18PKG_BIND_PLATACCOUNT_RES\x12\x0e\n\x06result\x18\x01 \x01(\r\x12\x0f\n\x07\x61non_id\x18\x02 \x01(\t\x12\x0f\n\x07\x62ind_id\x18\x03 \x01(\t\"i\n PKG_BIND_CLUSTER_PLATACCOUNT_REQ\x12\x10\n\x08log_plat\x18\x01 \x01(\r\x12\x0f\n\x07\x61non_id\x18\x02 \x01(\t\x12\x0f\n\x07\x62ind_id\x18\x03 \x01(\t\x12\x11\n\trole_name\x18\x04 \x01(\t\"T\n PKG_BIND_CLUSTER_PLATACCOUNT_RES\x12\x0e\n\x06result\x18\x01 \x01(\r\x12\x0f\n\x07\x61non_id\x18\x02 \x03(\r\x12\x0f\n\x07\x62ind_id\x18\x03 \x03(\r\"x\n\x1dPKG_BIND_ROLE_PLATACCOUNT_REQ\x12\x10\n\x08log_plat\x18\x01 \x01(\r\x12\x0f\n\x07\x61non_id\x18\x02 \x03(\r\x12\x0f\n\x07\x62ind_id\x18\x03 \x03(\r\x12\x10\n\x08world_id\x18\x04 \x01(\r\x12\x11\n\trole_name\x18\x05 \x01(\t\"u\n\x1dPKG_BIND_ROLE_PLATACCOUNT_RES\x12\x0e\n\x06result\x18\x01 \x01(\r\x12\x10\n\x08log_plat\x18\x02 \x01(\r\x12\x10\n\x08world_id\x18\x03 \x01(\r\x12\x0f\n\x07\x61non_id\x18\x04 \x03(\r\x12\x0f\n\x07\x62ind_id\x18\x05 \x03(\r\"`\n\x17PKG_BIND_ACCOUNTSVR_REQ\x12\x10\n\x08log_plat\x18\x01 \x01(\r\x12\x0f\n\x07\x61non_id\x18\x02 \x03(\r\x12\x0f\n\x07\x62ind_id\x18\x03 \x03(\r\x12\x11\n\trole_name\x18\x04 \x01(\t\"^\n\x17PKG_BIND_ACCOUNTSVR_RES\x12\x0e\n\x06result\x18\x01 \x01(\r\x12\x0f\n\x07\x61non_id\x18\x02 \x01(\t\x12\x0f\n\x07\x62ind_id\x18\x03 \x01(\t\x12\x11\n\trole_name\x18\x04 \x01(\t\"\xbc\x02\n\x16PKG_GAMEOBJ_UPDATE_REQ\x12\x11\n\tunique_id\x18\x01 \x01(\t\x12\x0b\n\x03uid\x18\x02 \x01(\r\x12-\n\x12player_online_info\x18\x03 \x01(\x0b\x32\x11.SSDT_ROLE_ONLINE\x12\'\n\thero_info\x18\x04 \x01(\x0b\x32\x14.DBBLOB_HERO_DATASET\x12/\n\rbuilding_info\x18\x05 \x01(\x0b\x32\x18.DBBLOB_BUILDING_DATASET\x12%\n\x08\x64un_info\x18\x06 \x01(\x0b\x32\x13.DBBLOB_DUN_DATASET\x12$\n\tmisc_data\x18\x07 \x01(\x0b\x32\x11.DBBLOB_MISC_DATA\x12,\n\ractivity_info\x18\x08 \x01(\x0b\x32\x15.DBBLOB_ACTIVITY_INFO\"5\n\x16PKG_GAMEOBJ_UPDATE_RSP\x12\x0e\n\x06result\x18\x01 \x01(\x05\x12\x0b\n\x03\x65rr\x18\x02 \x01(\x05\"\x96\x01\n\x1bSSDT_CMD_PLAYER_SELFDUNINFO\x12\x0e\n\x06result\x18\x01 \x01(\r\x12\x0e\n\x06\x64un_id\x18\x02 \x01(\r\x12\x11\n\tis_online\x18\x03 \x01(\r\x12\x17\n\x0fother_unique_id\x18\x04 \x01(\t\x12\x16\n\x0eobtain_crystal\x18\x05 \x01(\r\x12\x13\n\x0bobtain_gold\x18\x06 \x01(\r\"@\n\x15SSDT_ROOMMONSTER_INFO\x12\x12\n\nmonster_id\x18\x01 \x01(\r\x12\x13\n\x0bmonster_cnt\x18\x02 \x01(\r\"O\n\x0eSSDT_ROOM_INFO\x12\x0f\n\x07room_id\x18\x01 \x01(\r\x12,\n\x0cmonster_info\x18\x02 \x03(\x0b\x32\x16.SSDT_ROOMMONSTER_INFO\"7\n\x11SSDT_DUNGEON_INFO\x12\"\n\troom_info\x18\x01 \x03(\x0b\x32\x0f.SSDT_ROOM_INFO\"\x98\x01\n\x18SSDT_PLAYER_ENTERDUN_RES\x12\x11\n\tunique_id\x18\x01 \x01(\t\x12\x0f\n\x07hero_id\x18\x02 \x01(\r\x12\x0e\n\x06\x64un_id\x18\x03 \x01(\r\x12\x0e\n\x06result\x18\x04 \x01(\x05\x12\r\n\x05level\x18\x05 \x01(\r\x12)\n\x08\x64un_info\x18\x06 \x01(\x0b\x32\x17.SSDT_ROLE_SELFDUN_DATA\"\x83\x01\n\x15PKG_SELFDUN_ENTER_REQ\x12\x17\n\x0fother_unique_id\x18\x01 \x01(\t\x12\x11\n\tunique_id\x18\x02 \x01(\t\x12\x0f\n\x07hero_id\x18\x03 \x01(\r\x12\x0e\n\x06\x64un_id\x18\x04 \x01(\r\x12\x0e\n\x06result\x18\x05 \x01(\x05\x12\r\n\x05level\x18\x06 \x01(\r\"f\n\x15PKG_SELFDUN_ENTER_RSP\x12\x0e\n\x06result\x18\x01 \x01(\x05\x12\x0b\n\x03\x65rr\x18\x02 \x01(\x05\x12\x30\n\renter_dun_res\x18\x03 \x01(\x0b\x32\x19.SSDT_PLAYER_ENTERDUN_RES\"7\n\x15PKG_ROLE_DEL_ROLE_REQ\x12\x11\n\tunique_id\x18\x01 \x01(\t\x12\x0b\n\x03uid\x18\x02 \x01(\r\"U\n\x15PKG_ROLE_DEL_ROLE_RES\x12\x0e\n\x06result\x18\x01 \x01(\r\x12\x11\n\tunique_id\x18\x02 \x01(\t\x12\x0b\n\x03uid\x18\x03 \x01(\r\x12\x0c\n\x04name\x18\x04 \x01(\t\"5\n\x0fPKG_KICK_PLAYER\x12\x11\n\tunique_id\x18\x01 \x01(\t\x12\x0f\n\x07zone_id\x18\x02 \x01(\x05\"\xbf\x01\n\x14PKG_ACCOUNT_INFO_RES\x12\x10\n\x08log_type\x18\x01 \x01(\r\x12\x10\n\x08log_plat\x18\x02 \x01(\r\x12\x0f\n\x07\x61non_id\x18\x03 \x01(\t\x12\x11\n\tunique_id\x18\x04 \x01(\t\x12\x0b\n\x03uid\x18\x05 \x01(\r\x12\x12\n\nchannel_id\x18\x06 \x01(\r\x12\x12\n\nis_new_acc\x18\x07 \x01(\r\x12*\n\rwhole_account\x18\x08 \x01(\x0b\x32\x13.SSDT_WHOLE_ACCOUNT\"[\n\x14PKG_NEW_ROLE_CLUSTER\x12\x11\n\tunique_id\x18\x01 \x01(\t\x12\x0b\n\x03uid\x18\x02 \x01(\r\x12\x11\n\trole_name\x18\x03 \x01(\t\x12\x10\n\x08world_id\x18\x04 \x01(\r\"F\n\x11PKG_ROLE_DEL_NAME\x12\x11\n\trole_name\x18\x01 \x01(\t\x12\x0b\n\x03uid\x18\x02 \x01(\r\x12\x11\n\tunique_id\x18\x03 \x01(\t\"N\n\x10PKG_DISP_PACKAGE\x12\x0b\n\x03uid\x18\x04 \x01(\x05\x12\x0c\n\x04\x61\x64\x64r\x18\x05 \x01(\x05\x12\x11\n\ttype_hash\x18\x07 \x01(\x05\x12\x0c\n\x04\x64\x61ta\x18\x06 \x01(\t\"\xce\x01\n\x1cSSDT_PVP_ISLAND_DEFENSE_INFO\x12\x10\n\x08res_type\x18\x01 \x01(\r\x12)\n\nrobot_info\x18\x02 \x01(\x0b\x32\x15.ST_BATTLE_ROBOT_INFO\x12\'\n\thero_info\x18\x03 \x01(\x0b\x32\x14.ST_HERO_BATTLE_INFO\x12\x12\n\nmonster_id\x18\x04 \x01(\r\x12\x12\n\nmonster_lv\x18\x05 \x01(\r\x12\x0f\n\x07trap_id\x18\x06 \x01(\r\x12\x0f\n\x07trap_lv\x18\x07 \x01(\r\"T\n\x14SSDT_PVP_ISLAND_INFO\x12\x13\n\x0b\x62uilding_id\x18\x01 \x01(\r\x12\x10\n\x08res_type\x18\x02 \x01(\r\x12\x15\n\rcan_steal_res\x18\x03 \x01(\r\"\xd0\x01\n\x1aSSDT_PVP_STEAL_ISLAND_INFO\x12\x0f\n\x07role_id\x18\x01 \x01(\r\x12\x11\n\trole_name\x18\x02 \x01(\t\x12\x1b\n\x13role_fight_capacity\x18\x03 \x01(\r\x12*\n\x0bisland_data\x18\x04 \x03(\x0b\x32\x15.SSDT_PVP_ISLAND_INFO\x12\x33\n\x0c\x64\x65\x66\x65nse_info\x18\x05 \x03(\x0b\x32\x1d.SSDT_PVP_ISLAND_DEFENSE_INFO\x12\x10\n\x08is_robot\x18\x06 \x01(\x08\"\xf6\x01\n!SSDT_ONLINE_BATTLE_ROOM_ROLE_INFO\x12\x0b\n\x03pos\x18\x01 \x01(\r\x12\x0f\n\x07role_id\x18\x02 \x01(\r\x12\x0f\n\x07role_lv\x18\x03 \x01(\r\x12\x14\n\x0crole_stamina\x18\x04 \x01(\r\x12\x15\n\rrole_strength\x18\x05 \x01(\r\x12\x14\n\x0crole_ability\x18\x06 \x01(\r\x12\x13\n\x0brole_skills\x18\x07 \x03(\r\x12\x17\n\x0f\x66\x61\x63tor_skill_id\x18\x08 \x01(\r\x12\x31\n\x0ehero_attr_info\x18\t \x01(\x0b\x32\x19.ST_BATTLE_HERO_ATTR_INFO\"\xb8\x01\n#SSDT_ONLINE_BATTLE_ROOM_PLAYER_INFO\x12\x0c\n\x04host\x18\x01 \x01(\x08\x12\x0b\n\x03uid\x18\x02 \x01(\r\x12\x0c\n\x04name\x18\x03 \x01(\t\x12\r\n\x05score\x18\x04 \x01(\r\x12\x12\n\nwin_number\x18\x05 \x01(\r\x12\r\n\x05ready\x18\x06 \x01(\x08\x12\x36\n\nrole_infos\x18\x07 \x03(\x0b\x32\".SSDT_ONLINE_BATTLE_ROOM_ROLE_INFO\"\x80\x01\n\x1cSSDT_ONLINE_BATTLE_ROOM_INFO\x12\x0f\n\x07room_id\x18\x01 \x01(\r\x12\x13\n\x0bscene_index\x18\x02 \x01(\r\x12:\n\x0cplayer_infos\x18\x03 \x03(\x0b\x32$.SSDT_ONLINE_BATTLE_ROOM_PLAYER_INFO\"`\n\'SSDT_ONLINE_BATTLE_ROOM_COUNT_DOWN_TIME\x12\x0f\n\x07zone_id\x18\x01 \x01(\r\x12\x0b\n\x03uid\x18\x02 \x01(\r\x12\x17\n\x0f\x63ount_down_time\x18\x03 \x01(\r\"\xa9\x01\n#SSPKG_CREATE_ONLINE_BATTLE_ROOM_REQ\x12\x10\n\x08world_id\x18\x01 \x01(\r\x12\x0f\n\x07zone_id\x18\x02 \x01(\r\x12\x0b\n\x03uid\x18\x03 \x01(\r\x12\x1b\n\x13online_battle_score\x18\x04 \x01(\r\x12\x12\n\nwin_number\x18\x05 \x01(\r\x12\x0c\n\x04name\x18\x06 \x01(\t\x12\x13\n\x0bscene_index\x18\x07 \x01(\r\"d\n#SSPKG_CREATE_ONLINE_BATTLE_ROOM_RES\x12\x0f\n\x07zone_id\x18\x01 \x01(\r\x12\x0b\n\x03uid\x18\x02 \x01(\r\x12\x0e\n\x06result\x18\x03 \x01(\r\x12\x0f\n\x07room_id\x18\x04 \x01(\r\"A\n!SSPKG_QUIT_ONLINE_BATTLE_ROOM_REQ\x12\x0f\n\x07room_id\x18\x01 \x01(\r\x12\x0b\n\x03uid\x18\x02 \x01(\r\"\x9b\x01\n!SSPKG_QUIT_ONLINE_BATTLE_ROOM_RES\x12\x0f\n\x07zone_id\x18\x01 \x01(\r\x12\x0b\n\x03uid\x18\x02 \x01(\r\x12\x0e\n\x06result\x18\x03 \x01(\r\x12\r\n\x05param\x18\x04 \x01(\r\x12\x39\n\x0bplayer_info\x18\x05 \x01(\x0b\x32$.SSDT_ONLINE_BATTLE_ROOM_PLAYER_INFO\"2\n!SSPKG_LIST_ONLINE_BATTLE_ROOM_REQ\x12\r\n\x05score\x18\x01 \x01(\r\"a\n!SSPKG_LIST_ONLINE_BATTLE_ROOM_RES\x12\x0e\n\x06result\x18\x01 \x01(\r\x12,\n\x05rooms\x18\x02 \x03(\x0b\x32\x1d.SSDT_ONLINE_BATTLE_ROOM_INFO\"\xb5\x01\n!SSPKG_JOIN_ONLINE_BATTLE_ROOM_REQ\x12\x10\n\x08world_id\x18\x01 \x01(\r\x12\x0f\n\x07zone_id\x18\x02 \x01(\r\x12\x0b\n\x03uid\x18\x03 \x01(\r\x12\x1b\n\x13online_battle_score\x18\x04 \x01(\r\x12\x12\n\nwin_number\x18\x05 \x01(\r\x12\x0c\n\x04name\x18\x06 \x01(\t\x12\x0f\n\x07room_id\x18\x07 \x01(\r\x12\x10\n\x08host_uid\x18\x08 \x01(\r\"\x83\x01\n!SSPKG_JOIN_ONLINE_BATTLE_ROOM_RES\x12\x0f\n\x07zone_id\x18\x01 \x01(\r\x12\x0b\n\x03uid\x18\x02 \x01(\r\x12\x0e\n\x06result\x18\x03 \x01(\r\x12\x30\n\troom_info\x18\x04 \x01(\x0b\x32\x1d.SSDT_ONLINE_BATTLE_ROOM_INFO\"q\n#SSPKG_UPDATE_ONLINE_BATTLE_ROOM_REQ\x12\x0f\n\x07room_id\x18\x01 \x01(\r\x12\x39\n\x0bplayer_info\x18\x02 \x01(\x0b\x32$.SSDT_ONLINE_BATTLE_ROOM_PLAYER_INFO\"\x99\x01\n(SSPKG_ONLINE_BATTLE_ROOM_QUICK_MATCH_REQ\x12\x10\n\x08world_id\x18\x01 \x01(\r\x12\x0f\n\x07zone_id\x18\x02 \x01(\r\x12\x0b\n\x03uid\x18\x03 \x01(\r\x12\x1b\n\x13online_battle_score\x18\x04 \x01(\r\x12\x12\n\nwin_number\x18\x05 \x01(\r\x12\x0c\n\x04name\x18\x06 \x01(\t\"G\n\'SSPKG_ONLINE_BATTLE_ROOM_KICK_GUEST_REQ\x12\x0b\n\x03uid\x18\x01 \x01(\r\x12\x0f\n\x07room_id\x18\x02 \x01(\r\"G\n\'SSPKG_ONLINE_BATTLE_ROOM_HEART_BEAT_REQ\x12\x0b\n\x03uid\x18\x01 \x01(\r\x12\x0f\n\x07room_id\x18\x02 \x01(\r\"~\n#SSPKG_UPDATE_ONLINE_BATTLE_ROOM_RES\x12\x0f\n\x07zone_id\x18\x01 \x01(\r\x12\x0b\n\x03uid\x18\x02 \x01(\r\x12\x39\n\x0bplayer_info\x18\x03 \x01(\x0b\x32$.SSDT_ONLINE_BATTLE_ROOM_PLAYER_INFO\"|\n\x19SSPKG_ONLINE_BATTLE_BEGIN\x12\x0f\n\x07zone_id\x18\x01 \x01(\r\x12\x0b\n\x03uid\x18\x02 \x01(\r\x12\x0f\n\x07is_host\x18\x03 \x01(\x08\x12\x30\n\troom_info\x18\x04 \x01(\x0b\x32\x1d.SSDT_ONLINE_BATTLE_ROOM_INFO\"D\n\x19PKG_SEARCH_PVP_PLAYER_REQ\x12\x0b\n\x03uid\x18\x01 \x01(\r\x12\x1a\n\x12max_fight_capacity\x18\x02 \x01(\r\"]\n\x19PKG_SEARCH_PVP_PLAYER_RES\x12\x0e\n\x06result\x18\x01 \x01(\x05\x12\x30\n\x0btarget_info\x18\x02 \x01(\x0b\x32\x1b.SSDT_PVP_STEAL_ISLAND_INFO\"F\n\x1fST_WIPE_OUT_STEAL_BATTLE_RESULT\x12\x10\n\x08res_type\x18\x01 \x01(\r\x12\x11\n\tsteal_res\x18\x02 \x01(\r\"\xa7\x01\n%PKG_WIPE_OUT_STEAL_BATTLE_BALANCE_REQ\x12\x18\n\x10\x61ttacker_role_id\x18\x01 \x01(\r\x12\x11\n\trole_name\x18\x02 \x01(\t\x12\x16\n\x0etarget_role_id\x18\x03 \x01(\r\x12\x39\n\x0fwipe_out_result\x18\x04 \x03(\x0b\x32 .ST_WIPE_OUT_STEAL_BATTLE_RESULT\"\x85\x02\n\x1cPKG_BALANCE_STEAL_BATTLE_REQ\x12\x18\n\x10\x61ttacker_role_id\x18\x01 \x01(\r\x12\x11\n\trole_name\x18\x02 \x01(\t\x12\x14\n\x0cself_hero_id\x18\x03 \x01(\r\x12\x1c\n\x14self_hero_hp_percent\x18\x04 \x01(\r\x12\x16\n\x0etarget_role_id\x18\x05 \x01(\r\x12\x16\n\x0etarget_hero_id\x18\x06 \x01(\r\x12\x16\n\x0etarget_hero_hp\x18\x07 \x01(\r\x12\x10\n\x08res_type\x18\x08 \x01(\r\x12*\n\x0bisland_data\x18\t \x03(\x0b\x32\x15.SSDT_PVP_ISLAND_INFO\"\xbc\x01\n\x1cPKG_BALANCE_STEAL_BATTLE_RES\x12\x0e\n\x06result\x18\x01 \x01(\x05\x12\x16\n\x0etarget_role_id\x18\x02 \x01(\r\x12\x10\n\x08res_type\x18\x03 \x01(\r\x12\x14\n\x0cself_hero_id\x18\x04 \x01(\r\x12\x1c\n\x14self_hero_hp_percent\x18\x05 \x01(\r\x12\x16\n\x0etarget_hero_id\x18\x06 \x01(\r\x12\x16\n\x0etarget_hero_hp\x18\x07 \x01(\r\"\xc2\x01\n PKG_STEAL_BATTLE_RESULT_MAIL_REQ\x12\x17\n\x0f\x64\x65\x66\x65nse_role_id\x18\x01 \x01(\r\x12\x15\n\rbattle_result\x18\x02 \x01(\r\x12\x15\n\ratk_role_name\x18\x03 \x01(\t\x12\x13\n\x0b\x61tk_role_id\x18\x04 \x01(\r\x12\x15\n\rlose_res_type\x18\x05 \x01(\r\x12\x13\n\x0blose_res_id\x18\x06 \x01(\r\x12\x16\n\x0elose_res_count\x18\x07 \x01(\x05\"\xb1\x01\n\x14SSDT_MAIL_SYSTEM_ACC\x12\x10\n\x08res_type\x18\x01 \x01(\r\x12\x0e\n\x06res_id\x18\x02 \x01(\r\x12\x0f\n\x07res_cnt\x18\x03 \x01(\r\x12\x12\n\nchg_reason\x18\x04 \x01(\r\x12\x1a\n\x12res_extern_param_1\x18\x05 \x01(\r\x12\x1a\n\x12res_extern_param_2\x18\x06 \x01(\r\x12\x1a\n\x12res_extern_param_3\x18\x07 \x01(\r\"D\n\x19SSDT_MAIL_SYSTEM_ACC_INFO\x12\'\n\x08\x61\x63\x63_info\x18\x01 \x03(\x0b\x32\x15.SSDT_MAIL_SYSTEM_ACC\"\x8c\x01\n\x1aSSDT_MAIL_REVENGE_ACC_INFO\x12\x15\n\ratk_role_name\x18\x01 \x01(\t\x12\x13\n\x0b\x61tk_role_id\x18\x02 \x01(\r\x12\x15\n\rlose_res_type\x18\x03 \x01(\r\x12\x13\n\x0blose_res_id\x18\x04 \x01(\r\x12\x16\n\x0elose_res_count\x18\x05 \x01(\x05\"O\n\x12SSDT_MAIL_ACC_INFO\x12\x0c\n\x04type\x18\x01 \x01(\r\x12+\n\rmail_acc_info\x18\x02 \x01(\x0b\x32\x14.UINON_MAIL_ACC_INFO\"\x8e\x02\n\x0eSSDT_MAIL_INFO\x12\x14\n\x0csend_rold_id\x18\x01 \x01(\r\x12\x16\n\x0esend_role_name\x18\x02 \x01(\t\x12\x0f\n\x07mail_id\x18\x03 \x01(\x04\x12\x11\n\tmail_type\x18\x04 \x01(\r\x12\x13\n\x0bmail_status\x18\x05 \x01(\r\x12\x12\n\nmail_title\x18\x06 \x01(\t\x12\x14\n\x0cmail_content\x18\x07 \x01(\t\x12\x16\n\x0email_send_time\x18\x08 \x01(\r\x12\x15\n\rmail_end_time\x18\t \x01(\r\x12\x15\n\rmail_acc_type\x18\n \x01(\r\x12%\n\x08mail_acc\x18\x0b \x01(\x0b\x32\x13.SSDT_MAIL_ACC_INFO\"\xa9\x01\n\x14SSDT_BRIEF_MAIL_INFO\x12\x0f\n\x07mail_id\x18\x01 \x01(\x04\x12\x11\n\tmail_type\x18\x02 \x01(\r\x12\x13\n\x0bmail_status\x18\x03 \x01(\r\x12\x12\n\nmail_title\x18\x04 \x01(\t\x12\x16\n\x0email_send_time\x18\x05 \x01(\r\x12\x15\n\rmail_end_time\x18\x06 \x01(\r\x12\x15\n\rmail_acc_type\x18\x07 \x01(\r\"~\n\x1aPKG_ROLELOGIN_GET_MAIL_REQ\x12\x0f\n\x07role_id\x18\x01 \x01(\r\x12\x0f\n\x07zone_id\x18\x02 \x01(\x05\x12\x12\n\nchannel_id\x18\x03 \x01(\r\x12\x13\n\x0b\x63lt_version\x18\x04 \x01(\t\x12\x15\n\ris_new_player\x18\x05 \x01(\x08\"\x85\x02\n\x1aPKG_ROLELOGIN_GET_MAIL_RES\x12\x0e\n\x06result\x18\x01 \x01(\x05\x12\x0f\n\x07role_id\x18\x02 \x01(\r\x12\x0f\n\x07zone_id\x18\x03 \x01(\x05\x12)\n\x10system_mail_info\x18\x04 \x03(\x0b\x32\x0f.SSDT_MAIL_INFO\x12*\n\x11revenge_mail_info\x18\x05 \x03(\x0b\x32\x0f.SSDT_MAIL_INFO\x12\x19\n\x11system_mail_count\x18\x06 \x01(\r\x12\x1a\n\x12revenge_mail_count\x18\x07 \x01(\r\x12\x12\n\nchannel_id\x18\x08 \x01(\r\x12\x13\n\x0b\x63lt_version\x18\t \x01(\t\",\n\x19PKG_ROLELOGOUT_TO_MAILSVR\x12\x0f\n\x07role_id\x18\x01 \x01(\r\"a\n\x11PKG_SEND_MAIL_REQ\x12\x14\n\x0crecv_role_id\x18\x01 \x01(\r\x12\"\n\tmail_info\x18\x02 \x01(\x0b\x32\x0f.SSDT_MAIL_INFO\x12\x12\n\nneed_first\x18\x03 \x01(\x08\"\x94\x01\n\x11PKG_SEND_MAIL_RES\x12\x0e\n\x06result\x18\x01 \x01(\x05\x12\x14\n\x0crecv_role_id\x18\x02 \x01(\r\x12\"\n\tmail_info\x18\x03 \x01(\x0b\x32\x0f.SSDT_MAIL_INFO\x12\x19\n\x11system_mail_count\x18\x04 \x01(\r\x12\x1a\n\x12revenge_mail_count\x18\x05 \x01(\r\":\n\x12SSDT_MAIL_CLR_INFO\x12\x0f\n\x07mail_id\x18\x01 \x01(\x04\x12\x13\n\x0bneed_delete\x18\x02 \x01(\r\"S\n\x19PKG_OVERTIME_MAIL_CLR_REQ\x12\x0f\n\x07role_id\x18\x01 \x01(\r\x12%\n\x08\x63lr_info\x18\x02 \x03(\x0b\x32\x13.SSDT_MAIL_CLR_INFO\"g\n\x19PKG_OVERTIME_MAIL_CLR_RES\x12\x0f\n\x07role_id\x18\x01 \x01(\r\x12\x1b\n\x13system_mail_id_list\x18\x02 \x03(\x04\x12\x1c\n\x14revenge_mail_id_list\x18\x03 \x03(\x04\";\n\x15PKG_GET_MAIL_LIST_REQ\x12\x0f\n\x07role_id\x18\x01 \x01(\r\x12\x11\n\tmail_type\x18\x02 \x01(\r\"\xae\x01\n\x15PKG_GET_MAIL_LIST_RES\x12\x0e\n\x06result\x18\x01 \x01(\x05\x12\x0f\n\x07role_id\x18\x02 \x01(\r\x12\x11\n\tmail_type\x18\x03 \x01(\r\x12/\n\x10system_mail_info\x18\x04 \x03(\x0b\x32\x15.SSDT_BRIEF_MAIL_INFO\x12\x30\n\x11revenge_mail_info\x18\x05 \x03(\x0b\x32\x15.SSDT_BRIEF_MAIL_INFO\";\n\x17PKG_GET_MAIL_DETAIL_REQ\x12\x0f\n\x07role_id\x18\x01 \x01(\r\x12\x0f\n\x07mail_id\x18\x02 \x01(\x04\"o\n\x17PKG_GET_MAIL_DETAIL_RES\x12\x0e\n\x06result\x18\x01 \x01(\x05\x12\x0f\n\x07role_id\x18\x02 \x01(\r\x12\x0f\n\x07mail_id\x18\x03 \x01(\x04\x12\"\n\tmail_info\x18\x04 \x01(\x0b\x32\x0f.SSDT_MAIL_INFO\"H\n\x11PKG_MAIL_READ_REQ\x12\x0f\n\x07role_id\x18\x01 \x01(\r\x12\x0f\n\x07mail_id\x18\x02 \x01(\x04\x12\x11\n\tmail_type\x18\x03 \x01(\r\"m\n\x11PKG_MAIL_READ_RES\x12\x0e\n\x06result\x18\x01 \x01(\x05\x12\x0f\n\x07role_id\x18\x02 \x01(\r\x12\x0f\n\x07mail_id\x18\x03 \x01(\x04\x12\x11\n\tmail_type\x18\x04 \x01(\r\x12\x13\n\x0bmail_status\x18\x05 \x01(\r\"8\n\x14PKG_MAIL_GET_ACC_REQ\x12\x0f\n\x07role_id\x18\x01 \x01(\r\x12\x0f\n\x07mail_id\x18\x02 \x01(\x04\"\xb5\x01\n\x14PKG_MAIL_GET_ACC_RES\x12\x0e\n\x06result\x18\x01 \x01(\x05\x12\x0f\n\x07role_id\x18\x02 \x01(\r\x12\x0f\n\x07mail_id\x18\x03 \x01(\x04\x12%\n\x08mail_acc\x18\x04 \x01(\x0b\x32\x13.SSDT_MAIL_ACC_INFO\x12\x1c\n\x14is_have_new_mail_add\x18\x05 \x01(\r\x12&\n\radd_mail_info\x18\x06 \x01(\x0b\x32\x0f.SSDT_MAIL_INFO\"7\n\x13PKG_MAIL_DELETE_REQ\x12\x0f\n\x07role_id\x18\x01 \x01(\r\x12\x0f\n\x07mail_id\x18\x02 \x01(\x04\"\xb5\x01\n\x13PKG_MAIL_DELETE_RES\x12\x0e\n\x06result\x18\x01 \x01(\x05\x12\x0f\n\x07role_id\x18\x02 \x01(\r\x12\x0f\n\x07mail_id\x18\x03 \x01(\x04\x12\x11\n\tmail_type\x18\x04 \x01(\r\x12\x13\n\x0bmail_status\x18\x05 \x01(\r\x12\x1c\n\x14is_have_new_mail_add\x18\x06 \x01(\r\x12&\n\radd_mail_info\x18\x07 \x01(\x0b\x32\x0f.SSDT_MAIL_INFO\"\xf8\x01\n\x14SSDT_GANGSIMPLE_INFO\x12\x11\n\tgang_name\x18\x01 \x01(\t\x12\x0f\n\x07gang_id\x18\x02 \x01(\r\x12\x18\n\x10gang_leader_name\x18\x03 \x01(\t\x12\x18\n\x10gang_apply_state\x18\x04 \x01(\r\x12\x12\n\ngang_level\x18\x05 \x01(\r\x12\x12\n\ngang_score\x18\x06 \x01(\r\x12\x15\n\rcond_rank_pos\x18\x07 \x01(\r\x12\x16\n\x0egang_mem_count\x18\x08 \x01(\r\x12\x13\n\x0bgang_notify\x18\t \x01(\t\x12\x1c\n\x14is_auto_apply_battle\x18\n \x01(\r\"=\n\x13SSDT_GANG_SELF_INFO\x12\x10\n\x08position\x18\x01 \x01(\r\x12\x14\n\x0c\x63ontribution\x18\x02 \x01(\r\"B\n\x17SSDT_GANG_MEM_BLOB_INFO\x12\'\n\x0fgang_bless_info\x18\x01 \x01(\x0b\x32\x0e.ST_BLESS_INFO\"\xfc\x01\n\x11SSDT_GANGMEM_INFO\x12\x13\n\x0bmem_role_id\x18\x01 \x01(\r\x12\x10\n\x08mem_name\x18\x02 \x01(\t\x12\x13\n\x0bmem_postion\x18\x03 \x01(\r\x12!\n\x19mem_gang_battle_win_score\x18\x04 \x01(\r\x12\x14\n\x0cmem_rank_pos\x18\x05 \x01(\r\x12\x17\n\x0flast_leave_time\x18\x06 \x01(\r\x12\x1c\n\x14\x63umulate_recharge_id\x18\x07 \x01(\r\x12\'\n\x0fgang_bless_info\x18\x08 \x01(\x0b\x32\x0e.ST_BLESS_INFO\x12\x12\n\nhead_photo\x18\t \x01(\r\"\xfd\x01\n\x12SSDT_GANGLIST_INFO\x12\x0f\n\x07gang_id\x18\x01 \x01(\r\x12\x11\n\tgang_name\x18\x02 \x01(\t\x12\x18\n\x10gang_leader_name\x18\x03 \x01(\t\x12\x18\n\x10gang_apply_state\x18\x04 \x01(\r\x12\x12\n\ngang_level\x18\x05 \x01(\r\x12\x18\n\x10is_in_apply_list\x18\x06 \x01(\r\x12\x12\n\ngang_score\x18\x07 \x01(\r\x12\x19\n\x11gang_avg_rank_pos\x18\x08 \x01(\r\x12\x16\n\x0egang_mem_count\x18\t \x01(\r\x12\x1a\n\x12gang_cond_rank_pos\x18\n \x01(\r\"\xc2\x01\n\x18SSDT_GANG_APPLYLIST_INFO\x12\x10\n\x08mem_name\x18\x01 \x01(\t\x12\x13\n\x0bmem_role_id\x18\x02 \x01(\r\x12\x12\n\napply_time\x18\x03 \x01(\r\x12\x14\n\x0cmem_rank_pos\x18\x04 \x01(\r\x12#\n\x1b\x61pplyer_gang_battle_win_cnt\x18\x05 \x01(\r\x12\x1c\n\x14\x63umulate_recharge_id\x18\x07 \x01(\r\x12\x12\n\nhead_photo\x18\x08 \x01(\r\"I\n\x1aSSDT_GANG_APPLYLIST_DBINFO\x12+\n\x08mem_info\x18\x01 \x03(\x0b\x32\x19.SSDT_GANG_APPLYLIST_INFO\"e\n\x10PKG_GANGLIST_REQ\x12\x0f\n\x07role_id\x18\x01 \x01(\r\x12\x15\n\rrole_rank_pos\x18\x02 \x01(\r\x12\x15\n\rpage_start_id\x18\x03 \x01(\r\x12\x12\n\npage_count\x18\x04 \x01(\r\"O\n\x10PKG_GANGLIST_RES\x12&\n\tgang_list\x18\x01 \x03(\x0b\x32\x13.SSDT_GANGLIST_INFO\x12\x13\n\x0btotal_count\x18\x02 \x01(\r\";\n\x17PKG_CMD_SEARCH_GANG_REQ\x12\x0f\n\x07gang_id\x18\x01 \x01(\r\x12\x0f\n\x07role_id\x18\x02 \x01(\r\"b\n\x17PKG_CMD_SEARCH_GANG_RES\x12\x0e\n\x06result\x18\x01 \x01(\x05\x12\x0f\n\x07gang_id\x18\x02 \x01(\r\x12&\n\tgang_info\x18\x03 \x01(\x0b\x32\x13.SSDT_GANGLIST_INFO\"\x9e\x01\n\x16PKG_ROLELOGIN_GANG_REQ\x12\x0f\n\x07role_id\x18\x01 \x01(\r\x12\x1d\n\x15gang_battle_win_score\x18\x02 \x01(\r\x12\x0f\n\x07zone_id\x18\x03 \x01(\x05\x12\x1c\n\x14\x63umulate_recharge_id\x18\x04 \x01(\r\x12\x12\n\nhead_photo\x18\x05 \x01(\r\x12\x11\n\trole_name\x18\x06 \x01(\t\"\xc0\x01\n\x16PKG_ROLELOGIN_GANG_RES\x12/\n\x10gang_simple_info\x18\x01 \x01(\x0b\x32\x15.SSDT_GANGSIMPLE_INFO\x12\'\n\tself_info\x18\x02 \x01(\x0b\x32\x14.SSDT_GANG_SELF_INFO\x12\x18\n\x10\x61pply_list_count\x18\x03 \x01(\r\x12\x14\n\x0cis_have_gang\x18\x04 \x01(\r\x12\x1c\n\x14last_leave_gang_time\x18\x05 \x01(\r\"\xf2\x01\n\x15SSDT_CREATE_GANG_INFO\x12\x11\n\tgang_name\x18\x01 \x01(\t\x12\x19\n\x11gang_creator_name\x18\x02 \x01(\t\x12\x13\n\x0bgang_notify\x18\x03 \x01(\t\x12\x1c\n\x14gang_creator_role_id\x18\x04 \x01(\r\x12\x15\n\ris_auto_apply\x18\x05 \x01(\r\x12\x15\n\rcond_rank_pos\x18\x06 \x01(\r\x12\x18\n\x10gang_create_time\x18\x07 \x01(\r\x12\x1c\n\x14\x63umulate_recharge_id\x18\x08 \x01(\r\x12\x12\n\nhead_photo\x18\t \x01(\r\"G\n\x13PKG_CREATE_GANG_REQ\x12\x30\n\x10\x63reate_gang_info\x18\x01 \x01(\x0b\x32\x16.SSDT_CREATE_GANG_INFO\"v\n&PKG_CREATE_GANG_NAME_RSP_FROM_NAME_SVR\x12\x1a\n\x12is_gang_name_exist\x18\x01 \x01(\x08\x12\x30\n\x10\x63reate_gang_info\x18\x02 \x01(\x0b\x32\x16.SSDT_CREATE_GANG_INFO\"\x87\x01\n)PKG_CREATE_GANG_NAME_RSP_FROM_ACCOUNT_SVR\x12\x0e\n\x06result\x18\x01 \x01(\x05\x12\x18\n\x10gang_id_generate\x18\x02 \x01(\r\x12\x30\n\x10\x63reate_gang_info\x18\x03 \x01(\x0b\x32\x16.SSDT_CREATE_GANG_INFO\"8\n\x13PKG_CREATE_GANG_RES\x12\x0e\n\x06result\x18\x01 \x01(\x05\x12\x11\n\tgang_name\x18\x02 \x01(\t\"t\n\x1ePKG_GANG_UPDATE_BASIC_INFO_REQ\x12\x0f\n\x07role_id\x18\x01 \x01(\r\x12\x13\n\x0bgang_notify\x18\x02 \x01(\t\x12\x15\n\ris_auto_apply\x18\x03 \x01(\r\x12\x15\n\rcond_rank_pos\x18\x04 \x01(\r\"0\n\x1ePKG_GANG_UPDATE_BASIC_INFO_RES\x12\x0e\n\x06result\x18\x01 \x01(\x05\"\x87\x02\n\x12PKG_APPLY_GANG_REQ\x12\x11\n\tgang_name\x18\x01 \x01(\t\x12\x0f\n\x07gang_id\x18\x02 \x01(\r\x12\x19\n\x11\x61pplyer_unique_id\x18\x03 \x01(\t\x12\x14\n\x0c\x61pplyer_name\x18\x04 \x01(\t\x12\x17\n\x0f\x61pplyer_role_id\x18\x05 \x01(\r\x12\x12\n\napply_time\x18\x06 \x01(\r\x12\x18\n\x10\x61pplyer_rank_pos\x18\x07 \x01(\r\x12#\n\x1b\x61pplyer_gang_battle_win_cnt\x18\x08 \x01(\r\x12\x1c\n\x14\x63umulate_recharge_id\x18\t \x01(\r\x12\x12\n\nhead_photo\x18\n \x01(\r\"\x7f\n\x12PKG_APPLY_GANG_RES\x12\x0e\n\x06result\x18\x01 \x01(\x05\x12\x0f\n\x07gang_id\x18\x02 \x01(\r\x12\x16\n\x0eleader_role_id\x18\x03 \x01(\r\x12\x16\n\x0eleader_zone_id\x18\x04 \x01(\x05\x12\x18\n\x10\x61pply_list_count\x18\x05 \x01(\r\"\x87\x01\n\x1bPKG_APPLY_GANG_AUTOJOIN_RES\x12\x0e\n\x06result\x18\x01 \x01(\x05\x12/\n\x10gang_simple_info\x18\x02 \x01(\x0b\x32\x15.SSDT_GANGSIMPLE_INFO\x12\'\n\tself_info\x18\x03 \x01(\x0b\x32\x14.SSDT_GANG_SELF_INFO\"L\n\x1cPKG_TRANSFER_GANG_LEADER_REQ\x12\x16\n\x0etarget_role_id\x18\x01 \x01(\r\x12\x14\n\x0cself_role_id\x18\x02 \x01(\r\".\n\x1cPKG_TRANSFER_GANG_LEADER_RES\x12\x0e\n\x06result\x18\x01 \x01(\x05\"$\n\x11PKG_QUIT_GANG_REQ\x12\x0f\n\x07role_id\x18\x01 \x01(\r\"4\n\x11PKG_QUIT_GANG_RES\x12\x0e\n\x06result\x18\x01 \x01(\x05\x12\x0f\n\x07role_id\x18\x02 \x01(\r\"\'\n\x14PKG_GANG_MEMLIST_REQ\x12\x0f\n\x07gang_id\x18\x01 \x01(\r\"^\n\x14PKG_GANG_MEMLIST_RES\x12\x0e\n\x06result\x18\x01 \x01(\x05\x12\x0f\n\x07gang_id\x18\x02 \x01(\r\x12%\n\tlist_info\x18\x03 \x03(\x0b\x32\x12.SSDT_GANGMEM_INFO\"&\n\x13PKG_GANG_DETAIL_REQ\x12\x0f\n\x07gang_id\x18\x01 \x01(\r\"\x8e\x01\n\x13PKG_GANG_DETAIL_RES\x12\x0e\n\x06result\x18\x01 \x01(\x05\x12\x0f\n\x07gang_id\x18\x02 \x01(\r\x12/\n\x10gang_simple_info\x18\x03 \x01(\x0b\x32\x15.SSDT_GANGSIMPLE_INFO\x12%\n\tlist_info\x18\x04 \x03(\x0b\x32\x12.SSDT_GANGMEM_INFO\"\x83\x01\n\x19PKG_GANG_MEM_LIST_CHG_RES\x12\x0b\n\x03\x64\x65l\x18\x01 \x01(\r\x12\x10\n\x08\x64\x65l_type\x18\x02 \x01(\r\x12\x0b\n\x03\x61\x64\x64\x18\x03 \x01(\r\x12$\n\x08mem_info\x18\x04 \x01(\x0b\x32\x12.SSDT_GANGMEM_INFO\x12\x14\n\x0cgang_mem_cnt\x18\x05 \x01(\r\"0\n\x1dPKG_GANG_BLESS_RANK_CLEAR_RES\x12\x0f\n\x07gang_id\x18\x01 \x01(\r\"\x8b\x01\n\x1bPKG_GANG_BASIC_INFO_CHG_RES\x12\x13\n\x0bgang_notify\x18\x01 \x01(\t\x12\x18\n\x10gang_apply_state\x18\x02 \x01(\r\x12\x15\n\rcond_rank_pos\x18\x03 \x01(\r\x12\x12\n\ngang_score\x18\x04 \x01(\r\x12\x12\n\ngang_level\x18\x05 \x01(\r\"\x92\x01\n\x19PKG_GANG_MEM_INFO_CHG_REQ\x12\x0f\n\x07role_id\x18\x01 \x01(\r\x12\x0c\n\x04type\x18\x02 \x01(\r\x12\x0e\n\x06reason\x18\x03 \x01(\r\x12\x0f\n\x07value_1\x18\x04 \x01(\r\x12\x0f\n\x07value_2\x18\x05 \x01(\r\x12$\n\x0c\x62less_reslut\x18\x06 \x01(\x0b\x32\x0e.ST_BLESS_INFO\"D\n\x13PKG_GANG_MEMCHG_RES\x12\x0e\n\x06result\x18\x01 \x01(\x05\x12\x0c\n\x04type\x18\x02 \x01(\r\x12\x0f\n\x07value_1\x18\x03 \x01(\r\")\n\x16PKG_GANG_APPLYLIST_REQ\x12\x0f\n\x07role_id\x18\x01 \x01(\r\"G\n\x16PKG_GANG_APPLYLIST_RES\x12-\n\napply_list\x18\x01 \x03(\x0b\x32\x19.SSDT_GANG_APPLYLIST_INFO\"M\n\x14PKG_GANG_APPROVE_REQ\x12\x0f\n\x07iresult\x18\x01 \x01(\x05\x12\x0f\n\x07role_id\x18\x02 \x01(\r\x12\x13\n\x0bmem_role_id\x18\x03 \x01(\r\"\xcb\x01\n\x14PKG_GANG_APPROVE_RES\x12\x0e\n\x06result\x18\x01 \x01(\x05\x12\x10\n\x08mem_name\x18\x02 \x01(\t\x12\x0f\n\x07role_id\x18\x03 \x01(\r\x12\x0c\n\x04type\x18\x04 \x01(\r\x12/\n\x10gang_simple_info\x18\x05 \x01(\x0b\x32\x15.SSDT_GANGSIMPLE_INFO\x12\'\n\tself_info\x18\x06 \x01(\x0b\x32\x14.SSDT_GANG_SELF_INFO\x12\x18\n\x10\x61pply_list_count\x18\x07 \x01(\r\"\x97\x01\n\x19PKG_GANG_APPROVETOMEM_RES\x12\x0e\n\x06result\x18\x01 \x01(\x05\x12\x10\n\x08mem_name\x18\x02 \x01(\t\x12/\n\x10gang_simple_info\x18\x03 \x01(\x0b\x32\x15.SSDT_GANGSIMPLE_INFO\x12\'\n\tself_info\x18\x04 \x01(\x0b\x32\x14.SSDT_GANG_SELF_INFO\"z\n\x11PKG_GANG_CHAT_REQ\x12\x0f\n\x07gang_id\x18\x01 \x01(\r\x12\x0f\n\x07role_id\x18\x02 \x01(\r\x12\x11\n\tfrom_name\x18\x03 \x01(\t\x12\x0b\n\x03msg\x18\x04 \x01(\t\x12#\n\x1bsender_cumulate_recharge_id\x18\x05 \x01(\r\"\x81\x01\n\x11PKG_GANG_CHAT_RES\x12\x11\n\tfrom_name\x18\x01 \x01(\t\x12\x14\n\x0c\x66rom_role_id\x18\x04 \x01(\r\x12\x0b\n\x03msg\x18\x02 \x01(\t\x12\x11\n\tsend_time\x18\x03 \x01(\r\x12#\n\x1bsender_cumulate_recharge_id\x18\x05 \x01(\r\"B\n\x15PKG_GANG_KICK_MEM_REQ\x12\x0f\n\x07role_id\x18\x01 \x01(\r\x12\x18\n\x10kick_mem_role_id\x18\x02 \x01(\r\"Q\n\x15PKG_GANG_KICK_MEM_RES\x12\x0e\n\x06result\x18\x01 \x01(\x05\x12\x13\n\x0bmem_role_id\x18\x02 \x01(\r\x12\x13\n\x0bmem_zone_id\x18\x03 \x01(\x05\"U\n\x16PKG_GANG_SET_ELDER_REQ\x12\x0f\n\x07role_id\x18\x01 \x01(\r\x12\x13\n\x0bmem_role_id\x18\x02 \x01(\r\x12\x15\n\rset_or_cancle\x18\x03 \x01(\r\"=\n\x16PKG_GANG_SET_ELDER_RES\x12\x0e\n\x06result\x18\x01 \x01(\x05\x12\x13\n\x0bmem_role_id\x18\x02 \x01(\r\"+\n\x18PKG_LOGOUT_UPDZONEID_REQ\x12\x0f\n\x07role_id\x18\x01 \x01(\r\"/\n\x0bMemZoneInfo\x12\x0f\n\x07role_id\x18\x01 \x01(\r\x12\x0f\n\x07zone_id\x18\x02 \x01(\x05\"+\n\x18PKG_GANG_BLESS_CHECK_REQ\x12\x0f\n\x07role_id\x18\x01 \x01(\r\"C\n\x18PKG_GANG_BLESS_CHECK_RES\x12\x0e\n\x06result\x18\x01 \x01(\x05\x12\x17\n\x0fmax_bless_count\x18\x02 \x01(\r\">\n\'PKG_SET_GANG_AUTO_APPLY_GANG_BATTLE_REQ\x12\x13\n\x0bmem_role_id\x18\x01 \x01(\r\"G\n\'PKG_SET_GANG_AUTO_APPLY_GANG_BATTLE_RES\x12\x1c\n\x14is_auto_apply_battle\x18\x01 \x01(\x05\"[\n\x1fPKG_PLAYER_HERO_CHG_TO_GANG_REQ\x12\x0f\n\x07role_id\x18\x01 \x01(\r\x12\'\n\thero_info\x18\x04 \x03(\x0b\x32\x14.ST_HERO_BATTLE_INFO\"\xbf\x01\n\'PKG_SET_GANG_CITY_STRONG_POINT_HERO_REQ\x12\x13\n\x0bmem_role_id\x18\x01 \x01(\r\x12\x10\n\x08\x63hg_type\x18\x02 \x01(\x05\x12\x0f\n\x07\x63ity_id\x18\x03 \x01(\r\x12\x1a\n\x12strong_point_index\x18\x04 \x01(\x05\x12\x17\n\x0fhero_slot_index\x18\x05 \x01(\x05\x12\'\n\thero_info\x18\x06 \x01(\x0b\x32\x14.ST_HERO_BATTLE_INFO\"9\n\'PKG_SET_GANG_CITY_STRONG_POINT_HERO_RES\x12\x0e\n\x06result\x18\x01 \x01(\x05\"\xba\x01\n\'PKG_GANG_CITY_STRONG_POINT_HERO_CHG_RES\x12\x10\n\x08\x63hg_type\x18\x01 \x01(\x05\x12\x0f\n\x07\x63ity_id\x18\x02 \x01(\r\x12\x1a\n\x12strong_point_index\x18\x03 \x01(\x05\x12\x17\n\x0fhero_slot_index\x18\x04 \x01(\x05\x12\x37\n\thero_info\x18\x05 \x01(\x0b\x32$.ST_GANG_CITY_STRONG_POINT_HERO_INFO\"1\n\x1aPKG_GET_GANG_CITY_INFO_REQ\x12\x13\n\x0bmem_role_id\x18\x01 \x01(\r\"N\n\x1aPKG_GET_GANG_CITY_INFO_RES\x12\x0e\n\x06result\x18\x01 \x01(\x05\x12 \n\tcity_info\x18\x02 \x01(\x0b\x32\r.ST_GANG_CITY\"9\n(PKG_BROAD_GANG_BATTTLE_STATE_TO_GANG_SVR\x12\r\n\x05state\x18\x01 \x01(\r\",\n\x19PKG_APPLY_GANG_BATTLE_REQ\x12\x0f\n\x07role_id\x18\x01 \x01(\r\"\xf2\x02\n(PKG_APPLY_GANG_BATTLE_REQ_TO_GANG_BATTLE\x12\x0f\n\x07gang_id\x18\x01 \x01(\r\x12\x0f\n\x07role_id\x18\x02 \x01(\r\x12\x10\n\x08world_id\x18\x03 \x01(\x05\x12\x11\n\tgang_name\x18\x04 \x01(\t\x12\x12\n\ngang_level\x18\x05 \x01(\r\x12\x12\n\ngang_score\x18\x06 \x01(\r\x12*\n\x08mem_list\x18\x07 \x01(\x0b\x32\x18.ST_GANG_BATTLE_MEM_LIST\x12\x14\n\x0cis_send_city\x18\x08 \x01(\x08\x12\x1c\n\x14small_city_start_pos\x18\t \x01(\x05\x12\x1f\n\x17moderate_city_start_pos\x18\n \x01(\x05\x12\x1a\n\x12\x62ig_city_start_pos\x18\x0b \x01(\x05\x12 \n\tcity_info\x18\x0c \x01(\x0b\x32\r.ST_GANG_CITY\x12\x18\n\x10is_send_city_end\x18\r \x01(\x08\"m\n*PKG_APPLY_GANG_BATTLE_RES_FROM_GANG_BATTLE\x12\x0e\n\x06result\x18\x01 \x01(\r\x12\x0f\n\x07role_id\x18\x02 \x01(\r\x12\x0f\n\x07gang_id\x18\x03 \x01(\r\x12\r\n\x05state\x18\x04 \x01(\r\"+\n\x19PKG_APPLY_GANG_BATTLE_RES\x12\x0e\n\x06result\x18\x01 \x01(\r\",\n\x1bPKG_GANG_BATTLE_STATE_BROAD\x12\r\n\x05state\x18\x01 \x01(\r\"D\n\x1cPKG_GET_GANG_BATTLE_CITY_REQ\x12\x0f\n\x07gang_id\x18\x01 \x01(\r\x12\x13\n\x0bis_get_self\x18\x02 \x01(\x08\"\xe2\x01\n\x1cPKG_GET_GANG_BATTLE_CITY_RES\x12\x0e\n\x06result\x18\x01 \x01(\x05\x12\x13\n\x0bis_get_self\x18\x02 \x01(\x08\x12\x12\n\nself_score\x18\x03 \x01(\r\x12\x14\n\x0ctarget_score\x18\x04 \x01(\r\x12\x18\n\x10target_gang_name\x18\x05 \x01(\t\x12\x19\n\x11target_gang_level\x18\x06 \x01(\r\x12 \n\tcity_info\x18\x07 \x01(\x0b\x32\r.ST_GANG_CITY\x12\x1c\n\x14target_gang_world_id\x18\x08 \x01(\x05\"\x98\x01\n\x1eST_GANG_BATTLE_ATTACK_MEM_INFO\x12\x13\n\x0bmem_role_id\x18\x01 \x01(\r\x12\x17\n\x0f\x66ight_win_count\x18\x02 \x01(\r\x12\x19\n\x11\x66ight_total_count\x18\x03 \x01(\r\x12\x14\n\x0cpre_get_gold\x18\x04 \x01(\r\x12\x17\n\x0fpre_get_crystal\x18\x05 \x01(\r\"\xcc\x01\n!PKG_GANG_BATTLE_TOTAL_BALANCE_REQ\x12\x0f\n\x07gang_id\x18\x01 \x01(\r\x12\x10\n\x08is_match\x18\x02 \x01(\x08\x12\x19\n\x11self_battle_score\x18\x03 \x01(\r\x12\x1b\n\x13target_battle_score\x18\x04 \x01(\r\x12\x19\n\x11target_gang_score\x18\x05 \x01(\r\x12\x31\n\x08mem_info\x18\x06 \x03(\x0b\x32\x1f.ST_GANG_BATTLE_ATTACK_MEM_INFO\"\xc1\x01\n,PKG_BROAD_GANG_BATTTLE_POINT_CHG_TO_GANG_SVR\x12\x0f\n\x07gang_id\x18\x01 \x01(\r\x12\x12\n\nself_score\x18\x02 \x01(\r\x12\x14\n\x0ctarget_score\x18\x03 \x01(\r\x12\x0f\n\x07\x63ity_id\x18\x04 \x01(\r\x12\x1a\n\x12strong_point_index\x18\x05 \x01(\x05\x12\x13\n\x0bpoint_state\x18\x06 \x01(\r\x12\x14\n\x0cis_self_city\x18\x07 \x01(\x08\"\xa0\x01\n\x1cPKG_GANG_BATTTLE_POINT_BROAD\x12\x12\n\nself_score\x18\x01 \x01(\r\x12\x14\n\x0ctarget_score\x18\x02 \x01(\r\x12\x14\n\x0cis_self_city\x18\x03 \x01(\x08\x12\x0f\n\x07\x63ity_id\x18\x04 \x01(\r\x12\x1a\n\x12strong_point_index\x18\x05 \x01(\x05\x12\x13\n\x0bpoint_state\x18\x06 \x01(\r\"\x96\x01\n!PKG_ENTER_GANG_BATTLE_DUNGEON_REQ\x12\x0f\n\x07gang_id\x18\x01 \x01(\r\x12\x0f\n\x07role_id\x18\x02 \x01(\r\x12\x14\n\x0cself_hero_id\x18\x03 \x01(\r\x12\x16\n\x0etarget_city_id\x18\x05 \x01(\r\x12!\n\x19target_strong_point_index\x18\x06 \x01(\x05\"\xe9\x01\n!PKG_ENTER_GANG_BATTLE_DUNGEON_RES\x12\x0e\n\x06result\x18\x01 \x01(\x05\x12\x14\n\x0cself_hero_id\x18\x02 \x01(\r\x12\x16\n\x0etarget_gang_id\x18\x03 \x01(\r\x12\x16\n\x0etarget_city_id\x18\x04 \x01(\r\x12!\n\x19target_strong_point_index\x18\x05 \x01(\x05\x12K\n\x1dtarget_strong_point_hero_info\x18\x06 \x03(\x0b\x32$.ST_GANG_CITY_STRONG_POINT_HERO_INFO\"\xb6\x01\n\x1bPKG_GANG_BATTLE_BALANCE_REQ\x12\x0f\n\x07gang_id\x18\x01 \x01(\r\x12\x0f\n\x07role_id\x18\x02 \x01(\r\x12\x14\n\x0cself_hero_id\x18\x03 \x01(\r\x12\x14\n\x0cself_hero_lv\x18\x04 \x01(\r\x12\x16\n\x0etarget_city_id\x18\x05 \x01(\r\x12!\n\x19target_strong_point_index\x18\x06 \x01(\x05\x12\x0e\n\x06is_win\x18\x07 \x01(\x08\"Z\n\x1bPKG_GANG_BATTLE_BALANCE_RES\x12\x0e\n\x06result\x18\x01 \x01(\x05\x12\x13\n\x0breward_gold\x18\x02 \x01(\r\x12\x16\n\x0ereward_crystal\x18\x03 \x01(\r\"\xcf\x01\n+PKG_GANG_STRONG_POINT_CHG_TO_GANGBATTLE_REQ\x12\x0f\n\x07gang_id\x18\x01 \x01(\r\x12\x10\n\x08\x63hg_type\x18\x02 \x01(\x05\x12\x0f\n\x07\x63ity_id\x18\x03 \x01(\r\x12\x1a\n\x12strong_point_index\x18\x04 \x01(\x05\x12\x17\n\x0fhero_slot_index\x18\x05 \x01(\x05\x12\x37\n\thero_info\x18\x06 \x01(\x0b\x32$.ST_GANG_CITY_STRONG_POINT_HERO_INFO\"\x87\x01\n\"PKG_GANG_MEM_CHG_TO_GANGBATTLE_REQ\x12\x0f\n\x07gang_id\x18\x01 \x01(\r\x12\x0f\n\x07role_id\x18\x02 \x01(\r\x12\x11\n\trole_name\x18\x03 \x01(\t\x12\x1c\n\x14\x63umulate_recharge_id\x18\x04 \x01(\r\x12\x0e\n\x06is_add\x18\x05 \x01(\x08\":\n\'PKG_GET_GANG_BATTLE_MEM_ATTACK_INFO_REQ\x12\x0f\n\x07gang_id\x18\x01 \x01(\r\"r\n\'PKG_GET_GANG_BATTLE_MEM_ATTACK_INFO_RES\x12\x0e\n\x06result\x18\x01 \x01(\x05\x12\x37\n\x0emem_attck_info\x18\x02 \x01(\x0b\x32\x1f.ST_GANG_BATTLE_MEM_ATTACK_LIST\"W\n\"PKG_GET_GANG_BATTLE_STATE_INFO_REQ\x12\x0f\n\x07role_id\x18\x01 \x01(\r\x12\x0f\n\x07gang_id\x18\x02 \x01(\r\x12\x0f\n\x07hero_id\x18\x03 \x03(\r\"t\n\"PKG_GET_GANG_BATTLE_STATE_INFO_RES\x12\x17\n\x0fis_battle_start\x18\x01 \x01(\x08\x12\x17\n\x0f\x61ttack_hero_num\x18\x02 \x01(\r\x12\x1c\n\x14has_can_attack_point\x18\x03 \x01(\x08\"\xfc\x03\n\x15GANG_BROADCAST_DETAIL\x12:\n\x14gang_simple_info_chg\x18\x01 \x01(\x0b\x32\x1c.PKG_GANG_BASIC_INFO_CHG_RES\x12\x35\n\x11gang_mem_list_chg\x18\x02 \x01(\x0b\x32\x1a.PKG_GANG_MEM_LIST_CHG_RES\x12)\n\rgang_chat_msg\x18\x03 \x01(\x0b\x32\x12.PKG_GANG_CHAT_RES\x12?\n\rgang_city_chg\x18\x04 \x01(\x0b\x32(.PKG_GANG_CITY_STRONG_POINT_HERO_CHG_RES\x12L\n\x1agang_auto_apply_battle_chg\x18\x05 \x01(\x0b\x32(.PKG_SET_GANG_AUTO_APPLY_GANG_BATTLE_RES\x12\x37\n\x11gang_battle_state\x18\x06 \x01(\x0b\x32\x1c.PKG_GANG_BATTLE_STATE_BROAD\x12>\n\x17gang_battle_point_state\x18\x07 \x01(\x0b\x32\x1d.PKG_GANG_BATTTLE_POINT_BROAD\x12=\n\x15gang_bless_rank_clear\x18\x08 \x01(\x0b\x32\x1e.PKG_GANG_BLESS_RANK_CLEAR_RES\"q\n\x12PKG_GANG_BROADCAST\x12#\n\rmem_name_list\x18\x01 \x03(\x0b\x32\x0c.MemZoneInfo\x12\x0e\n\x06msg_id\x18\x02 \x01(\r\x12&\n\x06\x64\x65tail\x18\x03 \x01(\x0b\x32\x16.GANG_BROADCAST_DETAIL\"6\n#DB_GANG_BATTLE_MEM_ATTACK_HERO_INFO\x12\x0f\n\x07hero_id\x18\x01 \x01(\r\"\xb5\x02\n\x17\x44\x42_GANG_BATTLE_MEM_INFO\x12\x13\n\x0bmem_role_id\x18\x01 \x01(\r\x12\x10\n\x08mem_name\x18\x02 \x01(\t\x12\x17\n\x0f\x66ight_win_count\x18\x03 \x01(\r\x12\x19\n\x11\x66ight_total_count\x18\x04 \x01(\r\x12\x14\n\x0cpre_get_gold\x18\x05 \x01(\r\x12\x17\n\x0fpre_get_crystal\x18\x06 \x01(\r\x12\x1c\n\x14\x63umulate_recharge_id\x18\x07 \x01(\r\x12\x39\n\x0b\x61ttack_hero\x18\x08 \x03(\x0b\x32$.DB_GANG_BATTLE_MEM_ATTACK_HERO_INFO\x12\x37\n\x0c\x61ttack_point\x18\t \x03(\x0b\x32!.ST_GANG_BATTLE_ATTACK_POINT_INFO\"E\n\x17\x44\x42_GANG_BATTLE_MEM_LIST\x12*\n\x08mem_info\x18\x01 \x03(\x0b\x32\x18.DB_GANG_BATTLE_MEM_INFO\"\x92\x01\n\x1f\x44\x42_GANG_BATTLE_HISTORY_MEM_INFO\x12\x13\n\x0bmem_role_id\x18\x01 \x01(\r\x12\x10\n\x08mem_name\x18\x02 \x01(\t\x12\x13\n\x0bmem_win_cnt\x18\x03 \x01(\r\x12\x15\n\rmem_total_cnt\x18\x04 \x01(\r\x12\x1c\n\x14\x63umulate_recharge_id\x18\x05 \x01(\r\"Z\n\x1f\x44\x42_GANG_BATTLE_HISTORY_MEM_LIST\x12\x37\n\rgang_mem_list\x18\x01 \x03(\x0b\x32 .DB_GANG_BATTLE_HISTORY_MEM_INFO\"\x8a\x02\n\x1dSSDT_GANG_BATTLE_HISTORY_INFO\x12\x13\n\x0b\x62\x61ttle_time\x18\x01 \x01(\r\x12\x12\n\ngang_level\x18\x02 \x01(\r\x12\x17\n\x0f\x64\x65\x66\x65nse_gang_id\x18\x03 \x01(\r\x12\x19\n\x11\x64\x65\x66\x65nse_gang_name\x18\x04 \x01(\t\x12\x1a\n\x12\x64\x65\x66\x65nse_gang_level\x18\x05 \x01(\r\x12\x19\n\x11self_battle_score\x18\x06 \x01(\r\x12\x1c\n\x14\x64\x65\x66\x65nse_battle_score\x18\x07 \x01(\r\x12\x37\n\rmem_list_info\x18\x08 \x01(\x0b\x32 .DB_GANG_BATTLE_HISTORY_MEM_LIST\"A\n\x1dPKG_GET_GANG_BATTLE_STATE_REQ\x12\x0f\n\x07role_id\x18\x01 \x01(\r\x12\x0f\n\x07gang_id\x18\x02 \x01(\r\"\xbe\x01\n\x1dPKG_GET_GANG_BATTLE_STATE_RES\x12\r\n\x05state\x18\x01 \x01(\r\x12\x11\n\tsub_state\x18\x02 \x01(\r\x12\x14\n\x0cpre_get_gold\x18\x03 \x01(\r\x12\x17\n\x0fpre_get_crystal\x18\x04 \x01(\r\x12\x13\n\x0b\x61ttack_hero\x18\x05 \x03(\r\x12\x37\n\x0c\x61ttack_point\x18\x06 \x03(\x0b\x32!.ST_GANG_BATTLE_ATTACK_POINT_INFO\"2\n\x1fPKG_GET_GANG_BATTLE_HISTORY_REQ\x12\x0f\n\x07gang_id\x18\x01 \x01(\r\"W\n\x1fPKG_GET_GANG_BATTLE_HISTORY_RES\x12\x34\n\x0chistory_info\x18\x01 \x03(\x0b\x32\x1e.SSDT_GANG_BATTLE_HISTORY_INFO\"\\\n\x1cSSDT_GANG_MEM_MAIL_USER_INFO\x12\x13\n\x0bmem_role_id\x18\x01 \x01(\r\x12\'\n\x08\x61\x63\x63_info\x18\x02 \x03(\x0b\x32\x15.SSDT_MAIL_SYSTEM_ACC\"\x92\x01\n\x1aPKG_GANG_SEND_MEM_MAIL_REQ\x12\x10\n\x08is_match\x18\x01 \x01(\x08\x12\x0f\n\x07is_draw\x18\x02 \x01(\x08\x12\x0e\n\x06is_win\x18\x03 \x01(\x08\x12\x0f\n\x07is_lose\x18\x04 \x01(\x08\x12\x30\n\tuser_info\x18\x05 \x03(\x0b\x32\x1d.SSDT_GANG_MEM_MAIL_USER_INFO\",\n\rSSDT_RANK_VAL\x12\x0e\n\x06val_id\x18\x01 \x01(\r\x12\x0b\n\x03val\x18\x02 \x01(\r\"Z\n\x1bSSDT_RANK_BATTLE_HERO_BRIEF\x12\x0f\n\x07hero_id\x18\x01 \x01(\r\x12\x0f\n\x07hero_lv\x18\x02 \x01(\r\x12\x19\n\x11\x66ighting_capacity\x18\x03 \x01(\r\"\xe1\x01\n\x15SSDT_PLAYER_BASE_INFO\x12\x0f\n\x07role_id\x18\x01 \x01(\r\x12\x11\n\trole_name\x18\x02 \x01(\t\x12\x12\n\nrole_level\x18\x03 \x01(\r\x12\x1c\n\x14\x63umulate_recharge_id\x18\x04 \x01(\r\x12\x36\n\x10rank_battle_hero\x18\x05 \x03(\x0b\x32\x1c.SSDT_RANK_BATTLE_HERO_BRIEF\x12\x10\n\x08is_robot\x18\x06 \x01(\x08\x12\x16\n\x0e\x66ight_capacity\x18\x07 \x01(\r\x12\x10\n\x08world_id\x18\x08 \x01(\x05\"\xaa\x01\n\x13SSDT_GANG_BASE_INFO\x12\x0f\n\x07gang_id\x18\x01 \x01(\r\x12\x11\n\tgang_name\x18\x02 \x01(\t\x12\x12\n\ngang_level\x18\x03 \x01(\r\x12\x18\n\x10leader_unique_id\x18\x04 \x01(\t\x12\x16\n\x0eleader_role_id\x18\x05 \x01(\r\x12\x13\n\x0bleader_name\x18\x06 \x01(\t\x12\x14\n\x0cleader_level\x18\x07 \x01(\r\"\x8b\x01\n\x0eSSDT_RANK_DATA\x12\x16\n\x0erank_base_type\x18\x01 \x01(\r\x12+\n\x0erank_base_info\x18\x02 \x01(\x0b\x32\x13.SSDT_RANK_BASEINFO\x12\x12\n\nrank_trend\x18\x03 \x01(\r\x12 \n\x08rank_val\x18\x04 \x03(\x0b\x32\x0e.SSDT_RANK_VAL\"\x8e\x01\n\x16SSPKG_GET_RANKLIST_REQ\x12\x12\n\nflush_time\x18\x01 \x01(\r\x12\x0f\n\x07rank_id\x18\x02 \x01(\r\x12\x11\n\trank_type\x18\x03 \x01(\r\x12\x15\n\rpage_start_id\x18\x04 \x01(\r\x12\x12\n\npage_count\x18\x05 \x01(\r\x12\x11\n\tbattle_id\x18\x06 \x01(\x05\"\xee\x01\n\x16SSPKG_GET_RANKLIST_RES\x12\x0e\n\x06result\x18\x01 \x01(\r\x12\x12\n\nflush_time\x18\x03 \x01(\r\x12\x0f\n\x07rank_id\x18\x05 \x01(\r\x12\x11\n\trank_type\x18\x06 \x01(\r\x12\x11\n\trank_yday\x18\x07 \x01(\r\x12\x13\n\x0btotal_count\x18\x08 \x01(\r\x12\x15\n\rpage_start_id\x18\t \x01(\r\x12\x16\n\x0emax_show_count\x18\n \x01(\r\x12\"\n\trank_list\x18\x0b \x03(\x0b\x32\x0f.SSDT_RANK_DATA\x12\x11\n\tbattle_id\x18\x0c \x01(\x05\"\x90\x01\n\x15SSPKG_GET_RANKPOS_REQ\x12\x0f\n\x07rank_id\x18\x01 \x01(\r\x12\x11\n\trank_type\x18\x02 \x01(\r\x12\x13\n\x0bsearch_type\x18\x03 \x01(\r\x12,\n\nsearch_key\x18\x04 \x01(\x0b\x32\x18.SSDT_RANKPOS_SEARCH_KEY\x12\x10\n\x08world_id\x18\x05 \x01(\x05\"\x99\x01\n\x15SSPKG_GET_RANKPOS_RES\x12\x0f\n\x07rank_id\x18\x01 \x01(\r\x12\x11\n\trank_type\x18\x02 \x01(\r\x12\x13\n\x0bsearch_type\x18\x03 \x01(\r\x12\x11\n\trank_yday\x18\x04 \x01(\r\x12\x10\n\x08rank_pos\x18\x05 \x01(\r\x12\"\n\trank_info\x18\x06 \x01(\x0b\x32\x0f.SSDT_RANK_DATA\"\xb1\x01\n\"SSPKG_UPDATE_ACHIEVEMENT_SCORE_REQ\x12\x0b\n\x03uid\x18\x01 \x01(\r\x12\x11\n\trole_name\x18\x02 \x01(\t\x12\x12\n\nrole_level\x18\x03 \x01(\r\x12\x1c\n\x14\x63umulate_recharge_id\x18\x04 \x01(\r\x12\x1e\n\x16\x61\x63hievement_finish_num\x18\x05 \x01(\r\x12\x19\n\x11\x61\x63hievement_score\x18\x06 \x01(\r\"\xa2\x01\n\x1bSSPKG_UPDATE_GANG_SCORE_REQ\x12\x0b\n\x03uid\x18\x01 \x01(\r\x12\x11\n\trole_name\x18\x02 \x01(\t\x12\x0f\n\x07gang_id\x18\x03 \x01(\r\x12\x11\n\tgang_name\x18\x04 \x01(\t\x12\x0f\n\x07gang_lv\x18\x05 \x01(\r\x12\x12\n\ngang_score\x18\x06 \x01(\r\x12\x1a\n\x12gang_history_score\x18\x07 \x01(\r\"\xb5\x01\n\x1fSSPKG_UPDATE_OFFLINE_BATTLE_REQ\x12\x0b\n\x03uid\x18\x01 \x01(\r\x12\x11\n\trole_name\x18\x02 \x01(\t\x12\x12\n\nrole_level\x18\x03 \x01(\r\x12\x1c\n\x14\x63umulate_recharge_id\x18\x04 \x01(\r\x12\x1f\n\x17offline_battle_title_lv\x18\x05 \x01(\r\x12\x1f\n\x17offline_battle_kill_num\x18\x06 \x01(\r\"\xb5\x01\n#SSPKG_UPDATE_ONLINE_BATTLE_RANK_REQ\x12\x0b\n\x03uid\x18\x01 \x01(\r\x12\x11\n\trole_name\x18\x02 \x01(\t\x12\x12\n\nrole_level\x18\x03 \x01(\r\x12\x1c\n\x14\x63umulate_recharge_id\x18\x04 \x01(\r\x12\x1b\n\x13online_battle_score\x18\x05 \x01(\r\x12\x1f\n\x17online_battle_win_count\x18\x06 \x01(\r\"\x9f\x01\n\'SSPKG_UPDATE_WORLD_BOSS_DAMAGE_RANK_REQ\x12\x0b\n\x03uid\x18\x01 \x01(\r\x12\x11\n\trole_name\x18\x02 \x01(\t\x12\x12\n\nrole_level\x18\x03 \x01(\r\x12\x1c\n\x14\x63umulate_recharge_id\x18\x04 \x01(\r\x12\x12\n\nboss_index\x18\x05 \x01(\r\x12\x0e\n\x06\x64\x61mage\x18\x06 \x01(\r\"\xaf\x01\n\x1dSSPKG_UPDATE_STEAL_BATTLE_REQ\x12\x0b\n\x03uid\x18\x01 \x01(\r\x12\x11\n\trole_name\x18\x02 \x01(\t\x12\x12\n\nrole_level\x18\x04 \x01(\r\x12\x1c\n\x14\x63umulate_recharge_id\x18\x05 \x01(\r\x12\x1c\n\x14steal_battle_win_cnt\x18\x06 \x01(\r\x12\x1e\n\x16steal_battle_total_cnt\x18\x07 \x01(\r\"\x9c\x01\n\x18SSPKG_UPDATE_ENDLESS_REQ\x12\x0b\n\x03uid\x18\x01 \x01(\r\x12\x11\n\trole_name\x18\x02 \x01(\t\x12\x12\n\nrole_level\x18\x04 \x01(\r\x12\x1c\n\x14\x63umulate_recharge_id\x18\x05 \x01(\r\x12\x16\n\x0e\x65nd_less_score\x18\x06 \x01(\r\x12\x16\n\x0e\x65nd_less_floor\x18\x07 \x01(\r\"\x93\x01\n#SSPKG_UPDATE_PVE_EVALUATE_STATS_REQ\x12\x0b\n\x03uid\x18\x01 \x01(\r\x12\x11\n\trole_name\x18\x02 \x01(\t\x12\x12\n\nrole_level\x18\x04 \x01(\r\x12\x1c\n\x14\x63umulate_recharge_id\x18\x05 \x01(\r\x12\x1a\n\x12pve_evaluate_stars\x18\x06 \x01(\r\"<\n\x1aSSPKG_RANK_CHANGE_NAME_REQ\x12\x0b\n\x03uid\x18\x01 \x01(\r\x12\x11\n\trole_name\x18\x02 \x01(\t\"\xcc\x01\n\x14SSDT_RANK_ONE_UPDATE\x12\x0f\n\x07rank_id\x18\x01 \x01(\r\x12\x16\n\x0e\x66lush_day_time\x18\x02 \x01(\r\x12\x1b\n\x13next_flush_day_time\x18\x03 \x01(\r\x12\x17\n\x0f\x66lush_week_time\x18\x04 \x01(\r\x12\x1c\n\x14next_flush_week_time\x18\x05 \x01(\r\x12\x18\n\x10\x66lush_month_time\x18\x06 \x01(\r\x12\x1d\n\x15next_flush_month_time\x18\x07 \x01(\r\"U\n\x1aSSPKG_RANK_UPDATE_INFO_REQ\x12\x0f\n\x07op_type\x18\x01 \x01(\r\x12\x12\n\nparam_int1\x18\x02 \x01(\r\x12\x12\n\nparam_int2\x18\x03 \x01(\r\"L\n\x1aSSPKG_RANK_UPDATE_INFO_RES\x12.\n\x0frank_one_update\x18\x01 \x03(\x0b\x32\x15.SSDT_RANK_ONE_UPDATE\"\x86\x01\n\x19SSPKG_RANKDATA_REPORT_REQ\x12\x16\n\x0erank_base_type\x18\x01 \x01(\r\x12+\n\x0erank_base_info\x18\x02 \x01(\x0b\x32\x13.SSDT_RANK_BASEINFO\x12$\n\trank_data\x18\x03 \x03(\x0b\x32\x11.DBBLOB_RANK_DATA\"W\n\x1bSSPKG_GET_GANG_RANKSTAT_REQ\x12\x0f\n\x07gang_id\x18\x01 \x01(\r\x12\x0f\n\x07rank_id\x18\x02 \x01(\r\x12\x16\n\x0erank_base_type\x18\x03 \x01(\r\"i\n\x1bSSPKG_GET_GANG_RANKSTAT_RES\x12\x0f\n\x07gang_id\x18\x01 \x01(\r\x12\x0f\n\x07rank_id\x18\x02 \x01(\r\x12\x16\n\x0erank_base_type\x18\x03 \x01(\r\x12\x10\n\x08rank_val\x18\x04 \x03(\r\"\xe3\x01\n\x1fSSPKG_RANK_BATTLE_ROLELOGIN_REQ\x12\x0f\n\x07role_id\x18\x01 \x01(\r\x12\x1c\n\x14\x63\x61n_join_rank_battle\x18\x02 \x01(\r\x12\x11\n\trole_name\x18\x03 \x01(\t\x12\x1c\n\x14\x63umulate_recharge_id\x18\x04 \x01(\r\x12\x34\n\x11\x64\x65\x66\x65nse_hero_info\x18\x05 \x01(\x0b\x32\x19.RANK_BATTLE_DEFENSE_DATA\x12\x12\n\nhead_photo\x18\x06 \x01(\r\x12\x16\n\x0e\x66ight_capacity\x18\x07 \x01(\r\"R\n\x1fSSPKG_RANK_BATTLE_ROLELOGIN_RES\x12\x10\n\x08rank_pos\x18\x01 \x01(\x05\x12\x1d\n\x15high_history_rank_pos\x18\x02 \x01(\x05\"9\n&SSPKG_RANK_BATTLE_GET_FIGHT_TARGET_REQ\x12\x0f\n\x07role_id\x18\x01 \x01(\r\"\xbc\x01\n\"SSDT_RANK_BATTLE_FIGHT_TARGET_INFO\x12\x0f\n\x07role_id\x18\x01 \x01(\r\x12\x11\n\trole_name\x18\x02 \x01(\t\x12\x10\n\x08rank_pos\x18\x03 \x01(\x05\x12\x34\n\x11\x64\x65\x66\x65nse_hero_info\x18\x04 \x01(\x0b\x32\x19.RANK_BATTLE_DEFENSE_DATA\x12\x12\n\nhead_photo\x18\x05 \x01(\r\x12\x16\n\x0e\x66ight_capacity\x18\x06 \x01(\r\"r\n&SSPKG_RANK_BATTLE_GET_FIGHT_TARGET_RES\x12\x0e\n\x06result\x18\x01 \x01(\x05\x12\x38\n\x0btarget_info\x18\x02 \x03(\x0b\x32#.SSDT_RANK_BATTLE_FIGHT_TARGET_INFO\"l\n#SSPKG_RANK_BATTLE_ENTER_DUNGEON_REQ\x12\x17\n\x0f\x64\x65\x66\x65nse_role_id\x18\x01 \x01(\r\x12\x18\n\x10\x61ttacker_role_id\x18\x02 \x01(\r\x12\x12\n\ndungeon_id\x18\x03 \x01(\r\"\x98\x01\n#SSPKG_RANK_BATTLE_ENTER_DUNGEON_RES\x12\x0e\n\x06result\x18\x01 \x01(\x05\x12\x12\n\ndungeon_id\x18\x02 \x01(\r\x12\x17\n\x0f\x64\x65\x66\x65nse_role_id\x18\x03 \x01(\r\x12\x34\n\x11\x64\x65\x66\x65nse_hero_info\x18\x04 \x01(\x0b\x32\x19.RANK_BATTLE_DEFENSE_DATA\"Q\n\x1cSSPKG_RANK_BATTLE_UNLOCK_REQ\x12\x18\n\x10\x61ttacker_role_id\x18\x01 \x01(\r\x12\x17\n\x0f\x64\x65\x66\x65nse_role_id\x18\x02 \x01(\r\"\xb4\x02\n\x1dSSPKG_RANK_BATTLE_BALANCE_REQ\x12\x1c\n\x14\x61ttacker_mem_role_id\x18\x01 \x01(\r\x12\x19\n\x11\x61ttacker_mem_name\x18\x02 \x01(\t\x12%\n\x1d\x61ttacker_cumulate_recharge_id\x18\x03 \x01(\r\x12\x41\n\x1e\x61ttacker_mem_defense_hero_info\x18\x04 \x01(\x0b\x32\x19.RANK_BATTLE_DEFENSE_DATA\x12\x1b\n\x13\x61ttacker_head_photo\x18\x05 \x01(\r\x12\x1b\n\x13\x64\x65\x66\x65nse_mem_role_id\x18\x06 \x01(\r\x12\x15\n\rbattle_result\x18\x07 \x03(\r\x12\x1f\n\x17\x61ttacker_fight_capacity\x18\x08 \x01(\r\"\xbf\x01\n\x1dSSPKG_RANK_BATTLE_BALANCE_RES\x12\x0e\n\x06result\x18\x01 \x01(\x05\x12\x1b\n\x13\x64\x65\x66\x65nse_mem_role_id\x18\x02 \x01(\r\x12\x0f\n\x07old_pos\x18\x03 \x01(\x05\x12\x0f\n\x07new_pos\x18\x04 \x01(\x05\x12\x12\n\nis_promote\x18\x05 \x01(\r\x12\x13\n\x0bhistory_pos\x18\x06 \x01(\x05\x12&\n\x0epromote_reward\x18\x07 \x03(\x0b\x32\x0e.ST_REWARD_RES\"h\n\x1fSSDT_RANK_BATTLE_MAIL_USER_INFO\x12\x13\n\x0bmem_role_id\x18\x01 \x01(\r\x12\x10\n\x08rank_pos\x18\x02 \x01(\x05\x12\x1e\n\x06reward\x18\x03 \x03(\x0b\x32\x0e.ST_REWARD_RES\"q\n%SSPKG_RANK_BATTLE_REWARD_EVERYDAY_REQ\x12\x33\n\tuser_info\x18\x01 \x03(\x0b\x32 .SSDT_RANK_BATTLE_MAIL_USER_INFO\x12\x13\n\x0b\x61\x63tivity_id\x18\x02 \x01(\r\"\x8f\x01\n$SSPKG_RANK_BATTLE_REWARD_PROMOTE_REQ\x12\x13\n\x0bmem_role_id\x18\x01 \x01(\r\x12\x14\n\x0crank_new_pos\x18\x02 \x01(\x05\x12\x14\n\x0crank_old_pos\x18\x03 \x01(\x05\x12&\n\x0epromote_reward\x18\x04 \x03(\x0b\x32\x0e.ST_REWARD_RES\"\xa7\x01\n%SSPKG_RANK_BATTLE_POS_DOWN_NOTIFY_REQ\x12\x13\n\x0bmem_role_id\x18\x01 \x01(\r\x12\x14\n\x0c\x61tk_mem_name\x18\x02 \x01(\t\x12\x17\n\x0f\x61tk_mem_role_id\x18\x03 \x01(\r\x12\x14\n\x0crank_new_pos\x18\x04 \x01(\x05\x12\x14\n\x0crank_old_pos\x18\x05 \x01(\x05\x12\x0e\n\x06is_win\x18\x06 \x01(\r\";\n\x12PKG_GET_NOTIFY_REQ\x12\x0b\n\x03uid\x18\x01 \x01(\r\x12\x18\n\x10\x63ur_max_beg_time\x18\x02 \x01(\r\"?\n\x0fPKG_NOTIFY_DATA\x12\r\n\x05title\x18\x01 \x01(\t\x12\x0c\n\x04link\x18\x02 \x01(\t\x12\x0f\n\x07\x63ontent\x18\x03 \x01(\t\"\x8c\x01\n\x0fPKG_NOTIFY_INFO\x12\x11\n\tnotify_id\x18\x01 \x01(\r\x12\x0c\n\x04name\x18\x02 \x01(\t\x12\x10\n\x08\x62\x65g_time\x18\x03 \x01(\r\x12\x10\n\x08\x65nd_time\x18\x04 \x01(\r\x12\x12\n\nis_display\x18\x05 \x01(\r\x12 \n\x06notify\x18\x06 \x01(\x0b\x32\x10.PKG_NOTIFY_DATA\"h\n\x12PKG_GET_NOTIFY_RES\x12\x11\n\tnew_count\x18\x01 \x01(\r\x12\x18\n\x10new_max_beg_time\x18\x02 \x01(\r\x12%\n\x0bnotify_info\x18\x03 \x03(\x0b\x32\x10.PKG_NOTIFY_INFO\"\xc3\x02\n\x15SSPKG_PURCHASE_FINISH\x12\x0e\n\x06result\x18\x01 \x01(\x05\x12\x0b\n\x03uid\x18\x02 \x01(\r\x12\x11\n\tunique_id\x18\x03 \x01(\t\x12\x13\n\x0bhttp_handle\x18\x04 \x01(\x05\x12\x18\n\x10is_firstpurchase\x18\x05 \x01(\x05\x12\x12\n\nproduct_id\x18\x06 \x01(\t\x12\x12\n\ntrade_code\x18\x07 \x01(\t\x12\x10\n\x08world_id\x18\x08 \x01(\x05\x12\x16\n\x0etransaction_id\x18\t \x01(\t\x12\x10\n\x08platform\x18\n \x01(\x05\x12\x12\n\nextra_flag\x18\x0c \x01(\x05\x12\x17\n\x0fis_first_reward\x18\r \x01(\x08\x12\x0c\n\x04time\x18\x0e \x01(\r\x12\x12\n\nchannel_id\x18\x0f \x01(\r\x12\x18\n\x10\x61ny_purchase_cnt\x18\x10 \x01(\r\"\xd9\x01\n\x1aSSPKG_PURCHASE_FINISH_DISP\x12\x0e\n\x06result\x18\x01 \x01(\x05\x12\x0b\n\x03uid\x18\x02 \x01(\r\x12\x11\n\tunique_id\x18\x03 \x01(\t\x12\x13\n\x0bhttp_handle\x18\x04 \x01(\x05\x12\x12\n\nproduct_id\x18\x06 \x01(\t\x12\x12\n\ntrade_code\x18\x07 \x01(\t\x12\x10\n\x08world_id\x18\x08 \x01(\x05\x12\x16\n\x0etransaction_id\x18\t \x01(\t\x12\x10\n\x08platform\x18\n \x01(\x05\x12\x12\n\nextra_flag\x18\x0c \x01(\x05\"\x81\x01\n\x12SSPKG_PURCHASE_REQ\x12\x16\n\x0etransaction_id\x18\x01 \x01(\t\x12\x0b\n\x03uid\x18\x02 \x01(\r\x12\x11\n\tunique_id\x18\x03 \x01(\t\x12\x0e\n\x06praram\x18\x04 \x01(\r\x12\x12\n\nproduct_id\x18\x05 \x01(\t\x12\x0f\n\x07receipt\x18\x06 \x01(\t\"m\n\x13SSPKG_PURCHASE_INFO\x12\x12\n\ntrade_code\x18\x02 \x02(\t\x12\x16\n\x0etransaction_id\x18\x03 \x02(\t\x12\x10\n\x08platform\x18\x01 \x02(\r\x12\x0b\n\x03uin\x18\x04 \x01(\t\x12\x0b\n\x03uid\x18\x05 \x01(\r\"E\n\x1fSSPKG_PURCHASE_REQUEST_DELIVERY\x12\"\n\x04info\x18\x01 \x02(\x0b\x32\x14.SSPKG_PURCHASE_INFO\"\x9a\x01\n#SSPKG_PURCHASE_REQUEST_DELIVERY_IAP\x12\x16\n\x0etransaction_id\x18\x02 \x02(\t\x12\x1b\n\x13transaction_receipt\x18\x03 \x02(\t\x12\x10\n\x08platform\x18\x01 \x02(\r\x12\x0b\n\x03uin\x18\x04 \x01(\t\x12\x0b\n\x03uid\x18\x05 \x01(\r\x12\x12\n\ntrade_code\x18\x06 \x01(\t\"`\n+SSPKG_PURCHASE_REQUEST_DELIVERY_IAP_CHECKED\x12\x31\n\x03req\x18\x01 \x02(\x0b\x32$.SSPKG_PURCHASE_REQUEST_DELIVERY_IAP\"B\n\x1bSSPKG_PURCHASE_IAP_FINISHED\x12\x16\n\x0etransaction_id\x18\x02 \x02(\t\x12\x0b\n\x03uid\x18\x05 \x01(\r\"]\n\x13SSPKG_PURCHASE_DONE\x12\x12\n\ntrade_code\x18\x01 \x01(\t\x12\x0b\n\x03uid\x18\x02 \x01(\r\x12\x11\n\tunique_id\x18\x03 \x01(\t\x12\x12\n\nproduct_id\x18\x07 \x01(\t\"\x9d\x03\n\x12SSPKG_PURCHASE_RES\x12\x0b\n\x03uid\x18\x01 \x01(\r\x12\x11\n\tunique_id\x18\x02 \x01(\t\x12\x0e\n\x06result\x18\x03 \x01(\r\x12\x12\n\nproduct_id\x18\x04 \x01(\t\x12\x13\n\x0bhttp_handle\x18\x05 \x01(\x05\x12\x18\n\x10is_firstpurchase\x18\x06 \x01(\x05\x12\x12\n\ntrade_code\x18\x07 \x01(\t\x12\x1d\n\x15\x63ur_cumulate_recharge\x18\x08 \x01(\r\x12\x16\n\x0etransaction_id\x18\t \x01(\t\x12\x10\n\x08platform\x18\n \x01(\x05\x12\x12\n\nextra_flag\x18\x0c \x01(\x05\x12\x17\n\x0fis_first_reward\x18\r \x01(\x08\x12\x0c\n\x04time\x18\x0e \x01(\r\x12\x42\n\x18newbie_activity_recharge\x18\x0f \x01(\x0b\x32 .DBBLOB_NEWBIE_ACTIVITY_RECHARGE\x12\x1a\n\x12\x63ur_first_recharge\x18\x10 \x01(\r\x12\x1c\n\x14gold_in_any_purchase\x18\x11 \x01(\r\"\xff\x01\n\x17SSPKG_PURCHASE_DISP_REQ\x12\x0b\n\x03uid\x18\x01 \x01(\r\x12\x11\n\tunique_id\x18\x02 \x01(\t\x12\x11\n\tserver_id\x18\x03 \x01(\r\x12\x16\n\x0etransaction_id\x18\x04 \x01(\t\x12\x12\n\nproduct_id\x18\x05 \x01(\t\x12\x12\n\ntrade_code\x18\x06 \x01(\t\x12\x0c\n\x04\x63oin\x18\x07 \x01(\r\x12\r\n\x05money\x18\x08 \x01(\x02\x12\x0c\n\x04time\x18\t \x01(\r\x12\x13\n\x0bhttp_handle\x18\n \x01(\x05\x12\x10\n\x08platform\x18\x0b \x01(\x05\x12\x12\n\nextra_flag\x18\x0c \x01(\x05\x12\x0b\n\x03pid\x18\r \x01(\x05\"-\n\x1eSSPKG_GET_PURCHASEACTIVITY_REQ\x12\x0b\n\x03uid\x18\x01 \x01(\r\"\xa1\x05\n\x1eSSPKG_GET_PURCHASEACTIVITY_RES\x12\x0b\n\x03uid\x18\x01 \x01(\r\x12\x36\n\x12\x66irstpurchase_list\x18\x02 \x01(\x0b\x32\x1a.DBBLOB_FIRSTPURCHASE_LIST\x12.\n\x0emonthcard_info\x18\x03 \x01(\x0b\x32\x16.DBBLOB_MONTHCARD_INFO\x12\x1a\n\x12growthfund_buytime\x18\x04 \x01(\r\x12\x19\n\x11\x63umulate_recharge\x18\x05 \x01(\r\x12\x19\n\x11\x66irst_reward_time\x18\x06 \x01(\r\x12\x17\n\x0fis_first_reward\x18\x07 \x01(\x08\x12\x1a\n\x12sect_recharge_time\x18\x08 \x01(\r\x12\x19\n\x11sect_recharge_cnt\x18\t \x01(\r\x12\x35\n\x0e\x64\x61ily_recharge\x18\n \x01(\x0b\x32\x1d.DBBLOB_DAILY_RECHARGE_REWARD\x12\x1b\n\x13\x64\x61ily_recharge_time\x18\x0b \x01(\r\x12\x42\n\x18newbie_activity_recharge\x18\x0c \x01(\x0b\x32 .DBBLOB_NEWBIE_ACTIVITY_RECHARGE\x12\x1a\n\x12\x66irst_recharge_cnt\x18\r \x01(\r\x12\x38\n\x13supervaluecard_info\x18\x0e \x03(\x0b\x32\x1b.DBBLOB_SUPERVALUECARD_INFO\x12\x1a\n\x12time_recharge_time\x18\x0f \x01(\r\x12 \n\x18time_recharge_product_id\x18\x10 \x01(\t\x12\x1a\n\x12open_recharge_time\x18\x11 \x01(\r\x12 \n\x18open_recharge_product_id\x18\x12 \x01(\t\"\x81\x01\n\x1aSSPKG_RECORD_TRADE_SUCCESS\x12\x12\n\ntrade_code\x18\x01 \x01(\t\x12\x0b\n\x03uid\x18\x02 \x01(\r\x12\x11\n\tunique_id\x18\x03 \x01(\t\x12\x12\n\nproduct_id\x18\x04 \x01(\t\x12\r\n\x05money\x18\x05 \x01(\r\x12\x0c\n\x04gold\x18\x06 \x01(\r\"\x87\x01\n\x13SSPKG_GIFT_CODE_REQ\x12\x0b\n\x03uid\x18\x01 \x01(\r\x12\x11\n\tunique_id\x18\x02 \x01(\t\x12\x11\n\tgift_code\x18\x03 \x01(\t\x12\x0f\n\x07gift_id\x18\x04 \x01(\r\x12\x12\n\nchannel_id\x18\x05 \x01(\r\x12\x18\n\x10pre_condition_id\x18\x06 \x03(\r\"v\n\x1cSSPKG_GIFT_UPDATE_ACCEPT_REQ\x12\x0b\n\x03uid\x18\x01 \x01(\r\x12\x11\n\tunique_id\x18\x02 \x01(\t\x12\x11\n\tgift_code\x18\x03 \x01(\t\x12\x0f\n\x07gift_id\x18\x04 \x01(\r\x12\x12\n\nchannel_id\x18\x05 \x01(\r\"}\n\x13SSPKG_GIFT_CODE_RES\x12\x0b\n\x03uid\x18\x01 \x01(\r\x12\x11\n\tunique_id\x18\x02 \x01(\t\x12\x0e\n\x06result\x18\x03 \x01(\x05\x12\x11\n\tgift_code\x18\x04 \x01(\t\x12\x0f\n\x07gift_id\x18\x05 \x01(\r\x12\x12\n\nchannel_id\x18\x06 \x01(\r\"i\n\x12SSDT_ROLE_LIST_RES\x12$\n\x07success\x18\x01 \x01(\x0b\x32\x13.SUCC_ROLE_LIST_RES\x12\x1c\n\x05\x65rror\x18\x02 \x01(\x0b\x32\r.ERR_RESPONSE\x12\x0f\n\x07reserve\x18\x03 \x01(\x05\"\x81\x01\n\x13UINON_MAIL_ACC_INFO\x12\x33\n\x0fsystem_mail_acc\x18\x01 \x01(\x0b\x32\x1a.SSDT_MAIL_SYSTEM_ACC_INFO\x12\x35\n\x10revenge_mail_acc\x18\x02 \x01(\x0b\x32\x1b.SSDT_MAIL_REVENGE_ACC_INFO\"t\n\x12SSDT_RANK_BASEINFO\x12\x30\n\x10player_base_info\x18\x01 \x01(\x0b\x32\x16.SSDT_PLAYER_BASE_INFO\x12,\n\x0egang_base_info\x18\x02 \x01(\x0b\x32\x14.SSDT_GANG_BASE_INFO\"`\n\x17SSDT_RANKPOS_SEARCH_KEY\x12\x0f\n\x07uniq_id\x18\x01 \x01(\r\x12\x10\n\x08rank_pos\x18\x02 \x01(\r\x12\x11\n\tuniq_name\x18\x03 \x01(\t\x12\x0f\n\x07reserve\x18\x04 \x01(\x05\"U\n\x17SSPKG_GAMESVR_STAT_INFO\x12\x0f\n\x07worldid\x18\x01 \x01(\r\x12\x0e\n\x06zoneid\x18\x02 \x01(\r\x12\x19\n\x11online_player_cnt\x18\x03 \x01(\r\"f\n\x17SSPKG_GAMESVR_ACC_LOGIN\x12\x0f\n\x07uniq_id\x18\x01 \x01(\t\x12\x0b\n\x03uid\x18\x02 \x01(\r\x12\x0c\n\x04name\x18\x03 \x01(\t\x12\x0f\n\x07worldid\x18\x04 \x01(\r\x12\x0e\n\x06zoneid\x18\x05 \x01(\r\"S\n\x18SSPKG_GAMESVR_ACC_LOGOUT\x12\x0f\n\x07uniq_id\x18\x01 \x01(\t\x12&\n\nworld_info\x18\x02 \x01(\x0b\x32\x12.DBBLOB_WORLD_INFO\"<\n\x18\x44\x42_PLAYER_SHOP_HERO_INFO\x12\x0f\n\x07hero_id\x18\x01 \x01(\r\x12\x0f\n\x07hero_lv\x18\x02 \x01(\r\"E\n\x19\x44\x42_PLAYER_SHOP_GOODS_INFO\x12\x10\n\x08goods_id\x18\x01 \x01(\r\x12\x16\n\x0eis_already_buy\x18\x02 \x01(\r\"\xdd\x01\n\x18\x44\x42_PlAYER_SHOP_INFO_BLOB\x12:\n\x16player_shop_goods_info\x18\x01 \x03(\x0b\x32\x1a.DB_PLAYER_SHOP_GOODS_INFO\x12\x45\n!player_rankbattle_shop_goods_info\x18\x02 \x03(\x0b\x32\x1a.DB_PLAYER_SHOP_GOODS_INFO\x12>\n\x1aplayer_vip_shop_goods_info\x18\x03 \x03(\x0b\x32\x1a.DB_PLAYER_SHOP_GOODS_INFO\"j\n\x18SS_SHOP_PLAYER_LOGIN_REQ\x12\x0f\n\x07role_id\x18\x01 \x01(\r\x12\x0f\n\x07zone_id\x18\x02 \x01(\x05\x12,\n\thero_info\x18\x03 \x03(\x0b\x32\x19.DB_PLAYER_SHOP_HERO_INFO\",\n\x19SS_SHOP_PLAYER_LOGOUT_REQ\x12\x0f\n\x07role_id\x18\x01 \x01(\r\"\x99\x01\n\x18SS_SHOP_PLAYER_LOGIN_RES\x12\x0e\n\x06result\x18\x01 \x01(\x05\x12\x11\n\tshop_type\x18\x02 \x01(\r\x12\x19\n\x11next_refresh_time\x18\x03 \x01(\r\x12\'\n\x0fshop_goods_info\x18\x04 \x01(\x0b\x32\x0e.ST_SHOP_GOODS\x12\x16\n\x0e\x61uto_refreshed\x18\x05 \x01(\x08\"F\n SS_SHOP_PLAYER_REFRESH_GOODS_REQ\x12\x0f\n\x07role_id\x18\x01 \x01(\r\x12\x11\n\tshop_type\x18\x02 \x01(\r\"\xa1\x01\n SS_SHOP_PLAYER_REFRESH_GOODS_RES\x12\x11\n\tshop_type\x18\x01 \x01(\r\x12\'\n\x0fshop_goods_info\x18\x02 \x01(\x0b\x32\x0e.ST_SHOP_GOODS\x12\x19\n\x11next_refresh_time\x18\x03 \x01(\r\x12\x0e\n\x06result\x18\x04 \x01(\x05\x12\x16\n\x0e\x61uto_refreshed\x18\x05 \x01(\x08\"\xc9\x01\n\"SS_SHOP_PLAYER_BUY_GOODS_CHECK_REQ\x12\x0f\n\x07role_id\x18\x01 \x01(\r\x12\x11\n\tshop_type\x18\x02 \x01(\r\x12\x10\n\x08goods_id\x18\x03 \x01(\r\x12\x12\n\nleft_money\x18\x04 \x01(\r\x12\x11\n\tleft_gold\x18\x05 \x01(\r\x12\x14\n\x0cleft_crystal\x18\x06 \x01(\r\x12\x1d\n\x15left_rankbattle_score\x18\x07 \x01(\r\x12\x11\n\tvip_level\x18\x08 \x01(\r\"\x93\x01\n\"SS_SHOP_PlAYER_BUY_GOODS_CHECK_RES\x12\x0e\n\x06result\x18\x01 \x01(\x05\x12\x11\n\tshop_type\x18\x02 \x01(\r\x12\x0f\n\x07role_id\x18\x03 \x01(\r\x12\x10\n\x08\x63ur_time\x18\x04 \x01(\r\x12\'\n\ngoods_info\x18\x05 \x01(\x0b\x32\x13.ST_SHOP_GOODS_INFO\"_\n\x1eSS_SHOP_PLAYER_UPDATE_HERO_REQ\x12\x0f\n\x07role_id\x18\x01 \x01(\r\x12,\n\thero_info\x18\x03 \x03(\x0b\x32\x19.DB_PLAYER_SHOP_HERO_INFO\"c\n+SS_SHOP_PLAYER_BUY_GOODS_FAILE_ROLLBACK_REQ\x12\x0f\n\x07role_id\x18\x01 \x01(\r\x12\x11\n\tshop_type\x18\x02 \x01(\r\x12\x10\n\x08goods_id\x18\x03 \x01(\r\"f\n\x16SSDT_FRIEND_CROSS_INFO\x12\x0b\n\x03uid\x18\x01 \x01(\r\x12\x0b\n\x03uin\x18\x02 \x01(\t\x12\x0e\n\x06uin3rd\x18\x03 \x01(\t\x12\x10\n\x08world_id\x18\x04 \x01(\r\x12\x10\n\x08platform\x18\x05 \x01(\r\"H\n\x1aSSPKG_BIND_3RD_PLATFORM_ID\x12*\n\tbind_info\x18\x01 \x02(\x0b\x32\x17.SSDT_FRIEND_CROSS_INFO\"R\n$SSPKG_BIND_3RD_PLATFORM_ID_TO_FRIEND\x12*\n\tbind_info\x18\x01 \x02(\x0b\x32\x17.SSDT_FRIEND_CROSS_INFO\"p\n\x17SSPKG_INVITE_STATE_INFO\x12\x10\n\x08world_id\x18\x03 \x02(\r\x12\x0f\n\x07zone_id\x18\x02 \x02(\x05\x12\x0b\n\x03uid\x18\x04 \x02(\r\x12%\n\x04\x64\x61ta\x18\x01 \x02(\x0b\x32\x17.SCDT_INVITE_STATE_INFO\"T\n SSPKG_HANDLE_INVITED_CODE_REWARD\x12\x0e\n\x06result\x18\x01 \x02(\r\x12\x0f\n\x07role_id\x18\x02 \x02(\r\x12\x0f\n\x07zone_id\x18\x03 \x02(\x05\"`\n\x18SSPKG_APPLY_INVITED_CODE\x12\x14\n\x0cinvited_code\x18\x01 \x02(\t\x12\x0b\n\x03uid\x18\x02 \x02(\r\x12\x10\n\x08world_id\x18\x03 \x02(\r\x12\x0f\n\x07zone_id\x18\x04 \x02(\r\"]\n!SSPKG_APPLY_INVITED_CODE_TO_CROSS\x12\x10\n\x08world_id\x18\x02 \x02(\r\x12&\n\x03msg\x18\x01 \x02(\x0b\x32\x19.SSPKG_APPLY_INVITED_CODE\"d\n(SSPKG_APPLY_INVITED_CODE_CROSS_TO_FRIEND\x12\x10\n\x08world_id\x18\x02 \x02(\r\x12&\n\x03msg\x18\x01 \x02(\x0b\x32\x19.SSPKG_APPLY_INVITED_CODE\"_\n%SSPKG_APPLY_INVITED_CODE_RES_TO_CROSS\x12\x0e\n\x06result\x18\x02 \x02(\x05\x12&\n\x03msg\x18\x01 \x02(\x0b\x32\x19.SSPKG_APPLY_INVITED_CODE\"i\n/SSPKG_APPLY_INVITED_CODE_RES_TO_CROSS_TO_FRIEND\x12\x0e\n\x06result\x18\x02 \x02(\x05\x12&\n\x03msg\x18\x01 \x02(\x0b\x32\x19.SSPKG_APPLY_INVITED_CODE\"w\n\x17SSPKG_NTF_INVITED_ERROR\x12,\n\nerror_code\x18\x01 \x02(\x0e\x32\x18.ENUM_INVITED_ERROR_CODE\x12\x10\n\x08world_id\x18\x02 \x02(\r\x12\x0f\n\x07zone_id\x18\x03 \x02(\r\x12\x0b\n\x03uid\x18\x04 \x02(\r\"\x90\x01\n\x19SSPKG_INVITED_FRIEND_INFO\x12\x12\n\ntime_stamp\x18\x02 \x02(\r\x12\x0b\n\x03uid\x18\x01 \x02(\r\x12\x10\n\x08world_id\x18\x03 \x02(\r\x12\x0f\n\x07zone_id\x18\x05 \x02(\r\x12/\n\rsocial_friend\x18\x04 \x03(\x0b\x32\x18.SSDT_SOCIAL_FRIEND_INFO\"b\n\x1cSSPKG_REQUEST_INVITED_FRIEND\x12\x12\n\ntime_stamp\x18\x01 \x02(\r\x12\x0b\n\x03uid\x18\x02 \x02(\r\x12\x10\n\x08world_id\x18\x03 \x02(\r\x12\x0f\n\x07zone_id\x18\x05 \x02(\r\"z\n\x11SSDT_INVITED_INFO\x12\r\n\x05state\x18\x05 \x02(\r\x12\x15\n\rfrom_world_id\x18\x01 \x02(\r\x12\x10\n\x08\x66rom_uid\x18\x02 \x02(\r\x12\x13\n\x0buid_of_code\x18\x03 \x02(\r\x12\x18\n\x10world_id_of_code\x18\x04 \x01(\r\"x\n\x1eSSPKG_REQUEST_INVITED_TO_CROSS\x12*\n\x03req\x18\x01 \x02(\x0b\x32\x1d.SSPKG_REQUEST_INVITED_FRIEND\x12*\n\x07\x66riends\x18\x02 \x03(\x0b\x32\x19.SSDT_INVITED_FRIEND_INFO\"~\n$SSPKG_REQUES_INVITED_CROSS_TO_FRIEND\x12*\n\x03req\x18\x01 \x02(\x0b\x32\x1d.SSPKG_REQUEST_INVITED_FRIEND\x12*\n\x07\x66riends\x18\x02 \x03(\x0b\x32\x19.SSDT_INVITED_FRIEND_INFO\"\x7f\n&SSPKG_RESPONSE_INVITED_FRIEND_TO_CROSS\x12*\n\x03req\x18\x01 \x02(\x0b\x32\x1d.SSPKG_REQUEST_INVITED_FRIEND\x12)\n\x07\x66riends\x18\x02 \x03(\x0b\x32\x18.SSDT_SOCIAL_FRIEND_INFO\"\x7f\n&SSPKG_RESPONSE_INVITED_CROSS_TO_FRIEND\x12*\n\x03req\x18\x01 \x02(\x0b\x32\x1d.SSPKG_REQUEST_INVITED_FRIEND\x12)\n\x07\x66riends\x18\x02 \x03(\x0b\x32\x18.SSDT_SOCIAL_FRIEND_INFO\"r\n\x1aSSDT_REQUEST_SOCIAL_FRIEND\x12\x12\n\ntime_stamp\x18\x03 \x02(\r\x12\x0b\n\x03uid\x18\x01 \x02(\r\x12\x10\n\x08platform\x18\x05 \x02(\r\x12\x10\n\x08world_id\x18\x04 \x02(\r\x12\x0f\n\x07uid_3rd\x18\x02 \x03(\t\"H\n\x1bSSPKG_REQUEST_SOCIAL_FRIEND\x12)\n\x04\x64\x61ta\x18\x01 \x02(\x0b\x32\x1b.SSDT_REQUEST_SOCIAL_FRIEND\"N\n!SSPKG_REQUEST_SOCIAL_FRIEND_CROSS\x12)\n\x04\x64\x61ta\x18\x01 \x02(\x0b\x32\x1b.SSDT_REQUEST_SOCIAL_FRIEND\"r\n\x10SSDT_FRIEND_INFO\x12)\n\tbase_info\x18\x01 \x01(\x0b\x32\x16.SCDT_FRIEND_BASE_INFO\x12\x1b\n\x13receive_power_state\x18\x02 \x01(\r\x12\x16\n\x0ehas_send_power\x18\x03 \x01(\x08\"n\n\x17SSDT_SOCIAL_FRIEND_INFO\x12+\n\ncross_info\x18\x01 \x01(\x0b\x32\x17.SSDT_FRIEND_CROSS_INFO\x12&\n\x0b\x66riend_info\x18\x02 \x01(\x0b\x32\x11.SSDT_FRIEND_INFO\"\x81\x01\n\x16SSDT_FRIEND_INFO_CROSS\x12\x12\n\ntime_stamp\x18\x03 \x02(\r\x12\x0b\n\x03uid\x18\x01 \x02(\r\x12\x10\n\x08world_id\x18\x04 \x02(\r\x12\x34\n\x12social_friend_info\x18\x02 \x03(\x0b\x32\x18.SSDT_SOCIAL_FRIEND_INFO\"[\n\x1bSSPKG_REQUEST_INVITE_REWARD\x12\x0f\n\x07role_id\x18\x01 \x02(\r\x12+\n\x0breward_info\x18\x04 \x02(\x0b\x32\x16.ResFriendInviteReward\"p\n\x1cSSPKG_RESPONSE_INVITE_REWARD\x12\x0f\n\x07role_id\x18\x01 \x02(\r\x12\x12\n\nstate_code\x18\x02 \x02(\x05\x12+\n\x0breward_info\x18\x04 \x02(\x0b\x32\x16.ResFriendInviteReward\"6\n SSPKG_NOTIFY_SOCIAL_FRIEND_ERROR\x12\x12\n\nerror_code\x18\x01 \x02(\r\"G\n\x15SSDT_SOCIAL_FRIEND_ID\x12\x0b\n\x03uid\x18\x01 \x02(\r\x12\x0f\n\x07uid_3rd\x18\x02 \x02(\t\x12\x10\n\x08world_id\x18\x03 \x02(\r\"Z\n!SSPKG_SEND_POWER_TO_SOCIAL_FRIEND\x12$\n\x04\x66rom\x18\x02 \x01(\x0b\x32\x16.SSDT_SOCIAL_FRIEND_ID\x12\x0f\n\x07uid_3rd\x18\x01 \x03(\t\"x\n,SSPKG_SEND_POWER_TO_SOCIAL_FRIEND_FROM_CROSS\x12$\n\x04\x66rom\x18\x02 \x01(\x0b\x32\x16.SSDT_SOCIAL_FRIEND_ID\x12\"\n\x02to\x18\x01 \x03(\x0b\x32\x16.SSDT_SOCIAL_FRIEND_ID\"s\n\'SSPKG_SEND_POWER_TO_SOCIAL_FRIEND_CROSS\x12$\n\x04\x66rom\x18\x02 \x02(\x0b\x32\x16.SSDT_SOCIAL_FRIEND_ID\x12\"\n\x02to\x18\x01 \x03(\x0b\x32\x16.SSDT_SOCIAL_FRIEND_ID\"S\n\x1dSSPKG_SOCIAL_FRIEND_POWER_ADD\x12\x0b\n\x03uid\x18\x01 \x02(\r\x12\x0f\n\x07zone_id\x18\x02 \x02(\r\x12\x14\n\x0cuid_3rd_from\x18\x03 \x02(\t\"\x83\x01\n SSDT_SEND_POSER_TO_SOCIAL_FRIEND\x12\x10\n\x08uid_from\x18\x01 \x02(\r\x12\x14\n\x0cuid_3rd_from\x18\x02 \x02(\t\x12\x13\n\x0bworld_id_to\x18\x03 \x02(\r\x12\x12\n\nuid_3rd_to\x18\x04 \x03(\t\x12\x0e\n\x06uid_to\x18\x05 \x03(\t\"C\n#SSPKG_RECV_POWER_FROM_SOCIAL_FRIEND\x12\x0b\n\x03uid\x18\x02 \x02(\r\x12\x0f\n\x07uid_3rd\x18\x01 \x03(\t\"p\n\x1fSSPKG_SOCIAL_FRIEND_INFO_CHANGE\x12\x0b\n\x03uid\x18\x01 \x02(\r\x12\x0f\n\x07zone_id\x18\x02 \x02(\r\x12/\n\rsocial_friend\x18\x03 \x03(\x0b\x32\x18.SSDT_SOCIAL_FRIEND_INFO\"B\n\x19SSPKG_FRIEND_INFO_REQUEST\x12%\n\x04\x64\x61ta\x18\x01 \x02(\x0b\x32\x17.SSDT_FRIEND_INFO_CROSS\"R\n)SSPKG_FRIEND_CROSS_INFO_RESPONSE_TO_CROSS\x12%\n\x04\x64\x61ta\x18\x01 \x02(\x0b\x32\x17.SSDT_FRIEND_INFO_CROSS\"\\\n3SSPKG_FRIEND_CROSS_INFO_RESPONSE_TO_CROSS_TO_FRIEND\x12%\n\x04\x64\x61ta\x18\x01 \x02(\x0b\x32\x17.SSDT_FRIEND_INFO_CROSS\"Z\n SSPKG_FRIEND_CROSS_INFO_RESPONSE\x12\x0f\n\x07zone_id\x18\x02 \x02(\r\x12%\n\x04\x64\x61ta\x18\x01 \x02(\x0b\x32\x17.SSDT_FRIEND_INFO_CROSS\"W\n\x16SSDT_FRIEND_APPLY_INFO\x12)\n\tbase_info\x18\x01 \x01(\x0b\x32\x16.SCDT_FRIEND_BASE_INFO\x12\x12\n\napply_time\x18\x02 \x01(\r\"[\n\x1aSSDT_FRIEND_RECOMMAND_INFO\x12)\n\tbase_info\x18\x01 \x01(\x0b\x32\x16.SCDT_FRIEND_BASE_INFO\x12\x12\n\nis_applied\x18\x02 \x01(\x08\"n\n\x17SSDT_PLAYER_FRIEND_INFO\x12&\n\x0b\x66riend_info\x18\x01 \x03(\x0b\x32\x11.SSDT_FRIEND_INFO\x12+\n\napply_info\x18\x02 \x03(\x0b\x32\x17.SSDT_FRIEND_APPLY_INFO\"I\n\x14SSPKG_OPT_FRIEND_REQ\x12\x0b\n\x03uid\x18\x01 \x01(\r\x12\x10\n\x08opt_type\x18\x02 \x01(\r\x12\x12\n\ntarget_uid\x18\x03 \x01(\r\"r\n\x14SSPKG_OPT_FRIEND_RES\x12\x0e\n\x06result\x18\x01 \x01(\x05\x12\x0b\n\x03uid\x18\x02 \x01(\r\x12\x10\n\x08opt_type\x18\x03 \x01(\r\x12+\n\x0btarget_info\x18\x04 \x01(\x0b\x32\x16.SCDT_FRIEND_BASE_INFO\"\xf6\x01\n\x1aSSPKG_LOGIN_FRIEND_SVR_REQ\x12\x0b\n\x03uid\x18\x01 \x01(\r\x12\x0b\n\x03uin\x18\x02 \x01(\t\x12\'\n\thero_info\x18\x03 \x03(\x0b\x32\x14.ST_HERO_BATTLE_INFO\x12\x11\n\trole_name\x18\x04 \x01(\t\x12\x11\n\tvip_level\x18\x05 \x01(\r\x12\x12\n\nhead_photo\x18\x06 \x01(\r\x12\x0f\n\x07zone_id\x18\x07 \x01(\x05\x12\x15\n\rendless_score\x18\x08 \x01(\r\x12\x1b\n\x13greatest_pve_dun_id\x18\t \x01(\r\x12\x16\n\x0e\x66ight_capacity\x18\n \x01(\r\"\xa1\x01\n\x1aSSPKG_LOGIN_FRIEND_SVR_RES\x12\x0e\n\x06result\x18\x01 \x01(\x05\x12\x1e\n\x16recv_power_times_today\x18\x02 \x01(\r\x12-\n\x0b\x66riend_info\x18\x03 \x01(\x0b\x32\x18.SSDT_PLAYER_FRIEND_INFO\x12$\n\tself_info\x18\x04 \x01(\x0b\x32\x11.SSDT_FRIEND_INFO\"j\n\x15SSPKG_FRIEND_INFO_CHG\x12\x0b\n\x03uid\x18\x01 \x01(\r\x12\x0c\n\x04type\x18\x02 \x01(\x05\x12\r\n\x05value\x18\x03 \x01(\r\x12\'\n\thero_info\x18\x04 \x03(\x0b\x32\x14.ST_HERO_BATTLE_INFO\"\x8b\x01\n\x12SSDT_RELATION_INFO\x12\x0f\n\x07role_id\x18\x01 \x01(\r\x12)\n!recv_power_from_this_friend_state\x18\x02 \x01(\r\x12%\n\x1dhas_send_power_to_this_friend\x18\x03 \x01(\x08\x12\x12\n\nagree_time\x18\x04 \x01(\r\"~\n\x19SSDT_SOCIAL_RELATION_INFO\x12\x0f\n\x07uid_3rd\x18\x01 \x01(\t\x12)\n!recv_power_from_this_friend_state\x18\x02 \x01(\r\x12%\n\x1dhas_send_power_to_this_friend\x18\x03 \x01(\x08\":\n\x17SSDT_INVITED_REWARD_GOT\x12\x11\n\tused_size\x18\x01 \x01(\r\x12\x0c\n\x04\x64\x61ta\x18\x02 \x03(\r\"R\n\x18SSDT_INVITED_FRIEND_INFO\x12\x0f\n\x07role_id\x18\x01 \x02(\r\x12\x10\n\x08world_id\x18\x02 \x02(\r\x12\x13\n\x0bmax_pve_dun\x18\x03 \x01(\r\"\xa4\x01\n\x17SSDT_INVITED_TOTAL_INFO\x12-\n\x0breward_info\x18\x01 \x01(\x0b\x32\x18.SSDT_INVITED_REWARD_GOT\x12\x15\n\rapply_invited\x18\x02 \x01(\x08\x12\x13\n\x0binvited_num\x18\x03 \x01(\r\x12.\n\x0b\x66riend_info\x18\x04 \x03(\x0b\x32\x19.SSDT_INVITED_FRIEND_INFO\"\x86\x01\n\x18SSDT_ASSISTANT_HERO_INFO\x12\x16\n\x0ehire_cnt_total\x18\x01 \x01(\r\x12\x18\n\x10hire_cnt_not_get\x18\x02 \x01(\r\x12\x1b\n\x13\x61ssistant_hero_gold\x18\x03 \x01(\r\x12\x1b\n\x13\x61ssistant_calc_time\x18\x04 \x01(\r\")\n\x16SSDT_SEND_POWER_RECORD\x12\x0f\n\x07role_id\x18\x01 \x01(\r\"\xe7\x02\n\x0e\x44\x42_FRIEND_BLOB\x12+\n\napply_info\x18\x01 \x03(\x0b\x32\x17.SSDT_FRIEND_APPLY_INFO\x12\'\n\thero_info\x18\x0c \x03(\x0b\x32\x14.ST_HERO_BATTLE_INFO\x12*\n\rrelation_info\x18\x03 \x03(\x0b\x32\x13.SSDT_RELATION_INFO\x12\x38\n\x14social_relation_info\x18\x05 \x03(\x0b\x32\x1a.SSDT_SOCIAL_RELATION_INFO\x12\x32\n\x11send_power_record\x18\x04 \x03(\x0b\x32\x17.SSDT_SEND_POWER_RECORD\x12-\n\x0binvite_info\x18\x06 \x01(\x0b\x32\x18.SSDT_INVITED_TOTAL_INFO\x12\x36\n\x13\x61ssistant_hero_info\x18\x08 \x01(\x0b\x32\x19.SSDT_ASSISTANT_HERO_INFO\"~\n!SSPKG_FRIEND_NOTIFY_APPLYLIST_CHG\x12+\n\napply_info\x18\x01 \x01(\x0b\x32\x17.SSDT_FRIEND_APPLY_INFO\x12\x0f\n\x07zone_id\x18\x02 \x01(\x05\x12\x0e\n\x06is_add\x18\x03 \x01(\x08\x12\x0b\n\x03uid\x18\x04 \x01(\r\"{\n#SSPKG_FRIEND_NOTIFY_FRIEND_LIST_CHG\x12\x0f\n\x07zone_id\x18\x01 \x01(\x05\x12\x0e\n\x06is_add\x18\x02 \x01(\x08\x12&\n\x0b\x66riend_info\x18\x03 \x01(\x0b\x32\x11.SSDT_FRIEND_INFO\x12\x0b\n\x03uid\x18\x04 \x01(\r\"q\n%SSPKG_FRIEND_NOTIFY_FRIEND_SEND_POWER\x12\x0b\n\x03uid\x18\x01 \x01(\r\x12\x0f\n\x07zone_id\x18\x02 \x01(\x05\x12\x11\n\tsend_time\x18\x03 \x01(\r\x12\x17\n\x0fsend_friend_uid\x18\x04 \x01(\r\"\x89\x01\n%SSPKG_FRIEND_NOTIFY_FRIEND_RECV_POWER\x12\x0b\n\x03uid\x18\x01 \x01(\r\x12\x0f\n\x07zone_id\x18\x02 \x01(\x05\x12\x1e\n\x16recv_power_times_today\x18\x03 \x01(\r\x12\"\n\x1arecv_power_from_friend_uid\x18\x04 \x01(\r\"K\n+SSPKG_FRIEND_NOTIFY_POWER_REFRESH_CROSS_DAY\x12\x0b\n\x03uid\x18\x01 \x01(\r\x12\x0f\n\x07zone_id\x18\x02 \x01(\r\"M\n\x1fSSPKG_FRIEND_RECV_POWER_ALL_REQ\x12\x0b\n\x03uid\x18\x01 \x01(\r\x12\x1d\n\x15recv_power_friend_uid\x18\x02 \x03(\r\"\x8d\x01\n\x1fSSPKG_FRIEND_RECV_POWER_ALL_RES\x12%\n\x1drecv_power_success_friend_uid\x18\x01 \x03(\r\x12#\n\x1brecv_power_faild_friend_uid\x18\x02 \x03(\r\x12\x1e\n\x16recv_power_times_today\x18\x03 \x01(\r\"M\n\x1fSSPKG_FRIEND_SEND_POWER_ALL_REQ\x12\x0b\n\x03uid\x18\x01 \x01(\r\x12\x1d\n\x15send_power_friend_uid\x18\x02 \x03(\r\"m\n\x1fSSPKG_FRIEND_SEND_POWER_ALL_RES\x12%\n\x1dsend_power_success_friend_uid\x18\x01 \x03(\r\x12#\n\x1bsend_power_faild_friend_uid\x18\x02 \x03(\r\"\xb7\x01\n\x18PKG_FRIEND_DISP_INFO_CHG\x12\x0b\n\x03uid\x18\x01 \x01(\r\x12\x18\n\x10last_logout_time\x18\x02 \x01(\r\x12\x11\n\tvip_level\x18\x03 \x01(\r\x12\x12\n\nhead_photo\x18\x04 \x01(\r\x12\x19\n\x11\x66ighting_capacity\x18\x05 \x01(\r\x12\x15\n\rendless_score\x18\x06 \x01(\r\x12\x1b\n\x13greatest_pve_dun_id\x18\x07 \x01(\r\"M\n\x17\x46RIEND_BROADCAST_DETAIL\x12\x32\n\x0f\x66riend_info_chg\x18\x01 \x01(\x0b\x32\x19.PKG_FRIEND_DISP_INFO_CHG\"p\n\x14PKG_FRIEND_BROADCAST\x12\x1e\n\x08mem_list\x18\x01 \x03(\x0b\x32\x0c.MemZoneInfo\x12\x0e\n\x06msg_id\x18\x02 \x01(\r\x12(\n\x06\x64\x65tail\x18\x03 \x01(\x0b\x32\x18.FRIEND_BROADCAST_DETAIL\"E\n\x1eSSPKG_GET_RECOMMAND_FRIEND_REQ\x12\x0b\n\x03uid\x18\x01 \x01(\r\x12\x16\n\x0euid_to_be_find\x18\x02 \x01(\r\"}\n\x1eSSPKG_GET_RECOMMAND_FRIEND_RES\x12\x0e\n\x06result\x18\x01 \x01(\x05\x12\x33\n\x0erecommand_info\x18\x02 \x03(\x0b\x32\x1b.SSDT_FRIEND_RECOMMAND_INFO\x12\x16\n\x0euid_to_be_find\x18\x03 \x01(\r\"/\n\x1aSSPKG_KICK_PLAYER_ALL_ZONE\x12\x11\n\tunique_id\x18\x01 \x02(\t\"t\n\x14\x44\x42\x42LOB_ACTIVITY_INFO\x12\x30\n\x10\x61\x63tivity_control\x18\x01 \x03(\x0b\x32\x16.SCDT_ACTIVITY_CONTROL\x12*\n\ractivity_info\x18\x02 \x01(\x0b\x32\x13.SCDT_ACTIVITY_INFO\"A\n\x18SSDT_DAILY_RECHARGE_INFO\x12\x0f\n\x07\x64\x61y_num\x18\x01 \x01(\r\x12\x14\n\x0crecharge_cnt\x18\x02 \x01(\r\"V\n\x1c\x44\x42\x42LOB_DAILY_RECHARGE_REWARD\x12\x36\n\x13\x64\x61ily_recharge_info\x18\x01 \x03(\x0b\x32\x19.SSDT_DAILY_RECHARGE_INFO\"Q\n\"SSDT_NEWBIE_ACTIVITY_RECHARGE_INFO\x12\x15\n\rrecharge_time\x18\x01 \x01(\r\x12\x14\n\x0crecharge_cnt\x18\x02 \x01(\r\"]\n\x1f\x44\x42\x42LOB_NEWBIE_ACTIVITY_RECHARGE\x12:\n\rrecharge_info\x18\x01 \x03(\x0b\x32#.SSDT_NEWBIE_ACTIVITY_RECHARGE_INFO\"9\n\x14SSPKG_NTF_VIP_CHANGE\x12\x0b\n\x03uid\x18\x01 \x02(\r\x12\x14\n\x0crecharge_cnt\x18\x02 \x02(\r\"y\n\x1e\x44\x42\x42LOB_FRIEND_ASSIST_HERO_INFO\x12\x12\n\nfriend_uid\x18\x01 \x01(\r\x12\x0c\n\x04gold\x18\x02 \x01(\r\x12\x35\n\x17\x66riend_hero_battle_info\x18\x03 \x01(\x0b\x32\x14.ST_HERO_BATTLE_INFO\"\xc6\x02\n\x1b\x44\x42\x42LOB_PLAYER_BOSSRUSH_INFO\x12\x17\n\x0flast_clear_time\x18\x01 \x02(\r\x12 \n\x18\x63ur_boss_rush_chaptor_id\x18\x02 \x02(\r\x12\x16\n\x0e\x63ur_monster_id\x18\x03 \x02(\r\x12\x14\n\x0c\x63ur_sequence\x18\x04 \x02(\r\x12\x14\n\x0cmain_hero_id\x18\x05 \x02(\r\x12\x14\n\x0cpartner_hero\x18\x06 \x03(\r\x12.\n\thp_remain\x18\x07 \x01(\x0b\x32\x1b.ST_BOSSRUSH_HERO_HP_REMAIN\x12@\n\x17\x66riend_assist_hero_info\x18\t \x03(\x0b\x32\x1f.DBBLOB_FRIEND_ASSIST_HERO_INFO\x12 \n\x18last_clear_chaptor_index\x18\n \x02(\r\">\n!SSPKG_CLAIM_ASSISTANT_HERO_REWARD\x12\x0b\n\x03uid\x18\x01 \x02(\r\x12\x0c\n\x04gold\x18\x02 \x02(\r\"p\n\x18SSPKG_BOSSRUSH_HIRE_HERO\x12\x0b\n\x03uid\x18\x01 \x02(\r\x12\x12\n\nuid_friend\x18\x02 \x02(\r\x12\x16\n\x0ehero_id_friend\x18\x03 \x02(\r\x12\x1b\n\x13hero_fight_capacity\x18\x04 \x02(\r\"o\n\x18SSDT_WORLD_ACTIVITY_INFO\x12\x13\n\x0b\x61\x63tivity_id\x18\x01 \x01(\r\x12\x0c\n\x04stat\x18\x02 \x01(\r\x12\x19\n\x11last_trigger_time\x18\x03 \x01(\r\x12\x15\n\rtrigger_times\x18\x04 \x01(\r\"`\n\x14SSDT_WORLD_DROP_INFO\x12\n\n\x02id\x18\x01 \x01(\r\x12\x15\n\rlast_beg_time\x18\x02 \x01(\t\x12%\n\x11\x61lready_drop_info\x18\x03 \x03(\x0b\x32\n.ResReward\"\x84\x01\n\x1aSSDT_GAME_SERVER_MISC_INFO\x12\x36\n\x13world_activity_info\x18\x01 \x03(\x0b\x32\x19.SSDT_WORLD_ACTIVITY_INFO\x12.\n\x0fworld_drop_info\x18\x02 \x03(\x0b\x32\x15.SSDT_WORLD_DROP_INFO\"Z\n!SSPKG_UPDATE_GAME_SERVER_MISC_REQ\x12\x35\n\x10game_server_misc\x18\x01 \x01(\x0b\x32\x1b.SSDT_GAME_SERVER_MISC_INFO\"-\n\x1aSSPKG_GET_GAMESVR_MISC_REQ\x12\x0f\n\x07reverse\x18\x01 \x01(\x08\"j\n\x1aSSPKG_GET_GAMESVR_MISC_RES\x12\x19\n\x11gamesvr_open_time\x18\x01 \x01(\r\x12\x31\n\x0cgamesvr_misc\x18\x02 \x01(\x0b\x32\x1b.SSDT_GAME_SERVER_MISC_INFO\"5\n\x1eSSPKG_RANK_BATTLE_ACTIVITY_REQ\x12\x13\n\x0b\x61\x63tivity_id\x18\x01 \x01(\r\"A\n\x1cSSPKG_REPORT_PLAYER_CHAT_REQ\x12\x0f\n\x07role_id\x18\x01 \x01(\r\x12\x10\n\x08world_id\x18\x02 \x01(\r\"S\n\x1cSSPKG_REPORT_PLAYER_CHAT_RES\x12\x0b\n\x03uid\x18\x01 \x01(\r\x12\x10\n\x08world_id\x18\x02 \x01(\x05\x12\x14\n\x0c\x62\x61n_end_time\x18\x03 \x01(\r\"B\n/SSPKG_TOP_BATTLE_GET_QUALIFICATION_RANK_POS_REQ\x12\x0f\n\x07reverse\x18\x01 \x01(\x05\"Q\n/SSPKG_TOP_BATTLE_GET_QUALIFICATION_RANK_POS_RES\x12\x1e\n\x16qualification_rank_pos\x18\x01 \x01(\r\"R\n\x1eSSPKG_TOP_BATTLE_BASE_INFO_REQ\x12\x10\n\x08world_id\x18\x01 \x01(\r\x12\x1e\n\x16qualification_rank_pos\x18\x02 \x01(\r\"\x9f\x01\n\x1eSSPKG_TOP_BATTLE_BASE_INFO_RES\x12\x1d\n\x15top_battle_begin_time\x18\x01 \x01(\r\x12\x10\n\x08world_id\x18\x02 \x03(\r\x12\x16\n\x0e\x62\x61ttle_zone_id\x18\x03 \x01(\r\x12\x1e\n\x16qualification_rank_pos\x18\x04 \x01(\r\x12\x14\n\x0cmax_rank_pos\x18\x05 \x01(\r\"a\n(SSPKG_TOP_BATTLE_CHECK_QUALIFICATION_REQ\x12#\n\x04info\x18\x01 \x01(\x0b\x32\x15.TOP_BATTLE_ROLE_INFO\x12\x10\n\x08is_login\x18\x02 \x01(\x08\"q\n(SSPKG_TOP_BATTLE_CHECK_QUALIFICATION_RES\x12\x0e\n\x06result\x18\x01 \x01(\x05\x12#\n\x04info\x18\x02 \x01(\x0b\x32\x15.TOP_BATTLE_ROLE_INFO\x12\x10\n\x08is_login\x18\x03 \x01(\x08\"\x87\x01\n\x1eSSPKG_GET_TOP_BATTLE_STATE_REQ\x12#\n\x04info\x18\x01 \x01(\x0b\x32\x15.TOP_BATTLE_ROLE_INFO\x12\x10\n\x08world_id\x18\x02 \x01(\r\x12\x10\n\x08is_login\x18\x03 \x01(\x08\x12\x1c\n\x14is_has_qualification\x18\x04 \x01(\x08\"F\n\x1eSSPKG_GET_TOP_BATTLE_STATE_RES\x12\x0e\n\x06result\x18\x01 \x01(\x05\x12\x14\n\x0c\x62\x61ttle_score\x18\x02 \x01(\r\"X\n\x1aSSPKG_TOP_BATTLE_APPLY_REQ\x12\x10\n\x08world_id\x18\x01 \x01(\r\x12(\n\trole_info\x18\x02 \x03(\x0b\x32\x15.TOP_BATTLE_ROLE_INFO\"J\n%SSPKG_TOP_BATTLE_GET_FIGHT_TARGET_REQ\x12\x0f\n\x07role_id\x18\x01 \x01(\r\x12\x10\n\x08world_id\x18\x02 \x01(\x05\"k\n%SSPKG_TOP_BATTLE_GET_FIGHT_TARGET_RES\x12\x0e\n\x06result\x18\x01 \x01(\x05\x12\x32\n\x0btarget_info\x18\x02 \x03(\x0b\x32\x1d.TOP_BATTLE_FIGHT_TARGET_INFO\"}\n\"SSPKG_TOP_BATTLE_ENTER_DUNGEON_REQ\x12\x17\n\x0f\x64\x65\x66\x65nse_role_id\x18\x01 \x01(\r\x12\x18\n\x10\x61ttacker_role_id\x18\x02 \x01(\r\x12\x12\n\ndungeon_id\x18\x03 \x01(\r\x12\x10\n\x08world_id\x18\x04 \x01(\x05\"\x96\x01\n\"SSPKG_TOP_BATTLE_ENTER_DUNGEON_RES\x12\x0e\n\x06result\x18\x01 \x01(\x05\x12\x12\n\ndungeon_id\x18\x02 \x01(\r\x12\x17\n\x0f\x64\x65\x66\x65nse_role_id\x18\x03 \x01(\r\x12\x33\n\x11\x64\x65\x66\x65nse_hero_info\x18\x04 \x01(\x0b\x32\x18.TOP_BATTLE_DEFENSE_INFO\"b\n\x1bSSPKG_TOP_BATTLE_UNLOCK_REQ\x12\x18\n\x10\x61ttacker_role_id\x18\x01 \x01(\r\x12\x17\n\x0f\x64\x65\x66\x65nse_role_id\x18\x02 \x01(\r\x12\x10\n\x08world_id\x18\x03 \x01(\x05\"\xac\x01\n\x1cSSPKG_TOP_BATTLE_BALANCE_REQ\x12,\n\rattacker_info\x18\x01 \x01(\x0b\x32\x15.TOP_BATTLE_ROLE_INFO\x12\x1b\n\x13\x64\x65\x66\x65nse_mem_role_id\x18\x02 \x01(\r\x12\x15\n\rbattle_result\x18\x03 \x03(\r\x12\x18\n\x10\x61ttacker_role_id\x18\x04 \x01(\r\x12\x10\n\x08world_id\x18\x05 \x01(\x05\"m\n\x1cSSPKG_TOP_BATTLE_BALANCE_RES\x12\x0e\n\x06result\x18\x01 \x01(\x05\x12\x1b\n\x13\x64\x65\x66\x65nse_mem_role_id\x18\x02 \x01(\r\x12\x0f\n\x07old_pos\x18\x03 \x01(\x05\x12\x0f\n\x07new_pos\x18\x04 \x01(\x05\"\x8f\x01\n\x1bSSDT_TOP_BATTLE_REWARD_INFO\x12\x13\n\x0bmem_role_id\x18\x01 \x01(\r\x12\x10\n\x08rank_pos\x18\x02 \x01(\r\x12\x14\n\x0creward_score\x18\x03 \x01(\r\x12\x13\n\x0btotal_score\x18\x04 \x01(\r\x12\x1e\n\x06reward\x18\x05 \x03(\x0b\x32\x0e.ST_REWARD_RES\"\\\n\x1bSSPKG_TOP_BATTLE_REWARD_REQ\x12/\n\tuser_info\x18\x01 \x03(\x0b\x32\x1c.SSDT_TOP_BATTLE_REWARD_INFO\x12\x0c\n\x04type\x18\x02 \x01(\x05\"\xce\x01\n%SSPKG_TOP_BATTLE_CHALLENGE_NOTIFY_REQ\x12\x13\n\x0bmem_role_id\x18\x01 \x01(\r\x12\x14\n\x0c\x61tk_mem_name\x18\x02 \x01(\t\x12\x17\n\x0f\x61tk_mem_role_id\x18\x03 \x01(\r\x12\x14\n\x0crank_new_pos\x18\x04 \x01(\x05\x12\x14\n\x0crank_old_pos\x18\x05 \x01(\x05\x12\x10\n\x08world_id\x18\x06 \x01(\x05\x12\x0e\n\x06is_win\x18\x07 \x01(\x08\x12\x13\n\x0bis_out_rank\x18\x08 \x01(\x08\">\n+SSPKG_TOP_BATTLE_GET_QUALIFICATION_INFO_REQ\x12\x0f\n\x07role_id\x18\x01 \x01(\r\"\xb4\x01\n+SSPKG_TOP_BATTLE_GET_QUALIFICATION_INFO_RES\x12@\n\x18today_qualification_info\x18\x01 \x01(\x0b\x32\x1e.TOP_BATTLE_QUALIFICATION_INFO\x12\x43\n\x1btomorrow_qualification_info\x18\x02 \x01(\x0b\x32\x1e.TOP_BATTLE_QUALIFICATION_INFO\"F\n!SSPKG_TOP_BATTLE_GET_TOPTHREE_REQ\x12\x0f\n\x07reverse\x18\x01 \x01(\x05\x12\x10\n\x08is_login\x18\x02 \x01(\x05\"z\n!SSPKG_TOP_BATTLE_GET_TOPTHREE_RES\x12\x0e\n\x06result\x18\x01 \x01(\x05\x12\x33\n\x10\x62\x61ttle_zone_rank\x18\x02 \x03(\x0b\x32\x19.TOP_BATTLE_TOPTHREE_INFO\x12\x10\n\x08is_login\x18\x03 \x01(\x05\"A\n SSPKG_TOP_BATTLE_SEND_ROCKET_REQ\x12\x0b\n\x03uid\x18\x01 \x01(\r\x12\x10\n\x08world_id\x18\x02 \x01(\r\"h\n SSPKG_TOP_BATTLE_SEND_ROCKET_RES\x12\x0b\n\x03uid\x18\x01 \x01(\r\x12\x37\n\x16top_battle_rocket_info\x18\x02 \x01(\x0b\x32\x17.TOP_BATTLE_ROCKET_INFO\"[\n SSPKG_TOP_BATTLE_NTF_SEND_ROCKET\x12\x37\n\x16top_battle_rocket_info\x18\x01 \x01(\x0b\x32\x17.TOP_BATTLE_ROCKET_INFO\"G\n&SSPKG_TOP_BATTLE_GET_ROCKET_REWARD_REQ\x12\x0b\n\x03uid\x18\x01 \x01(\r\x12\x10\n\x08world_id\x18\x02 \x01(\r\"\xb8\x01\n&SSPKG_TOP_BATTLE_GET_ROCKET_REWARD_RES\x12\x0e\n\x06result\x18\x01 \x01(\r\x12\x11\n\trocket_id\x18\x02 \x01(\r\x12\x17\n\x0fsend_rocket_uid\x18\x03 \x01(\r\x12\x19\n\x11last_refresh_time\x18\x04 \x01(\r\x12\x37\n\x16top_battle_rocket_info\x18\x05 \x01(\x0b\x32\x17.TOP_BATTLE_ROCKET_INFO\">\n!SSPKG_NTF_TOP_BATTLE_ROCKET_RESET\x12\x19\n\x11last_refresh_time\x18\x01 \x01(\r*\x93:\n\x0cSSPROTOCONST\x12\r\n\tSS_ID_REQ\x10\x01\x12\r\n\tSS_ID_RES\x10\x02\x12\x15\n\x0fMAX_PACKAGE_LEN\x10\x80\x80\x10\x12\x11\n\rMAX_ROLE_NAME\x10 \x12\x10\n\x0cMAX_ROLE_NUM\x10\x10\x12\x11\n\rMAX_ARMY_NAME\x10@\x12\x15\n\x10MAX_CHAT_MSG_LEN\x10\x80\x01\x12\x1c\n\x18MAX_PRIVATE_CHAT_MSG_NUM\x10\x05\x12\x15\n\x11SS_MAX_UIN3RD_LEN\x10 \x12\x14\n\x10SS_ROLE_NAME_LEN\x10 \x12\x14\n\x10SS_ERROR_BAN_UIN\x10m\x12\x19\n\x15SS_MAX_ROOMCNT_ONEDUN\x10\x05\x12\x1d\n\x19SS_MAX_MONSTERCNT_ONEROOM\x10\n\x12\x1b\n\x17MAX_PVPMATCH_PLAYER_NUM\x10\x01\x12\x10\n\x0c\x44\x41TE_STR_LEN\x10 \x12\x16\n\x12SS_MAX_UNQUEID_LEN\x10@\x12\x15\n\x11SS_MAX_FRIEND_NUM\x10\x1e\x12\'\n#SS_MAX_FRIEND_SEND_POWER_RECORD_NUM\x10\x32\x12\x17\n\x13SS_ENDLESS_MAX_HERO\x10\x04\x12\x17\n\x13\x44\x42_MAX_ENDLESS_HERO\x10\x04\x12$\n\x1fSS_PURCHASE_PRODUCT_RECEIPT_MAX\x10\x80P\x12\x1f\n\x1b\x44\x42\x42LOB_PURCHASE_STATUS_INIT\x10\x00\x12$\n DBBLOB_PURCHASE_STATUS_VERIFYING\x10\x01\x12$\n DBBLOB_PURCHASE_STATUS_PROCESSED\x10\x02\x12\"\n\x1eSS_PURCHASE_TRANSACTION_ID_MAX\x10@\x12\'\n#PURCHACE_VERIFY_REUSLT_CODE_SUCCESS\x10\x00\x12+\n\'PURCHACE_VERIFY_REUSLT_CODE_PARSE_ERROR\x10\x01\x12-\n)PURCHACE_VERIFY_REUSLT_CODE_REQUEST_ERROR\x10\x02\x12\x30\n,PURCHACE_VERIFY_REUSLT_CODE_PRODUCT_ID_ERROR\x10\x03\x12\x33\n/PURCHACE_VERIFY_REUSLT_CODE_TRANSACTIONID_ERROR\x10\x04\x12\x31\n-PURCHACE_VERIFY_REUSLT_CODE_ALREADY_PROCESSED\x10\x05\x12\x1b\n\x17PURCHACE_DB_STATUS_INIT\x10\x00\x12\x1f\n\x1bPURCHACE_DB_STATUS_VERIFIED\x10\x01\x12 \n\x1cPURCHACE_DB_STATUS_PROCESSED\x10\x02\x12(\n$PURCHACE_DB_STATUS_PROCESSED_SANDBOX\x10\x03\x12 \n\x1c\x44\x42_MAX_BUILDING_RESSTORE_CNT\x10\x04\x12\x1e\n\x1a\x44\x42_MAX_BUILDING_ISLAND_CNT\x10\x06\x12\x1a\n\x16\x44\x42_MAX_ISLAND_TYPE_CNT\x10\x04\x12\x1b\n\x17SS_MAX_NOTIFY_VALID_NUM\x10\n\x12\x1c\n\x17\x44\x42_MAX_NOTIFY_TITLE_LEN\x10\x80\x04\x12\x1b\n\x16\x44\x42_MAX_NOTIFY_LINK_LEN\x10\x80\x04\x12\x1f\n\x19\x44\x42_MAX_NOTIFY_CONTENT_LEN\x10\xd0\x8c\x01\x12\x1d\n\x19\x44\x42_MAX_MAIL_SYS_ACC_COUNT\x10\x06\x12\x1b\n\x17SS_GIFT_CODE_LENGTH_MAX\x10\x10\x12$\n SS_MAX_GANG_BATTLE_HERO_JOIN_NUM\x10\x03\x12\"\n\x1eSS_MAX_GANG_BATTLE_HISTORY_NUM\x10\x07\x12\x1b\n\x17SS_GANG_BATTLE_UNATTACK\x10\x00\x12\x16\n\x12SS_GANG_BATTLE_WIN\x10\x01\x12\x17\n\x13SS_GANG_BATTLE_LOSE\x10\x02\x12\x1f\n\x1bGANG_BATTLE_BALANCE_SUCCESS\x10\x00\x12)\n%GANG_BATTLE_BALANCE_NOT_IN_FIGHTSTATE\x10\x01\x12%\n!GANG_BATTLE_BALANCE_INVALID_FIGHT\x10\x02\x12\"\n\x1eGANG_UPDATE_BASIC_INFO_SUCCESS\x10\x00\x12!\n\x1dGANG_UPDATE_BASIC_INFO_FAILED\x10\x01\x12\x18\n\x14GANG_APPLY_AUTO_JOIN\x10\x00\x12\x19\n\x15GANG_APPLY_NEED_APPLY\x10\x01\x12\x11\n\rMAX_GANG_NAME\x10 \x12\x14\n\x0fMAX_GANG_NOTIFY\x10\x80\x01\x12\x1c\n\x18MAX_GANG_APPLYLIST_COUNT\x10\x0f\x12\x16\n\x12MAX_GANGLIST_COUNT\x10\x32\x12\x18\n\x14GANG_POSITION_LEADER\x10\x01\x12\x17\n\x13GANG_POSITION_ELDER\x10\x02\x12\x18\n\x14GANG_POSITION_NORMAL\x10\x03\x12\x16\n\x12GANG_MEM_MAX_COUNT\x10#\x12\x19\n\x15SS_GANG_APPROVE_AGREE\x10\x01\x12\x1a\n\x16SS_GANG_APPROVE_REJECT\x10\x00\x12\x1c\n\x18SS_GANG_KICK_MEM_SUCCESS\x10\x00\x12\x1b\n\x17SS_GANG_KICK_MEM_FAILED\x10\x01\x12\x1d\n\x19SS_GANG_SET_ELDER_SUCCESS\x10\x00\x12\x1c\n\x18SS_GANG_SET_ELDER_FAILED\x10\x01\x12\x1a\n\x16SS_GANG_SET_ELDER_FULL\x10\x02\x12\"\n\x1eSS_GANG_MEM_CHG_RANKBATTLE_POS\x10\x01\x12$\n SS_GANG_MEM_CHG_GANGBATTLE_SCORE\x10\x02\x12\x1f\n\x1bSS_GANG_MEM_CHG_UPDATE_HERO\x10\x03\x12 \n\x1cSS_GANG_MEM_CHG_BLESS_RESULT\x10\x04\x12\"\n\x1eSS_GANG_MEM_CHG_HEAD_PHOTO_CHG\x10\x05\x12\x17\n\x13SUCCESS_GANG_CREATE\x10\x01\x12\x16\n\x12\x46\x41ILED_GANG_CREATE\x10\x02\x12\x19\n\x15\x45RROR_GANG_NAME_EXIST\x10\x03\x12\x1e\n\x1a\x45RROR_GANG_NAME_EQUAL_ROLE\x10\x04\x12\x17\n\x13\x45RROR_GANG_HAS_GANG\x10\x05\x12\x1b\n\x17\x45RROR_GANG_NAME_DISABLE\x10\x06\x12 \n\x1c\x45RROR_GANG_CREATE_SERVERFULL\x10\x07\x12\x18\n\x14SUCCESS_GANG_APPROVE\x10\x01\x12\x17\n\x13\x46\x41ILED_GANG_APPROVE\x10\x02\x12\x1b\n\x17\x45RROR_APPROVE_NOTLEADER\x10\x03\x12\x19\n\x15\x45RROR_APPROVE_HASGANG\x10\x04\x12\x1b\n\x17\x45RROR_APPROVE_NOTINLIST\x10\x05\x12\x19\n\x15\x45RROR_APPROVE_MEMFULL\x10\x06\x12\x18\n\x14\x45RROR_APPROVE_REJECT\x10\x07\x12\x16\n\x12SUCCESS_GANG_APPLY\x10\x01\x12\x15\n\x11\x46\x41ILED_GANG_APPLY\x10\x02\x12\x1c\n\x18\x45RROR_GANG_APPLY_MEMFULL\x10\x03\x12\x1c\n\x18\x45RROR_GANG_APPLY_HASGANG\x10\x04\x12\x1e\n\x1a\x45RROR_GANG_APPLY_NOTINLIST\x10\x05\x12\x1d\n\x19\x45RROR_GANG_APPLY_MAXCOUNT\x10\x08\x12\x15\n\x11QUIT_GANG_SUCCESS\x10\x01\x12\x14\n\x10QUIT_GANG_FAILED\x10\x02\x12\x0e\n\nSS_SUCCESS\x10\x00\x12\t\n\x05\x45RROR\x10\x01\x12\r\n\tSYS_ERROR\x10\x01\x12\x0c\n\x08\x44\x42_ERROR\x10\x02\x12\x1f\n\x1bSS_VIEW_PLAYER_INFO_SUCCESS\x10\x00\x12\x1e\n\x1aSS_VIEW_PLAYER_INFO_FAILED\x10\x01\x12 \n\x1cSS_VIEW_PLAYER_INFO_NOTEXIST\x10\x02\x12!\n\x1cSS_ERROR_RELATION_BUDDY_FULL\x10\x97\n\x12 \n\x1bSS_ERROR_RELATION_NOT_EXIST\x10\x99\n\x12\x15\n\x10SS_QUESTDATA_LEN\x10\xd8\x36\x12\x1c\n\x18SS_MAX_DAILY_QUEST_COUNT\x10\x64\x12\x15\n\x10SS_SKILLDATA_LEN\x10\xf0.\x12\x18\n\x12SS_PACKAGEDATA_LEN\x10\xa0\x9c\x01\x12\x10\n\x0bSS_HERO_LEN\x10\x80@\x12\x17\n\x12SS_ENDLESSHERO_LEN\x10\x80\x02\x12\x16\n\x11SS_GANGBATTLE_LEN\x10\x80\x02\x12\x1a\n\x15SS_GANG_APPLYLIST_LEN\x10\x80\x08\x12\x16\n\x10SS_GANG_CITY_LEN\x10\x90\xbf\x05\x12\x19\n\x14SS_GANG_MEM_BLOB_LEN\x10\x80\x08\x12\x1c\n\x17SS_FRIEND_ROLE_INFO_LEN\x10\x80@\x12 \n\x1bSS_GANG_BATTLE_MEM_INFO_LEN\x10\x80\x10\x12(\n#SS_GANG_BATTLE_HISTORY_MEM_INFO_LEN\x10\x80\x10\x12\x13\n\x0eSS_MONSTER_LEN\x10\x80@\x12\x13\n\rSS_PVEDUN_LEN\x10\x80\x80\x01\x12\x14\n\x0fSS_TOWERDUN_LEN\x10\x80\x10\x12\x13\n\x0eSS_SELFDUN_LEN\x10\x80\x10\x12\x15\n\x0fSS_MISCDATA_LEN\x10\xff\xff\x03\x12\x18\n\x13SS_ACTIVITYDATA_LEN\x10\x80 \x12\x14\n\x0fSS_MAIL_ACC_LEN\x10\x80\x10\x12\x16\n\x11SS_PVP_ISLAND_LEN\x10\x80\x08\x12\x17\n\x12SS_PVP_DEFENSE_LEN\x10\xc0>\x12\x19\n\x14SS_FIRSTPURCHASE_LEN\x10\x80\x10\x12!\n\x1cSS_DAILY_RECHARGE_REWARD_LEN\x10\x80\x10\x12$\n\x1fSS_DATASET_GAME_SERVER_MISC_LEN\x10\x80 \x12\x19\n\x13SS_DATASET_HERO_LEN\x10\xa0\x9c\x01\x12\x1d\n\x17SS_DATASET_BUILDING_LEN\x10\xb0\xea\x01\x12\x1c\n\x16SS_DATASET_DUNDATA_LEN\x10\xa0\x9c\x01\x12\x13\n\rSS_NOTIFY_LEN\x10\xa0\x9c\x01\x12\x16\n\x11SS_WORLD_INFO_LEN\x10\x80\x10\x12\x15\n\x0fSS_DATASET1_LEN\x10\xb0\xea\x01\x12\x14\n\x0fSS_DATASET2_LEN\x10\xe0]\x12\x18\n\x14SS_MAX_NOTIFYMSG_NUM\x10\x32\x12\x16\n\x11SS_MAX_WORLDS_NUM\x10\xc8\x01\x12\x1d\n\x19SS_MAX_GANG_MAIL_USER_NUM\x10\x64\x12\x1d\n\x19SS_MAX_GANG_MAIL_ITEM_NUM\x10\x08\x12\x17\n\x13SS_MAX_MAILNAME_LEN\x10@\x12\x1b\n\x16SS_MAX_MAILCONTENT_LEN\x10\x80\x10\x12\x12\n\rDISP_MAX_DEST\x10\x80\x01\x12\x16\n\x10\x44ISP_MAX_PKG_LEN\x10\xe8\x87\x04\x12\x12\n\x0e\x44ISP_DEST_ADDR\x10\x00\x12\x12\n\x0e\x44ISP_DEST_NAME\x10\x01\x12\x18\n\x14\x44ISP_FLAG_FAILNOTIFY\x10\x01\x12\x17\n\x13\x44ISP_FLAG_FROM_DISP\x10\x02\x12\x12\n\x0e\x44ISP_DEST_SOLO\x10\x00\x12\x12\n\x0e\x44ISP_DEST_LINE\x10\x01\x12\x13\n\x0f\x44ISP_DEST_WORLD\x10\x02\x12\x19\n\x14SS_MAX_SZCONTENT_LEN\x10\x80\x04\x12\x16\n\x11SS_MAX_SZLINK_LEN\x10\x80\x02\x12\x1a\n\x15SS_MAIL_TOTAL_MAX_NUM\x10\x96\x01\x12\x1b\n\x17SS_MAIL_REVENGE_MAX_NUM\x10\x64\x12\x1a\n\x16SS_MAIL_SYSTEM_MAX_NUM\x10\x64\x12\x17\n\x13SS_MAIL_TYPE_SYSTEM\x10\x00\x12\x18\n\x14SS_MAIL_TYPE_REVENGE\x10\x01\x12\x1a\n\x16SS_MAIL_TITLE_MAX_CHAR\x10 \x12\x1d\n\x18SS_MAIL_CONTENT_MAX_CHAR\x10\x80\x10\x12 \n\x1cSS_MAIL_STATUS_SYSTEM_UNREAD\x10\x00\x12\x1e\n\x1aSS_MAIL_STATUS_SYSTEM_READ\x10\x01\x12\x1d\n\x19SS_MAIL_STATUS_SYSTEM_GOT\x10\x02\x12!\n\x1dSS_MAIL_STATUS_REVENGE_UNREAD\x10\x03\x12\x1f\n\x1bSS_MAIL_STATUS_REVENGE_READ\x10\x04\x12\x1e\n\x1aSS_MAIL_STATUS_REVENGE_GOT\x10\x05\x12\x14\n\x10SS_MAIL_ACC_NONE\x10\x00\x12\x1b\n\x17SS_MAIL_ACC_REVENGE_WIN\x10\x01\x12\x1c\n\x18SS_MAIL_ACC_REVENGE_LOSE\x10\x02\x12!\n\x1dSS_MAIL_GETACC_ERROR_OVERTIME\x10\x01\x12\x1f\n\x1bSS_MAIL_GETACC_ERROR_NOTACC\x10\x02\x12)\n%SS_MAIL_GETACC_ERROR_DB_UNPACK_FAILED\x10\x03\x12 \n\x1cSS_MAIL_GETACC_ERROR_HAS_GOT\x10\x04\x12#\n\x1fSS_MAIL_GETACC_ERROR_TYPE_ERROR\x10\x05\x12\x0f\n\x0bSYS_IPLIMIT\x10\x03\x12\x16\n\x12SS_MAX_TIME_STRING\x10 \x12\x1d\n\x19MSG_GANG_MEM_LIST_CHG_RES\x10\x01\x12\x1f\n\x1bMSG_GANG_BASIC_INFO_CHG_RES\x10\x02\x12\x15\n\x11MSG_GANG_CHAT_RES\x10\x03\x12+\n\'MSG_GANG_CITY_STRONG_POINT_HERO_CHG_RES\x10\x04\x12+\n\'MSG_GANG_AUTO_APPLY_GANG_BATTLE_CHG_RES\x10\x05\x12#\n\x1fMSG_GANG_BATTLE_STATE_BROAD_RES\x10\x06\x12)\n%MSG_GANG_BATTLE_POINT_STATE_BROAD_RES\x10\x07\x12!\n\x1dMSG_GANG_BLESS_RANK_CLEAR_RES\x10\x08\x12\x1c\n\x18SS_RANK_BASE_TYPE_PLAYER\x10\x01\x12\x1a\n\x16SS_RANK_BASE_TYPE_GANG\x10\x02\x12\x1d\n\x19SS_MAX_RANKLIST_PAGECOUNT\x10\x64\x12\x1a\n\x16SS_MAX_RANK_REWARD_NUM\x10\x05\x12\x1d\n\x19SS_RANKLIST_TYPE_REALTIME\x10\x00\x12\x18\n\x14SS_RANKLIST_TYPE_DAY\x10\x01\x12\x1b\n\x17SS_RANKLIST_TYPE_HISDAY\x10\x02\x12\x1c\n\x18SS_RANKLIST_TYPE_HISWEEK\x10\x03\x12\x1d\n\x19SS_RANKLIST_TYPE_HISMONTH\x10\x04\x12\x1c\n\x18SS_RANKPOS_SEARCH_UNIQID\x10\x01\x12\x19\n\x15SS_RANKPOS_SEARCH_POS\x10\x02\x12\x1e\n\x1aSS_RANKPOS_SEARCH_UNIQNAME\x10\x03\x12\x1c\n\x18SS_MAX_SECTIONRANK_COUNT\x10\x32\x12\x13\n\x0f\x44\x42_MAX_ATTR_NUM\x10\n\x12\x1a\n\x16\x44\x42_MAX_RANDOM_ATTR_NUM\x10\n\x12\x1c\n\x17\x44\x42_MAX_PLAYER_STORE_NUM\x10\x8e\x02\x12\x1d\n\x19\x44\x42_ITEM_FUNC_TYPE_RECOVER\x10\x01\x12\x13\n\x0f\x44\x42_TAB_LIST_NUM\x10\x05\x12 \n\x1c\x44\x42_MAX_PRACTICEDUN_FLAGS_NUM\x10\x32\x12 \n\x1c\x44\x42_MAX_ACHIEVEMENT_FLAGS_NUM\x10\x32\x12\x1e\n\x1a\x44\x42_MAX_DAILYTASK_FLAGS_NUM\x10\x32\x12\x1d\n\x19\x44\x42_MAX_HERO_NUM_ONEPLAYER\x10\x1e\x12\x17\n\x13MAX_ONLINE_GIFT_NUM\x10\n\x12\x17\n\x13\x44\x42_MAX_PLAYER_SKILL\x10\x38\x12\x14\n\x10\x44\x42_EQUIP_POS_MAX\x10\x10\x12\x15\n\x11\x44\x42_AVATAR_POS_MAX\x10\x08\x12\x1e\n\x1a\x44\x42_MAX_SKILL_NUM_ONEPLAYER\x10\x64\x12\x1a\n\x16\x44\x42_MAX_ROOM_NUM_ONEDUN\x10\x05\x12\"\n\x1e\x44\x42_MAX_MONSTERTYPE_NUM_ONEROOM\x10\n\x12\x1b\n\x17\x44\x42_MAX_ENDLESS_HERO_NUM\x10\x04\x12 \n\x1c\x44\x42_MAX_MONSTER_NUM_ONEPLAYER\x10\x14\x12\x1f\n\x1b\x44\x42_MAX_SKILL_NUM_ONEMONSTER\x10\x0f\x12\x17\n\x13\x44\x42_MAX_SLOT_SELFDUN\x10\x06\x12\x19\n\x15\x44\x42_MAX_PVPPLAYER_ONCE\x10\x01\x12\x1c\n\x18SS_MAX_SELFDUN_MAX_ROUND\x10\x03\x12\x1e\n\x1aSS_MAX_HERO_NUM_ONE_BATTLE\x10\x03\x12$\n\x1fMAX_RANK_BATTLE_REWARD_MAIL_NUM\x10\xc8\x01\x12$\n SS_RANK_BATTLE_ENTER_DUN_SUCCESS\x10\x00\x12\"\n\x1eSS_RANK_BATTLE_ENTER_DUN_ERROR\x10\x01\x12(\n$SS_RANK_BATTLE_ENTER_DUN_TARGET_LOCK\x10\x02\x12&\n\"SS_RANK_BATTLE_ENTER_DUN_SELF_LOCK\x10\x03\x12+\n\'SS_RANK_BATTLE_ENTER_DUN_POS_DIFF_LARGE\x10\x04\x12+\n\'SS_RANK_BATTLE_ENTER_DUN_TARGET_PROTECT\x10\x05\x12\x1e\n\x1aSS_RANK_BATTLE_RESULT_NULL\x10\x00\x12\x1d\n\x19SS_RANK_BATTLE_RESULT_WIN\x10\x01\x12\x1e\n\x1aSS_RANK_BATTLE_RESULT_LOSE\x10\x02\x12$\n\x1fSS_RANK_BATTLE_DEFENSE_DATA_LEN\x10\x80\x10\x12#\n\x1eSS_TOP_BATTLE_DEFENSE_DATA_LEN\x10\x80\x18\x12&\n SS_MAX_RANK_BATTLE_CONTAINER_CNT\x10\xa0\x8d\x06\x12\x1e\n\x19\x44\x42_MAX_DUNGEON_DATA_COUNT\x10\xac\x02\x12\x14\n\x10\x44\x42_MAX_TITLE_NUM\x10\x64\x12\x15\n\x11\x44\x42_MAX_RANK_COUNT\x10\x14\x12\x19\n\x15\x44\x42_MAX_RANK_VAL_COUNT\x10\x05\x12 \n\x1cSS_MAX_PLAYER_SHOP_GOODS_CNT\x10\x10\x12 \n\x1bSS_MAX_SHOP_PLAYER_INFO_LEN\x10\x80 \x12\x1b\n\x17SS_REFRESH_SHOP_SUCCESS\x10\x01\x12\x1a\n\x16SS_REFRESH_SHOP_FAILED\x10\x02\x12,\n(SS_REFRESH_SHOP_SUCCESS_NOT_BUY_ANYTHING\x10\x03\x12%\n!SS_REFRESH_SHOP_SUCCESS_IN_UPDATE\x10\x04\x12\x17\n\x13MAX_CLT_VERSION_LEN\x10\x10\x12\x1d\n\x19SS_TOP_BATTLE_RESULT_NULL\x10\x00\x12\x1c\n\x18SS_TOP_BATTLE_RESULT_WIN\x10\x01\x12\x1d\n\x19SS_TOP_BATTLE_RESULT_LOSE\x10\x02\x12#\n\x1fTOP_BATTLE_REWARD_TYPE_EVERYDAY\x10\x01\x12\x1f\n\x1bTOP_BATTLE_REWARD_TYPE_WEEK\x10\x02\x1a\x02\x10\x01*\x94\x01\n\x11SS_PURCHASE_ERROR\x12&\n\x19SS_PURCHASE_ERROR_UNKNOWN\x10\xff\xff\xff\xff\xff\xff\xff\xff\xff\x01\x12/\n\"SS_PURCHASE_ERROR_PRICE_NOT_ENOUGH\x10\xfe\xff\xff\xff\xff\xff\xff\xff\xff\x01\x12&\n\x19SS_PURCHASE_ERROR_PRODUCT\x10\xfd\xff\xff\xff\xff\xff\xff\xff\xff\x01')
   ,
-  dependencies=[rescommon_pb2.DESCRIPTOR,res_pb2.DESCRIPTOR,achievement_pb2.DESCRIPTOR,activity_pb2.DESCRIPTOR,bossrush_pb2.DESCRIPTOR,building_pb2.DESCRIPTOR,business_pb2.DESCRIPTOR,chat_pb2.DESCRIPTOR,cityreward_pb2.DESCRIPTOR,continuelogin_pb2.DESCRIPTOR,cproto_pb2.DESCRIPTOR,dirserver_pb2.DESCRIPTOR,dungeon_pb2.DESCRIPTOR,endless_pb2.DESCRIPTOR,equip_pb2.DESCRIPTOR,friend_pb2.DESCRIPTOR,gang_pb2.DESCRIPTOR,hero_pb2.DESCRIPTOR,login_pb2.DESCRIPTOR,mail_pb2.DESCRIPTOR,monster_pb2.DESCRIPTOR,onlinebattle_pb2.DESCRIPTOR,playerprofile_pb2.DESCRIPTOR,playerresource_pb2.DESCRIPTOR,prizedraw_pb2.DESCRIPTOR,protocommon_pb2.DESCRIPTOR,pvpsteal_pb2.DESCRIPTOR,quest_pb2.DESCRIPTOR,rank_pb2.DESCRIPTOR,rankbattle_pb2.DESCRIPTOR,shop_pb2.DESCRIPTOR,viewplayer_pb2.DESCRIPTOR,worldboss_pb2.DESCRIPTOR,multiplayer_pb2.DESCRIPTOR,specialactivity_pb2.DESCRIPTOR,])
+  dependencies=[rescommon_pb2.DESCRIPTOR,res_pb2.DESCRIPTOR,achievement_pb2.DESCRIPTOR,activity_pb2.DESCRIPTOR,bossrush_pb2.DESCRIPTOR,building_pb2.DESCRIPTOR,business_pb2.DESCRIPTOR,chat_pb2.DESCRIPTOR,cityreward_pb2.DESCRIPTOR,continuelogin_pb2.DESCRIPTOR,cproto_pb2.DESCRIPTOR,dirserver_pb2.DESCRIPTOR,dungeon_pb2.DESCRIPTOR,endless_pb2.DESCRIPTOR,equip_pb2.DESCRIPTOR,friend_pb2.DESCRIPTOR,gang_pb2.DESCRIPTOR,hero_pb2.DESCRIPTOR,login_pb2.DESCRIPTOR,mail_pb2.DESCRIPTOR,monster_pb2.DESCRIPTOR,onlinebattle_pb2.DESCRIPTOR,playerprofile_pb2.DESCRIPTOR,playerresource_pb2.DESCRIPTOR,prizedraw_pb2.DESCRIPTOR,protocommon_pb2.DESCRIPTOR,pvpsteal_pb2.DESCRIPTOR,quest_pb2.DESCRIPTOR,rank_pb2.DESCRIPTOR,rankbattle_pb2.DESCRIPTOR,topbattle_pb2.DESCRIPTOR,shop_pb2.DESCRIPTOR,viewplayer_pb2.DESCRIPTOR,worldboss_pb2.DESCRIPTOR,multiplayer_pb2.DESCRIPTOR,specialactivity_pb2.DESCRIPTOR,factor_pb2.DESCRIPTOR,])
 _sym_db.RegisterFileDescriptor(DESCRIPTOR)
 
 _SSPROTOCONST = _descriptor.EnumDescriptor(
@@ -978,74 +980,106 @@ _SSPROTOCONST = _descriptor.EnumDescriptor(
       options=None,
       type=None),
     _descriptor.EnumValueDescriptor(
-      name='SS_RANK_BATTLE_RESULT_NULL', index=228, number=0,
+      name='SS_RANK_BATTLE_ENTER_DUN_POS_DIFF_LARGE', index=228, number=4,
       options=None,
       type=None),
     _descriptor.EnumValueDescriptor(
-      name='SS_RANK_BATTLE_RESULT_WIN', index=229, number=1,
+      name='SS_RANK_BATTLE_ENTER_DUN_TARGET_PROTECT', index=229, number=5,
       options=None,
       type=None),
     _descriptor.EnumValueDescriptor(
-      name='SS_RANK_BATTLE_RESULT_LOSE', index=230, number=2,
+      name='SS_RANK_BATTLE_RESULT_NULL', index=230, number=0,
       options=None,
       type=None),
     _descriptor.EnumValueDescriptor(
-      name='SS_RANK_BATTLE_DEFENSE_DATA_LEN', index=231, number=2048,
+      name='SS_RANK_BATTLE_RESULT_WIN', index=231, number=1,
       options=None,
       type=None),
     _descriptor.EnumValueDescriptor(
-      name='SS_MAX_RANK_BATTLE_CONTAINER_CNT', index=232, number=100000,
+      name='SS_RANK_BATTLE_RESULT_LOSE', index=232, number=2,
       options=None,
       type=None),
     _descriptor.EnumValueDescriptor(
-      name='DB_MAX_DUNGEON_DATA_COUNT', index=233, number=300,
+      name='SS_RANK_BATTLE_DEFENSE_DATA_LEN', index=233, number=2048,
       options=None,
       type=None),
     _descriptor.EnumValueDescriptor(
-      name='DB_MAX_TITLE_NUM', index=234, number=100,
+      name='SS_TOP_BATTLE_DEFENSE_DATA_LEN', index=234, number=3072,
       options=None,
       type=None),
     _descriptor.EnumValueDescriptor(
-      name='DB_MAX_RANK_COUNT', index=235, number=20,
+      name='SS_MAX_RANK_BATTLE_CONTAINER_CNT', index=235, number=100000,
       options=None,
       type=None),
     _descriptor.EnumValueDescriptor(
-      name='DB_MAX_RANK_VAL_COUNT', index=236, number=5,
+      name='DB_MAX_DUNGEON_DATA_COUNT', index=236, number=300,
       options=None,
       type=None),
     _descriptor.EnumValueDescriptor(
-      name='SS_MAX_PLAYER_SHOP_GOODS_CNT', index=237, number=16,
+      name='DB_MAX_TITLE_NUM', index=237, number=100,
       options=None,
       type=None),
     _descriptor.EnumValueDescriptor(
-      name='SS_MAX_SHOP_PLAYER_INFO_LEN', index=238, number=4096,
+      name='DB_MAX_RANK_COUNT', index=238, number=20,
       options=None,
       type=None),
     _descriptor.EnumValueDescriptor(
-      name='SS_REFRESH_SHOP_SUCCESS', index=239, number=1,
+      name='DB_MAX_RANK_VAL_COUNT', index=239, number=5,
       options=None,
       type=None),
     _descriptor.EnumValueDescriptor(
-      name='SS_REFRESH_SHOP_FAILED', index=240, number=2,
+      name='SS_MAX_PLAYER_SHOP_GOODS_CNT', index=240, number=16,
       options=None,
       type=None),
     _descriptor.EnumValueDescriptor(
-      name='SS_REFRESH_SHOP_SUCCESS_NOT_BUY_ANYTHING', index=241, number=3,
+      name='SS_MAX_SHOP_PLAYER_INFO_LEN', index=241, number=4096,
       options=None,
       type=None),
     _descriptor.EnumValueDescriptor(
-      name='SS_REFRESH_SHOP_SUCCESS_IN_UPDATE', index=242, number=4,
+      name='SS_REFRESH_SHOP_SUCCESS', index=242, number=1,
       options=None,
       type=None),
     _descriptor.EnumValueDescriptor(
-      name='MAX_CLT_VERSION_LEN', index=243, number=16,
+      name='SS_REFRESH_SHOP_FAILED', index=243, number=2,
+      options=None,
+      type=None),
+    _descriptor.EnumValueDescriptor(
+      name='SS_REFRESH_SHOP_SUCCESS_NOT_BUY_ANYTHING', index=244, number=3,
+      options=None,
+      type=None),
+    _descriptor.EnumValueDescriptor(
+      name='SS_REFRESH_SHOP_SUCCESS_IN_UPDATE', index=245, number=4,
+      options=None,
+      type=None),
+    _descriptor.EnumValueDescriptor(
+      name='MAX_CLT_VERSION_LEN', index=246, number=16,
+      options=None,
+      type=None),
+    _descriptor.EnumValueDescriptor(
+      name='SS_TOP_BATTLE_RESULT_NULL', index=247, number=0,
+      options=None,
+      type=None),
+    _descriptor.EnumValueDescriptor(
+      name='SS_TOP_BATTLE_RESULT_WIN', index=248, number=1,
+      options=None,
+      type=None),
+    _descriptor.EnumValueDescriptor(
+      name='SS_TOP_BATTLE_RESULT_LOSE', index=249, number=2,
+      options=None,
+      type=None),
+    _descriptor.EnumValueDescriptor(
+      name='TOP_BATTLE_REWARD_TYPE_EVERYDAY', index=250, number=1,
+      options=None,
+      type=None),
+    _descriptor.EnumValueDescriptor(
+      name='TOP_BATTLE_REWARD_TYPE_WEEK', index=251, number=2,
       options=None,
       type=None),
   ],
   containing_type=None,
   options=_descriptor._ParseOptions(descriptor_pb2.EnumOptions(), _b('\020\001')),
-  serialized_start=63878,
-  serialized_end=71032,
+  serialized_start=69169,
+  serialized_end=76612,
 )
 _sym_db.RegisterEnumDescriptor(_SSPROTOCONST)
 
@@ -1071,8 +1105,8 @@ _SS_PURCHASE_ERROR = _descriptor.EnumDescriptor(
   ],
   containing_type=None,
   options=None,
-  serialized_start=71035,
-  serialized_end=71183,
+  serialized_start=76615,
+  serialized_end=76763,
 )
 _sym_db.RegisterEnumDescriptor(_SS_PURCHASE_ERROR)
 
@@ -1305,10 +1339,13 @@ SS_RANK_BATTLE_ENTER_DUN_SUCCESS = 0
 SS_RANK_BATTLE_ENTER_DUN_ERROR = 1
 SS_RANK_BATTLE_ENTER_DUN_TARGET_LOCK = 2
 SS_RANK_BATTLE_ENTER_DUN_SELF_LOCK = 3
+SS_RANK_BATTLE_ENTER_DUN_POS_DIFF_LARGE = 4
+SS_RANK_BATTLE_ENTER_DUN_TARGET_PROTECT = 5
 SS_RANK_BATTLE_RESULT_NULL = 0
 SS_RANK_BATTLE_RESULT_WIN = 1
 SS_RANK_BATTLE_RESULT_LOSE = 2
 SS_RANK_BATTLE_DEFENSE_DATA_LEN = 2048
+SS_TOP_BATTLE_DEFENSE_DATA_LEN = 3072
 SS_MAX_RANK_BATTLE_CONTAINER_CNT = 100000
 DB_MAX_DUNGEON_DATA_COUNT = 300
 DB_MAX_TITLE_NUM = 100
@@ -1321,6 +1358,11 @@ SS_REFRESH_SHOP_FAILED = 2
 SS_REFRESH_SHOP_SUCCESS_NOT_BUY_ANYTHING = 3
 SS_REFRESH_SHOP_SUCCESS_IN_UPDATE = 4
 MAX_CLT_VERSION_LEN = 16
+SS_TOP_BATTLE_RESULT_NULL = 0
+SS_TOP_BATTLE_RESULT_WIN = 1
+SS_TOP_BATTLE_RESULT_LOSE = 2
+TOP_BATTLE_REWARD_TYPE_EVERYDAY = 1
+TOP_BATTLE_REWARD_TYPE_WEEK = 2
 SS_PURCHASE_ERROR_UNKNOWN = -1
 SS_PURCHASE_ERROR_PRICE_NOT_ENOUGH = -2
 SS_PURCHASE_ERROR_PRODUCT = -3
@@ -1373,8 +1415,8 @@ _SSDT_NOTIFY_MSG = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=577,
-  serialized_end=663,
+  serialized_start=608,
+  serialized_end=694,
 )
 
 
@@ -1620,8 +1662,8 @@ _SSDT_ROLE_ONLINE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=666,
-  serialized_end=1467,
+  serialized_start=697,
+  serialized_end=1498,
 )
 
 
@@ -1650,8 +1692,8 @@ _SSDT_ROLE_QUEST = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=1469,
-  serialized_end=1500,
+  serialized_start=1500,
+  serialized_end=1531,
 )
 
 
@@ -1680,8 +1722,8 @@ _SSDT_ROLE_PACKAGE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=1502,
-  serialized_end=1535,
+  serialized_start=1533,
+  serialized_end=1566,
 )
 
 
@@ -1710,8 +1752,8 @@ _SSDT_ROLE_SKILL = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=1537,
-  serialized_end=1568,
+  serialized_start=1568,
+  serialized_end=1599,
 )
 
 
@@ -1740,8 +1782,8 @@ _SSDT_ROLE_DUNGEON_DATA = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=1570,
-  serialized_end=1608,
+  serialized_start=1601,
+  serialized_end=1639,
 )
 
 
@@ -1770,8 +1812,8 @@ _SSDT_ROLE_MISC_DATA = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=1610,
-  serialized_end=1645,
+  serialized_start=1641,
+  serialized_end=1676,
 )
 
 
@@ -1800,8 +1842,8 @@ _SSDT_ROLE_DATASET_HERO = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=1647,
-  serialized_end=1685,
+  serialized_start=1678,
+  serialized_end=1716,
 )
 
 
@@ -1830,8 +1872,8 @@ _SSDT_ROLE_DATASET_BUILDING = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=1687,
-  serialized_end=1729,
+  serialized_start=1718,
+  serialized_end=1760,
 )
 
 
@@ -1860,8 +1902,8 @@ _SSDT_ROLE_DATASET_DUNDATA = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=1731,
-  serialized_end=1772,
+  serialized_start=1762,
+  serialized_end=1803,
 )
 
 
@@ -1890,8 +1932,8 @@ _SSDT_NOTIFY_DATA = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=1774,
-  serialized_end=1806,
+  serialized_start=1805,
+  serialized_end=1837,
 )
 
 
@@ -1927,8 +1969,8 @@ _DBBLOB_ATTR_INFO = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=1808,
-  serialized_end=1856,
+  serialized_start=1839,
+  serialized_end=1887,
 )
 
 
@@ -1957,8 +1999,8 @@ _DBBLOB_ITEM_EXTRA_INFO_RECOVER = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=1858,
-  serialized_end=1911,
+  serialized_start=1889,
+  serialized_end=1942,
 )
 
 
@@ -1994,8 +2036,8 @@ _DBBLOB_FIRSTPURCHASE_INFO = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=1913,
-  serialized_end=1989,
+  serialized_start=1944,
+  serialized_end=2020,
 )
 
 
@@ -2031,8 +2073,52 @@ _DBBLOB_MONTHCARD_INFO = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=1991,
-  serialized_end=2055,
+  serialized_start=2022,
+  serialized_end=2086,
+)
+
+
+_DBBLOB_SUPERVALUECARD_INFO = _descriptor.Descriptor(
+  name='DBBLOB_SUPERVALUECARD_INFO',
+  full_name='DBBLOB_SUPERVALUECARD_INFO',
+  filename=None,
+  file=DESCRIPTOR,
+  containing_type=None,
+  fields=[
+    _descriptor.FieldDescriptor(
+      name='supervalue_card_id', full_name='DBBLOB_SUPERVALUECARD_INFO.supervalue_card_id', index=0,
+      number=1, type=13, cpp_type=3, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    _descriptor.FieldDescriptor(
+      name='buy_time', full_name='DBBLOB_SUPERVALUECARD_INFO.buy_time', index=1,
+      number=2, type=13, cpp_type=3, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    _descriptor.FieldDescriptor(
+      name='end_time', full_name='DBBLOB_SUPERVALUECARD_INFO.end_time', index=2,
+      number=3, type=13, cpp_type=3, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+  ],
+  extensions=[
+  ],
+  nested_types=[],
+  enum_types=[
+  ],
+  options=None,
+  is_extendable=False,
+  extension_ranges=[],
+  oneofs=[
+  ],
+  serialized_start=2088,
+  serialized_end=2180,
 )
 
 
@@ -2061,8 +2147,8 @@ _DBBLOB_FIRSTPURCHASE_LIST = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=2057,
-  serialized_end=2135,
+  serialized_start=2182,
+  serialized_end=2260,
 )
 
 
@@ -2140,8 +2226,8 @@ _DBBLOB_EQUIP_INFO = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=2138,
-  serialized_end=2297,
+  serialized_start=2263,
+  serialized_end=2422,
 )
 
 
@@ -2191,8 +2277,8 @@ _DBBLOB_EQUIP_TAB = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=2299,
-  serialized_end=2412,
+  serialized_start=2424,
+  serialized_end=2537,
 )
 
 
@@ -2256,8 +2342,8 @@ _DBBLOB_PACKAGE_OBJ = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=2414,
-  serialized_end=2534,
+  serialized_start=2539,
+  serialized_end=2659,
 )
 
 
@@ -2293,8 +2379,8 @@ _DBBLOB_PACKAGE_TAB = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=2536,
-  serialized_end=2609,
+  serialized_start=2661,
+  serialized_end=2734,
 )
 
 
@@ -2330,8 +2416,82 @@ _DBBLOBHERO_EQUIPED_INFO = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=2611,
-  serialized_end=2695,
+  serialized_start=2736,
+  serialized_end=2820,
+)
+
+
+_DBBLOB_DATA_HERO_FACTOR_DATA = _descriptor.Descriptor(
+  name='DBBLOB_DATA_HERO_FACTOR_DATA',
+  full_name='DBBLOB_DATA_HERO_FACTOR_DATA',
+  filename=None,
+  file=DESCRIPTOR,
+  containing_type=None,
+  fields=[
+    _descriptor.FieldDescriptor(
+      name='hero_id', full_name='DBBLOB_DATA_HERO_FACTOR_DATA.hero_id', index=0,
+      number=1, type=13, cpp_type=3, label=2,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    _descriptor.FieldDescriptor(
+      name='factor_slot_info', full_name='DBBLOB_DATA_HERO_FACTOR_DATA.factor_slot_info', index=1,
+      number=2, type=13, cpp_type=3, label=3,
+      has_default_value=False, default_value=[],
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+  ],
+  extensions=[
+  ],
+  nested_types=[],
+  enum_types=[
+  ],
+  options=None,
+  is_extendable=False,
+  extension_ranges=[],
+  oneofs=[
+  ],
+  serialized_start=2822,
+  serialized_end=2895,
+)
+
+
+_DBBLOB_FACTOR_INFO = _descriptor.Descriptor(
+  name='DBBLOB_FACTOR_INFO',
+  full_name='DBBLOB_FACTOR_INFO',
+  filename=None,
+  file=DESCRIPTOR,
+  containing_type=None,
+  fields=[
+    _descriptor.FieldDescriptor(
+      name='embed_factor_info', full_name='DBBLOB_FACTOR_INFO.embed_factor_info', index=0,
+      number=1, type=11, cpp_type=10, label=3,
+      has_default_value=False, default_value=[],
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    _descriptor.FieldDescriptor(
+      name='factor_data', full_name='DBBLOB_FACTOR_INFO.factor_data', index=1,
+      number=2, type=11, cpp_type=10, label=3,
+      has_default_value=False, default_value=[],
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+  ],
+  extensions=[
+  ],
+  nested_types=[],
+  enum_types=[
+  ],
+  options=None,
+  is_extendable=False,
+  extension_ranges=[],
+  oneofs=[
+  ],
+  serialized_start=2897,
+  serialized_end=3022,
 )
 
 
@@ -2363,6 +2523,13 @@ _DBBLOB_PACKAGE_INFO = _descriptor.Descriptor(
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
+    _descriptor.FieldDescriptor(
+      name='factor_info', full_name='DBBLOB_PACKAGE_INFO.factor_info', index=3,
+      number=4, type=11, cpp_type=10, label=1,
+      has_default_value=False, default_value=None,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
   ],
   extensions=[
   ],
@@ -2374,8 +2541,8 @@ _DBBLOB_PACKAGE_INFO = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=2698,
-  serialized_end=2849,
+  serialized_start=3025,
+  serialized_end=3218,
 )
 
 
@@ -2411,8 +2578,8 @@ _DBBLOB_TIME_VALUE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=2851,
-  serialized_end=2918,
+  serialized_start=3220,
+  serialized_end=3287,
 )
 
 
@@ -2441,8 +2608,8 @@ _DBBLOB_PLAYER_PRACTICEDUN_QUEST = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=2920,
-  serialized_end=2987,
+  serialized_start=3289,
+  serialized_end=3356,
 )
 
 
@@ -2478,8 +2645,8 @@ _DBBLOB_PLAYER_ACHIEVEMENT = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=2989,
-  serialized_end=3064,
+  serialized_start=3358,
+  serialized_end=3433,
 )
 
 
@@ -2508,8 +2675,8 @@ _DBBLOB_PLAYER_FIRSTPURCHAE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=3066,
-  serialized_end=3123,
+  serialized_start=3435,
+  serialized_end=3492,
 )
 
 
@@ -2559,8 +2726,8 @@ _DBBLOB_PLAYER_DAILYTASK_ITEM = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=3126,
-  serialized_end=3263,
+  serialized_start=3495,
+  serialized_end=3632,
 )
 
 
@@ -2596,8 +2763,8 @@ _DBBLOB_PLAYER_DAILYTASK = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=3265,
-  serialized_end=3378,
+  serialized_start=3634,
+  serialized_end=3747,
 )
 
 
@@ -2647,8 +2814,8 @@ _DBBLOB_PLAYER_MAIN_TASK_ITEM = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=3380,
-  serialized_end=3474,
+  serialized_start=3749,
+  serialized_end=3843,
 )
 
 
@@ -2691,8 +2858,8 @@ _DBBLOB_PLAYER_MAIN_TASK = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=3476,
-  serialized_end=3589,
+  serialized_start=3845,
+  serialized_end=3958,
 )
 
 
@@ -2756,8 +2923,8 @@ _DBBLOB_PLAYER_SHOP = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=3592,
-  serialized_end=3810,
+  serialized_start=3961,
+  serialized_end=4179,
 )
 
 
@@ -2859,6 +3026,13 @@ _DBBLOB_PLAYER_PRIZE_DRAW = _descriptor.Descriptor(
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
+    _descriptor.FieldDescriptor(
+      name='super_money_five_prize_draw_count', full_name='DBBLOB_PLAYER_PRIZE_DRAW.super_money_five_prize_draw_count', index=13,
+      number=18, type=13, cpp_type=3, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
   ],
   extensions=[
   ],
@@ -2870,8 +3044,8 @@ _DBBLOB_PLAYER_PRIZE_DRAW = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=3813,
-  serialized_end=4359,
+  serialized_start=4182,
+  serialized_end=4771,
 )
 
 
@@ -2935,8 +3109,8 @@ _DBBLOB_PLAYER_QUEST = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=4362,
-  serialized_end=4695,
+  serialized_start=4774,
+  serialized_end=5107,
 )
 
 
@@ -2965,8 +3139,75 @@ _DBBLOB_GIFT_ACCEPT_INFO = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=4697,
-  serialized_end=4744,
+  serialized_start=5109,
+  serialized_end=5156,
+)
+
+
+_DBBLOB_GIFT_CLAIM_ITEM_INFO = _descriptor.Descriptor(
+  name='DBBLOB_GIFT_CLAIM_ITEM_INFO',
+  full_name='DBBLOB_GIFT_CLAIM_ITEM_INFO',
+  filename=None,
+  file=DESCRIPTOR,
+  containing_type=None,
+  fields=[
+    _descriptor.FieldDescriptor(
+      name='id', full_name='DBBLOB_GIFT_CLAIM_ITEM_INFO.id', index=0,
+      number=1, type=13, cpp_type=3, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    _descriptor.FieldDescriptor(
+      name='claim_time', full_name='DBBLOB_GIFT_CLAIM_ITEM_INFO.claim_time', index=1,
+      number=2, type=13, cpp_type=3, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+  ],
+  extensions=[
+  ],
+  nested_types=[],
+  enum_types=[
+  ],
+  options=None,
+  is_extendable=False,
+  extension_ranges=[],
+  oneofs=[
+  ],
+  serialized_start=5158,
+  serialized_end=5219,
+)
+
+
+_DBBLOB_GIFT_CLAIM_INFO = _descriptor.Descriptor(
+  name='DBBLOB_GIFT_CLAIM_INFO',
+  full_name='DBBLOB_GIFT_CLAIM_INFO',
+  filename=None,
+  file=DESCRIPTOR,
+  containing_type=None,
+  fields=[
+    _descriptor.FieldDescriptor(
+      name='items', full_name='DBBLOB_GIFT_CLAIM_INFO.items', index=0,
+      number=1, type=11, cpp_type=10, label=3,
+      has_default_value=False, default_value=[],
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+  ],
+  extensions=[
+  ],
+  nested_types=[],
+  enum_types=[
+  ],
+  options=None,
+  is_extendable=False,
+  extension_ranges=[],
+  oneofs=[
+  ],
+  serialized_start=5221,
+  serialized_end=5290,
 )
 
 
@@ -3030,8 +3271,8 @@ _DBBLOB_OFFLINE_BATTLE_DEFEATED_INFO = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=4747,
-  serialized_end=4995,
+  serialized_start=5293,
+  serialized_end=5541,
 )
 
 
@@ -3095,8 +3336,8 @@ _DBBLOB_OFFLINE_BATTLE_INFO = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=4998,
-  serialized_end=5260,
+  serialized_start=5544,
+  serialized_end=5806,
 )
 
 
@@ -3163,6 +3404,13 @@ _DBBLOB_ONLINE_BATTLE_INFO = _descriptor.Descriptor(
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
+    _descriptor.FieldDescriptor(
+      name='next_refresh_time', full_name='DBBLOB_ONLINE_BATTLE_INFO.next_refresh_time', index=8,
+      number=9, type=13, cpp_type=3, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
   ],
   extensions=[
   ],
@@ -3174,8 +3422,8 @@ _DBBLOB_ONLINE_BATTLE_INFO = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=5263,
-  serialized_end=5452,
+  serialized_start=5809,
+  serialized_end=6025,
 )
 
 
@@ -3218,8 +3466,8 @@ _DBBLOB_DAILYQUEST_INFO = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=5454,
-  serialized_end=5531,
+  serialized_start=6027,
+  serialized_end=6104,
 )
 
 
@@ -3255,8 +3503,8 @@ _DBBLOB_DUNGEON_CHALLENGE_INFO = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=5533,
-  serialized_end=5608,
+  serialized_start=6106,
+  serialized_end=6181,
 )
 
 
@@ -3299,8 +3547,8 @@ _DBBLOB_DUNGEON_UNLOCK_INFO = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=5610,
-  serialized_end=5702,
+  serialized_start=6183,
+  serialized_end=6275,
 )
 
 
@@ -3343,8 +3591,8 @@ _DBBLOB_DUNGEON_COUNT_INFO = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=5704,
-  serialized_end=5780,
+  serialized_start=6277,
+  serialized_end=6353,
 )
 
 
@@ -3415,8 +3663,8 @@ _DBBLOB_DUNGEON_DATA_INFO = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=5783,
-  serialized_end=6058,
+  serialized_start=6356,
+  serialized_end=6631,
 )
 
 
@@ -3473,8 +3721,8 @@ _DBBLOB_HERO_STAT_DATA = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=6060,
-  serialized_end=6185,
+  serialized_start=6633,
+  serialized_end=6758,
 )
 
 
@@ -3510,8 +3758,8 @@ _DBBLOB_SKILL_INFO_DATA = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=6187,
-  serialized_end=6250,
+  serialized_start=6760,
+  serialized_end=6823,
 )
 
 
@@ -3554,8 +3802,8 @@ _DBBLOB_EMBLEMINFO_DATA = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=6252,
-  serialized_end=6334,
+  serialized_start=6825,
+  serialized_end=6907,
 )
 
 
@@ -3664,6 +3912,13 @@ _DBBLOB_HERO_INFO_DATA = _descriptor.Descriptor(
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
+    _descriptor.FieldDescriptor(
+      name='talent_hide_info', full_name='DBBLOB_HERO_INFO_DATA.talent_hide_info', index=14,
+      number=15, type=11, cpp_type=10, label=3,
+      has_default_value=False, default_value=[],
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
   ],
   extensions=[
   ],
@@ -3675,8 +3930,8 @@ _DBBLOB_HERO_INFO_DATA = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=6337,
-  serialized_end=6690,
+  serialized_start=6910,
+  serialized_end=7323,
 )
 
 
@@ -3712,8 +3967,8 @@ _DBBLOB_HERO_TRAININGSLOT_INFO = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=6692,
-  serialized_end=6761,
+  serialized_start=7325,
+  serialized_end=7394,
 )
 
 
@@ -3749,8 +4004,8 @@ _DBBLOB_CHIP_INFO_DATA = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=6763,
-  serialized_end=6821,
+  serialized_start=7396,
+  serialized_end=7454,
 )
 
 
@@ -3779,8 +4034,8 @@ _DBBLOB_PLAYER_HERO_DATA = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=6823,
-  serialized_end=6891,
+  serialized_start=7456,
+  serialized_end=7524,
 )
 
 
@@ -3816,8 +4071,66 @@ _DBBLOB_PLAYER_HERO_GANGBATTLE_DATA = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=6893,
-  serialized_end=6988,
+  serialized_start=7526,
+  serialized_end=7621,
+)
+
+
+_DBBLOB_PLAYER_TOP_BATTLE_ROCKET = _descriptor.Descriptor(
+  name='DBBLOB_PLAYER_TOP_BATTLE_ROCKET',
+  full_name='DBBLOB_PLAYER_TOP_BATTLE_ROCKET',
+  filename=None,
+  file=DESCRIPTOR,
+  containing_type=None,
+  fields=[
+    _descriptor.FieldDescriptor(
+      name='uid', full_name='DBBLOB_PLAYER_TOP_BATTLE_ROCKET.uid', index=0,
+      number=1, type=13, cpp_type=3, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    _descriptor.FieldDescriptor(
+      name='rocket_id', full_name='DBBLOB_PLAYER_TOP_BATTLE_ROCKET.rocket_id', index=1,
+      number=2, type=13, cpp_type=3, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    _descriptor.FieldDescriptor(
+      name='got_reward_cnt', full_name='DBBLOB_PLAYER_TOP_BATTLE_ROCKET.got_reward_cnt', index=2,
+      number=3, type=13, cpp_type=3, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    _descriptor.FieldDescriptor(
+      name='last_refresh_time', full_name='DBBLOB_PLAYER_TOP_BATTLE_ROCKET.last_refresh_time', index=3,
+      number=4, type=13, cpp_type=3, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    _descriptor.FieldDescriptor(
+      name='notify_cnt', full_name='DBBLOB_PLAYER_TOP_BATTLE_ROCKET.notify_cnt', index=4,
+      number=5, type=13, cpp_type=3, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+  ],
+  extensions=[
+  ],
+  nested_types=[],
+  enum_types=[
+  ],
+  options=None,
+  is_extendable=False,
+  extension_ranges=[],
+  oneofs=[
+  ],
+  serialized_start=7624,
+  serialized_end=7760,
 )
 
 
@@ -3856,6 +4169,34 @@ _DBBLOB_PLAYER_RANK_BATTLE_DATA = _descriptor.Descriptor(
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
+    _descriptor.FieldDescriptor(
+      name='left_top_battle_count', full_name='DBBLOB_PLAYER_RANK_BATTLE_DATA.left_top_battle_count', index=4,
+      number=5, type=13, cpp_type=3, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    _descriptor.FieldDescriptor(
+      name='buy_top_battle_count', full_name='DBBLOB_PLAYER_RANK_BATTLE_DATA.buy_top_battle_count', index=5,
+      number=6, type=13, cpp_type=3, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    _descriptor.FieldDescriptor(
+      name='last_refresh_top_battle_count_time', full_name='DBBLOB_PLAYER_RANK_BATTLE_DATA.last_refresh_top_battle_count_time', index=6,
+      number=7, type=13, cpp_type=3, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    _descriptor.FieldDescriptor(
+      name='top_battle_rocket', full_name='DBBLOB_PLAYER_RANK_BATTLE_DATA.top_battle_rocket', index=7,
+      number=8, type=11, cpp_type=10, label=3,
+      has_default_value=False, default_value=[],
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
   ],
   extensions=[
   ],
@@ -3867,8 +4208,8 @@ _DBBLOB_PLAYER_RANK_BATTLE_DATA = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=6991,
-  serialized_end=7155,
+  serialized_start=7763,
+  serialized_end=8093,
 )
 
 
@@ -3897,8 +4238,8 @@ _RANK_BATTLE_DEFENSE_DATA = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=7157,
-  serialized_end=7224,
+  serialized_start=8095,
+  serialized_end=8162,
 )
 
 
@@ -3941,8 +4282,8 @@ _DBBLOB_MONSTER_STAT_DATA = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=7226,
-  serialized_end=7314,
+  serialized_start=8164,
+  serialized_end=8252,
 )
 
 
@@ -3985,8 +4326,8 @@ _DBBLOB_MONSTER_INFO_DATA = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=7316,
-  serialized_end=7431,
+  serialized_start=8254,
+  serialized_end=8369,
 )
 
 
@@ -4015,8 +4356,8 @@ _DBBLOB_PLAYER_MONSTER_DATA = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=7433,
-  serialized_end=7514,
+  serialized_start=8371,
+  serialized_end=8452,
 )
 
 
@@ -4101,8 +4442,8 @@ _DBBLOB_DUN_UNLOCK_DATA = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=7517,
-  serialized_end=7740,
+  serialized_start=8455,
+  serialized_end=8678,
 )
 
 
@@ -4152,8 +4493,8 @@ _DBBLOB_PVE_CHALLENGE_DATA = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=7743,
-  serialized_end=7878,
+  serialized_start=8681,
+  serialized_end=8816,
 )
 
 
@@ -4252,8 +4593,8 @@ _DBBLOB_TOWER_HERO = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=7881,
-  serialized_end=8128,
+  serialized_start=8819,
+  serialized_end=9066,
 )
 
 
@@ -4282,8 +4623,8 @@ _DBBLOB_TOWER_HERO_INFO = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=8130,
-  serialized_end=8191,
+  serialized_start=9068,
+  serialized_end=9129,
 )
 
 
@@ -4319,8 +4660,8 @@ _DBBLOB_TOWER_CHALLENGE_DATA = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=8193,
-  serialized_end=8285,
+  serialized_start=9131,
+  serialized_end=9223,
 )
 
 
@@ -4370,8 +4711,8 @@ _DBBLOB_WORLD_BOSS_HERO_DATA = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=8287,
-  serialized_end=8405,
+  serialized_start=9225,
+  serialized_end=9343,
 )
 
 
@@ -4449,8 +4790,8 @@ _DBBLOB_WORLD_BOSS_CHALLENGE_DATA = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=8408,
-  serialized_end=8673,
+  serialized_start=9346,
+  serialized_end=9611,
 )
 
 
@@ -4542,8 +4883,8 @@ _SSPKG_CMD_UPDATE_WORLD_BOSS = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=8676,
-  serialized_end=8920,
+  serialized_start=9614,
+  serialized_end=9858,
 )
 
 
@@ -4603,6 +4944,13 @@ _SSPKG_CMD_WORLD_BOSS_DEAD = _descriptor.Descriptor(
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
+    _descriptor.FieldDescriptor(
+      name='lucky_reward_uid', full_name='SSPKG_CMD_WORLD_BOSS_DEAD.lucky_reward_uid', index=7,
+      number=8, type=13, cpp_type=3, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
   ],
   extensions=[
   ],
@@ -4614,8 +4962,8 @@ _SSPKG_CMD_WORLD_BOSS_DEAD = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=8923,
-  serialized_end=9109,
+  serialized_start=9861,
+  serialized_end=10073,
 )
 
 
@@ -4644,8 +4992,8 @@ _SSPKG_CMD_WORLD_BOSS_DEAD_PLAYER_DAMAGE_INFO = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=9111,
-  serialized_end=9227,
+  serialized_start=10075,
+  serialized_end=10191,
 )
 
 
@@ -4681,8 +5029,8 @@ _SSPKG_CMD_WORLD_BOSS_HERO_DAMAGE_INFO = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=9229,
-  serialized_end=9301,
+  serialized_start=10193,
+  serialized_end=10265,
 )
 
 
@@ -4732,8 +5080,8 @@ _SSPKG_CMD_WORLD_BOSS_PLAYER_DAMAGE_INFO = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=9304,
-  serialized_end=9463,
+  serialized_start=10268,
+  serialized_end=10427,
 )
 
 
@@ -4783,8 +5131,8 @@ _SSPKG_CMD_WORLD_BOSS_DAMAGE_PLAYER = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=9466,
-  serialized_end=9620,
+  serialized_start=10430,
+  serialized_end=10584,
 )
 
 
@@ -4827,8 +5175,8 @@ _DBBLOB_WORLD_BOSS_HERO_DAMAGE_INFO = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=9622,
-  serialized_end=9712,
+  serialized_start=10586,
+  serialized_end=10676,
 )
 
 
@@ -4892,8 +5240,8 @@ _DBBLOB_WORLD_BOSS_PLAYER_DAMAGE_INFO = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=9715,
-  serialized_end=9901,
+  serialized_start=10679,
+  serialized_end=10865,
 )
 
 
@@ -4929,8 +5277,8 @@ _SSPKG_CMD_WORLD_BOSS_DAMAGE_INFO = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=9903,
-  serialized_end=10010,
+  serialized_start=10867,
+  serialized_end=10974,
 )
 
 
@@ -4966,8 +5314,8 @@ _SSPKG_WORLD_BOSS_QUALIFIED_HERO_INFO = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=10012,
-  serialized_end=10091,
+  serialized_start=10976,
+  serialized_end=11055,
 )
 
 
@@ -4996,8 +5344,8 @@ _SSPKG_CMD_WORLD_BOSS_RESET = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=10093,
-  serialized_end=10141,
+  serialized_start=11057,
+  serialized_end=11105,
 )
 
 
@@ -5033,8 +5381,8 @@ _SSPKG_WORLD_BOSS_KILLER_INFO_RES = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=10143,
-  serialized_end=10242,
+  serialized_start=11107,
+  serialized_end=11206,
 )
 
 
@@ -5046,23 +5394,37 @@ _DBBLOB_MULTIPLAYER_PVE_CHALLENGE_DATA = _descriptor.Descriptor(
   containing_type=None,
   fields=[
     _descriptor.FieldDescriptor(
-      name='last_refresh_time', full_name='DBBLOB_MULTIPLAYER_PVE_CHALLENGE_DATA.last_refresh_time', index=0,
+      name='week_day', full_name='DBBLOB_MULTIPLAYER_PVE_CHALLENGE_DATA.week_day', index=0,
       number=1, type=13, cpp_type=3, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
-      name='week_day', full_name='DBBLOB_MULTIPLAYER_PVE_CHALLENGE_DATA.week_day', index=1,
+      name='complete_dun_index', full_name='DBBLOB_MULTIPLAYER_PVE_CHALLENGE_DATA.complete_dun_index', index=1,
+      number=2, type=13, cpp_type=3, label=3,
+      has_default_value=False, default_value=[],
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    _descriptor.FieldDescriptor(
+      name='free_ticket_limit_time', full_name='DBBLOB_MULTIPLAYER_PVE_CHALLENGE_DATA.free_ticket_limit_time', index=2,
       number=3, type=13, cpp_type=3, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
-      name='group_challenged_times', full_name='DBBLOB_MULTIPLAYER_PVE_CHALLENGE_DATA.group_challenged_times', index=2,
-      number=2, type=13, cpp_type=3, label=3,
-      has_default_value=False, default_value=[],
+      name='ticket_brought_times', full_name='DBBLOB_MULTIPLAYER_PVE_CHALLENGE_DATA.ticket_brought_times', index=3,
+      number=4, type=13, cpp_type=3, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    _descriptor.FieldDescriptor(
+      name='next_refresh_time', full_name='DBBLOB_MULTIPLAYER_PVE_CHALLENGE_DATA.next_refresh_time', index=4,
+      number=5, type=13, cpp_type=3, label=1,
+      has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
@@ -5077,8 +5439,8 @@ _DBBLOB_MULTIPLAYER_PVE_CHALLENGE_DATA = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=10244,
-  serialized_end=10360,
+  serialized_start=11209,
+  serialized_end=11383,
 )
 
 
@@ -5142,8 +5504,8 @@ _DBBLOB_NEWBIE_ACTIVITY_ITEM = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=10363,
-  serialized_end=10510,
+  serialized_start=11386,
+  serialized_end=11533,
 )
 
 
@@ -5179,8 +5541,8 @@ _DBBLOB_NEWBIE_ACTIVITY_STATUS = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=10512,
-  serialized_end=10613,
+  serialized_start=11535,
+  serialized_end=11636,
 )
 
 
@@ -5237,8 +5599,8 @@ _DBBLOB_SPECIAL_ACTIVITY_ITEM = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=10615,
-  serialized_end=10738,
+  serialized_start=11638,
+  serialized_end=11761,
 )
 
 
@@ -5267,8 +5629,8 @@ _DBBLOB_SPECIAL_ACTIVITY_INFO = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=10740,
-  serialized_end=10816,
+  serialized_start=11763,
+  serialized_end=11839,
 )
 
 
@@ -5304,8 +5666,8 @@ _DBBLOB_SELFDUN_HERO_INFO = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=10818,
-  serialized_end=10876,
+  serialized_start=11841,
+  serialized_end=11899,
 )
 
 
@@ -5330,6 +5692,20 @@ _DBBLOB_SELF_DUN_DATA = _descriptor.Descriptor(
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
+    _descriptor.FieldDescriptor(
+      name='top_battle_defense_hero_info', full_name='DBBLOB_SELF_DUN_DATA.top_battle_defense_hero_info', index=2,
+      number=3, type=11, cpp_type=10, label=3,
+      has_default_value=False, default_value=[],
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    _descriptor.FieldDescriptor(
+      name='top_battle_attack_hero_info', full_name='DBBLOB_SELF_DUN_DATA.top_battle_attack_hero_info', index=3,
+      number=4, type=11, cpp_type=10, label=3,
+      has_default_value=False, default_value=[],
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
   ],
   extensions=[
   ],
@@ -5341,8 +5717,8 @@ _DBBLOB_SELF_DUN_DATA = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=10879,
-  serialized_end=11008,
+  serialized_start=11902,
+  serialized_end=12160,
 )
 
 
@@ -5413,8 +5789,8 @@ _DBBLOB_PVPDUN_INFO = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=11011,
-  serialized_end=11142,
+  serialized_start=12163,
+  serialized_end=12294,
 )
 
 
@@ -5485,8 +5861,8 @@ _DBBLOB_PLAYER_PVPDUN_DATA = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=11145,
-  serialized_end=11351,
+  serialized_start=12297,
+  serialized_end=12503,
 )
 
 
@@ -5522,8 +5898,8 @@ _DBBLOB_ENDLESS_HERO_INFO = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=11353,
-  serialized_end=11413,
+  serialized_start=12505,
+  serialized_end=12565,
 )
 
 
@@ -5552,8 +5928,8 @@ _DBBLOB_ENDLESS_HERO_DATA = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=11415,
-  serialized_end=11490,
+  serialized_start=12567,
+  serialized_end=12642,
 )
 
 
@@ -5589,8 +5965,8 @@ _DBBLOB_HERO_DATASET = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=11492,
-  serialized_end=11609,
+  serialized_start=12644,
+  serialized_end=12761,
 )
 
 
@@ -5640,8 +6016,8 @@ _DBBLOB_BUILDING_BASE_INFO = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=11611,
-  serialized_end=11730,
+  serialized_start=12763,
+  serialized_end=12882,
 )
 
 
@@ -5684,8 +6060,8 @@ _DBBLOB_RES_STORE_INFO = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=11732,
-  serialized_end=11843,
+  serialized_start=12884,
+  serialized_end=12995,
 )
 
 
@@ -5749,8 +6125,8 @@ _DBBLOB_ISLAND_DEFEND_INFO = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=11846,
-  serialized_end=11981,
+  serialized_start=12998,
+  serialized_end=13133,
 )
 
 
@@ -5807,8 +6183,8 @@ _DBBLOB_ISLAND_BORNINFO = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=11984,
-  serialized_end=12143,
+  serialized_start=13136,
+  serialized_end=13295,
 )
 
 
@@ -5851,8 +6227,8 @@ _DBBLOB_ISLAND_INFO = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=12146,
-  serialized_end=12279,
+  serialized_start=13298,
+  serialized_end=13431,
 )
 
 
@@ -5902,8 +6278,8 @@ _DBBLOB_ISLAND_GAININFO = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=12281,
-  serialized_end=12405,
+  serialized_start=13433,
+  serialized_end=13557,
 )
 
 
@@ -5953,8 +6329,8 @@ _DBBLOB_BUILDING_INFO = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=12408,
-  serialized_end=12619,
+  serialized_start=13560,
+  serialized_end=13771,
 )
 
 
@@ -6018,8 +6394,8 @@ _DBBLOB_PVP_HERO_INFO = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=12622,
-  serialized_end=12777,
+  serialized_start=13774,
+  serialized_end=13929,
 )
 
 
@@ -6048,8 +6424,8 @@ _DBBLOB_PVP_ISLAND_DEFEND_INFO = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=12779,
-  serialized_end=12862,
+  serialized_start=13931,
+  serialized_end=14014,
 )
 
 
@@ -6106,8 +6482,8 @@ _DBBLOB_PVP_ISLAND_INFO = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=12865,
-  serialized_end=12993,
+  serialized_start=14017,
+  serialized_end=14145,
 )
 
 
@@ -6136,8 +6512,8 @@ _DBBLOB_PVP_BUILD_INFO = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=12995,
-  serialized_end=13064,
+  serialized_start=14147,
+  serialized_end=14216,
 )
 
 
@@ -6173,8 +6549,8 @@ _DBBLOB_BUILDING_DATASET = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=13066,
-  serialized_end=13181,
+  serialized_start=14218,
+  serialized_end=14333,
 )
 
 
@@ -6210,8 +6586,8 @@ _DBBLOB_CITY_REWARD = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=13183,
-  serialized_end=13242,
+  serialized_start=14335,
+  serialized_end=14394,
 )
 
 
@@ -6240,8 +6616,8 @@ _DBBLOB_CITY_REWARD_SET = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=13244,
-  serialized_end=13310,
+  serialized_start=14396,
+  serialized_end=14462,
 )
 
 
@@ -6333,8 +6709,8 @@ _DBBLOB_DUN_DATASET = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=13313,
-  serialized_end=13878,
+  serialized_start=14465,
+  serialized_end=15030,
 )
 
 
@@ -6447,8 +6823,8 @@ _DBBLOB_PLAYER_BEHAVIOUR = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=13881,
-  serialized_end=14290,
+  serialized_start=15033,
+  serialized_end=15442,
 )
 
 
@@ -6512,8 +6888,80 @@ _DBBLOB_MONTH_CARD_INFO = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=14293,
-  serialized_end=14465,
+  serialized_start=15445,
+  serialized_end=15617,
+)
+
+
+_DBBLOB_SUPERVALUE_CARD_INFO = _descriptor.Descriptor(
+  name='DBBLOB_SUPERVALUE_CARD_INFO',
+  full_name='DBBLOB_SUPERVALUE_CARD_INFO',
+  filename=None,
+  file=DESCRIPTOR,
+  containing_type=None,
+  fields=[
+    _descriptor.FieldDescriptor(
+      name='super_card_id', full_name='DBBLOB_SUPERVALUE_CARD_INFO.super_card_id', index=0,
+      number=1, type=13, cpp_type=3, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    _descriptor.FieldDescriptor(
+      name='buy_time', full_name='DBBLOB_SUPERVALUE_CARD_INFO.buy_time', index=1,
+      number=2, type=13, cpp_type=3, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    _descriptor.FieldDescriptor(
+      name='last_reward_time', full_name='DBBLOB_SUPERVALUE_CARD_INFO.last_reward_time', index=2,
+      number=3, type=13, cpp_type=3, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    _descriptor.FieldDescriptor(
+      name='last_get_reward_time', full_name='DBBLOB_SUPERVALUE_CARD_INFO.last_get_reward_time', index=3,
+      number=4, type=13, cpp_type=3, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    _descriptor.FieldDescriptor(
+      name='total_get_reward_cnt', full_name='DBBLOB_SUPERVALUE_CARD_INFO.total_get_reward_cnt', index=4,
+      number=5, type=13, cpp_type=3, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    _descriptor.FieldDescriptor(
+      name='remain_days', full_name='DBBLOB_SUPERVALUE_CARD_INFO.remain_days', index=5,
+      number=6, type=5, cpp_type=1, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    _descriptor.FieldDescriptor(
+      name='end_time', full_name='DBBLOB_SUPERVALUE_CARD_INFO.end_time', index=6,
+      number=7, type=13, cpp_type=3, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+  ],
+  extensions=[
+  ],
+  nested_types=[],
+  enum_types=[
+  ],
+  options=None,
+  is_extendable=False,
+  extension_ranges=[],
+  oneofs=[
+  ],
+  serialized_start=15620,
+  serialized_end=15815,
 )
 
 
@@ -6584,8 +7032,8 @@ _DBBLOB_CONTINUE_LOGIN_INFO = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=14468,
-  serialized_end=14664,
+  serialized_start=15818,
+  serialized_end=16014,
 )
 
 
@@ -6628,8 +7076,8 @@ _DBBLOB_GROWTH_FUND_INFO = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=14666,
-  serialized_end=14749,
+  serialized_start=16016,
+  serialized_end=16099,
 )
 
 
@@ -6700,8 +7148,8 @@ _DBBLOB_CUMULATE_RECHARGE_INFO = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=14752,
-  serialized_end=14957,
+  serialized_start=16102,
+  serialized_end=16307,
 )
 
 
@@ -6744,8 +7192,8 @@ _DBBLOB_GROUP_BUY_INFO = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=14959,
-  serialized_end=15059,
+  serialized_start=16309,
+  serialized_end=16409,
 )
 
 
@@ -6788,8 +7236,8 @@ _DBBLOB_FIRSTREWARD_INFO = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=15061,
-  serialized_end=15160,
+  serialized_start=16411,
+  serialized_end=16510,
 )
 
 
@@ -6863,6 +7311,13 @@ _DBBLOB_BUSINESS_INFO = _descriptor.Descriptor(
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
+    _descriptor.FieldDescriptor(
+      name='supervalue_card_info', full_name='DBBLOB_BUSINESS_INFO.supervalue_card_info', index=9,
+      number=10, type=11, cpp_type=10, label=3,
+      has_default_value=False, default_value=[],
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
   ],
   extensions=[
   ],
@@ -6874,8 +7329,8 @@ _DBBLOB_BUSINESS_INFO = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=15163,
-  serialized_end=15686,
+  serialized_start=16513,
+  serialized_end=17096,
 )
 
 
@@ -6939,8 +7394,8 @@ _SSDT_PRIVATE_CHAT_INFO = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=15689,
-  serialized_end=15834,
+  serialized_start=17099,
+  serialized_end=17244,
 )
 
 
@@ -6969,8 +7424,8 @@ _SSPKG_PRIVATE_CHAT_REQ = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=15836,
-  serialized_end=15903,
+  serialized_start=17246,
+  serialized_end=17313,
 )
 
 
@@ -6999,8 +7454,8 @@ _SSPKG_PRIVATE_CHAT_RES = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=15905,
-  serialized_end=15972,
+  serialized_start=17315,
+  serialized_end=17382,
 )
 
 
@@ -7043,8 +7498,8 @@ _SSPKG_OFFLINE_PRIVATE_CHAT_MSG = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=15974,
-  serialized_end=16097,
+  serialized_start=17384,
+  serialized_end=17507,
 )
 
 
@@ -7073,8 +7528,8 @@ _DBBLOB_OFFLIEN_PRIVATE_CHAT = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=16099,
-  serialized_end=16196,
+  serialized_start=17509,
+  serialized_end=17606,
 )
 
 
@@ -7110,8 +7565,8 @@ _DBBLOB_RANK_POS_INFO = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=16198,
-  serialized_end=16297,
+  serialized_start=17608,
+  serialized_end=17707,
 )
 
 
@@ -7199,6 +7654,13 @@ _DBBLOB_MISC_DATA = _descriptor.Descriptor(
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
+    _descriptor.FieldDescriptor(
+      name='multiplayer_pve_chat_info', full_name='DBBLOB_MISC_DATA.multiplayer_pve_chat_info', index=11,
+      number=12, type=11, cpp_type=10, label=1,
+      has_default_value=False, default_value=None,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
   ],
   extensions=[
   ],
@@ -7210,8 +7672,8 @@ _DBBLOB_MISC_DATA = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=16300,
-  serialized_end=16874,
+  serialized_start=17710,
+  serialized_end=18352,
 )
 
 
@@ -7254,8 +7716,8 @@ _DBBLOB_NOTIFY_DATA = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=16876,
-  serialized_end=16942,
+  serialized_start=18354,
+  serialized_end=18420,
 )
 
 
@@ -7284,8 +7746,8 @@ _DBBLOB_RANK_VALINFO = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=16944,
-  serialized_end=16983,
+  serialized_start=18422,
+  serialized_end=18461,
 )
 
 
@@ -7328,8 +7790,8 @@ _DBBLOB_RANK_DATA = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=16985,
-  serialized_end=17080,
+  serialized_start=18463,
+  serialized_end=18558,
 )
 
 
@@ -7386,8 +7848,8 @@ _DBBLOG_RANK_STAT_INFO = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=17083,
-  serialized_end=17219,
+  serialized_start=18561,
+  serialized_end=18697,
 )
 
 
@@ -7430,8 +7892,8 @@ _DBBLOB_DIRHERO_INFO = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=17221,
-  serialized_end=17294,
+  serialized_start=18699,
+  serialized_end=18772,
 )
 
 
@@ -7495,8 +7957,8 @@ _DBBLOB_WORLD_INFO = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=17297,
-  serialized_end=17437,
+  serialized_start=18775,
+  serialized_end=18915,
 )
 
 
@@ -7525,8 +7987,8 @@ _DBBLOB_DIR_WORLD_INFO = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=17439,
-  serialized_end=17502,
+  serialized_start=18917,
+  serialized_end=18980,
 )
 
 
@@ -7590,8 +8052,8 @@ _SSDT_WHOLE_GAMEOBJ = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=17505,
-  serialized_end=17785,
+  serialized_start=18983,
+  serialized_end=19263,
 )
 
 
@@ -7620,8 +8082,8 @@ _ERR_RESPONSE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=17787,
-  serialized_end=17814,
+  serialized_start=19265,
+  serialized_end=19292,
 )
 
 
@@ -7720,8 +8182,8 @@ _SSDT_ROLE_BRIEF = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=17817,
-  serialized_end=18042,
+  serialized_start=19295,
+  serialized_end=19520,
 )
 
 
@@ -7778,8 +8240,8 @@ _SUCC_ROLE_LIST_RES = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=18045,
-  serialized_end=18181,
+  serialized_start=19523,
+  serialized_end=19659,
 )
 
 
@@ -7850,8 +8312,8 @@ _SSDT_WHOLE_ACCOUNT = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=18184,
-  serialized_end=18345,
+  serialized_start=19662,
+  serialized_end=19823,
 )
 
 
@@ -7880,8 +8342,8 @@ _SSPKG_SHUTDOWN_ZONESVR = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=18347,
-  serialized_end=18393,
+  serialized_start=19825,
+  serialized_end=19871,
 )
 
 
@@ -7910,8 +8372,8 @@ _SSDT_ROLE_SELFDUN_DATA = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=18395,
-  serialized_end=18433,
+  serialized_start=19873,
+  serialized_end=19911,
 )
 
 
@@ -7940,8 +8402,8 @@ _SSDT_ROLE_PVEDUN_DATA = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=18435,
-  serialized_end=18472,
+  serialized_start=19913,
+  serialized_end=19950,
 )
 
 
@@ -7970,8 +8432,8 @@ _SSDT_ENDLESS_HERO_DATA = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=18474,
-  serialized_end=18512,
+  serialized_start=19952,
+  serialized_end=19990,
 )
 
 
@@ -8077,8 +8539,8 @@ _SSDT_PVPPLAYER_INFO = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=18515,
-  serialized_end=18803,
+  serialized_start=19993,
+  serialized_end=20281,
 )
 
 
@@ -8114,8 +8576,8 @@ _SSDT_PLAYER_LOGIN_PVPINFO = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=18805,
-  serialized_end=18897,
+  serialized_start=20283,
+  serialized_end=20375,
 )
 
 
@@ -8172,8 +8634,8 @@ _PKG_ROLE_LOGIN_REQ = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=18900,
-  serialized_end=19047,
+  serialized_start=20378,
+  serialized_end=20525,
 )
 
 
@@ -8258,8 +8720,8 @@ _PKG_ROLE_LOGIN_RES = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=19050,
-  serialized_end=19300,
+  serialized_start=20528,
+  serialized_end=20778,
 )
 
 
@@ -8302,8 +8764,8 @@ _PKG_VIEW_PLAYER_INFO_REQ = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=19302,
-  serialized_end=19391,
+  serialized_start=20780,
+  serialized_end=20869,
 )
 
 
@@ -8360,8 +8822,8 @@ _PKG_VIEW_PLAYER_INFO_RSP_FROM_GANG_SVR = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=19394,
-  serialized_end=19532,
+  serialized_start=20872,
+  serialized_end=21010,
 )
 
 
@@ -8425,8 +8887,8 @@ _PKG_VIEW_PLAYER_INFO_RSP_FROM_RANK_BATTLE_SVR = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=19535,
-  serialized_end=19705,
+  serialized_start=21013,
+  serialized_end=21183,
 )
 
 
@@ -8497,8 +8959,8 @@ _PKG_VIEW_PLAYER_INFO_RSP_FROM_RANK_SVR = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=19708,
-  serialized_end=19901,
+  serialized_start=21186,
+  serialized_end=21379,
 )
 
 
@@ -8618,8 +9080,8 @@ _PKG_VIEW_PLAYER_INFO_RSP_FROM_ROLE_SVR = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=19904,
-  serialized_end=20339,
+  serialized_start=21382,
+  serialized_end=21817,
 )
 
 
@@ -8655,8 +9117,8 @@ _PKG_ROLE_LOGOUT_REQ = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=20341,
-  serialized_end=20394,
+  serialized_start=21819,
+  serialized_end=21872,
 )
 
 
@@ -8713,8 +9175,8 @@ _PKG_REQ_PLAYER_LOGIN = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=20396,
-  serialized_end=20511,
+  serialized_start=21874,
+  serialized_end=21989,
 )
 
 
@@ -8778,8 +9240,8 @@ _PKG_RES_PLAYER_LOGIN = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=20514,
-  serialized_end=20679,
+  serialized_start=21992,
+  serialized_end=22157,
 )
 
 
@@ -8843,8 +9305,8 @@ _PKG_REQ_PLAYER_LOGOUT = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=20682,
-  serialized_end=20897,
+  serialized_start=22160,
+  serialized_end=22375,
 )
 
 
@@ -8971,8 +9433,8 @@ _PKG_ACCOUNT_LOGIN_REQ = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=20900,
-  serialized_end=21220,
+  serialized_start=22378,
+  serialized_end=22698,
 )
 
 
@@ -9015,8 +9477,8 @@ _PKG_ACCOUNT_LOGIN_RES = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=21222,
-  serialized_end=21320,
+  serialized_start=22700,
+  serialized_end=22798,
 )
 
 
@@ -9059,8 +9521,8 @@ _PKG_ACCOUNT_LOGOUT_REQ = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=21322,
-  serialized_end=21401,
+  serialized_start=22800,
+  serialized_end=22879,
 )
 
 
@@ -9145,8 +9607,8 @@ _PKG_CREATE_NAME = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=21404,
-  serialized_end=21583,
+  serialized_start=22882,
+  serialized_end=23061,
 )
 
 
@@ -9175,8 +9637,8 @@ _SSDT_RECOMMAND_NAME = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=21585,
-  serialized_end=21620,
+  serialized_start=23063,
+  serialized_end=23098,
 )
 
 
@@ -9261,8 +9723,8 @@ _PKG_CREATE_NAME_RES = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=21623,
-  serialized_end=21831,
+  serialized_start=23101,
+  serialized_end=23309,
 )
 
 
@@ -9291,8 +9753,8 @@ _PKG_RANDOM_NAME_REQ = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=21833,
-  serialized_end=21867,
+  serialized_start=23311,
+  serialized_end=23345,
 )
 
 
@@ -9328,8 +9790,8 @@ _PKG_RANDOM_NAME_RES = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=21869,
-  serialized_end=21917,
+  serialized_start=23347,
+  serialized_end=23395,
 )
 
 
@@ -9421,8 +9883,8 @@ _PKG_VERIFY_NAME = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=21920,
-  serialized_end=22145,
+  serialized_start=23398,
+  serialized_end=23623,
 )
 
 
@@ -9500,8 +9962,8 @@ _PKG_CREATE_WORLDROLE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=22148,
-  serialized_end=22315,
+  serialized_start=23626,
+  serialized_end=23793,
 )
 
 
@@ -9558,8 +10020,8 @@ _PKG_BIND_PLATACCOUNT_REQ = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=22317,
-  serialized_end=22432,
+  serialized_start=23795,
+  serialized_end=23910,
 )
 
 
@@ -9602,8 +10064,8 @@ _PKG_BIND_PLATACCOUNT_RES = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=22434,
-  serialized_end=22510,
+  serialized_start=23912,
+  serialized_end=23988,
 )
 
 
@@ -9653,8 +10115,8 @@ _PKG_BIND_CLUSTER_PLATACCOUNT_REQ = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=22512,
-  serialized_end=22617,
+  serialized_start=23990,
+  serialized_end=24095,
 )
 
 
@@ -9697,8 +10159,8 @@ _PKG_BIND_CLUSTER_PLATACCOUNT_RES = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=22619,
-  serialized_end=22703,
+  serialized_start=24097,
+  serialized_end=24181,
 )
 
 
@@ -9755,8 +10217,8 @@ _PKG_BIND_ROLE_PLATACCOUNT_REQ = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=22705,
-  serialized_end=22825,
+  serialized_start=24183,
+  serialized_end=24303,
 )
 
 
@@ -9813,8 +10275,8 @@ _PKG_BIND_ROLE_PLATACCOUNT_RES = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=22827,
-  serialized_end=22944,
+  serialized_start=24305,
+  serialized_end=24422,
 )
 
 
@@ -9864,8 +10326,8 @@ _PKG_BIND_ACCOUNTSVR_REQ = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=22946,
-  serialized_end=23042,
+  serialized_start=24424,
+  serialized_end=24520,
 )
 
 
@@ -9915,8 +10377,8 @@ _PKG_BIND_ACCOUNTSVR_RES = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=23044,
-  serialized_end=23138,
+  serialized_start=24522,
+  serialized_end=24616,
 )
 
 
@@ -9994,8 +10456,8 @@ _PKG_GAMEOBJ_UPDATE_REQ = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=23141,
-  serialized_end=23457,
+  serialized_start=24619,
+  serialized_end=24935,
 )
 
 
@@ -10031,8 +10493,8 @@ _PKG_GAMEOBJ_UPDATE_RSP = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=23459,
-  serialized_end=23512,
+  serialized_start=24937,
+  serialized_end=24990,
 )
 
 
@@ -10096,8 +10558,8 @@ _SSDT_CMD_PLAYER_SELFDUNINFO = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=23515,
-  serialized_end=23665,
+  serialized_start=24993,
+  serialized_end=25143,
 )
 
 
@@ -10133,8 +10595,8 @@ _SSDT_ROOMMONSTER_INFO = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=23667,
-  serialized_end=23731,
+  serialized_start=25145,
+  serialized_end=25209,
 )
 
 
@@ -10170,8 +10632,8 @@ _SSDT_ROOM_INFO = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=23733,
-  serialized_end=23812,
+  serialized_start=25211,
+  serialized_end=25290,
 )
 
 
@@ -10200,8 +10662,8 @@ _SSDT_DUNGEON_INFO = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=23814,
-  serialized_end=23869,
+  serialized_start=25292,
+  serialized_end=25347,
 )
 
 
@@ -10265,8 +10727,8 @@ _SSDT_PLAYER_ENTERDUN_RES = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=23872,
-  serialized_end=24024,
+  serialized_start=25350,
+  serialized_end=25502,
 )
 
 
@@ -10330,8 +10792,8 @@ _PKG_SELFDUN_ENTER_REQ = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=24027,
-  serialized_end=24158,
+  serialized_start=25505,
+  serialized_end=25636,
 )
 
 
@@ -10374,8 +10836,8 @@ _PKG_SELFDUN_ENTER_RSP = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=24160,
-  serialized_end=24262,
+  serialized_start=25638,
+  serialized_end=25740,
 )
 
 
@@ -10411,8 +10873,8 @@ _PKG_ROLE_DEL_ROLE_REQ = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=24264,
-  serialized_end=24319,
+  serialized_start=25742,
+  serialized_end=25797,
 )
 
 
@@ -10462,8 +10924,8 @@ _PKG_ROLE_DEL_ROLE_RES = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=24321,
-  serialized_end=24406,
+  serialized_start=25799,
+  serialized_end=25884,
 )
 
 
@@ -10499,8 +10961,8 @@ _PKG_KICK_PLAYER = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=24408,
-  serialized_end=24461,
+  serialized_start=25886,
+  serialized_end=25939,
 )
 
 
@@ -10578,8 +11040,8 @@ _PKG_ACCOUNT_INFO_RES = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=24464,
-  serialized_end=24655,
+  serialized_start=25942,
+  serialized_end=26133,
 )
 
 
@@ -10629,8 +11091,8 @@ _PKG_NEW_ROLE_CLUSTER = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=24657,
-  serialized_end=24748,
+  serialized_start=26135,
+  serialized_end=26226,
 )
 
 
@@ -10673,8 +11135,8 @@ _PKG_ROLE_DEL_NAME = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=24750,
-  serialized_end=24820,
+  serialized_start=26228,
+  serialized_end=26298,
 )
 
 
@@ -10724,8 +11186,8 @@ _PKG_DISP_PACKAGE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=24822,
-  serialized_end=24900,
+  serialized_start=26300,
+  serialized_end=26378,
 )
 
 
@@ -10796,8 +11258,8 @@ _SSDT_PVP_ISLAND_DEFENSE_INFO = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=24903,
-  serialized_end=25109,
+  serialized_start=26381,
+  serialized_end=26587,
 )
 
 
@@ -10840,8 +11302,8 @@ _SSDT_PVP_ISLAND_INFO = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=25111,
-  serialized_end=25195,
+  serialized_start=26589,
+  serialized_end=26673,
 )
 
 
@@ -10905,8 +11367,8 @@ _SSDT_PVP_STEAL_ISLAND_INFO = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=25198,
-  serialized_end=25406,
+  serialized_start=26676,
+  serialized_end=26884,
 )
 
 
@@ -10966,6 +11428,20 @@ _SSDT_ONLINE_BATTLE_ROOM_ROLE_INFO = _descriptor.Descriptor(
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
+    _descriptor.FieldDescriptor(
+      name='factor_skill_id', full_name='SSDT_ONLINE_BATTLE_ROOM_ROLE_INFO.factor_skill_id', index=7,
+      number=8, type=13, cpp_type=3, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    _descriptor.FieldDescriptor(
+      name='hero_attr_info', full_name='SSDT_ONLINE_BATTLE_ROOM_ROLE_INFO.hero_attr_info', index=8,
+      number=9, type=11, cpp_type=10, label=1,
+      has_default_value=False, default_value=None,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
   ],
   extensions=[
   ],
@@ -10977,8 +11453,8 @@ _SSDT_ONLINE_BATTLE_ROOM_ROLE_INFO = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=25409,
-  serialized_end=25579,
+  serialized_start=26887,
+  serialized_end=27133,
 )
 
 
@@ -11049,8 +11525,8 @@ _SSDT_ONLINE_BATTLE_ROOM_PLAYER_INFO = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=25582,
-  serialized_end=25766,
+  serialized_start=27136,
+  serialized_end=27320,
 )
 
 
@@ -11093,8 +11569,8 @@ _SSDT_ONLINE_BATTLE_ROOM_INFO = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=25769,
-  serialized_end=25897,
+  serialized_start=27323,
+  serialized_end=27451,
 )
 
 
@@ -11137,8 +11613,8 @@ _SSDT_ONLINE_BATTLE_ROOM_COUNT_DOWN_TIME = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=25899,
-  serialized_end=25995,
+  serialized_start=27453,
+  serialized_end=27549,
 )
 
 
@@ -11209,8 +11685,8 @@ _SSPKG_CREATE_ONLINE_BATTLE_ROOM_REQ = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=25998,
-  serialized_end=26167,
+  serialized_start=27552,
+  serialized_end=27721,
 )
 
 
@@ -11260,8 +11736,8 @@ _SSPKG_CREATE_ONLINE_BATTLE_ROOM_RES = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=26169,
-  serialized_end=26269,
+  serialized_start=27723,
+  serialized_end=27823,
 )
 
 
@@ -11297,8 +11773,8 @@ _SSPKG_QUIT_ONLINE_BATTLE_ROOM_REQ = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=26271,
-  serialized_end=26336,
+  serialized_start=27825,
+  serialized_end=27890,
 )
 
 
@@ -11355,8 +11831,8 @@ _SSPKG_QUIT_ONLINE_BATTLE_ROOM_RES = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=26339,
-  serialized_end=26494,
+  serialized_start=27893,
+  serialized_end=28048,
 )
 
 
@@ -11385,8 +11861,8 @@ _SSPKG_LIST_ONLINE_BATTLE_ROOM_REQ = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=26496,
-  serialized_end=26546,
+  serialized_start=28050,
+  serialized_end=28100,
 )
 
 
@@ -11422,8 +11898,8 @@ _SSPKG_LIST_ONLINE_BATTLE_ROOM_RES = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=26548,
-  serialized_end=26645,
+  serialized_start=28102,
+  serialized_end=28199,
 )
 
 
@@ -11501,8 +11977,8 @@ _SSPKG_JOIN_ONLINE_BATTLE_ROOM_REQ = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=26648,
-  serialized_end=26829,
+  serialized_start=28202,
+  serialized_end=28383,
 )
 
 
@@ -11552,8 +12028,8 @@ _SSPKG_JOIN_ONLINE_BATTLE_ROOM_RES = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=26832,
-  serialized_end=26963,
+  serialized_start=28386,
+  serialized_end=28517,
 )
 
 
@@ -11589,8 +12065,8 @@ _SSPKG_UPDATE_ONLINE_BATTLE_ROOM_REQ = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=26965,
-  serialized_end=27078,
+  serialized_start=28519,
+  serialized_end=28632,
 )
 
 
@@ -11654,8 +12130,8 @@ _SSPKG_ONLINE_BATTLE_ROOM_QUICK_MATCH_REQ = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=27081,
-  serialized_end=27234,
+  serialized_start=28635,
+  serialized_end=28788,
 )
 
 
@@ -11691,8 +12167,8 @@ _SSPKG_ONLINE_BATTLE_ROOM_KICK_GUEST_REQ = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=27236,
-  serialized_end=27307,
+  serialized_start=28790,
+  serialized_end=28861,
 )
 
 
@@ -11728,8 +12204,8 @@ _SSPKG_ONLINE_BATTLE_ROOM_HEART_BEAT_REQ = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=27309,
-  serialized_end=27380,
+  serialized_start=28863,
+  serialized_end=28934,
 )
 
 
@@ -11772,8 +12248,8 @@ _SSPKG_UPDATE_ONLINE_BATTLE_ROOM_RES = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=27382,
-  serialized_end=27508,
+  serialized_start=28936,
+  serialized_end=29062,
 )
 
 
@@ -11823,8 +12299,8 @@ _SSPKG_ONLINE_BATTLE_BEGIN = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=27510,
-  serialized_end=27634,
+  serialized_start=29064,
+  serialized_end=29188,
 )
 
 
@@ -11860,8 +12336,8 @@ _PKG_SEARCH_PVP_PLAYER_REQ = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=27636,
-  serialized_end=27704,
+  serialized_start=29190,
+  serialized_end=29258,
 )
 
 
@@ -11897,8 +12373,8 @@ _PKG_SEARCH_PVP_PLAYER_RES = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=27706,
-  serialized_end=27799,
+  serialized_start=29260,
+  serialized_end=29353,
 )
 
 
@@ -11934,8 +12410,8 @@ _ST_WIPE_OUT_STEAL_BATTLE_RESULT = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=27801,
-  serialized_end=27871,
+  serialized_start=29355,
+  serialized_end=29425,
 )
 
 
@@ -11985,8 +12461,8 @@ _PKG_WIPE_OUT_STEAL_BATTLE_BALANCE_REQ = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=27874,
-  serialized_end=28041,
+  serialized_start=29428,
+  serialized_end=29595,
 )
 
 
@@ -12071,8 +12547,8 @@ _PKG_BALANCE_STEAL_BATTLE_REQ = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=28044,
-  serialized_end=28305,
+  serialized_start=29598,
+  serialized_end=29859,
 )
 
 
@@ -12143,8 +12619,8 @@ _PKG_BALANCE_STEAL_BATTLE_RES = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=28308,
-  serialized_end=28496,
+  serialized_start=29862,
+  serialized_end=30050,
 )
 
 
@@ -12215,8 +12691,8 @@ _PKG_STEAL_BATTLE_RESULT_MAIL_REQ = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=28499,
-  serialized_end=28693,
+  serialized_start=30053,
+  serialized_end=30247,
 )
 
 
@@ -12287,8 +12763,8 @@ _SSDT_MAIL_SYSTEM_ACC = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=28696,
-  serialized_end=28873,
+  serialized_start=30250,
+  serialized_end=30427,
 )
 
 
@@ -12317,8 +12793,8 @@ _SSDT_MAIL_SYSTEM_ACC_INFO = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=28875,
-  serialized_end=28943,
+  serialized_start=30429,
+  serialized_end=30497,
 )
 
 
@@ -12375,8 +12851,8 @@ _SSDT_MAIL_REVENGE_ACC_INFO = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=28946,
-  serialized_end=29086,
+  serialized_start=30500,
+  serialized_end=30640,
 )
 
 
@@ -12412,8 +12888,8 @@ _SSDT_MAIL_ACC_INFO = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=29088,
-  serialized_end=29167,
+  serialized_start=30642,
+  serialized_end=30721,
 )
 
 
@@ -12512,8 +12988,8 @@ _SSDT_MAIL_INFO = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=29170,
-  serialized_end=29440,
+  serialized_start=30724,
+  serialized_end=30994,
 )
 
 
@@ -12584,8 +13060,8 @@ _SSDT_BRIEF_MAIL_INFO = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=29443,
-  serialized_end=29612,
+  serialized_start=30997,
+  serialized_end=31166,
 )
 
 
@@ -12642,8 +13118,8 @@ _PKG_ROLELOGIN_GET_MAIL_REQ = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=29614,
-  serialized_end=29740,
+  serialized_start=31168,
+  serialized_end=31294,
 )
 
 
@@ -12728,8 +13204,8 @@ _PKG_ROLELOGIN_GET_MAIL_RES = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=29743,
-  serialized_end=30004,
+  serialized_start=31297,
+  serialized_end=31558,
 )
 
 
@@ -12758,8 +13234,8 @@ _PKG_ROLELOGOUT_TO_MAILSVR = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=30006,
-  serialized_end=30050,
+  serialized_start=31560,
+  serialized_end=31604,
 )
 
 
@@ -12802,8 +13278,8 @@ _PKG_SEND_MAIL_REQ = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=30052,
-  serialized_end=30149,
+  serialized_start=31606,
+  serialized_end=31703,
 )
 
 
@@ -12860,8 +13336,8 @@ _PKG_SEND_MAIL_RES = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=30152,
-  serialized_end=30300,
+  serialized_start=31706,
+  serialized_end=31854,
 )
 
 
@@ -12897,8 +13373,8 @@ _SSDT_MAIL_CLR_INFO = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=30302,
-  serialized_end=30360,
+  serialized_start=31856,
+  serialized_end=31914,
 )
 
 
@@ -12934,8 +13410,8 @@ _PKG_OVERTIME_MAIL_CLR_REQ = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=30362,
-  serialized_end=30445,
+  serialized_start=31916,
+  serialized_end=31999,
 )
 
 
@@ -12978,8 +13454,8 @@ _PKG_OVERTIME_MAIL_CLR_RES = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=30447,
-  serialized_end=30550,
+  serialized_start=32001,
+  serialized_end=32104,
 )
 
 
@@ -13015,8 +13491,8 @@ _PKG_GET_MAIL_LIST_REQ = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=30552,
-  serialized_end=30611,
+  serialized_start=32106,
+  serialized_end=32165,
 )
 
 
@@ -13073,8 +13549,8 @@ _PKG_GET_MAIL_LIST_RES = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=30614,
-  serialized_end=30788,
+  serialized_start=32168,
+  serialized_end=32342,
 )
 
 
@@ -13110,8 +13586,8 @@ _PKG_GET_MAIL_DETAIL_REQ = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=30790,
-  serialized_end=30849,
+  serialized_start=32344,
+  serialized_end=32403,
 )
 
 
@@ -13161,8 +13637,8 @@ _PKG_GET_MAIL_DETAIL_RES = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=30851,
-  serialized_end=30962,
+  serialized_start=32405,
+  serialized_end=32516,
 )
 
 
@@ -13205,8 +13681,8 @@ _PKG_MAIL_READ_REQ = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=30964,
-  serialized_end=31036,
+  serialized_start=32518,
+  serialized_end=32590,
 )
 
 
@@ -13263,8 +13739,8 @@ _PKG_MAIL_READ_RES = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=31038,
-  serialized_end=31147,
+  serialized_start=32592,
+  serialized_end=32701,
 )
 
 
@@ -13300,8 +13776,8 @@ _PKG_MAIL_GET_ACC_REQ = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=31149,
-  serialized_end=31205,
+  serialized_start=32703,
+  serialized_end=32759,
 )
 
 
@@ -13365,8 +13841,8 @@ _PKG_MAIL_GET_ACC_RES = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=31208,
-  serialized_end=31389,
+  serialized_start=32762,
+  serialized_end=32943,
 )
 
 
@@ -13402,8 +13878,8 @@ _PKG_MAIL_DELETE_REQ = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=31391,
-  serialized_end=31446,
+  serialized_start=32945,
+  serialized_end=33000,
 )
 
 
@@ -13474,8 +13950,8 @@ _PKG_MAIL_DELETE_RES = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=31449,
-  serialized_end=31630,
+  serialized_start=33003,
+  serialized_end=33184,
 )
 
 
@@ -13567,8 +14043,8 @@ _SSDT_GANGSIMPLE_INFO = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=31633,
-  serialized_end=31881,
+  serialized_start=33187,
+  serialized_end=33435,
 )
 
 
@@ -13604,8 +14080,8 @@ _SSDT_GANG_SELF_INFO = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=31883,
-  serialized_end=31944,
+  serialized_start=33437,
+  serialized_end=33498,
 )
 
 
@@ -13634,8 +14110,8 @@ _SSDT_GANG_MEM_BLOB_INFO = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=31946,
-  serialized_end=32012,
+  serialized_start=33500,
+  serialized_end=33566,
 )
 
 
@@ -13720,8 +14196,8 @@ _SSDT_GANGMEM_INFO = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=32015,
-  serialized_end=32267,
+  serialized_start=33569,
+  serialized_end=33821,
 )
 
 
@@ -13813,8 +14289,8 @@ _SSDT_GANGLIST_INFO = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=32270,
-  serialized_end=32523,
+  serialized_start=33824,
+  serialized_end=34077,
 )
 
 
@@ -13885,8 +14361,8 @@ _SSDT_GANG_APPLYLIST_INFO = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=32526,
-  serialized_end=32720,
+  serialized_start=34080,
+  serialized_end=34274,
 )
 
 
@@ -13915,8 +14391,8 @@ _SSDT_GANG_APPLYLIST_DBINFO = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=32722,
-  serialized_end=32795,
+  serialized_start=34276,
+  serialized_end=34349,
 )
 
 
@@ -13966,8 +14442,8 @@ _PKG_GANGLIST_REQ = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=32797,
-  serialized_end=32898,
+  serialized_start=34351,
+  serialized_end=34452,
 )
 
 
@@ -14003,8 +14479,8 @@ _PKG_GANGLIST_RES = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=32900,
-  serialized_end=32979,
+  serialized_start=34454,
+  serialized_end=34533,
 )
 
 
@@ -14040,8 +14516,8 @@ _PKG_CMD_SEARCH_GANG_REQ = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=32981,
-  serialized_end=33040,
+  serialized_start=34535,
+  serialized_end=34594,
 )
 
 
@@ -14084,8 +14560,8 @@ _PKG_CMD_SEARCH_GANG_RES = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=33042,
-  serialized_end=33140,
+  serialized_start=34596,
+  serialized_end=34694,
 )
 
 
@@ -14149,8 +14625,8 @@ _PKG_ROLELOGIN_GANG_REQ = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=33143,
-  serialized_end=33301,
+  serialized_start=34697,
+  serialized_end=34855,
 )
 
 
@@ -14189,6 +14665,13 @@ _PKG_ROLELOGIN_GANG_RES = _descriptor.Descriptor(
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
+    _descriptor.FieldDescriptor(
+      name='last_leave_gang_time', full_name='PKG_ROLELOGIN_GANG_RES.last_leave_gang_time', index=4,
+      number=5, type=13, cpp_type=3, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
   ],
   extensions=[
   ],
@@ -14200,8 +14683,8 @@ _PKG_ROLELOGIN_GANG_RES = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=33304,
-  serialized_end=33466,
+  serialized_start=34858,
+  serialized_end=35050,
 )
 
 
@@ -14286,8 +14769,8 @@ _SSDT_CREATE_GANG_INFO = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=33469,
-  serialized_end=33711,
+  serialized_start=35053,
+  serialized_end=35295,
 )
 
 
@@ -14316,8 +14799,8 @@ _PKG_CREATE_GANG_REQ = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=33713,
-  serialized_end=33784,
+  serialized_start=35297,
+  serialized_end=35368,
 )
 
 
@@ -14353,8 +14836,8 @@ _PKG_CREATE_GANG_NAME_RSP_FROM_NAME_SVR = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=33786,
-  serialized_end=33904,
+  serialized_start=35370,
+  serialized_end=35488,
 )
 
 
@@ -14397,8 +14880,8 @@ _PKG_CREATE_GANG_NAME_RSP_FROM_ACCOUNT_SVR = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=33907,
-  serialized_end=34042,
+  serialized_start=35491,
+  serialized_end=35626,
 )
 
 
@@ -14434,8 +14917,8 @@ _PKG_CREATE_GANG_RES = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=34044,
-  serialized_end=34100,
+  serialized_start=35628,
+  serialized_end=35684,
 )
 
 
@@ -14485,8 +14968,8 @@ _PKG_GANG_UPDATE_BASIC_INFO_REQ = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=34102,
-  serialized_end=34218,
+  serialized_start=35686,
+  serialized_end=35802,
 )
 
 
@@ -14515,8 +14998,8 @@ _PKG_GANG_UPDATE_BASIC_INFO_RES = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=34220,
-  serialized_end=34268,
+  serialized_start=35804,
+  serialized_end=35852,
 )
 
 
@@ -14608,8 +15091,8 @@ _PKG_APPLY_GANG_REQ = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=34271,
-  serialized_end=34534,
+  serialized_start=35855,
+  serialized_end=36118,
 )
 
 
@@ -14666,8 +15149,8 @@ _PKG_APPLY_GANG_RES = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=34536,
-  serialized_end=34663,
+  serialized_start=36120,
+  serialized_end=36247,
 )
 
 
@@ -14710,8 +15193,75 @@ _PKG_APPLY_GANG_AUTOJOIN_RES = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=34666,
-  serialized_end=34801,
+  serialized_start=36250,
+  serialized_end=36385,
+)
+
+
+_PKG_TRANSFER_GANG_LEADER_REQ = _descriptor.Descriptor(
+  name='PKG_TRANSFER_GANG_LEADER_REQ',
+  full_name='PKG_TRANSFER_GANG_LEADER_REQ',
+  filename=None,
+  file=DESCRIPTOR,
+  containing_type=None,
+  fields=[
+    _descriptor.FieldDescriptor(
+      name='target_role_id', full_name='PKG_TRANSFER_GANG_LEADER_REQ.target_role_id', index=0,
+      number=1, type=13, cpp_type=3, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    _descriptor.FieldDescriptor(
+      name='self_role_id', full_name='PKG_TRANSFER_GANG_LEADER_REQ.self_role_id', index=1,
+      number=2, type=13, cpp_type=3, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+  ],
+  extensions=[
+  ],
+  nested_types=[],
+  enum_types=[
+  ],
+  options=None,
+  is_extendable=False,
+  extension_ranges=[],
+  oneofs=[
+  ],
+  serialized_start=36387,
+  serialized_end=36463,
+)
+
+
+_PKG_TRANSFER_GANG_LEADER_RES = _descriptor.Descriptor(
+  name='PKG_TRANSFER_GANG_LEADER_RES',
+  full_name='PKG_TRANSFER_GANG_LEADER_RES',
+  filename=None,
+  file=DESCRIPTOR,
+  containing_type=None,
+  fields=[
+    _descriptor.FieldDescriptor(
+      name='result', full_name='PKG_TRANSFER_GANG_LEADER_RES.result', index=0,
+      number=1, type=5, cpp_type=1, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+  ],
+  extensions=[
+  ],
+  nested_types=[],
+  enum_types=[
+  ],
+  options=None,
+  is_extendable=False,
+  extension_ranges=[],
+  oneofs=[
+  ],
+  serialized_start=36465,
+  serialized_end=36511,
 )
 
 
@@ -14740,8 +15290,8 @@ _PKG_QUIT_GANG_REQ = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=34803,
-  serialized_end=34839,
+  serialized_start=36513,
+  serialized_end=36549,
 )
 
 
@@ -14777,8 +15327,8 @@ _PKG_QUIT_GANG_RES = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=34841,
-  serialized_end=34893,
+  serialized_start=36551,
+  serialized_end=36603,
 )
 
 
@@ -14807,8 +15357,8 @@ _PKG_GANG_MEMLIST_REQ = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=34895,
-  serialized_end=34934,
+  serialized_start=36605,
+  serialized_end=36644,
 )
 
 
@@ -14851,8 +15401,8 @@ _PKG_GANG_MEMLIST_RES = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=34936,
-  serialized_end=35030,
+  serialized_start=36646,
+  serialized_end=36740,
 )
 
 
@@ -14881,8 +15431,8 @@ _PKG_GANG_DETAIL_REQ = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=35032,
-  serialized_end=35070,
+  serialized_start=36742,
+  serialized_end=36780,
 )
 
 
@@ -14932,8 +15482,8 @@ _PKG_GANG_DETAIL_RES = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=35073,
-  serialized_end=35215,
+  serialized_start=36783,
+  serialized_end=36925,
 )
 
 
@@ -14972,6 +15522,13 @@ _PKG_GANG_MEM_LIST_CHG_RES = _descriptor.Descriptor(
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
+    _descriptor.FieldDescriptor(
+      name='gang_mem_cnt', full_name='PKG_GANG_MEM_LIST_CHG_RES.gang_mem_cnt', index=4,
+      number=5, type=13, cpp_type=3, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
   ],
   extensions=[
   ],
@@ -14983,8 +15540,8 @@ _PKG_GANG_MEM_LIST_CHG_RES = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=35217,
-  serialized_end=35326,
+  serialized_start=36928,
+  serialized_end=37059,
 )
 
 
@@ -15013,8 +15570,8 @@ _PKG_GANG_BLESS_RANK_CLEAR_RES = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=35328,
-  serialized_end=35376,
+  serialized_start=37061,
+  serialized_end=37109,
 )
 
 
@@ -15071,8 +15628,8 @@ _PKG_GANG_BASIC_INFO_CHG_RES = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=35379,
-  serialized_end=35518,
+  serialized_start=37112,
+  serialized_end=37251,
 )
 
 
@@ -15136,8 +15693,8 @@ _PKG_GANG_MEM_INFO_CHG_REQ = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=35521,
-  serialized_end=35667,
+  serialized_start=37254,
+  serialized_end=37400,
 )
 
 
@@ -15180,8 +15737,8 @@ _PKG_GANG_MEMCHG_RES = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=35669,
-  serialized_end=35737,
+  serialized_start=37402,
+  serialized_end=37470,
 )
 
 
@@ -15210,8 +15767,8 @@ _PKG_GANG_APPLYLIST_REQ = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=35739,
-  serialized_end=35780,
+  serialized_start=37472,
+  serialized_end=37513,
 )
 
 
@@ -15240,8 +15797,8 @@ _PKG_GANG_APPLYLIST_RES = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=35782,
-  serialized_end=35853,
+  serialized_start=37515,
+  serialized_end=37586,
 )
 
 
@@ -15284,8 +15841,8 @@ _PKG_GANG_APPROVE_REQ = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=35855,
-  serialized_end=35932,
+  serialized_start=37588,
+  serialized_end=37665,
 )
 
 
@@ -15356,8 +15913,8 @@ _PKG_GANG_APPROVE_RES = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=35935,
-  serialized_end=36138,
+  serialized_start=37668,
+  serialized_end=37871,
 )
 
 
@@ -15407,8 +15964,8 @@ _PKG_GANG_APPROVETOMEM_RES = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=36141,
-  serialized_end=36292,
+  serialized_start=37874,
+  serialized_end=38025,
 )
 
 
@@ -15465,8 +16022,8 @@ _PKG_GANG_CHAT_REQ = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=36294,
-  serialized_end=36416,
+  serialized_start=38027,
+  serialized_end=38149,
 )
 
 
@@ -15523,8 +16080,8 @@ _PKG_GANG_CHAT_RES = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=36419,
-  serialized_end=36548,
+  serialized_start=38152,
+  serialized_end=38281,
 )
 
 
@@ -15560,8 +16117,8 @@ _PKG_GANG_KICK_MEM_REQ = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=36550,
-  serialized_end=36616,
+  serialized_start=38283,
+  serialized_end=38349,
 )
 
 
@@ -15604,8 +16161,8 @@ _PKG_GANG_KICK_MEM_RES = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=36618,
-  serialized_end=36699,
+  serialized_start=38351,
+  serialized_end=38432,
 )
 
 
@@ -15648,8 +16205,8 @@ _PKG_GANG_SET_ELDER_REQ = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=36701,
-  serialized_end=36786,
+  serialized_start=38434,
+  serialized_end=38519,
 )
 
 
@@ -15685,8 +16242,8 @@ _PKG_GANG_SET_ELDER_RES = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=36788,
-  serialized_end=36849,
+  serialized_start=38521,
+  serialized_end=38582,
 )
 
 
@@ -15715,8 +16272,8 @@ _PKG_LOGOUT_UPDZONEID_REQ = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=36851,
-  serialized_end=36894,
+  serialized_start=38584,
+  serialized_end=38627,
 )
 
 
@@ -15752,8 +16309,8 @@ _MEMZONEINFO = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=36896,
-  serialized_end=36943,
+  serialized_start=38629,
+  serialized_end=38676,
 )
 
 
@@ -15782,8 +16339,8 @@ _PKG_GANG_BLESS_CHECK_REQ = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=36945,
-  serialized_end=36988,
+  serialized_start=38678,
+  serialized_end=38721,
 )
 
 
@@ -15819,8 +16376,8 @@ _PKG_GANG_BLESS_CHECK_RES = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=36990,
-  serialized_end=37057,
+  serialized_start=38723,
+  serialized_end=38790,
 )
 
 
@@ -15849,8 +16406,8 @@ _PKG_SET_GANG_AUTO_APPLY_GANG_BATTLE_REQ = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=37059,
-  serialized_end=37121,
+  serialized_start=38792,
+  serialized_end=38854,
 )
 
 
@@ -15879,8 +16436,8 @@ _PKG_SET_GANG_AUTO_APPLY_GANG_BATTLE_RES = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=37123,
-  serialized_end=37194,
+  serialized_start=38856,
+  serialized_end=38927,
 )
 
 
@@ -15916,8 +16473,8 @@ _PKG_PLAYER_HERO_CHG_TO_GANG_REQ = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=37196,
-  serialized_end=37287,
+  serialized_start=38929,
+  serialized_end=39020,
 )
 
 
@@ -15981,8 +16538,8 @@ _PKG_SET_GANG_CITY_STRONG_POINT_HERO_REQ = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=37290,
-  serialized_end=37481,
+  serialized_start=39023,
+  serialized_end=39214,
 )
 
 
@@ -16011,8 +16568,8 @@ _PKG_SET_GANG_CITY_STRONG_POINT_HERO_RES = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=37483,
-  serialized_end=37540,
+  serialized_start=39216,
+  serialized_end=39273,
 )
 
 
@@ -16069,8 +16626,8 @@ _PKG_GANG_CITY_STRONG_POINT_HERO_CHG_RES = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=37543,
-  serialized_end=37729,
+  serialized_start=39276,
+  serialized_end=39462,
 )
 
 
@@ -16099,8 +16656,8 @@ _PKG_GET_GANG_CITY_INFO_REQ = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=37731,
-  serialized_end=37780,
+  serialized_start=39464,
+  serialized_end=39513,
 )
 
 
@@ -16136,8 +16693,8 @@ _PKG_GET_GANG_CITY_INFO_RES = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=37782,
-  serialized_end=37860,
+  serialized_start=39515,
+  serialized_end=39593,
 )
 
 
@@ -16166,8 +16723,8 @@ _PKG_BROAD_GANG_BATTTLE_STATE_TO_GANG_SVR = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=37862,
-  serialized_end=37919,
+  serialized_start=39595,
+  serialized_end=39652,
 )
 
 
@@ -16196,8 +16753,8 @@ _PKG_APPLY_GANG_BATTLE_REQ = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=37921,
-  serialized_end=37965,
+  serialized_start=39654,
+  serialized_end=39698,
 )
 
 
@@ -16310,8 +16867,8 @@ _PKG_APPLY_GANG_BATTLE_REQ_TO_GANG_BATTLE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=37968,
-  serialized_end=38338,
+  serialized_start=39701,
+  serialized_end=40071,
 )
 
 
@@ -16361,8 +16918,8 @@ _PKG_APPLY_GANG_BATTLE_RES_FROM_GANG_BATTLE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=38340,
-  serialized_end=38449,
+  serialized_start=40073,
+  serialized_end=40182,
 )
 
 
@@ -16391,8 +16948,8 @@ _PKG_APPLY_GANG_BATTLE_RES = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=38451,
-  serialized_end=38494,
+  serialized_start=40184,
+  serialized_end=40227,
 )
 
 
@@ -16421,8 +16978,8 @@ _PKG_GANG_BATTLE_STATE_BROAD = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=38496,
-  serialized_end=38540,
+  serialized_start=40229,
+  serialized_end=40273,
 )
 
 
@@ -16458,8 +17015,8 @@ _PKG_GET_GANG_BATTLE_CITY_REQ = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=38542,
-  serialized_end=38610,
+  serialized_start=40275,
+  serialized_end=40343,
 )
 
 
@@ -16519,6 +17076,13 @@ _PKG_GET_GANG_BATTLE_CITY_RES = _descriptor.Descriptor(
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
+    _descriptor.FieldDescriptor(
+      name='target_gang_world_id', full_name='PKG_GET_GANG_BATTLE_CITY_RES.target_gang_world_id', index=7,
+      number=8, type=5, cpp_type=1, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
   ],
   extensions=[
   ],
@@ -16530,8 +17094,8 @@ _PKG_GET_GANG_BATTLE_CITY_RES = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=38613,
-  serialized_end=38809,
+  serialized_start=40346,
+  serialized_end=40572,
 )
 
 
@@ -16588,8 +17152,8 @@ _ST_GANG_BATTLE_ATTACK_MEM_INFO = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=38812,
-  serialized_end=38964,
+  serialized_start=40575,
+  serialized_end=40727,
 )
 
 
@@ -16653,8 +17217,8 @@ _PKG_GANG_BATTLE_TOTAL_BALANCE_REQ = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=38967,
-  serialized_end=39171,
+  serialized_start=40730,
+  serialized_end=40934,
 )
 
 
@@ -16725,8 +17289,8 @@ _PKG_BROAD_GANG_BATTTLE_POINT_CHG_TO_GANG_SVR = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=39174,
-  serialized_end=39367,
+  serialized_start=40937,
+  serialized_end=41130,
 )
 
 
@@ -16790,8 +17354,8 @@ _PKG_GANG_BATTTLE_POINT_BROAD = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=39370,
-  serialized_end=39530,
+  serialized_start=41133,
+  serialized_end=41293,
 )
 
 
@@ -16848,8 +17412,8 @@ _PKG_ENTER_GANG_BATTLE_DUNGEON_REQ = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=39533,
-  serialized_end=39683,
+  serialized_start=41296,
+  serialized_end=41446,
 )
 
 
@@ -16913,8 +17477,8 @@ _PKG_ENTER_GANG_BATTLE_DUNGEON_RES = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=39686,
-  serialized_end=39919,
+  serialized_start=41449,
+  serialized_end=41682,
 )
 
 
@@ -16985,8 +17549,8 @@ _PKG_GANG_BATTLE_BALANCE_REQ = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=39922,
-  serialized_end=40104,
+  serialized_start=41685,
+  serialized_end=41867,
 )
 
 
@@ -17029,8 +17593,8 @@ _PKG_GANG_BATTLE_BALANCE_RES = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=40106,
-  serialized_end=40196,
+  serialized_start=41869,
+  serialized_end=41959,
 )
 
 
@@ -17094,8 +17658,8 @@ _PKG_GANG_STRONG_POINT_CHG_TO_GANGBATTLE_REQ = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=40199,
-  serialized_end=40406,
+  serialized_start=41962,
+  serialized_end=42169,
 )
 
 
@@ -17152,8 +17716,8 @@ _PKG_GANG_MEM_CHG_TO_GANGBATTLE_REQ = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=40409,
-  serialized_end=40544,
+  serialized_start=42172,
+  serialized_end=42307,
 )
 
 
@@ -17182,8 +17746,8 @@ _PKG_GET_GANG_BATTLE_MEM_ATTACK_INFO_REQ = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=40546,
-  serialized_end=40604,
+  serialized_start=42309,
+  serialized_end=42367,
 )
 
 
@@ -17219,8 +17783,8 @@ _PKG_GET_GANG_BATTLE_MEM_ATTACK_INFO_RES = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=40606,
-  serialized_end=40720,
+  serialized_start=42369,
+  serialized_end=42483,
 )
 
 
@@ -17263,8 +17827,8 @@ _PKG_GET_GANG_BATTLE_STATE_INFO_REQ = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=40722,
-  serialized_end=40809,
+  serialized_start=42485,
+  serialized_end=42572,
 )
 
 
@@ -17284,8 +17848,8 @@ _PKG_GET_GANG_BATTLE_STATE_INFO_RES = _descriptor.Descriptor(
       options=None),
     _descriptor.FieldDescriptor(
       name='attack_hero_num', full_name='PKG_GET_GANG_BATTLE_STATE_INFO_RES.attack_hero_num', index=1,
-      number=2, type=8, cpp_type=7, label=1,
-      has_default_value=False, default_value=False,
+      number=2, type=13, cpp_type=3, label=1,
+      has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
@@ -17307,8 +17871,8 @@ _PKG_GET_GANG_BATTLE_STATE_INFO_RES = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=40811,
-  serialized_end=40927,
+  serialized_start=42574,
+  serialized_end=42690,
 )
 
 
@@ -17386,8 +17950,8 @@ _GANG_BROADCAST_DETAIL = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=40930,
-  serialized_end=41438,
+  serialized_start=42693,
+  serialized_end=43201,
 )
 
 
@@ -17430,8 +17994,8 @@ _PKG_GANG_BROADCAST = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=41440,
-  serialized_end=41553,
+  serialized_start=43203,
+  serialized_end=43316,
 )
 
 
@@ -17460,8 +18024,8 @@ _DB_GANG_BATTLE_MEM_ATTACK_HERO_INFO = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=41555,
-  serialized_end=41609,
+  serialized_start=43318,
+  serialized_end=43372,
 )
 
 
@@ -17546,8 +18110,8 @@ _DB_GANG_BATTLE_MEM_INFO = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=41612,
-  serialized_end=41921,
+  serialized_start=43375,
+  serialized_end=43684,
 )
 
 
@@ -17576,8 +18140,8 @@ _DB_GANG_BATTLE_MEM_LIST = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=41923,
-  serialized_end=41992,
+  serialized_start=43686,
+  serialized_end=43755,
 )
 
 
@@ -17634,8 +18198,8 @@ _DB_GANG_BATTLE_HISTORY_MEM_INFO = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=41995,
-  serialized_end=42141,
+  serialized_start=43758,
+  serialized_end=43904,
 )
 
 
@@ -17664,8 +18228,8 @@ _DB_GANG_BATTLE_HISTORY_MEM_LIST = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=42143,
-  serialized_end=42233,
+  serialized_start=43906,
+  serialized_end=43996,
 )
 
 
@@ -17743,8 +18307,8 @@ _SSDT_GANG_BATTLE_HISTORY_INFO = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=42236,
-  serialized_end=42502,
+  serialized_start=43999,
+  serialized_end=44265,
 )
 
 
@@ -17780,8 +18344,8 @@ _PKG_GET_GANG_BATTLE_STATE_REQ = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=42504,
-  serialized_end=42569,
+  serialized_start=44267,
+  serialized_end=44332,
 )
 
 
@@ -17845,8 +18409,8 @@ _PKG_GET_GANG_BATTLE_STATE_RES = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=42572,
-  serialized_end=42762,
+  serialized_start=44335,
+  serialized_end=44525,
 )
 
 
@@ -17875,8 +18439,8 @@ _PKG_GET_GANG_BATTLE_HISTORY_REQ = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=42764,
-  serialized_end=42814,
+  serialized_start=44527,
+  serialized_end=44577,
 )
 
 
@@ -17905,8 +18469,8 @@ _PKG_GET_GANG_BATTLE_HISTORY_RES = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=42816,
-  serialized_end=42903,
+  serialized_start=44579,
+  serialized_end=44666,
 )
 
 
@@ -17942,8 +18506,8 @@ _SSDT_GANG_MEM_MAIL_USER_INFO = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=42905,
-  serialized_end=42997,
+  serialized_start=44668,
+  serialized_end=44760,
 )
 
 
@@ -18000,8 +18564,8 @@ _PKG_GANG_SEND_MEM_MAIL_REQ = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=43000,
-  serialized_end=43146,
+  serialized_start=44763,
+  serialized_end=44909,
 )
 
 
@@ -18037,8 +18601,8 @@ _SSDT_RANK_VAL = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=43148,
-  serialized_end=43192,
+  serialized_start=44911,
+  serialized_end=44955,
 )
 
 
@@ -18081,8 +18645,8 @@ _SSDT_RANK_BATTLE_HERO_BRIEF = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=43194,
-  serialized_end=43284,
+  serialized_start=44957,
+  serialized_end=45047,
 )
 
 
@@ -18142,6 +18706,13 @@ _SSDT_PLAYER_BASE_INFO = _descriptor.Descriptor(
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
+    _descriptor.FieldDescriptor(
+      name='world_id', full_name='SSDT_PLAYER_BASE_INFO.world_id', index=7,
+      number=8, type=5, cpp_type=1, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
   ],
   extensions=[
   ],
@@ -18153,8 +18724,8 @@ _SSDT_PLAYER_BASE_INFO = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=43287,
-  serialized_end=43494,
+  serialized_start=45050,
+  serialized_end=45275,
 )
 
 
@@ -18225,8 +18796,8 @@ _SSDT_GANG_BASE_INFO = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=43497,
-  serialized_end=43667,
+  serialized_start=45278,
+  serialized_end=45448,
 )
 
 
@@ -18276,8 +18847,8 @@ _SSDT_RANK_DATA = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=43670,
-  serialized_end=43809,
+  serialized_start=45451,
+  serialized_end=45590,
 )
 
 
@@ -18323,6 +18894,13 @@ _SSPKG_GET_RANKLIST_REQ = _descriptor.Descriptor(
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
+    _descriptor.FieldDescriptor(
+      name='battle_id', full_name='SSPKG_GET_RANKLIST_REQ.battle_id', index=5,
+      number=6, type=5, cpp_type=1, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
   ],
   extensions=[
   ],
@@ -18334,8 +18912,8 @@ _SSPKG_GET_RANKLIST_REQ = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=43811,
-  serialized_end=43934,
+  serialized_start=45593,
+  serialized_end=45735,
 )
 
 
@@ -18409,6 +18987,13 @@ _SSPKG_GET_RANKLIST_RES = _descriptor.Descriptor(
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
+    _descriptor.FieldDescriptor(
+      name='battle_id', full_name='SSPKG_GET_RANKLIST_RES.battle_id', index=9,
+      number=12, type=5, cpp_type=1, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
   ],
   extensions=[
   ],
@@ -18420,8 +19005,8 @@ _SSPKG_GET_RANKLIST_RES = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=43937,
-  serialized_end=44156,
+  serialized_start=45738,
+  serialized_end=45976,
 )
 
 
@@ -18460,6 +19045,13 @@ _SSPKG_GET_RANKPOS_REQ = _descriptor.Descriptor(
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
+    _descriptor.FieldDescriptor(
+      name='world_id', full_name='SSPKG_GET_RANKPOS_REQ.world_id', index=4,
+      number=5, type=5, cpp_type=1, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
   ],
   extensions=[
   ],
@@ -18471,8 +19063,8 @@ _SSPKG_GET_RANKPOS_REQ = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=44158,
-  serialized_end=44284,
+  serialized_start=45979,
+  serialized_end=46123,
 )
 
 
@@ -18536,8 +19128,8 @@ _SSPKG_GET_RANKPOS_RES = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=44287,
-  serialized_end=44440,
+  serialized_start=46126,
+  serialized_end=46279,
 )
 
 
@@ -18601,8 +19193,8 @@ _SSPKG_UPDATE_ACHIEVEMENT_SCORE_REQ = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=44443,
-  serialized_end=44620,
+  serialized_start=46282,
+  serialized_end=46459,
 )
 
 
@@ -18673,8 +19265,8 @@ _SSPKG_UPDATE_GANG_SCORE_REQ = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=44623,
-  serialized_end=44785,
+  serialized_start=46462,
+  serialized_end=46624,
 )
 
 
@@ -18738,8 +19330,8 @@ _SSPKG_UPDATE_OFFLINE_BATTLE_REQ = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=44788,
-  serialized_end=44969,
+  serialized_start=46627,
+  serialized_end=46808,
 )
 
 
@@ -18803,8 +19395,8 @@ _SSPKG_UPDATE_ONLINE_BATTLE_RANK_REQ = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=44972,
-  serialized_end=45153,
+  serialized_start=46811,
+  serialized_end=46992,
 )
 
 
@@ -18868,8 +19460,8 @@ _SSPKG_UPDATE_WORLD_BOSS_DAMAGE_RANK_REQ = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=45156,
-  serialized_end=45315,
+  serialized_start=46995,
+  serialized_end=47154,
 )
 
 
@@ -18933,8 +19525,8 @@ _SSPKG_UPDATE_STEAL_BATTLE_REQ = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=45318,
-  serialized_end=45493,
+  serialized_start=47157,
+  serialized_end=47332,
 )
 
 
@@ -18998,8 +19590,8 @@ _SSPKG_UPDATE_ENDLESS_REQ = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=45496,
-  serialized_end=45652,
+  serialized_start=47335,
+  serialized_end=47491,
 )
 
 
@@ -19056,8 +19648,8 @@ _SSPKG_UPDATE_PVE_EVALUATE_STATS_REQ = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=45655,
-  serialized_end=45802,
+  serialized_start=47494,
+  serialized_end=47641,
 )
 
 
@@ -19093,8 +19685,8 @@ _SSPKG_RANK_CHANGE_NAME_REQ = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=45804,
-  serialized_end=45864,
+  serialized_start=47643,
+  serialized_end=47703,
 )
 
 
@@ -19165,8 +19757,8 @@ _SSDT_RANK_ONE_UPDATE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=45867,
-  serialized_end=46071,
+  serialized_start=47706,
+  serialized_end=47910,
 )
 
 
@@ -19209,8 +19801,8 @@ _SSPKG_RANK_UPDATE_INFO_REQ = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=46073,
-  serialized_end=46158,
+  serialized_start=47912,
+  serialized_end=47997,
 )
 
 
@@ -19239,8 +19831,8 @@ _SSPKG_RANK_UPDATE_INFO_RES = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=46160,
-  serialized_end=46236,
+  serialized_start=47999,
+  serialized_end=48075,
 )
 
 
@@ -19283,8 +19875,8 @@ _SSPKG_RANKDATA_REPORT_REQ = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=46239,
-  serialized_end=46373,
+  serialized_start=48078,
+  serialized_end=48212,
 )
 
 
@@ -19327,8 +19919,8 @@ _SSPKG_GET_GANG_RANKSTAT_REQ = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=46375,
-  serialized_end=46462,
+  serialized_start=48214,
+  serialized_end=48301,
 )
 
 
@@ -19378,8 +19970,8 @@ _SSPKG_GET_GANG_RANKSTAT_RES = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=46464,
-  serialized_end=46569,
+  serialized_start=48303,
+  serialized_end=48408,
 )
 
 
@@ -19450,8 +20042,8 @@ _SSPKG_RANK_BATTLE_ROLELOGIN_REQ = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=46572,
-  serialized_end=46799,
+  serialized_start=48411,
+  serialized_end=48638,
 )
 
 
@@ -19487,8 +20079,8 @@ _SSPKG_RANK_BATTLE_ROLELOGIN_RES = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=46801,
-  serialized_end=46883,
+  serialized_start=48640,
+  serialized_end=48722,
 )
 
 
@@ -19517,8 +20109,8 @@ _SSPKG_RANK_BATTLE_GET_FIGHT_TARGET_REQ = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=46885,
-  serialized_end=46942,
+  serialized_start=48724,
+  serialized_end=48781,
 )
 
 
@@ -19582,8 +20174,8 @@ _SSDT_RANK_BATTLE_FIGHT_TARGET_INFO = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=46945,
-  serialized_end=47133,
+  serialized_start=48784,
+  serialized_end=48972,
 )
 
 
@@ -19619,8 +20211,8 @@ _SSPKG_RANK_BATTLE_GET_FIGHT_TARGET_RES = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=47135,
-  serialized_end=47249,
+  serialized_start=48974,
+  serialized_end=49088,
 )
 
 
@@ -19663,8 +20255,8 @@ _SSPKG_RANK_BATTLE_ENTER_DUNGEON_REQ = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=47251,
-  serialized_end=47359,
+  serialized_start=49090,
+  serialized_end=49198,
 )
 
 
@@ -19714,8 +20306,8 @@ _SSPKG_RANK_BATTLE_ENTER_DUNGEON_RES = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=47362,
-  serialized_end=47514,
+  serialized_start=49201,
+  serialized_end=49353,
 )
 
 
@@ -19751,8 +20343,8 @@ _SSPKG_RANK_BATTLE_UNLOCK_REQ = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=47516,
-  serialized_end=47597,
+  serialized_start=49355,
+  serialized_end=49436,
 )
 
 
@@ -19830,8 +20422,8 @@ _SSPKG_RANK_BATTLE_BALANCE_REQ = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=47600,
-  serialized_end=47908,
+  serialized_start=49439,
+  serialized_end=49747,
 )
 
 
@@ -19902,8 +20494,8 @@ _SSPKG_RANK_BATTLE_BALANCE_RES = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=47911,
-  serialized_end=48102,
+  serialized_start=49750,
+  serialized_end=49941,
 )
 
 
@@ -19946,8 +20538,8 @@ _SSDT_RANK_BATTLE_MAIL_USER_INFO = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=48104,
-  serialized_end=48208,
+  serialized_start=49943,
+  serialized_end=50047,
 )
 
 
@@ -19983,8 +20575,8 @@ _SSPKG_RANK_BATTLE_REWARD_EVERYDAY_REQ = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=48210,
-  serialized_end=48323,
+  serialized_start=50049,
+  serialized_end=50162,
 )
 
 
@@ -20034,8 +20626,8 @@ _SSPKG_RANK_BATTLE_REWARD_PROMOTE_REQ = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=48326,
-  serialized_end=48469,
+  serialized_start=50165,
+  serialized_end=50308,
 )
 
 
@@ -20099,8 +20691,8 @@ _SSPKG_RANK_BATTLE_POS_DOWN_NOTIFY_REQ = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=48472,
-  serialized_end=48639,
+  serialized_start=50311,
+  serialized_end=50478,
 )
 
 
@@ -20136,8 +20728,8 @@ _PKG_GET_NOTIFY_REQ = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=48641,
-  serialized_end=48700,
+  serialized_start=50480,
+  serialized_end=50539,
 )
 
 
@@ -20180,8 +20772,8 @@ _PKG_NOTIFY_DATA = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=48702,
-  serialized_end=48765,
+  serialized_start=50541,
+  serialized_end=50604,
 )
 
 
@@ -20245,8 +20837,8 @@ _PKG_NOTIFY_INFO = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=48768,
-  serialized_end=48908,
+  serialized_start=50607,
+  serialized_end=50747,
 )
 
 
@@ -20289,8 +20881,8 @@ _PKG_GET_NOTIFY_RES = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=48910,
-  serialized_end=49014,
+  serialized_start=50749,
+  serialized_end=50853,
 )
 
 
@@ -20399,6 +20991,13 @@ _SSPKG_PURCHASE_FINISH = _descriptor.Descriptor(
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
+    _descriptor.FieldDescriptor(
+      name='any_purchase_cnt', full_name='SSPKG_PURCHASE_FINISH.any_purchase_cnt', index=14,
+      number=16, type=13, cpp_type=3, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
   ],
   extensions=[
   ],
@@ -20410,8 +21009,8 @@ _SSPKG_PURCHASE_FINISH = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=49017,
-  serialized_end=49314,
+  serialized_start=50856,
+  serialized_end=51179,
 )
 
 
@@ -20503,8 +21102,8 @@ _SSPKG_PURCHASE_FINISH_DISP = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=49317,
-  serialized_end=49534,
+  serialized_start=51182,
+  serialized_end=51399,
 )
 
 
@@ -20568,8 +21167,8 @@ _SSPKG_PURCHASE_REQ = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=49537,
-  serialized_end=49666,
+  serialized_start=51402,
+  serialized_end=51531,
 )
 
 
@@ -20626,8 +21225,8 @@ _SSPKG_PURCHASE_INFO = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=49668,
-  serialized_end=49777,
+  serialized_start=51533,
+  serialized_end=51642,
 )
 
 
@@ -20656,8 +21255,8 @@ _SSPKG_PURCHASE_REQUEST_DELIVERY = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=49779,
-  serialized_end=49848,
+  serialized_start=51644,
+  serialized_end=51713,
 )
 
 
@@ -20721,8 +21320,8 @@ _SSPKG_PURCHASE_REQUEST_DELIVERY_IAP = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=49851,
-  serialized_end=50005,
+  serialized_start=51716,
+  serialized_end=51870,
 )
 
 
@@ -20751,8 +21350,8 @@ _SSPKG_PURCHASE_REQUEST_DELIVERY_IAP_CHECKED = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=50007,
-  serialized_end=50103,
+  serialized_start=51872,
+  serialized_end=51968,
 )
 
 
@@ -20788,8 +21387,8 @@ _SSPKG_PURCHASE_IAP_FINISHED = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=50105,
-  serialized_end=50171,
+  serialized_start=51970,
+  serialized_end=52036,
 )
 
 
@@ -20839,8 +21438,8 @@ _SSPKG_PURCHASE_DONE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=50173,
-  serialized_end=50266,
+  serialized_start=52038,
+  serialized_end=52131,
 )
 
 
@@ -20974,8 +21573,8 @@ _SSPKG_PURCHASE_RES = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=50269,
-  serialized_end=50682,
+  serialized_start=52134,
+  serialized_end=52547,
 )
 
 
@@ -21088,8 +21687,8 @@ _SSPKG_PURCHASE_DISP_REQ = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=50685,
-  serialized_end=50940,
+  serialized_start=52550,
+  serialized_end=52805,
 )
 
 
@@ -21118,8 +21717,8 @@ _SSPKG_GET_PURCHASEACTIVITY_REQ = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=50942,
-  serialized_end=50987,
+  serialized_start=52807,
+  serialized_end=52852,
 )
 
 
@@ -21221,6 +21820,41 @@ _SSPKG_GET_PURCHASEACTIVITY_RES = _descriptor.Descriptor(
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
+    _descriptor.FieldDescriptor(
+      name='supervaluecard_info', full_name='SSPKG_GET_PURCHASEACTIVITY_RES.supervaluecard_info', index=13,
+      number=14, type=11, cpp_type=10, label=3,
+      has_default_value=False, default_value=[],
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    _descriptor.FieldDescriptor(
+      name='time_recharge_time', full_name='SSPKG_GET_PURCHASEACTIVITY_RES.time_recharge_time', index=14,
+      number=15, type=13, cpp_type=3, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    _descriptor.FieldDescriptor(
+      name='time_recharge_product_id', full_name='SSPKG_GET_PURCHASEACTIVITY_RES.time_recharge_product_id', index=15,
+      number=16, type=9, cpp_type=9, label=1,
+      has_default_value=False, default_value=_b("").decode('utf-8'),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    _descriptor.FieldDescriptor(
+      name='open_recharge_time', full_name='SSPKG_GET_PURCHASEACTIVITY_RES.open_recharge_time', index=16,
+      number=17, type=13, cpp_type=3, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    _descriptor.FieldDescriptor(
+      name='open_recharge_product_id', full_name='SSPKG_GET_PURCHASEACTIVITY_RES.open_recharge_product_id', index=17,
+      number=18, type=9, cpp_type=9, label=1,
+      has_default_value=False, default_value=_b("").decode('utf-8'),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
   ],
   extensions=[
   ],
@@ -21232,8 +21866,8 @@ _SSPKG_GET_PURCHASEACTIVITY_RES = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=50990,
-  serialized_end=51481,
+  serialized_start=52855,
+  serialized_end=53528,
 )
 
 
@@ -21297,8 +21931,8 @@ _SSPKG_RECORD_TRADE_SUCCESS = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=51484,
-  serialized_end=51613,
+  serialized_start=53531,
+  serialized_end=53660,
 )
 
 
@@ -21362,8 +21996,8 @@ _SSPKG_GIFT_CODE_REQ = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=51616,
-  serialized_end=51751,
+  serialized_start=53663,
+  serialized_end=53798,
 )
 
 
@@ -21420,8 +22054,8 @@ _SSPKG_GIFT_UPDATE_ACCEPT_REQ = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=51753,
-  serialized_end=51871,
+  serialized_start=53800,
+  serialized_end=53918,
 )
 
 
@@ -21485,8 +22119,8 @@ _SSPKG_GIFT_CODE_RES = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=51873,
-  serialized_end=51998,
+  serialized_start=53920,
+  serialized_end=54045,
 )
 
 
@@ -21529,8 +22163,8 @@ _SSDT_ROLE_LIST_RES = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=52000,
-  serialized_end=52105,
+  serialized_start=54047,
+  serialized_end=54152,
 )
 
 
@@ -21566,8 +22200,8 @@ _UINON_MAIL_ACC_INFO = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=52108,
-  serialized_end=52237,
+  serialized_start=54155,
+  serialized_end=54284,
 )
 
 
@@ -21603,8 +22237,8 @@ _SSDT_RANK_BASEINFO = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=52239,
-  serialized_end=52355,
+  serialized_start=54286,
+  serialized_end=54402,
 )
 
 
@@ -21654,8 +22288,8 @@ _SSDT_RANKPOS_SEARCH_KEY = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=52357,
-  serialized_end=52453,
+  serialized_start=54404,
+  serialized_end=54500,
 )
 
 
@@ -21698,8 +22332,8 @@ _SSPKG_GAMESVR_STAT_INFO = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=52455,
-  serialized_end=52540,
+  serialized_start=54502,
+  serialized_end=54587,
 )
 
 
@@ -21756,8 +22390,8 @@ _SSPKG_GAMESVR_ACC_LOGIN = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=52542,
-  serialized_end=52644,
+  serialized_start=54589,
+  serialized_end=54691,
 )
 
 
@@ -21793,8 +22427,8 @@ _SSPKG_GAMESVR_ACC_LOGOUT = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=52646,
-  serialized_end=52729,
+  serialized_start=54693,
+  serialized_end=54776,
 )
 
 
@@ -21830,8 +22464,8 @@ _DB_PLAYER_SHOP_HERO_INFO = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=52731,
-  serialized_end=52791,
+  serialized_start=54778,
+  serialized_end=54838,
 )
 
 
@@ -21867,8 +22501,8 @@ _DB_PLAYER_SHOP_GOODS_INFO = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=52793,
-  serialized_end=52862,
+  serialized_start=54840,
+  serialized_end=54909,
 )
 
 
@@ -21911,8 +22545,8 @@ _DB_PLAYER_SHOP_INFO_BLOB = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=52865,
-  serialized_end=53086,
+  serialized_start=54912,
+  serialized_end=55133,
 )
 
 
@@ -21955,8 +22589,8 @@ _SS_SHOP_PLAYER_LOGIN_REQ = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=53088,
-  serialized_end=53194,
+  serialized_start=55135,
+  serialized_end=55241,
 )
 
 
@@ -21985,8 +22619,8 @@ _SS_SHOP_PLAYER_LOGOUT_REQ = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=53196,
-  serialized_end=53240,
+  serialized_start=55243,
+  serialized_end=55287,
 )
 
 
@@ -22043,8 +22677,8 @@ _SS_SHOP_PLAYER_LOGIN_RES = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=53243,
-  serialized_end=53396,
+  serialized_start=55290,
+  serialized_end=55443,
 )
 
 
@@ -22080,8 +22714,8 @@ _SS_SHOP_PLAYER_REFRESH_GOODS_REQ = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=53398,
-  serialized_end=53468,
+  serialized_start=55445,
+  serialized_end=55515,
 )
 
 
@@ -22138,8 +22772,8 @@ _SS_SHOP_PLAYER_REFRESH_GOODS_RES = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=53471,
-  serialized_end=53632,
+  serialized_start=55518,
+  serialized_end=55679,
 )
 
 
@@ -22217,8 +22851,8 @@ _SS_SHOP_PLAYER_BUY_GOODS_CHECK_REQ = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=53635,
-  serialized_end=53836,
+  serialized_start=55682,
+  serialized_end=55883,
 )
 
 
@@ -22275,8 +22909,8 @@ _SS_SHOP_PLAYER_BUY_GOODS_CHECK_RES = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=53839,
-  serialized_end=53986,
+  serialized_start=55886,
+  serialized_end=56033,
 )
 
 
@@ -22312,8 +22946,8 @@ _SS_SHOP_PLAYER_UPDATE_HERO_REQ = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=53988,
-  serialized_end=54083,
+  serialized_start=56035,
+  serialized_end=56130,
 )
 
 
@@ -22356,8 +22990,8 @@ _SS_SHOP_PLAYER_BUY_GOODS_FAILE_ROLLBACK_REQ = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=54085,
-  serialized_end=54184,
+  serialized_start=56132,
+  serialized_end=56231,
 )
 
 
@@ -22414,8 +23048,8 @@ _SSDT_FRIEND_CROSS_INFO = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=54186,
-  serialized_end=54288,
+  serialized_start=56233,
+  serialized_end=56335,
 )
 
 
@@ -22444,8 +23078,8 @@ _SSPKG_BIND_3RD_PLATFORM_ID = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=54290,
-  serialized_end=54362,
+  serialized_start=56337,
+  serialized_end=56409,
 )
 
 
@@ -22474,8 +23108,8 @@ _SSPKG_BIND_3RD_PLATFORM_ID_TO_FRIEND = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=54364,
-  serialized_end=54446,
+  serialized_start=56411,
+  serialized_end=56493,
 )
 
 
@@ -22525,8 +23159,8 @@ _SSPKG_INVITE_STATE_INFO = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=54448,
-  serialized_end=54560,
+  serialized_start=56495,
+  serialized_end=56607,
 )
 
 
@@ -22569,8 +23203,8 @@ _SSPKG_HANDLE_INVITED_CODE_REWARD = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=54562,
-  serialized_end=54646,
+  serialized_start=56609,
+  serialized_end=56693,
 )
 
 
@@ -22620,8 +23254,8 @@ _SSPKG_APPLY_INVITED_CODE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=54648,
-  serialized_end=54744,
+  serialized_start=56695,
+  serialized_end=56791,
 )
 
 
@@ -22657,8 +23291,8 @@ _SSPKG_APPLY_INVITED_CODE_TO_CROSS = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=54746,
-  serialized_end=54839,
+  serialized_start=56793,
+  serialized_end=56886,
 )
 
 
@@ -22694,8 +23328,8 @@ _SSPKG_APPLY_INVITED_CODE_CROSS_TO_FRIEND = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=54841,
-  serialized_end=54941,
+  serialized_start=56888,
+  serialized_end=56988,
 )
 
 
@@ -22731,8 +23365,8 @@ _SSPKG_APPLY_INVITED_CODE_RES_TO_CROSS = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=54943,
-  serialized_end=55038,
+  serialized_start=56990,
+  serialized_end=57085,
 )
 
 
@@ -22768,8 +23402,8 @@ _SSPKG_APPLY_INVITED_CODE_RES_TO_CROSS_TO_FRIEND = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=55040,
-  serialized_end=55145,
+  serialized_start=57087,
+  serialized_end=57192,
 )
 
 
@@ -22819,8 +23453,8 @@ _SSPKG_NTF_INVITED_ERROR = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=55147,
-  serialized_end=55266,
+  serialized_start=57194,
+  serialized_end=57313,
 )
 
 
@@ -22877,8 +23511,8 @@ _SSPKG_INVITED_FRIEND_INFO = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=55269,
-  serialized_end=55413,
+  serialized_start=57316,
+  serialized_end=57460,
 )
 
 
@@ -22928,8 +23562,8 @@ _SSPKG_REQUEST_INVITED_FRIEND = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=55415,
-  serialized_end=55513,
+  serialized_start=57462,
+  serialized_end=57560,
 )
 
 
@@ -22986,8 +23620,8 @@ _SSDT_INVITED_INFO = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=55515,
-  serialized_end=55637,
+  serialized_start=57562,
+  serialized_end=57684,
 )
 
 
@@ -23023,8 +23657,8 @@ _SSPKG_REQUEST_INVITED_TO_CROSS = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=55639,
-  serialized_end=55759,
+  serialized_start=57686,
+  serialized_end=57806,
 )
 
 
@@ -23060,8 +23694,8 @@ _SSPKG_REQUES_INVITED_CROSS_TO_FRIEND = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=55761,
-  serialized_end=55887,
+  serialized_start=57808,
+  serialized_end=57934,
 )
 
 
@@ -23097,8 +23731,8 @@ _SSPKG_RESPONSE_INVITED_FRIEND_TO_CROSS = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=55889,
-  serialized_end=56016,
+  serialized_start=57936,
+  serialized_end=58063,
 )
 
 
@@ -23134,8 +23768,8 @@ _SSPKG_RESPONSE_INVITED_CROSS_TO_FRIEND = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=56018,
-  serialized_end=56145,
+  serialized_start=58065,
+  serialized_end=58192,
 )
 
 
@@ -23192,8 +23826,8 @@ _SSDT_REQUEST_SOCIAL_FRIEND = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=56147,
-  serialized_end=56261,
+  serialized_start=58194,
+  serialized_end=58308,
 )
 
 
@@ -23222,8 +23856,8 @@ _SSPKG_REQUEST_SOCIAL_FRIEND = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=56263,
-  serialized_end=56335,
+  serialized_start=58310,
+  serialized_end=58382,
 )
 
 
@@ -23252,8 +23886,8 @@ _SSPKG_REQUEST_SOCIAL_FRIEND_CROSS = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=56337,
-  serialized_end=56415,
+  serialized_start=58384,
+  serialized_end=58462,
 )
 
 
@@ -23296,8 +23930,8 @@ _SSDT_FRIEND_INFO = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=56417,
-  serialized_end=56531,
+  serialized_start=58464,
+  serialized_end=58578,
 )
 
 
@@ -23333,8 +23967,8 @@ _SSDT_SOCIAL_FRIEND_INFO = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=56533,
-  serialized_end=56643,
+  serialized_start=58580,
+  serialized_end=58690,
 )
 
 
@@ -23384,8 +24018,8 @@ _SSDT_FRIEND_INFO_CROSS = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=56646,
-  serialized_end=56775,
+  serialized_start=58693,
+  serialized_end=58822,
 )
 
 
@@ -23421,8 +24055,8 @@ _SSPKG_REQUEST_INVITE_REWARD = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=56777,
-  serialized_end=56868,
+  serialized_start=58824,
+  serialized_end=58915,
 )
 
 
@@ -23465,8 +24099,8 @@ _SSPKG_RESPONSE_INVITE_REWARD = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=56870,
-  serialized_end=56982,
+  serialized_start=58917,
+  serialized_end=59029,
 )
 
 
@@ -23495,8 +24129,8 @@ _SSPKG_NOTIFY_SOCIAL_FRIEND_ERROR = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=56984,
-  serialized_end=57038,
+  serialized_start=59031,
+  serialized_end=59085,
 )
 
 
@@ -23539,8 +24173,8 @@ _SSDT_SOCIAL_FRIEND_ID = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=57040,
-  serialized_end=57111,
+  serialized_start=59087,
+  serialized_end=59158,
 )
 
 
@@ -23576,8 +24210,8 @@ _SSPKG_SEND_POWER_TO_SOCIAL_FRIEND = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=57113,
-  serialized_end=57203,
+  serialized_start=59160,
+  serialized_end=59250,
 )
 
 
@@ -23613,8 +24247,8 @@ _SSPKG_SEND_POWER_TO_SOCIAL_FRIEND_FROM_CROSS = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=57205,
-  serialized_end=57325,
+  serialized_start=59252,
+  serialized_end=59372,
 )
 
 
@@ -23650,8 +24284,8 @@ _SSPKG_SEND_POWER_TO_SOCIAL_FRIEND_CROSS = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=57327,
-  serialized_end=57442,
+  serialized_start=59374,
+  serialized_end=59489,
 )
 
 
@@ -23694,8 +24328,8 @@ _SSPKG_SOCIAL_FRIEND_POWER_ADD = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=57444,
-  serialized_end=57527,
+  serialized_start=59491,
+  serialized_end=59574,
 )
 
 
@@ -23752,8 +24386,8 @@ _SSDT_SEND_POSER_TO_SOCIAL_FRIEND = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=57530,
-  serialized_end=57661,
+  serialized_start=59577,
+  serialized_end=59708,
 )
 
 
@@ -23789,8 +24423,8 @@ _SSPKG_RECV_POWER_FROM_SOCIAL_FRIEND = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=57663,
-  serialized_end=57730,
+  serialized_start=59710,
+  serialized_end=59777,
 )
 
 
@@ -23833,8 +24467,8 @@ _SSPKG_SOCIAL_FRIEND_INFO_CHANGE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=57732,
-  serialized_end=57844,
+  serialized_start=59779,
+  serialized_end=59891,
 )
 
 
@@ -23863,8 +24497,8 @@ _SSPKG_FRIEND_INFO_REQUEST = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=57846,
-  serialized_end=57912,
+  serialized_start=59893,
+  serialized_end=59959,
 )
 
 
@@ -23893,8 +24527,8 @@ _SSPKG_FRIEND_CROSS_INFO_RESPONSE_TO_CROSS = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=57914,
-  serialized_end=57996,
+  serialized_start=59961,
+  serialized_end=60043,
 )
 
 
@@ -23923,8 +24557,8 @@ _SSPKG_FRIEND_CROSS_INFO_RESPONSE_TO_CROSS_TO_FRIEND = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=57998,
-  serialized_end=58090,
+  serialized_start=60045,
+  serialized_end=60137,
 )
 
 
@@ -23960,8 +24594,8 @@ _SSPKG_FRIEND_CROSS_INFO_RESPONSE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=58092,
-  serialized_end=58182,
+  serialized_start=60139,
+  serialized_end=60229,
 )
 
 
@@ -23997,8 +24631,8 @@ _SSDT_FRIEND_APPLY_INFO = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=58184,
-  serialized_end=58271,
+  serialized_start=60231,
+  serialized_end=60318,
 )
 
 
@@ -24034,8 +24668,8 @@ _SSDT_FRIEND_RECOMMAND_INFO = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=58273,
-  serialized_end=58364,
+  serialized_start=60320,
+  serialized_end=60411,
 )
 
 
@@ -24071,8 +24705,8 @@ _SSDT_PLAYER_FRIEND_INFO = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=58366,
-  serialized_end=58476,
+  serialized_start=60413,
+  serialized_end=60523,
 )
 
 
@@ -24115,8 +24749,8 @@ _SSPKG_OPT_FRIEND_REQ = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=58478,
-  serialized_end=58551,
+  serialized_start=60525,
+  serialized_end=60598,
 )
 
 
@@ -24166,8 +24800,8 @@ _SSPKG_OPT_FRIEND_RES = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=58553,
-  serialized_end=58667,
+  serialized_start=60600,
+  serialized_end=60714,
 )
 
 
@@ -24259,8 +24893,8 @@ _SSPKG_LOGIN_FRIEND_SVR_REQ = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=58670,
-  serialized_end=58916,
+  serialized_start=60717,
+  serialized_end=60963,
 )
 
 
@@ -24310,8 +24944,8 @@ _SSPKG_LOGIN_FRIEND_SVR_RES = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=58919,
-  serialized_end=59080,
+  serialized_start=60966,
+  serialized_end=61127,
 )
 
 
@@ -24361,8 +24995,8 @@ _SSPKG_FRIEND_INFO_CHG = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=59082,
-  serialized_end=59188,
+  serialized_start=61129,
+  serialized_end=61235,
 )
 
 
@@ -24412,8 +25046,8 @@ _SSDT_RELATION_INFO = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=59191,
-  serialized_end=59330,
+  serialized_start=61238,
+  serialized_end=61377,
 )
 
 
@@ -24456,8 +25090,8 @@ _SSDT_SOCIAL_RELATION_INFO = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=59332,
-  serialized_end=59458,
+  serialized_start=61379,
+  serialized_end=61505,
 )
 
 
@@ -24493,8 +25127,8 @@ _SSDT_INVITED_REWARD_GOT = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=59460,
-  serialized_end=59518,
+  serialized_start=61507,
+  serialized_end=61565,
 )
 
 
@@ -24537,8 +25171,8 @@ _SSDT_INVITED_FRIEND_INFO = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=59520,
-  serialized_end=59602,
+  serialized_start=61567,
+  serialized_end=61649,
 )
 
 
@@ -24588,8 +25222,8 @@ _SSDT_INVITED_TOTAL_INFO = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=59605,
-  serialized_end=59769,
+  serialized_start=61652,
+  serialized_end=61816,
 )
 
 
@@ -24639,8 +25273,8 @@ _SSDT_ASSISTANT_HERO_INFO = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=59772,
-  serialized_end=59906,
+  serialized_start=61819,
+  serialized_end=61953,
 )
 
 
@@ -24669,8 +25303,8 @@ _SSDT_SEND_POWER_RECORD = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=59908,
-  serialized_end=59949,
+  serialized_start=61955,
+  serialized_end=61996,
 )
 
 
@@ -24741,8 +25375,8 @@ _DB_FRIEND_BLOB = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=59952,
-  serialized_end=60311,
+  serialized_start=61999,
+  serialized_end=62358,
 )
 
 
@@ -24792,8 +25426,8 @@ _SSPKG_FRIEND_NOTIFY_APPLYLIST_CHG = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=60313,
-  serialized_end=60439,
+  serialized_start=62360,
+  serialized_end=62486,
 )
 
 
@@ -24843,8 +25477,8 @@ _SSPKG_FRIEND_NOTIFY_FRIEND_LIST_CHG = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=60441,
-  serialized_end=60564,
+  serialized_start=62488,
+  serialized_end=62611,
 )
 
 
@@ -24894,8 +25528,8 @@ _SSPKG_FRIEND_NOTIFY_FRIEND_SEND_POWER = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=60566,
-  serialized_end=60679,
+  serialized_start=62613,
+  serialized_end=62726,
 )
 
 
@@ -24945,8 +25579,8 @@ _SSPKG_FRIEND_NOTIFY_FRIEND_RECV_POWER = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=60682,
-  serialized_end=60819,
+  serialized_start=62729,
+  serialized_end=62866,
 )
 
 
@@ -24982,8 +25616,8 @@ _SSPKG_FRIEND_NOTIFY_POWER_REFRESH_CROSS_DAY = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=60821,
-  serialized_end=60896,
+  serialized_start=62868,
+  serialized_end=62943,
 )
 
 
@@ -25019,8 +25653,8 @@ _SSPKG_FRIEND_RECV_POWER_ALL_REQ = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=60898,
-  serialized_end=60975,
+  serialized_start=62945,
+  serialized_end=63022,
 )
 
 
@@ -25063,8 +25697,8 @@ _SSPKG_FRIEND_RECV_POWER_ALL_RES = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=60978,
-  serialized_end=61119,
+  serialized_start=63025,
+  serialized_end=63166,
 )
 
 
@@ -25100,8 +25734,8 @@ _SSPKG_FRIEND_SEND_POWER_ALL_REQ = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=61121,
-  serialized_end=61198,
+  serialized_start=63168,
+  serialized_end=63245,
 )
 
 
@@ -25137,8 +25771,8 @@ _SSPKG_FRIEND_SEND_POWER_ALL_RES = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=61200,
-  serialized_end=61309,
+  serialized_start=63247,
+  serialized_end=63356,
 )
 
 
@@ -25209,8 +25843,8 @@ _PKG_FRIEND_DISP_INFO_CHG = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=61312,
-  serialized_end=61495,
+  serialized_start=63359,
+  serialized_end=63542,
 )
 
 
@@ -25239,8 +25873,8 @@ _FRIEND_BROADCAST_DETAIL = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=61497,
-  serialized_end=61574,
+  serialized_start=63544,
+  serialized_end=63621,
 )
 
 
@@ -25283,8 +25917,8 @@ _PKG_FRIEND_BROADCAST = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=61576,
-  serialized_end=61688,
+  serialized_start=63623,
+  serialized_end=63735,
 )
 
 
@@ -25320,8 +25954,8 @@ _SSPKG_GET_RECOMMAND_FRIEND_REQ = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=61690,
-  serialized_end=61759,
+  serialized_start=63737,
+  serialized_end=63806,
 )
 
 
@@ -25364,8 +25998,8 @@ _SSPKG_GET_RECOMMAND_FRIEND_RES = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=61761,
-  serialized_end=61886,
+  serialized_start=63808,
+  serialized_end=63933,
 )
 
 
@@ -25394,8 +26028,8 @@ _SSPKG_KICK_PLAYER_ALL_ZONE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=61888,
-  serialized_end=61935,
+  serialized_start=63935,
+  serialized_end=63982,
 )
 
 
@@ -25431,8 +26065,8 @@ _DBBLOB_ACTIVITY_INFO = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=61937,
-  serialized_end=62053,
+  serialized_start=63984,
+  serialized_end=64100,
 )
 
 
@@ -25468,8 +26102,8 @@ _SSDT_DAILY_RECHARGE_INFO = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=62055,
-  serialized_end=62120,
+  serialized_start=64102,
+  serialized_end=64167,
 )
 
 
@@ -25498,8 +26132,8 @@ _DBBLOB_DAILY_RECHARGE_REWARD = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=62122,
-  serialized_end=62208,
+  serialized_start=64169,
+  serialized_end=64255,
 )
 
 
@@ -25535,8 +26169,8 @@ _SSDT_NEWBIE_ACTIVITY_RECHARGE_INFO = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=62210,
-  serialized_end=62291,
+  serialized_start=64257,
+  serialized_end=64338,
 )
 
 
@@ -25565,8 +26199,8 @@ _DBBLOB_NEWBIE_ACTIVITY_RECHARGE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=62293,
-  serialized_end=62386,
+  serialized_start=64340,
+  serialized_end=64433,
 )
 
 
@@ -25602,8 +26236,8 @@ _SSPKG_NTF_VIP_CHANGE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=62388,
-  serialized_end=62445,
+  serialized_start=64435,
+  serialized_end=64492,
 )
 
 
@@ -25646,8 +26280,8 @@ _DBBLOB_FRIEND_ASSIST_HERO_INFO = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=62447,
-  serialized_end=62568,
+  serialized_start=64494,
+  serialized_end=64615,
 )
 
 
@@ -25732,8 +26366,8 @@ _DBBLOB_PLAYER_BOSSRUSH_INFO = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=62571,
-  serialized_end=62897,
+  serialized_start=64618,
+  serialized_end=64944,
 )
 
 
@@ -25769,8 +26403,8 @@ _SSPKG_CLAIM_ASSISTANT_HERO_REWARD = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=62899,
-  serialized_end=62961,
+  serialized_start=64946,
+  serialized_end=65008,
 )
 
 
@@ -25820,8 +26454,8 @@ _SSPKG_BOSSRUSH_HIRE_HERO = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=62963,
-  serialized_end=63075,
+  serialized_start=65010,
+  serialized_end=65122,
 )
 
 
@@ -25871,8 +26505,8 @@ _SSDT_WORLD_ACTIVITY_INFO = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=63077,
-  serialized_end=63188,
+  serialized_start=65124,
+  serialized_end=65235,
 )
 
 
@@ -25915,8 +26549,8 @@ _SSDT_WORLD_DROP_INFO = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=63190,
-  serialized_end=63286,
+  serialized_start=65237,
+  serialized_end=65333,
 )
 
 
@@ -25952,8 +26586,8 @@ _SSDT_GAME_SERVER_MISC_INFO = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=63289,
-  serialized_end=63421,
+  serialized_start=65336,
+  serialized_end=65468,
 )
 
 
@@ -25982,8 +26616,8 @@ _SSPKG_UPDATE_GAME_SERVER_MISC_REQ = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=63423,
-  serialized_end=63513,
+  serialized_start=65470,
+  serialized_end=65560,
 )
 
 
@@ -26012,8 +26646,8 @@ _SSPKG_GET_GAMESVR_MISC_REQ = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=63515,
-  serialized_end=63560,
+  serialized_start=65562,
+  serialized_end=65607,
 )
 
 
@@ -26049,8 +26683,8 @@ _SSPKG_GET_GAMESVR_MISC_RES = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=63562,
-  serialized_end=63668,
+  serialized_start=65609,
+  serialized_end=65715,
 )
 
 
@@ -26079,8 +26713,8 @@ _SSPKG_RANK_BATTLE_ACTIVITY_REQ = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=63670,
-  serialized_end=63723,
+  serialized_start=65717,
+  serialized_end=65770,
 )
 
 
@@ -26116,8 +26750,8 @@ _SSPKG_REPORT_PLAYER_CHAT_REQ = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=63725,
-  serialized_end=63790,
+  serialized_start=65772,
+  serialized_end=65837,
 )
 
 
@@ -26160,17 +26794,1261 @@ _SSPKG_REPORT_PLAYER_CHAT_RES = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=63792,
-  serialized_end=63875,
+  serialized_start=65839,
+  serialized_end=65922,
+)
+
+
+_SSPKG_TOP_BATTLE_GET_QUALIFICATION_RANK_POS_REQ = _descriptor.Descriptor(
+  name='SSPKG_TOP_BATTLE_GET_QUALIFICATION_RANK_POS_REQ',
+  full_name='SSPKG_TOP_BATTLE_GET_QUALIFICATION_RANK_POS_REQ',
+  filename=None,
+  file=DESCRIPTOR,
+  containing_type=None,
+  fields=[
+    _descriptor.FieldDescriptor(
+      name='reverse', full_name='SSPKG_TOP_BATTLE_GET_QUALIFICATION_RANK_POS_REQ.reverse', index=0,
+      number=1, type=5, cpp_type=1, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+  ],
+  extensions=[
+  ],
+  nested_types=[],
+  enum_types=[
+  ],
+  options=None,
+  is_extendable=False,
+  extension_ranges=[],
+  oneofs=[
+  ],
+  serialized_start=65924,
+  serialized_end=65990,
+)
+
+
+_SSPKG_TOP_BATTLE_GET_QUALIFICATION_RANK_POS_RES = _descriptor.Descriptor(
+  name='SSPKG_TOP_BATTLE_GET_QUALIFICATION_RANK_POS_RES',
+  full_name='SSPKG_TOP_BATTLE_GET_QUALIFICATION_RANK_POS_RES',
+  filename=None,
+  file=DESCRIPTOR,
+  containing_type=None,
+  fields=[
+    _descriptor.FieldDescriptor(
+      name='qualification_rank_pos', full_name='SSPKG_TOP_BATTLE_GET_QUALIFICATION_RANK_POS_RES.qualification_rank_pos', index=0,
+      number=1, type=13, cpp_type=3, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+  ],
+  extensions=[
+  ],
+  nested_types=[],
+  enum_types=[
+  ],
+  options=None,
+  is_extendable=False,
+  extension_ranges=[],
+  oneofs=[
+  ],
+  serialized_start=65992,
+  serialized_end=66073,
+)
+
+
+_SSPKG_TOP_BATTLE_BASE_INFO_REQ = _descriptor.Descriptor(
+  name='SSPKG_TOP_BATTLE_BASE_INFO_REQ',
+  full_name='SSPKG_TOP_BATTLE_BASE_INFO_REQ',
+  filename=None,
+  file=DESCRIPTOR,
+  containing_type=None,
+  fields=[
+    _descriptor.FieldDescriptor(
+      name='world_id', full_name='SSPKG_TOP_BATTLE_BASE_INFO_REQ.world_id', index=0,
+      number=1, type=13, cpp_type=3, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    _descriptor.FieldDescriptor(
+      name='qualification_rank_pos', full_name='SSPKG_TOP_BATTLE_BASE_INFO_REQ.qualification_rank_pos', index=1,
+      number=2, type=13, cpp_type=3, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+  ],
+  extensions=[
+  ],
+  nested_types=[],
+  enum_types=[
+  ],
+  options=None,
+  is_extendable=False,
+  extension_ranges=[],
+  oneofs=[
+  ],
+  serialized_start=66075,
+  serialized_end=66157,
+)
+
+
+_SSPKG_TOP_BATTLE_BASE_INFO_RES = _descriptor.Descriptor(
+  name='SSPKG_TOP_BATTLE_BASE_INFO_RES',
+  full_name='SSPKG_TOP_BATTLE_BASE_INFO_RES',
+  filename=None,
+  file=DESCRIPTOR,
+  containing_type=None,
+  fields=[
+    _descriptor.FieldDescriptor(
+      name='top_battle_begin_time', full_name='SSPKG_TOP_BATTLE_BASE_INFO_RES.top_battle_begin_time', index=0,
+      number=1, type=13, cpp_type=3, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    _descriptor.FieldDescriptor(
+      name='world_id', full_name='SSPKG_TOP_BATTLE_BASE_INFO_RES.world_id', index=1,
+      number=2, type=13, cpp_type=3, label=3,
+      has_default_value=False, default_value=[],
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    _descriptor.FieldDescriptor(
+      name='battle_zone_id', full_name='SSPKG_TOP_BATTLE_BASE_INFO_RES.battle_zone_id', index=2,
+      number=3, type=13, cpp_type=3, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    _descriptor.FieldDescriptor(
+      name='qualification_rank_pos', full_name='SSPKG_TOP_BATTLE_BASE_INFO_RES.qualification_rank_pos', index=3,
+      number=4, type=13, cpp_type=3, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    _descriptor.FieldDescriptor(
+      name='max_rank_pos', full_name='SSPKG_TOP_BATTLE_BASE_INFO_RES.max_rank_pos', index=4,
+      number=5, type=13, cpp_type=3, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+  ],
+  extensions=[
+  ],
+  nested_types=[],
+  enum_types=[
+  ],
+  options=None,
+  is_extendable=False,
+  extension_ranges=[],
+  oneofs=[
+  ],
+  serialized_start=66160,
+  serialized_end=66319,
+)
+
+
+_SSPKG_TOP_BATTLE_CHECK_QUALIFICATION_REQ = _descriptor.Descriptor(
+  name='SSPKG_TOP_BATTLE_CHECK_QUALIFICATION_REQ',
+  full_name='SSPKG_TOP_BATTLE_CHECK_QUALIFICATION_REQ',
+  filename=None,
+  file=DESCRIPTOR,
+  containing_type=None,
+  fields=[
+    _descriptor.FieldDescriptor(
+      name='info', full_name='SSPKG_TOP_BATTLE_CHECK_QUALIFICATION_REQ.info', index=0,
+      number=1, type=11, cpp_type=10, label=1,
+      has_default_value=False, default_value=None,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    _descriptor.FieldDescriptor(
+      name='is_login', full_name='SSPKG_TOP_BATTLE_CHECK_QUALIFICATION_REQ.is_login', index=1,
+      number=2, type=8, cpp_type=7, label=1,
+      has_default_value=False, default_value=False,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+  ],
+  extensions=[
+  ],
+  nested_types=[],
+  enum_types=[
+  ],
+  options=None,
+  is_extendable=False,
+  extension_ranges=[],
+  oneofs=[
+  ],
+  serialized_start=66321,
+  serialized_end=66418,
+)
+
+
+_SSPKG_TOP_BATTLE_CHECK_QUALIFICATION_RES = _descriptor.Descriptor(
+  name='SSPKG_TOP_BATTLE_CHECK_QUALIFICATION_RES',
+  full_name='SSPKG_TOP_BATTLE_CHECK_QUALIFICATION_RES',
+  filename=None,
+  file=DESCRIPTOR,
+  containing_type=None,
+  fields=[
+    _descriptor.FieldDescriptor(
+      name='result', full_name='SSPKG_TOP_BATTLE_CHECK_QUALIFICATION_RES.result', index=0,
+      number=1, type=5, cpp_type=1, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    _descriptor.FieldDescriptor(
+      name='info', full_name='SSPKG_TOP_BATTLE_CHECK_QUALIFICATION_RES.info', index=1,
+      number=2, type=11, cpp_type=10, label=1,
+      has_default_value=False, default_value=None,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    _descriptor.FieldDescriptor(
+      name='is_login', full_name='SSPKG_TOP_BATTLE_CHECK_QUALIFICATION_RES.is_login', index=2,
+      number=3, type=8, cpp_type=7, label=1,
+      has_default_value=False, default_value=False,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+  ],
+  extensions=[
+  ],
+  nested_types=[],
+  enum_types=[
+  ],
+  options=None,
+  is_extendable=False,
+  extension_ranges=[],
+  oneofs=[
+  ],
+  serialized_start=66420,
+  serialized_end=66533,
+)
+
+
+_SSPKG_GET_TOP_BATTLE_STATE_REQ = _descriptor.Descriptor(
+  name='SSPKG_GET_TOP_BATTLE_STATE_REQ',
+  full_name='SSPKG_GET_TOP_BATTLE_STATE_REQ',
+  filename=None,
+  file=DESCRIPTOR,
+  containing_type=None,
+  fields=[
+    _descriptor.FieldDescriptor(
+      name='info', full_name='SSPKG_GET_TOP_BATTLE_STATE_REQ.info', index=0,
+      number=1, type=11, cpp_type=10, label=1,
+      has_default_value=False, default_value=None,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    _descriptor.FieldDescriptor(
+      name='world_id', full_name='SSPKG_GET_TOP_BATTLE_STATE_REQ.world_id', index=1,
+      number=2, type=13, cpp_type=3, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    _descriptor.FieldDescriptor(
+      name='is_login', full_name='SSPKG_GET_TOP_BATTLE_STATE_REQ.is_login', index=2,
+      number=3, type=8, cpp_type=7, label=1,
+      has_default_value=False, default_value=False,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    _descriptor.FieldDescriptor(
+      name='is_has_qualification', full_name='SSPKG_GET_TOP_BATTLE_STATE_REQ.is_has_qualification', index=3,
+      number=4, type=8, cpp_type=7, label=1,
+      has_default_value=False, default_value=False,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+  ],
+  extensions=[
+  ],
+  nested_types=[],
+  enum_types=[
+  ],
+  options=None,
+  is_extendable=False,
+  extension_ranges=[],
+  oneofs=[
+  ],
+  serialized_start=66536,
+  serialized_end=66671,
+)
+
+
+_SSPKG_GET_TOP_BATTLE_STATE_RES = _descriptor.Descriptor(
+  name='SSPKG_GET_TOP_BATTLE_STATE_RES',
+  full_name='SSPKG_GET_TOP_BATTLE_STATE_RES',
+  filename=None,
+  file=DESCRIPTOR,
+  containing_type=None,
+  fields=[
+    _descriptor.FieldDescriptor(
+      name='result', full_name='SSPKG_GET_TOP_BATTLE_STATE_RES.result', index=0,
+      number=1, type=5, cpp_type=1, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    _descriptor.FieldDescriptor(
+      name='battle_score', full_name='SSPKG_GET_TOP_BATTLE_STATE_RES.battle_score', index=1,
+      number=2, type=13, cpp_type=3, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+  ],
+  extensions=[
+  ],
+  nested_types=[],
+  enum_types=[
+  ],
+  options=None,
+  is_extendable=False,
+  extension_ranges=[],
+  oneofs=[
+  ],
+  serialized_start=66673,
+  serialized_end=66743,
+)
+
+
+_SSPKG_TOP_BATTLE_APPLY_REQ = _descriptor.Descriptor(
+  name='SSPKG_TOP_BATTLE_APPLY_REQ',
+  full_name='SSPKG_TOP_BATTLE_APPLY_REQ',
+  filename=None,
+  file=DESCRIPTOR,
+  containing_type=None,
+  fields=[
+    _descriptor.FieldDescriptor(
+      name='world_id', full_name='SSPKG_TOP_BATTLE_APPLY_REQ.world_id', index=0,
+      number=1, type=13, cpp_type=3, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    _descriptor.FieldDescriptor(
+      name='role_info', full_name='SSPKG_TOP_BATTLE_APPLY_REQ.role_info', index=1,
+      number=2, type=11, cpp_type=10, label=3,
+      has_default_value=False, default_value=[],
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+  ],
+  extensions=[
+  ],
+  nested_types=[],
+  enum_types=[
+  ],
+  options=None,
+  is_extendable=False,
+  extension_ranges=[],
+  oneofs=[
+  ],
+  serialized_start=66745,
+  serialized_end=66833,
+)
+
+
+_SSPKG_TOP_BATTLE_GET_FIGHT_TARGET_REQ = _descriptor.Descriptor(
+  name='SSPKG_TOP_BATTLE_GET_FIGHT_TARGET_REQ',
+  full_name='SSPKG_TOP_BATTLE_GET_FIGHT_TARGET_REQ',
+  filename=None,
+  file=DESCRIPTOR,
+  containing_type=None,
+  fields=[
+    _descriptor.FieldDescriptor(
+      name='role_id', full_name='SSPKG_TOP_BATTLE_GET_FIGHT_TARGET_REQ.role_id', index=0,
+      number=1, type=13, cpp_type=3, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    _descriptor.FieldDescriptor(
+      name='world_id', full_name='SSPKG_TOP_BATTLE_GET_FIGHT_TARGET_REQ.world_id', index=1,
+      number=2, type=5, cpp_type=1, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+  ],
+  extensions=[
+  ],
+  nested_types=[],
+  enum_types=[
+  ],
+  options=None,
+  is_extendable=False,
+  extension_ranges=[],
+  oneofs=[
+  ],
+  serialized_start=66835,
+  serialized_end=66909,
+)
+
+
+_SSPKG_TOP_BATTLE_GET_FIGHT_TARGET_RES = _descriptor.Descriptor(
+  name='SSPKG_TOP_BATTLE_GET_FIGHT_TARGET_RES',
+  full_name='SSPKG_TOP_BATTLE_GET_FIGHT_TARGET_RES',
+  filename=None,
+  file=DESCRIPTOR,
+  containing_type=None,
+  fields=[
+    _descriptor.FieldDescriptor(
+      name='result', full_name='SSPKG_TOP_BATTLE_GET_FIGHT_TARGET_RES.result', index=0,
+      number=1, type=5, cpp_type=1, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    _descriptor.FieldDescriptor(
+      name='target_info', full_name='SSPKG_TOP_BATTLE_GET_FIGHT_TARGET_RES.target_info', index=1,
+      number=2, type=11, cpp_type=10, label=3,
+      has_default_value=False, default_value=[],
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+  ],
+  extensions=[
+  ],
+  nested_types=[],
+  enum_types=[
+  ],
+  options=None,
+  is_extendable=False,
+  extension_ranges=[],
+  oneofs=[
+  ],
+  serialized_start=66911,
+  serialized_end=67018,
+)
+
+
+_SSPKG_TOP_BATTLE_ENTER_DUNGEON_REQ = _descriptor.Descriptor(
+  name='SSPKG_TOP_BATTLE_ENTER_DUNGEON_REQ',
+  full_name='SSPKG_TOP_BATTLE_ENTER_DUNGEON_REQ',
+  filename=None,
+  file=DESCRIPTOR,
+  containing_type=None,
+  fields=[
+    _descriptor.FieldDescriptor(
+      name='defense_role_id', full_name='SSPKG_TOP_BATTLE_ENTER_DUNGEON_REQ.defense_role_id', index=0,
+      number=1, type=13, cpp_type=3, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    _descriptor.FieldDescriptor(
+      name='attacker_role_id', full_name='SSPKG_TOP_BATTLE_ENTER_DUNGEON_REQ.attacker_role_id', index=1,
+      number=2, type=13, cpp_type=3, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    _descriptor.FieldDescriptor(
+      name='dungeon_id', full_name='SSPKG_TOP_BATTLE_ENTER_DUNGEON_REQ.dungeon_id', index=2,
+      number=3, type=13, cpp_type=3, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    _descriptor.FieldDescriptor(
+      name='world_id', full_name='SSPKG_TOP_BATTLE_ENTER_DUNGEON_REQ.world_id', index=3,
+      number=4, type=5, cpp_type=1, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+  ],
+  extensions=[
+  ],
+  nested_types=[],
+  enum_types=[
+  ],
+  options=None,
+  is_extendable=False,
+  extension_ranges=[],
+  oneofs=[
+  ],
+  serialized_start=67020,
+  serialized_end=67145,
+)
+
+
+_SSPKG_TOP_BATTLE_ENTER_DUNGEON_RES = _descriptor.Descriptor(
+  name='SSPKG_TOP_BATTLE_ENTER_DUNGEON_RES',
+  full_name='SSPKG_TOP_BATTLE_ENTER_DUNGEON_RES',
+  filename=None,
+  file=DESCRIPTOR,
+  containing_type=None,
+  fields=[
+    _descriptor.FieldDescriptor(
+      name='result', full_name='SSPKG_TOP_BATTLE_ENTER_DUNGEON_RES.result', index=0,
+      number=1, type=5, cpp_type=1, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    _descriptor.FieldDescriptor(
+      name='dungeon_id', full_name='SSPKG_TOP_BATTLE_ENTER_DUNGEON_RES.dungeon_id', index=1,
+      number=2, type=13, cpp_type=3, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    _descriptor.FieldDescriptor(
+      name='defense_role_id', full_name='SSPKG_TOP_BATTLE_ENTER_DUNGEON_RES.defense_role_id', index=2,
+      number=3, type=13, cpp_type=3, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    _descriptor.FieldDescriptor(
+      name='defense_hero_info', full_name='SSPKG_TOP_BATTLE_ENTER_DUNGEON_RES.defense_hero_info', index=3,
+      number=4, type=11, cpp_type=10, label=1,
+      has_default_value=False, default_value=None,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+  ],
+  extensions=[
+  ],
+  nested_types=[],
+  enum_types=[
+  ],
+  options=None,
+  is_extendable=False,
+  extension_ranges=[],
+  oneofs=[
+  ],
+  serialized_start=67148,
+  serialized_end=67298,
+)
+
+
+_SSPKG_TOP_BATTLE_UNLOCK_REQ = _descriptor.Descriptor(
+  name='SSPKG_TOP_BATTLE_UNLOCK_REQ',
+  full_name='SSPKG_TOP_BATTLE_UNLOCK_REQ',
+  filename=None,
+  file=DESCRIPTOR,
+  containing_type=None,
+  fields=[
+    _descriptor.FieldDescriptor(
+      name='attacker_role_id', full_name='SSPKG_TOP_BATTLE_UNLOCK_REQ.attacker_role_id', index=0,
+      number=1, type=13, cpp_type=3, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    _descriptor.FieldDescriptor(
+      name='defense_role_id', full_name='SSPKG_TOP_BATTLE_UNLOCK_REQ.defense_role_id', index=1,
+      number=2, type=13, cpp_type=3, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    _descriptor.FieldDescriptor(
+      name='world_id', full_name='SSPKG_TOP_BATTLE_UNLOCK_REQ.world_id', index=2,
+      number=3, type=5, cpp_type=1, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+  ],
+  extensions=[
+  ],
+  nested_types=[],
+  enum_types=[
+  ],
+  options=None,
+  is_extendable=False,
+  extension_ranges=[],
+  oneofs=[
+  ],
+  serialized_start=67300,
+  serialized_end=67398,
+)
+
+
+_SSPKG_TOP_BATTLE_BALANCE_REQ = _descriptor.Descriptor(
+  name='SSPKG_TOP_BATTLE_BALANCE_REQ',
+  full_name='SSPKG_TOP_BATTLE_BALANCE_REQ',
+  filename=None,
+  file=DESCRIPTOR,
+  containing_type=None,
+  fields=[
+    _descriptor.FieldDescriptor(
+      name='attacker_info', full_name='SSPKG_TOP_BATTLE_BALANCE_REQ.attacker_info', index=0,
+      number=1, type=11, cpp_type=10, label=1,
+      has_default_value=False, default_value=None,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    _descriptor.FieldDescriptor(
+      name='defense_mem_role_id', full_name='SSPKG_TOP_BATTLE_BALANCE_REQ.defense_mem_role_id', index=1,
+      number=2, type=13, cpp_type=3, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    _descriptor.FieldDescriptor(
+      name='battle_result', full_name='SSPKG_TOP_BATTLE_BALANCE_REQ.battle_result', index=2,
+      number=3, type=13, cpp_type=3, label=3,
+      has_default_value=False, default_value=[],
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    _descriptor.FieldDescriptor(
+      name='attacker_role_id', full_name='SSPKG_TOP_BATTLE_BALANCE_REQ.attacker_role_id', index=3,
+      number=4, type=13, cpp_type=3, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    _descriptor.FieldDescriptor(
+      name='world_id', full_name='SSPKG_TOP_BATTLE_BALANCE_REQ.world_id', index=4,
+      number=5, type=5, cpp_type=1, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+  ],
+  extensions=[
+  ],
+  nested_types=[],
+  enum_types=[
+  ],
+  options=None,
+  is_extendable=False,
+  extension_ranges=[],
+  oneofs=[
+  ],
+  serialized_start=67401,
+  serialized_end=67573,
+)
+
+
+_SSPKG_TOP_BATTLE_BALANCE_RES = _descriptor.Descriptor(
+  name='SSPKG_TOP_BATTLE_BALANCE_RES',
+  full_name='SSPKG_TOP_BATTLE_BALANCE_RES',
+  filename=None,
+  file=DESCRIPTOR,
+  containing_type=None,
+  fields=[
+    _descriptor.FieldDescriptor(
+      name='result', full_name='SSPKG_TOP_BATTLE_BALANCE_RES.result', index=0,
+      number=1, type=5, cpp_type=1, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    _descriptor.FieldDescriptor(
+      name='defense_mem_role_id', full_name='SSPKG_TOP_BATTLE_BALANCE_RES.defense_mem_role_id', index=1,
+      number=2, type=13, cpp_type=3, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    _descriptor.FieldDescriptor(
+      name='old_pos', full_name='SSPKG_TOP_BATTLE_BALANCE_RES.old_pos', index=2,
+      number=3, type=5, cpp_type=1, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    _descriptor.FieldDescriptor(
+      name='new_pos', full_name='SSPKG_TOP_BATTLE_BALANCE_RES.new_pos', index=3,
+      number=4, type=5, cpp_type=1, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+  ],
+  extensions=[
+  ],
+  nested_types=[],
+  enum_types=[
+  ],
+  options=None,
+  is_extendable=False,
+  extension_ranges=[],
+  oneofs=[
+  ],
+  serialized_start=67575,
+  serialized_end=67684,
+)
+
+
+_SSDT_TOP_BATTLE_REWARD_INFO = _descriptor.Descriptor(
+  name='SSDT_TOP_BATTLE_REWARD_INFO',
+  full_name='SSDT_TOP_BATTLE_REWARD_INFO',
+  filename=None,
+  file=DESCRIPTOR,
+  containing_type=None,
+  fields=[
+    _descriptor.FieldDescriptor(
+      name='mem_role_id', full_name='SSDT_TOP_BATTLE_REWARD_INFO.mem_role_id', index=0,
+      number=1, type=13, cpp_type=3, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    _descriptor.FieldDescriptor(
+      name='rank_pos', full_name='SSDT_TOP_BATTLE_REWARD_INFO.rank_pos', index=1,
+      number=2, type=13, cpp_type=3, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    _descriptor.FieldDescriptor(
+      name='reward_score', full_name='SSDT_TOP_BATTLE_REWARD_INFO.reward_score', index=2,
+      number=3, type=13, cpp_type=3, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    _descriptor.FieldDescriptor(
+      name='total_score', full_name='SSDT_TOP_BATTLE_REWARD_INFO.total_score', index=3,
+      number=4, type=13, cpp_type=3, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    _descriptor.FieldDescriptor(
+      name='reward', full_name='SSDT_TOP_BATTLE_REWARD_INFO.reward', index=4,
+      number=5, type=11, cpp_type=10, label=3,
+      has_default_value=False, default_value=[],
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+  ],
+  extensions=[
+  ],
+  nested_types=[],
+  enum_types=[
+  ],
+  options=None,
+  is_extendable=False,
+  extension_ranges=[],
+  oneofs=[
+  ],
+  serialized_start=67687,
+  serialized_end=67830,
+)
+
+
+_SSPKG_TOP_BATTLE_REWARD_REQ = _descriptor.Descriptor(
+  name='SSPKG_TOP_BATTLE_REWARD_REQ',
+  full_name='SSPKG_TOP_BATTLE_REWARD_REQ',
+  filename=None,
+  file=DESCRIPTOR,
+  containing_type=None,
+  fields=[
+    _descriptor.FieldDescriptor(
+      name='user_info', full_name='SSPKG_TOP_BATTLE_REWARD_REQ.user_info', index=0,
+      number=1, type=11, cpp_type=10, label=3,
+      has_default_value=False, default_value=[],
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    _descriptor.FieldDescriptor(
+      name='type', full_name='SSPKG_TOP_BATTLE_REWARD_REQ.type', index=1,
+      number=2, type=5, cpp_type=1, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+  ],
+  extensions=[
+  ],
+  nested_types=[],
+  enum_types=[
+  ],
+  options=None,
+  is_extendable=False,
+  extension_ranges=[],
+  oneofs=[
+  ],
+  serialized_start=67832,
+  serialized_end=67924,
+)
+
+
+_SSPKG_TOP_BATTLE_CHALLENGE_NOTIFY_REQ = _descriptor.Descriptor(
+  name='SSPKG_TOP_BATTLE_CHALLENGE_NOTIFY_REQ',
+  full_name='SSPKG_TOP_BATTLE_CHALLENGE_NOTIFY_REQ',
+  filename=None,
+  file=DESCRIPTOR,
+  containing_type=None,
+  fields=[
+    _descriptor.FieldDescriptor(
+      name='mem_role_id', full_name='SSPKG_TOP_BATTLE_CHALLENGE_NOTIFY_REQ.mem_role_id', index=0,
+      number=1, type=13, cpp_type=3, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    _descriptor.FieldDescriptor(
+      name='atk_mem_name', full_name='SSPKG_TOP_BATTLE_CHALLENGE_NOTIFY_REQ.atk_mem_name', index=1,
+      number=2, type=9, cpp_type=9, label=1,
+      has_default_value=False, default_value=_b("").decode('utf-8'),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    _descriptor.FieldDescriptor(
+      name='atk_mem_role_id', full_name='SSPKG_TOP_BATTLE_CHALLENGE_NOTIFY_REQ.atk_mem_role_id', index=2,
+      number=3, type=13, cpp_type=3, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    _descriptor.FieldDescriptor(
+      name='rank_new_pos', full_name='SSPKG_TOP_BATTLE_CHALLENGE_NOTIFY_REQ.rank_new_pos', index=3,
+      number=4, type=5, cpp_type=1, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    _descriptor.FieldDescriptor(
+      name='rank_old_pos', full_name='SSPKG_TOP_BATTLE_CHALLENGE_NOTIFY_REQ.rank_old_pos', index=4,
+      number=5, type=5, cpp_type=1, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    _descriptor.FieldDescriptor(
+      name='world_id', full_name='SSPKG_TOP_BATTLE_CHALLENGE_NOTIFY_REQ.world_id', index=5,
+      number=6, type=5, cpp_type=1, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    _descriptor.FieldDescriptor(
+      name='is_win', full_name='SSPKG_TOP_BATTLE_CHALLENGE_NOTIFY_REQ.is_win', index=6,
+      number=7, type=8, cpp_type=7, label=1,
+      has_default_value=False, default_value=False,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    _descriptor.FieldDescriptor(
+      name='is_out_rank', full_name='SSPKG_TOP_BATTLE_CHALLENGE_NOTIFY_REQ.is_out_rank', index=7,
+      number=8, type=8, cpp_type=7, label=1,
+      has_default_value=False, default_value=False,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+  ],
+  extensions=[
+  ],
+  nested_types=[],
+  enum_types=[
+  ],
+  options=None,
+  is_extendable=False,
+  extension_ranges=[],
+  oneofs=[
+  ],
+  serialized_start=67927,
+  serialized_end=68133,
+)
+
+
+_SSPKG_TOP_BATTLE_GET_QUALIFICATION_INFO_REQ = _descriptor.Descriptor(
+  name='SSPKG_TOP_BATTLE_GET_QUALIFICATION_INFO_REQ',
+  full_name='SSPKG_TOP_BATTLE_GET_QUALIFICATION_INFO_REQ',
+  filename=None,
+  file=DESCRIPTOR,
+  containing_type=None,
+  fields=[
+    _descriptor.FieldDescriptor(
+      name='role_id', full_name='SSPKG_TOP_BATTLE_GET_QUALIFICATION_INFO_REQ.role_id', index=0,
+      number=1, type=13, cpp_type=3, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+  ],
+  extensions=[
+  ],
+  nested_types=[],
+  enum_types=[
+  ],
+  options=None,
+  is_extendable=False,
+  extension_ranges=[],
+  oneofs=[
+  ],
+  serialized_start=68135,
+  serialized_end=68197,
+)
+
+
+_SSPKG_TOP_BATTLE_GET_QUALIFICATION_INFO_RES = _descriptor.Descriptor(
+  name='SSPKG_TOP_BATTLE_GET_QUALIFICATION_INFO_RES',
+  full_name='SSPKG_TOP_BATTLE_GET_QUALIFICATION_INFO_RES',
+  filename=None,
+  file=DESCRIPTOR,
+  containing_type=None,
+  fields=[
+    _descriptor.FieldDescriptor(
+      name='today_qualification_info', full_name='SSPKG_TOP_BATTLE_GET_QUALIFICATION_INFO_RES.today_qualification_info', index=0,
+      number=1, type=11, cpp_type=10, label=1,
+      has_default_value=False, default_value=None,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    _descriptor.FieldDescriptor(
+      name='tomorrow_qualification_info', full_name='SSPKG_TOP_BATTLE_GET_QUALIFICATION_INFO_RES.tomorrow_qualification_info', index=1,
+      number=2, type=11, cpp_type=10, label=1,
+      has_default_value=False, default_value=None,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+  ],
+  extensions=[
+  ],
+  nested_types=[],
+  enum_types=[
+  ],
+  options=None,
+  is_extendable=False,
+  extension_ranges=[],
+  oneofs=[
+  ],
+  serialized_start=68200,
+  serialized_end=68380,
+)
+
+
+_SSPKG_TOP_BATTLE_GET_TOPTHREE_REQ = _descriptor.Descriptor(
+  name='SSPKG_TOP_BATTLE_GET_TOPTHREE_REQ',
+  full_name='SSPKG_TOP_BATTLE_GET_TOPTHREE_REQ',
+  filename=None,
+  file=DESCRIPTOR,
+  containing_type=None,
+  fields=[
+    _descriptor.FieldDescriptor(
+      name='reverse', full_name='SSPKG_TOP_BATTLE_GET_TOPTHREE_REQ.reverse', index=0,
+      number=1, type=5, cpp_type=1, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    _descriptor.FieldDescriptor(
+      name='is_login', full_name='SSPKG_TOP_BATTLE_GET_TOPTHREE_REQ.is_login', index=1,
+      number=2, type=5, cpp_type=1, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+  ],
+  extensions=[
+  ],
+  nested_types=[],
+  enum_types=[
+  ],
+  options=None,
+  is_extendable=False,
+  extension_ranges=[],
+  oneofs=[
+  ],
+  serialized_start=68382,
+  serialized_end=68452,
+)
+
+
+_SSPKG_TOP_BATTLE_GET_TOPTHREE_RES = _descriptor.Descriptor(
+  name='SSPKG_TOP_BATTLE_GET_TOPTHREE_RES',
+  full_name='SSPKG_TOP_BATTLE_GET_TOPTHREE_RES',
+  filename=None,
+  file=DESCRIPTOR,
+  containing_type=None,
+  fields=[
+    _descriptor.FieldDescriptor(
+      name='result', full_name='SSPKG_TOP_BATTLE_GET_TOPTHREE_RES.result', index=0,
+      number=1, type=5, cpp_type=1, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    _descriptor.FieldDescriptor(
+      name='battle_zone_rank', full_name='SSPKG_TOP_BATTLE_GET_TOPTHREE_RES.battle_zone_rank', index=1,
+      number=2, type=11, cpp_type=10, label=3,
+      has_default_value=False, default_value=[],
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    _descriptor.FieldDescriptor(
+      name='is_login', full_name='SSPKG_TOP_BATTLE_GET_TOPTHREE_RES.is_login', index=2,
+      number=3, type=5, cpp_type=1, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+  ],
+  extensions=[
+  ],
+  nested_types=[],
+  enum_types=[
+  ],
+  options=None,
+  is_extendable=False,
+  extension_ranges=[],
+  oneofs=[
+  ],
+  serialized_start=68454,
+  serialized_end=68576,
+)
+
+
+_SSPKG_TOP_BATTLE_SEND_ROCKET_REQ = _descriptor.Descriptor(
+  name='SSPKG_TOP_BATTLE_SEND_ROCKET_REQ',
+  full_name='SSPKG_TOP_BATTLE_SEND_ROCKET_REQ',
+  filename=None,
+  file=DESCRIPTOR,
+  containing_type=None,
+  fields=[
+    _descriptor.FieldDescriptor(
+      name='uid', full_name='SSPKG_TOP_BATTLE_SEND_ROCKET_REQ.uid', index=0,
+      number=1, type=13, cpp_type=3, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    _descriptor.FieldDescriptor(
+      name='world_id', full_name='SSPKG_TOP_BATTLE_SEND_ROCKET_REQ.world_id', index=1,
+      number=2, type=13, cpp_type=3, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+  ],
+  extensions=[
+  ],
+  nested_types=[],
+  enum_types=[
+  ],
+  options=None,
+  is_extendable=False,
+  extension_ranges=[],
+  oneofs=[
+  ],
+  serialized_start=68578,
+  serialized_end=68643,
+)
+
+
+_SSPKG_TOP_BATTLE_SEND_ROCKET_RES = _descriptor.Descriptor(
+  name='SSPKG_TOP_BATTLE_SEND_ROCKET_RES',
+  full_name='SSPKG_TOP_BATTLE_SEND_ROCKET_RES',
+  filename=None,
+  file=DESCRIPTOR,
+  containing_type=None,
+  fields=[
+    _descriptor.FieldDescriptor(
+      name='uid', full_name='SSPKG_TOP_BATTLE_SEND_ROCKET_RES.uid', index=0,
+      number=1, type=13, cpp_type=3, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    _descriptor.FieldDescriptor(
+      name='top_battle_rocket_info', full_name='SSPKG_TOP_BATTLE_SEND_ROCKET_RES.top_battle_rocket_info', index=1,
+      number=2, type=11, cpp_type=10, label=1,
+      has_default_value=False, default_value=None,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+  ],
+  extensions=[
+  ],
+  nested_types=[],
+  enum_types=[
+  ],
+  options=None,
+  is_extendable=False,
+  extension_ranges=[],
+  oneofs=[
+  ],
+  serialized_start=68645,
+  serialized_end=68749,
+)
+
+
+_SSPKG_TOP_BATTLE_NTF_SEND_ROCKET = _descriptor.Descriptor(
+  name='SSPKG_TOP_BATTLE_NTF_SEND_ROCKET',
+  full_name='SSPKG_TOP_BATTLE_NTF_SEND_ROCKET',
+  filename=None,
+  file=DESCRIPTOR,
+  containing_type=None,
+  fields=[
+    _descriptor.FieldDescriptor(
+      name='top_battle_rocket_info', full_name='SSPKG_TOP_BATTLE_NTF_SEND_ROCKET.top_battle_rocket_info', index=0,
+      number=1, type=11, cpp_type=10, label=1,
+      has_default_value=False, default_value=None,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+  ],
+  extensions=[
+  ],
+  nested_types=[],
+  enum_types=[
+  ],
+  options=None,
+  is_extendable=False,
+  extension_ranges=[],
+  oneofs=[
+  ],
+  serialized_start=68751,
+  serialized_end=68842,
+)
+
+
+_SSPKG_TOP_BATTLE_GET_ROCKET_REWARD_REQ = _descriptor.Descriptor(
+  name='SSPKG_TOP_BATTLE_GET_ROCKET_REWARD_REQ',
+  full_name='SSPKG_TOP_BATTLE_GET_ROCKET_REWARD_REQ',
+  filename=None,
+  file=DESCRIPTOR,
+  containing_type=None,
+  fields=[
+    _descriptor.FieldDescriptor(
+      name='uid', full_name='SSPKG_TOP_BATTLE_GET_ROCKET_REWARD_REQ.uid', index=0,
+      number=1, type=13, cpp_type=3, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    _descriptor.FieldDescriptor(
+      name='world_id', full_name='SSPKG_TOP_BATTLE_GET_ROCKET_REWARD_REQ.world_id', index=1,
+      number=2, type=13, cpp_type=3, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+  ],
+  extensions=[
+  ],
+  nested_types=[],
+  enum_types=[
+  ],
+  options=None,
+  is_extendable=False,
+  extension_ranges=[],
+  oneofs=[
+  ],
+  serialized_start=68844,
+  serialized_end=68915,
+)
+
+
+_SSPKG_TOP_BATTLE_GET_ROCKET_REWARD_RES = _descriptor.Descriptor(
+  name='SSPKG_TOP_BATTLE_GET_ROCKET_REWARD_RES',
+  full_name='SSPKG_TOP_BATTLE_GET_ROCKET_REWARD_RES',
+  filename=None,
+  file=DESCRIPTOR,
+  containing_type=None,
+  fields=[
+    _descriptor.FieldDescriptor(
+      name='result', full_name='SSPKG_TOP_BATTLE_GET_ROCKET_REWARD_RES.result', index=0,
+      number=1, type=13, cpp_type=3, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    _descriptor.FieldDescriptor(
+      name='rocket_id', full_name='SSPKG_TOP_BATTLE_GET_ROCKET_REWARD_RES.rocket_id', index=1,
+      number=2, type=13, cpp_type=3, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    _descriptor.FieldDescriptor(
+      name='send_rocket_uid', full_name='SSPKG_TOP_BATTLE_GET_ROCKET_REWARD_RES.send_rocket_uid', index=2,
+      number=3, type=13, cpp_type=3, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    _descriptor.FieldDescriptor(
+      name='last_refresh_time', full_name='SSPKG_TOP_BATTLE_GET_ROCKET_REWARD_RES.last_refresh_time', index=3,
+      number=4, type=13, cpp_type=3, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    _descriptor.FieldDescriptor(
+      name='top_battle_rocket_info', full_name='SSPKG_TOP_BATTLE_GET_ROCKET_REWARD_RES.top_battle_rocket_info', index=4,
+      number=5, type=11, cpp_type=10, label=1,
+      has_default_value=False, default_value=None,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+  ],
+  extensions=[
+  ],
+  nested_types=[],
+  enum_types=[
+  ],
+  options=None,
+  is_extendable=False,
+  extension_ranges=[],
+  oneofs=[
+  ],
+  serialized_start=68918,
+  serialized_end=69102,
+)
+
+
+_SSPKG_NTF_TOP_BATTLE_ROCKET_RESET = _descriptor.Descriptor(
+  name='SSPKG_NTF_TOP_BATTLE_ROCKET_RESET',
+  full_name='SSPKG_NTF_TOP_BATTLE_ROCKET_RESET',
+  filename=None,
+  file=DESCRIPTOR,
+  containing_type=None,
+  fields=[
+    _descriptor.FieldDescriptor(
+      name='last_refresh_time', full_name='SSPKG_NTF_TOP_BATTLE_ROCKET_RESET.last_refresh_time', index=0,
+      number=1, type=13, cpp_type=3, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+  ],
+  extensions=[
+  ],
+  nested_types=[],
+  enum_types=[
+  ],
+  options=None,
+  is_extendable=False,
+  extension_ranges=[],
+  oneofs=[
+  ],
+  serialized_start=69104,
+  serialized_end=69166,
 )
 
 _DBBLOB_FIRSTPURCHASE_LIST.fields_by_name['purchase_info'].message_type = _DBBLOB_FIRSTPURCHASE_INFO
 _DBBLOB_EQUIP_TAB.fields_by_name['equips'].message_type = _DBBLOB_EQUIP_INFO
 _DBBLOB_PACKAGE_TAB.fields_by_name['obj_info'].message_type = _DBBLOB_PACKAGE_OBJ
 _DBBLOBHERO_EQUIPED_INFO.fields_by_name['equiped_info'].message_type = rescommon_pb2._CSDT_EQUIPED_INFO
+_DBBLOB_FACTOR_INFO.fields_by_name['embed_factor_info'].message_type = _DBBLOB_DATA_HERO_FACTOR_DATA
+_DBBLOB_FACTOR_INFO.fields_by_name['factor_data'].message_type = factor_pb2._SCDT_NOTIFY_FACTOR_DATA
 _DBBLOB_PACKAGE_INFO.fields_by_name['tab_info'].message_type = _DBBLOB_PACKAGE_TAB
 _DBBLOB_PACKAGE_INFO.fields_by_name['equip_tab'].message_type = _DBBLOB_EQUIP_TAB
 _DBBLOB_PACKAGE_INFO.fields_by_name['hero_equiped_info'].message_type = _DBBLOBHERO_EQUIPED_INFO
+_DBBLOB_PACKAGE_INFO.fields_by_name['factor_info'].message_type = _DBBLOB_FACTOR_INFO
 _DBBLOB_PLAYER_DAILYTASK.fields_by_name['daily_task_items'].message_type = _DBBLOB_PLAYER_DAILYTASK_ITEM
 _DBBLOB_PLAYER_MAIN_TASK.fields_by_name['item'].message_type = _DBBLOB_PLAYER_MAIN_TASK_ITEM
 _DBBLOB_PLAYER_QUEST.fields_by_name['practice_quest'].message_type = _DBBLOB_PLAYER_PRACTICEDUN_QUEST
@@ -26179,13 +28057,16 @@ _DBBLOB_PLAYER_QUEST.fields_by_name['daily_task'].message_type = _DBBLOB_PLAYER_
 _DBBLOB_PLAYER_QUEST.fields_by_name['main_task'].message_type = _DBBLOB_PLAYER_MAIN_TASK
 _DBBLOB_PLAYER_QUEST.fields_by_name['newbie_activity'].message_type = _DBBLOB_NEWBIE_ACTIVITY_STATUS
 _DBBLOB_PLAYER_QUEST.fields_by_name['special_activity'].message_type = _DBBLOB_SPECIAL_ACTIVITY_INFO
+_DBBLOB_GIFT_CLAIM_INFO.fields_by_name['items'].message_type = _DBBLOB_GIFT_CLAIM_ITEM_INFO
 _DBBLOB_OFFLINE_BATTLE_INFO.fields_by_name['offline_battle_defeated_info'].message_type = _DBBLOB_OFFLINE_BATTLE_DEFEATED_INFO
 _DBBLOB_DUNGEON_DATA_INFO.fields_by_name['dungeon_challenge_data'].message_type = _DBBLOB_DUNGEON_CHALLENGE_INFO
 _DBBLOB_DUNGEON_DATA_INFO.fields_by_name['dungeon_unlock_data'].message_type = _DBBLOB_DUNGEON_UNLOCK_INFO
 _DBBLOB_DUNGEON_DATA_INFO.fields_by_name['dungeon_count_info'].message_type = _DBBLOB_DUNGEON_COUNT_INFO
 _DBBLOB_HERO_INFO_DATA.fields_by_name['skill_info'].message_type = _DBBLOB_SKILL_INFO_DATA
 _DBBLOB_HERO_INFO_DATA.fields_by_name['emblem_info'].message_type = _DBBLOB_EMBLEMINFO_DATA
+_DBBLOB_HERO_INFO_DATA.fields_by_name['talent_hide_info'].message_type = rescommon_pb2._ST_HERO_BATTLE_TALENT_HIDE_INFO
 _DBBLOB_PLAYER_HERO_DATA.fields_by_name['hero_info'].message_type = _DBBLOB_HERO_INFO_DATA
+_DBBLOB_PLAYER_RANK_BATTLE_DATA.fields_by_name['top_battle_rocket'].message_type = _DBBLOB_PLAYER_TOP_BATTLE_ROCKET
 _RANK_BATTLE_DEFENSE_DATA.fields_by_name['hero_info'].message_type = rescommon_pb2._ST_HERO_BATTLE_INFO
 _DBBLOB_MONSTER_INFO_DATA.fields_by_name['stat_info'].message_type = _DBBLOB_MONSTER_STAT_DATA
 _DBBLOB_PLAYER_MONSTER_DATA.fields_by_name['monster_grp_info'].message_type = _DBBLOB_MONSTER_INFO_DATA
@@ -26203,6 +28084,8 @@ _DBBLOB_NEWBIE_ACTIVITY_STATUS.fields_by_name['item_array'].message_type = _DBBL
 _DBBLOB_SPECIAL_ACTIVITY_INFO.fields_by_name['items'].message_type = _DBBLOB_SPECIAL_ACTIVITY_ITEM
 _DBBLOB_SELF_DUN_DATA.fields_by_name['defense_hero_info'].message_type = _DBBLOB_SELFDUN_HERO_INFO
 _DBBLOB_SELF_DUN_DATA.fields_by_name['attack_hero_info'].message_type = _DBBLOB_SELFDUN_HERO_INFO
+_DBBLOB_SELF_DUN_DATA.fields_by_name['top_battle_defense_hero_info'].message_type = _DBBLOB_SELFDUN_HERO_INFO
+_DBBLOB_SELF_DUN_DATA.fields_by_name['top_battle_attack_hero_info'].message_type = _DBBLOB_SELFDUN_HERO_INFO
 _DBBLOB_ENDLESS_HERO_DATA.fields_by_name['endless_hero'].message_type = _DBBLOB_ENDLESS_HERO_INFO
 _DBBLOB_HERO_DATASET.fields_by_name['hero_data'].message_type = _DBBLOB_PLAYER_HERO_DATA
 _DBBLOB_HERO_DATASET.fields_by_name['monster_data'].message_type = _DBBLOB_PLAYER_MONSTER_DATA
@@ -26239,6 +28122,7 @@ _DBBLOB_BUSINESS_INFO.fields_by_name['cumulate_recharge_info'].message_type = _D
 _DBBLOB_BUSINESS_INFO.fields_by_name['group_buy_info'].message_type = _DBBLOB_GROUP_BUY_INFO
 _DBBLOB_BUSINESS_INFO.fields_by_name['first_purchase_info'].message_type = _DBBLOB_FIRSTPURCHASE_LIST
 _DBBLOB_BUSINESS_INFO.fields_by_name['first_reward_info'].message_type = _DBBLOB_FIRSTREWARD_INFO
+_DBBLOB_BUSINESS_INFO.fields_by_name['supervalue_card_info'].message_type = _DBBLOB_SUPERVALUE_CARD_INFO
 _SSPKG_PRIVATE_CHAT_REQ.fields_by_name['msg_info'].message_type = _SSDT_PRIVATE_CHAT_INFO
 _SSPKG_PRIVATE_CHAT_RES.fields_by_name['msg_info'].message_type = _SSDT_PRIVATE_CHAT_INFO
 _SSPKG_OFFLINE_PRIVATE_CHAT_MSG.fields_by_name['msg_info'].message_type = _SSDT_PRIVATE_CHAT_INFO
@@ -26254,6 +28138,7 @@ _DBBLOB_MISC_DATA.fields_by_name['prize_draw_info'].message_type = _DBBLOB_PLAYE
 _DBBLOB_MISC_DATA.fields_by_name['offline_private_chat_info'].message_type = _DBBLOB_OFFLIEN_PRIVATE_CHAT
 _DBBLOB_MISC_DATA.fields_by_name['rank_pos_info'].message_type = _DBBLOB_RANK_POS_INFO
 _DBBLOB_MISC_DATA.fields_by_name['rank_reset_info'].message_type = rank_pb2._SSPKG_RANK_RESET_INFO
+_DBBLOB_MISC_DATA.fields_by_name['multiplayer_pve_chat_info'].message_type = _SSPKG_OFFLINE_PRIVATE_CHAT_MSG
 _DBBLOB_RANK_DATA.fields_by_name['rank_val'].message_type = _DBBLOB_RANK_VALINFO
 _DBBLOG_RANK_STAT_INFO.fields_by_name['rank_data'].message_type = _DBBLOB_RANK_DATA
 _DBBLOB_WORLD_INFO.fields_by_name['heroinfo'].message_type = _DBBLOB_DIRHERO_INFO
@@ -26296,6 +28181,7 @@ _SSDT_PVP_ISLAND_DEFENSE_INFO.fields_by_name['robot_info'].message_type = res_pb
 _SSDT_PVP_ISLAND_DEFENSE_INFO.fields_by_name['hero_info'].message_type = rescommon_pb2._ST_HERO_BATTLE_INFO
 _SSDT_PVP_STEAL_ISLAND_INFO.fields_by_name['island_data'].message_type = _SSDT_PVP_ISLAND_INFO
 _SSDT_PVP_STEAL_ISLAND_INFO.fields_by_name['defense_info'].message_type = _SSDT_PVP_ISLAND_DEFENSE_INFO
+_SSDT_ONLINE_BATTLE_ROOM_ROLE_INFO.fields_by_name['hero_attr_info'].message_type = rescommon_pb2._ST_BATTLE_HERO_ATTR_INFO
 _SSDT_ONLINE_BATTLE_ROOM_PLAYER_INFO.fields_by_name['role_infos'].message_type = _SSDT_ONLINE_BATTLE_ROOM_ROLE_INFO
 _SSDT_ONLINE_BATTLE_ROOM_INFO.fields_by_name['player_infos'].message_type = _SSDT_ONLINE_BATTLE_ROOM_PLAYER_INFO
 _SSPKG_QUIT_ONLINE_BATTLE_ROOM_RES.fields_by_name['player_info'].message_type = _SSDT_ONLINE_BATTLE_ROOM_PLAYER_INFO
@@ -26400,6 +28286,7 @@ _SSPKG_GET_PURCHASEACTIVITY_RES.fields_by_name['firstpurchase_list'].message_typ
 _SSPKG_GET_PURCHASEACTIVITY_RES.fields_by_name['monthcard_info'].message_type = _DBBLOB_MONTHCARD_INFO
 _SSPKG_GET_PURCHASEACTIVITY_RES.fields_by_name['daily_recharge'].message_type = _DBBLOB_DAILY_RECHARGE_REWARD
 _SSPKG_GET_PURCHASEACTIVITY_RES.fields_by_name['newbie_activity_recharge'].message_type = _DBBLOB_NEWBIE_ACTIVITY_RECHARGE
+_SSPKG_GET_PURCHASEACTIVITY_RES.fields_by_name['supervaluecard_info'].message_type = _DBBLOB_SUPERVALUECARD_INFO
 _SSDT_ROLE_LIST_RES.fields_by_name['success'].message_type = _SUCC_ROLE_LIST_RES
 _SSDT_ROLE_LIST_RES.fields_by_name['error'].message_type = _ERR_RESPONSE
 _UINON_MAIL_ACC_INFO.fields_by_name['system_mail_acc'].message_type = _SSDT_MAIL_SYSTEM_ACC_INFO
@@ -26486,6 +28373,21 @@ _SSDT_GAME_SERVER_MISC_INFO.fields_by_name['world_activity_info'].message_type =
 _SSDT_GAME_SERVER_MISC_INFO.fields_by_name['world_drop_info'].message_type = _SSDT_WORLD_DROP_INFO
 _SSPKG_UPDATE_GAME_SERVER_MISC_REQ.fields_by_name['game_server_misc'].message_type = _SSDT_GAME_SERVER_MISC_INFO
 _SSPKG_GET_GAMESVR_MISC_RES.fields_by_name['gamesvr_misc'].message_type = _SSDT_GAME_SERVER_MISC_INFO
+_SSPKG_TOP_BATTLE_CHECK_QUALIFICATION_REQ.fields_by_name['info'].message_type = rescommon_pb2._TOP_BATTLE_ROLE_INFO
+_SSPKG_TOP_BATTLE_CHECK_QUALIFICATION_RES.fields_by_name['info'].message_type = rescommon_pb2._TOP_BATTLE_ROLE_INFO
+_SSPKG_GET_TOP_BATTLE_STATE_REQ.fields_by_name['info'].message_type = rescommon_pb2._TOP_BATTLE_ROLE_INFO
+_SSPKG_TOP_BATTLE_APPLY_REQ.fields_by_name['role_info'].message_type = rescommon_pb2._TOP_BATTLE_ROLE_INFO
+_SSPKG_TOP_BATTLE_GET_FIGHT_TARGET_RES.fields_by_name['target_info'].message_type = rescommon_pb2._TOP_BATTLE_FIGHT_TARGET_INFO
+_SSPKG_TOP_BATTLE_ENTER_DUNGEON_RES.fields_by_name['defense_hero_info'].message_type = rescommon_pb2._TOP_BATTLE_DEFENSE_INFO
+_SSPKG_TOP_BATTLE_BALANCE_REQ.fields_by_name['attacker_info'].message_type = rescommon_pb2._TOP_BATTLE_ROLE_INFO
+_SSDT_TOP_BATTLE_REWARD_INFO.fields_by_name['reward'].message_type = rescommon_pb2._ST_REWARD_RES
+_SSPKG_TOP_BATTLE_REWARD_REQ.fields_by_name['user_info'].message_type = _SSDT_TOP_BATTLE_REWARD_INFO
+_SSPKG_TOP_BATTLE_GET_QUALIFICATION_INFO_RES.fields_by_name['today_qualification_info'].message_type = rescommon_pb2._TOP_BATTLE_QUALIFICATION_INFO
+_SSPKG_TOP_BATTLE_GET_QUALIFICATION_INFO_RES.fields_by_name['tomorrow_qualification_info'].message_type = rescommon_pb2._TOP_BATTLE_QUALIFICATION_INFO
+_SSPKG_TOP_BATTLE_GET_TOPTHREE_RES.fields_by_name['battle_zone_rank'].message_type = rescommon_pb2._TOP_BATTLE_TOPTHREE_INFO
+_SSPKG_TOP_BATTLE_SEND_ROCKET_RES.fields_by_name['top_battle_rocket_info'].message_type = rescommon_pb2._TOP_BATTLE_ROCKET_INFO
+_SSPKG_TOP_BATTLE_NTF_SEND_ROCKET.fields_by_name['top_battle_rocket_info'].message_type = rescommon_pb2._TOP_BATTLE_ROCKET_INFO
+_SSPKG_TOP_BATTLE_GET_ROCKET_REWARD_RES.fields_by_name['top_battle_rocket_info'].message_type = rescommon_pb2._TOP_BATTLE_ROCKET_INFO
 DESCRIPTOR.message_types_by_name['SSDT_NOTIFY_MSG'] = _SSDT_NOTIFY_MSG
 DESCRIPTOR.message_types_by_name['SSDT_ROLE_ONLINE'] = _SSDT_ROLE_ONLINE
 DESCRIPTOR.message_types_by_name['SSDT_ROLE_QUEST'] = _SSDT_ROLE_QUEST
@@ -26501,12 +28403,15 @@ DESCRIPTOR.message_types_by_name['DBBLOB_ATTR_INFO'] = _DBBLOB_ATTR_INFO
 DESCRIPTOR.message_types_by_name['DBBLOB_ITEM_EXTRA_INFO_RECOVER'] = _DBBLOB_ITEM_EXTRA_INFO_RECOVER
 DESCRIPTOR.message_types_by_name['DBBLOB_FIRSTPURCHASE_INFO'] = _DBBLOB_FIRSTPURCHASE_INFO
 DESCRIPTOR.message_types_by_name['DBBLOB_MONTHCARD_INFO'] = _DBBLOB_MONTHCARD_INFO
+DESCRIPTOR.message_types_by_name['DBBLOB_SUPERVALUECARD_INFO'] = _DBBLOB_SUPERVALUECARD_INFO
 DESCRIPTOR.message_types_by_name['DBBLOB_FIRSTPURCHASE_LIST'] = _DBBLOB_FIRSTPURCHASE_LIST
 DESCRIPTOR.message_types_by_name['DBBLOB_EQUIP_INFO'] = _DBBLOB_EQUIP_INFO
 DESCRIPTOR.message_types_by_name['DBBLOB_EQUIP_TAB'] = _DBBLOB_EQUIP_TAB
 DESCRIPTOR.message_types_by_name['DBBLOB_PACKAGE_OBJ'] = _DBBLOB_PACKAGE_OBJ
 DESCRIPTOR.message_types_by_name['DBBLOB_PACKAGE_TAB'] = _DBBLOB_PACKAGE_TAB
 DESCRIPTOR.message_types_by_name['DBBLOBHERO_EQUIPED_INFO'] = _DBBLOBHERO_EQUIPED_INFO
+DESCRIPTOR.message_types_by_name['DBBLOB_DATA_HERO_FACTOR_DATA'] = _DBBLOB_DATA_HERO_FACTOR_DATA
+DESCRIPTOR.message_types_by_name['DBBLOB_FACTOR_INFO'] = _DBBLOB_FACTOR_INFO
 DESCRIPTOR.message_types_by_name['DBBLOB_PACKAGE_INFO'] = _DBBLOB_PACKAGE_INFO
 DESCRIPTOR.message_types_by_name['DBBLOB_TIME_VALUE'] = _DBBLOB_TIME_VALUE
 DESCRIPTOR.message_types_by_name['DBBLOB_PLAYER_PRACTICEDUN_QUEST'] = _DBBLOB_PLAYER_PRACTICEDUN_QUEST
@@ -26520,6 +28425,8 @@ DESCRIPTOR.message_types_by_name['DBBLOB_PLAYER_SHOP'] = _DBBLOB_PLAYER_SHOP
 DESCRIPTOR.message_types_by_name['DBBLOB_PLAYER_PRIZE_DRAW'] = _DBBLOB_PLAYER_PRIZE_DRAW
 DESCRIPTOR.message_types_by_name['DBBLOB_PLAYER_QUEST'] = _DBBLOB_PLAYER_QUEST
 DESCRIPTOR.message_types_by_name['DBBLOB_GIFT_ACCEPT_INFO'] = _DBBLOB_GIFT_ACCEPT_INFO
+DESCRIPTOR.message_types_by_name['DBBLOB_GIFT_CLAIM_ITEM_INFO'] = _DBBLOB_GIFT_CLAIM_ITEM_INFO
+DESCRIPTOR.message_types_by_name['DBBLOB_GIFT_CLAIM_INFO'] = _DBBLOB_GIFT_CLAIM_INFO
 DESCRIPTOR.message_types_by_name['DBBLOB_OFFLINE_BATTLE_DEFEATED_INFO'] = _DBBLOB_OFFLINE_BATTLE_DEFEATED_INFO
 DESCRIPTOR.message_types_by_name['DBBLOB_OFFLINE_BATTLE_INFO'] = _DBBLOB_OFFLINE_BATTLE_INFO
 DESCRIPTOR.message_types_by_name['DBBLOB_ONLINE_BATTLE_INFO'] = _DBBLOB_ONLINE_BATTLE_INFO
@@ -26536,6 +28443,7 @@ DESCRIPTOR.message_types_by_name['DBBLOB_HERO_TRAININGSLOT_INFO'] = _DBBLOB_HERO
 DESCRIPTOR.message_types_by_name['DBBLOB_CHIP_INFO_DATA'] = _DBBLOB_CHIP_INFO_DATA
 DESCRIPTOR.message_types_by_name['DBBLOB_PLAYER_HERO_DATA'] = _DBBLOB_PLAYER_HERO_DATA
 DESCRIPTOR.message_types_by_name['DBBLOB_PLAYER_HERO_GANGBATTLE_DATA'] = _DBBLOB_PLAYER_HERO_GANGBATTLE_DATA
+DESCRIPTOR.message_types_by_name['DBBLOB_PLAYER_TOP_BATTLE_ROCKET'] = _DBBLOB_PLAYER_TOP_BATTLE_ROCKET
 DESCRIPTOR.message_types_by_name['DBBLOB_PLAYER_RANK_BATTLE_DATA'] = _DBBLOB_PLAYER_RANK_BATTLE_DATA
 DESCRIPTOR.message_types_by_name['RANK_BATTLE_DEFENSE_DATA'] = _RANK_BATTLE_DEFENSE_DATA
 DESCRIPTOR.message_types_by_name['DBBLOB_MONSTER_STAT_DATA'] = _DBBLOB_MONSTER_STAT_DATA
@@ -26589,6 +28497,7 @@ DESCRIPTOR.message_types_by_name['DBBLOB_CITY_REWARD_SET'] = _DBBLOB_CITY_REWARD
 DESCRIPTOR.message_types_by_name['DBBLOB_DUN_DATASET'] = _DBBLOB_DUN_DATASET
 DESCRIPTOR.message_types_by_name['DBBLOB_PLAYER_BEHAVIOUR'] = _DBBLOB_PLAYER_BEHAVIOUR
 DESCRIPTOR.message_types_by_name['DBBLOB_MONTH_CARD_INFO'] = _DBBLOB_MONTH_CARD_INFO
+DESCRIPTOR.message_types_by_name['DBBLOB_SUPERVALUE_CARD_INFO'] = _DBBLOB_SUPERVALUE_CARD_INFO
 DESCRIPTOR.message_types_by_name['DBBLOB_CONTINUE_LOGIN_INFO'] = _DBBLOB_CONTINUE_LOGIN_INFO
 DESCRIPTOR.message_types_by_name['DBBLOB_GROWTH_FUND_INFO'] = _DBBLOB_GROWTH_FUND_INFO
 DESCRIPTOR.message_types_by_name['DBBLOB_CUMULATE_RECHARGE_INFO'] = _DBBLOB_CUMULATE_RECHARGE_INFO
@@ -26740,6 +28649,8 @@ DESCRIPTOR.message_types_by_name['PKG_GANG_UPDATE_BASIC_INFO_RES'] = _PKG_GANG_U
 DESCRIPTOR.message_types_by_name['PKG_APPLY_GANG_REQ'] = _PKG_APPLY_GANG_REQ
 DESCRIPTOR.message_types_by_name['PKG_APPLY_GANG_RES'] = _PKG_APPLY_GANG_RES
 DESCRIPTOR.message_types_by_name['PKG_APPLY_GANG_AUTOJOIN_RES'] = _PKG_APPLY_GANG_AUTOJOIN_RES
+DESCRIPTOR.message_types_by_name['PKG_TRANSFER_GANG_LEADER_REQ'] = _PKG_TRANSFER_GANG_LEADER_REQ
+DESCRIPTOR.message_types_by_name['PKG_TRANSFER_GANG_LEADER_RES'] = _PKG_TRANSFER_GANG_LEADER_RES
 DESCRIPTOR.message_types_by_name['PKG_QUIT_GANG_REQ'] = _PKG_QUIT_GANG_REQ
 DESCRIPTOR.message_types_by_name['PKG_QUIT_GANG_RES'] = _PKG_QUIT_GANG_RES
 DESCRIPTOR.message_types_by_name['PKG_GANG_MEMLIST_REQ'] = _PKG_GANG_MEMLIST_REQ
@@ -26977,6 +28888,35 @@ DESCRIPTOR.message_types_by_name['SSPKG_GET_GAMESVR_MISC_RES'] = _SSPKG_GET_GAME
 DESCRIPTOR.message_types_by_name['SSPKG_RANK_BATTLE_ACTIVITY_REQ'] = _SSPKG_RANK_BATTLE_ACTIVITY_REQ
 DESCRIPTOR.message_types_by_name['SSPKG_REPORT_PLAYER_CHAT_REQ'] = _SSPKG_REPORT_PLAYER_CHAT_REQ
 DESCRIPTOR.message_types_by_name['SSPKG_REPORT_PLAYER_CHAT_RES'] = _SSPKG_REPORT_PLAYER_CHAT_RES
+DESCRIPTOR.message_types_by_name['SSPKG_TOP_BATTLE_GET_QUALIFICATION_RANK_POS_REQ'] = _SSPKG_TOP_BATTLE_GET_QUALIFICATION_RANK_POS_REQ
+DESCRIPTOR.message_types_by_name['SSPKG_TOP_BATTLE_GET_QUALIFICATION_RANK_POS_RES'] = _SSPKG_TOP_BATTLE_GET_QUALIFICATION_RANK_POS_RES
+DESCRIPTOR.message_types_by_name['SSPKG_TOP_BATTLE_BASE_INFO_REQ'] = _SSPKG_TOP_BATTLE_BASE_INFO_REQ
+DESCRIPTOR.message_types_by_name['SSPKG_TOP_BATTLE_BASE_INFO_RES'] = _SSPKG_TOP_BATTLE_BASE_INFO_RES
+DESCRIPTOR.message_types_by_name['SSPKG_TOP_BATTLE_CHECK_QUALIFICATION_REQ'] = _SSPKG_TOP_BATTLE_CHECK_QUALIFICATION_REQ
+DESCRIPTOR.message_types_by_name['SSPKG_TOP_BATTLE_CHECK_QUALIFICATION_RES'] = _SSPKG_TOP_BATTLE_CHECK_QUALIFICATION_RES
+DESCRIPTOR.message_types_by_name['SSPKG_GET_TOP_BATTLE_STATE_REQ'] = _SSPKG_GET_TOP_BATTLE_STATE_REQ
+DESCRIPTOR.message_types_by_name['SSPKG_GET_TOP_BATTLE_STATE_RES'] = _SSPKG_GET_TOP_BATTLE_STATE_RES
+DESCRIPTOR.message_types_by_name['SSPKG_TOP_BATTLE_APPLY_REQ'] = _SSPKG_TOP_BATTLE_APPLY_REQ
+DESCRIPTOR.message_types_by_name['SSPKG_TOP_BATTLE_GET_FIGHT_TARGET_REQ'] = _SSPKG_TOP_BATTLE_GET_FIGHT_TARGET_REQ
+DESCRIPTOR.message_types_by_name['SSPKG_TOP_BATTLE_GET_FIGHT_TARGET_RES'] = _SSPKG_TOP_BATTLE_GET_FIGHT_TARGET_RES
+DESCRIPTOR.message_types_by_name['SSPKG_TOP_BATTLE_ENTER_DUNGEON_REQ'] = _SSPKG_TOP_BATTLE_ENTER_DUNGEON_REQ
+DESCRIPTOR.message_types_by_name['SSPKG_TOP_BATTLE_ENTER_DUNGEON_RES'] = _SSPKG_TOP_BATTLE_ENTER_DUNGEON_RES
+DESCRIPTOR.message_types_by_name['SSPKG_TOP_BATTLE_UNLOCK_REQ'] = _SSPKG_TOP_BATTLE_UNLOCK_REQ
+DESCRIPTOR.message_types_by_name['SSPKG_TOP_BATTLE_BALANCE_REQ'] = _SSPKG_TOP_BATTLE_BALANCE_REQ
+DESCRIPTOR.message_types_by_name['SSPKG_TOP_BATTLE_BALANCE_RES'] = _SSPKG_TOP_BATTLE_BALANCE_RES
+DESCRIPTOR.message_types_by_name['SSDT_TOP_BATTLE_REWARD_INFO'] = _SSDT_TOP_BATTLE_REWARD_INFO
+DESCRIPTOR.message_types_by_name['SSPKG_TOP_BATTLE_REWARD_REQ'] = _SSPKG_TOP_BATTLE_REWARD_REQ
+DESCRIPTOR.message_types_by_name['SSPKG_TOP_BATTLE_CHALLENGE_NOTIFY_REQ'] = _SSPKG_TOP_BATTLE_CHALLENGE_NOTIFY_REQ
+DESCRIPTOR.message_types_by_name['SSPKG_TOP_BATTLE_GET_QUALIFICATION_INFO_REQ'] = _SSPKG_TOP_BATTLE_GET_QUALIFICATION_INFO_REQ
+DESCRIPTOR.message_types_by_name['SSPKG_TOP_BATTLE_GET_QUALIFICATION_INFO_RES'] = _SSPKG_TOP_BATTLE_GET_QUALIFICATION_INFO_RES
+DESCRIPTOR.message_types_by_name['SSPKG_TOP_BATTLE_GET_TOPTHREE_REQ'] = _SSPKG_TOP_BATTLE_GET_TOPTHREE_REQ
+DESCRIPTOR.message_types_by_name['SSPKG_TOP_BATTLE_GET_TOPTHREE_RES'] = _SSPKG_TOP_BATTLE_GET_TOPTHREE_RES
+DESCRIPTOR.message_types_by_name['SSPKG_TOP_BATTLE_SEND_ROCKET_REQ'] = _SSPKG_TOP_BATTLE_SEND_ROCKET_REQ
+DESCRIPTOR.message_types_by_name['SSPKG_TOP_BATTLE_SEND_ROCKET_RES'] = _SSPKG_TOP_BATTLE_SEND_ROCKET_RES
+DESCRIPTOR.message_types_by_name['SSPKG_TOP_BATTLE_NTF_SEND_ROCKET'] = _SSPKG_TOP_BATTLE_NTF_SEND_ROCKET
+DESCRIPTOR.message_types_by_name['SSPKG_TOP_BATTLE_GET_ROCKET_REWARD_REQ'] = _SSPKG_TOP_BATTLE_GET_ROCKET_REWARD_REQ
+DESCRIPTOR.message_types_by_name['SSPKG_TOP_BATTLE_GET_ROCKET_REWARD_RES'] = _SSPKG_TOP_BATTLE_GET_ROCKET_REWARD_RES
+DESCRIPTOR.message_types_by_name['SSPKG_NTF_TOP_BATTLE_ROCKET_RESET'] = _SSPKG_NTF_TOP_BATTLE_ROCKET_RESET
 DESCRIPTOR.enum_types_by_name['SSPROTOCONST'] = _SSPROTOCONST
 DESCRIPTOR.enum_types_by_name['SS_PURCHASE_ERROR'] = _SS_PURCHASE_ERROR
 
@@ -27085,6 +29025,13 @@ DBBLOB_MONTHCARD_INFO = _reflection.GeneratedProtocolMessageType('DBBLOB_MONTHCA
   ))
 _sym_db.RegisterMessage(DBBLOB_MONTHCARD_INFO)
 
+DBBLOB_SUPERVALUECARD_INFO = _reflection.GeneratedProtocolMessageType('DBBLOB_SUPERVALUECARD_INFO', (_message.Message,), dict(
+  DESCRIPTOR = _DBBLOB_SUPERVALUECARD_INFO,
+  __module__ = 'sproto_pb2'
+  # @@protoc_insertion_point(class_scope:DBBLOB_SUPERVALUECARD_INFO)
+  ))
+_sym_db.RegisterMessage(DBBLOB_SUPERVALUECARD_INFO)
+
 DBBLOB_FIRSTPURCHASE_LIST = _reflection.GeneratedProtocolMessageType('DBBLOB_FIRSTPURCHASE_LIST', (_message.Message,), dict(
   DESCRIPTOR = _DBBLOB_FIRSTPURCHASE_LIST,
   __module__ = 'sproto_pb2'
@@ -27126,6 +29073,20 @@ DBBLOBHERO_EQUIPED_INFO = _reflection.GeneratedProtocolMessageType('DBBLOBHERO_E
   # @@protoc_insertion_point(class_scope:DBBLOBHERO_EQUIPED_INFO)
   ))
 _sym_db.RegisterMessage(DBBLOBHERO_EQUIPED_INFO)
+
+DBBLOB_DATA_HERO_FACTOR_DATA = _reflection.GeneratedProtocolMessageType('DBBLOB_DATA_HERO_FACTOR_DATA', (_message.Message,), dict(
+  DESCRIPTOR = _DBBLOB_DATA_HERO_FACTOR_DATA,
+  __module__ = 'sproto_pb2'
+  # @@protoc_insertion_point(class_scope:DBBLOB_DATA_HERO_FACTOR_DATA)
+  ))
+_sym_db.RegisterMessage(DBBLOB_DATA_HERO_FACTOR_DATA)
+
+DBBLOB_FACTOR_INFO = _reflection.GeneratedProtocolMessageType('DBBLOB_FACTOR_INFO', (_message.Message,), dict(
+  DESCRIPTOR = _DBBLOB_FACTOR_INFO,
+  __module__ = 'sproto_pb2'
+  # @@protoc_insertion_point(class_scope:DBBLOB_FACTOR_INFO)
+  ))
+_sym_db.RegisterMessage(DBBLOB_FACTOR_INFO)
 
 DBBLOB_PACKAGE_INFO = _reflection.GeneratedProtocolMessageType('DBBLOB_PACKAGE_INFO', (_message.Message,), dict(
   DESCRIPTOR = _DBBLOB_PACKAGE_INFO,
@@ -27217,6 +29178,20 @@ DBBLOB_GIFT_ACCEPT_INFO = _reflection.GeneratedProtocolMessageType('DBBLOB_GIFT_
   # @@protoc_insertion_point(class_scope:DBBLOB_GIFT_ACCEPT_INFO)
   ))
 _sym_db.RegisterMessage(DBBLOB_GIFT_ACCEPT_INFO)
+
+DBBLOB_GIFT_CLAIM_ITEM_INFO = _reflection.GeneratedProtocolMessageType('DBBLOB_GIFT_CLAIM_ITEM_INFO', (_message.Message,), dict(
+  DESCRIPTOR = _DBBLOB_GIFT_CLAIM_ITEM_INFO,
+  __module__ = 'sproto_pb2'
+  # @@protoc_insertion_point(class_scope:DBBLOB_GIFT_CLAIM_ITEM_INFO)
+  ))
+_sym_db.RegisterMessage(DBBLOB_GIFT_CLAIM_ITEM_INFO)
+
+DBBLOB_GIFT_CLAIM_INFO = _reflection.GeneratedProtocolMessageType('DBBLOB_GIFT_CLAIM_INFO', (_message.Message,), dict(
+  DESCRIPTOR = _DBBLOB_GIFT_CLAIM_INFO,
+  __module__ = 'sproto_pb2'
+  # @@protoc_insertion_point(class_scope:DBBLOB_GIFT_CLAIM_INFO)
+  ))
+_sym_db.RegisterMessage(DBBLOB_GIFT_CLAIM_INFO)
 
 DBBLOB_OFFLINE_BATTLE_DEFEATED_INFO = _reflection.GeneratedProtocolMessageType('DBBLOB_OFFLINE_BATTLE_DEFEATED_INFO', (_message.Message,), dict(
   DESCRIPTOR = _DBBLOB_OFFLINE_BATTLE_DEFEATED_INFO,
@@ -27329,6 +29304,13 @@ DBBLOB_PLAYER_HERO_GANGBATTLE_DATA = _reflection.GeneratedProtocolMessageType('D
   # @@protoc_insertion_point(class_scope:DBBLOB_PLAYER_HERO_GANGBATTLE_DATA)
   ))
 _sym_db.RegisterMessage(DBBLOB_PLAYER_HERO_GANGBATTLE_DATA)
+
+DBBLOB_PLAYER_TOP_BATTLE_ROCKET = _reflection.GeneratedProtocolMessageType('DBBLOB_PLAYER_TOP_BATTLE_ROCKET', (_message.Message,), dict(
+  DESCRIPTOR = _DBBLOB_PLAYER_TOP_BATTLE_ROCKET,
+  __module__ = 'sproto_pb2'
+  # @@protoc_insertion_point(class_scope:DBBLOB_PLAYER_TOP_BATTLE_ROCKET)
+  ))
+_sym_db.RegisterMessage(DBBLOB_PLAYER_TOP_BATTLE_ROCKET)
 
 DBBLOB_PLAYER_RANK_BATTLE_DATA = _reflection.GeneratedProtocolMessageType('DBBLOB_PLAYER_RANK_BATTLE_DATA', (_message.Message,), dict(
   DESCRIPTOR = _DBBLOB_PLAYER_RANK_BATTLE_DATA,
@@ -27700,6 +29682,13 @@ DBBLOB_MONTH_CARD_INFO = _reflection.GeneratedProtocolMessageType('DBBLOB_MONTH_
   # @@protoc_insertion_point(class_scope:DBBLOB_MONTH_CARD_INFO)
   ))
 _sym_db.RegisterMessage(DBBLOB_MONTH_CARD_INFO)
+
+DBBLOB_SUPERVALUE_CARD_INFO = _reflection.GeneratedProtocolMessageType('DBBLOB_SUPERVALUE_CARD_INFO', (_message.Message,), dict(
+  DESCRIPTOR = _DBBLOB_SUPERVALUE_CARD_INFO,
+  __module__ = 'sproto_pb2'
+  # @@protoc_insertion_point(class_scope:DBBLOB_SUPERVALUE_CARD_INFO)
+  ))
+_sym_db.RegisterMessage(DBBLOB_SUPERVALUE_CARD_INFO)
 
 DBBLOB_CONTINUE_LOGIN_INFO = _reflection.GeneratedProtocolMessageType('DBBLOB_CONTINUE_LOGIN_INFO', (_message.Message,), dict(
   DESCRIPTOR = _DBBLOB_CONTINUE_LOGIN_INFO,
@@ -28757,6 +30746,20 @@ PKG_APPLY_GANG_AUTOJOIN_RES = _reflection.GeneratedProtocolMessageType('PKG_APPL
   # @@protoc_insertion_point(class_scope:PKG_APPLY_GANG_AUTOJOIN_RES)
   ))
 _sym_db.RegisterMessage(PKG_APPLY_GANG_AUTOJOIN_RES)
+
+PKG_TRANSFER_GANG_LEADER_REQ = _reflection.GeneratedProtocolMessageType('PKG_TRANSFER_GANG_LEADER_REQ', (_message.Message,), dict(
+  DESCRIPTOR = _PKG_TRANSFER_GANG_LEADER_REQ,
+  __module__ = 'sproto_pb2'
+  # @@protoc_insertion_point(class_scope:PKG_TRANSFER_GANG_LEADER_REQ)
+  ))
+_sym_db.RegisterMessage(PKG_TRANSFER_GANG_LEADER_REQ)
+
+PKG_TRANSFER_GANG_LEADER_RES = _reflection.GeneratedProtocolMessageType('PKG_TRANSFER_GANG_LEADER_RES', (_message.Message,), dict(
+  DESCRIPTOR = _PKG_TRANSFER_GANG_LEADER_RES,
+  __module__ = 'sproto_pb2'
+  # @@protoc_insertion_point(class_scope:PKG_TRANSFER_GANG_LEADER_RES)
+  ))
+_sym_db.RegisterMessage(PKG_TRANSFER_GANG_LEADER_RES)
 
 PKG_QUIT_GANG_REQ = _reflection.GeneratedProtocolMessageType('PKG_QUIT_GANG_REQ', (_message.Message,), dict(
   DESCRIPTOR = _PKG_QUIT_GANG_REQ,
@@ -30416,6 +32419,209 @@ SSPKG_REPORT_PLAYER_CHAT_RES = _reflection.GeneratedProtocolMessageType('SSPKG_R
   # @@protoc_insertion_point(class_scope:SSPKG_REPORT_PLAYER_CHAT_RES)
   ))
 _sym_db.RegisterMessage(SSPKG_REPORT_PLAYER_CHAT_RES)
+
+SSPKG_TOP_BATTLE_GET_QUALIFICATION_RANK_POS_REQ = _reflection.GeneratedProtocolMessageType('SSPKG_TOP_BATTLE_GET_QUALIFICATION_RANK_POS_REQ', (_message.Message,), dict(
+  DESCRIPTOR = _SSPKG_TOP_BATTLE_GET_QUALIFICATION_RANK_POS_REQ,
+  __module__ = 'sproto_pb2'
+  # @@protoc_insertion_point(class_scope:SSPKG_TOP_BATTLE_GET_QUALIFICATION_RANK_POS_REQ)
+  ))
+_sym_db.RegisterMessage(SSPKG_TOP_BATTLE_GET_QUALIFICATION_RANK_POS_REQ)
+
+SSPKG_TOP_BATTLE_GET_QUALIFICATION_RANK_POS_RES = _reflection.GeneratedProtocolMessageType('SSPKG_TOP_BATTLE_GET_QUALIFICATION_RANK_POS_RES', (_message.Message,), dict(
+  DESCRIPTOR = _SSPKG_TOP_BATTLE_GET_QUALIFICATION_RANK_POS_RES,
+  __module__ = 'sproto_pb2'
+  # @@protoc_insertion_point(class_scope:SSPKG_TOP_BATTLE_GET_QUALIFICATION_RANK_POS_RES)
+  ))
+_sym_db.RegisterMessage(SSPKG_TOP_BATTLE_GET_QUALIFICATION_RANK_POS_RES)
+
+SSPKG_TOP_BATTLE_BASE_INFO_REQ = _reflection.GeneratedProtocolMessageType('SSPKG_TOP_BATTLE_BASE_INFO_REQ', (_message.Message,), dict(
+  DESCRIPTOR = _SSPKG_TOP_BATTLE_BASE_INFO_REQ,
+  __module__ = 'sproto_pb2'
+  # @@protoc_insertion_point(class_scope:SSPKG_TOP_BATTLE_BASE_INFO_REQ)
+  ))
+_sym_db.RegisterMessage(SSPKG_TOP_BATTLE_BASE_INFO_REQ)
+
+SSPKG_TOP_BATTLE_BASE_INFO_RES = _reflection.GeneratedProtocolMessageType('SSPKG_TOP_BATTLE_BASE_INFO_RES', (_message.Message,), dict(
+  DESCRIPTOR = _SSPKG_TOP_BATTLE_BASE_INFO_RES,
+  __module__ = 'sproto_pb2'
+  # @@protoc_insertion_point(class_scope:SSPKG_TOP_BATTLE_BASE_INFO_RES)
+  ))
+_sym_db.RegisterMessage(SSPKG_TOP_BATTLE_BASE_INFO_RES)
+
+SSPKG_TOP_BATTLE_CHECK_QUALIFICATION_REQ = _reflection.GeneratedProtocolMessageType('SSPKG_TOP_BATTLE_CHECK_QUALIFICATION_REQ', (_message.Message,), dict(
+  DESCRIPTOR = _SSPKG_TOP_BATTLE_CHECK_QUALIFICATION_REQ,
+  __module__ = 'sproto_pb2'
+  # @@protoc_insertion_point(class_scope:SSPKG_TOP_BATTLE_CHECK_QUALIFICATION_REQ)
+  ))
+_sym_db.RegisterMessage(SSPKG_TOP_BATTLE_CHECK_QUALIFICATION_REQ)
+
+SSPKG_TOP_BATTLE_CHECK_QUALIFICATION_RES = _reflection.GeneratedProtocolMessageType('SSPKG_TOP_BATTLE_CHECK_QUALIFICATION_RES', (_message.Message,), dict(
+  DESCRIPTOR = _SSPKG_TOP_BATTLE_CHECK_QUALIFICATION_RES,
+  __module__ = 'sproto_pb2'
+  # @@protoc_insertion_point(class_scope:SSPKG_TOP_BATTLE_CHECK_QUALIFICATION_RES)
+  ))
+_sym_db.RegisterMessage(SSPKG_TOP_BATTLE_CHECK_QUALIFICATION_RES)
+
+SSPKG_GET_TOP_BATTLE_STATE_REQ = _reflection.GeneratedProtocolMessageType('SSPKG_GET_TOP_BATTLE_STATE_REQ', (_message.Message,), dict(
+  DESCRIPTOR = _SSPKG_GET_TOP_BATTLE_STATE_REQ,
+  __module__ = 'sproto_pb2'
+  # @@protoc_insertion_point(class_scope:SSPKG_GET_TOP_BATTLE_STATE_REQ)
+  ))
+_sym_db.RegisterMessage(SSPKG_GET_TOP_BATTLE_STATE_REQ)
+
+SSPKG_GET_TOP_BATTLE_STATE_RES = _reflection.GeneratedProtocolMessageType('SSPKG_GET_TOP_BATTLE_STATE_RES', (_message.Message,), dict(
+  DESCRIPTOR = _SSPKG_GET_TOP_BATTLE_STATE_RES,
+  __module__ = 'sproto_pb2'
+  # @@protoc_insertion_point(class_scope:SSPKG_GET_TOP_BATTLE_STATE_RES)
+  ))
+_sym_db.RegisterMessage(SSPKG_GET_TOP_BATTLE_STATE_RES)
+
+SSPKG_TOP_BATTLE_APPLY_REQ = _reflection.GeneratedProtocolMessageType('SSPKG_TOP_BATTLE_APPLY_REQ', (_message.Message,), dict(
+  DESCRIPTOR = _SSPKG_TOP_BATTLE_APPLY_REQ,
+  __module__ = 'sproto_pb2'
+  # @@protoc_insertion_point(class_scope:SSPKG_TOP_BATTLE_APPLY_REQ)
+  ))
+_sym_db.RegisterMessage(SSPKG_TOP_BATTLE_APPLY_REQ)
+
+SSPKG_TOP_BATTLE_GET_FIGHT_TARGET_REQ = _reflection.GeneratedProtocolMessageType('SSPKG_TOP_BATTLE_GET_FIGHT_TARGET_REQ', (_message.Message,), dict(
+  DESCRIPTOR = _SSPKG_TOP_BATTLE_GET_FIGHT_TARGET_REQ,
+  __module__ = 'sproto_pb2'
+  # @@protoc_insertion_point(class_scope:SSPKG_TOP_BATTLE_GET_FIGHT_TARGET_REQ)
+  ))
+_sym_db.RegisterMessage(SSPKG_TOP_BATTLE_GET_FIGHT_TARGET_REQ)
+
+SSPKG_TOP_BATTLE_GET_FIGHT_TARGET_RES = _reflection.GeneratedProtocolMessageType('SSPKG_TOP_BATTLE_GET_FIGHT_TARGET_RES', (_message.Message,), dict(
+  DESCRIPTOR = _SSPKG_TOP_BATTLE_GET_FIGHT_TARGET_RES,
+  __module__ = 'sproto_pb2'
+  # @@protoc_insertion_point(class_scope:SSPKG_TOP_BATTLE_GET_FIGHT_TARGET_RES)
+  ))
+_sym_db.RegisterMessage(SSPKG_TOP_BATTLE_GET_FIGHT_TARGET_RES)
+
+SSPKG_TOP_BATTLE_ENTER_DUNGEON_REQ = _reflection.GeneratedProtocolMessageType('SSPKG_TOP_BATTLE_ENTER_DUNGEON_REQ', (_message.Message,), dict(
+  DESCRIPTOR = _SSPKG_TOP_BATTLE_ENTER_DUNGEON_REQ,
+  __module__ = 'sproto_pb2'
+  # @@protoc_insertion_point(class_scope:SSPKG_TOP_BATTLE_ENTER_DUNGEON_REQ)
+  ))
+_sym_db.RegisterMessage(SSPKG_TOP_BATTLE_ENTER_DUNGEON_REQ)
+
+SSPKG_TOP_BATTLE_ENTER_DUNGEON_RES = _reflection.GeneratedProtocolMessageType('SSPKG_TOP_BATTLE_ENTER_DUNGEON_RES', (_message.Message,), dict(
+  DESCRIPTOR = _SSPKG_TOP_BATTLE_ENTER_DUNGEON_RES,
+  __module__ = 'sproto_pb2'
+  # @@protoc_insertion_point(class_scope:SSPKG_TOP_BATTLE_ENTER_DUNGEON_RES)
+  ))
+_sym_db.RegisterMessage(SSPKG_TOP_BATTLE_ENTER_DUNGEON_RES)
+
+SSPKG_TOP_BATTLE_UNLOCK_REQ = _reflection.GeneratedProtocolMessageType('SSPKG_TOP_BATTLE_UNLOCK_REQ', (_message.Message,), dict(
+  DESCRIPTOR = _SSPKG_TOP_BATTLE_UNLOCK_REQ,
+  __module__ = 'sproto_pb2'
+  # @@protoc_insertion_point(class_scope:SSPKG_TOP_BATTLE_UNLOCK_REQ)
+  ))
+_sym_db.RegisterMessage(SSPKG_TOP_BATTLE_UNLOCK_REQ)
+
+SSPKG_TOP_BATTLE_BALANCE_REQ = _reflection.GeneratedProtocolMessageType('SSPKG_TOP_BATTLE_BALANCE_REQ', (_message.Message,), dict(
+  DESCRIPTOR = _SSPKG_TOP_BATTLE_BALANCE_REQ,
+  __module__ = 'sproto_pb2'
+  # @@protoc_insertion_point(class_scope:SSPKG_TOP_BATTLE_BALANCE_REQ)
+  ))
+_sym_db.RegisterMessage(SSPKG_TOP_BATTLE_BALANCE_REQ)
+
+SSPKG_TOP_BATTLE_BALANCE_RES = _reflection.GeneratedProtocolMessageType('SSPKG_TOP_BATTLE_BALANCE_RES', (_message.Message,), dict(
+  DESCRIPTOR = _SSPKG_TOP_BATTLE_BALANCE_RES,
+  __module__ = 'sproto_pb2'
+  # @@protoc_insertion_point(class_scope:SSPKG_TOP_BATTLE_BALANCE_RES)
+  ))
+_sym_db.RegisterMessage(SSPKG_TOP_BATTLE_BALANCE_RES)
+
+SSDT_TOP_BATTLE_REWARD_INFO = _reflection.GeneratedProtocolMessageType('SSDT_TOP_BATTLE_REWARD_INFO', (_message.Message,), dict(
+  DESCRIPTOR = _SSDT_TOP_BATTLE_REWARD_INFO,
+  __module__ = 'sproto_pb2'
+  # @@protoc_insertion_point(class_scope:SSDT_TOP_BATTLE_REWARD_INFO)
+  ))
+_sym_db.RegisterMessage(SSDT_TOP_BATTLE_REWARD_INFO)
+
+SSPKG_TOP_BATTLE_REWARD_REQ = _reflection.GeneratedProtocolMessageType('SSPKG_TOP_BATTLE_REWARD_REQ', (_message.Message,), dict(
+  DESCRIPTOR = _SSPKG_TOP_BATTLE_REWARD_REQ,
+  __module__ = 'sproto_pb2'
+  # @@protoc_insertion_point(class_scope:SSPKG_TOP_BATTLE_REWARD_REQ)
+  ))
+_sym_db.RegisterMessage(SSPKG_TOP_BATTLE_REWARD_REQ)
+
+SSPKG_TOP_BATTLE_CHALLENGE_NOTIFY_REQ = _reflection.GeneratedProtocolMessageType('SSPKG_TOP_BATTLE_CHALLENGE_NOTIFY_REQ', (_message.Message,), dict(
+  DESCRIPTOR = _SSPKG_TOP_BATTLE_CHALLENGE_NOTIFY_REQ,
+  __module__ = 'sproto_pb2'
+  # @@protoc_insertion_point(class_scope:SSPKG_TOP_BATTLE_CHALLENGE_NOTIFY_REQ)
+  ))
+_sym_db.RegisterMessage(SSPKG_TOP_BATTLE_CHALLENGE_NOTIFY_REQ)
+
+SSPKG_TOP_BATTLE_GET_QUALIFICATION_INFO_REQ = _reflection.GeneratedProtocolMessageType('SSPKG_TOP_BATTLE_GET_QUALIFICATION_INFO_REQ', (_message.Message,), dict(
+  DESCRIPTOR = _SSPKG_TOP_BATTLE_GET_QUALIFICATION_INFO_REQ,
+  __module__ = 'sproto_pb2'
+  # @@protoc_insertion_point(class_scope:SSPKG_TOP_BATTLE_GET_QUALIFICATION_INFO_REQ)
+  ))
+_sym_db.RegisterMessage(SSPKG_TOP_BATTLE_GET_QUALIFICATION_INFO_REQ)
+
+SSPKG_TOP_BATTLE_GET_QUALIFICATION_INFO_RES = _reflection.GeneratedProtocolMessageType('SSPKG_TOP_BATTLE_GET_QUALIFICATION_INFO_RES', (_message.Message,), dict(
+  DESCRIPTOR = _SSPKG_TOP_BATTLE_GET_QUALIFICATION_INFO_RES,
+  __module__ = 'sproto_pb2'
+  # @@protoc_insertion_point(class_scope:SSPKG_TOP_BATTLE_GET_QUALIFICATION_INFO_RES)
+  ))
+_sym_db.RegisterMessage(SSPKG_TOP_BATTLE_GET_QUALIFICATION_INFO_RES)
+
+SSPKG_TOP_BATTLE_GET_TOPTHREE_REQ = _reflection.GeneratedProtocolMessageType('SSPKG_TOP_BATTLE_GET_TOPTHREE_REQ', (_message.Message,), dict(
+  DESCRIPTOR = _SSPKG_TOP_BATTLE_GET_TOPTHREE_REQ,
+  __module__ = 'sproto_pb2'
+  # @@protoc_insertion_point(class_scope:SSPKG_TOP_BATTLE_GET_TOPTHREE_REQ)
+  ))
+_sym_db.RegisterMessage(SSPKG_TOP_BATTLE_GET_TOPTHREE_REQ)
+
+SSPKG_TOP_BATTLE_GET_TOPTHREE_RES = _reflection.GeneratedProtocolMessageType('SSPKG_TOP_BATTLE_GET_TOPTHREE_RES', (_message.Message,), dict(
+  DESCRIPTOR = _SSPKG_TOP_BATTLE_GET_TOPTHREE_RES,
+  __module__ = 'sproto_pb2'
+  # @@protoc_insertion_point(class_scope:SSPKG_TOP_BATTLE_GET_TOPTHREE_RES)
+  ))
+_sym_db.RegisterMessage(SSPKG_TOP_BATTLE_GET_TOPTHREE_RES)
+
+SSPKG_TOP_BATTLE_SEND_ROCKET_REQ = _reflection.GeneratedProtocolMessageType('SSPKG_TOP_BATTLE_SEND_ROCKET_REQ', (_message.Message,), dict(
+  DESCRIPTOR = _SSPKG_TOP_BATTLE_SEND_ROCKET_REQ,
+  __module__ = 'sproto_pb2'
+  # @@protoc_insertion_point(class_scope:SSPKG_TOP_BATTLE_SEND_ROCKET_REQ)
+  ))
+_sym_db.RegisterMessage(SSPKG_TOP_BATTLE_SEND_ROCKET_REQ)
+
+SSPKG_TOP_BATTLE_SEND_ROCKET_RES = _reflection.GeneratedProtocolMessageType('SSPKG_TOP_BATTLE_SEND_ROCKET_RES', (_message.Message,), dict(
+  DESCRIPTOR = _SSPKG_TOP_BATTLE_SEND_ROCKET_RES,
+  __module__ = 'sproto_pb2'
+  # @@protoc_insertion_point(class_scope:SSPKG_TOP_BATTLE_SEND_ROCKET_RES)
+  ))
+_sym_db.RegisterMessage(SSPKG_TOP_BATTLE_SEND_ROCKET_RES)
+
+SSPKG_TOP_BATTLE_NTF_SEND_ROCKET = _reflection.GeneratedProtocolMessageType('SSPKG_TOP_BATTLE_NTF_SEND_ROCKET', (_message.Message,), dict(
+  DESCRIPTOR = _SSPKG_TOP_BATTLE_NTF_SEND_ROCKET,
+  __module__ = 'sproto_pb2'
+  # @@protoc_insertion_point(class_scope:SSPKG_TOP_BATTLE_NTF_SEND_ROCKET)
+  ))
+_sym_db.RegisterMessage(SSPKG_TOP_BATTLE_NTF_SEND_ROCKET)
+
+SSPKG_TOP_BATTLE_GET_ROCKET_REWARD_REQ = _reflection.GeneratedProtocolMessageType('SSPKG_TOP_BATTLE_GET_ROCKET_REWARD_REQ', (_message.Message,), dict(
+  DESCRIPTOR = _SSPKG_TOP_BATTLE_GET_ROCKET_REWARD_REQ,
+  __module__ = 'sproto_pb2'
+  # @@protoc_insertion_point(class_scope:SSPKG_TOP_BATTLE_GET_ROCKET_REWARD_REQ)
+  ))
+_sym_db.RegisterMessage(SSPKG_TOP_BATTLE_GET_ROCKET_REWARD_REQ)
+
+SSPKG_TOP_BATTLE_GET_ROCKET_REWARD_RES = _reflection.GeneratedProtocolMessageType('SSPKG_TOP_BATTLE_GET_ROCKET_REWARD_RES', (_message.Message,), dict(
+  DESCRIPTOR = _SSPKG_TOP_BATTLE_GET_ROCKET_REWARD_RES,
+  __module__ = 'sproto_pb2'
+  # @@protoc_insertion_point(class_scope:SSPKG_TOP_BATTLE_GET_ROCKET_REWARD_RES)
+  ))
+_sym_db.RegisterMessage(SSPKG_TOP_BATTLE_GET_ROCKET_REWARD_RES)
+
+SSPKG_NTF_TOP_BATTLE_ROCKET_RESET = _reflection.GeneratedProtocolMessageType('SSPKG_NTF_TOP_BATTLE_ROCKET_RESET', (_message.Message,), dict(
+  DESCRIPTOR = _SSPKG_NTF_TOP_BATTLE_ROCKET_RESET,
+  __module__ = 'sproto_pb2'
+  # @@protoc_insertion_point(class_scope:SSPKG_NTF_TOP_BATTLE_ROCKET_RESET)
+  ))
+_sym_db.RegisterMessage(SSPKG_NTF_TOP_BATTLE_ROCKET_RESET)
 
 
 _SSPROTOCONST.has_options = True

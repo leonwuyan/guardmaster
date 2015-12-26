@@ -18,7 +18,7 @@ _sym_db = _symbol_database.Default()
 DESCRIPTOR = _descriptor.FileDescriptor(
   name='rank.proto',
   package='',
-  serialized_pb=_b('\n\nrank.proto\",\n\rCSDT_RANK_VAL\x12\x0e\n\x06val_id\x18\x01 \x01(\r\x12\x0b\n\x03val\x18\x02 \x01(\r\"Z\n\x1b\x43SDT_RANK_BATTLE_HERO_BRIEF\x12\x0f\n\x07hero_id\x18\x01 \x01(\r\x12\x0f\n\x07hero_lv\x18\x02 \x01(\r\x12\x19\n\x11\x66ighting_capacity\x18\x03 \x01(\r\"\xcf\x01\n\x15\x43SDT_PLAYER_BASE_INFO\x12\x0f\n\x07role_id\x18\x01 \x01(\r\x12\x11\n\trole_name\x18\x02 \x01(\t\x12\x12\n\nrole_level\x18\x03 \x01(\r\x12\x1c\n\x14\x63umulate_recharge_id\x18\x04 \x01(\r\x12\x36\n\x10rank_battle_hero\x18\x05 \x03(\x0b\x32\x1c.CSDT_RANK_BATTLE_HERO_BRIEF\x12\x10\n\x08is_robot\x18\x06 \x01(\x08\x12\x16\n\x0e\x66ight_capacity\x18\x07 \x01(\r\"z\n\x13\x43SDT_GANG_BASE_INFO\x12\x0f\n\x07gang_id\x18\x01 \x01(\r\x12\x11\n\tgang_name\x18\x02 \x01(\t\x12\x16\n\x0eleader_role_id\x18\x03 \x01(\r\x12\x13\n\x0bleader_name\x18\x04 \x01(\t\x12\x12\n\ngang_level\x18\x05 \x01(\r\"\x8b\x01\n\x0e\x43SDT_RANK_DATA\x12\x16\n\x0erank_base_type\x18\x01 \x01(\r\x12+\n\x0erank_base_info\x18\x02 \x01(\x0b\x32\x13.CSDT_RANK_BASEINFO\x12\x12\n\nrank_trend\x18\x03 \x01(\r\x12 \n\x08rank_val\x18\x04 \x03(\x0b\x32\x0e.CSDT_RANK_VAL\"{\n\x16\x43SPKG_GET_RANKLIST_REQ\x12\x12\n\nflush_time\x18\x01 \x01(\r\x12\x0f\n\x07rank_id\x18\x02 \x01(\r\x12\x11\n\trank_type\x18\x03 \x01(\r\x12\x15\n\rpage_start_id\x18\x04 \x01(\r\x12\x12\n\npage_count\x18\x05 \x01(\r\"\xdb\x01\n\x16SCPKG_GET_RANKLIST_RES\x12\x0e\n\x06result\x18\x01 \x01(\r\x12\x12\n\nflush_time\x18\x02 \x01(\r\x12\x0f\n\x07rank_id\x18\x05 \x01(\r\x12\x11\n\trank_type\x18\x06 \x01(\r\x12\x11\n\trank_yday\x18\x07 \x01(\r\x12\x13\n\x0btotal_count\x18\x08 \x01(\r\x12\x15\n\rpage_start_id\x18\t \x01(\r\x12\x16\n\x0emax_show_count\x18\n \x01(\r\x12\"\n\trank_list\x18\x0b \x03(\x0b\x32\x0f.CSDT_RANK_DATA\"~\n\x15\x43SPKG_GET_RANKPOS_REQ\x12\x0f\n\x07rank_id\x18\x01 \x01(\r\x12\x11\n\trank_type\x18\x02 \x01(\r\x12\x13\n\x0bsearch_type\x18\x03 \x01(\r\x12,\n\nsearch_key\x18\x04 \x01(\x0b\x32\x18.CSDT_RANKPOS_SEARCH_KEY\"\x99\x01\n\x15SCPKG_GET_RANKPOS_RES\x12\x0f\n\x07rank_id\x18\x01 \x01(\r\x12\x11\n\trank_type\x18\x02 \x01(\r\x12\x13\n\x0bsearch_type\x18\x03 \x01(\r\x12\x11\n\trank_yday\x18\x04 \x01(\r\x12\x10\n\x08rank_pos\x18\x05 \x01(\r\x12\"\n\trank_info\x18\x06 \x01(\x0b\x32\x0f.CSDT_RANK_DATA\"j\n\x1bSCPKG_HISTORY_RANK_POS_INFO\x12%\n\x1dhistory_high_endless_rank_pos\x18\x01 \x01(\r\x12$\n\x1chistory_high_rank_battle_pos\x18\x02 \x01(\r\"t\n\x12\x43SDT_RANK_BASEINFO\x12\x30\n\x10player_base_info\x18\x01 \x01(\x0b\x32\x16.CSDT_PLAYER_BASE_INFO\x12,\n\x0egang_base_info\x18\x02 \x01(\x0b\x32\x14.CSDT_GANG_BASE_INFO\"O\n\x17\x43SDT_RANKPOS_SEARCH_KEY\x12\x0f\n\x07uniq_id\x18\x01 \x01(\r\x12\x10\n\x08rank_pos\x18\x02 \x01(\r\x12\x11\n\tuniq_name\x18\x03 \x01(\t\"7\n\x16SSPKG_RANK_REWARD_ITEM\x12\x0b\n\x03uid\x18\x01 \x01(\r\x12\x10\n\x08rank_pos\x18\x02 \x01(\r\"U\n\x1aSSPKG_RANK_REWARD_DISPATCH\x12\x0f\n\x07rank_id\x18\x01 \x01(\r\x12&\n\x05items\x18\x02 \x03(\x0b\x32\x17.SSPKG_RANK_REWARD_ITEM\";\n\x14RANK_RESET_INFO_ITEM\x12\n\n\x02id\x18\x01 \x01(\r\x12\x17\n\x0fnext_reset_time\x18\x02 \x01(\r\"=\n\x15SSPKG_RANK_RESET_INFO\x12$\n\x05items\x18\x01 \x03(\x0b\x32\x15.RANK_RESET_INFO_ITEM')
+  serialized_pb=_b('\n\nrank.proto\",\n\rCSDT_RANK_VAL\x12\x0e\n\x06val_id\x18\x01 \x01(\r\x12\x0b\n\x03val\x18\x02 \x01(\r\"Z\n\x1b\x43SDT_RANK_BATTLE_HERO_BRIEF\x12\x0f\n\x07hero_id\x18\x01 \x01(\r\x12\x0f\n\x07hero_lv\x18\x02 \x01(\r\x12\x19\n\x11\x66ighting_capacity\x18\x03 \x01(\r\"\xe1\x01\n\x15\x43SDT_PLAYER_BASE_INFO\x12\x0f\n\x07role_id\x18\x01 \x01(\r\x12\x11\n\trole_name\x18\x02 \x01(\t\x12\x12\n\nrole_level\x18\x03 \x01(\r\x12\x1c\n\x14\x63umulate_recharge_id\x18\x04 \x01(\r\x12\x36\n\x10rank_battle_hero\x18\x05 \x03(\x0b\x32\x1c.CSDT_RANK_BATTLE_HERO_BRIEF\x12\x10\n\x08is_robot\x18\x06 \x01(\x08\x12\x16\n\x0e\x66ight_capacity\x18\x07 \x01(\r\x12\x10\n\x08world_id\x18\x08 \x01(\x05\"z\n\x13\x43SDT_GANG_BASE_INFO\x12\x0f\n\x07gang_id\x18\x01 \x01(\r\x12\x11\n\tgang_name\x18\x02 \x01(\t\x12\x16\n\x0eleader_role_id\x18\x03 \x01(\r\x12\x13\n\x0bleader_name\x18\x04 \x01(\t\x12\x12\n\ngang_level\x18\x05 \x01(\r\"\x8b\x01\n\x0e\x43SDT_RANK_DATA\x12\x16\n\x0erank_base_type\x18\x01 \x01(\r\x12+\n\x0erank_base_info\x18\x02 \x01(\x0b\x32\x13.CSDT_RANK_BASEINFO\x12\x12\n\nrank_trend\x18\x03 \x01(\r\x12 \n\x08rank_val\x18\x04 \x03(\x0b\x32\x0e.CSDT_RANK_VAL\"\x8e\x01\n\x16\x43SPKG_GET_RANKLIST_REQ\x12\x12\n\nflush_time\x18\x01 \x01(\r\x12\x0f\n\x07rank_id\x18\x02 \x01(\r\x12\x11\n\trank_type\x18\x03 \x01(\r\x12\x15\n\rpage_start_id\x18\x04 \x01(\r\x12\x12\n\npage_count\x18\x05 \x01(\r\x12\x11\n\tbattle_id\x18\x06 \x01(\x05\"\xee\x01\n\x16SCPKG_GET_RANKLIST_RES\x12\x0e\n\x06result\x18\x01 \x01(\r\x12\x12\n\nflush_time\x18\x02 \x01(\r\x12\x0f\n\x07rank_id\x18\x05 \x01(\r\x12\x11\n\trank_type\x18\x06 \x01(\r\x12\x11\n\trank_yday\x18\x07 \x01(\r\x12\x13\n\x0btotal_count\x18\x08 \x01(\r\x12\x15\n\rpage_start_id\x18\t \x01(\r\x12\x16\n\x0emax_show_count\x18\n \x01(\r\x12\"\n\trank_list\x18\x0b \x03(\x0b\x32\x0f.CSDT_RANK_DATA\x12\x11\n\tbattle_id\x18\x0c \x01(\x05\"~\n\x15\x43SPKG_GET_RANKPOS_REQ\x12\x0f\n\x07rank_id\x18\x01 \x01(\r\x12\x11\n\trank_type\x18\x02 \x01(\r\x12\x13\n\x0bsearch_type\x18\x03 \x01(\r\x12,\n\nsearch_key\x18\x04 \x01(\x0b\x32\x18.CSDT_RANKPOS_SEARCH_KEY\"\x99\x01\n\x15SCPKG_GET_RANKPOS_RES\x12\x0f\n\x07rank_id\x18\x01 \x01(\r\x12\x11\n\trank_type\x18\x02 \x01(\r\x12\x13\n\x0bsearch_type\x18\x03 \x01(\r\x12\x11\n\trank_yday\x18\x04 \x01(\r\x12\x10\n\x08rank_pos\x18\x05 \x01(\r\x12\"\n\trank_info\x18\x06 \x01(\x0b\x32\x0f.CSDT_RANK_DATA\"j\n\x1bSCPKG_HISTORY_RANK_POS_INFO\x12%\n\x1dhistory_high_endless_rank_pos\x18\x01 \x01(\r\x12$\n\x1chistory_high_rank_battle_pos\x18\x02 \x01(\r\"t\n\x12\x43SDT_RANK_BASEINFO\x12\x30\n\x10player_base_info\x18\x01 \x01(\x0b\x32\x16.CSDT_PLAYER_BASE_INFO\x12,\n\x0egang_base_info\x18\x02 \x01(\x0b\x32\x14.CSDT_GANG_BASE_INFO\"O\n\x17\x43SDT_RANKPOS_SEARCH_KEY\x12\x0f\n\x07uniq_id\x18\x01 \x01(\r\x12\x10\n\x08rank_pos\x18\x02 \x01(\r\x12\x11\n\tuniq_name\x18\x03 \x01(\t\"7\n\x16SSPKG_RANK_REWARD_ITEM\x12\x0b\n\x03uid\x18\x01 \x01(\r\x12\x10\n\x08rank_pos\x18\x02 \x01(\r\"U\n\x1aSSPKG_RANK_REWARD_DISPATCH\x12\x0f\n\x07rank_id\x18\x01 \x01(\r\x12&\n\x05items\x18\x02 \x03(\x0b\x32\x17.SSPKG_RANK_REWARD_ITEM\"o\n\x14RANK_RESET_INFO_ITEM\x12\n\n\x02id\x18\x01 \x01(\r\x12\x17\n\x0fnext_reset_time\x18\x02 \x01(\r\x12\x18\n\x10\x66irst_reset_time\x18\x03 \x01(\r\x12\x18\n\x10\x66orce_flush_time\x18\x04 \x01(\r\"=\n\x15SSPKG_RANK_RESET_INFO\x12$\n\x05items\x18\x01 \x03(\x0b\x32\x15.RANK_RESET_INFO_ITEM')
 )
 _sym_db.RegisterFileDescriptor(DESCRIPTOR)
 
@@ -162,6 +162,13 @@ _CSDT_PLAYER_BASE_INFO = _descriptor.Descriptor(
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
+    _descriptor.FieldDescriptor(
+      name='world_id', full_name='CSDT_PLAYER_BASE_INFO.world_id', index=7,
+      number=8, type=5, cpp_type=1, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
   ],
   extensions=[
   ],
@@ -174,7 +181,7 @@ _CSDT_PLAYER_BASE_INFO = _descriptor.Descriptor(
   oneofs=[
   ],
   serialized_start=153,
-  serialized_end=360,
+  serialized_end=378,
 )
 
 
@@ -231,8 +238,8 @@ _CSDT_GANG_BASE_INFO = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=362,
-  serialized_end=484,
+  serialized_start=380,
+  serialized_end=502,
 )
 
 
@@ -282,8 +289,8 @@ _CSDT_RANK_DATA = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=487,
-  serialized_end=626,
+  serialized_start=505,
+  serialized_end=644,
 )
 
 
@@ -329,6 +336,13 @@ _CSPKG_GET_RANKLIST_REQ = _descriptor.Descriptor(
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
+    _descriptor.FieldDescriptor(
+      name='battle_id', full_name='CSPKG_GET_RANKLIST_REQ.battle_id', index=5,
+      number=6, type=5, cpp_type=1, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
   ],
   extensions=[
   ],
@@ -340,8 +354,8 @@ _CSPKG_GET_RANKLIST_REQ = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=628,
-  serialized_end=751,
+  serialized_start=647,
+  serialized_end=789,
 )
 
 
@@ -415,6 +429,13 @@ _SCPKG_GET_RANKLIST_RES = _descriptor.Descriptor(
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
+    _descriptor.FieldDescriptor(
+      name='battle_id', full_name='SCPKG_GET_RANKLIST_RES.battle_id', index=9,
+      number=12, type=5, cpp_type=1, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
   ],
   extensions=[
   ],
@@ -426,8 +447,8 @@ _SCPKG_GET_RANKLIST_RES = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=754,
-  serialized_end=973,
+  serialized_start=792,
+  serialized_end=1030,
 )
 
 
@@ -477,8 +498,8 @@ _CSPKG_GET_RANKPOS_REQ = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=975,
-  serialized_end=1101,
+  serialized_start=1032,
+  serialized_end=1158,
 )
 
 
@@ -542,8 +563,8 @@ _SCPKG_GET_RANKPOS_RES = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=1104,
-  serialized_end=1257,
+  serialized_start=1161,
+  serialized_end=1314,
 )
 
 
@@ -579,8 +600,8 @@ _SCPKG_HISTORY_RANK_POS_INFO = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=1259,
-  serialized_end=1365,
+  serialized_start=1316,
+  serialized_end=1422,
 )
 
 
@@ -616,8 +637,8 @@ _CSDT_RANK_BASEINFO = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=1367,
-  serialized_end=1483,
+  serialized_start=1424,
+  serialized_end=1540,
 )
 
 
@@ -660,8 +681,8 @@ _CSDT_RANKPOS_SEARCH_KEY = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=1485,
-  serialized_end=1564,
+  serialized_start=1542,
+  serialized_end=1621,
 )
 
 
@@ -697,8 +718,8 @@ _SSPKG_RANK_REWARD_ITEM = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=1566,
-  serialized_end=1621,
+  serialized_start=1623,
+  serialized_end=1678,
 )
 
 
@@ -734,8 +755,8 @@ _SSPKG_RANK_REWARD_DISPATCH = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=1623,
-  serialized_end=1708,
+  serialized_start=1680,
+  serialized_end=1765,
 )
 
 
@@ -760,6 +781,20 @@ _RANK_RESET_INFO_ITEM = _descriptor.Descriptor(
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
+    _descriptor.FieldDescriptor(
+      name='first_reset_time', full_name='RANK_RESET_INFO_ITEM.first_reset_time', index=2,
+      number=3, type=13, cpp_type=3, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    _descriptor.FieldDescriptor(
+      name='force_flush_time', full_name='RANK_RESET_INFO_ITEM.force_flush_time', index=3,
+      number=4, type=13, cpp_type=3, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
   ],
   extensions=[
   ],
@@ -771,8 +806,8 @@ _RANK_RESET_INFO_ITEM = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=1710,
-  serialized_end=1769,
+  serialized_start=1767,
+  serialized_end=1878,
 )
 
 
@@ -801,8 +836,8 @@ _SSPKG_RANK_RESET_INFO = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=1771,
-  serialized_end=1832,
+  serialized_start=1880,
+  serialized_end=1941,
 )
 
 _CSDT_PLAYER_BASE_INFO.fields_by_name['rank_battle_hero'].message_type = _CSDT_RANK_BATTLE_HERO_BRIEF
