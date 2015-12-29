@@ -204,6 +204,7 @@
         </td>
         <td colspan="2"></td>
       </tr>
+      {% ifequal url 'single_query_inner'  %}
       <tr>
         <td><b>{{ t_m_c_r_d }}</b></td>
         <td colspan="4">{{ player.month_remain_days }}
@@ -214,6 +215,7 @@
           </span>
         </td>
       </tr>
+      {% endifequal %}
       <tr>
         <td><b>{{ t_chat_ban_time }}</b></td>
         <td colspan="4">{{ player.world_info.chat_ban_time|ts2bantime }}
