@@ -395,7 +395,7 @@ class ServerControl(object):
                 'rank_info': ss.get_rank_pos(self.uid, world_id, int(x['EnumCd'])),
             }, rank_list)
         for k in rank_list:
-            if k['rank_id'] != 1 and k['rank_info']['rank_pos'] > 0:
+            if k['rank_id'] != 1 and k['rank_info'].get('rank_pos') > 0:
                 ret = ss.del_player_from_rank(self.uid, world_id, k['rank_id'])
         return ret
 
