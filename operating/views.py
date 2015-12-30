@@ -1,6 +1,7 @@
 from detection.models import Excuse, Panel, UISubMenu, UIMainMenu, Tabel
 from django.views.decorators.http import require_http_methods
 from django.http import HttpResponse, HttpResponseRedirect
+from django.core.urlresolvers import reverse
 from django.shortcuts import render, get_object_or_404
 from django.utils.translation import ugettext as _
 from operating.servercontrol import ServerControl
@@ -112,6 +113,8 @@ def mail(request, panel_id, url=Common.URL):
     d['factors'] = enum_factor_list(panel_id)
     d['responsemails'] = Common.get_panel_response_mail(panel)
     d['url'] = url
+    if request.GET.get('result'):
+        d['message'] = request.GET.get('result')
     if request.method == 'POST':
         server_id = int(request.POST['server'])
         try:
@@ -136,10 +139,8 @@ def mail(request, panel_id, url=Common.URL):
             request.user.username,
             Common.get_client_ip(request))
         ret = sc.send_mail(post=request.POST)
-        if ret['result'] == 1:
-            d['message'] = 2
-        else:
-            d['message'] = 1
+        hrrurl = reverse('operating:mail', args=(panel_id, url)) + '?result=' + str(ret['result'])
+        return HttpResponseRedirect(hrrurl)
     return render(request, t, d)
 
 
@@ -153,6 +154,8 @@ def all_mail(request, panel_id, url=Common.URL):
     d['items'] = enum_item_list(panel_id)
     d['factors'] = enum_factor_list(panel_id)
     d['responseallmails'] = Common.get_panel_response_all_mail(panel)
+    if request.GET.get('result'):
+        d['message'] = request.GET.get('result')
     if request.method == 'POST':
         server_id = int(request.POST['server'])
 
@@ -164,10 +167,8 @@ def all_mail(request, panel_id, url=Common.URL):
             request.user.username,
             Common.get_client_ip(request))
         ret = sc.send_all_mail(request.POST)
-        if ret['result'] == 1:
-            d['message'] = 2
-        else:
-            d['message'] = 1
+        hrrurl = reverse('operating:all_mail', args=(panel_id, url)) + '?result=' + str(ret['result'])
+        return HttpResponseRedirect(hrrurl)
     return render(request, t, d)
 
 
