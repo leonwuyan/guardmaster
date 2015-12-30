@@ -7,17 +7,19 @@
 {% trans "ID" as t_id %}
 {% trans "Skill" as t_skill %}
 {% trans "Equiped" as t_equiped %}
+{% trans "Embed Factor" as t_embed_factor %}
 {% trans "Item Pos" as t_item_pos %}
 {% trans "Level" as t_level %}
 {% trans "Grow Up" as t_grow_up %}
 {% trans "Current Exp." as t_current_exp %}
 {% trans "Base ID" as t_base_id %}
 {% trans "Equip Name" as t_equip_name %}
+{% trans "Factor Name" as t_factor_name %}
 {% trans "Wake Up" as t_wake_up %}
 <ul class="list-group">
   <li class="list-group-item"><h4><b>{{ t_hero_info }}</b></h4></li>
   {% for k in player.hero_info|dictsort:"hero_id" %}
-    {% with equiped_info=player.package_data.hero_equiped_info|equiped:k.hero_id %}
+    {% with equiped_info=player.package_data.hero_equiped_info|equiped:k.hero_id factor_info=player.package_data.factor_info.embed_factor_info|embed_factor:k.hero_id %}
     <li class="list-group-item">
       <!--<span class="label label-default">{{ t_hero_id }} :{{ k.hero_id }}</span>-->
       <span class="label label-primary">{{ t_hero_name }} :{{ k.hero_id|enum_hero:panel.id }}</span>
@@ -39,6 +41,7 @@
       <span class="pull-right">
         <span>{{ t_skill }} [ {{ k.skill|length }} ] </span>
         <button class="btn-xs btn btn-info" type="button" onclick="javascript:hero_show_hide_table('#equiped-{{k.hero_id}}')">{{ t_equiped }} <span class="badge">{{ equiped_info|length }}</span></button>
+        <button class="btn-xs btn btn-danger" type="button" onclick="javascript:hero_show_hide_table('#embed_factor-{{k.hero_id}}')">{{ t_embed_factor }}</button>
       </span>
     </li>
     {% if equiped_info|length > 0 %}
@@ -64,6 +67,26 @@
           <td>{{ v.growup }}</td>
           <td>{{ v.cur_exp }}</td>
           <td>{{ v.wakeup }}</td>
+        </tr>
+      {% endfor %}
+      </tbody>
+    </table>
+    {% endif %}
+    {% if factor_info|length > 0 %}
+    <table class="table embed_factor" id="embed_factor-{{k.hero_id}}" style="display: none">
+      <thead>
+        <tr>
+          <th>{{ t_item_pos }}</th>
+          <th>{{ t_base_id }}</th>
+          <th>{{ t_factor_name }}</th>
+        </tr>
+      </thead>
+      <tbody>
+      {% for f in factor_info %}
+        <tr {% cycle 'class="danger"' '' %}>
+          <td>{{ forloop.counter }}</td>
+          <td>{{ f }}</td>
+          <td>{{ f|enum_factor:panel.id }}</td>
         </tr>
       {% endfor %}
       </tbody>

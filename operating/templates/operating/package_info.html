@@ -12,10 +12,12 @@
 {% trans "Equip Name" as t_equip_name %}
 {% trans "Wake Up" as t_wake_up %}
 {% trans "Item Info" as t_item_info %}
+{% trans "Factor Info" as t_factor_info %}
 {% trans "Status" as t_status %}
 {% trans "Function Type" as t_function_type %}
 {% trans "Base ID" as t_base_id %}
 {% trans "Item Name" as t_item_name %}
+{% trans "Factor Name" as t_factor_name %}
 {% trans "Type" as t_type %}
 <ul class="list-group">
   <li class="list-group-item"><h4><b>{{ t_package_item }}</b></h4></li>
@@ -82,6 +84,30 @@
           <td>{{ v.stat }}</td>
           <td>{{ v.func_type }}</td>
           <td>{{ v.type }}</td>
+        </tr>
+      {% endfor %}
+      </tbody>
+    </table>
+  {% endwith %}
+  {% with factor_info=player.package_data.factor_info %}
+  <li class="list-group-item"><b>{{ t_factor_info }}</b>
+      <span class="pull-right">
+        <button class="btn-xs btn btn-default" type="button" onclick="javascript:package_show_hide_table('#factor')">{{ t_item }} <span class="badge">{{ factor_info.factor_data|length }}</span></button>
+      </span></li>
+    <table class="table factor table-striped table-condensed" id="factor" style="display: none">
+      <thead>
+        <tr>
+          <th>{{ t_base_id }}</th>
+          <th>{{ t_factor_name }}</th>
+          <th>{{ t_count }}</th>
+        </tr>
+      </thead>
+      <tbody>
+      {% for f in factor_info.factor_data %}
+        <tr>
+          <td>{{ f.factor_id }}</td>
+          <td>{{ f.factor_id|enum_factor:panel.id }}</td>
+          <td>{{ f.count }}</td>
         </tr>
       {% endfor %}
       </tbody>

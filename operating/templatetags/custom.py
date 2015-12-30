@@ -67,6 +67,13 @@ def filter_list(l, label, v=None, r=None):
     return None
 
 
+def embed_factor(embed_factor_info, hero_id):
+    r = Common.first(filter_list(embed_factor_info, 'hero_id', hero_id))
+    if r:
+        return r['factor_slot_info']
+    return None
+
+
 def equiped(hero_equiped_info, hero_id):
     r = Common.first(filter_list(hero_equiped_info, 'hero_id', hero_id))
     if r:
@@ -274,6 +281,7 @@ register.filter(ts2date)
 register.filter(ts2time)
 register.filter(second2time)
 register.filter(online)
+register.filter(embed_factor)
 register.filter(equiped)
 register.filter(tab_join)
 register.filter(filter_dungeon)
@@ -281,6 +289,7 @@ register.filter(filter_dungeon_label)
 register.filter(enum_hero)
 register.filter(enum_equip)
 register.filter(enum_item)
+register.filter(enum_factor)
 register.filter(enum_restype)
 register.filter(enum_building)
 register.filter(rank_val)
