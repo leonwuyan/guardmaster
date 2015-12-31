@@ -89,6 +89,7 @@
       </tbody>
     </table>
   {% endwith %}
+  {% if url != 'single_query_tw' %}
   {% with factor_info=player.package_data.factor_info %}
   <li class="list-group-item"><b>{{ t_factor_info }}</b>
       <span class="pull-right">
@@ -113,6 +114,7 @@
       </tbody>
     </table>
   {% endwith %}
+  {% endif %}
 </ul>
 <script type="text/javascript">
 function package_show_hide_table(k) {

@@ -12,6 +12,7 @@ import ctypes
 import struct
 import binascii
 import xinge
+import time
 from pprint import pprint
 
 # content = u'推送测试,全部设备'
@@ -33,6 +34,14 @@ class ServerSocket(object):
         self.empty = {'result': 3}
         self.timeout = {'result': 2}
         self.success = {'result': 0}
+
+    def function_log(func):
+        def _function_log(*args, **kwargs):
+            now = time.strftime('%Y-%m-%d %H:%M:%S', time.localtime(time.time()))
+            print '[{0}] : {1}{2}'.format(now, func.__name__, args)
+            ret = func(*args, **kwargs)
+            return ret
+        return _function_log
 
     def _getattr(self, pb, attr):
         if pb.__class__ is dict:
@@ -201,6 +210,7 @@ class ServerSocket(object):
             return self.res(pb)
         return {'result': self._getattr(pb, 'result')}
 
+    @function_log
     def get_player_account(self, uid=None, name=None):
         if uid is None and name is None:
             return self.empty
@@ -212,6 +222,7 @@ class ServerSocket(object):
             r = {'role_name': name, }
         return self._get(p, r)
 
+    @function_log
     def get_player_world_info(self, uin):
         if uin is None:
             return self.empty
@@ -219,6 +230,7 @@ class ServerSocket(object):
         r = {'uin': uin}
         return self._get(p, r)
 
+    @function_log
     def get_player_base_info(self, uid, world_id):
         if uid is None or world_id is None:
             return self.empty
@@ -226,6 +238,7 @@ class ServerSocket(object):
         r = {'uid': uid, 'world_id': world_id}
         return self._get(p, r)
 
+    @function_log
     def get_rank_list(self, world_id, rank_id, start_pos, get_count):
         if start_pos is None or rank_id is None or world_id is None or get_count is None:
             return self.empty
@@ -238,6 +251,7 @@ class ServerSocket(object):
         }
         return self._get(p, r)
 
+    @function_log
     def get_rank_pos(self, uid, world_id, rank_id):
         if uid is None or rank_id is None or world_id is None:
             return self.empty
@@ -245,6 +259,7 @@ class ServerSocket(object):
         r = {'uid': uid, 'world_id': world_id, 'rank_id': rank_id}
         return self._get(p, r)
 
+    @function_log
     def get_player_pve_info(self, uid, world_id):
         if uid is None or world_id is None:
             return self.empty
@@ -252,6 +267,7 @@ class ServerSocket(object):
         r = {'uid': uid, 'world_id': world_id}
         return self._get(p, r)
 
+    @function_log
     def get_player_building_and_package(self, uid, world_id):
         if uid is None or world_id is None:
             return self.empty
@@ -259,6 +275,7 @@ class ServerSocket(object):
         r = {'uid': uid, 'world_id': world_id}
         return self._get(p, r)
 
+    @function_log
     def get_player_total_recharge(self, uid, world_id):
         if uid is None or world_id is None:
             return self.empty

@@ -78,15 +78,13 @@
         <td><b>{{ t_gold }}</b></td>
         <td>{{ player.gold_cnt }}</td>
         <td width="200px">
-        {% ifequal url 'single_query'  %}
+        {% if url != 'single_query_limit'  %}
           <input type="text" style="width: 80px;" value="0" name="add2">
+          {% ifequal url 'single_query_inner'  %}
+            <button type="submit" class="btn btn-default btn-xs" onclick="dataAccess.addJSON({{server_id}},{{player.uid|default:0}},'add',2)">{{t_add}}</button>
+          {% endifequal %}
           <button type="submit" class="btn btn-default btn-xs" onclick="dataAccess.reduceJSON({{server_id}},{{player.uid|default:0}},'add',2)">{{t_reduce}}</button>
-        {% endifequal %}
-        {% ifequal url 'single_query_inner'  %}
-          <input type="text" style="width: 80px;" value="0" name="add2">
-          <button type="submit" class="btn btn-default btn-xs" onclick="dataAccess.addJSON({{server_id}},{{player.uid|default:0}},'add',2)">{{t_add}}</button>
-          <button type="submit" class="btn btn-default btn-xs" onclick="dataAccess.reduceJSON({{server_id}},{{player.uid|default:0}},'add',2)">{{t_reduce}}</button>
-        {% endifequal %}
+        {% endif %}
         </td>
         <td><b>{{ t_times_of_buy_gold }}</b></td>
         <td>{{ player.gold_buy_times }}</td>
@@ -95,15 +93,13 @@
         <td><b>{{ t_crystal }}</b></td>
         <td>{{ player.crystal_cnt }}</td>
         <td>
-        {% ifequal url 'single_query'  %}
+        {% if url != 'single_query_limit'  %}
           <input type="text" style="width: 80px;" value="0" name="add1">
+          {% ifequal url 'single_query_inner'  %}
+            <button type="submit" class="btn btn-default btn-xs" onclick="dataAccess.addJSON({{server_id}},{{player.uid|default:0}},'add',1)">{{t_add}}</button>
+          {% endifequal %}
           <button type="submit" class="btn btn-default btn-xs" onclick="dataAccess.reduceJSON({{server_id}},{{player.uid|default:0}},'add',1)">{{t_reduce}}</button>
-        {% endifequal %}
-        {% ifequal url 'single_query_inner'  %}
-          <input type="text" style="width: 80px;" value="0" name="add1">
-          <button type="submit" class="btn btn-default btn-xs" onclick="dataAccess.addJSON({{server_id}},{{player.uid|default:0}},'add',1)">{{t_add}}</button>
-          <button type="submit" class="btn btn-default btn-xs" onclick="dataAccess.reduceJSON({{server_id}},{{player.uid|default:0}},'add',1)">{{t_reduce}}</button>
-        {% endifequal %}
+        {% endif %}
         </td>
         <td><b>{{ t_times_of_buy_crystal }}</b></td>
         <td>{{ player.crystal_buy_times }}</td>
@@ -112,15 +108,13 @@
         <td><b>{{ t_power }}</b></td>
         <td>{{ player.power_cnt }}</td>
         <td>
-        {% ifequal url 'single_query'  %}
+        {% if url != 'single_query_limit'  %}
           <input type="text" style="width: 80px;" value="0" name="add6">
+          {% ifequal url 'single_query_inner'  %}
+            <button type="submit" class="btn btn-default btn-xs" onclick="dataAccess.addJSON({{server_id}},{{player.uid|default:0}},'add',6)">{{t_add}}</button>
+          {% endifequal %}
           <button type="submit" class="btn btn-default btn-xs" onclick="dataAccess.reduceJSON({{server_id}},{{player.uid|default:0}},'add',6)">{{t_reduce}}</button>
-        {% endifequal %}
-        {% ifequal url 'single_query_inner'  %}
-          <input type="text" style="width: 80px;" value="0" name="add6">
-          <button type="submit" class="btn btn-default btn-xs" onclick="dataAccess.addJSON({{server_id}},{{player.uid|default:0}},'add',6)">{{t_add}}</button>
-          <button type="submit" class="btn btn-default btn-xs" onclick="dataAccess.reduceJSON({{server_id}},{{player.uid|default:0}},'add',6)">{{t_reduce}}</button>
-        {% endifequal %}
+        {% endif %}
         </td>
         <td><b>{{ t_times_of_buy_power }}</b></td>
         <td>{{ player.power_buy_times }}</td>
@@ -129,15 +123,13 @@
         <td><b>{{ t_skill_point }}</b></td>
         <td>{{ player.skillpoint_cnt }}</td>
         <td>
-        {% ifequal url 'single_query'  %}
+        {% if url != 'single_query_limit'  %}
           <input type="text" style="width: 80px;" value="0" name="add4">
+          {% ifequal url 'single_query_inner'  %}
+            <button type="submit" class="btn btn-default btn-xs" onclick="dataAccess.addJSON({{server_id}},{{player.uid|default:0}},'add',4)">{{t_add}}</button>
+          {% endifequal %}
           <button type="submit" class="btn btn-default btn-xs" onclick="dataAccess.reduceJSON({{server_id}},{{player.uid|default:0}},'add',4)">{{t_reduce}}</button>
-        {% endifequal %}
-        {% ifequal url 'single_query_inner'  %}
-          <input type="text" style="width: 80px;" value="0" name="add4">
-          <button type="submit" class="btn btn-default btn-xs" onclick="dataAccess.addJSON({{server_id}},{{player.uid|default:0}},'add',4)">{{t_add}}</button>
-          <button type="submit" class="btn btn-default btn-xs" onclick="dataAccess.reduceJSON({{server_id}},{{player.uid|default:0}},'add',4)">{{t_reduce}}</button>
-        {% endifequal %}
+        {% endif %}
         </td>
         <td><b>{{ t_times_of_buy_skill_point }}</b></td>
         <td>{{ player.skillpoint_buy_times }}</td>
@@ -146,15 +138,13 @@
         <td><b>{{ t_money }}</b></td>
         <td>{{ player.money_cnt }}</td>
         <td>
-        {% ifequal url 'single_query'  %}
+        {% if url != 'single_query_limit'  %}
           <input type="text" style="width: 80px;" value="0" name="add3">
+          {% ifequal url 'single_query_inner'  %}
+            <button type="submit" class="btn btn-default btn-xs" onclick="dataAccess.addJSON({{server_id}},{{player.uid|default:0}},'add',3)">{{t_add}}</button>
+          {% endifequal %}
           <button type="submit" class="btn btn-default btn-xs" onclick="dataAccess.reduceJSON({{server_id}},{{player.uid|default:0}},'add',3)">{{t_reduce}}</button>
-        {% endifequal %}
-        {% ifequal url 'single_query_inner'  %}
-          <input type="text" style="width: 80px;" value="0" name="add3">
-          <button type="submit" class="btn btn-default btn-xs" onclick="dataAccess.addJSON({{server_id}},{{player.uid|default:0}},'add',3)">{{t_add}}</button>
-          <button type="submit" class="btn btn-default btn-xs" onclick="dataAccess.reduceJSON({{server_id}},{{player.uid|default:0}},'add',3)">{{t_reduce}}</button>
-        {% endifequal %}
+        {% endif %}
         </td>
         <td><b>{{ t_times_of_growup }}</b></td>
         <td>{{ player.growup_cnt }}</td>
@@ -163,15 +153,13 @@
         <td><b>{{ t_score_of_rank_battle }}</b></td>
         <td>{{ player.rank_battle_score }}</td>
         <td>
-        {% ifequal url 'single_query'  %}
+        {% if url != 'single_query_limit'  %}
           <input type="text" style="width: 80px;" value="0" name="add11">
+          {% ifequal url 'single_query_inner'  %}
+            <button type="submit" class="btn btn-default btn-xs" onclick="dataAccess.addJSON({{server_id}},{{player.uid|default:0}},'add',11)">{{t_add}}</button>
+          {% endifequal %}
           <button type="submit" class="btn btn-default btn-xs" onclick="dataAccess.reduceJSON({{server_id}},{{player.uid|default:0}},'add',11)">{{t_reduce}}</button>
-        {% endifequal %}
-        {% ifequal url 'single_query_inner'  %}
-          <input type="text" style="width: 80px;" value="0" name="add11">
-          <button type="submit" class="btn btn-default btn-xs" onclick="dataAccess.addJSON({{server_id}},{{player.uid|default:0}},'add',11)">{{t_add}}</button>
-          <button type="submit" class="btn btn-default btn-xs" onclick="dataAccess.reduceJSON({{server_id}},{{player.uid|default:0}},'add',11)">{{t_reduce}}</button>
-        {% endifequal %}
+        {% endif %}
         </td>
         <td><b>{{ t_endless_score }}</b></td>
         <td>{{ player.endless_score }}</td>
@@ -180,15 +168,13 @@
         <td><b>{{ t_winpoint }}</b></td>
         <td>{{ player.online_battle_win_point }}</td>
         <td>
-        {% ifequal url 'single_query'  %}
+        {% if url != 'single_query_limit'  %}
           <input type="text" style="width: 80px;" value="0" name="add14">
+          {% ifequal url 'single_query_inner'  %}
+            <button type="submit" class="btn btn-default btn-xs" onclick="dataAccess.addJSON({{server_id}},{{player.uid|default:0}},'add',14)">{{t_add}}</button>
+          {% endifequal %}
           <button type="submit" class="btn btn-default btn-xs" onclick="dataAccess.reduceJSON({{server_id}},{{player.uid|default:0}},'add',14)">{{t_reduce}}</button>
-        {% endifequal %}
-        {% ifequal url 'single_query_inner'  %}
-          <input type="text" style="width: 80px;" value="0" name="add14">
-          <button type="submit" class="btn btn-default btn-xs" onclick="dataAccess.addJSON({{server_id}},{{player.uid|default:0}},'add',14)">{{t_add}}</button>
-          <button type="submit" class="btn btn-default btn-xs" onclick="dataAccess.reduceJSON({{server_id}},{{player.uid|default:0}},'add',14)">{{t_reduce}}</button>
-        {% endifequal %}
+        {% endif %}
         </td>
         <td><b>{{ t_endless_floor }}</b></td>
         <td>{{ player.endless_floor }}</td>
@@ -204,6 +190,7 @@
         </td>
         <td colspan="2"></td>
       </tr>
+      {% if url != 'single_query_tw' %}
       <tr>
         <td><b>{{ t_m_c_r_d }}</b></td>
         <td colspan="4">{{ player.month_remain_days }}
@@ -214,6 +201,7 @@
           </span>
         </td>
       </tr>
+      {% endif %}
       <tr>
         <td><b>{{ t_chat_ban_time }}</b></td>
         <td colspan="4">{{ player.world_info.chat_ban_time|ts2bantime }}
@@ -248,7 +236,7 @@
           </span>
         </td>
       </tr>
-      {% ifequal url 'single_query'  %}
+      {% if url != 'single_query_limit'  %}
       <tr>
         <td><b>{{ t_other_contorl }}</b></td>
         <td colspan="4"><span class="pull-right">
@@ -258,18 +246,7 @@
           <button type="submit" class="btn btn-default btn-xs" onclick="dataAccess.addJSON({{server_id}},{{player.uid|default:0}},'dungeon',150)">{{t_unlock_150_dungeon}}</button>
         </span></td>
       </tr>
-      {% endifequal %}
-      {% ifequal url 'single_query_inner'  %}
-      <tr>
-        <td><b>{{ t_other_contorl }}</b></td>
-        <td colspan="4"><span class="pull-right">
-          <button type="submit" class="btn btn-default btn-xs" onclick="dataAccess.addJSON({{server_id}},{{player.uid|default:0}},'add',5)">{{t_add_100k_exp_items}}</button>
-          <button type="submit" class="btn btn-default btn-xs" onclick="dataAccess.addJSON({{server_id}},{{player.uid|default:0}},'dungeon',50)">{{t_unlock_50_dungeon}}</button>
-          <button type="submit" class="btn btn-default btn-xs" onclick="dataAccess.addJSON({{server_id}},{{player.uid|default:0}},'dungeon',100)">{{t_unlock_100_dungeon}}</button>
-          <button type="submit" class="btn btn-default btn-xs" onclick="dataAccess.addJSON({{server_id}},{{player.uid|default:0}},'dungeon',150)">{{t_unlock_150_dungeon}}</button>
-        </span></td>
-      </tr>
-      {% endifequal %}
+      {% endif %}
     </tbody>
   </table>
   <!-- List -->

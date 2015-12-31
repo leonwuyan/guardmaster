@@ -41,7 +41,9 @@
       <span class="pull-right">
         <span>{{ t_skill }} [ {{ k.skill|length }} ] </span>
         <button class="btn-xs btn btn-info" type="button" onclick="javascript:hero_show_hide_table('#equiped-{{k.hero_id}}')">{{ t_equiped }} <span class="badge">{{ equiped_info|length }}</span></button>
+        {% if url != 'single_query_tw' %}
         <button class="btn-xs btn btn-danger" type="button" onclick="javascript:hero_show_hide_table('#embed_factor-{{k.hero_id}}')">{{ t_embed_factor }}</button>
+        {% endif %}
       </span>
     </li>
     {% if equiped_info|length > 0 %}
@@ -72,6 +74,7 @@
       </tbody>
     </table>
     {% endif %}
+    {% if url != 'single_query_tw' %}
     {% if factor_info|length > 0 %}
     <table class="table embed_factor" id="embed_factor-{{k.hero_id}}" style="display: none">
       <thead>
@@ -91,6 +94,7 @@
       {% endfor %}
       </tbody>
     </table>
+    {% endif %}
     {% endif %}
     {% endwith %}
   {% endfor %}

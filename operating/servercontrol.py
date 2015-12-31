@@ -153,6 +153,38 @@ class ServerControl(object):
         ret['month_remain_days'] = month_card.get('month_remain_days', 0)
         return ret
 
+    def base_info_tw(self):
+        (ss, uin, world_id, world_info) = self._params()
+        if ss is None:
+            return None
+        ret = ss.get_player_base_info(self.uid, world_id)
+        ret['uin'] = uin
+        ret['world_id'] = world_id
+        ret['world_info'] = world_info
+        recharge = ss.get_player_total_recharge(self.uid, world_id)
+        if recharge['result'] == 0:
+            ret['total_recharge'] = recharge['total_recharge']
+        building_info = ss.get_player_building_and_package(self.uid, world_id)
+        if building_info['result'] != 0:
+            return ret
+        ret['building_data'] = building_info['building_info']['building_data']
+        ret['package_data'] = building_info['building_info']['package_data']
+        player_pve_info = ss.get_player_pve_info(self.uid, world_id)
+        if player_pve_info['result'] != 0:
+            return ret
+        ret['pve_info'] = player_pve_info['pve_info']
+        ret['hero_endless_info'] = player_pve_info['hero_endless_info']
+
+        rank_list = self._rank_list()
+        rank_list = map(lambda x: {
+                'rank_name': x['EnumDes'],
+                'rank_id': int(x['EnumCd']),
+                'rank_info': ss.get_rank_pos(self.uid, world_id, int(x['EnumCd'])),
+            }, rank_list)
+        ret['rank_list'] = rank_list
+
+        return ret
+
     def _send_mail(self, title, content, acc=[]):
         (ss, uin, world_id, world_info) = self._params()
         if ss is None:

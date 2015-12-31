@@ -189,7 +189,10 @@ def single(request, panel_id, url=Common.URL):
             panel_id,
             request.user.username,
             Common.get_client_ip(request))
-        ret = sc.base_info()
+        if url == 'single_query_tw':
+            ret = sc.base_info_tw()
+        else:
+            ret = sc.base_info()
         d['player'] = ret
         d['server_id'] = server_id
         d['uid'] = uid
