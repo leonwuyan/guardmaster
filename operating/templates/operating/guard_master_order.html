@@ -51,13 +51,13 @@
         <label>{{t_list_of_orders}}</label>
         <select class="form-control" name="order" onchange="javascript:calc_param_count()">
           {% for order in orders %}
-          <option value="{{order.label}}" param="{{order.param_count}}">{{order.label}}</option>
+          <option value="{{order.label}}" param="{{order.param_count}}" remarks="{{order.remarks}}">{{order.label}}</option>
           {% endfor %}
         </select>
       </div>
       <div class="form-group" style="margin-bottom: 5px" id="param">
       </div>
-      <button type="submit" class="btn btn-default btn-sm">{{t_execute}}</button>
+      <button type="submit" class="btn btn-default btn-sm" onclick="return require_execute()">{{t_execute}}</button>
     </form>
 
   </div>
@@ -66,7 +66,9 @@
 <script type="text/javascript">
 function calc_param_count(){
   count = parseInt($('option:selected', "select[name='order']").attr('param'))
-  $('#param').html('')
+  remarks = $('option:selected', "select[name='order']").attr('remarks')
+  remarks = '<p style="color:red">' + remarks + '</p>'
+  $('#param').html(remarks)
   for(i=0; i<count; i++){
     title = '<label>{{t_param}} - ' + i + '</label>'
     input = '<input type="text" class="form-control" name="param">'
@@ -74,6 +76,12 @@ function calc_param_count(){
     $('#param').append(input)
   }
   management.numberOnly("input[name='param']");
+}
+function require_execute(){
+  if(!confirm('Are You Sure?')){
+    return false
+  }
+  return true
 }
  $(document).ready(function() {
   management.numberOnly("input[name='uid']");

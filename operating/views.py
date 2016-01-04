@@ -364,9 +364,14 @@ def guard_master_order(request, panel_id, url=Common.URL):
         server = get_object_or_404(Server, pk=server_id)
         gm_text = request.POST.get('order')
         param = request.POST.getlist('param')
-        param = map(lambda x: int(x), param)
-        sc = ServerControl(server, uid, panel_id, request.user.username, 0)
-        ret = sc.guard_master_order_copy_gm_text(gm_text, param)
+        try:
+            param = map(lambda x: int(x), param)
+            sc = ServerControl(server, uid, panel_id, request.user.username, 0)
+            ret = sc.guard_master_order_copy_gm_text(gm_text, param)
+        except Exception as e:
+            print e
+            hrrurl = reverse('operating:guard_master_order', args=(panel_id, url)) + '?result=1'
+            return HttpResponseRedirect(hrrurl)
         if ret['result'] == 0:
             s = gm_text + "|" + str(param)
             sc.log(s)

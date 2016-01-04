@@ -29,7 +29,7 @@ class NotifyAdmin(admin.ModelAdmin):
 
 
 class GmOrderAdmin(admin.ModelAdmin):
-    list_display = ('label', 'param_count', 'is_work', 'seqid')
+    list_display = ('label', 'param_count', 'is_work', 'remarks', 'seqid')
 
 admin.site.register(Server, ServerAdmin)
 admin.site.register(ResponseMail, ResponseMailAdmin)
