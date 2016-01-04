@@ -19,7 +19,7 @@ import rescommon_pb2
 DESCRIPTOR = _descriptor.FileDescriptor(
   name='hero.proto',
   package='',
-  serialized_pb=_b('\n\nhero.proto\x1a\x0frescommon.proto\"<\n\x15\x43SPKG_CMD_HERO_GROWUP\x12\x0f\n\x07hero_id\x18\x01 \x01(\r\x12\x12\n\ngrow_up_id\x18\x02 \x01(\r\"\x82\x01\n\x15SCPKG_CMD_HERO_GROWUP\x12\x0e\n\x06result\x18\x01 \x01(\r\x12\x0f\n\x07hero_id\x18\x02 \x01(\r\x12\x12\n\ngrow_up_id\x18\x03 \x01(\r\x12\x18\n\x10grow_up_beg_time\x18\x04 \x01(\r\x12\x1a\n\x12grow_up_total_time\x18\x05 \x01(\r\"r\n\x19SCPKG_CMD_HERO_GROWUP_END\x12\x0e\n\x06result\x18\x01 \x01(\r\x12\x0f\n\x07hero_id\x18\x02 \x01(\r\x12\x12\n\ngrow_up_id\x18\x03 \x01(\r\x12\x0e\n\x06max_hp\x18\x04 \x01(\r\x12\x10\n\x08strength\x18\x05 \x01(\r\"I\n\x16SCDT_HERO_ATT_EFFECTED\x12\x0f\n\x07hero_id\x18\x01 \x01(\r\x12\x0e\n\x06max_hp\x18\x02 \x01(\r\x12\x0e\n\x06\x64\x61mage\x18\x03 \x01(\r\"\xca\x01\n\x18SCPKG_CMD_EMBLEM_LEVELUP\x12\x0f\n\x07hero_id\x18\x01 \x01(\r\x12\x0e\n\x06result\x18\x02 \x01(\r\x12\x11\n\temblem_id\x18\x03 \x01(\r\x12\x11\n\temblem_lv\x18\x04 \x01(\r\x12\x12\n\nemblem_exp\x18\x05 \x01(\r\x12\x11\n\tadded_exp\x18\x06 \x01(\r\x12\x0c\n\x04rate\x18\x07 \x01(\x02\x12\x32\n\x11hero_att_effected\x18\x08 \x01(\x0b\x32\x17.SCDT_HERO_ATT_EFFECTED\"\x84\x01\n\x17SCPKG_CMD_EMBLEM_UNLOCK\x12\x0f\n\x07hero_id\x18\x01 \x01(\r\x12\x11\n\temblem_id\x18\x02 \x01(\r\x12\x11\n\temblem_lv\x18\x03 \x01(\r\x12\x32\n\x11hero_att_effected\x18\x04 \x01(\x0b\x32\x17.SCDT_HERO_ATT_EFFECTED\"=\n\x15\x43SPKG_CMD_UNLOCK_HERO\x12\x0f\n\x07hero_id\x18\x01 \x01(\r\x12\x13\n\x0bunlock_type\x18\x02 \x01(\r\">\n\x1a\x43SPKG_CMD_LEVELUP_DIRECTLY\x12\x10\n\x08obj_type\x18\x01 \x01(\r\x12\x0e\n\x06obj_id\x18\x02 \x01(\r\"L\n\x16SCPKG_CMD_SPBORN_BEGIN\x12\x17\n\x0fspborn_beg_time\x18\x01 \x01(\r\x12\x19\n\x11spborn_total_time\x18\x02 \x01(\r\"Z\n\x14SCPKG_CMD_SPBORN_END\x12\x0e\n\x06\x63ur_sp\x18\x01 \x01(\r\x12\x17\n\x0fspborn_beg_time\x18\x02 \x01(\r\x12\x19\n\x11spborn_total_time\x18\x03 \x01(\r\"<\n\x17\x43SPKG_CMD_SKILL_LEVELUP\x12\x0f\n\x07hero_id\x18\x01 \x01(\r\x12\x10\n\x08skill_id\x18\x02 \x01(\r\"L\n\x17SCPKG_CMD_SKILL_LEVELUP\x12\x0e\n\x06result\x18\x01 \x01(\r\x12\x0f\n\x07hero_id\x18\x02 \x01(\r\x12\x10\n\x08skill_id\x18\x03 \x01(\r\"=\n\x19NOTIFY_HERO_NEW_ROLE_BUFF\x12\x0f\n\x07hero_id\x18\x01 \x02(\r\x12\x0f\n\x07leftCnt\x18\x02 \x01(\r\">\n\x18\x43SPKG_CMD_EMBLEM_LEVELUP\x12\x0f\n\x07hero_id\x18\x01 \x01(\r\x12\x11\n\temblem_id\x18\x02 \x01(\r\"A\n\x1b\x43SPKG_CMD_ACTIVE_TALENT_REQ\x12\x0f\n\x07hero_id\x18\x01 \x01(\r\x12\x11\n\ttalent_id\x18\x02 \x01(\r\"S\n\x1bSCPKG_CMD_ACTIVE_TALENT_RES\x12\x0e\n\x06result\x18\x01 \x01(\x05\x12\x0f\n\x07hero_id\x18\x02 \x01(\r\x12\x13\n\x0btalent_info\x18\x03 \x01(\x04\"e\n CSPKG_CMD_ACTIVE_TALENT_HIDE_REQ\x12\x0f\n\x07hero_id\x18\x01 \x01(\r\x12\x16\n\x0etalent_hide_id\x18\x02 \x01(\r\x12\x18\n\x10\x61\x63tive_talent_id\x18\x03 \x01(\r\"\x7f\n SCPKG_CMD_ACTIVE_TALENT_HIDE_RES\x12\x0e\n\x06result\x18\x01 \x01(\x05\x12\x0f\n\x07hero_id\x18\x02 \x01(\r\x12:\n\x10talent_hide_info\x18\x03 \x03(\x0b\x32 .ST_HERO_BATTLE_TALENT_HIDE_INFO\"*\n\x1cSCPKG_NTF_TOTALABILITY_LEVEL\x12\n\n\x02id\x18\x01 \x02(\r')
+  serialized_pb=_b('\n\nhero.proto\x1a\x0frescommon.proto\"<\n\x15\x43SPKG_CMD_HERO_GROWUP\x12\x0f\n\x07hero_id\x18\x01 \x01(\r\x12\x12\n\ngrow_up_id\x18\x02 \x01(\r\"\x82\x01\n\x15SCPKG_CMD_HERO_GROWUP\x12\x0e\n\x06result\x18\x01 \x01(\r\x12\x0f\n\x07hero_id\x18\x02 \x01(\r\x12\x12\n\ngrow_up_id\x18\x03 \x01(\r\x12\x18\n\x10grow_up_beg_time\x18\x04 \x01(\r\x12\x1a\n\x12grow_up_total_time\x18\x05 \x01(\r\"r\n\x19SCPKG_CMD_HERO_GROWUP_END\x12\x0e\n\x06result\x18\x01 \x01(\r\x12\x0f\n\x07hero_id\x18\x02 \x01(\r\x12\x12\n\ngrow_up_id\x18\x03 \x01(\r\x12\x0e\n\x06max_hp\x18\x04 \x01(\r\x12\x10\n\x08strength\x18\x05 \x01(\r\"I\n\x16SCDT_HERO_ATT_EFFECTED\x12\x0f\n\x07hero_id\x18\x01 \x01(\r\x12\x0e\n\x06max_hp\x18\x02 \x01(\r\x12\x0e\n\x06\x64\x61mage\x18\x03 \x01(\r\"\xca\x01\n\x18SCPKG_CMD_EMBLEM_LEVELUP\x12\x0f\n\x07hero_id\x18\x01 \x01(\r\x12\x0e\n\x06result\x18\x02 \x01(\r\x12\x11\n\temblem_id\x18\x03 \x01(\r\x12\x11\n\temblem_lv\x18\x04 \x01(\r\x12\x12\n\nemblem_exp\x18\x05 \x01(\r\x12\x11\n\tadded_exp\x18\x06 \x01(\r\x12\x0c\n\x04rate\x18\x07 \x01(\x02\x12\x32\n\x11hero_att_effected\x18\x08 \x01(\x0b\x32\x17.SCDT_HERO_ATT_EFFECTED\"\x84\x01\n\x17SCPKG_CMD_EMBLEM_UNLOCK\x12\x0f\n\x07hero_id\x18\x01 \x01(\r\x12\x11\n\temblem_id\x18\x02 \x01(\r\x12\x11\n\temblem_lv\x18\x03 \x01(\r\x12\x32\n\x11hero_att_effected\x18\x04 \x01(\x0b\x32\x17.SCDT_HERO_ATT_EFFECTED\"=\n\x15\x43SPKG_CMD_UNLOCK_HERO\x12\x0f\n\x07hero_id\x18\x01 \x01(\r\x12\x13\n\x0bunlock_type\x18\x02 \x01(\r\">\n\x1a\x43SPKG_CMD_LEVELUP_DIRECTLY\x12\x10\n\x08obj_type\x18\x01 \x01(\r\x12\x0e\n\x06obj_id\x18\x02 \x01(\r\"L\n\x16SCPKG_CMD_SPBORN_BEGIN\x12\x17\n\x0fspborn_beg_time\x18\x01 \x01(\r\x12\x19\n\x11spborn_total_time\x18\x02 \x01(\r\"Z\n\x14SCPKG_CMD_SPBORN_END\x12\x0e\n\x06\x63ur_sp\x18\x01 \x01(\r\x12\x17\n\x0fspborn_beg_time\x18\x02 \x01(\r\x12\x19\n\x11spborn_total_time\x18\x03 \x01(\r\"<\n\x17\x43SPKG_CMD_SKILL_LEVELUP\x12\x0f\n\x07hero_id\x18\x01 \x01(\r\x12\x10\n\x08skill_id\x18\x02 \x01(\r\"L\n\x17SCPKG_CMD_SKILL_LEVELUP\x12\x0e\n\x06result\x18\x01 \x01(\r\x12\x0f\n\x07hero_id\x18\x02 \x01(\r\x12\x10\n\x08skill_id\x18\x03 \x01(\r\"=\n\x19NOTIFY_HERO_NEW_ROLE_BUFF\x12\x0f\n\x07hero_id\x18\x01 \x02(\r\x12\x0f\n\x07leftCnt\x18\x02 \x01(\r\">\n\x18\x43SPKG_CMD_EMBLEM_LEVELUP\x12\x0f\n\x07hero_id\x18\x01 \x01(\r\x12\x11\n\temblem_id\x18\x02 \x01(\r\"f\n\x1b\x43SPKG_CMD_ACTIVE_TALENT_REQ\x12\x0f\n\x07hero_id\x18\x01 \x01(\r\x12\x11\n\ttalent_id\x18\x02 \x01(\r\x12\x11\n\ttalent_lv\x18\x03 \x01(\r\x12\x10\n\x08is_clear\x18\x04 \x01(\x08\"\xb9\x01\n\x1bSCPKG_CMD_ACTIVE_TALENT_RES\x12\x0e\n\x06result\x18\x01 \x01(\x05\x12\x0f\n\x07hero_id\x18\x02 \x01(\r\x12\x13\n\x0btalent_info\x18\x03 \x01(\x04\x12\x16\n\x0etalent_lv_info\x18\x04 \x03(\r\x12\x10\n\x08is_clear\x18\x05 \x01(\x08\x12:\n\x10talent_hide_info\x18\x06 \x03(\x0b\x32 .ST_HERO_BATTLE_TALENT_HIDE_INFO\"e\n CSPKG_CMD_ACTIVE_TALENT_HIDE_REQ\x12\x0f\n\x07hero_id\x18\x01 \x01(\r\x12\x16\n\x0etalent_hide_id\x18\x02 \x01(\r\x12\x18\n\x10\x61\x63tive_talent_id\x18\x03 \x01(\r\"\x7f\n SCPKG_CMD_ACTIVE_TALENT_HIDE_RES\x12\x0e\n\x06result\x18\x01 \x01(\x05\x12\x0f\n\x07hero_id\x18\x02 \x01(\r\x12:\n\x10talent_hide_info\x18\x03 \x03(\x0b\x32 .ST_HERO_BATTLE_TALENT_HIDE_INFO\"*\n\x1cSCPKG_NTF_TOTALABILITY_LEVEL\x12\n\n\x02id\x18\x01 \x02(\r')
   ,
   dependencies=[rescommon_pb2.DESCRIPTOR,])
 _sym_db.RegisterFileDescriptor(DESCRIPTOR)
@@ -685,6 +685,20 @@ _CSPKG_CMD_ACTIVE_TALENT_REQ = _descriptor.Descriptor(
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
+    _descriptor.FieldDescriptor(
+      name='talent_lv', full_name='CSPKG_CMD_ACTIVE_TALENT_REQ.talent_lv', index=2,
+      number=3, type=13, cpp_type=3, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    _descriptor.FieldDescriptor(
+      name='is_clear', full_name='CSPKG_CMD_ACTIVE_TALENT_REQ.is_clear', index=3,
+      number=4, type=8, cpp_type=7, label=1,
+      has_default_value=False, default_value=False,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
   ],
   extensions=[
   ],
@@ -697,7 +711,7 @@ _CSPKG_CMD_ACTIVE_TALENT_REQ = _descriptor.Descriptor(
   oneofs=[
   ],
   serialized_start=1321,
-  serialized_end=1386,
+  serialized_end=1423,
 )
 
 
@@ -729,6 +743,27 @@ _SCPKG_CMD_ACTIVE_TALENT_RES = _descriptor.Descriptor(
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
+    _descriptor.FieldDescriptor(
+      name='talent_lv_info', full_name='SCPKG_CMD_ACTIVE_TALENT_RES.talent_lv_info', index=3,
+      number=4, type=13, cpp_type=3, label=3,
+      has_default_value=False, default_value=[],
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    _descriptor.FieldDescriptor(
+      name='is_clear', full_name='SCPKG_CMD_ACTIVE_TALENT_RES.is_clear', index=4,
+      number=5, type=8, cpp_type=7, label=1,
+      has_default_value=False, default_value=False,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    _descriptor.FieldDescriptor(
+      name='talent_hide_info', full_name='SCPKG_CMD_ACTIVE_TALENT_RES.talent_hide_info', index=5,
+      number=6, type=11, cpp_type=10, label=3,
+      has_default_value=False, default_value=[],
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
   ],
   extensions=[
   ],
@@ -740,8 +775,8 @@ _SCPKG_CMD_ACTIVE_TALENT_RES = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=1388,
-  serialized_end=1471,
+  serialized_start=1426,
+  serialized_end=1611,
 )
 
 
@@ -784,8 +819,8 @@ _CSPKG_CMD_ACTIVE_TALENT_HIDE_REQ = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=1473,
-  serialized_end=1574,
+  serialized_start=1613,
+  serialized_end=1714,
 )
 
 
@@ -828,8 +863,8 @@ _SCPKG_CMD_ACTIVE_TALENT_HIDE_RES = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=1576,
-  serialized_end=1703,
+  serialized_start=1716,
+  serialized_end=1843,
 )
 
 
@@ -858,12 +893,13 @@ _SCPKG_NTF_TOTALABILITY_LEVEL = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=1705,
-  serialized_end=1747,
+  serialized_start=1845,
+  serialized_end=1887,
 )
 
 _SCPKG_CMD_EMBLEM_LEVELUP.fields_by_name['hero_att_effected'].message_type = _SCDT_HERO_ATT_EFFECTED
 _SCPKG_CMD_EMBLEM_UNLOCK.fields_by_name['hero_att_effected'].message_type = _SCDT_HERO_ATT_EFFECTED
+_SCPKG_CMD_ACTIVE_TALENT_RES.fields_by_name['talent_hide_info'].message_type = rescommon_pb2._ST_HERO_BATTLE_TALENT_HIDE_INFO
 _SCPKG_CMD_ACTIVE_TALENT_HIDE_RES.fields_by_name['talent_hide_info'].message_type = rescommon_pb2._ST_HERO_BATTLE_TALENT_HIDE_INFO
 DESCRIPTOR.message_types_by_name['CSPKG_CMD_HERO_GROWUP'] = _CSPKG_CMD_HERO_GROWUP
 DESCRIPTOR.message_types_by_name['SCPKG_CMD_HERO_GROWUP'] = _SCPKG_CMD_HERO_GROWUP

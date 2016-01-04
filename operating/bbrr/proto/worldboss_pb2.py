@@ -19,7 +19,7 @@ import protocommon_pb2
 DESCRIPTOR = _descriptor.FileDescriptor(
   name='worldboss.proto',
   package='',
-  serialized_pb=_b('\n\x0fworldboss.proto\x1a\x11protocommon.proto\"U\n&SCPKG_CMD_PLAYER_DUNBALANCE_WORLD_BOSS\x12\x13\n\x0breward_gold\x18\x01 \x01(\r\x12\x16\n\x0ereward_crystal\x18\x02 \x01(\r\".\n\x1aSCPKG_CMD_WORLD_BOSS_ERROR\x12\x10\n\x08\x65rror_no\x18\x01 \x01(\r\"M\n\'SCPKG_CMD_PLAYER_WORLD_BOSS_KILL_REWARD\x12\"\n\tdrop_info\x18\x01 \x01(\x0b\x32\x0f.CSDT_DROP_INFO\"X\n\'SCPKG_CMD_WORLD_BOSS_DAMAGE_RANK_PLAYER\x12\x0b\n\x03uid\x18\x01 \x01(\r\x12\x0c\n\x04name\x18\x02 \x01(\t\x12\x12\n\ndamage_sum\x18\x03 \x01(\r\"k\n\x1cSCPKG_WORLD_BOSS_KILLER_INFO\x12\r\n\x05index\x18\x01 \x01(\r\x12\x0b\n\x03uid\x18\x02 \x01(\r\x12\x0c\n\x04name\x18\x03 \x01(\t\x12\x11\n\tvip_level\x18\x04 \x01(\r\x12\x0e\n\x06\x64\x61mage\x18\x05 \x01(\r\"C\n CSPKG_WORLD_BOSS_KILLER_INFO_REQ\x12\x0b\n\x03uid\x18\x01 \x01(\r\x12\x12\n\nboss_index\x18\x02 \x01(\r\"0\n\x1f\x43SPKG_CMD_WORLD_BOSS_STATUS_REQ\x12\r\n\x05param\x18\x01 \x01(\r\"5\n$CSPKG_CMD_WORLD_BOSS_CHANGE_HERO_REQ\x12\r\n\x05param\x18\x01 \x01(\r\"F\n$SCPKG_CMD_WORLD_BOSS_CHANGE_HERO_RES\x12\r\n\x05param\x18\x01 \x01(\r\x12\x0f\n\x07hero_id\x18\x02 \x01(\r\"o\n\x14\x43SDT_WORLD_BOSS_HERO\x12\x0f\n\x07hero_id\x18\x01 \x01(\r\x12\x1e\n\x16hero_remain_hp_percent\x18\x02 \x01(\r\x12\x16\n\x0eremain_seconds\x18\x03 \x01(\r\x12\x0e\n\x06\x64\x61mage\x18\x04 \x01(\r\"~\n#SCPKG_CMD_WORLD_BOSS_CHALLENGE_DATA\x12\x18\n\x10world_boss_index\x18\x01 \x01(\r\x12\x12\n\nhero_index\x18\x02 \x01(\r\x12)\n\nhero_array\x18\x03 \x03(\x0b\x32\x15.CSDT_WORLD_BOSS_HERO\"\xf6\x01\n\x1bSCPKG_CMD_WORLD_BOSS_STATUS\x12\x16\n\x0e\x63ur_boss_index\x18\x01 \x01(\r\x12\x13\n\x0b\x63ur_boss_id\x18\x02 \x01(\r\x12\x17\n\x0f\x63ur_boss_max_hp\x18\x03 \x01(\x04\x12\x17\n\x0f\x63ur_boss_cur_hp\x18\x04 \x01(\x04\x12 \n\x18\x63ur_boss_refresh_seconds\x18\x05 \x01(\r\x12\x10\n\x08week_day\x18\x06 \x01(\r\x12!\n\x19sync_interval_sec_in_menu\x18\x08 \x01(\r\x12!\n\x19sync_interval_sec_in_game\x18\x07 \x01(\r\"j\n\x1b\x43SPKG_CMD_UPDATE_WORLD_BOSS\x12\x12\n\nboss_index\x18\x01 \x01(\r\x12\x17\n\x0f\x62oss_got_damage\x18\x02 \x01(\r\x12\x1e\n\x16hero_hp_remain_percent\x18\x03 \x01(\r\"i\n\x1bSCPKG_CMD_UPDATE_WORLD_BOSS\x12\x0f\n\x07\x62oss_hp\x18\x01 \x01(\x04\x12\x1d\n\x15killer_player_role_id\x18\x02 \x01(\r\x12\x1a\n\x12killer_player_name\x18\x03 \x01(\t\"X\n\x19SCPKG_CMD_WORLD_BOSS_DEAD\x12\x12\n\nboss_index\x18\x01 \x01(\r\x12\x12\n\nkiller_uid\x18\x02 \x01(\r\x12\x13\n\x0bkiller_name\x18\x03 \x01(\t')
+  serialized_pb=_b('\n\x0fworldboss.proto\x1a\x11protocommon.proto\"U\n&SCPKG_CMD_PLAYER_DUNBALANCE_WORLD_BOSS\x12\x13\n\x0breward_gold\x18\x01 \x01(\r\x12\x16\n\x0ereward_crystal\x18\x02 \x01(\r\".\n\x1aSCPKG_CMD_WORLD_BOSS_ERROR\x12\x10\n\x08\x65rror_no\x18\x01 \x01(\r\"M\n\'SCPKG_CMD_PLAYER_WORLD_BOSS_KILL_REWARD\x12\"\n\tdrop_info\x18\x01 \x01(\x0b\x32\x0f.CSDT_DROP_INFO\"X\n\'SCPKG_CMD_WORLD_BOSS_DAMAGE_RANK_PLAYER\x12\x0b\n\x03uid\x18\x01 \x01(\r\x12\x0c\n\x04name\x18\x02 \x01(\t\x12\x12\n\ndamage_sum\x18\x03 \x01(\r\"k\n\x1cSCPKG_WORLD_BOSS_KILLER_INFO\x12\r\n\x05index\x18\x01 \x01(\r\x12\x0b\n\x03uid\x18\x02 \x01(\r\x12\x0c\n\x04name\x18\x03 \x01(\t\x12\x11\n\tvip_level\x18\x04 \x01(\r\x12\x0e\n\x06\x64\x61mage\x18\x05 \x01(\r\"C\n CSPKG_WORLD_BOSS_KILLER_INFO_REQ\x12\x0b\n\x03uid\x18\x01 \x01(\r\x12\x12\n\nboss_index\x18\x02 \x01(\r\"0\n\x1f\x43SPKG_CMD_WORLD_BOSS_STATUS_REQ\x12\r\n\x05param\x18\x01 \x01(\r\"5\n$CSPKG_CMD_WORLD_BOSS_CHANGE_HERO_REQ\x12\r\n\x05param\x18\x01 \x01(\r\"F\n$SCPKG_CMD_WORLD_BOSS_CHANGE_HERO_RES\x12\r\n\x05param\x18\x01 \x01(\r\x12\x0f\n\x07hero_id\x18\x02 \x01(\r\"o\n\x14\x43SDT_WORLD_BOSS_HERO\x12\x0f\n\x07hero_id\x18\x01 \x01(\r\x12\x1e\n\x16hero_remain_hp_percent\x18\x02 \x01(\r\x12\x16\n\x0eremain_seconds\x18\x03 \x01(\r\x12\x0e\n\x06\x64\x61mage\x18\x04 \x01(\r\"~\n#SCPKG_CMD_WORLD_BOSS_CHALLENGE_DATA\x12\x18\n\x10world_boss_index\x18\x01 \x01(\r\x12\x12\n\nhero_index\x18\x02 \x01(\r\x12)\n\nhero_array\x18\x03 \x03(\x0b\x32\x15.CSDT_WORLD_BOSS_HERO\"\xf6\x01\n\x1bSCPKG_CMD_WORLD_BOSS_STATUS\x12\x16\n\x0e\x63ur_boss_index\x18\x01 \x01(\r\x12\x13\n\x0b\x63ur_boss_id\x18\x02 \x01(\r\x12\x17\n\x0f\x63ur_boss_max_hp\x18\x03 \x01(\x04\x12\x17\n\x0f\x63ur_boss_cur_hp\x18\x04 \x01(\x04\x12 \n\x18\x63ur_boss_refresh_seconds\x18\x05 \x01(\r\x12\x10\n\x08week_day\x18\x06 \x01(\r\x12!\n\x19sync_interval_sec_in_menu\x18\x08 \x01(\r\x12!\n\x19sync_interval_sec_in_game\x18\x07 \x01(\r\"~\n\x1b\x43SPKG_CMD_UPDATE_WORLD_BOSS\x12\x12\n\nboss_index\x18\x01 \x01(\r\x12\x17\n\x0f\x62oss_got_damage\x18\x02 \x01(\r\x12\x1e\n\x16hero_hp_remain_percent\x18\x03 \x01(\r\x12\x12\n\ntime_stamp\x18\x04 \x01(\r\"i\n\x1bSCPKG_CMD_UPDATE_WORLD_BOSS\x12\x0f\n\x07\x62oss_hp\x18\x01 \x01(\x04\x12\x1d\n\x15killer_player_role_id\x18\x02 \x01(\r\x12\x1a\n\x12killer_player_name\x18\x03 \x01(\t\"X\n\x19SCPKG_CMD_WORLD_BOSS_DEAD\x12\x12\n\nboss_index\x18\x01 \x01(\r\x12\x12\n\nkiller_uid\x18\x02 \x01(\r\x12\x13\n\x0bkiller_name\x18\x03 \x01(\t')
   ,
   dependencies=[protocommon_pb2.DESCRIPTOR,])
 _sym_db.RegisterFileDescriptor(DESCRIPTOR)
@@ -562,6 +562,13 @@ _CSPKG_CMD_UPDATE_WORLD_BOSS = _descriptor.Descriptor(
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
+    _descriptor.FieldDescriptor(
+      name='time_stamp', full_name='CSPKG_CMD_UPDATE_WORLD_BOSS.time_stamp', index=3,
+      number=4, type=13, cpp_type=3, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
   ],
   extensions=[
   ],
@@ -574,7 +581,7 @@ _CSPKG_CMD_UPDATE_WORLD_BOSS = _descriptor.Descriptor(
   oneofs=[
   ],
   serialized_start=1187,
-  serialized_end=1293,
+  serialized_end=1313,
 )
 
 
@@ -617,8 +624,8 @@ _SCPKG_CMD_UPDATE_WORLD_BOSS = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=1295,
-  serialized_end=1400,
+  serialized_start=1315,
+  serialized_end=1420,
 )
 
 
@@ -661,8 +668,8 @@ _SCPKG_CMD_WORLD_BOSS_DEAD = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=1402,
-  serialized_end=1490,
+  serialized_start=1422,
+  serialized_end=1510,
 )
 
 _SCPKG_CMD_PLAYER_WORLD_BOSS_KILL_REWARD.fields_by_name['drop_info'].message_type = protocommon_pb2._CSDT_DROP_INFO

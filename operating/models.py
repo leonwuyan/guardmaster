@@ -102,3 +102,16 @@ class Notify(models.Model):
 
     class Meta:
         ordering = ['seqid', 'hostname', 'channel', 'platform']
+
+
+class GmOrder(models.Model):
+    label = models.CharField(max_length=64)
+    param_count = models.IntegerField()
+    is_work = models.IntegerField(default=0)
+    seqid = models.IntegerField()
+
+    def __unicode__(self):
+        return self.label
+
+    class Meta:
+        ordering = ['seqid']

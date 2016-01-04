@@ -15,6 +15,7 @@ class ServerControl(object):
         self.server = server
         self.panel_id = panel_id
         self.socketerror = {'result': -1}
+        self.is_not_online = {'result': 5}
         self.success = {'result': 0}
         self.username = username
         self.userip = userip
@@ -436,4 +437,14 @@ class ServerControl(object):
         if ss is None:
             return self.socketerror
         ret = ss.change_player_month_card(self.uid, world_id, days)
+        return ret
+
+    def guard_master_order_copy_gm_text(self, gm_text, param):
+        (ss, uin, world_id, world_info) = self._params()
+        if ss is None:
+            return self.socketerror
+        ret = ss.get_player_base_info(self.uid, world_id)
+        if ret['is_online'] == 0:
+            return self.is_not_online
+        ret = ss.guard_copy_gm_text(gm_text, param, self.uid, uin, world_id)
         return ret

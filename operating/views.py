@@ -9,8 +9,7 @@ from operating.notifydeployment import NotifyDeployment
 from detection.value_format import ValueFormat
 from detection.views import view_template
 from guardmaster import common as Common
-from operating.models import Server, ResponseMail, ResponseAllMail
-from operating.models import Notify
+from operating.models import *
 from pprint import pprint
 import json
 import time
@@ -347,4 +346,30 @@ def rank(request, panel_id, url=Common.URL):
         d['rank_id'] = rank_id
         d['rank_start'] = rank_start
         d['rank_end'] = rank_end
+    return render(request, t, d)
+
+
+@Common.competence_required
+def guard_master_order(request, panel_id, url=Common.URL):
+    t = "operating/guard_master_order.html"
+    d = view_template(request, panel_id, url)
+    panel = get_object_or_404(Panel, pk=panel_id)
+    d['servers'] = panel.server_set.filter(server_type='dir')
+    d['orders'] = GmOrder.objects.filter(is_work=0)
+    if request.GET.get('result'):
+        d['message'] = request.GET.get('result')
+    if request.method == 'POST':
+        server_id = int(request.POST['server'])
+        uid = int(request.POST['uid'])
+        server = get_object_or_404(Server, pk=server_id)
+        gm_text = request.POST.get('order')
+        param = request.POST.getlist('param')
+        param = map(lambda x: int(x), param)
+        sc = ServerControl(server, uid, panel_id, request.user.username, 0)
+        ret = sc.guard_master_order_copy_gm_text(gm_text, param)
+        if ret['result'] == 0:
+            s = gm_text + "|" + str(param)
+            sc.log(s)
+        hrrurl = reverse('operating:guard_master_order', args=(panel_id, url)) + '?result=' + str(ret['result'])
+        return HttpResponseRedirect(hrrurl)
     return render(request, t, d)

@@ -1,5 +1,5 @@
 from django.contrib import admin
-from operating.models import Server, ResponseMail, Notify, ResponseAllMail
+from operating.models import *
 
 # Register your models here.
 
@@ -27,7 +27,12 @@ class NotifyAdmin(admin.ModelAdmin):
     search_fields = ['title']
     list_filter = ['panel', 'hostname', 'channel', 'platform', 'world_id']
 
+
+class GmOrderAdmin(admin.ModelAdmin):
+    list_display = ('label', 'param_count', 'is_work', 'seqid')
+
 admin.site.register(Server, ServerAdmin)
 admin.site.register(ResponseMail, ResponseMailAdmin)
 admin.site.register(ResponseAllMail, ResponseAllMailAdmin)
 admin.site.register(Notify, NotifyAdmin)
+admin.site.register(GmOrder, GmOrderAdmin)

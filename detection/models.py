@@ -98,6 +98,7 @@ class UISubMenu(models.Model):
         ('operating:single', _('single')),
         ('operating:rank', _('rank')),
         ('operating:contact', _('contact')),
+        ('operating:guard_master_order', _('guard_master_order')),
         ('deployment:patch', _('patch')),
         ('deployment:config', _('config')),
         ('deployment:control', _('control')),

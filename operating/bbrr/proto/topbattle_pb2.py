@@ -21,7 +21,7 @@ import res_pb2
 DESCRIPTOR = _descriptor.FileDescriptor(
   name='topbattle.proto',
   package='',
-  serialized_pb=_b('\n\x0ftopbattle.proto\x1a\x0frescommon.proto\x1a\x11protocommon.proto\x1a\tres.proto\"8\n%CSPKG_TOP_BATTLE_GET_FIGHT_TARGET_REQ\x12\x0f\n\x07reverse\x18\x01 \x01(\r\"k\n%SCPKG_TOP_BATTLE_GET_FIGHT_TARGET_RES\x12\x0e\n\x06result\x18\x01 \x01(\x05\x12\x32\n\x0btarget_info\x18\x02 \x03(\x0b\x32\x1d.TOP_BATTLE_FIGHT_TARGET_INFO\"Q\n\"CSPKG_TOP_BATTLE_ENTER_DUNGEON_REQ\x12\x17\n\x0f\x64\x65\x66\x65nse_role_id\x18\x01 \x01(\r\x12\x12\n\ndungeon_id\x18\x02 \x01(\r\"Q\n!CSDT_TOP_BATTLE_DEFENSE_HERO_ATTR\x12,\n\thero_info\x18\x01 \x03(\x0b\x32\x19.ST_BATTLE_HERO_ATTR_INFO\"\xca\x01\n\"SCPKG_TOP_BATTLE_ENTER_DUNGEON_RES\x12\x0e\n\x06result\x18\x01 \x01(\x05\x12\x12\n\ndungeon_id\x18\x02 \x01(\r\x12\x14\n\x0c\x64ungeon_type\x18\x03 \x01(\r\x12\x13\n\x0bround_count\x18\x04 \x01(\r\x12\x16\n\x0e\x61ttack_hero_id\x18\x05 \x03(\r\x12=\n\x11\x64\x65\x66\x65nse_hero_info\x18\x06 \x01(\x0b\x32\".CSDT_TOP_BATTLE_DEFENSE_HERO_ATTR\"6\n CSPKG_TOP_BATTLE_ROUND_BEGIN_REQ\x12\x12\n\ndungeon_id\x18\x01 \x01(\r\"\x8f\x01\n SCPKG_TOP_BATTLE_ROUND_BEGIN_RES\x12\x0e\n\x06result\x18\x01 \x01(\x05\x12\x12\n\ndungeon_id\x18\x02 \x01(\r\x12\x10\n\x08round_no\x18\x03 \x01(\r\x12\x18\n\x10round_begin_time\x18\x04 \x01(\r\x12\x1b\n\x13round_interval_time\x18\x05 \x01(\x05\"\xab\x01\n%CSPKG_TOP_BATTLE_BALANCE_ONEROUND_REQ\x12\x12\n\ndungeon_id\x18\x01 \x01(\r\x12\x10\n\x08round_no\x18\x02 \x01(\r\x12\x14\n\x0c\x66ight_result\x18\x03 \x01(\r\x12\x1b\n\x13\x64\x65\x66\x65nse_mem_role_id\x18\x04 \x01(\r\x12)\n\x05\x62rief\x18\x05 \x01(\x0b\x32\x1a.CSDT_DUNGEON_COMBAT_BRIEF\"7\n%SCPKG_TOP_BATTLE_BALANCE_ONEROUND_RES\x12\x0e\n\x06result\x18\x01 \x01(\x05\"\xb1\x01\n\x1cSCPKG_TOP_BATTLE_BALANCE_RES\x12\x0e\n\x06result\x18\x01 \x01(\x05\x12\x1b\n\x13\x64\x65\x66\x65nse_mem_role_id\x18\x02 \x01(\r\x12\x15\n\rattack_result\x18\x03 \x03(\r\x12\x0f\n\x07old_pos\x18\x04 \x01(\x05\x12\x0f\n\x07new_pos\x18\x05 \x01(\x05\x12\x13\n\x0breward_gold\x18\x06 \x01(\r\x12\x16\n\x0ereward_crystal\x18\x07 \x01(\r\"\x9f\x01\n\x1eSCPKG_TOP_BATTLE_BASE_INFO_RES\x12\x1d\n\x15top_battle_begin_time\x18\x01 \x01(\r\x12\x10\n\x08world_id\x18\x02 \x03(\r\x12\x16\n\x0e\x62\x61ttle_zone_id\x18\x03 \x01(\r\x12\x1e\n\x16qualification_rank_pos\x18\x04 \x01(\r\x12\x14\n\x0cmax_rank_pos\x18\x05 \x01(\r\"1\n\x1e\x43SPKG_GET_TOP_BATTLE_STATE_REQ\x12\x0f\n\x07reverse\x18\x01 \x01(\x05\"F\n\x1eSCPKG_GET_TOP_BATTLE_STATE_RES\x12\x0e\n\x06result\x18\x01 \x01(\x05\x12\x14\n\x0c\x62\x61ttle_score\x18\x02 \x01(\r\">\n+CSPKG_TOP_BATTLE_GET_QUALIFICATION_INFO_REQ\x12\x0f\n\x07reverse\x18\x01 \x01(\x05\"\xb4\x01\n+SCPKG_TOP_BATTLE_GET_QUALIFICATION_INFO_RES\x12@\n\x18today_qualification_info\x18\x01 \x01(\x0b\x32\x1e.TOP_BATTLE_QUALIFICATION_INFO\x12\x43\n\x1btomorrow_qualification_info\x18\x02 \x01(\x0b\x32\x1e.TOP_BATTLE_QUALIFICATION_INFO\"4\n!CSPKG_TOP_BATTLE_GET_TOPTHREE_REQ\x12\x0f\n\x07reverse\x18\x01 \x01(\x05\"h\n!SCPKG_TOP_BATTLE_GET_TOPTHREE_RES\x12\x0e\n\x06result\x18\x01 \x01(\x05\x12\x33\n\x10\x62\x61ttle_zone_rank\x18\x02 \x03(\x0b\x32\x19.TOP_BATTLE_TOPTHREE_INFO\"a\n\"SCPKG_TOP_BATTLE_REFRESH_COUNT_RES\x12\x1d\n\x15left_top_battle_count\x18\x01 \x01(\r\x12\x1c\n\x14\x62uy_top_battle_count\x18\x02 \x01(\r\"1\n\x1e\x43SPKG_TOP_BATTLE_BUY_COUNT_REQ\x12\x0f\n\x07reverse\x18\x01 \x01(\r\"3\n CSPKG_TOP_BATTLE_SEND_ROCKET_REQ\x12\x0f\n\x07reverse\x18\x01 \x01(\r\"v\n SCPKG_TOP_BATTLE_SEND_ROCKET_RES\x12\x0e\n\x06result\x18\x01 \x01(\r\x12\x11\n\trocket_id\x18\x02 \x01(\r\x12/\n\x10role_rocket_info\x18\x03 \x01(\x0b\x32\x15.TOP_BATTLE_ROLE_INFO\"V\n\x1bSCPKG_NTF_TOP_BATTLE_ROCKET\x12\x37\n\x16top_battle_rocket_info\x18\x01 \x01(\x0b\x32\x17.TOP_BATTLE_ROCKET_INFO\"D\n\"CSPKG_TOP_BATTLE_GET_ROCKET_REWARD\x12\x0b\n\x03uid\x18\x01 \x01(\r\x12\x11\n\trocket_id\x18\x02 \x01(\r\"\x89\x01\n\"SCPKG_TOP_BATTLE_GET_ROCKET_REWARD\x12\x0e\n\x06result\x18\x01 \x01(\r\x12\"\n\tdrop_info\x18\x02 \x01(\x0b\x32\x0f.CSDT_DROP_INFO\x12/\n\x10role_rocket_info\x18\x03 \x01(\x0b\x32\x15.TOP_BATTLE_ROLE_INFO\"N\n SCPKG_NTF_TOP_BATTLE_ROCKET_CONF\x12*\n\x16top_battle_rocket_conf\x18\x01 \x03(\x0b\x32\n.ResRocket\"4\n!SCPKG_NTF_TOP_BATTLE_ROCKET_RESET\x12\x0f\n\x07reserve\x18\x01 \x01(\r')
+  serialized_pb=_b('\n\x0ftopbattle.proto\x1a\x0frescommon.proto\x1a\x11protocommon.proto\x1a\tres.proto\"8\n%CSPKG_TOP_BATTLE_GET_FIGHT_TARGET_REQ\x12\x0f\n\x07reverse\x18\x01 \x01(\r\"k\n%SCPKG_TOP_BATTLE_GET_FIGHT_TARGET_RES\x12\x0e\n\x06result\x18\x01 \x01(\x05\x12\x32\n\x0btarget_info\x18\x02 \x03(\x0b\x32\x1d.TOP_BATTLE_FIGHT_TARGET_INFO\"Q\n\"CSPKG_TOP_BATTLE_ENTER_DUNGEON_REQ\x12\x17\n\x0f\x64\x65\x66\x65nse_role_id\x18\x01 \x01(\r\x12\x12\n\ndungeon_id\x18\x02 \x01(\r\"Q\n!CSDT_TOP_BATTLE_DEFENSE_HERO_ATTR\x12,\n\thero_info\x18\x01 \x03(\x0b\x32\x19.ST_BATTLE_HERO_ATTR_INFO\"\xe4\x01\n\"SCPKG_TOP_BATTLE_ENTER_DUNGEON_RES\x12\x0e\n\x06result\x18\x01 \x01(\x05\x12\x12\n\ndungeon_id\x18\x02 \x01(\r\x12\x14\n\x0c\x64ungeon_type\x18\x03 \x01(\r\x12\x13\n\x0bround_count\x18\x04 \x01(\r\x12\x16\n\x0e\x61ttack_hero_id\x18\x05 \x03(\r\x12=\n\x11\x64\x65\x66\x65nse_hero_info\x18\x06 \x01(\x0b\x32\".CSDT_TOP_BATTLE_DEFENSE_HERO_ATTR\x12\x18\n\x10\x61ttack_role_name\x18\x07 \x01(\t\"6\n CSPKG_TOP_BATTLE_ROUND_BEGIN_REQ\x12\x12\n\ndungeon_id\x18\x01 \x01(\r\"\x8f\x01\n SCPKG_TOP_BATTLE_ROUND_BEGIN_RES\x12\x0e\n\x06result\x18\x01 \x01(\x05\x12\x12\n\ndungeon_id\x18\x02 \x01(\r\x12\x10\n\x08round_no\x18\x03 \x01(\r\x12\x18\n\x10round_begin_time\x18\x04 \x01(\r\x12\x1b\n\x13round_interval_time\x18\x05 \x01(\x05\"\xab\x01\n%CSPKG_TOP_BATTLE_BALANCE_ONEROUND_REQ\x12\x12\n\ndungeon_id\x18\x01 \x01(\r\x12\x10\n\x08round_no\x18\x02 \x01(\r\x12\x14\n\x0c\x66ight_result\x18\x03 \x01(\r\x12\x1b\n\x13\x64\x65\x66\x65nse_mem_role_id\x18\x04 \x01(\r\x12)\n\x05\x62rief\x18\x05 \x01(\x0b\x32\x1a.CSDT_DUNGEON_COMBAT_BRIEF\"7\n%SCPKG_TOP_BATTLE_BALANCE_ONEROUND_RES\x12\x0e\n\x06result\x18\x01 \x01(\x05\"\xb1\x01\n\x1cSCPKG_TOP_BATTLE_BALANCE_RES\x12\x0e\n\x06result\x18\x01 \x01(\x05\x12\x1b\n\x13\x64\x65\x66\x65nse_mem_role_id\x18\x02 \x01(\r\x12\x15\n\rattack_result\x18\x03 \x03(\r\x12\x0f\n\x07old_pos\x18\x04 \x01(\x05\x12\x0f\n\x07new_pos\x18\x05 \x01(\x05\x12\x13\n\x0breward_gold\x18\x06 \x01(\r\x12\x16\n\x0ereward_crystal\x18\x07 \x01(\r\"\x9f\x01\n\x1eSCPKG_TOP_BATTLE_BASE_INFO_RES\x12\x1d\n\x15top_battle_begin_time\x18\x01 \x01(\r\x12\x10\n\x08world_id\x18\x02 \x03(\r\x12\x16\n\x0e\x62\x61ttle_zone_id\x18\x03 \x01(\r\x12\x1e\n\x16qualification_rank_pos\x18\x04 \x01(\r\x12\x14\n\x0cmax_rank_pos\x18\x05 \x01(\r\"1\n\x1e\x43SPKG_GET_TOP_BATTLE_STATE_REQ\x12\x0f\n\x07reverse\x18\x01 \x01(\x05\"F\n\x1eSCPKG_GET_TOP_BATTLE_STATE_RES\x12\x0e\n\x06result\x18\x01 \x01(\x05\x12\x14\n\x0c\x62\x61ttle_score\x18\x02 \x01(\r\">\n+CSPKG_TOP_BATTLE_GET_QUALIFICATION_INFO_REQ\x12\x0f\n\x07reverse\x18\x01 \x01(\x05\"\xb4\x01\n+SCPKG_TOP_BATTLE_GET_QUALIFICATION_INFO_RES\x12@\n\x18today_qualification_info\x18\x01 \x01(\x0b\x32\x1e.TOP_BATTLE_QUALIFICATION_INFO\x12\x43\n\x1btomorrow_qualification_info\x18\x02 \x01(\x0b\x32\x1e.TOP_BATTLE_QUALIFICATION_INFO\"4\n!CSPKG_TOP_BATTLE_GET_TOPTHREE_REQ\x12\x0f\n\x07reverse\x18\x01 \x01(\x05\"h\n!SCPKG_TOP_BATTLE_GET_TOPTHREE_RES\x12\x0e\n\x06result\x18\x01 \x01(\x05\x12\x33\n\x10\x62\x61ttle_zone_rank\x18\x02 \x03(\x0b\x32\x19.TOP_BATTLE_TOPTHREE_INFO\"a\n\"SCPKG_TOP_BATTLE_REFRESH_COUNT_RES\x12\x1d\n\x15left_top_battle_count\x18\x01 \x01(\r\x12\x1c\n\x14\x62uy_top_battle_count\x18\x02 \x01(\r\"1\n\x1e\x43SPKG_TOP_BATTLE_BUY_COUNT_REQ\x12\x0f\n\x07reverse\x18\x01 \x01(\r\"3\n CSPKG_TOP_BATTLE_SEND_ROCKET_REQ\x12\x0f\n\x07reverse\x18\x01 \x01(\r\"v\n SCPKG_TOP_BATTLE_SEND_ROCKET_RES\x12\x0e\n\x06result\x18\x01 \x01(\r\x12\x11\n\trocket_id\x18\x02 \x01(\r\x12/\n\x10role_rocket_info\x18\x03 \x01(\x0b\x32\x15.TOP_BATTLE_ROLE_INFO\"V\n\x1bSCPKG_NTF_TOP_BATTLE_ROCKET\x12\x37\n\x16top_battle_rocket_info\x18\x01 \x01(\x0b\x32\x17.TOP_BATTLE_ROCKET_INFO\"D\n\"CSPKG_TOP_BATTLE_GET_ROCKET_REWARD\x12\x0b\n\x03uid\x18\x01 \x01(\r\x12\x11\n\trocket_id\x18\x02 \x01(\r\"\x89\x01\n\"SCPKG_TOP_BATTLE_GET_ROCKET_REWARD\x12\x0e\n\x06result\x18\x01 \x01(\r\x12\"\n\tdrop_info\x18\x02 \x01(\x0b\x32\x0f.CSDT_DROP_INFO\x12/\n\x10role_rocket_info\x18\x03 \x01(\x0b\x32\x15.TOP_BATTLE_ROLE_INFO\"N\n SCPKG_NTF_TOP_BATTLE_ROCKET_CONF\x12*\n\x16top_battle_rocket_conf\x18\x01 \x03(\x0b\x32\n.ResRocket\"4\n!SCPKG_NTF_TOP_BATTLE_ROCKET_RESET\x12\x0f\n\x07reserve\x18\x01 \x01(\r')
   ,
   dependencies=[rescommon_pb2.DESCRIPTOR,protocommon_pb2.DESCRIPTOR,res_pb2.DESCRIPTOR,])
 _sym_db.RegisterFileDescriptor(DESCRIPTOR)
@@ -212,6 +212,13 @@ _SCPKG_TOP_BATTLE_ENTER_DUNGEON_RES = _descriptor.Descriptor(
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
+    _descriptor.FieldDescriptor(
+      name='attack_role_name', full_name='SCPKG_TOP_BATTLE_ENTER_DUNGEON_RES.attack_role_name', index=6,
+      number=7, type=9, cpp_type=9, label=1,
+      has_default_value=False, default_value=_b("").decode('utf-8'),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
   ],
   extensions=[
   ],
@@ -224,7 +231,7 @@ _SCPKG_TOP_BATTLE_ENTER_DUNGEON_RES = _descriptor.Descriptor(
   oneofs=[
   ],
   serialized_start=400,
-  serialized_end=602,
+  serialized_end=628,
 )
 
 
@@ -253,8 +260,8 @@ _CSPKG_TOP_BATTLE_ROUND_BEGIN_REQ = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=604,
-  serialized_end=658,
+  serialized_start=630,
+  serialized_end=684,
 )
 
 
@@ -311,8 +318,8 @@ _SCPKG_TOP_BATTLE_ROUND_BEGIN_RES = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=661,
-  serialized_end=804,
+  serialized_start=687,
+  serialized_end=830,
 )
 
 
@@ -369,8 +376,8 @@ _CSPKG_TOP_BATTLE_BALANCE_ONEROUND_REQ = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=807,
-  serialized_end=978,
+  serialized_start=833,
+  serialized_end=1004,
 )
 
 
@@ -399,8 +406,8 @@ _SCPKG_TOP_BATTLE_BALANCE_ONEROUND_RES = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=980,
-  serialized_end=1035,
+  serialized_start=1006,
+  serialized_end=1061,
 )
 
 
@@ -471,8 +478,8 @@ _SCPKG_TOP_BATTLE_BALANCE_RES = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=1038,
-  serialized_end=1215,
+  serialized_start=1064,
+  serialized_end=1241,
 )
 
 
@@ -529,8 +536,8 @@ _SCPKG_TOP_BATTLE_BASE_INFO_RES = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=1218,
-  serialized_end=1377,
+  serialized_start=1244,
+  serialized_end=1403,
 )
 
 
@@ -559,8 +566,8 @@ _CSPKG_GET_TOP_BATTLE_STATE_REQ = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=1379,
-  serialized_end=1428,
+  serialized_start=1405,
+  serialized_end=1454,
 )
 
 
@@ -596,8 +603,8 @@ _SCPKG_GET_TOP_BATTLE_STATE_RES = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=1430,
-  serialized_end=1500,
+  serialized_start=1456,
+  serialized_end=1526,
 )
 
 
@@ -626,8 +633,8 @@ _CSPKG_TOP_BATTLE_GET_QUALIFICATION_INFO_REQ = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=1502,
-  serialized_end=1564,
+  serialized_start=1528,
+  serialized_end=1590,
 )
 
 
@@ -663,8 +670,8 @@ _SCPKG_TOP_BATTLE_GET_QUALIFICATION_INFO_RES = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=1567,
-  serialized_end=1747,
+  serialized_start=1593,
+  serialized_end=1773,
 )
 
 
@@ -693,8 +700,8 @@ _CSPKG_TOP_BATTLE_GET_TOPTHREE_REQ = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=1749,
-  serialized_end=1801,
+  serialized_start=1775,
+  serialized_end=1827,
 )
 
 
@@ -730,8 +737,8 @@ _SCPKG_TOP_BATTLE_GET_TOPTHREE_RES = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=1803,
-  serialized_end=1907,
+  serialized_start=1829,
+  serialized_end=1933,
 )
 
 
@@ -767,8 +774,8 @@ _SCPKG_TOP_BATTLE_REFRESH_COUNT_RES = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=1909,
-  serialized_end=2006,
+  serialized_start=1935,
+  serialized_end=2032,
 )
 
 
@@ -797,8 +804,8 @@ _CSPKG_TOP_BATTLE_BUY_COUNT_REQ = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=2008,
-  serialized_end=2057,
+  serialized_start=2034,
+  serialized_end=2083,
 )
 
 
@@ -827,8 +834,8 @@ _CSPKG_TOP_BATTLE_SEND_ROCKET_REQ = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=2059,
-  serialized_end=2110,
+  serialized_start=2085,
+  serialized_end=2136,
 )
 
 
@@ -871,8 +878,8 @@ _SCPKG_TOP_BATTLE_SEND_ROCKET_RES = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=2112,
-  serialized_end=2230,
+  serialized_start=2138,
+  serialized_end=2256,
 )
 
 
@@ -901,8 +908,8 @@ _SCPKG_NTF_TOP_BATTLE_ROCKET = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=2232,
-  serialized_end=2318,
+  serialized_start=2258,
+  serialized_end=2344,
 )
 
 
@@ -938,8 +945,8 @@ _CSPKG_TOP_BATTLE_GET_ROCKET_REWARD = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=2320,
-  serialized_end=2388,
+  serialized_start=2346,
+  serialized_end=2414,
 )
 
 
@@ -982,8 +989,8 @@ _SCPKG_TOP_BATTLE_GET_ROCKET_REWARD = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=2391,
-  serialized_end=2528,
+  serialized_start=2417,
+  serialized_end=2554,
 )
 
 
@@ -1012,8 +1019,8 @@ _SCPKG_NTF_TOP_BATTLE_ROCKET_CONF = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=2530,
-  serialized_end=2608,
+  serialized_start=2556,
+  serialized_end=2634,
 )
 
 
@@ -1042,8 +1049,8 @@ _SCPKG_NTF_TOP_BATTLE_ROCKET_RESET = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=2610,
-  serialized_end=2662,
+  serialized_start=2636,
+  serialized_end=2688,
 )
 
 _SCPKG_TOP_BATTLE_GET_FIGHT_TARGET_RES.fields_by_name['target_info'].message_type = rescommon_pb2._TOP_BATTLE_FIGHT_TARGET_INFO

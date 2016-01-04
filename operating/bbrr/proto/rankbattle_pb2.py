@@ -19,7 +19,7 @@ import rescommon_pb2
 DESCRIPTOR = _descriptor.FileDescriptor(
   name='rankbattle.proto',
   package='',
-  serialized_pb=_b('\n\x10rankbattle.proto\x1a\x0frescommon.proto\"\xa2\x01\n\x1c\x43SDT_PLAYER_RANK_BATTLE_INFO\x12\x1d\n\x15last_rank_battle_time\x18\x01 \x01(\r\x12\x1e\n\x16left_rank_battle_count\x18\x02 \x01(\r\x12\x1d\n\x15\x62uy_rank_battle_count\x18\x03 \x01(\r\x12$\n\x1clast_refresh_left_count_time\x18\x04 \x01(\r\"@\n\x1f\x43SPKG_CMD_SET_RANK_BATTLE_ORDER\x12\x0c\n\x04type\x18\x01 \x01(\r\x12\x0f\n\x07hero_id\x18\x02 \x03(\r\"?\n\x1fSCPKG_CMD_SET_RANK_BATTLE_ORDER\x12\x0c\n\x04type\x18\x01 \x01(\r\x12\x0e\n\x06result\x18\x02 \x01(\r\"\\\n\x1b\x43SDT_RANK_BATTLE_LEFT_COUNT\x12\x1e\n\x16left_rank_battle_count\x18\x01 \x01(\r\x12\x1d\n\x15\x62uy_rank_battle_count\x18\x02 \x01(\r\"K\n\x1b\x43S_RANK_BATTLE_DEFENSE_DATA\x12,\n\thero_info\x18\x01 \x03(\x0b\x32\x19.ST_BATTLE_HERO_ATTR_INFO\"/\n\x1c\x43SPKG_RANK_BATTLE_POS_UPDATE\x12\x0f\n\x07reverse\x18\x01 \x01(\x05\"]\n\x1cSCPKG_RANK_BATTLE_POS_UPDATE\x12\x17\n\x0frank_battle_pos\x18\x01 \x01(\x05\x12$\n\x1crank_battle_high_history_pos\x18\x02 \x01(\x05\"9\n&CSPKG_RANK_BATTLE_GET_FIGHT_TARGET_REQ\x12\x0f\n\x07reverse\x18\x01 \x01(\r\"\xbf\x01\n\"CSDT_RANK_BATTLE_FIGHT_TARGET_INFO\x12\x0f\n\x07role_id\x18\x01 \x01(\r\x12\x11\n\trole_name\x18\x02 \x01(\t\x12\x10\n\x08rank_pos\x18\x03 \x01(\x05\x12\x37\n\x11\x64\x65\x66\x65nse_hero_info\x18\x04 \x01(\x0b\x32\x1c.CS_RANK_BATTLE_DEFENSE_DATA\x12\x12\n\nhead_photo\x18\x05 \x01(\r\x12\x16\n\x0e\x66ight_capacity\x18\x06 \x01(\r\"r\n&SCPKG_RANK_BATTLE_GET_FIGHT_TARGET_RES\x12\x0e\n\x06result\x18\x01 \x01(\x05\x12\x38\n\x0btarget_info\x18\x02 \x03(\x0b\x32#.CSDT_RANK_BATTLE_FIGHT_TARGET_INFO\"R\n#CSPKG_RANK_BATTLE_ENTER_DUNGEON_REQ\x12\x17\n\x0f\x64\x65\x66\x65nse_role_id\x18\x01 \x01(\r\x12\x12\n\ndungeon_id\x18\x02 \x01(\r\"\xc5\x01\n#SCPKG_RANK_BATTLE_ENTER_DUNGEON_RES\x12\x0e\n\x06result\x18\x01 \x01(\x05\x12\x12\n\ndungeon_id\x18\x02 \x01(\r\x12\x14\n\x0c\x64ungeon_type\x18\x03 \x01(\r\x12\x13\n\x0bround_count\x18\x04 \x01(\r\x12\x16\n\x0e\x61ttack_hero_id\x18\x05 \x03(\r\x12\x37\n\x11\x64\x65\x66\x65nse_hero_info\x18\x06 \x01(\x0b\x32\x1c.CS_RANK_BATTLE_DEFENSE_DATA\"7\n!CSPKG_RANK_BATTLE_ROUND_BEGIN_REQ\x12\x12\n\ndungeon_id\x18\x01 \x01(\r\"\x90\x01\n!SCPKG_RANK_BATTLE_ROUND_BEGIN_RES\x12\x0e\n\x06result\x18\x01 \x01(\x05\x12\x12\n\ndungeon_id\x18\x02 \x01(\r\x12\x10\n\x08round_no\x18\x03 \x01(\r\x12\x18\n\x10round_begin_time\x18\x04 \x01(\r\x12\x1b\n\x13round_interval_time\x18\x05 \x01(\x05\"\xac\x01\n&CSPKG_RANK_BATTLE_BALANCE_ONEROUND_REQ\x12\x12\n\ndungeon_id\x18\x01 \x01(\r\x12\x10\n\x08round_no\x18\x02 \x01(\r\x12\x14\n\x0c\x66ight_result\x18\x03 \x01(\r\x12\x1b\n\x13\x64\x65\x66\x65nse_mem_role_id\x18\x04 \x01(\r\x12)\n\x05\x62rief\x18\x05 \x01(\x0b\x32\x1a.CSDT_DUNGEON_COMBAT_BRIEF\"8\n&SCPKG_RANK_BATTLE_BALANCE_ONEROUND_RES\x12\x0e\n\x06result\x18\x01 \x01(\x05\"\xb5\x02\n\x1dSCPKG_RANK_BATTLE_BALANCE_RES\x12\x0e\n\x06result\x18\x01 \x01(\x05\x12\x1b\n\x13\x64\x65\x66\x65nse_mem_role_id\x18\x02 \x01(\r\x12\x15\n\rattack_result\x18\x03 \x03(\r\x12\x0f\n\x07old_pos\x18\x04 \x01(\x05\x12\x0f\n\x07new_pos\x18\x05 \x01(\x05\x12\x13\n\x0breward_gold\x18\x06 \x01(\r\x12\x16\n\x0ereward_crystal\x18\x07 \x01(\r\x12\x30\n\nleft_count\x18\x08 \x01(\x0b\x32\x1c.CSDT_RANK_BATTLE_LEFT_COUNT\x12\x12\n\nis_promote\x18\t \x01(\r\x12\x13\n\x0bhistory_pos\x18\n \x01(\x05\x12&\n\x0epromote_reward\x18\x0b \x03(\x0b\x32\x0e.ST_REWARD_RES\"2\n\x1f\x43SPKG_RANK_BATTLE_BUY_COUNT_REQ\x12\x0f\n\x07reverse\x18\x01 \x01(\r\"W\n#SCPKG_RANK_BATTLE_REFRESH_COUNT_RES\x12\x30\n\nleft_count\x18\x01 \x01(\x0b\x32\x1c.CSDT_RANK_BATTLE_LEFT_COUNT')
+  serialized_pb=_b('\n\x10rankbattle.proto\x1a\x0frescommon.proto\"\xa2\x01\n\x1c\x43SDT_PLAYER_RANK_BATTLE_INFO\x12\x1d\n\x15last_rank_battle_time\x18\x01 \x01(\r\x12\x1e\n\x16left_rank_battle_count\x18\x02 \x01(\r\x12\x1d\n\x15\x62uy_rank_battle_count\x18\x03 \x01(\r\x12$\n\x1clast_refresh_left_count_time\x18\x04 \x01(\r\"@\n\x1f\x43SPKG_CMD_SET_RANK_BATTLE_ORDER\x12\x0c\n\x04type\x18\x01 \x01(\r\x12\x0f\n\x07hero_id\x18\x02 \x03(\r\"?\n\x1fSCPKG_CMD_SET_RANK_BATTLE_ORDER\x12\x0c\n\x04type\x18\x01 \x01(\r\x12\x0e\n\x06result\x18\x02 \x01(\r\"\\\n\x1b\x43SDT_RANK_BATTLE_LEFT_COUNT\x12\x1e\n\x16left_rank_battle_count\x18\x01 \x01(\r\x12\x1d\n\x15\x62uy_rank_battle_count\x18\x02 \x01(\r\"K\n\x1b\x43S_RANK_BATTLE_DEFENSE_DATA\x12,\n\thero_info\x18\x01 \x03(\x0b\x32\x19.ST_BATTLE_HERO_ATTR_INFO\"/\n\x1c\x43SPKG_RANK_BATTLE_POS_UPDATE\x12\x0f\n\x07reverse\x18\x01 \x01(\x05\"]\n\x1cSCPKG_RANK_BATTLE_POS_UPDATE\x12\x17\n\x0frank_battle_pos\x18\x01 \x01(\x05\x12$\n\x1crank_battle_high_history_pos\x18\x02 \x01(\x05\"9\n&CSPKG_RANK_BATTLE_GET_FIGHT_TARGET_REQ\x12\x0f\n\x07reverse\x18\x01 \x01(\r\"\xbf\x01\n\"CSDT_RANK_BATTLE_FIGHT_TARGET_INFO\x12\x0f\n\x07role_id\x18\x01 \x01(\r\x12\x11\n\trole_name\x18\x02 \x01(\t\x12\x10\n\x08rank_pos\x18\x03 \x01(\x05\x12\x37\n\x11\x64\x65\x66\x65nse_hero_info\x18\x04 \x01(\x0b\x32\x1c.CS_RANK_BATTLE_DEFENSE_DATA\x12\x12\n\nhead_photo\x18\x05 \x01(\r\x12\x16\n\x0e\x66ight_capacity\x18\x06 \x01(\r\"r\n&SCPKG_RANK_BATTLE_GET_FIGHT_TARGET_RES\x12\x0e\n\x06result\x18\x01 \x01(\x05\x12\x38\n\x0btarget_info\x18\x02 \x03(\x0b\x32#.CSDT_RANK_BATTLE_FIGHT_TARGET_INFO\"R\n#CSPKG_RANK_BATTLE_ENTER_DUNGEON_REQ\x12\x17\n\x0f\x64\x65\x66\x65nse_role_id\x18\x01 \x01(\r\x12\x12\n\ndungeon_id\x18\x02 \x01(\r\"\xdf\x01\n#SCPKG_RANK_BATTLE_ENTER_DUNGEON_RES\x12\x0e\n\x06result\x18\x01 \x01(\x05\x12\x12\n\ndungeon_id\x18\x02 \x01(\r\x12\x14\n\x0c\x64ungeon_type\x18\x03 \x01(\r\x12\x13\n\x0bround_count\x18\x04 \x01(\r\x12\x16\n\x0e\x61ttack_hero_id\x18\x05 \x03(\r\x12\x37\n\x11\x64\x65\x66\x65nse_hero_info\x18\x06 \x01(\x0b\x32\x1c.CS_RANK_BATTLE_DEFENSE_DATA\x12\x18\n\x10\x61ttack_role_name\x18\x07 \x01(\t\"7\n!CSPKG_RANK_BATTLE_ROUND_BEGIN_REQ\x12\x12\n\ndungeon_id\x18\x01 \x01(\r\"\x90\x01\n!SCPKG_RANK_BATTLE_ROUND_BEGIN_RES\x12\x0e\n\x06result\x18\x01 \x01(\x05\x12\x12\n\ndungeon_id\x18\x02 \x01(\r\x12\x10\n\x08round_no\x18\x03 \x01(\r\x12\x18\n\x10round_begin_time\x18\x04 \x01(\r\x12\x1b\n\x13round_interval_time\x18\x05 \x01(\x05\"\xac\x01\n&CSPKG_RANK_BATTLE_BALANCE_ONEROUND_REQ\x12\x12\n\ndungeon_id\x18\x01 \x01(\r\x12\x10\n\x08round_no\x18\x02 \x01(\r\x12\x14\n\x0c\x66ight_result\x18\x03 \x01(\r\x12\x1b\n\x13\x64\x65\x66\x65nse_mem_role_id\x18\x04 \x01(\r\x12)\n\x05\x62rief\x18\x05 \x01(\x0b\x32\x1a.CSDT_DUNGEON_COMBAT_BRIEF\"8\n&SCPKG_RANK_BATTLE_BALANCE_ONEROUND_RES\x12\x0e\n\x06result\x18\x01 \x01(\x05\"\xb5\x02\n\x1dSCPKG_RANK_BATTLE_BALANCE_RES\x12\x0e\n\x06result\x18\x01 \x01(\x05\x12\x1b\n\x13\x64\x65\x66\x65nse_mem_role_id\x18\x02 \x01(\r\x12\x15\n\rattack_result\x18\x03 \x03(\r\x12\x0f\n\x07old_pos\x18\x04 \x01(\x05\x12\x0f\n\x07new_pos\x18\x05 \x01(\x05\x12\x13\n\x0breward_gold\x18\x06 \x01(\r\x12\x16\n\x0ereward_crystal\x18\x07 \x01(\r\x12\x30\n\nleft_count\x18\x08 \x01(\x0b\x32\x1c.CSDT_RANK_BATTLE_LEFT_COUNT\x12\x12\n\nis_promote\x18\t \x01(\r\x12\x13\n\x0bhistory_pos\x18\n \x01(\x05\x12&\n\x0epromote_reward\x18\x0b \x03(\x0b\x32\x0e.ST_REWARD_RES\"2\n\x1f\x43SPKG_RANK_BATTLE_BUY_COUNT_REQ\x12\x0f\n\x07reverse\x18\x01 \x01(\r\"W\n#SCPKG_RANK_BATTLE_REFRESH_COUNT_RES\x12\x30\n\nleft_count\x18\x01 \x01(\x0b\x32\x1c.CSDT_RANK_BATTLE_LEFT_COUNT')
   ,
   dependencies=[rescommon_pb2.DESCRIPTOR,])
 _sym_db.RegisterFileDescriptor(DESCRIPTOR)
@@ -504,6 +504,13 @@ _SCPKG_RANK_BATTLE_ENTER_DUNGEON_RES = _descriptor.Descriptor(
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
+    _descriptor.FieldDescriptor(
+      name='attack_role_name', full_name='SCPKG_RANK_BATTLE_ENTER_DUNGEON_RES.attack_role_name', index=6,
+      number=7, type=9, cpp_type=9, label=1,
+      has_default_value=False, default_value=_b("").decode('utf-8'),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
   ],
   extensions=[
   ],
@@ -516,7 +523,7 @@ _SCPKG_RANK_BATTLE_ENTER_DUNGEON_RES = _descriptor.Descriptor(
   oneofs=[
   ],
   serialized_start=1102,
-  serialized_end=1299,
+  serialized_end=1325,
 )
 
 
@@ -545,8 +552,8 @@ _CSPKG_RANK_BATTLE_ROUND_BEGIN_REQ = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=1301,
-  serialized_end=1356,
+  serialized_start=1327,
+  serialized_end=1382,
 )
 
 
@@ -603,8 +610,8 @@ _SCPKG_RANK_BATTLE_ROUND_BEGIN_RES = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=1359,
-  serialized_end=1503,
+  serialized_start=1385,
+  serialized_end=1529,
 )
 
 
@@ -661,8 +668,8 @@ _CSPKG_RANK_BATTLE_BALANCE_ONEROUND_REQ = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=1506,
-  serialized_end=1678,
+  serialized_start=1532,
+  serialized_end=1704,
 )
 
 
@@ -691,8 +698,8 @@ _SCPKG_RANK_BATTLE_BALANCE_ONEROUND_RES = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=1680,
-  serialized_end=1736,
+  serialized_start=1706,
+  serialized_end=1762,
 )
 
 
@@ -791,8 +798,8 @@ _SCPKG_RANK_BATTLE_BALANCE_RES = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=1739,
-  serialized_end=2048,
+  serialized_start=1765,
+  serialized_end=2074,
 )
 
 
@@ -821,8 +828,8 @@ _CSPKG_RANK_BATTLE_BUY_COUNT_REQ = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=2050,
-  serialized_end=2100,
+  serialized_start=2076,
+  serialized_end=2126,
 )
 
 
@@ -851,8 +858,8 @@ _SCPKG_RANK_BATTLE_REFRESH_COUNT_RES = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=2102,
-  serialized_end=2189,
+  serialized_start=2128,
+  serialized_end=2215,
 )
 
 _CS_RANK_BATTLE_DEFENSE_DATA.fields_by_name['hero_info'].message_type = rescommon_pb2._ST_BATTLE_HERO_ATTR_INFO

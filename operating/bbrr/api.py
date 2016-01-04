@@ -12,7 +12,6 @@ import ctypes
 import struct
 import binascii
 import xinge
-import time
 from pprint import pprint
 
 # content = u'推送测试,全部设备'
@@ -96,7 +95,12 @@ class ServerSocket(object):
         phash = StringHash.calculate_hash(pstr)
         pb = proto.proto_factory.create_pb(phash)
         for key in data:
-            setattr(pb, key, data[key])
+            if data[key].__class__.__name__ == 'list':
+                for i in data[key]:
+                    tlist = getattr(pb, key)
+                    tlist.append(i)
+            else:
+                setattr(pb, key, data[key])
 
         return phash, pb
 
@@ -422,4 +426,18 @@ class ServerSocket(object):
             'card_id': card_id,
             'change_days': change_days
         }
+        return self._get(p, r)
+
+    def guard_copy_gm_text(self, gm_text, param, uid, uin, world_id):
+        if world_id is None or uid is None or gm_text is None or param is None:
+            return self.empty
+        if uin is None:
+            return self.empty
+        p = 'GUARD_COPY_GM_TEXT_REQ'
+        r = {
+            'world_id': world_id,
+            'uid': uid,
+            'gm_text': gm_text,
+            'param': param,
+            'uin': uin}
         return self._get(p, r)

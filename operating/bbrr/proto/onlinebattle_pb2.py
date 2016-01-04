@@ -20,7 +20,7 @@ import rescommon_pb2
 DESCRIPTOR = _descriptor.FileDescriptor(
   name='onlinebattle.proto',
   package='',
-  serialized_pb=_b('\n\x12onlinebattle.proto\x1a\x11protocommon.proto\x1a\x0frescommon.proto\"\xac\x01\n(SCPKG_CMD_PLAYER_ENTER_ONLINE_BATTLE_DUN\x12\x13\n\x0bscene_index\x18\x01 \x01(\r\x12\x34\n\x12online_battle_info\x18\x02 \x01(\x0b\x32\x18.CSDT_ONLINE_BATTLE_INFO\x12\x35\n\trole_info\x18\x03 \x03(\x0b\x32\".CSDT_ONLINE_BATTLE_ROOM_ROLE_INFO\"\xf6\x01\n!CSDT_ONLINE_BATTLE_ROOM_ROLE_INFO\x12\x0b\n\x03pos\x18\x01 \x01(\r\x12\x0f\n\x07role_id\x18\x02 \x01(\r\x12\x0f\n\x07role_lv\x18\x03 \x01(\r\x12\x14\n\x0crole_stamina\x18\x04 \x01(\r\x12\x15\n\rrole_strength\x18\x05 \x01(\r\x12\x14\n\x0crole_ability\x18\x06 \x01(\r\x12\x13\n\x0brole_skills\x18\x07 \x03(\r\x12\x17\n\x0f\x66\x61\x63tor_skill_id\x18\x08 \x01(\r\x12\x31\n\x0ehero_attr_info\x18\t \x01(\x0b\x32\x19.ST_BATTLE_HERO_ATTR_INFO\"\xb8\x01\n#CSDT_ONLINE_BATTLE_ROOM_PLAYER_INFO\x12\x0c\n\x04host\x18\x01 \x01(\x08\x12\x0b\n\x03uid\x18\x02 \x01(\r\x12\x0c\n\x04name\x18\x03 \x01(\t\x12\r\n\x05score\x18\x04 \x01(\r\x12\x12\n\nwin_number\x18\x05 \x01(\r\x12\r\n\x05ready\x18\x06 \x01(\x08\x12\x36\n\nrole_infos\x18\x07 \x03(\x0b\x32\".CSDT_ONLINE_BATTLE_ROOM_ROLE_INFO\"\x80\x01\n\x1c\x43SDT_ONLINE_BATTLE_ROOM_INFO\x12\x0f\n\x07room_id\x18\x01 \x01(\r\x12\x13\n\x0bscene_index\x18\x02 \x01(\r\x12:\n\x0cplayer_infos\x18\x03 \x03(\x0b\x32$.CSDT_ONLINE_BATTLE_ROOM_PLAYER_INFO\"B\n\'SCDT_ONLINE_BATTLE_ROOM_COUNT_DOWN_TIME\x12\x17\n\x0f\x63ount_down_time\x18\x01 \x01(\r\"s\n\x1f\x43SPKG_ONLINE_BATTLE_ROOM_OP_REQ\x12\x0b\n\x03uid\x18\x01 \x01(\r\x12\x11\n\toperation\x18\x02 \x01(\r\x12\x30\n\troom_info\x18\x03 \x01(\x0b\x32\x1d.CSDT_ONLINE_BATTLE_ROOM_INFO\"\x85\x01\n\x1fSCPKG_ONLINE_BATTLE_ROOM_OP_RES\x12\x11\n\toperation\x18\x01 \x01(\r\x12\x0e\n\x06result\x18\x02 \x01(\r\x12\r\n\x05param\x18\x03 \x01(\r\x12\x30\n\troom_info\x18\x04 \x03(\x0b\x32\x1d.CSDT_ONLINE_BATTLE_ROOM_INFO\"3\n$CSPKG_ONLINE_BATTLE_SHOP_BOX_BUY_REQ\x12\x0b\n\x03pos\x18\x01 \x01(\r\"\x90\x01\n$SCPKG_ONLINE_BATTLE_SHOP_BOX_BUY_RES\x12\x0e\n\x06result\x18\x01 \x01(\r\x12\"\n\tdrop_info\x18\x02 \x01(\x0b\x32\x0f.CSDT_DROP_INFO\x12\x34\n\x12online_battle_info\x18\x03 \x01(\x0b\x32\x18.CSDT_ONLINE_BATTLE_INFO')
+  serialized_pb=_b('\n\x12onlinebattle.proto\x1a\x11protocommon.proto\x1a\x0frescommon.proto\"\xac\x01\n(SCPKG_CMD_PLAYER_ENTER_ONLINE_BATTLE_DUN\x12\x13\n\x0bscene_index\x18\x01 \x01(\r\x12\x34\n\x12online_battle_info\x18\x02 \x01(\x0b\x32\x18.CSDT_ONLINE_BATTLE_INFO\x12\x35\n\trole_info\x18\x03 \x03(\x0b\x32\".CSDT_ONLINE_BATTLE_ROOM_ROLE_INFO\"\xf6\x01\n!CSDT_ONLINE_BATTLE_ROOM_ROLE_INFO\x12\x0b\n\x03pos\x18\x01 \x01(\r\x12\x0f\n\x07role_id\x18\x02 \x01(\r\x12\x0f\n\x07role_lv\x18\x03 \x01(\r\x12\x14\n\x0crole_stamina\x18\x04 \x01(\r\x12\x15\n\rrole_strength\x18\x05 \x01(\r\x12\x14\n\x0crole_ability\x18\x06 \x01(\r\x12\x13\n\x0brole_skills\x18\x07 \x03(\r\x12\x17\n\x0f\x66\x61\x63tor_skill_id\x18\x08 \x01(\r\x12\x31\n\x0ehero_attr_info\x18\t \x01(\x0b\x32\x19.ST_BATTLE_HERO_ATTR_INFO\"\xb8\x01\n#CSDT_ONLINE_BATTLE_ROOM_PLAYER_INFO\x12\x0c\n\x04host\x18\x01 \x01(\x08\x12\x0b\n\x03uid\x18\x02 \x01(\r\x12\x0c\n\x04name\x18\x03 \x01(\t\x12\r\n\x05score\x18\x04 \x01(\r\x12\x12\n\nwin_number\x18\x05 \x01(\r\x12\r\n\x05ready\x18\x06 \x01(\x08\x12\x36\n\nrole_infos\x18\x07 \x03(\x0b\x32\".CSDT_ONLINE_BATTLE_ROOM_ROLE_INFO\"\x80\x01\n\x1c\x43SDT_ONLINE_BATTLE_ROOM_INFO\x12\x0f\n\x07room_id\x18\x01 \x01(\r\x12\x13\n\x0bscene_index\x18\x02 \x01(\r\x12:\n\x0cplayer_infos\x18\x03 \x03(\x0b\x32$.CSDT_ONLINE_BATTLE_ROOM_PLAYER_INFO\"B\n\'SCDT_ONLINE_BATTLE_ROOM_COUNT_DOWN_TIME\x12\x17\n\x0f\x63ount_down_time\x18\x01 \x01(\r\"s\n\x1f\x43SPKG_ONLINE_BATTLE_ROOM_OP_REQ\x12\x0b\n\x03uid\x18\x01 \x01(\r\x12\x11\n\toperation\x18\x02 \x01(\r\x12\x30\n\troom_info\x18\x03 \x01(\x0b\x32\x1d.CSDT_ONLINE_BATTLE_ROOM_INFO\"\x85\x01\n\x1fSCPKG_ONLINE_BATTLE_ROOM_OP_RES\x12\x11\n\toperation\x18\x01 \x01(\r\x12\x0e\n\x06result\x18\x02 \x01(\r\x12\r\n\x05param\x18\x03 \x01(\r\x12\x30\n\troom_info\x18\x04 \x03(\x0b\x32\x1d.CSDT_ONLINE_BATTLE_ROOM_INFO\"3\n$CSPKG_ONLINE_BATTLE_SHOP_BOX_BUY_REQ\x12\x0b\n\x03pos\x18\x01 \x01(\r\"\x90\x01\n$SCPKG_ONLINE_BATTLE_SHOP_BOX_BUY_RES\x12\x0e\n\x06result\x18\x01 \x01(\r\x12\"\n\tdrop_info\x18\x02 \x01(\x0b\x32\x0f.CSDT_DROP_INFO\x12\x34\n\x12online_battle_info\x18\x03 \x01(\x0b\x32\x18.CSDT_ONLINE_BATTLE_INFO\"\x9b\x03\n CSPKG_ONLINE_BATTLE_ROUND_FINISH\x12\x12\n\nwinner_uid\x18\x01 \x01(\r\x12\x13\n\x0bwinner_name\x18\x02 \x01(\t\x12\x16\n\x0ewinner_hero_id\x18\x03 \x01(\r\x12\x19\n\x11winner_hero_index\x18\x04 \x01(\r\x12\x1d\n\x15winner_hero_remain_hp\x18\x05 \x01(\r\x12\x1a\n\x12winner_hero_max_hp\x18\x06 \x01(\r\x12\x1b\n\x13winner_hero_ability\x18\x07 \x01(\r\x12\x11\n\tloser_uid\x18\x08 \x01(\r\x12\x12\n\nloser_name\x18\t \x01(\t\x12\x15\n\rloser_hero_id\x18\n \x01(\r\x12\x18\n\x10loser_hero_index\x18\x0b \x01(\r\x12\x1c\n\x14loser_hero_remain_hp\x18\x0c \x01(\r\x12\x19\n\x11loser_hero_max_hp\x18\r \x01(\r\x12\x1a\n\x12loser_hero_ability\x18\x0e \x01(\r\x12\x16\n\x0eremain_seconds\x18\x0f \x01(\r')
   ,
   dependencies=[protocommon_pb2.DESCRIPTOR,rescommon_pb2.DESCRIPTOR,])
 _sym_db.RegisterFileDescriptor(DESCRIPTOR)
@@ -472,6 +472,134 @@ _SCPKG_ONLINE_BATTLE_SHOP_BOX_BUY_RES = _descriptor.Descriptor(
   serialized_end=1319,
 )
 
+
+_CSPKG_ONLINE_BATTLE_ROUND_FINISH = _descriptor.Descriptor(
+  name='CSPKG_ONLINE_BATTLE_ROUND_FINISH',
+  full_name='CSPKG_ONLINE_BATTLE_ROUND_FINISH',
+  filename=None,
+  file=DESCRIPTOR,
+  containing_type=None,
+  fields=[
+    _descriptor.FieldDescriptor(
+      name='winner_uid', full_name='CSPKG_ONLINE_BATTLE_ROUND_FINISH.winner_uid', index=0,
+      number=1, type=13, cpp_type=3, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    _descriptor.FieldDescriptor(
+      name='winner_name', full_name='CSPKG_ONLINE_BATTLE_ROUND_FINISH.winner_name', index=1,
+      number=2, type=9, cpp_type=9, label=1,
+      has_default_value=False, default_value=_b("").decode('utf-8'),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    _descriptor.FieldDescriptor(
+      name='winner_hero_id', full_name='CSPKG_ONLINE_BATTLE_ROUND_FINISH.winner_hero_id', index=2,
+      number=3, type=13, cpp_type=3, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    _descriptor.FieldDescriptor(
+      name='winner_hero_index', full_name='CSPKG_ONLINE_BATTLE_ROUND_FINISH.winner_hero_index', index=3,
+      number=4, type=13, cpp_type=3, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    _descriptor.FieldDescriptor(
+      name='winner_hero_remain_hp', full_name='CSPKG_ONLINE_BATTLE_ROUND_FINISH.winner_hero_remain_hp', index=4,
+      number=5, type=13, cpp_type=3, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    _descriptor.FieldDescriptor(
+      name='winner_hero_max_hp', full_name='CSPKG_ONLINE_BATTLE_ROUND_FINISH.winner_hero_max_hp', index=5,
+      number=6, type=13, cpp_type=3, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    _descriptor.FieldDescriptor(
+      name='winner_hero_ability', full_name='CSPKG_ONLINE_BATTLE_ROUND_FINISH.winner_hero_ability', index=6,
+      number=7, type=13, cpp_type=3, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    _descriptor.FieldDescriptor(
+      name='loser_uid', full_name='CSPKG_ONLINE_BATTLE_ROUND_FINISH.loser_uid', index=7,
+      number=8, type=13, cpp_type=3, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    _descriptor.FieldDescriptor(
+      name='loser_name', full_name='CSPKG_ONLINE_BATTLE_ROUND_FINISH.loser_name', index=8,
+      number=9, type=9, cpp_type=9, label=1,
+      has_default_value=False, default_value=_b("").decode('utf-8'),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    _descriptor.FieldDescriptor(
+      name='loser_hero_id', full_name='CSPKG_ONLINE_BATTLE_ROUND_FINISH.loser_hero_id', index=9,
+      number=10, type=13, cpp_type=3, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    _descriptor.FieldDescriptor(
+      name='loser_hero_index', full_name='CSPKG_ONLINE_BATTLE_ROUND_FINISH.loser_hero_index', index=10,
+      number=11, type=13, cpp_type=3, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    _descriptor.FieldDescriptor(
+      name='loser_hero_remain_hp', full_name='CSPKG_ONLINE_BATTLE_ROUND_FINISH.loser_hero_remain_hp', index=11,
+      number=12, type=13, cpp_type=3, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    _descriptor.FieldDescriptor(
+      name='loser_hero_max_hp', full_name='CSPKG_ONLINE_BATTLE_ROUND_FINISH.loser_hero_max_hp', index=12,
+      number=13, type=13, cpp_type=3, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    _descriptor.FieldDescriptor(
+      name='loser_hero_ability', full_name='CSPKG_ONLINE_BATTLE_ROUND_FINISH.loser_hero_ability', index=13,
+      number=14, type=13, cpp_type=3, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    _descriptor.FieldDescriptor(
+      name='remain_seconds', full_name='CSPKG_ONLINE_BATTLE_ROUND_FINISH.remain_seconds', index=14,
+      number=15, type=13, cpp_type=3, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+  ],
+  extensions=[
+  ],
+  nested_types=[],
+  enum_types=[
+  ],
+  options=None,
+  is_extendable=False,
+  extension_ranges=[],
+  oneofs=[
+  ],
+  serialized_start=1322,
+  serialized_end=1733,
+)
+
 _SCPKG_CMD_PLAYER_ENTER_ONLINE_BATTLE_DUN.fields_by_name['online_battle_info'].message_type = protocommon_pb2._CSDT_ONLINE_BATTLE_INFO
 _SCPKG_CMD_PLAYER_ENTER_ONLINE_BATTLE_DUN.fields_by_name['role_info'].message_type = _CSDT_ONLINE_BATTLE_ROOM_ROLE_INFO
 _CSDT_ONLINE_BATTLE_ROOM_ROLE_INFO.fields_by_name['hero_attr_info'].message_type = rescommon_pb2._ST_BATTLE_HERO_ATTR_INFO
@@ -490,6 +618,7 @@ DESCRIPTOR.message_types_by_name['CSPKG_ONLINE_BATTLE_ROOM_OP_REQ'] = _CSPKG_ONL
 DESCRIPTOR.message_types_by_name['SCPKG_ONLINE_BATTLE_ROOM_OP_RES'] = _SCPKG_ONLINE_BATTLE_ROOM_OP_RES
 DESCRIPTOR.message_types_by_name['CSPKG_ONLINE_BATTLE_SHOP_BOX_BUY_REQ'] = _CSPKG_ONLINE_BATTLE_SHOP_BOX_BUY_REQ
 DESCRIPTOR.message_types_by_name['SCPKG_ONLINE_BATTLE_SHOP_BOX_BUY_RES'] = _SCPKG_ONLINE_BATTLE_SHOP_BOX_BUY_RES
+DESCRIPTOR.message_types_by_name['CSPKG_ONLINE_BATTLE_ROUND_FINISH'] = _CSPKG_ONLINE_BATTLE_ROUND_FINISH
 
 SCPKG_CMD_PLAYER_ENTER_ONLINE_BATTLE_DUN = _reflection.GeneratedProtocolMessageType('SCPKG_CMD_PLAYER_ENTER_ONLINE_BATTLE_DUN', (_message.Message,), dict(
   DESCRIPTOR = _SCPKG_CMD_PLAYER_ENTER_ONLINE_BATTLE_DUN,
@@ -553,6 +682,13 @@ SCPKG_ONLINE_BATTLE_SHOP_BOX_BUY_RES = _reflection.GeneratedProtocolMessageType(
   # @@protoc_insertion_point(class_scope:SCPKG_ONLINE_BATTLE_SHOP_BOX_BUY_RES)
   ))
 _sym_db.RegisterMessage(SCPKG_ONLINE_BATTLE_SHOP_BOX_BUY_RES)
+
+CSPKG_ONLINE_BATTLE_ROUND_FINISH = _reflection.GeneratedProtocolMessageType('CSPKG_ONLINE_BATTLE_ROUND_FINISH', (_message.Message,), dict(
+  DESCRIPTOR = _CSPKG_ONLINE_BATTLE_ROUND_FINISH,
+  __module__ = 'onlinebattle_pb2'
+  # @@protoc_insertion_point(class_scope:CSPKG_ONLINE_BATTLE_ROUND_FINISH)
+  ))
+_sym_db.RegisterMessage(CSPKG_ONLINE_BATTLE_ROUND_FINISH)
 
 
 # @@protoc_insertion_point(module_scope)

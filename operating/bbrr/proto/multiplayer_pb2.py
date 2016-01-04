@@ -21,7 +21,7 @@ import rescommon_pb2
 DESCRIPTOR = _descriptor.FileDescriptor(
   name='multiplayer.proto',
   package='',
-  serialized_pb=_b('\n\x11multiplayer.proto\x1a\x11protocommon.proto\x1a\x0frescommon.proto\"\xa7\x04\n\x1d\x43SPKG_ONLINE_BATTLE_MATCH_MSG\x12\x0b\n\x03uid\x18\x01 \x01(\r\x12\x0f\n\x07zone_id\x18\x02 \x01(\r\x12\x0f\n\x07room_id\x18\x03 \x01(\r\x12\x10\n\x08msg_type\x18\x04 \x01(\r\x12(\n\nset_action\x18\x05 \x01(\x0b\x32\x14.CCPKG_CMD_SETACTION\x12&\n\tinput_msg\x18\x06 \x01(\x0b\x32\x13.CCPKG_CMD_INPUTMSG\x12$\n\x08\x61\x64\x64_role\x18\x07 \x01(\x0b\x32\x12.CCPKG_CMD_ADDROLE\x12/\n\rloading_phase\x18\x08 \x01(\x0b\x32\x18.CCPKG_CMD_LOADING_PHASE\x12)\n\nround_info\x18\t \x01(\x0b\x32\x15.CCPKG_CMD_ROUND_INFO\x12\x39\n\x12set_role_attribute\x18\n \x01(\x0b\x32\x1d.CCPKG_CMD_SET_ROLE_ATTRIBUTE\x12\'\n\trole_dead\x18\x0b \x01(\x0b\x32\x14.CCPKG_CMD_ROLE_DEAD\x12-\n\x0cstage_finish\x18\x0c \x01(\x0b\x32\x17.CCPKG_CMD_STAGE_FINISH\x12\'\n\tcollision\x18\r \x01(\x0b\x32\x14.CCPKG_CMD_COLLISION\x12\x35\n\x10ready_count_down\x18\x0e \x01(\x0b\x32\x1b.CCPKG_CMD_READY_COUNT_DOWN\"\x84\x02\n\x1d\x43SPKG_MULTIPLAYER_PVE_DUN_MSG\x12\x0b\n\x03uid\x18\x01 \x01(\r\x12\x10\n\x08msg_type\x18\x02 \x01(\r\x12\x1a\n\x12generated_from_svr\x18\x03 \x01(\x08\x12(\n\nset_action\x18\x04 \x01(\x0b\x32\x14.CCPKG_CMD_SETACTION\x12$\n\x08\x61\x64\x64_role\x18\x05 \x01(\x0b\x32\x12.CCPKG_CMD_ADDROLE\x12/\n\rloading_phase\x18\x06 \x01(\x0b\x32\x18.CCPKG_CMD_LOADING_PHASE\x12\'\n\tcollision\x18\x07 \x01(\x0b\x32\x14.CCPKG_CMD_COLLISION\"\xff\x01\n%CSPKG_MULTIPLAYER_PVE_DUN_ROOM_OP_REQ\x12\x0b\n\x03uid\x18\x01 \x01(\r\x12\x11\n\toperation\x18\x02 \x01(\r\x12\r\n\x05param\x18\x03 \x01(\r\x12\x15\n\rdungeon_index\x18\x04 \x03(\r\x12\x12\n\ndungeon_id\x18\x05 \x01(\r\x12:\n\x0bplayer_info\x18\x06 \x01(\x0b\x32%.CSDT_MULTIPLAYER_PVE_DUN_PLAYER_INFO\x12\x12\n\nuse_ticket\x18\x07 \x01(\x08\x12\x14\n\x0cgang_mem_uid\x18\x08 \x03(\r\x12\x16\n\x0emsg_time_stamp\x18\t \x01(\r\"\xf7\x01\n%SCPKG_MULTIPLAYER_PVE_DUN_ROOM_OP_RES\x12\x0b\n\x03uid\x18\x01 \x01(\r\x12\x11\n\toperation\x18\x02 \x01(\r\x12\x0e\n\x06result\x18\x03 \x01(\r\x12\r\n\x05param\x18\x04 \x01(\r\x12\x0f\n\x07room_id\x18\x05 \x01(\r\x12\x15\n\rdungeon_index\x18\x06 \x03(\r\x12\x12\n\ndungeon_id\x18\x07 \x01(\r\x12;\n\x0cplayer_infos\x18\x08 \x03(\x0b\x32%.CSDT_MULTIPLAYER_PVE_DUN_PLAYER_INFO\x12\x16\n\x0emsg_time_stamp\x18\t \x01(\r\"\xe4\x01\n$CSDT_MULTIPLAYER_PVE_DUN_PLAYER_INFO\x12\x0c\n\x04host\x18\x01 \x01(\x08\x12\x0b\n\x03uid\x18\x02 \x01(\r\x12\x0c\n\x04name\x18\x03 \x01(\t\x12\x0f\n\x07zone_id\x18\x04 \x01(\r\x12\r\n\x05ready\x18\x05 \x01(\x08\x12\x36\n\trole_info\x18\x06 \x01(\x0b\x32#.CSDT_MULTIPLAYER_PVE_DUN_ROLE_INFO\x12\x14\n\x0cteammate_uid\x18\x08 \x01(\r\x12\x12\n\nuse_ticket\x18\t \x01(\x08\x12\x11\n\tvip_level\x18\n \x01(\r\"\xeb\x01\n\"CSDT_MULTIPLAYER_PVE_DUN_ROLE_INFO\x12\x0f\n\x07role_id\x18\x01 \x01(\r\x12\x0f\n\x07role_lv\x18\x02 \x01(\r\x12\x14\n\x0crole_stamina\x18\x03 \x01(\r\x12\x15\n\rrole_strength\x18\x04 \x01(\r\x12\x14\n\x0crole_ability\x18\x05 \x01(\r\x12\x13\n\x0brole_skills\x18\x06 \x03(\r\x12\x18\n\x05\x61ttrs\x18\x07 \x03(\x0b\x32\t.HeroAttr\x12\x31\n\x0ehero_attr_info\x18\x08 \x01(\x0b\x32\x19.ST_BATTLE_HERO_ATTR_INFO\"\xb1\x01\n SCPKG_MULTIPLAYER_PVE_DUNBALANCE\x12\x0f\n\x07succeed\x18\x01 \x01(\x08\x12\x13\n\x0breward_gold\x18\x02 \x01(\r\x12\x16\n\x0ereward_crystal\x18\x03 \x01(\r\x12\"\n\tdrop_info\x18\x04 \x01(\x0b\x32\x0f.CSDT_DROP_INFO\x12+\n\x12\x61\x63tivity_drop_info\x18\x05 \x01(\x0b\x32\x0f.CSDT_DROP_INFO\"\x95\x01\n$SCPKG_MULTIPLAYER_PVE_CHALLENGE_DATA\x12\x10\n\x08week_day\x18\x0b \x01(\r\x12\x1a\n\x12\x63omplete_dun_index\x18\x0c \x03(\r\x12!\n\x19\x66ree_ticket_limit_seconds\x18\r \x01(\r\x12\x1c\n\x14ticket_brought_times\x18\x0e \x01(\r\"3\n%CSPKG_SET_OFFLINE_BATTLE_TITLE_ID_REQ\x12\n\n\x02id\x18\x01 \x01(\r\"3\n%SCPKG_SET_OFFLINE_BATTLE_TITLE_ID_RES\x12\n\n\x02id\x18\x01 \x01(\r\"\xf4\x01\n\x18\x43SDT_OFFLINE_BATTLE_INFO\x12\x18\n\x10gold_medal_count\x18\x01 \x01(\r\x12\x1a\n\x12silver_medal_count\x18\x02 \x01(\r\x12\x16\n\x0e\x64\x65\x66\x65\x61ted_count\x18\x03 \x01(\r\x12&\n\x1emy_gold_medal_holder_role_name\x18\x04 \x01(\t\x12(\n my_silver_medal_holder_role_name\x18\x05 \x01(\t\x12\x1a\n\x12mode_3v3_win_count\x18\x06 \x01(\r\x12\x1c\n\x14title_index_selected\x18\x07 \x01(\r\"S\n\x19SCPKG_OFFLINE_BATTLE_INFO\x12\x36\n\x13offline_battle_info\x18\x01 \x01(\x0b\x32\x19.CSDT_OFFLINE_BATTLE_INFO\"L\n&CSPKG_OFFLINE_BATTLE_DEFEATED_LIST_REQ\x12\x13\n\x0bstart_index\x18\x01 \x01(\r\x12\r\n\x05\x63ount\x18\x02 \x01(\r\"\xe9\x01\n&CSDT_OFFLINE_BATTLE_DEFEATED_LIST_ITEM\x12\x15\n\ropponent_name\x18\x01 \x01(\t\x12$\n\x1copponent_title_when_defeated\x18\x02 \x01(\r\x12/\n\'opponent_gold_medal_count_when_defeated\x18\x03 \x01(\r\x12\x31\n)opponent_silver_medal_count_when_defeated\x18\x04 \x01(\r\x12\x1e\n\x16got_opponent_medal_bit\x18\x05 \x01(\r\"u\n&SCPKG_OFFLINE_BATTLE_DEFEATED_LIST_RES\x12\x13\n\x0bstart_index\x18\x01 \x01(\r\x12\x36\n\x05items\x18\x02 \x03(\x0b\x32\'.CSDT_OFFLINE_BATTLE_DEFEATED_LIST_ITEM\"\xdb\x01\n\x1b\x43SPKG_OFFLINE_BATTLE_RESULT\x12\x0c\n\x04mode\x18\x01 \x01(\r\x12\x11\n\tself_name\x18\x02 \x01(\t\x12\x15\n\ropponent_name\x18\x03 \x01(\t\x12\x0b\n\x03win\x18\x04 \x01(\x08\x12\x17\n\x0floser_got_medal\x18\x05 \x01(\x08\x12!\n\x19opponent_gold_medal_count\x18\x06 \x01(\r\x12#\n\x1bopponent_silver_medal_count\x18\x07 \x01(\r\x12\x16\n\x0eopponent_index\x18\x08 \x01(\r\"\xe4\x01\n\x13\x43\x43PKG_CMD_CONF_INFO\x12\x0c\n\x04mode\x18\x01 \x01(\r\x12\x0c\n\x04name\x18\x02 \x01(\t\x12\x11\n\twin_count\x18\x03 \x01(\r\x12\x0f\n\x07version\x18\x04 \x01(\t\x12\x0f\n\x07is_host\x18\x05 \x01(\x08\x12\n\n\x02ip\x18\x06 \x01(\t\x12\x12\n\ntime_stamp\x18\x07 \x01(\r\x12\x13\n\x0btitle_index\x18\x08 \x01(\r\x12\x11\n\tgot_medal\x18\t \x01(\x08\x12\x18\n\x10gold_medal_count\x18\n \x01(\r\x12\x1a\n\x12silver_medal_count\x18\x0b \x01(\r\"\xb5\x02\n\x15\x43\x43\x44T_CMD_ACTION_PARAM\x12\x0e\n\x06\x61\x63tion\x18\x01 \x01(\t\x12\x0c\n\x04\x66\x61\x63\x65\x18\x02 \x01(\x05\x12\x10\n\x08skill_id\x18\x03 \x01(\r\x12\x1a\n\x12\x61\x63tion_execute_way\x18\x04 \x01(\x05\x12\x14\n\x0c\x66reeze_start\x18\x05 \x01(\r\x12\x17\n\x0f\x66reeze_duration\x18\x06 \x01(\x02\x12\x0f\n\x07speed_x\x18\x07 \x01(\x02\x12\x0f\n\x07speed_y\x18\x08 \x01(\x02\x12\r\n\x05pos_x\x18\t \x01(\x02\x12\r\n\x05pos_y\x18\n \x01(\x02\x12\x15\n\rfreeze_motion\x18\x0b \x01(\x08\x12\x1a\n\x12\x63ur_acceleration_x\x18\x0c \x01(\x02\x12\x1a\n\x12\x63ur_acceleration_y\x18\r \x01(\x02\x12\x12\n\nhit_action\x18\x0e \x01(\t\"b\n\x13\x43\x43PKG_CMD_SETACTION\x12\x0f\n\x07role_id\x18\x01 \x01(\r\x12\x0c\n\x04type\x18\x02 \x01(\r\x12,\n\x0c\x61\x63tion_param\x18\x03 \x01(\x0b\x32\x16.CCDT_CMD_ACTION_PARAM\"V\n\x12\x43\x43PKG_CMD_INPUTMSG\x12\x0f\n\x07role_id\x18\x01 \x01(\x05\x12\x11\n\tinput_key\x18\x02 \x01(\x05\x12\x1c\n\x14input_face_direction\x18\x03 \x01(\x05\"\xd5\x01\n\x11\x43\x43PKG_CMD_ADDROLE\x12\x16\n\x0emaster_role_id\x18\x01 \x01(\x05\x12\x18\n\x10logic_data_index\x18\x02 \x01(\x05\x12\x13\n\x0bnew_role_id\x18\x03 \x01(\x05\x12\r\n\x05pos_x\x18\x04 \x01(\x05\x12\r\n\x05pos_y\x18\x05 \x01(\x05\x12\x0c\n\x04\x66\x61\x63\x65\x18\x06 \x01(\x05\x12\x10\n\x08rotation\x18\x07 \x01(\x05\x12\r\n\x05scale\x18\x08 \x01(\x05\x12\x13\n\x0b\x61\x63tion_name\x18\t \x01(\t\x12\x17\n\x0f\x66\x61\x63tor_skill_id\x18\n \x01(\x05\"E\n\x1a\x43\x43PKG_CMD_CHOOSE_ROLE_INFO\x12\x14\n\x0cplayer_index\x18\x01 \x01(\r\x12\x11\n\trole_name\x18\x02 \x01(\t\"G\n\x17\x43\x43PKG_CMD_LOADING_PHASE\x12\x16\n\x0eload_completed\x18\x01 \x01(\r\x12\x14\n\x0c\x62\x61ttle_start\x18\x02 \x01(\r\"`\n\x12\x43\x43\x44T_CMD_ROLE_INFO\x12\x0f\n\x07role_id\x18\x01 \x01(\r\x12\x13\n\x0brole_cur_hp\x18\x02 \x01(\x02\x12\x13\n\x0brole_max_hp\x18\x03 \x01(\r\x12\x0f\n\x07role_sp\x18\x04 \x01(\x02\"\xbb\x01\n\x14\x43\x43PKG_CMD_ROUND_INFO\x12#\n\x06role_0\x18\x01 \x01(\x0b\x32\x13.CCDT_CMD_ROLE_INFO\x12#\n\x06role_1\x18\x02 \x01(\x0b\x32\x13.CCDT_CMD_ROLE_INFO\x12\x13\n\x0bround_index\x18\x03 \x01(\r\x12\x17\n\x0f\x62\x61ttle_finished\x18\x04 \x01(\x08\x12\x12\n\nbattle_win\x18\x05 \x01(\x08\x12\x17\n\x0fwinner_role_ids\x18\x06 \x03(\r\"\xaf\x01\n\x13\x43\x43PKG_CMD_ENTER_DUN\x12\x10\n\x08map_name\x18\x01 \x01(\t\x12)\n\nround_info\x18\x02 \x01(\x0b\x32\x15.CCPKG_CMD_ROUND_INFO\x12,\n\x0fhost_role_infos\x18\x03 \x03(\x0b\x32\x13.CCDT_CMD_ROLE_INFO\x12-\n\x10guest_role_infos\x18\x04 \x03(\x0b\x32\x13.CCDT_CMD_ROLE_INFO\"G\n\x1c\x43\x43PKG_CMD_SET_ROLE_ATTRIBUTE\x12\x0f\n\x07role_id\x18\x01 \x01(\x05\x12\n\n\x02hp\x18\x02 \x01(\x05\x12\n\n\x02sp\x18\x03 \x01(\x05\"V\n\x13\x43\x43PKG_CMD_ROLE_DEAD\x12\x0f\n\x07role_id\x18\x01 \x01(\x05\x12.\n\x0fnext_round_info\x18\x02 \x01(\x0b\x32\x15.CCPKG_CMD_ROUND_INFO\"]\n\x16\x43\x43PKG_CMD_STAGE_FINISH\x12\x15\n\rwiner_role_id\x18\x01 \x01(\x05\x12\x15\n\rloser_role_id\x18\x02 \x01(\x05\x12\x15\n\rbattle_result\x18\x03 \x01(\r\"\xa5\x02\n\x13\x43\x43PKG_CMD_COLLISION\x12\x18\n\x10\x61ttacker_role_id\x18\x01 \x01(\x05\x12\x18\n\x10\x64\x65\x66\x65nder_role_id\x18\x02 \x01(\x05\x12\x0e\n\x06\x64\x61mage\x18\x03 \x01(\x02\x12\x19\n\x11\x62ind_host_role_id\x18\x04 \x01(\r\x12\x1b\n\x13\x62ind_victim_role_id\x18\x05 \x01(\r\x12\x13\n\x0b\x61ttacker_hp\x18\x06 \x01(\x02\x12\x13\n\x0b\x61ttacker_sp\x18\x07 \x01(\x02\x12\x13\n\x0b\x64\x65\x66\x65nder_hp\x18\x08 \x01(\x02\x12\x13\n\x0b\x64\x65\x66\x65nder_sp\x18\t \x01(\x02\x12#\n\x1bis_attacker_super_armor_win\x18\n \x01(\x02\x12\x19\n\x11\x63ur_attack_action\x18\x0b \x01(\t\"B\n\x0f\x43\x43PKG_CMD_READY\x12\x14\n\x0cplayer_index\x18\x01 \x01(\r\x12\x19\n\x11\x61vailable_role_id\x18\x02 \x03(\r\"+\n\x1a\x43\x43PKG_CMD_READY_COUNT_DOWN\x12\r\n\x05\x43ount\x18\x01 \x01(\r*\xaf\x03\n\x18ONLINE_BATTLE_MATCH_ENUM\x12$\n SC_ONLINE_BATTLE_MATCH_SETACTION\x10\x01\x12#\n\x1fSC_ONLINE_BATTLE_MATCH_INPUTMSG\x10\x02\x12\"\n\x1eSC_ONLINE_BATTLE_MATCH_ADDROLE\x10\x03\x12(\n$SC_ONLINE_BATTLE_MATCH_LOADING_PHASE\x10\x04\x12%\n!SC_ONLINE_BATTLE_MATCH_ROUND_INFO\x10\x05\x12-\n)SC_ONLINE_BATTLE_MATCH_SET_ROLE_ATTRIBUTE\x10\x06\x12$\n SC_ONLINE_BATTLE_MATCH_ROLE_DEAD\x10\x07\x12\'\n#SC_ONLINE_BATTLE_MATCH_STAGE_FINISH\x10\x08\x12$\n SC_ONLINE_BATTLE_MATCH_COLLISION\x10\t\x12+\n\'SC_ONLINE_BATTLE_MATCH_READY_COUNT_DOWN\x10\n\x1a\x02\x10\x01*\xe7\x03\n ENUM_MULTIPLAYER_PVE_DUN_ROOM_OP\x12&\n\"MULTIPLAYER_PVE_DUN_ROOM_OP_CREATE\x10\x01\x12$\n MULTIPLAYER_PVE_DUN_ROOM_OP_JOIN\x10\x02\x12$\n MULTIPLAYER_PVE_DUN_ROOM_OP_QUIT\x10\x03\x12$\n MULTIPLAYER_PVE_DUN_ROOM_OP_KICK\x10\x04\x12%\n!MULTIPLAYER_PVE_DUN_ROOM_OP_READY\x10\x05\x12+\n\'MULTIPLAYER_PVE_DUN_ROOM_OP_CHOOSE_ROLE\x10\x06\x12%\n!MULTIPLAYER_PVE_DUN_ROOM_OP_START\x10\x07\x12*\n&MULTIPLAYER_PVE_DUN_ROOM_OP_HEART_BEAT\x10\x08\x12,\n(MULTIPLAYER_PVE_DUN_REQUEST_FRIENDS_LIST\x10\t\x12)\n%MULTIPLAYER_PVE_DUN_INVITE_FRIEND_REQ\x10\n\x12)\n%MULTIPLAYER_PVE_DUN_INVITE_FRIEND_RES\x10\x0b*\xe1\x02\n)ENUM_MULTIPLAYER_PVE_INVITE_FRIEND_RESULT\x12/\n+MULTIPLAYER_PVE_INVITE_FRIEND_RESULT_ACCEPT\x10\x00\x12/\n+MULTIPLAYER_PVE_INVITE_FRIEND_RESULT_REFUSE\x10\x01\x12\x30\n,MULTIPLAYER_PVE_INVITE_FRIEND_RESULT_PLAYING\x10\x02\x12\x39\n5MULTIPLAYER_PVE_INVITE_FRIEND_RESULT_HERO_LEVEL_ERROR\x10\x03\x12\x35\n1MULTIPLAYER_PVE_INVITE_FRIEND_RESULT_TIMES_EXCEED\x10\x04\x12.\n*MULTIPLAYER_PVE_INVITE_FRIEND_RESULT_ERROR\x10\x05*\xbb\x02\n ENUM_MULTIPLAYER_PVE_ROOM_RESULT\x12\"\n\x1eMULTIPLAYER_PVE_ROOM_RESULT_OK\x10\x00\x12\x30\n,MULTIPLAYER_PVE_ROOM_RESULT_DUNGEON_NOT_OPEN\x10\x01\x12\x38\n4MULTIPLAYER_PVE_ROOM_RESULT_PRE_DUNGEON_NOT_COMPLETE\x10\x02\x12)\n%MULTIPLAYER_PVE_ROOM_RESULT_NO_TICKET\x10\x03\x12/\n+MULTIPLAYER_PVE_ROOM_RESULT_NO_DUN_SELECTED\x10\x04\x12+\n\'MULTIPLAYER_PVE_ROOM_RESULT_FREE_LIMITE\x10\x05*\x84\x04\n\x1c\x45NUM_MULTIPLAYER_PVE_DUN_MSG\x12%\n!MULTIPLAYER_PVE_DUN_MSG_SETACTION\x10\x01\x12#\n\x1fMULTIPLAYER_PVE_DUN_MSG_ADDROLE\x10\x02\x12)\n%MULTIPLAYER_PVE_DUN_MSG_LOADING_PHASE\x10\x03\x12&\n\"MULTIPLAYER_PVE_DUN_MSG_ROUND_INFO\x10\x04\x12.\n*MULTIPLAYER_PVE_DUN_MSG_SET_ROLE_ATTRIBUTE\x10\x05\x12%\n!MULTIPLAYER_PVE_DUN_MSG_ROLE_DEAD\x10\x06\x12%\n!MULTIPLAYER_PVE_DUN_MSG_COLLISION\x10\x07\x12\'\n#MULTIPLAYER_PVE_DUN_MSG_DUN_TIME_UP\x10\x08\x12(\n$MULTIPLAYER_PVE_DUN_MSG_DISCONNECTED\x10\t\x12&\n\"MULTIPLAYER_PVE_DUN_MSG_HEART_BEAT\x10\n\x12&\n\"MULTIPLAYER_PVE_DUN_MSG_DUN_FINISH\x10\x0b\x12$\n MULTIPLAYER_PVE_DUN_MSG_SET_HOST\x10\x0c*\xc2\x01\n&ENUM_MULTIPLAYER_PVE_TICKET_BUY_RESULT\x12(\n$MULTIPLAYER_PVE_TICKET_BUY_RESULT_OK\x10\x00\x12\x33\n/MULTIPLAYER_PVE_TICKET_BUY_RESULT_NO_MORE_TIMES\x10\x01\x12\x39\n5MULTIPLAYER_PVE_TICKET_BUY_RESULT_RESOURCE_NOT_ENOUGH\x10\x02')
+  serialized_pb=_b('\n\x11multiplayer.proto\x1a\x11protocommon.proto\x1a\x0frescommon.proto\"\xa7\x04\n\x1d\x43SPKG_ONLINE_BATTLE_MATCH_MSG\x12\x0b\n\x03uid\x18\x01 \x01(\r\x12\x0f\n\x07zone_id\x18\x02 \x01(\r\x12\x0f\n\x07room_id\x18\x03 \x01(\r\x12\x10\n\x08msg_type\x18\x04 \x01(\r\x12(\n\nset_action\x18\x05 \x01(\x0b\x32\x14.CCPKG_CMD_SETACTION\x12&\n\tinput_msg\x18\x06 \x01(\x0b\x32\x13.CCPKG_CMD_INPUTMSG\x12$\n\x08\x61\x64\x64_role\x18\x07 \x01(\x0b\x32\x12.CCPKG_CMD_ADDROLE\x12/\n\rloading_phase\x18\x08 \x01(\x0b\x32\x18.CCPKG_CMD_LOADING_PHASE\x12)\n\nround_info\x18\t \x01(\x0b\x32\x15.CCPKG_CMD_ROUND_INFO\x12\x39\n\x12set_role_attribute\x18\n \x01(\x0b\x32\x1d.CCPKG_CMD_SET_ROLE_ATTRIBUTE\x12\'\n\trole_dead\x18\x0b \x01(\x0b\x32\x14.CCPKG_CMD_ROLE_DEAD\x12-\n\x0cstage_finish\x18\x0c \x01(\x0b\x32\x17.CCPKG_CMD_STAGE_FINISH\x12\'\n\tcollision\x18\r \x01(\x0b\x32\x14.CCPKG_CMD_COLLISION\x12\x35\n\x10ready_count_down\x18\x0e \x01(\x0b\x32\x1b.CCPKG_CMD_READY_COUNT_DOWN\"\x84\x02\n\x1d\x43SPKG_MULTIPLAYER_PVE_DUN_MSG\x12\x0b\n\x03uid\x18\x01 \x01(\r\x12\x10\n\x08msg_type\x18\x02 \x01(\r\x12\x1a\n\x12generated_from_svr\x18\x03 \x01(\x08\x12(\n\nset_action\x18\x04 \x01(\x0b\x32\x14.CCPKG_CMD_SETACTION\x12$\n\x08\x61\x64\x64_role\x18\x05 \x01(\x0b\x32\x12.CCPKG_CMD_ADDROLE\x12/\n\rloading_phase\x18\x06 \x01(\x0b\x32\x18.CCPKG_CMD_LOADING_PHASE\x12\'\n\tcollision\x18\x07 \x01(\x0b\x32\x14.CCPKG_CMD_COLLISION\"\x98\x02\n%CSPKG_MULTIPLAYER_PVE_DUN_ROOM_OP_REQ\x12\x0b\n\x03uid\x18\x01 \x01(\r\x12\x11\n\toperation\x18\x02 \x01(\r\x12\r\n\x05param\x18\x03 \x01(\r\x12\x15\n\rdungeon_index\x18\x04 \x03(\r\x12\x12\n\ndungeon_id\x18\x05 \x01(\r\x12:\n\x0bplayer_info\x18\x06 \x01(\x0b\x32%.CSDT_MULTIPLAYER_PVE_DUN_PLAYER_INFO\x12\x12\n\nuse_ticket\x18\x07 \x01(\x08\x12\x14\n\x0cgang_mem_uid\x18\x08 \x03(\r\x12\x16\n\x0emsg_time_stamp\x18\t \x01(\r\x12\x17\n\x0f\x66ree_dungeon_id\x18\n \x03(\r\"\x8a\x02\n%SCPKG_MULTIPLAYER_PVE_DUN_ROOM_OP_RES\x12\x0b\n\x03uid\x18\x01 \x01(\r\x12\x11\n\toperation\x18\x02 \x01(\r\x12\x0e\n\x06result\x18\x03 \x01(\r\x12\r\n\x05param\x18\x04 \x01(\r\x12\x0f\n\x07room_id\x18\x05 \x01(\r\x12\x15\n\rdungeon_index\x18\x06 \x03(\r\x12\x12\n\ndungeon_id\x18\x07 \x01(\r\x12;\n\x0cplayer_infos\x18\x08 \x03(\x0b\x32%.CSDT_MULTIPLAYER_PVE_DUN_PLAYER_INFO\x12\x16\n\x0emsg_time_stamp\x18\t \x01(\r\x12\x11\n\tis_invite\x18\n \x01(\x08\"\xf9\x01\n$CSDT_MULTIPLAYER_PVE_DUN_PLAYER_INFO\x12\x0c\n\x04host\x18\x01 \x01(\x08\x12\x0b\n\x03uid\x18\x02 \x01(\r\x12\x0c\n\x04name\x18\x03 \x01(\t\x12\x0f\n\x07zone_id\x18\x04 \x01(\r\x12\r\n\x05ready\x18\x05 \x01(\x08\x12\x36\n\trole_info\x18\x06 \x01(\x0b\x32#.CSDT_MULTIPLAYER_PVE_DUN_ROLE_INFO\x12\x14\n\x0cteammate_uid\x18\x08 \x01(\r\x12\x12\n\nuse_ticket\x18\t \x01(\x08\x12\x11\n\tvip_level\x18\n \x01(\r\x12\x13\n\x0bstatus_code\x18\x0b \x01(\r\"\x88\x02\n\"CSDT_MULTIPLAYER_PVE_DUN_ROLE_INFO\x12\x0f\n\x07role_id\x18\x01 \x01(\r\x12\x0f\n\x07role_lv\x18\x02 \x01(\r\x12\x14\n\x0crole_stamina\x18\x03 \x01(\r\x12\x15\n\rrole_strength\x18\x04 \x01(\r\x12\x14\n\x0crole_ability\x18\x05 \x01(\r\x12\x13\n\x0brole_skills\x18\x06 \x03(\r\x12\x18\n\x05\x61ttrs\x18\x07 \x03(\x0b\x32\t.HeroAttr\x12\x31\n\x0ehero_attr_info\x18\x08 \x01(\x0b\x32\x19.ST_BATTLE_HERO_ATTR_INFO\x12\x1b\n\x13min_equipment_color\x18\t \x01(\r\"\xb1\x01\n SCPKG_MULTIPLAYER_PVE_DUNBALANCE\x12\x0f\n\x07succeed\x18\x01 \x01(\x08\x12\x13\n\x0breward_gold\x18\x02 \x01(\r\x12\x16\n\x0ereward_crystal\x18\x03 \x01(\r\x12\"\n\tdrop_info\x18\x04 \x01(\x0b\x32\x0f.CSDT_DROP_INFO\x12+\n\x12\x61\x63tivity_drop_info\x18\x05 \x01(\x0b\x32\x0f.CSDT_DROP_INFO\"\x95\x01\n$SCPKG_MULTIPLAYER_PVE_CHALLENGE_DATA\x12\x10\n\x08week_day\x18\x0b \x01(\r\x12\x1a\n\x12\x63omplete_dun_index\x18\x0c \x03(\r\x12!\n\x19\x66ree_ticket_limit_seconds\x18\r \x01(\r\x12\x1c\n\x14ticket_brought_times\x18\x0e \x01(\r\"3\n%CSPKG_SET_OFFLINE_BATTLE_TITLE_ID_REQ\x12\n\n\x02id\x18\x01 \x01(\r\"3\n%SCPKG_SET_OFFLINE_BATTLE_TITLE_ID_RES\x12\n\n\x02id\x18\x01 \x01(\r\"\xf4\x01\n\x18\x43SDT_OFFLINE_BATTLE_INFO\x12\x18\n\x10gold_medal_count\x18\x01 \x01(\r\x12\x1a\n\x12silver_medal_count\x18\x02 \x01(\r\x12\x16\n\x0e\x64\x65\x66\x65\x61ted_count\x18\x03 \x01(\r\x12&\n\x1emy_gold_medal_holder_role_name\x18\x04 \x01(\t\x12(\n my_silver_medal_holder_role_name\x18\x05 \x01(\t\x12\x1a\n\x12mode_3v3_win_count\x18\x06 \x01(\r\x12\x1c\n\x14title_index_selected\x18\x07 \x01(\r\"S\n\x19SCPKG_OFFLINE_BATTLE_INFO\x12\x36\n\x13offline_battle_info\x18\x01 \x01(\x0b\x32\x19.CSDT_OFFLINE_BATTLE_INFO\"L\n&CSPKG_OFFLINE_BATTLE_DEFEATED_LIST_REQ\x12\x13\n\x0bstart_index\x18\x01 \x01(\r\x12\r\n\x05\x63ount\x18\x02 \x01(\r\"\xe9\x01\n&CSDT_OFFLINE_BATTLE_DEFEATED_LIST_ITEM\x12\x15\n\ropponent_name\x18\x01 \x01(\t\x12$\n\x1copponent_title_when_defeated\x18\x02 \x01(\r\x12/\n\'opponent_gold_medal_count_when_defeated\x18\x03 \x01(\r\x12\x31\n)opponent_silver_medal_count_when_defeated\x18\x04 \x01(\r\x12\x1e\n\x16got_opponent_medal_bit\x18\x05 \x01(\r\"u\n&SCPKG_OFFLINE_BATTLE_DEFEATED_LIST_RES\x12\x13\n\x0bstart_index\x18\x01 \x01(\r\x12\x36\n\x05items\x18\x02 \x03(\x0b\x32\'.CSDT_OFFLINE_BATTLE_DEFEATED_LIST_ITEM\"\xdb\x01\n\x1b\x43SPKG_OFFLINE_BATTLE_RESULT\x12\x0c\n\x04mode\x18\x01 \x01(\r\x12\x11\n\tself_name\x18\x02 \x01(\t\x12\x15\n\ropponent_name\x18\x03 \x01(\t\x12\x0b\n\x03win\x18\x04 \x01(\x08\x12\x17\n\x0floser_got_medal\x18\x05 \x01(\x08\x12!\n\x19opponent_gold_medal_count\x18\x06 \x01(\r\x12#\n\x1bopponent_silver_medal_count\x18\x07 \x01(\r\x12\x16\n\x0eopponent_index\x18\x08 \x01(\r\"\xe4\x01\n\x13\x43\x43PKG_CMD_CONF_INFO\x12\x0c\n\x04mode\x18\x01 \x01(\r\x12\x0c\n\x04name\x18\x02 \x01(\t\x12\x11\n\twin_count\x18\x03 \x01(\r\x12\x0f\n\x07version\x18\x04 \x01(\t\x12\x0f\n\x07is_host\x18\x05 \x01(\x08\x12\n\n\x02ip\x18\x06 \x01(\t\x12\x12\n\ntime_stamp\x18\x07 \x01(\r\x12\x13\n\x0btitle_index\x18\x08 \x01(\r\x12\x11\n\tgot_medal\x18\t \x01(\x08\x12\x18\n\x10gold_medal_count\x18\n \x01(\r\x12\x1a\n\x12silver_medal_count\x18\x0b \x01(\r\"\xb5\x02\n\x15\x43\x43\x44T_CMD_ACTION_PARAM\x12\x0e\n\x06\x61\x63tion\x18\x01 \x01(\t\x12\x0c\n\x04\x66\x61\x63\x65\x18\x02 \x01(\x05\x12\x10\n\x08skill_id\x18\x03 \x01(\r\x12\x1a\n\x12\x61\x63tion_execute_way\x18\x04 \x01(\x05\x12\x14\n\x0c\x66reeze_start\x18\x05 \x01(\r\x12\x17\n\x0f\x66reeze_duration\x18\x06 \x01(\x02\x12\x0f\n\x07speed_x\x18\x07 \x01(\x02\x12\x0f\n\x07speed_y\x18\x08 \x01(\x02\x12\r\n\x05pos_x\x18\t \x01(\x02\x12\r\n\x05pos_y\x18\n \x01(\x02\x12\x15\n\rfreeze_motion\x18\x0b \x01(\x08\x12\x1a\n\x12\x63ur_acceleration_x\x18\x0c \x01(\x02\x12\x1a\n\x12\x63ur_acceleration_y\x18\r \x01(\x02\x12\x12\n\nhit_action\x18\x0e \x01(\t\"b\n\x13\x43\x43PKG_CMD_SETACTION\x12\x0f\n\x07role_id\x18\x01 \x01(\r\x12\x0c\n\x04type\x18\x02 \x01(\r\x12,\n\x0c\x61\x63tion_param\x18\x03 \x01(\x0b\x32\x16.CCDT_CMD_ACTION_PARAM\"V\n\x12\x43\x43PKG_CMD_INPUTMSG\x12\x0f\n\x07role_id\x18\x01 \x01(\x05\x12\x11\n\tinput_key\x18\x02 \x01(\x05\x12\x1c\n\x14input_face_direction\x18\x03 \x01(\x05\"\xd5\x01\n\x11\x43\x43PKG_CMD_ADDROLE\x12\x16\n\x0emaster_role_id\x18\x01 \x01(\x05\x12\x18\n\x10logic_data_index\x18\x02 \x01(\x05\x12\x13\n\x0bnew_role_id\x18\x03 \x01(\x05\x12\r\n\x05pos_x\x18\x04 \x01(\x05\x12\r\n\x05pos_y\x18\x05 \x01(\x05\x12\x0c\n\x04\x66\x61\x63\x65\x18\x06 \x01(\x05\x12\x10\n\x08rotation\x18\x07 \x01(\x05\x12\r\n\x05scale\x18\x08 \x01(\x05\x12\x13\n\x0b\x61\x63tion_name\x18\t \x01(\t\x12\x17\n\x0f\x66\x61\x63tor_skill_id\x18\n \x01(\x05\"E\n\x1a\x43\x43PKG_CMD_CHOOSE_ROLE_INFO\x12\x14\n\x0cplayer_index\x18\x01 \x01(\r\x12\x11\n\trole_name\x18\x02 \x01(\t\"G\n\x17\x43\x43PKG_CMD_LOADING_PHASE\x12\x16\n\x0eload_completed\x18\x01 \x01(\r\x12\x14\n\x0c\x62\x61ttle_start\x18\x02 \x01(\r\"`\n\x12\x43\x43\x44T_CMD_ROLE_INFO\x12\x0f\n\x07role_id\x18\x01 \x01(\r\x12\x13\n\x0brole_cur_hp\x18\x02 \x01(\x02\x12\x13\n\x0brole_max_hp\x18\x03 \x01(\r\x12\x0f\n\x07role_sp\x18\x04 \x01(\x02\"\xbb\x01\n\x14\x43\x43PKG_CMD_ROUND_INFO\x12#\n\x06role_0\x18\x01 \x01(\x0b\x32\x13.CCDT_CMD_ROLE_INFO\x12#\n\x06role_1\x18\x02 \x01(\x0b\x32\x13.CCDT_CMD_ROLE_INFO\x12\x13\n\x0bround_index\x18\x03 \x01(\r\x12\x17\n\x0f\x62\x61ttle_finished\x18\x04 \x01(\x08\x12\x12\n\nbattle_win\x18\x05 \x01(\x08\x12\x17\n\x0fwinner_role_ids\x18\x06 \x03(\r\"\xaf\x01\n\x13\x43\x43PKG_CMD_ENTER_DUN\x12\x10\n\x08map_name\x18\x01 \x01(\t\x12)\n\nround_info\x18\x02 \x01(\x0b\x32\x15.CCPKG_CMD_ROUND_INFO\x12,\n\x0fhost_role_infos\x18\x03 \x03(\x0b\x32\x13.CCDT_CMD_ROLE_INFO\x12-\n\x10guest_role_infos\x18\x04 \x03(\x0b\x32\x13.CCDT_CMD_ROLE_INFO\"G\n\x1c\x43\x43PKG_CMD_SET_ROLE_ATTRIBUTE\x12\x0f\n\x07role_id\x18\x01 \x01(\x05\x12\n\n\x02hp\x18\x02 \x01(\x05\x12\n\n\x02sp\x18\x03 \x01(\x05\"V\n\x13\x43\x43PKG_CMD_ROLE_DEAD\x12\x0f\n\x07role_id\x18\x01 \x01(\x05\x12.\n\x0fnext_round_info\x18\x02 \x01(\x0b\x32\x15.CCPKG_CMD_ROUND_INFO\"]\n\x16\x43\x43PKG_CMD_STAGE_FINISH\x12\x15\n\rwiner_role_id\x18\x01 \x01(\x05\x12\x15\n\rloser_role_id\x18\x02 \x01(\x05\x12\x15\n\rbattle_result\x18\x03 \x01(\r\"\xa5\x02\n\x13\x43\x43PKG_CMD_COLLISION\x12\x18\n\x10\x61ttacker_role_id\x18\x01 \x01(\x05\x12\x18\n\x10\x64\x65\x66\x65nder_role_id\x18\x02 \x01(\x05\x12\x0e\n\x06\x64\x61mage\x18\x03 \x01(\x02\x12\x19\n\x11\x62ind_host_role_id\x18\x04 \x01(\r\x12\x1b\n\x13\x62ind_victim_role_id\x18\x05 \x01(\r\x12\x13\n\x0b\x61ttacker_hp\x18\x06 \x01(\x02\x12\x13\n\x0b\x61ttacker_sp\x18\x07 \x01(\x02\x12\x13\n\x0b\x64\x65\x66\x65nder_hp\x18\x08 \x01(\x02\x12\x13\n\x0b\x64\x65\x66\x65nder_sp\x18\t \x01(\x02\x12#\n\x1bis_attacker_super_armor_win\x18\n \x01(\x02\x12\x19\n\x11\x63ur_attack_action\x18\x0b \x01(\t\"B\n\x0f\x43\x43PKG_CMD_READY\x12\x14\n\x0cplayer_index\x18\x01 \x01(\r\x12\x19\n\x11\x61vailable_role_id\x18\x02 \x03(\r\"+\n\x1a\x43\x43PKG_CMD_READY_COUNT_DOWN\x12\r\n\x05\x43ount\x18\x01 \x01(\r*\xaf\x03\n\x18ONLINE_BATTLE_MATCH_ENUM\x12$\n SC_ONLINE_BATTLE_MATCH_SETACTION\x10\x01\x12#\n\x1fSC_ONLINE_BATTLE_MATCH_INPUTMSG\x10\x02\x12\"\n\x1eSC_ONLINE_BATTLE_MATCH_ADDROLE\x10\x03\x12(\n$SC_ONLINE_BATTLE_MATCH_LOADING_PHASE\x10\x04\x12%\n!SC_ONLINE_BATTLE_MATCH_ROUND_INFO\x10\x05\x12-\n)SC_ONLINE_BATTLE_MATCH_SET_ROLE_ATTRIBUTE\x10\x06\x12$\n SC_ONLINE_BATTLE_MATCH_ROLE_DEAD\x10\x07\x12\'\n#SC_ONLINE_BATTLE_MATCH_STAGE_FINISH\x10\x08\x12$\n SC_ONLINE_BATTLE_MATCH_COLLISION\x10\t\x12+\n\'SC_ONLINE_BATTLE_MATCH_READY_COUNT_DOWN\x10\n\x1a\x02\x10\x01*\xe7\x03\n ENUM_MULTIPLAYER_PVE_DUN_ROOM_OP\x12&\n\"MULTIPLAYER_PVE_DUN_ROOM_OP_CREATE\x10\x01\x12$\n MULTIPLAYER_PVE_DUN_ROOM_OP_JOIN\x10\x02\x12$\n MULTIPLAYER_PVE_DUN_ROOM_OP_QUIT\x10\x03\x12$\n MULTIPLAYER_PVE_DUN_ROOM_OP_KICK\x10\x04\x12%\n!MULTIPLAYER_PVE_DUN_ROOM_OP_READY\x10\x05\x12+\n\'MULTIPLAYER_PVE_DUN_ROOM_OP_CHOOSE_ROLE\x10\x06\x12%\n!MULTIPLAYER_PVE_DUN_ROOM_OP_START\x10\x07\x12*\n&MULTIPLAYER_PVE_DUN_ROOM_OP_HEART_BEAT\x10\x08\x12,\n(MULTIPLAYER_PVE_DUN_REQUEST_FRIENDS_LIST\x10\t\x12)\n%MULTIPLAYER_PVE_DUN_INVITE_FRIEND_REQ\x10\n\x12)\n%MULTIPLAYER_PVE_DUN_INVITE_FRIEND_RES\x10\x0b*\xe1\x02\n)ENUM_MULTIPLAYER_PVE_INVITE_FRIEND_RESULT\x12/\n+MULTIPLAYER_PVE_INVITE_FRIEND_RESULT_ACCEPT\x10\x00\x12/\n+MULTIPLAYER_PVE_INVITE_FRIEND_RESULT_REFUSE\x10\x01\x12\x30\n,MULTIPLAYER_PVE_INVITE_FRIEND_RESULT_PLAYING\x10\x02\x12\x39\n5MULTIPLAYER_PVE_INVITE_FRIEND_RESULT_HERO_LEVEL_ERROR\x10\x03\x12\x35\n1MULTIPLAYER_PVE_INVITE_FRIEND_RESULT_TIMES_EXCEED\x10\x04\x12.\n*MULTIPLAYER_PVE_INVITE_FRIEND_RESULT_ERROR\x10\x05*\xd7\x01\n\"ENUM_MULTIPLAYER_PVE_FRIEND_STATUS\x12$\n MULTIPLAYER_PVE_FRIEND_STATUS_OK\x10\x00\x12)\n%MULTIPLAYER_PVE_FRIEND_STATUS_OFFLINE\x10\x01\x12)\n%MULTIPLAYER_PVE_FRIEND_STATUS_PLAYING\x10\x02\x12\x35\n1MULTIPLAYER_PVE_FRIEND_STATUS_DIFFICULTY_NOT_OPEN\x10\x03*\xbb\x02\n ENUM_MULTIPLAYER_PVE_ROOM_RESULT\x12\"\n\x1eMULTIPLAYER_PVE_ROOM_RESULT_OK\x10\x00\x12\x30\n,MULTIPLAYER_PVE_ROOM_RESULT_DUNGEON_NOT_OPEN\x10\x01\x12\x38\n4MULTIPLAYER_PVE_ROOM_RESULT_PRE_DUNGEON_NOT_COMPLETE\x10\x02\x12)\n%MULTIPLAYER_PVE_ROOM_RESULT_NO_TICKET\x10\x03\x12/\n+MULTIPLAYER_PVE_ROOM_RESULT_NO_DUN_SELECTED\x10\x04\x12+\n\'MULTIPLAYER_PVE_ROOM_RESULT_FREE_LIMITE\x10\x05*\x84\x04\n\x1c\x45NUM_MULTIPLAYER_PVE_DUN_MSG\x12%\n!MULTIPLAYER_PVE_DUN_MSG_SETACTION\x10\x01\x12#\n\x1fMULTIPLAYER_PVE_DUN_MSG_ADDROLE\x10\x02\x12)\n%MULTIPLAYER_PVE_DUN_MSG_LOADING_PHASE\x10\x03\x12&\n\"MULTIPLAYER_PVE_DUN_MSG_ROUND_INFO\x10\x04\x12.\n*MULTIPLAYER_PVE_DUN_MSG_SET_ROLE_ATTRIBUTE\x10\x05\x12%\n!MULTIPLAYER_PVE_DUN_MSG_ROLE_DEAD\x10\x06\x12%\n!MULTIPLAYER_PVE_DUN_MSG_COLLISION\x10\x07\x12\'\n#MULTIPLAYER_PVE_DUN_MSG_DUN_TIME_UP\x10\x08\x12(\n$MULTIPLAYER_PVE_DUN_MSG_DISCONNECTED\x10\t\x12&\n\"MULTIPLAYER_PVE_DUN_MSG_HEART_BEAT\x10\n\x12&\n\"MULTIPLAYER_PVE_DUN_MSG_DUN_FINISH\x10\x0b\x12$\n MULTIPLAYER_PVE_DUN_MSG_SET_HOST\x10\x0c*\xc2\x01\n&ENUM_MULTIPLAYER_PVE_TICKET_BUY_RESULT\x12(\n$MULTIPLAYER_PVE_TICKET_BUY_RESULT_OK\x10\x00\x12\x33\n/MULTIPLAYER_PVE_TICKET_BUY_RESULT_NO_MORE_TIMES\x10\x01\x12\x39\n5MULTIPLAYER_PVE_TICKET_BUY_RESULT_RESOURCE_NOT_ENOUGH\x10\x02')
   ,
   dependencies=[protocommon_pb2.DESCRIPTOR,rescommon_pb2.DESCRIPTOR,])
 _sym_db.RegisterFileDescriptor(DESCRIPTOR)
@@ -75,8 +75,8 @@ _ONLINE_BATTLE_MATCH_ENUM = _descriptor.EnumDescriptor(
   ],
   containing_type=None,
   options=_descriptor._ParseOptions(descriptor_pb2.EnumOptions(), _b('\020\001')),
-  serialized_start=5499,
-  serialized_end=5930,
+  serialized_start=5593,
+  serialized_end=6024,
 )
 _sym_db.RegisterEnumDescriptor(_ONLINE_BATTLE_MATCH_ENUM)
 
@@ -134,8 +134,8 @@ _ENUM_MULTIPLAYER_PVE_DUN_ROOM_OP = _descriptor.EnumDescriptor(
   ],
   containing_type=None,
   options=None,
-  serialized_start=5933,
-  serialized_end=6420,
+  serialized_start=6027,
+  serialized_end=6514,
 )
 _sym_db.RegisterEnumDescriptor(_ENUM_MULTIPLAYER_PVE_DUN_ROOM_OP)
 
@@ -173,12 +173,43 @@ _ENUM_MULTIPLAYER_PVE_INVITE_FRIEND_RESULT = _descriptor.EnumDescriptor(
   ],
   containing_type=None,
   options=None,
-  serialized_start=6423,
-  serialized_end=6776,
+  serialized_start=6517,
+  serialized_end=6870,
 )
 _sym_db.RegisterEnumDescriptor(_ENUM_MULTIPLAYER_PVE_INVITE_FRIEND_RESULT)
 
 ENUM_MULTIPLAYER_PVE_INVITE_FRIEND_RESULT = enum_type_wrapper.EnumTypeWrapper(_ENUM_MULTIPLAYER_PVE_INVITE_FRIEND_RESULT)
+_ENUM_MULTIPLAYER_PVE_FRIEND_STATUS = _descriptor.EnumDescriptor(
+  name='ENUM_MULTIPLAYER_PVE_FRIEND_STATUS',
+  full_name='ENUM_MULTIPLAYER_PVE_FRIEND_STATUS',
+  filename=None,
+  file=DESCRIPTOR,
+  values=[
+    _descriptor.EnumValueDescriptor(
+      name='MULTIPLAYER_PVE_FRIEND_STATUS_OK', index=0, number=0,
+      options=None,
+      type=None),
+    _descriptor.EnumValueDescriptor(
+      name='MULTIPLAYER_PVE_FRIEND_STATUS_OFFLINE', index=1, number=1,
+      options=None,
+      type=None),
+    _descriptor.EnumValueDescriptor(
+      name='MULTIPLAYER_PVE_FRIEND_STATUS_PLAYING', index=2, number=2,
+      options=None,
+      type=None),
+    _descriptor.EnumValueDescriptor(
+      name='MULTIPLAYER_PVE_FRIEND_STATUS_DIFFICULTY_NOT_OPEN', index=3, number=3,
+      options=None,
+      type=None),
+  ],
+  containing_type=None,
+  options=None,
+  serialized_start=6873,
+  serialized_end=7088,
+)
+_sym_db.RegisterEnumDescriptor(_ENUM_MULTIPLAYER_PVE_FRIEND_STATUS)
+
+ENUM_MULTIPLAYER_PVE_FRIEND_STATUS = enum_type_wrapper.EnumTypeWrapper(_ENUM_MULTIPLAYER_PVE_FRIEND_STATUS)
 _ENUM_MULTIPLAYER_PVE_ROOM_RESULT = _descriptor.EnumDescriptor(
   name='ENUM_MULTIPLAYER_PVE_ROOM_RESULT',
   full_name='ENUM_MULTIPLAYER_PVE_ROOM_RESULT',
@@ -212,8 +243,8 @@ _ENUM_MULTIPLAYER_PVE_ROOM_RESULT = _descriptor.EnumDescriptor(
   ],
   containing_type=None,
   options=None,
-  serialized_start=6779,
-  serialized_end=7094,
+  serialized_start=7091,
+  serialized_end=7406,
 )
 _sym_db.RegisterEnumDescriptor(_ENUM_MULTIPLAYER_PVE_ROOM_RESULT)
 
@@ -275,8 +306,8 @@ _ENUM_MULTIPLAYER_PVE_DUN_MSG = _descriptor.EnumDescriptor(
   ],
   containing_type=None,
   options=None,
-  serialized_start=7097,
-  serialized_end=7613,
+  serialized_start=7409,
+  serialized_end=7925,
 )
 _sym_db.RegisterEnumDescriptor(_ENUM_MULTIPLAYER_PVE_DUN_MSG)
 
@@ -302,8 +333,8 @@ _ENUM_MULTIPLAYER_PVE_TICKET_BUY_RESULT = _descriptor.EnumDescriptor(
   ],
   containing_type=None,
   options=None,
-  serialized_start=7616,
-  serialized_end=7810,
+  serialized_start=7928,
+  serialized_end=8122,
 )
 _sym_db.RegisterEnumDescriptor(_ENUM_MULTIPLAYER_PVE_TICKET_BUY_RESULT)
 
@@ -335,6 +366,10 @@ MULTIPLAYER_PVE_INVITE_FRIEND_RESULT_PLAYING = 2
 MULTIPLAYER_PVE_INVITE_FRIEND_RESULT_HERO_LEVEL_ERROR = 3
 MULTIPLAYER_PVE_INVITE_FRIEND_RESULT_TIMES_EXCEED = 4
 MULTIPLAYER_PVE_INVITE_FRIEND_RESULT_ERROR = 5
+MULTIPLAYER_PVE_FRIEND_STATUS_OK = 0
+MULTIPLAYER_PVE_FRIEND_STATUS_OFFLINE = 1
+MULTIPLAYER_PVE_FRIEND_STATUS_PLAYING = 2
+MULTIPLAYER_PVE_FRIEND_STATUS_DIFFICULTY_NOT_OPEN = 3
 MULTIPLAYER_PVE_ROOM_RESULT_OK = 0
 MULTIPLAYER_PVE_ROOM_RESULT_DUNGEON_NOT_OPEN = 1
 MULTIPLAYER_PVE_ROOM_RESULT_PRE_DUNGEON_NOT_COMPLETE = 2
@@ -622,6 +657,13 @@ _CSPKG_MULTIPLAYER_PVE_DUN_ROOM_OP_REQ = _descriptor.Descriptor(
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
+    _descriptor.FieldDescriptor(
+      name='free_dungeon_id', full_name='CSPKG_MULTIPLAYER_PVE_DUN_ROOM_OP_REQ.free_dungeon_id', index=9,
+      number=10, type=13, cpp_type=3, label=3,
+      has_default_value=False, default_value=[],
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
   ],
   extensions=[
   ],
@@ -634,7 +676,7 @@ _CSPKG_MULTIPLAYER_PVE_DUN_ROOM_OP_REQ = _descriptor.Descriptor(
   oneofs=[
   ],
   serialized_start=875,
-  serialized_end=1130,
+  serialized_end=1155,
 )
 
 
@@ -708,6 +750,13 @@ _SCPKG_MULTIPLAYER_PVE_DUN_ROOM_OP_RES = _descriptor.Descriptor(
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
+    _descriptor.FieldDescriptor(
+      name='is_invite', full_name='SCPKG_MULTIPLAYER_PVE_DUN_ROOM_OP_RES.is_invite', index=9,
+      number=10, type=8, cpp_type=7, label=1,
+      has_default_value=False, default_value=False,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
   ],
   extensions=[
   ],
@@ -719,8 +768,8 @@ _SCPKG_MULTIPLAYER_PVE_DUN_ROOM_OP_RES = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=1133,
-  serialized_end=1380,
+  serialized_start=1158,
+  serialized_end=1424,
 )
 
 
@@ -794,6 +843,13 @@ _CSDT_MULTIPLAYER_PVE_DUN_PLAYER_INFO = _descriptor.Descriptor(
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
+    _descriptor.FieldDescriptor(
+      name='status_code', full_name='CSDT_MULTIPLAYER_PVE_DUN_PLAYER_INFO.status_code', index=9,
+      number=11, type=13, cpp_type=3, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
   ],
   extensions=[
   ],
@@ -805,8 +861,8 @@ _CSDT_MULTIPLAYER_PVE_DUN_PLAYER_INFO = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=1383,
-  serialized_end=1611,
+  serialized_start=1427,
+  serialized_end=1676,
 )
 
 
@@ -873,6 +929,13 @@ _CSDT_MULTIPLAYER_PVE_DUN_ROLE_INFO = _descriptor.Descriptor(
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
+    _descriptor.FieldDescriptor(
+      name='min_equipment_color', full_name='CSDT_MULTIPLAYER_PVE_DUN_ROLE_INFO.min_equipment_color', index=8,
+      number=9, type=13, cpp_type=3, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
   ],
   extensions=[
   ],
@@ -884,8 +947,8 @@ _CSDT_MULTIPLAYER_PVE_DUN_ROLE_INFO = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=1614,
-  serialized_end=1849,
+  serialized_start=1679,
+  serialized_end=1943,
 )
 
 
@@ -942,8 +1005,8 @@ _SCPKG_MULTIPLAYER_PVE_DUNBALANCE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=1852,
-  serialized_end=2029,
+  serialized_start=1946,
+  serialized_end=2123,
 )
 
 
@@ -993,8 +1056,8 @@ _SCPKG_MULTIPLAYER_PVE_CHALLENGE_DATA = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=2032,
-  serialized_end=2181,
+  serialized_start=2126,
+  serialized_end=2275,
 )
 
 
@@ -1023,8 +1086,8 @@ _CSPKG_SET_OFFLINE_BATTLE_TITLE_ID_REQ = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=2183,
-  serialized_end=2234,
+  serialized_start=2277,
+  serialized_end=2328,
 )
 
 
@@ -1053,8 +1116,8 @@ _SCPKG_SET_OFFLINE_BATTLE_TITLE_ID_RES = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=2236,
-  serialized_end=2287,
+  serialized_start=2330,
+  serialized_end=2381,
 )
 
 
@@ -1125,8 +1188,8 @@ _CSDT_OFFLINE_BATTLE_INFO = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=2290,
-  serialized_end=2534,
+  serialized_start=2384,
+  serialized_end=2628,
 )
 
 
@@ -1155,8 +1218,8 @@ _SCPKG_OFFLINE_BATTLE_INFO = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=2536,
-  serialized_end=2619,
+  serialized_start=2630,
+  serialized_end=2713,
 )
 
 
@@ -1192,8 +1255,8 @@ _CSPKG_OFFLINE_BATTLE_DEFEATED_LIST_REQ = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=2621,
-  serialized_end=2697,
+  serialized_start=2715,
+  serialized_end=2791,
 )
 
 
@@ -1250,8 +1313,8 @@ _CSDT_OFFLINE_BATTLE_DEFEATED_LIST_ITEM = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=2700,
-  serialized_end=2933,
+  serialized_start=2794,
+  serialized_end=3027,
 )
 
 
@@ -1287,8 +1350,8 @@ _SCPKG_OFFLINE_BATTLE_DEFEATED_LIST_RES = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=2935,
-  serialized_end=3052,
+  serialized_start=3029,
+  serialized_end=3146,
 )
 
 
@@ -1366,8 +1429,8 @@ _CSPKG_OFFLINE_BATTLE_RESULT = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=3055,
-  serialized_end=3274,
+  serialized_start=3149,
+  serialized_end=3368,
 )
 
 
@@ -1466,8 +1529,8 @@ _CCPKG_CMD_CONF_INFO = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=3277,
-  serialized_end=3505,
+  serialized_start=3371,
+  serialized_end=3599,
 )
 
 
@@ -1587,8 +1650,8 @@ _CCDT_CMD_ACTION_PARAM = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=3508,
-  serialized_end=3817,
+  serialized_start=3602,
+  serialized_end=3911,
 )
 
 
@@ -1631,8 +1694,8 @@ _CCPKG_CMD_SETACTION = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=3819,
-  serialized_end=3917,
+  serialized_start=3913,
+  serialized_end=4011,
 )
 
 
@@ -1675,8 +1738,8 @@ _CCPKG_CMD_INPUTMSG = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=3919,
-  serialized_end=4005,
+  serialized_start=4013,
+  serialized_end=4099,
 )
 
 
@@ -1768,8 +1831,8 @@ _CCPKG_CMD_ADDROLE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=4008,
-  serialized_end=4221,
+  serialized_start=4102,
+  serialized_end=4315,
 )
 
 
@@ -1805,8 +1868,8 @@ _CCPKG_CMD_CHOOSE_ROLE_INFO = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=4223,
-  serialized_end=4292,
+  serialized_start=4317,
+  serialized_end=4386,
 )
 
 
@@ -1842,8 +1905,8 @@ _CCPKG_CMD_LOADING_PHASE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=4294,
-  serialized_end=4365,
+  serialized_start=4388,
+  serialized_end=4459,
 )
 
 
@@ -1893,8 +1956,8 @@ _CCDT_CMD_ROLE_INFO = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=4367,
-  serialized_end=4463,
+  serialized_start=4461,
+  serialized_end=4557,
 )
 
 
@@ -1958,8 +2021,8 @@ _CCPKG_CMD_ROUND_INFO = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=4466,
-  serialized_end=4653,
+  serialized_start=4560,
+  serialized_end=4747,
 )
 
 
@@ -2009,8 +2072,8 @@ _CCPKG_CMD_ENTER_DUN = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=4656,
-  serialized_end=4831,
+  serialized_start=4750,
+  serialized_end=4925,
 )
 
 
@@ -2053,8 +2116,8 @@ _CCPKG_CMD_SET_ROLE_ATTRIBUTE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=4833,
-  serialized_end=4904,
+  serialized_start=4927,
+  serialized_end=4998,
 )
 
 
@@ -2090,8 +2153,8 @@ _CCPKG_CMD_ROLE_DEAD = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=4906,
-  serialized_end=4992,
+  serialized_start=5000,
+  serialized_end=5086,
 )
 
 
@@ -2134,8 +2197,8 @@ _CCPKG_CMD_STAGE_FINISH = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=4994,
-  serialized_end=5087,
+  serialized_start=5088,
+  serialized_end=5181,
 )
 
 
@@ -2234,8 +2297,8 @@ _CCPKG_CMD_COLLISION = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=5090,
-  serialized_end=5383,
+  serialized_start=5184,
+  serialized_end=5477,
 )
 
 
@@ -2271,8 +2334,8 @@ _CCPKG_CMD_READY = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=5385,
-  serialized_end=5451,
+  serialized_start=5479,
+  serialized_end=5545,
 )
 
 
@@ -2301,8 +2364,8 @@ _CCPKG_CMD_READY_COUNT_DOWN = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=5453,
-  serialized_end=5496,
+  serialized_start=5547,
+  serialized_end=5590,
 )
 
 _CSPKG_ONLINE_BATTLE_MATCH_MSG.fields_by_name['set_action'].message_type = _CCPKG_CMD_SETACTION
@@ -2370,6 +2433,7 @@ DESCRIPTOR.message_types_by_name['CCPKG_CMD_READY_COUNT_DOWN'] = _CCPKG_CMD_READ
 DESCRIPTOR.enum_types_by_name['ONLINE_BATTLE_MATCH_ENUM'] = _ONLINE_BATTLE_MATCH_ENUM
 DESCRIPTOR.enum_types_by_name['ENUM_MULTIPLAYER_PVE_DUN_ROOM_OP'] = _ENUM_MULTIPLAYER_PVE_DUN_ROOM_OP
 DESCRIPTOR.enum_types_by_name['ENUM_MULTIPLAYER_PVE_INVITE_FRIEND_RESULT'] = _ENUM_MULTIPLAYER_PVE_INVITE_FRIEND_RESULT
+DESCRIPTOR.enum_types_by_name['ENUM_MULTIPLAYER_PVE_FRIEND_STATUS'] = _ENUM_MULTIPLAYER_PVE_FRIEND_STATUS
 DESCRIPTOR.enum_types_by_name['ENUM_MULTIPLAYER_PVE_ROOM_RESULT'] = _ENUM_MULTIPLAYER_PVE_ROOM_RESULT
 DESCRIPTOR.enum_types_by_name['ENUM_MULTIPLAYER_PVE_DUN_MSG'] = _ENUM_MULTIPLAYER_PVE_DUN_MSG
 DESCRIPTOR.enum_types_by_name['ENUM_MULTIPLAYER_PVE_TICKET_BUY_RESULT'] = _ENUM_MULTIPLAYER_PVE_TICKET_BUY_RESULT
