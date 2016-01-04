@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2015-12-30 17:29+0800\n"
+"POT-Creation-Date: 2016-01-04 16:48+0800\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -177,8 +177,9 @@ msgstr ""
 msgid "Accessory Include Item And Equip"
 msgstr ""
 
-#: templates/operating/all_mail.html:29 templates/operating/mail.html:30
-#: templates/operating/notify.html:25
+#: templates/operating/all_mail.html:29
+#: templates/operating/guard_master_order.html:6
+#: templates/operating/mail.html:30 templates/operating/notify.html:25
 msgid "Success"
 msgstr ""
 
@@ -186,8 +187,9 @@ msgstr ""
 msgid "Please Check The Response Of Sending Mail"
 msgstr ""
 
-#: templates/operating/all_mail.html:31 templates/operating/mail.html:32
-#: templates/operating/notify.html:27
+#: templates/operating/all_mail.html:31
+#: templates/operating/guard_master_order.html:7
+#: templates/operating/mail.html:32 templates/operating/notify.html:27
 msgid "Fail"
 msgstr ""
 
@@ -559,6 +561,22 @@ msgstr ""
 
 #: templates/operating/contact.html:23
 msgid "Return List"
+msgstr ""
+
+#: templates/operating/guard_master_order.html:4
+msgid "List of Orders"
+msgstr ""
+
+#: templates/operating/guard_master_order.html:5
+msgid "Param"
+msgstr ""
+
+#: templates/operating/guard_master_order.html:8
+msgid "Is Not Online"
+msgstr ""
+
+#: templates/operating/guard_master_order.html:9
+msgid "Execute"
 msgstr ""
 
 #: templates/operating/hero_info.html:2

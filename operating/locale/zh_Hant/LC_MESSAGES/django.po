@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2015-12-30 17:29+0800\n"
-"PO-Revision-Date: 2015-12-30 17:30+0800\n"
+"POT-Creation-Date: 2016-01-04 16:48+0800\n"
+"PO-Revision-Date: 2016-01-04 16:49+0800\n"
 "Last-Translator: Raynor <raynor41@gmail.com>\n"
 "Language-Team: \n"
 "Language: zh_TW\n"
@@ -178,8 +178,9 @@ msgstr "最多可以添加6種附件"
 msgid "Accessory Include Item And Equip"
 msgstr "附件包含物品和裝備"
 
-#: templates/operating/all_mail.html:29 templates/operating/mail.html:30
-#: templates/operating/notify.html:25
+#: templates/operating/all_mail.html:29
+#: templates/operating/guard_master_order.html:6
+#: templates/operating/mail.html:30 templates/operating/notify.html:25
 msgid "Success"
 msgstr "成功"
 
@@ -187,8 +188,9 @@ msgstr "成功"
 msgid "Please Check The Response Of Sending Mail"
 msgstr "請檢查發送郵件的回執狀態"
 
-#: templates/operating/all_mail.html:31 templates/operating/mail.html:32
-#: templates/operating/notify.html:27
+#: templates/operating/all_mail.html:31
+#: templates/operating/guard_master_order.html:7
+#: templates/operating/mail.html:32 templates/operating/notify.html:27
 msgid "Fail"
 msgstr "失敗"
 
@@ -561,6 +563,22 @@ msgstr "回覆"
 #: templates/operating/contact.html:23
 msgid "Return List"
 msgstr "返回問題列表"
+
+#: templates/operating/guard_master_order.html:4
+msgid "List of Orders"
+msgstr "指令列表"
+
+#: templates/operating/guard_master_order.html:5
+msgid "Param"
+msgstr "參數"
+
+#: templates/operating/guard_master_order.html:8
+msgid "Is Not Online"
+msgstr "玩家不在線"
+
+#: templates/operating/guard_master_order.html:9
+msgid "Execute"
+msgstr "執行"
 
 #: templates/operating/hero_info.html:2
 msgid "Hero Info"
