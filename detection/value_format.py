@@ -64,9 +64,12 @@ class ValueFormat(object):
         return x
 
     def _contact_reply(self, x):
-        url = reverse('operating:contact_reply', args=(self.panel_id, x,))
-        reply = _("reply")
-        button = "<a href='" + url + "'>" + reply + "</a>"
+        if x != 0:
+            url = reverse('operating:contact_reply', args=(self.panel_id, x,))
+            reply = _("reply")
+            button = "<a href='" + url + "'>" + reply + "</a>"
+        else:
+            button = 'None'
         return button
 
     def _kick_ban(self, x):
