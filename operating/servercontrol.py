@@ -15,7 +15,7 @@ class ServerControl(object):
         self.server = server
         self.panel_id = panel_id
         self.socketerror = {'result': -1}
-        self.is_not_online = {'result': 5}
+        self.is_not_online = {'result': -2}
         self.success = {'result': 0}
         self.username = username
         self.userip = userip

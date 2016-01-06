@@ -358,6 +358,8 @@ def guard_master_order(request, panel_id, url=Common.URL):
     d['orders'] = GmOrder.objects.filter(is_work=0)
     if request.GET.get('result'):
         d['message'] = request.GET.get('result')
+        d['server_id'] = request.GET.get('server_id')
+        d['uid'] = request.GET.get('uid')
     if request.method == 'POST':
         server_id = int(request.POST['server'])
         uid = int(request.POST['uid'])
@@ -370,11 +372,15 @@ def guard_master_order(request, panel_id, url=Common.URL):
             ret = sc.guard_master_order_copy_gm_text(gm_text, param)
         except Exception as e:
             print e
-            hrrurl = reverse('operating:guard_master_order', args=(panel_id, url)) + '?result=1'
+            urld = '?result={0}&uid={1}&server_id={2}'.format(
+                'e', uid, server_id)
+            hrrurl = reverse('operating:guard_master_order', args=(panel_id, url)) + urld
             return HttpResponseRedirect(hrrurl)
         if ret['result'] == 0:
             s = gm_text + "|" + str(param)
             sc.log(s)
-        hrrurl = reverse('operating:guard_master_order', args=(panel_id, url)) + '?result=' + str(ret['result'])
+        urld = '?result={0}&uid={1}&server_id={2}'.format(
+            str(ret['result']), uid, server_id)
+        hrrurl = reverse('operating:guard_master_order', args=(panel_id, url)) + urld
         return HttpResponseRedirect(hrrurl)
     return render(request, t, d)

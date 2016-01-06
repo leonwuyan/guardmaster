@@ -5,7 +5,7 @@
 {% trans "Param" as t_param %}
 {% trans "Success" as t_success %}
 {% trans "Fail" as t_fail %}
-{% trans "Is Not Online" as t_is_not_online %}
+{% trans "Error Code" as t_error_code %}
 {% trans "Execute" as t_execute %}
 <div class="container-fluid white-bg">
   <div class="row">
@@ -14,23 +14,18 @@
       <li class="active">{{ title }}</li>
     </ol>
 
-    {% if message == '0' %}
-      <div class="alert alert-success alert-dismissible" role="alert">
-        <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-        <strong>{{t_success}}!</strong>
-      </div>
-    {% endif %}
-    {% if message == '1' %}
-      <div class="alert alert-danger alert-dismissible" role="alert">
-        <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-        <strong>{{t_fail}}!</strong>
-      </div>
-    {% endif %}
-    {% if message == '5' %}
-      <div class="alert alert-danger alert-dismissible" role="alert">
-        <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-        <strong>{{t_fail}}!</strong>&emsp;{{t_is_not_online}}
-      </div>
+    {% if message %}
+      {% if message == '0' %}
+        <div class="alert alert-success alert-dismissible" role="alert">
+          <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+          <strong>{{t_success}}!</strong>
+        </div>
+      {% else %}
+        <div class="alert alert-danger alert-dismissible" role="alert">
+          <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+          <strong>{{t_fail}}!{{t_error_code}}: {{message}}</strong>
+        </div>
+      {% endif %}
     {% endif %}
 
     <form class="form" role="form" method="post">
@@ -39,7 +34,7 @@
         <label>{{t_list_of_servers}}</label>
         <select class="form-control" name="server">
           {% for server in servers %}
-          <option value="{{server.id}}">{{server.label}}</option>
+          <option value="{{server.id}}" {% ifequal server_id server.id %}selected{% endifequal %}>{{server.label}}</option>
           {% endfor %}
         </select>
       </div>
