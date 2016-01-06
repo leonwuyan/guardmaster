@@ -6,14 +6,13 @@
 <script type="text/javascript">
  $(document).ready(function() {
   end_time = getTime(true);
-  start_time = end_time.replace(/ (\w+):(\w+):(\w+)/, " 00:00:00");
    $('.input-datepicker > input').datetimepicker({
     format: "yyyy-mm-dd hh:ii:ss",
     autoclose: true,
     todayBtn: true,
     weekStart: 0,
     language: gettext('en'),
-    startDate: start_time,
+    startDate: '-2d',
     endDate: end_time,
     pickerPosition: "bottom-left"
   });
