@@ -358,7 +358,7 @@ def guard_master_order(request, panel_id, url=Common.URL):
     d['orders'] = GmOrder.objects.filter(is_work=0)
     if request.GET.get('result'):
         d['message'] = request.GET.get('result')
-        d['server_id'] = request.GET.get('server_id')
+        d['server_id'] = int(request.GET.get('server_id'))
         d['uid'] = request.GET.get('uid')
     if request.method == 'POST':
         server_id = int(request.POST['server'])
