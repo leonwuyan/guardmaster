@@ -246,7 +246,7 @@ def format_accessory(x, panel_id):
         if item['res_type'] == 3:
             s = _('Money').encode('utf-8')
         if item['res_type'] == 4:
-            s = _('Gold').encode('utf-8')
+            s = _('Skill Point').encode('utf-8')
         if item['res_type'] == 5:
             s = _('Item').encode('utf-8')
             s += '[ {0} | {1} ]'.format(
