@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2016-01-04 16:48+0800\n"
+"POT-Creation-Date: 2016-01-07 18:47+0800\n"
 "PO-Revision-Date: 2016-01-04 16:50+0800\n"
 "Last-Translator: Raynor <raynor41@gmail.com>\n"
 "Language-Team: \n"
@@ -270,31 +270,31 @@ msgstr "聊天類型"
 msgid "User Status"
 msgstr "用戶狀態"
 
-#: value_format.py:68
+#: value_format.py:69
 msgid "reply"
 msgstr "回覆"
 
-#: value_format.py:74
+#: value_format.py:77
 msgid "ban"
 msgstr "禁封"
 
-#: value_format.py:101
+#: value_format.py:104
 msgid "account_ban"
 msgstr "鎖定賬戶"
 
-#: value_format.py:103
+#: value_format.py:106
 msgid "chat_ban"
 msgstr "禁言玩家"
 
-#: value_format.py:105
+#: value_format.py:108
 msgid "kick_ban"
 msgstr "封禁"
 
-#: value_format.py:109
+#: value_format.py:112
 msgid "unban"
 msgstr "解封"
 
-#: value_format.py:111
+#: value_format.py:114
 msgid "Day"
 msgstr "天"
 

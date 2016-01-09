@@ -1,3 +1,4 @@
+# coding:utf8
 from django.utils.translation import ugettext_lazy as _
 from detection.models import Panel
 from django.db import models
@@ -126,9 +127,7 @@ class ServerControlWorkOrder(models.Model):
     status = models.IntegerField()
 
     def __unicode__(self):
-        return '{0} - {1}/{2}/{3}/{4}'.format(
-            self.server, self.parameter1, self.parameter2,
-            self.parameter3, self.parameter4)
+        return self.server
 
     class Meta:
         ordering = ['-id']

@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2016-01-04 16:48+0800\n"
+"POT-Creation-Date: 2016-01-07 18:47+0800\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -269,30 +269,30 @@ msgstr ""
 msgid "User Status"
 msgstr ""
 
-#: value_format.py:68
+#: value_format.py:69
 msgid "reply"
 msgstr ""
 
-#: value_format.py:74
+#: value_format.py:77
 msgid "ban"
 msgstr ""
 
-#: value_format.py:101
+#: value_format.py:104
 msgid "account_ban"
 msgstr ""
 
-#: value_format.py:103
+#: value_format.py:106
 msgid "chat_ban"
 msgstr ""
 
-#: value_format.py:105
+#: value_format.py:108
 msgid "kick_ban"
 msgstr ""
 
-#: value_format.py:109
+#: value_format.py:112
 msgid "unban"
 msgstr ""
 
-#: value_format.py:111
+#: value_format.py:114
 msgid "Day"
 msgstr ""
