@@ -101,7 +101,7 @@ class ServerControlWorkOrderAdmin(admin.ModelAdmin):
     list_filter = ['panel', 'server']
 
     def parameter(self, obj):
-        return '{0}/{1}/{2}/{3}/{5}'.format(
+        return '{0}/{1}/{2}/{3}/{4}'.format(
             obj.parameter1,
             obj.parameter2,
             obj.parameter3,
