@@ -27,6 +27,21 @@ class CIWPAdmin(admin.ModelAdmin):
     list_filter = ['panel']
 
 
+class DataBinAdmin(admin.ModelAdmin):
+    list_display = ('label', 'panel')
+    list_filter = ['panel']
+
+
+class ProcessServerAdmin(admin.ModelAdmin):
+    list_display = ('label', 'panel')
+    list_filter = ['panel']
+
+
+class HotStartAdmin(admin.ModelAdmin):
+    list_display = ('label', 'panel')
+    list_filter = ['panel']
+
+
 class UpLoadworkOrderAdmin(admin.ModelAdmin):
     list_display = (
         'version',
@@ -86,8 +101,12 @@ class ServerControlWorkOrderAdmin(admin.ModelAdmin):
     list_filter = ['panel', 'server']
 
     def parameter(self, obj):
-        return '{0}/{1}/{2}/{3}'.format(
-            obj.parameter1, obj.parameter2, obj.parameter3, obj.parameter4)
+        return '{0}/{1}/{2}/{3}/{5}'.format(
+            obj.parameter1,
+            obj.parameter2,
+            obj.parameter3,
+            obj.parameter4,
+            obj.parameter5)
 
     def date(self, obj):
         return '{0} - {1}'.format(obj.start_date, obj.stop_date)
@@ -108,6 +127,9 @@ admin.site.register(Platform, PlatformAdmin)
 admin.site.register(Channel, ChannelAdmin)
 admin.site.register(Ip, IpAdmin)
 admin.site.register(CIWP, CIWPAdmin)
+admin.site.register(DataBin, DataBinAdmin)
+admin.site.register(ProcessServer, ProcessServerAdmin)
+admin.site.register(HotStart, HotStartAdmin)
 admin.site.register(UpLoadWorkOrder, UpLoadworkOrderAdmin)
 admin.site.register(UpLoadWorkOrderLock, UpLoadworkOrderLockAdmin)
 admin.site.register(TplItem, TplItemAdmin)

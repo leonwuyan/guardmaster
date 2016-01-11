@@ -114,10 +114,11 @@ class TplItem(models.Model):
 
 class ServerControlWorkOrder(models.Model):
     server = models.CharField(max_length=45)
-    parameter1 = models.CharField(max_length=45)
-    parameter2 = models.CharField(max_length=45)
-    parameter3 = models.CharField(max_length=45)
-    parameter4 = models.CharField(max_length=45)
+    parameter1 = models.CharField(max_length=256, blank=True, null=True)
+    parameter2 = models.CharField(max_length=256, blank=True, null=True)
+    parameter3 = models.CharField(max_length=256, blank=True, null=True)
+    parameter4 = models.CharField(max_length=256, blank=True, null=True)
+    parameter5 = models.CharField(max_length=256, blank=True, null=True)
     progress = models.IntegerField()
     start_date = models.DateTimeField()
     stop_date = models.DateTimeField(blank=True, null=True)
@@ -140,3 +141,27 @@ class ServerControlWorkOrderLock(models.Model):
 
     def __unicode__(self):
         return self.server
+
+
+class DataBin(models.Model):
+    label = models.CharField(max_length=256)
+    panel = models.ForeignKey(Panel)
+
+    def __unicode__(self):
+        return self.label
+
+
+class ProcessServer(models.Model):
+    label = models.CharField(max_length=256)
+    panel = models.ForeignKey(Panel)
+
+    def __unicode__(self):
+        return self.label
+
+
+class HotStart(models.Model):
+    label = models.CharField(max_length=256)
+    panel = models.ForeignKey(Panel)
+
+    def __unicode__(self):
+        return self.label
