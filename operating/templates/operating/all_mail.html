@@ -268,6 +268,8 @@
               <th style="width: 20%">{{t_mail_content}}</th>
               <th style="width: 14%">{{t_server}}</th>
               <th style="width: 7%">{{t_zone}}</th>
+              <th style="width: 7%">{{t_version}}</th>
+              <th style="width: 7%">{{t_status}}</th>
               <th style="width: 14%">{{t_accessory}}</th>
               <th style="width: 7%">{{t_guardmaster}}</th>
               <th style="width: 10%">{{t_start_date}}</th>
@@ -281,6 +283,8 @@
               <td>{{r.content}}</td>
               <td>{{r.server}}</td>
               <td>{{r.zone}}</td>
+              <td>{{r.version}}</td>
+              <td>{{r.status|format_all_mail}}</td>
               <td>{{r.accessory|format_accessory:panel.id|safe}}</td>
               <td>{{r.guardmaster}}</td>
               <td>{{r.start_date}}</td>

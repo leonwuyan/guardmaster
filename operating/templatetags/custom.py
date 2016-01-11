@@ -277,6 +277,15 @@ def format_accessory(x, panel_id):
     return tmp
 
 
+def format_all_mail(status):
+    if status == 0:
+        return _('Only Old Players')
+    if status == 1:
+        return _('Only New Players')
+    if status == 2:
+        return _('All of Players')
+    return _('All of Players')
+
 register.filter(ts2date)
 register.filter(ts2time)
 register.filter(second2time)
@@ -301,3 +310,4 @@ register.filter(div2)
 register.filter(div2div2)
 register.filter(enum_zone)
 register.filter(format_accessory)
+register.filter(format_all_mail)
