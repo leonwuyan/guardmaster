@@ -103,10 +103,10 @@ DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',
         'NAME': 'django',
-        'USER': 'dataop',
-        'PASSWORD': '123456',
-        'HOST': '192.168.1.90',
-        'PORT': '3306',
+        'USER': 'act',
+        'PASSWORD': '8791act@b7',
+        'HOST': '192.168.1.76',
+        'PORT': '3307',
     },
     'db_hidden_statdb': {
         'ENGINE': 'django.db.backends.mysql',
