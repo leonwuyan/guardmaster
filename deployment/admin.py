@@ -69,21 +69,6 @@ class UpLoadworkOrderLockAdmin(admin.ModelAdmin):
             return 'LOCKING'
 
 
-class TplItemInline(admin.TabularInline):
-    model = TplItem
-    extra = 3
-
-
-class TplItemAdmin(admin.ModelAdmin):
-    list_display = ('tpl_template', 'module_name', 'module_times', 'item_name', 'seqid', 'module_seqid')
-    list_filter = ['tpl_template', 'module_name']
-
-
-class TplTemplateAdmin(admin.ModelAdmin):
-    inlines = [TplItemInline]
-    list_display = ('tpl_type', 'out_file_type', 'out_name_mask', 'out_dir', 'saved_path')
-
-
 class ServerControlWorkOrderAdmin(admin.ModelAdmin):
     list_display = (
         'server',
@@ -140,8 +125,6 @@ admin.site.register(DataBin, DataBinAdmin)
 admin.site.register(ProcessServer, ProcessServerAdmin)
 admin.site.register(UpLoadWorkOrder, UpLoadworkOrderAdmin)
 admin.site.register(UpLoadWorkOrderLock, UpLoadworkOrderLockAdmin)
-admin.site.register(TplItem, TplItemAdmin)
-admin.site.register(TplTemplate, TplTemplateAdmin)
 admin.site.register(ServerControlWorkOrder, ServerControlWorkOrderAdmin)
 admin.site.register(ServerControlWorkOrderLock, ServerControlWorkOrderLockAdmin)
 admin.site.register(ServerConfigOrder, ServerConfigOrderAdmin)

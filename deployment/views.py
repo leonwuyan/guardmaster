@@ -6,10 +6,10 @@ from guardmaster import common as Common
 from django.http import HttpResponse, HttpResponseRedirect
 from django.core.urlresolvers import reverse
 from django.views.generic import View
-from deployment.tasks import upload_version, inherit_version, get_client_id, make_cfg
-from deployment.models import HostName, TplTemplate, TplItem, Ip, Channel
+from deployment.tasks import upload_version, inherit_version, get_client_id
+from deployment.models import HostName, Ip, Channel
 from deployment.version import Version
-from deployment.control import server_control
+from deployment.control import server_control, make_list_file
 import json
 
 
@@ -143,17 +143,6 @@ def version(request, panel_id, hostname_id, platform, channel, version):
 def config(request, panel_id, url, tpltemplate_id=0):
     t = "deployment/config.html"
     d = view_template_base(request, panel_id, url)
-    d['tpltemplate_id'] = tpltemplate_id
-    if tpltemplate_id > 0:
-        tplitem = TplItem.objects.filter(tpl_template=tpltemplate_id, editable=1)
-        tpltemplate = get_object_or_404(TplTemplate, pk=tpltemplate_id)
-        d['tpltemplate'] = tpltemplate
-        d['tplitem'] = tplitem
-        if request.method == 'POST':
-            make_cfg(request.POST, tpltemplate)
-    else:
-        tpltemplate = TplTemplate.objects.all()
-        d['tpltemplate'] = tpltemplate
     return render(request, t, d)
 
 
