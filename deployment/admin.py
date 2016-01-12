@@ -117,6 +117,20 @@ class ServerControlWorkOrderLockAdmin(admin.ModelAdmin):
         else:
             return 'LOCKING'
 
+
+class ServerConfigOrderAdmin(admin.ModelAdmin):
+    list_display = (
+        'label',
+        'panel',
+        'ciwp',
+        'version',
+        'db_filename',
+        'ps_filename',
+        'hs_filename',
+        'date',
+        'user')
+    list_filter = ['panel']
+
 admin.site.register(HostName, HostNameAdmin)
 admin.site.register(Platform, PlatformAdmin)
 admin.site.register(Channel, ChannelAdmin)
@@ -130,3 +144,4 @@ admin.site.register(TplItem, TplItemAdmin)
 admin.site.register(TplTemplate, TplTemplateAdmin)
 admin.site.register(ServerControlWorkOrder, ServerControlWorkOrderAdmin)
 admin.site.register(ServerControlWorkOrderLock, ServerControlWorkOrderLockAdmin)
+admin.site.register(ServerConfigOrder, ServerConfigOrderAdmin)

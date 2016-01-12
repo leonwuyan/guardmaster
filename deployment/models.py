@@ -157,3 +157,25 @@ class ProcessServer(models.Model):
 
     def __unicode__(self):
         return self.label
+
+
+class ServerConfigOrder(models.Model):
+    label = models.CharField(max_length=45)
+    ciwp = models.ForeignKey(CIWP)
+    version = models.CharField(max_length=64)
+    db_list = models.ManyToManyField(DataBin)
+    ps_list = models.ManyToManyField(ProcessServer, related_name='ps_list')
+    hs_list = models.ManyToManyField(ProcessServer, related_name='hs_list')
+    hs_free_list = models.ManyToManyField(ProcessServer, related_name='hs_free_list')
+    db_filename = models.CharField(max_length=256)
+    ps_filename = models.CharField(max_length=256)
+    hs_filename = models.CharField(max_length=256)
+    date = models.DateTimeField()
+    user = models.CharField(max_length=45)
+    panel = models.ForeignKey(Panel)
+
+    def __unicode__(self):
+        return self.label
+
+    class Meta:
+        ordering = ['-id', '-date']
