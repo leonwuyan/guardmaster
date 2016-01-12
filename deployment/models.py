@@ -157,11 +157,3 @@ class ProcessServer(models.Model):
 
     def __unicode__(self):
         return self.label
-
-
-class HotStart(models.Model):
-    label = models.CharField(max_length=256)
-    panel = models.ForeignKey(Panel)
-
-    def __unicode__(self):
-        return self.label

@@ -37,11 +37,6 @@ class ProcessServerAdmin(admin.ModelAdmin):
     list_filter = ['panel']
 
 
-class HotStartAdmin(admin.ModelAdmin):
-    list_display = ('label', 'panel')
-    list_filter = ['panel']
-
-
 class UpLoadworkOrderAdmin(admin.ModelAdmin):
     list_display = (
         'version',
@@ -129,7 +124,6 @@ admin.site.register(Ip, IpAdmin)
 admin.site.register(CIWP, CIWPAdmin)
 admin.site.register(DataBin, DataBinAdmin)
 admin.site.register(ProcessServer, ProcessServerAdmin)
-admin.site.register(HotStart, HotStartAdmin)
 admin.site.register(UpLoadWorkOrder, UpLoadworkOrderAdmin)
 admin.site.register(UpLoadWorkOrderLock, UpLoadworkOrderLockAdmin)
 admin.site.register(TplItem, TplItemAdmin)
