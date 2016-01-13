@@ -7,10 +7,6 @@ urlpatterns = [
         views.config,
         name='config'),
     url(
-        r'^(?P<panel_id>[0-9]+)/config/(?P<url>[_A-Za-z]+)/(?P<tpltemplate_id>[0-9]+)/$',
-        views.config,
-        name='config_tpl'),
-    url(
         r'^(?P<panel_id>[0-9]+)/patch/(?P<url>[_A-Za-z]+)/$',
         views.patch,
         name='patch'),

@@ -141,7 +141,7 @@ def version(request, panel_id, hostname_id, platform, channel, version):
 
 
 @Common.competence_required
-def config(request, panel_id, url, tpltemplate_id=0):
+def config(request, panel_id, url):
     t = "deployment/config.html"
     d = view_template_base(request, panel_id, url)
     panel = get_object_or_404(Panel, pk=panel_id)
