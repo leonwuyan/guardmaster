@@ -1,8 +1,21 @@
 {% extends "detection/base.html" %}
 {% block content %}
 {% load custom i18n %}
-{% trans "Deploy" as t_deploy %}
+{% trans "Add" as t_add %}
 {% trans "No Item Needed" as t_no_item_needed %}
+{% trans "The Response Of Server Control Order" as t_t_r_o_s_c_o %}
+{% trans "Label" as t_label %}
+{% trans "CIWP" as t_ciwp %}
+{% trans "Version" as t_version %}
+{% trans "Lastest 20 Server Control Order By Every Server" as t_l_20_s_c_o_b_e_s %}
+{% trans "DataBin" as t_databin %}
+{% trans "Process Server" as t_processserver %}
+{% trans "Hotstart" as t_hotstart %}
+{% trans "Hotstart Delete Shared Memory Segments" as t_h_d_s_m_s %}
+{% trans "GuardMaster" as t_guardmaster %}
+{% trans "Date" as t_date %}
+{% trans "Fail" as t_fail %}
+{% trans "Success" as t_success %}
 <div class="container-fluid white-bg">
   <div class="row">
     <ol class="breadcrumb">
@@ -10,54 +23,105 @@
       <li class="active">{{ title }}</li>
     </ol>
 
-    {% ifequal tpltemplate_id 0 %}
-    <form class="form" role="form" method="post">
-      {% for t in tpltemplate %}
-      {% if forloop.counter|div2 %}
-      <div class="form-group">
-        <div class="row">
-          <div class="col-md-6">
-            <a href="{% url 'deployment:config_tpl' panel.id 'config_index' t.id %}">
-              <input type="button" value="{{ t.tpl_type }}" class="btn {% if forloop.counter|div2div2 %}btn-primary{% else %}btn-default{% endif %} btn-block btn-lg">
-            </a>
-          </div>
-      {% if forloop.last %}
-        </div>
+    {% if message == '0' %}
+      <div class="alert alert-success alert-dismissible" role="alert">
+        <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <strong>{{t_success}}!</strong>
       </div>
-      {% endif %}
-      {% else %}
-          <div class="col-md-6">
-            <a href="{% url 'deployment:config_tpl' panel.id 'config_index' t.id %}">
-              <input type="button" value="{{ t.tpl_type }}" class="btn {% if forloop.counter|div2div2 %}btn-primary{% else %}btn-default{% endif %} btn-block btn-lg">
-            </a>
-          </div>
-        </div>
+    {% endif %}
+    {% if message == '1' %}
+      <div class="alert alert-danger alert-dismissible" role="alert">
+        <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <strong>{{t_fail}}!</strong>
       </div>
-      {% endif %}
-      {% endfor %}
-    </form>
-    {% else %}
-    <div class="page-header"><h1>{{ tpltemplate.tpl_type }}</h1></div>
-    <form class="form-horizontal" role="form" method="post">
-    {% csrf_token %}
-      {% for t in tplitem %}
-      <div class="form-group">
-        <label for="{{ t.item_name }}" class="col-md-2 control-label">{{ t.item_name }}</label>
-        <div class="col-md-8">
-          <input class="form-control" type="text" name="{{ t.item_name }}" id="{{ t.item_name }}" value="{{ t.item_default }}">
-        </div>
-      </div>
-      {% empty %}
-      <p>{{ t_no_item_needed }}</p>
-      {% endfor %}
-      <div class="form-group">
-        <div class="col-md-offset-2 col-md-8">
-          <button id="deploy" type="submit" class="btn btn-default">{{ t_deploy }}</button>
-        </div>
-      </div>
-    </form>
-    {% endifequal %}
+    {% endif %}
 
+    <form class="form" role="form" method="post">
+    {% csrf_token %}
+      <div class="form-group" style="margin-bottom: 5px">
+        <label>{{t_label}}</label>
+        <input type="text" class="form-control" name="label" id="label">
+      </div>
+      <div class="form-group" style="margin-bottom: 5px">
+        <label>{{t_ciwp}}</label>
+        <select class="form-control" name="ciwp" id="ciwp">
+          {% for c in ciwp %}
+          <option value="{{c.id}}">{{c.label}}</option>
+          {% endfor %}
+        </select>
+      </div>
+      <div class="form-group" style="margin-bottom: 5px">
+        <label>{{t_version}}</label>
+        <input type="text" class="form-control" value="0" name="version" id="version">
+      </div>
+      <div class="form-group" style="margin-bottom: 5px">
+        <label>{{t_databin}}</label>
+        <select class="form-control" name="databin" id="databin" multiple="multiple" size="10">
+          {% for d in databin %}
+          <option value="{{d.id}}">{{d.label}}</option>
+          {% endfor %}
+        </select>
+      </div>
+      <div class="form-group" style="margin-bottom: 5px">
+        <label>{{t_processserver}}</label>
+        <select class="form-control" name="processserver" id="processserver" multiple="multiple" size="5">
+          {% for p in processserver %}
+          <option value="{{p.id}}">{{p.label}}</option>
+          {% endfor %}
+        </select>
+      </div>
+      <div class="form-group" style="margin-bottom: 5px">
+        <label>{{t_hotstart}}</label>
+        <select class="form-control" name="hotstart" id="hotstart" multiple="multiple" size="5">
+          {% for p in processserver %}
+          <option value="{{p.id}}">{{p.label}}</option>
+          {% endfor %}
+        </select>
+      </div>
+      <div class="form-group">
+        <label>{{t_h_d_s_m_s}}</label>
+        <select class="form-control" name="hotstart_free" id="hotstart_free" multiple="multiple" size="5">
+          {% for p in processserver %}
+          <option value="{{p.id}}">{{p.label}}</option>
+          {% endfor %}
+        </select>
+      </div>
+      <button type="submit" class="btn btn-primary btn-sm">{{ t_add }}</button>
+    </form>
+
+    <div class="panel panel-default" style="margin-top: 50px">
+      <div class="panel-heading">{{t_t_r_o_s_c_o}}&emsp;<span class="label label-default">{{ t_l_20_s_c_o_b_e_s }}</span></div>
+      <div class="table-responsive">
+        <table class="table table-bordered table-condensed">
+            <thead>
+              <tr>
+              <th>{{ t_label }}</th>
+              <th>{{ t_ciwp }}</th>
+              <th>{{ t_version }}</th>
+              <th>{{ t_databin }}</th>
+              <th>{{ t_processserver }}</th>
+              <th>{{ t_hotstart }}</th>
+              <th>{{ t_guardmaster }}</th>
+              <th>{{ t_date }}</th>
+              </tr>
+            </thead>
+          <tbody>
+          {% for s in sco %}
+            <tr>
+              <td>{{s.label}}</td>
+              <td>{{s.ciwp}}</td>
+              <td>{{s.version}}</td>
+              <td>{{s.db_filename}}</td>
+              <td>{{s.ps_filename}}</td>
+              <td>{{s.hs_filename}}</td>
+              <td>{{s.user}}</td>
+              <td>{{s.date}}</td>
+            </tr>
+          {% endfor %}
+          </tbody>
+        </table>
+      </div>
+    </div>
   </div>
   <center style='color: #999; padding-top: 20px; font-family: "arial","NSimSun","SimSun","STSong","AR PL SungtiL GB","TW\-Sung","WenQuanYi Bitmap Song"; font-size: 14px; font-weight: bold;'>{{excuse}}</center>
 </div>

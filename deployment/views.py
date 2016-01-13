@@ -7,9 +7,10 @@ from django.http import HttpResponse, HttpResponseRedirect
 from django.core.urlresolvers import reverse
 from django.views.generic import View
 from deployment.tasks import upload_version, inherit_version, get_client_id
-from deployment.models import HostName, Ip, Channel
+from deployment.models import *
 from deployment.version import Version
 from deployment.control import server_control, make_list_file
+from django.utils import timezone
 import json
 
 
@@ -143,6 +144,36 @@ def version(request, panel_id, hostname_id, platform, channel, version):
 def config(request, panel_id, url, tpltemplate_id=0):
     t = "deployment/config.html"
     d = view_template_base(request, panel_id, url)
+    panel = get_object_or_404(Panel, pk=panel_id)
+    sco = ServerConfigOrder.objects.filter(panel=panel)[:20]
+    ciwp = CIWP.objects.filter(panel=panel)
+    databin = DataBin.objects.filter(panel=panel)
+    processserver = ProcessServer.objects.filter(panel=panel)
+    d['sco'] = sco
+    d['ciwp'] = ciwp
+    d['databin'] = databin
+    d['processserver'] = processserver
+    if request.method == 'POST':
+        label = request.POST.get('label', 'None')
+        version = request.POST.get('version')
+        ciwp_id = int(request.POST.get('ciwp'))
+        db = request.POST.getlist('databin')
+        ps = request.POST.getlist('processserver')
+        hs = request.POST.getlist('hotstart')
+        hs_free = request.POST.getlist('hotstart_free')
+        sco = ServerConfigOrder(
+            label=label,
+            ciwp_id=ciwp_id,
+            version=version,
+            date=timezone.now(),
+            user=str(request.user),
+            panel=panel
+            )
+        sco.save()
+        if make_list_file(sco, db, ps, hs, hs_free):
+            d['message'] = '0'
+        else:
+            d['message'] = '1'
     return render(request, t, d)
 
 

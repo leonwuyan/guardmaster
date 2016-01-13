@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2015-12-15 11:25+0800\n"
+"POT-Creation-Date: 2016-01-13 15:32+0800\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -17,17 +17,67 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 
-#: templates/deployment/config.html:4 templates/deployment/control.html:14
-#: templates/deployment/preupdate.html:4
-msgid "Deploy"
+#: templates/deployment/config.html:4
+msgid "Add"
 msgstr ""
 
 #: templates/deployment/config.html:5
 msgid "No Item Needed"
 msgstr ""
 
-#: templates/deployment/control.html:4 templates/deployment/patch.html:4
+#: templates/deployment/config.html:6 templates/deployment/control.html:15
+msgid "The Response Of Server Control Order"
+msgstr ""
+
+#: templates/deployment/config.html:7
+msgid "Label"
+msgstr ""
+
+#: templates/deployment/config.html:8
+msgid "CIWP"
+msgstr ""
+
+#: templates/deployment/config.html:9 templates/deployment/control.html:4
+#: templates/deployment/patch.html:4
 msgid "Version"
+msgstr ""
+
+#: templates/deployment/config.html:10 templates/deployment/control.html:19
+msgid "Lastest 20 Server Control Order By Every Server"
+msgstr ""
+
+#: templates/deployment/config.html:11
+msgid "DataBin"
+msgstr ""
+
+#: templates/deployment/config.html:12
+msgid "Process Server"
+msgstr ""
+
+#: templates/deployment/config.html:13
+msgid "Hotstart"
+msgstr ""
+
+#: templates/deployment/config.html:14
+msgid "Hotstart Delete Shared Memory Segments"
+msgstr ""
+
+#: templates/deployment/config.html:15 templates/deployment/control.html:17
+#: templates/deployment/patch.html:15
+msgid "GuardMaster"
+msgstr ""
+
+#: templates/deployment/config.html:16
+msgid "Date"
+msgstr ""
+
+#: templates/deployment/config.html:17 templates/deployment/control.html:11
+#: templates/deployment/patch.html:9
+msgid "Fail"
+msgstr ""
+
+#: templates/deployment/config.html:18 templates/deployment/patch.html:7
+msgid "Success"
 msgstr ""
 
 #: templates/deployment/control.html:5 templates/deployment/patch.html:5
@@ -54,10 +104,6 @@ msgstr ""
 msgid "GMVers"
 msgstr ""
 
-#: templates/deployment/control.html:11 templates/deployment/patch.html:9
-msgid "Fail"
-msgstr ""
-
 #: templates/deployment/control.html:12 templates/deployment/patch.html:10
 msgid "Please Check The Input Is Correct"
 msgstr ""
@@ -66,24 +112,16 @@ msgstr ""
 msgid "Push"
 msgstr ""
 
-#: templates/deployment/control.html:15
-msgid "The Response Of Server Control Order"
+#: templates/deployment/control.html:14 templates/deployment/preupdate.html:4
+msgid "Deploy"
 msgstr ""
 
 #: templates/deployment/control.html:16 templates/deployment/patch.html:14
 msgid "Server"
 msgstr ""
 
-#: templates/deployment/control.html:17 templates/deployment/patch.html:15
-msgid "GuardMaster"
-msgstr ""
-
 #: templates/deployment/control.html:18 templates/deployment/patch.html:16
 msgid "Pub Date"
-msgstr ""
-
-#: templates/deployment/control.html:19
-msgid "Lastest 20 Server Control Order By Every Server"
 msgstr ""
 
 #: templates/deployment/control.html:20 templates/deployment/patch.html:18
@@ -104,10 +142,6 @@ msgstr ""
 
 #: templates/deployment/patch.html:6
 msgid "Hostname/Platform/Channel"
-msgstr ""
-
-#: templates/deployment/patch.html:7
-msgid "Success"
 msgstr ""
 
 #: templates/deployment/patch.html:8
