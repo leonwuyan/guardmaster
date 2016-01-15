@@ -109,14 +109,6 @@ class ServerControlWorkOrderLock(models.Model):
         return self.server
 
 
-class DataBin(models.Model):
-    label = models.CharField(max_length=256)
-    panel = models.ForeignKey(Panel)
-
-    def __unicode__(self):
-        return self.label
-
-
 class ProcessServer(models.Model):
     label = models.CharField(max_length=256)
     panel = models.ForeignKey(Panel)
@@ -129,10 +121,10 @@ class ServerConfigOrder(models.Model):
     label = models.CharField(max_length=45)
     ciwp = models.ForeignKey(CIWP)
     version = models.CharField(max_length=64)
-    db_list = models.ManyToManyField(DataBin)
-    ps_list = models.ManyToManyField(ProcessServer, related_name='ps_list')
-    hs_list = models.ManyToManyField(ProcessServer, related_name='hs_list')
-    hs_free_list = models.ManyToManyField(ProcessServer, related_name='hs_free_list')
+    db_list = models.TextField()
+    ps_list = models.CharField(max_length=256)
+    hs_list = models.CharField(max_length=256)
+    hs_free_list = models.CharField(max_length=256)
     db_filename = models.CharField(max_length=256)
     ps_filename = models.CharField(max_length=256)
     hs_filename = models.CharField(max_length=256)

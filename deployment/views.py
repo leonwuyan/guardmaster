@@ -154,13 +154,14 @@ def config(request, panel_id, url):
     d['databin'] = databin
     d['processserver'] = processserver
     if request.method == 'POST':
+        print request.POST
         label = request.POST.get('label', 'None')
         version = request.POST.get('version')
         ciwp_id = int(request.POST.get('ciwp'))
-        db = request.POST.getlist('databin')
-        ps = request.POST.getlist('processserver')
-        hs = request.POST.getlist('hotstart')
-        hs_free = request.POST.getlist('hotstart_free')
+        db = request.POST.get('databin')
+        ps = request.POST.get('processserver')
+        hs = request.POST.get('hotstart')
+        hs_free = request.POST.get('hotstart_free')
         sco = ServerConfigOrder(
             label=label,
             ciwp_id=ciwp_id,
@@ -184,9 +185,10 @@ def control(request, panel_id, url):
     panel = get_object_or_404(Panel, pk=panel_id)
     tmp = panel.server_set.all()
     d['url'] = url
-    d['servers'] = filter(lambda x: x.server_type != 'update', tmp)
     if url == 'version':
         d['servers'] = filter(lambda x: x.server_type == 'dir', tmp)
+    else:
+        d['servers'] = filter(lambda x: x.server_type != 'update', tmp)
     d['ciwps'] = panel.ciwp_set.all()
     d['servercontrolworkorders'] = panel.servercontrolworkorder_set.all()[:20]
     if request.method == 'POST':

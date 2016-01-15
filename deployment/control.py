@@ -163,36 +163,35 @@ def _make_list_file(filename, tmp):
 def make_list_file(sco, db, ps, hs, hs_free):
     mid_name = "{0}_{1}".format(sco.ciwp.label, sco.version)
 
-    content = []
-    for i in db:
-        databin = DataBin.objects.get(pk=int(i))
-        sco.db_list.add(databin)
-        content.append(databin.label)
-    tmp = "\n".join(content)
+    tmp = db
     db_filename = _make_list_file("{0}_{1}".format('databin', mid_name), tmp)
     sco.db_filename = db_filename
+    sco.db_list = db
 
+    ps_array = ps.split(',')
     content = []
-    for i in ps:
+    for i in ps_array:
         processserver = ProcessServer.objects.get(pk=int(i))
-        sco.ps_list.add(processserver)
         content.append(processserver.label)
     tmp = "\n".join(content)
     ps_filename = _make_list_file("{0}_{1}".format('ps', mid_name), tmp)
     sco.ps_filename = ps_filename
+    sco.ps_list = ps
 
+    hs_array = hs.split(',')
+    hs_free_array = hs_free.split(',')
     content = []
-    for i in hs:
+    for i in hs_array:
         processserver = ProcessServer.objects.get(pk=int(i))
-        sco.hs_list.add(processserver)
         content.append("{0} 1".format(processserver.label))
-    for i in hs_free:
+    for i in hs_free_array:
         processserver = ProcessServer.objects.get(pk=int(i))
-        sco.hs_free_list.add(processserver)
         content.append("{0} 2".format(processserver.label))
     tmp = "\n".join(content)
     hs_filename = _make_list_file("{0}_{1}".format('hotstart', mid_name), tmp)
     sco.hs_filename = hs_filename
+    sco.hs_list = hs
+    sco.hs_free_list = hs_free
 
     if hs_filename == 'NONE' or ps_filename == 'NONE' or hs_filename == 'NONE':
         sco.delete()

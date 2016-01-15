@@ -16,6 +16,7 @@
 {% trans "Date" as t_date %}
 {% trans "Fail" as t_fail %}
 {% trans "Success" as t_success %}
+{% trans "No Operation" as t_no_operation %}
 <div class="container-fluid white-bg">
   <div class="row">
     <ol class="breadcrumb">
@@ -56,35 +57,49 @@
       </div>
       <div class="form-group" style="margin-bottom: 5px">
         <label>{{t_databin}}</label>
-        <select class="form-control" name="databin" id="databin" multiple="multiple" size="10">
-          {% for d in databin %}
-          <option value="{{d.id}}">{{d.label}}</option>
-          {% endfor %}
-        </select>
+        <textarea class="form-control" name="databin" id="databin" rows="5"></textarea>
       </div>
       <div class="form-group" style="margin-bottom: 5px">
         <label>{{t_processserver}}</label>
-        <select class="form-control" name="processserver" id="processserver" multiple="multiple" size="5">
-          {% for p in processserver %}
-          <option value="{{p.id}}">{{p.label}}</option>
-          {% endfor %}
-        </select>
-      </div>
-      <div class="form-group" style="margin-bottom: 5px">
-        <label>{{t_hotstart}}</label>
-        <select class="form-control" name="hotstart" id="hotstart" multiple="multiple" size="5">
-          {% for p in processserver %}
-          <option value="{{p.id}}">{{p.label}}</option>
-          {% endfor %}
-        </select>
+        <input type="hidden" name="processserver" id="processserver">
       </div>
       <div class="form-group">
-        <label>{{t_h_d_s_m_s}}</label>
-        <select class="form-control" name="hotstart_free" id="hotstart_free" multiple="multiple" size="5">
-          {% for p in processserver %}
-          <option value="{{p.id}}">{{p.label}}</option>
-          {% endfor %}
-        </select>
+        {% for p in processserver %}
+        <!-- Split button -->
+        <div class="btn-group" style="margin-bottom: 10px;">
+          <button type="button" class="btn btn-sm btn-default processserver" id="processserver-{{p.id}}" data="{{p.id}}">{{p.label}}</button>
+          <button type="button" class="btn btn-sm btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" id="dropdown-processserver-{{p.id}}">
+            <span class="caret"></span>
+            <span class="sr-only">Toggle Dropdown</span>
+          </button>
+          <ul class="dropdown-menu">
+            <li><a href="javascript:select_button('processserver', {{p.id}}, 0)">{{t_no_operation}}</a></li>
+            <li><a href="javascript:select_button('processserver', {{p.id}}, 3)">{{t_processserver}}</a></li>
+          </ul>
+        </div>
+        {% endfor %}
+      </div>
+      <div class="form-group" style="margin-bottom: 5px">
+        <label>{{t_hotstart}}&{{t_h_d_s_m_s}}</label>
+        <input type="hidden" name="hotstart" id="hotstart">
+        <input type="hidden" name="hotstart_free" id="hotstart_free">
+      </div>
+      <div class="form-group">
+        {% for p in processserver %}
+        <!-- Split button -->
+        <div class="btn-group" style="margin-bottom: 10px;">
+          <button type="button" class="btn btn-sm btn-default hotstart" id="hotstart-{{p.id}}" data="{{p.id}}">{{p.label}}</button>
+          <button type="button" class="btn btn-sm btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" id="dropdown-hotstart-{{p.id}}">
+            <span class="caret"></span>
+            <span class="sr-only">Toggle Dropdown</span>
+          </button>
+          <ul class="dropdown-menu">
+            <li><a href="javascript:select_button('hotstart', {{p.id}}, 0)">{{t_no_operation}}</a></li>
+            <li><a href="javascript:select_button('hotstart', {{p.id}}, 1)">{{t_hotstart}}</a></li>
+            <li><a href="javascript:select_button('hotstart', {{p.id}}, 2)">{{t_h_d_s_m_s}}</a></li>
+          </ul>
+        </div>
+        {% endfor %}
       </div>
       <button type="submit" class="btn btn-primary btn-sm">{{ t_add }}</button>
     </form>
@@ -126,6 +141,40 @@
   <center style='color: #999; padding-top: 20px; font-family: "arial","NSimSun","SimSun","STSong","AR PL SungtiL GB","TW\-Sung","WenQuanYi Bitmap Song"; font-size: 14px; font-weight: bold;'>{{excuse}}</center>
 </div>
 <script type="text/javascript">
+function refresh_value(cla, id, sta){
+  ar = Array()
+  $(cla).each(function(){
+    if ($(this).hasClass(sta)){
+      ar.push($(this).attr('data'))
+    }
+  })
+  $(id).val(ar.join())
+}
+function select_button(label, id, status){
+  button = '#' + label + '-' + id
+  dropdown_button = '#dropdown-' + label + '-' + id
+  switch (status) {
+    case 0:
+      $(button).attr('class', 'btn btn-sm btn-default ' + label)
+      $(dropdown_button).attr('class', 'btn btn-sm btn-default dropdown-toggle')
+    break;
+    case 1:
+      $(button).attr('class', 'btn btn-sm btn-info ' + label)
+      $(dropdown_button).attr('class', 'btn btn-sm btn-info dropdown-toggle')
+    break;
+    case 2:
+      $(button).attr('class', 'btn btn-sm btn-warning ' + label)
+      $(dropdown_button).attr('class', 'btn btn-sm btn-warning dropdown-toggle')
+    break;
+    case 3:
+      $(button).attr('class', 'btn btn-sm btn-success ' + label)
+      $(dropdown_button).attr('class', 'btn btn-sm btn-success dropdown-toggle')
+    break;
+  }
+  refresh_value('.hotstart', '#hotstart', 'btn-info')
+  refresh_value('.hotstart', '#hotstart_free', 'btn-warning')
+  refresh_value('.processserver', '#processserver', 'btn-success')
+}
   $(document).ready(function() {
   });
 </script>

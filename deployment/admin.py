@@ -27,11 +27,6 @@ class CIWPAdmin(admin.ModelAdmin):
     list_filter = ['panel']
 
 
-class DataBinAdmin(admin.ModelAdmin):
-    list_display = ('label', 'panel')
-    list_filter = ['panel']
-
-
 class ProcessServerAdmin(admin.ModelAdmin):
     list_display = ('label', 'panel')
     list_filter = ['panel']
@@ -121,7 +116,6 @@ admin.site.register(Platform, PlatformAdmin)
 admin.site.register(Channel, ChannelAdmin)
 admin.site.register(Ip, IpAdmin)
 admin.site.register(CIWP, CIWPAdmin)
-admin.site.register(DataBin, DataBinAdmin)
 admin.site.register(ProcessServer, ProcessServerAdmin)
 admin.site.register(UpLoadWorkOrder, UpLoadworkOrderAdmin)
 admin.site.register(UpLoadWorkOrderLock, UpLoadworkOrderLockAdmin)
