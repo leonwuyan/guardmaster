@@ -152,8 +152,9 @@ def config(request, panel_id, url):
     d['ciwp'] = ciwp
     d['processserver'] = processserver
     if request.method == 'POST':
-        print request.POST
-        label = request.POST.get('label', 'None')
+        label = request.POST.get('label')
+        if not label:
+            label = 'NONE'
         version = request.POST.get('version')
         ciwp_id = int(request.POST.get('ciwp'))
         db = request.POST.get('databin')
