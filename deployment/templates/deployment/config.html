@@ -67,15 +67,9 @@
         {% for p in processserver %}
         <!-- Split button -->
         <div class="btn-group" style="margin-bottom: 10px;">
-          <button type="button" class="btn btn-sm btn-default processserver" id="processserver-{{p.id}}" data="{{p.id}}">{{p.label}}</button>
-          <button type="button" class="btn btn-sm btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" id="dropdown-processserver-{{p.id}}">
-            <span class="caret"></span>
-            <span class="sr-only">Toggle Dropdown</span>
+          <button type="button" class="btn btn-sm btn-default processserver" id="processserver-{{p.id}}" data="{{p.id}}" onclick="javascript:select_button('processserver', {{p.id}}, 3)">
+            {{p.label}}
           </button>
-          <ul class="dropdown-menu">
-            <li><a href="javascript:select_button('processserver', {{p.id}}, 0)">{{t_no_operation}}</a></li>
-            <li><a href="javascript:select_button('processserver', {{p.id}}, 3)">{{t_processserver}}</a></li>
-          </ul>
         </div>
         {% endfor %}
       </div>
@@ -88,10 +82,8 @@
         {% for p in processserver %}
         <!-- Split button -->
         <div class="btn-group" style="margin-bottom: 10px;">
-          <button type="button" class="btn btn-sm btn-default hotstart" id="hotstart-{{p.id}}" data="{{p.id}}">{{p.label}}</button>
-          <button type="button" class="btn btn-sm btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" id="dropdown-hotstart-{{p.id}}">
-            <span class="caret"></span>
-            <span class="sr-only">Toggle Dropdown</span>
+          <button type="button" class="btn btn-sm btn-default dropdown-toggle hotstart" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" id="hotstart-{{p.id}}" data="{{p.id}}">
+            {{p.label}} <span class="caret"></span>
           </button>
           <ul class="dropdown-menu">
             <li><a href="javascript:select_button('hotstart', {{p.id}}, 0)">{{t_no_operation}}</a></li>
@@ -101,7 +93,7 @@
         </div>
         {% endfor %}
       </div>
-      <button type="submit" class="btn btn-primary btn-sm">{{ t_add }}</button>
+      <button type="submit" class="btn btn-primary btn-sm" onclick="return add_confirm()">{{ t_add }}</button>
     </form>
 
     <div class="panel panel-default" style="margin-top: 50px">
@@ -141,6 +133,18 @@
   <center style='color: #999; padding-top: 20px; font-family: "arial","NSimSun","SimSun","STSong","AR PL SungtiL GB","TW\-Sung","WenQuanYi Bitmap Song"; font-size: 14px; font-weight: bold;'>{{excuse}}</center>
 </div>
 <script type="text/javascript">
+function get_ps(id) {
+  ps = {}
+  {% for p in processserver %}
+    ps['{{p.id}}'] = '{{p.label}}'
+  {% endfor %}
+  ps_array = $(id).val().split(',')
+  ps_list = Array()
+  $.each(ps_array, function(index, value){
+    ps_list.push(ps[value])
+  })
+  return ps_list.join('\n')
+}
 function refresh_value(cla, id, sta){
   ar = Array()
   $(cla).each(function(){
@@ -152,28 +156,43 @@ function refresh_value(cla, id, sta){
 }
 function select_button(label, id, status){
   button = '#' + label + '-' + id
-  dropdown_button = '#dropdown-' + label + '-' + id
   switch (status) {
     case 0:
-      $(button).attr('class', 'btn btn-sm btn-default ' + label)
-      $(dropdown_button).attr('class', 'btn btn-sm btn-default dropdown-toggle')
+      $(button).attr('class', 'btn btn-sm btn-default dropdown-toggle ' + label)
     break;
     case 1:
-      $(button).attr('class', 'btn btn-sm btn-info ' + label)
-      $(dropdown_button).attr('class', 'btn btn-sm btn-info dropdown-toggle')
+      $(button).attr('class', 'btn btn-sm btn-info dropdown-toggle ' + label)
     break;
     case 2:
-      $(button).attr('class', 'btn btn-sm btn-warning ' + label)
-      $(dropdown_button).attr('class', 'btn btn-sm btn-warning dropdown-toggle')
+      $(button).attr('class', 'btn btn-sm btn-danger dropdown-toggle ' + label)
     break;
     case 3:
-      $(button).attr('class', 'btn btn-sm btn-success ' + label)
-      $(dropdown_button).attr('class', 'btn btn-sm btn-success dropdown-toggle')
+      if ($(button).hasClass('btn-success')) {
+        $(button).attr('class', 'btn btn-sm btn-default ' + label)
+      } else {
+        $(button).attr('class', 'btn btn-sm btn-success ' + label)
+      }
     break;
   }
   refresh_value('.hotstart', '#hotstart', 'btn-info')
-  refresh_value('.hotstart', '#hotstart_free', 'btn-warning')
+  refresh_value('.hotstart', '#hotstart_free', 'btn-danger')
   refresh_value('.processserver', '#processserver', 'btn-success')
+}
+function add_confirm(){
+  fmts = '{{t_label}} :%(la)s\n{{t_ciwp}} :%(ci)s\n{{t_version}} :%(ve)s\n{{t_databin}} :\n%(da)s\n\n{{t_processserver}} :\n%(ps)s\n\n{{t_hotstart}} :\n%(hs)s\n\n{{t_h_d_s_m_s}} :\n%(hsf)s'
+  t = {
+    'la':$('#label').val(),
+    'ci':$('#ciwp').find("option:selected").text(),
+    've':$('#version').val(),
+    'da':$('#databin').val(),
+    'ps':get_ps('#processserver'),
+    'hs':get_ps('#hotstart'),
+    'hsf':get_ps('#hotstart_free')
+  }
+  s = interpolate(fmts, t, true)
+  if (!confirm(s)){
+    return false
+  }
 }
   $(document).ready(function() {
   });

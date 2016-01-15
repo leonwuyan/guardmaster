@@ -168,7 +168,10 @@ def make_list_file(sco, db, ps, hs, hs_free):
     sco.db_filename = db_filename
     sco.db_list = db
 
-    ps_array = ps.split(',')
+    if ps:
+        ps_array = ps.split(',')
+    else:
+        ps_array = []
     content = []
     for i in ps_array:
         processserver = ProcessServer.objects.get(pk=int(i))
@@ -178,8 +181,14 @@ def make_list_file(sco, db, ps, hs, hs_free):
     sco.ps_filename = ps_filename
     sco.ps_list = ps
 
-    hs_array = hs.split(',')
-    hs_free_array = hs_free.split(',')
+    if hs:
+        hs_array = hs.split(',')
+    else:
+        hs_array = []
+    if hs_free:
+        hs_free_array = hs_free.split(',')
+    else:
+        hs_free_array = []
     content = []
     for i in hs_array:
         processserver = ProcessServer.objects.get(pk=int(i))

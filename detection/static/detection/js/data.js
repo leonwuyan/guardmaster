@@ -723,7 +723,7 @@
       });
     },
     'patchUploadConfirm': function() {
-      fmts = gettext('Please Confirm This:\nHostName :%(h)s\nPlatform :%(p)s\nChannel :%(c)s\nVerseion :%(v)s');
+      fmts = gettext('Please Confirm This:\nHostName :%(h)s\nPlatform :%(p)s\nChannel :%(c)s\nVersion :%(v)s');
       t = {
         'h':$('#hostname').val(),
         'p':$('#platform').val(),

@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2015-12-15 11:25+0800\n"
+"POT-Creation-Date: 2016-01-15 16:27+0800\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -21,86 +21,87 @@ msgstr ""
 msgid "en"
 msgstr ""
 
-#: static/detection/js/data.js:246 static/detection/js/data.js:302
+#: static/detection/js/data.js:246 static/detection/js/data.js:264
+#: static/detection/js/data.js:318 static/detection/js/data.js:427
 msgid "Confirm Adding %(count)s ?"
 msgstr ""
 
-#: static/detection/js/data.js:319
+#: static/detection/js/data.js:335
 msgid "Confirm Change To %(count)s ?"
 msgstr ""
 
-#: static/detection/js/data.js:332
+#: static/detection/js/data.js:348
 msgid "Confirm Unlocking Dungeon To %(type_id)s ?"
 msgstr ""
 
-#: static/detection/js/data.js:345
+#: static/detection/js/data.js:361
 msgid "Confirm Kicking Player UID %(uid)s ?"
 msgstr ""
 
-#: static/detection/js/data.js:357
+#: static/detection/js/data.js:373
 msgid "Confirm Chat Ban Player %(type_id)s Day?"
 msgstr ""
 
-#: static/detection/js/data.js:371
+#: static/detection/js/data.js:387
 msgid "Confirm Account Ban Player %(type_id)s Day?"
 msgstr ""
 
-#: static/detection/js/data.js:385
+#: static/detection/js/data.js:401
 msgid "Confirm Player UID %(uid)s Off Gang?"
 msgstr ""
 
-#: static/detection/js/data.js:397
+#: static/detection/js/data.js:413
 msgid "Confirm Player UID %(uid)s Off Rank?"
 msgstr ""
 
-#: static/detection/js/data.js:439
+#: static/detection/js/data.js:510
 msgid "Confirm To Delete This Notify %(title)s?"
 msgstr ""
 
-#: static/detection/js/data.js:475
+#: static/detection/js/data.js:546
 msgid "Confirm To Synchronize All The Noitfy To The CDNServer?"
 msgstr ""
 
-#: static/detection/js/data.js:525
+#: static/detection/js/data.js:596
 msgid "Title And Content Is Required"
 msgstr ""
 
-#: static/detection/js/data.js:528
+#: static/detection/js/data.js:599
 msgid ""
 "Please Confirm This:\n"
 "Title :%(t)s\n"
 "Content :%(c)s"
 msgstr ""
 
-#: static/detection/js/data.js:540
+#: static/detection/js/data.js:611
 msgid "Chat Query Kick And Ban"
 msgstr ""
 
-#: static/detection/js/data.js:543
+#: static/detection/js/data.js:614
 msgid "Confirm Kick And Account Ban Player UID :%(uid)s ?"
 msgstr ""
 
-#: static/detection/js/data.js:610
+#: static/detection/js/data.js:681
 msgid "Please Confirm CleanUp All The Pre-Update?"
 msgstr ""
 
-#: static/detection/js/data.js:616
+#: static/detection/js/data.js:687
 msgid ""
 "Please Confirm This:\n"
 "IP :%(i)s\n"
 "Channel :%(c)s"
 msgstr ""
 
-#: static/detection/js/data.js:655
+#: static/detection/js/data.js:726
 msgid ""
 "Please Confirm This:\n"
 "HostName :%(h)s\n"
 "Platform :%(p)s\n"
 "Channel :%(c)s\n"
-"Verseion :%(v)s"
+"Version :%(v)s"
 msgstr ""
 
-#: static/detection/js/data.js:668
+#: static/detection/js/data.js:739
 msgid ""
 "Please Confirm This:\n"
 "Server :%(se)s\n"
@@ -110,7 +111,7 @@ msgid ""
 "Version :%(ve)s"
 msgstr ""
 
-#: static/detection/js/data.js:682
+#: static/detection/js/data.js:753
 msgid ""
 "Please Confirm This:\n"
 "Server :%(se)s\n"
