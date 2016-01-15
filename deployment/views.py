@@ -147,11 +147,9 @@ def config(request, panel_id, url):
     panel = get_object_or_404(Panel, pk=panel_id)
     sco = ServerConfigOrder.objects.filter(panel=panel)[:20]
     ciwp = CIWP.objects.filter(panel=panel)
-    databin = DataBin.objects.filter(panel=panel)
     processserver = ProcessServer.objects.filter(panel=panel)
     d['sco'] = sco
     d['ciwp'] = ciwp
-    d['databin'] = databin
     d['processserver'] = processserver
     if request.method == 'POST':
         print request.POST
