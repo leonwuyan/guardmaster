@@ -152,9 +152,6 @@ def config(request, panel_id, url):
     d['ciwp'] = ciwp
     d['processserver'] = processserver
     if request.method == 'POST':
-        label = request.POST.get('label')
-        if not label:
-            label = 'NONE'
         version = request.POST.get('version')
         ciwp_id = int(request.POST.get('ciwp'))
         db = request.POST.get('databin')
@@ -162,7 +159,6 @@ def config(request, panel_id, url):
         hs = request.POST.get('hotstart')
         hs_free = request.POST.get('hotstart_free')
         sco = ServerConfigOrder(
-            label=label,
             ciwp_id=ciwp_id,
             version=version,
             date=timezone.now(),

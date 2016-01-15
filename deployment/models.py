@@ -118,7 +118,6 @@ class ProcessServer(models.Model):
 
 
 class ServerConfigOrder(models.Model):
-    label = models.CharField(max_length=45)
     ciwp = models.ForeignKey(CIWP)
     version = models.CharField(max_length=64)
     db_list = models.TextField()
@@ -133,7 +132,7 @@ class ServerConfigOrder(models.Model):
     panel = models.ForeignKey(Panel)
 
     def __unicode__(self):
-        return self.label
+        return self.id
 
     class Meta:
-        ordering = ['-id', '-date']
+        ordering = ['-id']

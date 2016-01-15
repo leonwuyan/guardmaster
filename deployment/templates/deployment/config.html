@@ -4,7 +4,7 @@
 {% trans "Add" as t_add %}
 {% trans "No Item Needed" as t_no_item_needed %}
 {% trans "The Response Of Server Control Order" as t_t_r_o_s_c_o %}
-{% trans "Label" as t_label %}
+{% trans "ID" as t_id %}
 {% trans "CIWP" as t_ciwp %}
 {% trans "Version" as t_version %}
 {% trans "Lastest 20 Server Control Order By Every Server" as t_l_20_s_c_o_b_e_s %}
@@ -39,10 +39,6 @@
 
     <form class="form" role="form" method="post">
     {% csrf_token %}
-      <div class="form-group" style="margin-bottom: 5px">
-        <label>{{t_label}}</label>
-        <input type="text" class="form-control" name="label" id="label">
-      </div>
       <div class="form-group" style="margin-bottom: 5px">
         <label>{{t_ciwp}}</label>
         <select class="form-control" name="ciwp" id="ciwp">
@@ -102,7 +98,7 @@
         <table class="table table-bordered table-condensed">
             <thead>
               <tr>
-              <th>{{ t_label }}</th>
+              <th>{{ t_id }}</th>
               <th>{{ t_ciwp }}</th>
               <th>{{ t_version }}</th>
               <th>{{ t_databin }}</th>
@@ -115,7 +111,7 @@
           <tbody>
           {% for s in sco %}
             <tr>
-              <td>{{s.label}}</td>
+              <td>{{s.id}}</td>
               <td>{{s.ciwp}}</td>
               <td>{{s.version}}</td>
               <td>{{s.db_filename}}</td>
@@ -179,9 +175,8 @@ function select_button(label, id, status){
   refresh_value('.processserver', '#processserver', 'btn-success')
 }
 function add_confirm(){
-  fmts = '{{t_label}} :%(la)s\n{{t_ciwp}} :%(ci)s\n{{t_version}} :%(ve)s\n{{t_databin}} :\n%(da)s\n\n{{t_processserver}} :\n%(ps)s\n\n{{t_hotstart}} :\n%(hs)s\n\n{{t_h_d_s_m_s}} :\n%(hsf)s'
+  fmts = '{{t_ciwp}} :%(ci)s\n{{t_version}} :%(ve)s\n{{t_databin}} :\n%(da)s\n\n{{t_processserver}} :\n%(ps)s\n\n{{t_hotstart}} :\n%(hs)s\n\n{{t_h_d_s_m_s}} :\n%(hsf)s'
   t = {
-    'la':$('#label').val(),
     'ci':$('#ciwp').find("option:selected").text(),
     've':$('#version').val(),
     'da':$('#databin').val(),
