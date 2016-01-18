@@ -132,7 +132,7 @@ class ServerConfigOrder(models.Model):
     panel = models.ForeignKey(Panel)
 
     def __unicode__(self):
-        return self.id
+        return str(self.id)
 
     class Meta:
         ordering = ['-id']

@@ -113,6 +113,14 @@ class ValueFormat(object):
         t = str(int(t) / (24*60*60))
         return t + _('Day')
 
+    def _contact_status(self, x):
+        if x == 0:
+            return _('No Response')
+        if x == 1:
+            return _('Responsed')
+        if x == 2:
+            return _('Confirm')
+
     def _f_v(self, f, v):
         if f is None:
             f = ''

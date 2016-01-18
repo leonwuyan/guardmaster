@@ -164,6 +164,7 @@ class UIColMap(models.Model):
         ('kick_ban', _('kick ban user')),
         ('ban_type', _('type of ban')),
         ('ban_time', _('time of ban')),
+        ('contact_status', _('contact status')),
     }
     label = models.CharField(max_length=45)
     sub_menu = models.ForeignKey(UISubMenu)

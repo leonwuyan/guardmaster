@@ -100,6 +100,7 @@ class ServerControlWorkOrderLockAdmin(admin.ModelAdmin):
 
 class ServerConfigOrderAdmin(admin.ModelAdmin):
     list_display = (
+        'id',
         'panel',
         'ciwp',
         'version',

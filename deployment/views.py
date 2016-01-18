@@ -183,9 +183,10 @@ def control(request, panel_id, url):
     if url == 'version':
         d['servers'] = filter(lambda x: x.server_type == 'dir', tmp)
     else:
-        d['servers'] = filter(lambda x: x.server_type != 'update', tmp)
+        d['servers'] = filter(lambda x: x.server_type == 'all', tmp)
     d['ciwps'] = panel.ciwp_set.all()
     d['servercontrolworkorders'] = panel.servercontrolworkorder_set.all()[:20]
+    d['sco'] = panel.serverconfigorder_set.all()
     if request.method == 'POST':
         server_id = int(request.POST['server'])
         if url == 'server':
