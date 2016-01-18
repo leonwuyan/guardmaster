@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2016-01-15 15:16+0800\n"
-"PO-Revision-Date: 2016-01-15 15:17+0800\n"
+"POT-Creation-Date: 2016-01-18 16:59+0800\n"
+"PO-Revision-Date: 2016-01-18 17:03+0800\n"
 "Last-Translator: Raynor <raynor41@gmail.com>\n"
 "Language-Team: \n"
 "Language: zh_TW\n"
@@ -31,10 +31,10 @@ msgid "The Response Of Server Control Order"
 msgstr "控制工單的回執"
 
 #: templates/deployment/config.html:7
-msgid "Label"
-msgstr "模板名稱"
+msgid "ID"
+msgstr "ID"
 
-#: templates/deployment/config.html:8
+#: templates/deployment/config.html:8 templates/deployment/control.html:24
 msgid "CIWP"
 msgstr "CIWP"
 
@@ -145,6 +145,14 @@ msgstr "起始日期"
 msgid "Stop Date"
 msgstr "結束日期"
 
+#: templates/deployment/control.html:25
+msgid "Server Config Order"
+msgstr "伺服器配置模板"
+
+#: templates/deployment/control.html:26
+msgid "Operation"
+msgstr "操作"
+
 #: templates/deployment/patch.html:6
 msgid "Hostname/Platform/Channel"
 msgstr "伺服器/平台/渠道"
@@ -192,6 +200,9 @@ msgstr "渠道"
 #: templates/deployment/preupdate.html:11
 msgid "No Pre-Update"
 msgstr "沒有預更新"
+
+#~ msgid "Label"
+#~ msgstr "模板名稱"
 
 #~ msgid "CDN Server"
 #~ msgstr "CDN 伺服器"
@@ -459,9 +470,6 @@ msgstr "沒有預更新"
 
 #~ msgid "Emblem"
 #~ msgstr "紋章"
-
-#~ msgid "ID"
-#~ msgstr "ID"
 
 #~ msgid "Skill"
 #~ msgstr "技能"

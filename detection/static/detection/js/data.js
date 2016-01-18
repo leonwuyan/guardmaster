@@ -736,13 +736,11 @@
       }
     },
     'serverControlConfirm': function() {
-      fmts = gettext('Please Confirm This:\nServer :%(se)s\nStage :%(st)s\nRelease :%(re)s\nCIWP :%(ci)s\nVersion :%(ve)s');
+      fmts = gettext('Please Confirm This:\nServer :%(se)s\nServerConfigOrder :%(sco)s\nOperation :%(op)s');
       t = {
         'se':$('#server').find("option:selected").text(),
-        'st':$('#stage').val(),
-        're':$('#release').val(),
-        'ci':$('#ciwp').val(),
-        've':$('#version').val()
+        'sco':$('#sco').find("option:selected").text(),
+        'op':$('#operation').find("option:selected").text()
       }
       s = interpolate(fmts, t, true);
       if (!confirm(s)) {

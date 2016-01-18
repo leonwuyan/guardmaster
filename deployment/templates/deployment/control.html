@@ -21,6 +21,9 @@
 {% trans "Result" as t_result %}
 {% trans "Start Date" as t_start_date %}
 {% trans "Stop Date" as t_stop_date %}
+{% trans "CIWP" as t_ciwp %}
+{% trans "Server Config Order" as t_s_c_o %}
+{% trans "Operation" as t_operation %}
 <div class="container-fluid white-bg">
   <div class="row">
     <ol class="breadcrumb">
@@ -46,32 +49,23 @@
         </select>
       </div>
       {% ifequal url 'server'  %}
+      <div class="form-group" style="margin-bottom: 5px">
+        <label>{{t_s_c_o}}</label>
+          <select class="form-control" name="sco" id="sco">
+            {% for s in sco %}
+            <option value="{{s.id}}">{{s.id}} - {{s.user}} - {{s.date}}</option>
+            {% endfor %}
+          </select>
+      </div>
       <div class="form-group">
-        <label>{{t_s_r_c_v}}</label>
-        <div class="row">
-          <div class="col-md-3">
-            <select class="form-control" name="stage" id="stage">
-              <option value="upgrade">upgrade</option>
-              <option value="new">new</option>
-            </select>
-          </div>
-          <div class="col-md-3">
-            <select class="form-control" name="release" id="release">
-              <option value="R">Release</option>
-              <option value="D">Debug</option>
-            </select>
-          </div>
-          <div class="col-md-3">
-            <select class="form-control" name="ciwp" id="ciwp">
-              {% for ciwp in ciwps %}
-              <option value="{{ciwp.label}}">{{ciwp.label}}</option>
-              {% endfor %}
-            </select>
-          </div>
-          <div class="col-md-3">
-            <input type="text" class="form-control" value="0" name="version" id="version">
-          </div>
-        </div>
+        <label>{{t_operation}}</label>
+          <select class="form-control" name="operation" id="operation">
+            <option value="A">A - 创建更新包</option>
+            <option value="B">B - 推送预更新</option>
+            <option value="C">C - 上传正式服</option>
+            <option value="D">D - 更新热加载</option>
+            <option value="E">E - 撤销并回档</option>
+          </select>
       </div>
       <button type="submit" class="btn btn-primary btn-sm" onclick="return deployment.serverControlConfirm();">{{t_deploy}}</button>
       {% endifequal %}

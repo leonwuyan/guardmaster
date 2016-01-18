@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2016-01-15 15:16+0800\n"
+"POT-Creation-Date: 2016-01-18 16:59+0800\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -30,10 +30,10 @@ msgid "The Response Of Server Control Order"
 msgstr ""
 
 #: templates/deployment/config.html:7
-msgid "Label"
+msgid "ID"
 msgstr ""
 
-#: templates/deployment/config.html:8
+#: templates/deployment/config.html:8 templates/deployment/control.html:24
 msgid "CIWP"
 msgstr ""
 
@@ -142,6 +142,14 @@ msgstr ""
 
 #: templates/deployment/control.html:23 templates/deployment/patch.html:21
 msgid "Stop Date"
+msgstr ""
+
+#: templates/deployment/control.html:25
+msgid "Server Config Order"
+msgstr ""
+
+#: templates/deployment/control.html:26
+msgid "Operation"
 msgstr ""
 
 #: templates/deployment/patch.html:6

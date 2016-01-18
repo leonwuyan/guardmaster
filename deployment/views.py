@@ -194,10 +194,10 @@ def control(request, panel_id, url):
             package = {
                 'panel': panel,
                 'server': get_object_or_404(Server, pk=server_id),
-                'parameter1': request.POST['stage'],
-                'parameter2': request.POST['release'],
-                'parameter3': request.POST['ciwp'],
-                'parameter4': request.POST['version'],
+                'parameter1': request.POST['sco'],
+                'parameter2': request.POST['operation'],
+                'parameter3': server_id,
+                'parameter4': " ",
                 'user': request.user,
             }
         if url == 'version':

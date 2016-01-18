@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2016-01-15 16:27+0800\n"
+"POT-Creation-Date: 2016-01-18 17:02+0800\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -189,6 +189,10 @@ msgstr ""
 msgid "time of ban"
 msgstr ""
 
+#: models.py:167
+msgid "contact status"
+msgstr ""
+
 #: templates/detection/base.html:4
 msgid "BlazBlue Revolution Reburning GuardMaster Workbench"
 msgstr ""
@@ -295,4 +299,16 @@ msgstr ""
 
 #: value_format.py:114
 msgid "Day"
+msgstr ""
+
+#: value_format.py:118
+msgid "No Response"
+msgstr ""
+
+#: value_format.py:120
+msgid "Responsed"
+msgstr ""
+
+#: value_format.py:122
+msgid "Confirm"
 msgstr ""

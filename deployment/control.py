@@ -1,6 +1,7 @@
 from deployment.models import *
 from operating.models import Server
 from django.utils import timezone
+from django.shortcuts import get_object_or_404
 from deployment.tasks import _sh
 from celery.task import task
 from time import time
@@ -88,9 +89,42 @@ def update_server_control_order_lock(panel, server, status):
 
 
 def _deployment(s, server):
-    cmd = "sh -x ./auto_deploy_tools_adv.sh stage={1} release={2} version={4} servip={0} CIWP={3}".format(
-        server.ip, s.parameter1, s.parameter2, s.parameter3, s.parameter4)
-    retcode, output = _sh(SCRIPT_SH, cmd)
+    sco = get_object_or_404(ServerConfigOrder, pk=int(s.parameter1))
+    server = get_object_or_404(Server, pk=int(s.parameter3))
+    if s.parameter2 == 'A':
+        cmd = "sh ./create_delta_server_patch_file.sh {0} {1} {2} {3}".format(
+            sco.ciwp,
+            sco.version,
+            sco.db_filename,
+            sco.ps_filename)
+    if s.parameter2 == 'B':
+        cmd = "sh ./push2pretest.sh {0} {1} {2} {3}".format(
+            server.cdn_url,
+            sco.ciwp,
+            sco.version,
+            sco.hs_filename)
+    if s.parameter2 == 'C':
+        cmd = "sh ./push_version2server.sh {0} {1} {2} {3} {4}".format(
+            server.cdn_url,
+            sco.ciwp,
+            sco.version,
+            sco.hs_filename,
+            server.perform)
+    if s.parameter2 == 'D':
+        cmd = "sh ./push2pd.sh {0} {1} {2} {3} {4}".format(
+            server.cdn_url,
+            sco.ciwp,
+            sco.version,
+            sco.hs_filename,
+            server.perform)
+    if s.parameter2 == 'E':
+        cmd = "sh ./restore2pd.sh {0} {1} {2} {3} {4}".format(
+            server.cdn_url,
+            sco.ciwp,
+            sco.version,
+            sco.hs_filename,
+            server.perform)
+    retcode, output = _sh(SERVER_SCRIPT_DIR, cmd)
     if retcode != 0:
         return False
     return True
