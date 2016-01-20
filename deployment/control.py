@@ -4,7 +4,7 @@ from django.utils import timezone
 from django.shortcuts import get_object_or_404
 from deployment.tasks import _sh
 from celery.task import task
-from time import time
+from time import time, localtime, strftime
 import sys
 import os
 
@@ -183,7 +183,8 @@ def server_control(fn, package):
 
 
 def _make_list_file(filename, tmp):
-    filename = "{0}_{1}.list".format(filename, str(int(time())))
+    filename = "{0}_{1}.list".format(
+        filename, strftime('%Y%m%d%H%M%S', localtime(time())))
     file_path = LIST_SCRIPT_DIR + filename
     try:
         with open(file_path, "w") as file:
