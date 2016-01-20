@@ -640,6 +640,43 @@
         }
       });
     },
+    'confirm_contact_status': function(id) {
+      fmts = gettext('Confirm To Complate This Contact, ID: %(id)s?');
+      s = interpolate(fmts, {'id':id}, true);
+      if (!confirm(s)) {
+        return false;
+      }
+      _url = _askData.substring(0, _askData.lastIndexOf('/')) + '/' + id + '.json'
+      console.log(_url)
+      $.ajax({
+        url: _url,
+        type: 'POST',
+        beforeSend: function(xhr, settings) {
+          if (!_csrfSafeMethod(settings.type) && !this.crossDomain) {
+            xhr.setRequestHeader("X-CSRFToken", _getCookie('csrftoken'));
+          }
+        },
+        success: function(msg){
+          if (msg.result == '0'){
+            //location.reload();
+            return false;
+          }
+          alert('Error Code : ' + msg.result);
+        },
+        error: function(e){
+          switch (e.status) {
+            case 401:
+              //location.reload();
+              break;
+            default:
+              //location.reload();
+              break;
+          }
+          alert('Page Error Code : ' + e.status);
+        }
+      });
+      return false;
+    },
     'numberOnly': function(obj) {
       $(obj).keyup(function(){
               $(this).val($(this).val().replace(/\D|^0/g,''));

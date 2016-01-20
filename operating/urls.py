@@ -45,6 +45,10 @@ urlpatterns = [
         views.contact_reply,
         name='contact_reply'),
     url(
+        r'^(?P<panel_id>[0-9]+)/contact/(?P<issue_id>[0-9]+).json$',
+        views.contact_status,
+        name='contact_status'),
+    url(
         r'^(?P<panel_id>[0-9]+)/guard_master_order/(?P<url>[_A-Za-z]+)$',
         views.guard_master_order,
         name='guard_master_order'),

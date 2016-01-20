@@ -502,6 +502,20 @@ class Tabel(object):
         return ret
 
     @classmethod
+    def update_contact_status(self, panel, status, issue_id):
+        condition = "issueid = " + str(issue_id)
+
+        sqlset = "status = " + str(status)
+
+        cond = {
+            'table_name': 'tbClientIssue',
+            'update': sqlset,
+            'condition': condition,
+        }
+        ret = self.update(panel, cond)
+        return ret
+
+    @classmethod
     def get_enum(self, panel_id, enum_en):
         panel = get_object_or_404(Panel, pk=panel_id)
         enum_submenu = get_object_or_404(UISubMenu, url=Common.ENUM)

@@ -244,10 +244,19 @@ def contact_reply(request, panel_id, issue_id):
             )
             if ret['result'] == 0:
                 Tabel.contact_insert(panel, vals)
+                Tabel.update_contact_status(panel, 1, issue_id)
     reply = Tabel.contact_reply_select(panel, issue_id)
     d['reply'] = reply
     return render(request, t, d)
 
+@Common.competence_required
+def contact_status(request, panel_id, issue_id):
+    panel = get_object_or_404(Panel, pk=panel_id)
+    Tabel.update_contact_status(panel, 2, issue_id)
+    ret = 0
+    ret = {'result': ret}
+    ret = json.dumps(ret, ensure_ascii=False)
+    return HttpResponse(ret, content_type='application/json')
 
 @require_http_methods(["POST"])
 @Common.competence_required

@@ -68,6 +68,10 @@ class ValueFormat(object):
             url = reverse('operating:contact_reply', args=(self.panel_id, x,))
             reply = _("reply")
             button = "<a href='" + url + "'>" + reply + "</a>"
+            script = 'javascript:management.confirm_contact_status({0});'.format(x)
+            complate = _("complate")
+            button2 = "<a href='" + script + "'>" + complate + "</a>"
+            button += '<br/>' + button2
         else:
             button = 'None'
         return button
