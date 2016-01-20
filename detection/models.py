@@ -84,6 +84,7 @@ class UISubMenu(models.Model):
         ('detection:count_only_time', _('count_only_time')),
         ('detection:user_query', _('user_query')),
         ('detection:gang_query', _('gang_query')),
+        ('detection:gang_detail_query', _('gang_detail_query')),
         ('detection:deal_query', _('deal_query')),
         ('detection:history_query', _('history_query')),
         ('detection:ban_query', _('ban_query')),
@@ -364,6 +365,27 @@ class Tabel(object):
             condition = condition + (r,)
         if 'g_i' in request_get:
             r = "GangID = " + request_get.get('g_i')
+            condition = condition + (r,)
+        if len(condition) > 0:
+            condition = " OR ".join(condition)
+            ret = self.select(sub_menu, panel, condition)
+        return ret
+
+    @classmethod
+    def gang_detail_qeury_select(self, sub_menu, panel, request_get):
+        condition = ()
+        ret = []
+        if 'g_n' in request_get:
+            r = "GangName like '%" + request_get.get('g_n') + "%'"
+            condition = condition + (r,)
+        if 'g_m_n' in request_get:
+            r = "GangMemName like '%" + request_get.get('g_m_n') + "%'"
+            condition = condition + (r,)
+        if 'g_i' in request_get:
+            r = "GangID = " + request_get.get('g_i')
+            condition = condition + (r,)
+        if 'g_m_u' in request_get:
+            r = "GangMemRoleId = " + request_get.get('g_m_u')
             condition = condition + (r,)
         if len(condition) > 0:
             condition = " OR ".join(condition)

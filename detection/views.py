@@ -186,6 +186,8 @@ def json_template(request, panel_id, t_p, url=Common.URL):
         ret = Tabel.user_qeury_select(sub_menu, panel, request.GET)
     if t_p == 'gang_query':
         ret = Tabel.gang_qeury_select(sub_menu, panel, request.GET)
+    if t_p == 'gang_detail_query':
+        ret = Tabel.gang_detail_qeury_select(sub_menu, panel, request.GET)
     if t_p == 'chat_query':
         server_id = int(request.GET['server_id'])
         vf.set_server_id(server_id)
@@ -247,6 +249,12 @@ def user_query(request, panel_id, url=Common.URL):
 @Common.competence_required
 def gang_query(request, panel_id, url=Common.URL):
     t = "detection/gang_query.html"
+    d = view_template(request, panel_id, url)
+    return render(request, t, d)
+
+@Common.competence_required
+def gang_query(request, panel_id, url=Common.URL):
+    t = "detection/gang_detail_query.html"
     d = view_template(request, panel_id, url)
     return render(request, t, d)
 
