@@ -11,6 +11,10 @@ urlpatterns = [
         views.gang_query,
         name='gang_query'),
     url(
+        r'^(?P<panel_id>[0-9]+)/gang_detail_query/(?P<url>[_A-Za-z]+)$',
+        views.gang_detail_query,
+        name='gang_detail_query'),
+    url(
         r'^(?P<panel_id>[0-9]+)/deal_query/(?P<url>[_A-Za-z]+)$',
         views.deal_query,
         name='deal_query'),
