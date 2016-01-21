@@ -252,8 +252,9 @@ def gang_query(request, panel_id, url=Common.URL):
     d = view_template(request, panel_id, url)
     return render(request, t, d)
 
+
 @Common.competence_required
-def gang_query(request, panel_id, url=Common.URL):
+def gang_detail_query(request, panel_id, url=Common.URL):
     t = "detection/gang_detail_query.html"
     d = view_template(request, panel_id, url)
     return render(request, t, d)
