@@ -186,6 +186,7 @@ def _make_list_file(filename, tmp):
     filename = "{0}_{1}.list".format(
         filename, strftime('%Y%m%d%H%M%S', localtime(time())))
     file_path = LIST_SCRIPT_DIR + filename
+    tmp += '\n'
     try:
         with open(file_path, "w") as file:
             file.write(tmp)
