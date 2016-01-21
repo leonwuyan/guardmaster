@@ -28,6 +28,9 @@ class Channel(models.Model):
     def __unicode__(self):
         return str(self.label)
 
+    class Meta:
+        ordering = ['label']
+
 
 class Ip(models.Model):
     label = models.GenericIPAddressField()
