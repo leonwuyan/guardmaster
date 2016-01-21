@@ -1,3 +1,4 @@
+from __future__ import absolute_import
 from deployment.models import *
 from operating.models import Server
 from django.utils import timezone
