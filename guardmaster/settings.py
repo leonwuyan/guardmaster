@@ -23,6 +23,7 @@ BROKER_PASSWORD = 'guest'
 BROKER_VHOST = '/'
 CELERY_TIMEZONE = 'Asia/Shanghai'
 CELERYBEAT_SCHEDULER = 'djcelery.schedulers.DatabaseScheduler'
+CELERY_IMPORTS = ("deployment.control", )
 
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 

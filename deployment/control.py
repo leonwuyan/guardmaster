@@ -6,6 +6,7 @@ from django.shortcuts import get_object_or_404
 from deployment.tasks import _sh
 from celery.task import task
 from time import time, localtime, strftime
+import logging
 import sys
 import os
 
@@ -141,7 +142,7 @@ def _change_version(s, server):
 
 
 @task
-def deployment(fn, servercontrolworkorder_id, server_id):
+def do_deployment(fn, servercontrolworkorder_id, server_id):
     s = ServerControlWorkOrder.objects.get(pk=servercontrolworkorder_id)
     server = Server.objects.get(pk=server_id)
     if not _scp_script():
@@ -180,7 +181,7 @@ def server_control(fn, package):
         update_server_control_order(s, 0, 'Order Is Locking', FAILED)
         return
     s.save()
-    deployment.delay(fn, s.id, package['server'].id)
+    do_deployment.delay(fn, s.id, package['server'].id)
 
 
 def _make_list_file(filename, tmp):
