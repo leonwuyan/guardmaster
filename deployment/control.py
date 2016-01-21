@@ -179,7 +179,7 @@ def server_control(fn, package):
         update_server_control_order(s, 0, 'Order Is Locking', FAILED)
         return
     s.save()
-    deployment(fn, s.id, package['server'].id)
+    deployment.delay(fn, s.id, package['server'].id)
 
 
 def _make_list_file(filename, tmp):
