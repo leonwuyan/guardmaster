@@ -95,6 +95,7 @@ class ServerControlWorkOrder(models.Model):
     result = models.CharField(max_length=255)
     panel = models.ForeignKey(Panel)
     status = models.IntegerField()
+    output = models.TextField()
 
     def __unicode__(self):
         return self.server

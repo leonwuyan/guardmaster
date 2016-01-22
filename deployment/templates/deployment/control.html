@@ -132,6 +132,7 @@
               <th>{{ t_result }}</th>
               <th>{{ t_start_date }}</th>
               <th>{{ t_stop_date }}</th>
+              <th>{{ t_result }}</th>
               </tr>
             </thead>
           <tbody>
@@ -152,6 +153,7 @@
               <td>{{s.result|result_label}}</td>
               <td>{{s.start_date}}</td>
               <td>{{s.stop_date}}</td>
+              <td><button type="button" class="btn btn-primary btn-xs" data-toggle="modal" data-target="#Modal-{{s.id}}">{{t_query}}</button></td>
             </tr>
           {% endfor %}
           </tbody>
@@ -159,6 +161,26 @@
       </div>
     </div>
   </div>
+
+{% for s in servercontrolworkorders %}
+  <!-- Modal -->
+  <div class="modal fade" id="Modal-{{s.id}}" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+          <h4 class="modal-title" id="myModalLabel">{{s.parameter1}} - {{s.parameter2}}</h4>
+        </div>
+        <div class="modal-body">
+          {{s.output|safe}}
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+        </div>
+      </div>
+    </div>
+  </div>
+{% endfor %}
   <center style='color: #999; padding-top: 20px; font-family: "arial","NSimSun","SimSun","STSong","AR PL SungtiL GB","TW\-Sung","WenQuanYi Bitmap Song"; font-size: 14px; font-weight: bold;'>{{excuse}}</center>
 </div>
 <script type="text/javascript">

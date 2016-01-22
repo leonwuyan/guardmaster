@@ -127,6 +127,8 @@ def _deployment(s, server):
             sco.hs_filename,
             server.perform)
     retcode, output = _sh(SERVER_SCRIPT_DIR, cmd)
+    s.output = output
+    s.save()
     if retcode != 0:
         return False
     return True
@@ -150,7 +152,7 @@ def do_deployment(fn, servercontrolworkorder_id, server_id):
         return
     if update_server_control_order_lock(s.panel, server, LOCKING):
         try:
-            update_server_control_order(s, 20, 'Successful', SUCCESSFUL)
+            update_server_control_order(s, 20, 'Working', WORKING)
             func = globals()[fn]
             if func(s, server):
                 update_server_control_order(s, 100, 'Successful', SUCCESSFUL)
