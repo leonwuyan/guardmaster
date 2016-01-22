@@ -127,7 +127,7 @@ def _deployment(s, server):
             sco.hs_filename,
             server.perform)
     retcode, output = _sh(SERVER_SCRIPT_DIR, cmd)
-    s.output = output
+    s.output = "<br/>".join(output)
     s.save()
     if retcode != 0:
         return False
