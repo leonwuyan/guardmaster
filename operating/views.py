@@ -33,23 +33,11 @@ def enum_factor_list(panel_id):
     return Common.E_FACTOR_LIST
 
 
-def enum_channel_list(panel_id):
-    if Common.E_CHANNELID_LIST is None:
-        Common.E_CHANNELID_LIST = Tabel.get_enum(panel_id, Common.E_CHANNELID)
-    return Common.E_CHANNELID_LIST
-
-
 def enum_package_channel_list(panel_id):
     if Common.E_PACKAGECHANNEL_LIST is None:
         Common.E_PACKAGECHANNEL_LIST = Tabel.get_enum(
             panel_id, Common.E_PACKAGECHANNEL)
     return Common.E_PACKAGECHANNEL_LIST
-
-
-def enum_zone_list(panel_id):
-    if Common.E_ZONEID_LIST is None:
-        Common.E_ZONEID_LIST = Tabel.get_enum(panel_id, Common.E_ZONEID)
-    return Common.E_ZONEID_LIST
 
 
 @Common.competence_required
@@ -66,7 +54,6 @@ def notify(request, panel_id, url=Common.URL):
     d['servers'] = panel.server_set.filter(server_type='dir')
     d['notifys'] = panel.notify_set.all()
     d['channels'] = enum_package_channel_list(panel_id)
-    d['zones'] = enum_zone_list(panel_id)
     d['url'] = url
     if request.method == 'POST':
         nd = NotifyDeployment(panel_id, request.user.username)
@@ -86,7 +73,6 @@ def edit_notify(request, panel_id, id):
         d['servers'] = panel.server_set.filter(server_type='dir')
         d['notifys'] = panel.notify_set.all()
         d['channels'] = enum_package_channel_list(panel_id)
-        d['zones'] = enum_zone_list(panel_id)
         d['url'] = url
         notify.start = Common.datetime2string(notify.start, 28800)
         notify.end = Common.datetime2string(notify.end, 28800)
@@ -249,6 +235,7 @@ def contact_reply(request, panel_id, issue_id):
     d['reply'] = reply
     return render(request, t, d)
 
+
 @Common.competence_required
 def contact_status(request, panel_id, issue_id):
     panel = get_object_or_404(Panel, pk=panel_id)
@@ -257,6 +244,7 @@ def contact_status(request, panel_id, issue_id):
     ret = {'result': ret}
     ret = json.dumps(ret, ensure_ascii=False)
     return HttpResponse(ret, content_type='application/json')
+
 
 @require_http_methods(["POST"])
 @Common.competence_required
@@ -337,7 +325,6 @@ def rank(request, panel_id, url=Common.URL):
     d = view_template(request, panel_id, url)
     panel = get_object_or_404(Panel, pk=panel_id)
     d['servers'] = panel.server_set.filter(server_type='dir')
-    d['zones'] = enum_zone_list(panel_id)
     rank_sc = ServerControl(0, 0, panel_id, request.user.username, 0)
     d['ranks'] = rank_sc.ranks()
     if request.method == 'POST':

@@ -155,6 +155,9 @@ def view_template(request, panel_id, url):
     channel_list = Tabel.get_enum(panel_id, Common.E_CHANNELID)
     pay_channel_list = Tabel.get_enum(panel_id, Common.E_PAYCHANNEL)
     zone_list = Tabel.get_enum(panel_id, Common.E_ZONEID)
+    zone_list = map(lambda x: {
+        'EnumCd': int(x['EnumCd']), 'EnumDes': x['EnumDes']}, zone_list)
+    zone_list = sorted(zone_list, key=lambda x: x['EnumCd'])
 
     data['channels'] = channel_list
     data['pay_channels'] = pay_channel_list
