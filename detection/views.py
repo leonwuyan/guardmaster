@@ -158,6 +158,8 @@ def view_template(request, panel_id, url):
     zone_list = map(lambda x: {
         'EnumCd': int(x['EnumCd']), 'EnumDes': x['EnumDes']}, zone_list)
     zone_list = sorted(zone_list, key=lambda x: x['EnumCd'])
+    zone_list = map(lambda x: {
+        'EnumCd': str(x['EnumCd']), 'EnumDes': x['EnumDes']}, zone_list)
 
     data['channels'] = channel_list
     data['pay_channels'] = pay_channel_list

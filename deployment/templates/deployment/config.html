@@ -17,6 +17,11 @@
 {% trans "Fail" as t_fail %}
 {% trans "Success" as t_success %}
 {% trans "No Operation" as t_no_operation %}
+{% trans "Build Dir" as t_build_dir %}
+{% trans "DataBin To Update" as t_databin_to_update %}
+{% trans "Process To Update" as t_process_to_update %}
+{% trans "HotStart Or Operation" as t_hotstart_or_operation %}
+{% trans "Create Template" as t_create_template %}
 <div class="container-fluid white-bg">
   <div class="row">
     <ol class="breadcrumb">
@@ -40,7 +45,7 @@
     <form class="form" role="form" method="post">
     {% csrf_token %}
       <div class="form-group" style="margin-bottom: 5px">
-        <label>{{t_ciwp}}</label>
+        <label>{{t_build_dir}}</label>
         <select class="form-control" name="ciwp" id="ciwp">
           {% for c in ciwp %}
           <option value="{{c.id}}">{{c.label}}</option>
@@ -52,11 +57,11 @@
         <input type="text" class="form-control" value="0" name="version" id="version">
       </div>
       <div class="form-group" style="margin-bottom: 5px">
-        <label>{{t_databin}}</label>
+        <label>{{t_databin_to_update}}</label>
         <textarea class="form-control" name="databin" id="databin" rows="5"></textarea>
       </div>
       <div class="form-group" style="margin-bottom: 5px">
-        <label>{{t_processserver}}</label>
+        <label>{{t_process_to_update}}</label>
         <input type="hidden" name="processserver" id="processserver">
       </div>
       <div class="form-group">
@@ -70,7 +75,7 @@
         {% endfor %}
       </div>
       <div class="form-group" style="margin-bottom: 5px">
-        <label>{{t_hotstart}}&{{t_h_d_s_m_s}}</label>
+        <label>{{t_hotstart_or_operation}}</label>
         <input type="hidden" name="hotstart" id="hotstart">
         <input type="hidden" name="hotstart_free" id="hotstart_free">
       </div>
@@ -89,7 +94,7 @@
         </div>
         {% endfor %}
       </div>
-      <button type="submit" class="btn btn-primary btn-sm" onclick="return add_confirm()">{{ t_add }}</button>
+      <button type="submit" class="btn btn-primary btn-sm" onclick="return add_confirm()">{{ t_create_template }}</button>
     </form>
 
     <div class="panel panel-default" style="margin-top: 50px">
