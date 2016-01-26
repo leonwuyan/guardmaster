@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2016-01-18 16:59+0800\n"
+"POT-Creation-Date: 2016-01-26 10:23+0800\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -82,6 +82,26 @@ msgstr ""
 
 #: templates/deployment/config.html:19
 msgid "No Operation"
+msgstr ""
+
+#: templates/deployment/config.html:20
+msgid "Build Dir"
+msgstr ""
+
+#: templates/deployment/config.html:21
+msgid "DataBin To Update"
+msgstr ""
+
+#: templates/deployment/config.html:22
+msgid "Process To Update"
+msgstr ""
+
+#: templates/deployment/config.html:23
+msgid "HotStart Or Operation"
+msgstr ""
+
+#: templates/deployment/config.html:24
+msgid "Create Template"
 msgstr ""
 
 #: templates/deployment/control.html:5 templates/deployment/patch.html:5

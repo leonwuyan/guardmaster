@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2016-01-18 16:59+0800\n"
-"PO-Revision-Date: 2016-01-18 17:02+0800\n"
+"POT-Creation-Date: 2016-01-26 10:23+0800\n"
+"PO-Revision-Date: 2016-01-26 10:25+0800\n"
 "Last-Translator: Raynor <raynor41@gmail.com>\n"
 "Language-Team: \n"
 "Language: zh_CN\n"
@@ -84,6 +84,26 @@ msgstr "成功"
 #: templates/deployment/config.html:19
 msgid "No Operation"
 msgstr "不操作"
+
+#: templates/deployment/config.html:20
+msgid "Build Dir"
+msgstr "出档目录"
+
+#: templates/deployment/config.html:21
+msgid "DataBin To Update"
+msgstr "待更新的数据党"
+
+#: templates/deployment/config.html:22
+msgid "Process To Update"
+msgstr "待更新的进程"
+
+#: templates/deployment/config.html:23
+msgid "HotStart Or Operation"
+msgstr "需要热启动的进程和操作"
+
+#: templates/deployment/config.html:24
+msgid "Create Template"
+msgstr "创建模板"
 
 #: templates/deployment/control.html:5 templates/deployment/patch.html:5
 msgid "Url"
@@ -222,9 +242,6 @@ msgstr "没有预更新"
 #~ msgid "Player Base Info"
 #~ msgstr "玩家基本信息"
 
-#~ msgid "Create Time"
-#~ msgstr "创建时间"
-
 #~ msgid "Online"
 #~ msgstr "在线情况"
 
@@ -329,9 +346,6 @@ msgstr "没有预更新"
 
 #~ msgid "Building Info"
 #~ msgstr "建筑信息"
-
-#~ msgid "Building"
-#~ msgstr "建筑"
 
 #~ msgid "Pvp Gold Gain"
 #~ msgstr "累计获取金币"
