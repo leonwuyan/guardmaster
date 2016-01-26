@@ -17,19 +17,37 @@ import time
 
 def enum_equip_list(panel_id):
     if Common.E_EQUIPID_LIST is None:
-        Common.E_EQUIPID_LIST = Tabel.get_enum(panel_id, Common.E_EQUIPID)
+        tmp_list = Tabel.get_enum(panel_id, Common.E_EQUIPID)
+        tmp_list = map(lambda x: {
+            'EnumCd': int(x['EnumCd']), 'EnumDes': x['EnumDes']}, tmp_list)
+        tmp_list = sorted(tmp_list, key=lambda x: x['EnumCd'])
+        tmp_list = map(lambda x: {
+            'EnumCd': str(x['EnumCd']), 'EnumDes': x['EnumDes']}, tmp_list)
+        Common.E_EQUIPID_LIST = tmp_list
     return Common.E_EQUIPID_LIST
 
 
 def enum_item_list(panel_id):
     if Common.E_ITEMNAME_LIST is None:
-        Common.E_ITEMNAME_LIST = Tabel.get_enum(panel_id, Common.E_ITEMNAME)
+        tmp_list = Tabel.get_enum(panel_id, Common.E_ITEMNAME)
+        tmp_list = map(lambda x: {
+            'EnumCd': int(x['EnumCd']), 'EnumDes': x['EnumDes']}, tmp_list)
+        tmp_list = sorted(tmp_list, key=lambda x: x['EnumCd'])
+        tmp_list = map(lambda x: {
+            'EnumCd': str(x['EnumCd']), 'EnumDes': x['EnumDes']}, tmp_list)
+        Common.E_ITEMNAME_LIST = tmp_list
     return Common.E_ITEMNAME_LIST
 
 
 def enum_factor_list(panel_id):
     if Common.E_FACTOR_LIST is None:
-        Common.E_FACTOR_LIST = Tabel.get_enum(panel_id, Common.E_FACTOR)
+        tmp_list = Tabel.get_enum(panel_id, Common.E_FACTOR)
+        tmp_list = map(lambda x: {
+            'EnumCd': int(x['EnumCd']), 'EnumDes': x['EnumDes']}, tmp_list)
+        tmp_list = sorted(tmp_list, key=lambda x: x['EnumCd'])
+        tmp_list = map(lambda x: {
+            'EnumCd': str(x['EnumCd']), 'EnumDes': x['EnumDes']}, tmp_list)
+        Common.E_FACTOR_LIST = tmp_list
     return Common.E_FACTOR_LIST
 
 
