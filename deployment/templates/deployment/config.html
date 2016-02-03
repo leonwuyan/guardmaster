@@ -107,8 +107,9 @@
               <th>{{ t_ciwp }}</th>
               <th>{{ t_version }}</th>
               <th>{{ t_databin }}</th>
-              <th>{{ t_processserver }}</th>
-              <th>{{ t_hotstart }}</th>
+              <th class="success">{{ t_processserver }}</th>
+              <th class="info">{{ t_hotstart }}</th>
+              <th class="danger">{{ t_h_d_s_m_s }}</th>
               <th>{{ t_guardmaster }}</th>
               <th>{{ t_date }}</th>
               </tr>
@@ -119,9 +120,10 @@
               <td>{{s.id}}</td>
               <td>{{s.ciwp}}</td>
               <td>{{s.version}}</td>
-              <td>{{s.db_filename}}</td>
-              <td>{{s.ps_filename}}</td>
-              <td>{{s.hs_filename}}</td>
+              <td>{{s.db_list|show_db_list|safe}}</td>
+              <td class="success">{{s.ps_list|show_ps_list|safe}}</td>
+              <td class="info">{{s.hs_list|show_ps_list|safe}}</td>
+              <td class="danger">{{s.hs_free_list|show_ps_list|safe}}</td>
               <td>{{s.user}}</td>
               <td>{{s.date}}</td>
             </tr>

@@ -1,4 +1,5 @@
 from django.utils.translation import ugettext_lazy as _
+from deployment.models import ProcessServer
 from guardmaster import common as Common
 from detection.models import Tabel
 from django import template
@@ -286,6 +287,35 @@ def format_all_mail(status):
         return _('All of Players')
     return _('All of Players')
 
+
+def process_server_list(id):
+    try:
+        ps = ProcessServer.objects.get(pk=int(id))
+    except Exception as e:
+        return ''
+    return ps.label
+
+
+def split_by_comma(x, f=None):
+    if f is None:
+        f = str
+    ar = x.split(',')
+    ar = map(lambda x: f(x), ar)
+    return ar
+
+
+def show_db_list(x):
+    x = split_by_comma(x)
+    re = '<br/>'.join(x)
+    return re
+
+
+def show_ps_list(x):
+    x = split_by_comma(x, process_server_list)
+    re = '<br/>'.join(x)
+    return re
+
+
 register.filter(ts2date)
 register.filter(ts2time)
 register.filter(second2time)
@@ -311,3 +341,5 @@ register.filter(div2div2)
 register.filter(enum_zone)
 register.filter(format_accessory)
 register.filter(format_all_mail)
+register.filter(show_db_list)
+register.filter(show_ps_list)
