@@ -40,6 +40,8 @@
 {% trans "Unlock 50 Dungeon" as t_unlock_50_dungeon %}
 {% trans "Unlock 100 Dungeon" as t_unlock_100_dungeon %}
 {% trans "Unlock 150 Dungeon" as t_unlock_150_dungeon %}
+{% trans "Unlock 165 Dungeon" as t_unlock_165_dungeon %}
+{% trans "Unlock 180 Dungeon" as t_unlock_180_dungeon %}
 {% trans "Off Gang" as t_off_gang %}
 {% trans "Off Rank" as t_off_rank %}
 {% trans "Remark Of Chat Ban" as t_remark_of_chat_ban %}
@@ -244,8 +246,8 @@
           <button type="submit" class="btn btn-default btn-xs" onclick="dataAccess.addJSON({{server_id}},{{player.uid|default:0}},'dungeon',50)">{{t_unlock_50_dungeon}}</button>
           <button type="submit" class="btn btn-default btn-xs" onclick="dataAccess.addJSON({{server_id}},{{player.uid|default:0}},'dungeon',100)">{{t_unlock_100_dungeon}}</button>
           <button type="submit" class="btn btn-default btn-xs" onclick="dataAccess.addJSON({{server_id}},{{player.uid|default:0}},'dungeon',150)">{{t_unlock_150_dungeon}}</button>
-          <button type="submit" class="btn btn-default btn-xs" onclick="dataAccess.addJSON({{server_id}},{{player.uid|default:0}},'dungeon',165)">{{t_unlock_150_dungeon}}</button>
-          <button type="submit" class="btn btn-default btn-xs" onclick="dataAccess.addJSON({{server_id}},{{player.uid|default:0}},'dungeon',180)">{{t_unlock_150_dungeon}}</button>
+          <button type="submit" class="btn btn-default btn-xs" onclick="dataAccess.addJSON({{server_id}},{{player.uid|default:0}},'dungeon',165)">{{t_unlock_165_dungeon}}</button>
+          <button type="submit" class="btn btn-default btn-xs" onclick="dataAccess.addJSON({{server_id}},{{player.uid|default:0}},'dungeon',180)">{{t_unlock_180_dungeon}}</button>
         </span></td>
       </tr>
       {% endif %}
