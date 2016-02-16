@@ -20,7 +20,7 @@ import sproto_pb2
 DESCRIPTOR = _descriptor.FileDescriptor(
   name='guard_proto.proto',
   package='',
-  serialized_pb=_b('\n\x11guard_proto.proto\x1a\x0csproto.proto\"6\n!GM_GET_PLAYER_ACCOUNT_BY_NAME_REQ\x12\x11\n\trole_name\x18\x01 \x01(\t\"G\n\x18PLAYER_ACCOUNT_NAME_INFO\x12\x11\n\trole_name\x18\x01 \x01(\t\x12\x0b\n\x03uid\x18\x02 \x01(\r\x12\x0b\n\x03uin\x18\x03 \x01(\t\"a\n!GM_GET_PLAYER_ACCOUNT_BY_NAME_RES\x12,\n\tname_info\x18\x01 \x03(\x0b\x32\x19.PLAYER_ACCOUNT_NAME_INFO\x12\x0e\n\x06result\x18\x02 \x01(\x05\"/\n GM_GET_PLAYER_ACCOUNT_BY_UID_REQ\x12\x0b\n\x03uid\x18\x01 \x01(\r\"_\n GM_GET_PLAYER_ACCOUNT_BY_UID_RES\x12\x0b\n\x03uid\x18\x01 \x01(\r\x12\x11\n\trole_name\x18\x02 \x01(\t\x12\x0b\n\x03uin\x18\x03 \x01(\t\x12\x0e\n\x06result\x18\x04 \x01(\x05\"+\n\x1cGM_GET_PLAYER_WORLD_INFO_REQ\x12\x0b\n\x03uin\x18\x01 \x01(\t\"\x85\x01\n\x11PLAYER_WORLD_INFO\x12\x0b\n\x03uid\x18\x01 \x01(\r\x12\x0c\n\x04name\x18\x02 \x01(\t\x12\x10\n\x08world_id\x18\x03 \x01(\r\x12\x18\n\x10\x61\x63\x63ount_ban_time\x18\x04 \x01(\r\x12\x15\n\rchat_ban_time\x18\x05 \x01(\r\x12\x12\n\nchannel_id\x18\x06 \x01(\r\"c\n\x1cGM_GET_PLAYER_WORLD_INFO_RES\x12\x0b\n\x03uin\x18\x01 \x01(\t\x12&\n\nworld_info\x18\x02 \x03(\x0b\x32\x12.PLAYER_WORLD_INFO\x12\x0e\n\x06result\x18\x03 \x01(\x05\"<\n\x1bGM_GET_PLAYER_BASE_INFO_REQ\x12\x0b\n\x03uid\x18\x01 \x01(\r\x12\x10\n\x08world_id\x18\x02 \x01(\r\"L\n\x10HERO_EMBLEM_INFO\x12\x11\n\temblem_id\x18\x01 \x01(\r\x12\x11\n\temblem_lv\x18\x02 \x01(\r\x12\x12\n\nemblem_exp\x18\x03 \x01(\r\"\x84\x01\n\x0eHERO_BASE_INFO\x12\x0f\n\x07hero_id\x18\x01 \x01(\r\x12\r\n\x05level\x18\x02 \x01(\r\x12\x0b\n\x03\x65xp\x18\x03 \x01(\r\x12\x0e\n\x06growup\x18\x04 \x01(\r\x12&\n\x0b\x65mblem_info\x18\x05 \x03(\x0b\x32\x11.HERO_EMBLEM_INFO\x12\r\n\x05skill\x18\x06 \x03(\r\"\xe1\x04\n\x1bGM_GET_PLAYER_BASE_INFO_RES\x12\x0e\n\x06result\x18\x01 \x01(\x05\x12\x0b\n\x03uin\x18\x02 \x01(\t\x12\x0b\n\x03uid\x18\x03 \x01(\r\x12\x10\n\x08world_id\x18\x04 \x01(\r\x12\x0c\n\x04name\x18\x05 \x01(\t\x12\x11\n\tis_online\x18\x06 \x01(\r\x12\x13\n\x0b\x63reate_time\x18\x07 \x01(\r\x12\x17\n\x0flast_login_time\x18\x08 \x01(\r\x12\x18\n\x10last_logout_time\x18\t \x01(\r\x12\x19\n\x11total_online_time\x18\n \x01(\r\x12\x10\n\x08gold_cnt\x18\x0b \x01(\r\x12\x16\n\x0egold_buy_times\x18\x0c \x01(\r\x12\x13\n\x0b\x63rystal_cnt\x18\r \x01(\r\x12\x19\n\x11\x63rystal_buy_times\x18\x0e \x01(\r\x12\x11\n\tmoney_cnt\x18\x0f \x01(\r\x12\x11\n\tpower_cnt\x18\x10 \x01(\r\x12\x17\n\x0fpower_buy_times\x18\x11 \x01(\r\x12\x16\n\x0eskillpoint_cnt\x18\x12 \x01(\r\x12\x1c\n\x14skillpoint_buy_times\x18\x13 \x01(\r\x12\x15\n\rendless_floor\x18\x14 \x01(\r\x12\x15\n\rendless_score\x18\x15 \x01(\r\x12\x11\n\tpvp_score\x18\x16 \x01(\r\x12\x19\n\x11rank_battle_score\x18\x17 \x01(\r\x12\x12\n\ngrowup_cnt\x18\x18 \x01(\r\x12\"\n\thero_info\x18\x19 \x03(\x0b\x32\x0f.HERO_BASE_INFO\x12\x1f\n\x17online_battle_win_point\x18\x1a \x01(\r\"_\n\x14GM_GET_RANK_LIST_REQ\x12\x10\n\x08world_id\x18\x01 \x01(\r\x12\x0f\n\x07rank_id\x18\x02 \x01(\r\x12\x11\n\tstart_pos\x18\x03 \x01(\r\x12\x11\n\tget_count\x18\x04 \x01(\r\"p\n\x14GM_GET_RANK_LIST_RES\x12\x0e\n\x06result\x18\x01 \x01(\r\x12\x0f\n\x07rank_id\x18\x02 \x01(\r\x12\x13\n\x0btotal_count\x18\x03 \x01(\r\x12\"\n\trank_list\x18\x04 \x03(\x0b\x32\x0f.SSDT_RANK_DATA\"L\n\x1aGM_GET_RANK_POS_BY_UID_REQ\x12\x10\n\x08world_id\x18\x01 \x01(\r\x12\x0f\n\x07rank_id\x18\x02 \x01(\r\x12\x0b\n\x03uid\x18\x03 \x01(\r\"b\n\x1aGM_GET_RANK_POS_BY_UID_RES\x12\x0e\n\x06result\x18\x01 \x01(\r\x12\x10\n\x08rank_pos\x18\x02 \x01(\r\x12\"\n\trank_info\x18\x03 \x01(\x0b\x32\x0f.SSDT_RANK_DATA\"Q\n\x1bGM_DEL_PLAYER_FROM_RANK_REQ\x12\x0f\n\x07role_id\x18\x01 \x01(\r\x12\x0f\n\x07rank_id\x18\x02 \x01(\r\x12\x10\n\x08world_id\x18\x03 \x01(\r\"a\n\x1bGM_DEL_PLAYER_FROM_RANK_RES\x12\x0e\n\x06result\x18\x01 \x01(\r\x12\x0f\n\x07role_id\x18\x02 \x01(\r\x12\x0f\n\x07rank_id\x18\x03 \x01(\r\x12\x10\n\x08world_id\x18\x04 \x01(\r\"@\n\x1bGM_DEL_PLAYER_FROM_GANG_REQ\x12\x0f\n\x07role_id\x18\x01 \x01(\r\x12\x10\n\x08world_id\x18\x02 \x01(\r\"P\n\x1bGM_DEL_PLAYER_FROM_GANG_RES\x12\x0e\n\x06result\x18\x01 \x01(\r\x12\x0f\n\x07role_id\x18\x02 \x01(\r\x12\x10\n\x08world_id\x18\x03 \x01(\r\"\x81\x01\n\x11GM_GANG_BASE_INFO\x12\x11\n\tgang_name\x18\x01 \x01(\t\x12\x13\n\x0bgang_notify\x18\x02 \x01(\t\x12\x12\n\ngang_score\x18\x03 \x01(\r\x12\x16\n\x0egang_condition\x18\x04 \x01(\r\x12\x18\n\x10gang_create_time\x18\x05 \x01(\r\"Q\n\x15GM_GANG_MEM_BASE_INFO\x12\x0f\n\x07role_id\x18\x01 \x01(\r\x12\x11\n\trole_name\x18\x02 \x01(\t\x12\x14\n\x0cmem_position\x18\x03 \x01(\r\">\n\x19GM_GET_GANG_BASE_INFO_REQ\x12\x0f\n\x07gang_id\x18\x01 \x01(\r\x12\x10\n\x08world_id\x18\x02 \x01(\r\"\xa9\x01\n\x19GM_GET_GANG_BASE_INFO_RES\x12\x0e\n\x06result\x18\x01 \x01(\r\x12\x0f\n\x07gang_id\x18\x02 \x01(\r\x12\x10\n\x08world_id\x18\x03 \x01(\r\x12*\n\x0egang_base_info\x18\x04 \x01(\x0b\x32\x12.GM_GANG_BASE_INFO\x12-\n\rgang_mem_list\x18\x05 \x03(\x0b\x32\x16.GM_GANG_MEM_BASE_INFO\"m\n\x1cGM_MODIFY_GANG_BASE_INFO_REQ\x12\x0f\n\x07gang_id\x18\x01 \x01(\r\x12\x10\n\x08world_id\x18\x02 \x01(\r\x12*\n\x0egang_base_info\x18\x04 \x01(\x0b\x32\x12.GM_GANG_BASE_INFO\"}\n\x1cGM_MODIFY_GANG_BASE_INFO_RES\x12\x0e\n\x06result\x18\x01 \x01(\r\x12\x0f\n\x07gang_id\x18\x02 \x01(\r\x12\x10\n\x08world_id\x18\x03 \x01(\r\x12*\n\x0egang_base_info\x18\x04 \x01(\x0b\x32\x12.GM_GANG_BASE_INFO\";\n\x1aGM_GET_PLAYER_PVE_INFO_REQ\x12\x10\n\x08world_id\x18\x01 \x01(\r\x12\x0b\n\x03uid\x18\x02 \x01(\r\"\x91\x01\n\x12GM_PLAYER_PVE_INFO\x12\x12\n\ndungeon_id\x18\x01 \x01(\r\x12\x11\n\tdun_level\x18\x02 \x01(\r\x12\x0c\n\x04stat\x18\x03 \x01(\r\x12\x16\n\x0e\x63hallenge_time\x18\x04 \x01(\r\x12\x15\n\rchallenge_cnt\x18\x05 \x01(\r\x12\x17\n\x0f\x62\x65st_evaluation\x18\x06 \x01(\r\"\x94\x01\n\x1aGM_GET_PLAYER_PVE_INFO_RES\x12\x0e\n\x06result\x18\x01 \x01(\r\x12\x0b\n\x03uid\x18\x02 \x01(\r\x12%\n\x08pve_info\x18\x03 \x03(\x0b\x32\x13.GM_PLAYER_PVE_INFO\x12\x32\n\x11hero_endless_info\x18\x04 \x01(\x0b\x32\x17.DBBLOB_TOWER_HERO_INFO\"G\n&GM_GET_PLAYER_BUILDING_AND_PACKAGE_REQ\x12\x10\n\x08world_id\x18\x01 \x01(\r\x12\x0b\n\x03uid\x18\x02 \x01(\r\"N\n\x1cGM_GET_PLAYER_FIRST_PURCHASE\x12\x10\n\x08world_id\x18\x01 \x01(\r\x12\x0b\n\x03uid\x18\x02 \x01(\r\x12\x0f\n\x07\x63hannel\x18\x03 \x01(\r\"F\n GM_GET_PLAYER_FIRST_PURCHASE_RES\x12\x0e\n\x06result\x18\x01 \x01(\r\x12\x12\n\nproduct_id\x18\x02 \x03(\t\"v\n&GM_GET_PLAYER_BUILDING_AND_PACKAGE_RES\x12\x0e\n\x06result\x18\x01 \x01(\r\x12\x0b\n\x03uid\x18\x02 \x01(\r\x12/\n\rbuilding_info\x18\x03 \x01(\x0b\x32\x18.DBBLOB_BUILDING_DATASET\"A\n GM_GET_PLAYER_TOTAL_RECHARGE_REQ\x12\x10\n\x08world_id\x18\x01 \x01(\r\x12\x0b\n\x03uid\x18\x02 \x01(\r\"W\n GM_GET_PLAYER_TOTAL_RECHARGE_RES\x12\x0e\n\x06result\x18\x01 \x01(\r\x12\x0b\n\x03uid\x18\x02 \x01(\r\x12\x16\n\x0etotal_recharge\x18\x03 \x01(\r\"4\n\x12GM_LOCK_PLAYER_REQ\x12\x0b\n\x03uid\x18\x01 \x01(\r\x12\x11\n\tlock_time\x18\x02 \x01(\r\"1\n\x12GM_LOCK_PLAYER_RES\x12\x0e\n\x06result\x18\x01 \x01(\x05\x12\x0b\n\x03uid\x18\x02 \x01(\r\"V\n\x16GM_BAN_PLAYER_CHAT_REQ\x12\x0b\n\x03uid\x18\x01 \x01(\r\x12\x0b\n\x03uin\x18\x02 \x01(\t\x12\x10\n\x08world_id\x18\x03 \x01(\r\x12\x10\n\x08\x62\x61n_time\x18\x04 \x01(\r\"j\n\x16GM_BAN_PLAYER_CHAT_RES\x12\x0e\n\x06result\x18\x01 \x01(\x05\x12\x0b\n\x03uid\x18\x02 \x01(\r\x12\x0b\n\x03uin\x18\x03 \x01(\t\x12\x10\n\x08world_id\x18\x04 \x01(\r\x12\x14\n\x0c\x62\x61n_end_time\x18\x05 \x01(\r\"@\n\x12GM_KICK_PLAYER_REQ\x12\x0b\n\x03uid\x18\x01 \x01(\r\x12\x0b\n\x03uin\x18\x02 \x01(\t\x12\x10\n\x08world_id\x18\x03 \x01(\r\"1\n\x12GM_KICK_PLAYER_RES\x12\x0e\n\x06result\x18\x01 \x01(\x05\x12\x0b\n\x03uid\x18\x02 \x01(\r\"\x96\x01\n\x0bGM_MAIL_ACC\x12\x10\n\x08res_type\x18\x01 \x01(\r\x12\x0e\n\x06res_id\x18\x02 \x01(\r\x12\x11\n\tres_count\x18\x03 \x01(\r\x12\x1a\n\x12res_extern_param_1\x18\x04 \x01(\r\x12\x1a\n\x12res_extern_param_2\x18\x05 \x01(\r\x12\x1a\n\x12res_extern_param_3\x18\x06 \x01(\r\"o\n\x0cGM_MAIL_INFO\x12\x12\n\nmail_title\x18\x01 \x01(\t\x12\x14\n\x0cmail_content\x18\x02 \x01(\t\x12\x15\n\rmail_interval\x18\x03 \x01(\r\x12\x1e\n\x08mail_acc\x18\x04 \x03(\x0b\x32\x0c.GM_MAIL_ACC\"S\n\x10GM_SEND_MAIL_REQ\x12\x10\n\x08world_id\x18\x01 \x01(\r\x12\x0b\n\x03uid\x18\x02 \x03(\r\x12 \n\tmail_info\x18\x03 \x01(\x0b\x32\r.GM_MAIL_INFO\"0\n\x10GM_MAIL_RES_INFO\x12\x0b\n\x03uid\x18\x01 \x01(\r\x12\x0f\n\x07mail_id\x18\x02 \x01(\x04\"P\n\x10GM_SEND_MAIL_RES\x12\x12\n\nfailed_uid\x18\x01 \x03(\r\x12(\n\rsucess_result\x18\x02 \x03(\x0b\x32\x11.GM_MAIL_RES_INFO\"\xa6\x01\n\x1cGM_GAMESERVER_MAIL_CONDITION\x12\x19\n\x11\x65\x66\x66\x65\x63t_begin_time\x18\x01 \x01(\r\x12\x17\n\x0f\x65\x66\x66\x65\x63t_end_time\x18\x02 \x01(\r\x12\x1a\n\x12\x65\x66\x66\x65\x63t_clt_version\x18\x03 \x01(\t\x12\x19\n\x11\x65\x66\x66\x65\x63t_channel_id\x18\x04 \x01(\r\x12\x1b\n\x13\x65\x66\x66\x65\x63t_player_state\x18\x05 \x01(\r\"\xa0\x01\n\x1bGM_SEND_GAMESERVER_MAIL_REQ\x12\x10\n\x08world_id\x18\x01 \x01(\r\x12 \n\tmail_info\x18\x02 \x01(\x0b\x32\r.GM_MAIL_INFO\x12\x35\n\x0email_condition\x18\x03 \x01(\x0b\x32\x1d.GM_GAMESERVER_MAIL_CONDITION\x12\x16\n\x0eis_send_online\x18\x04 \x01(\x08\"\xc6\x01\n\x1bGM_SEND_GAMESERVER_MAIL_RES\x12\x0e\n\x06result\x18\x01 \x01(\r\x12\x10\n\x08world_id\x18\x02 \x01(\r\x12\x14\n\x0cmail_seq_key\x18\x03 \x01(\r\x12 \n\tmail_info\x18\x04 \x01(\x0b\x32\r.GM_MAIL_INFO\x12\x35\n\x0email_condition\x18\x05 \x01(\x0b\x32\x1d.GM_GAMESERVER_MAIL_CONDITION\x12\x16\n\x0eis_send_online\x18\x06 \x01(\x08\"3\n\x1fGM_GET_GAMESERVER_MAIL_INFO_REQ\x12\x10\n\x08world_id\x18\x01 \x01(\r\"\x88\x01\n\x17GM_GAMESERVER_MAIL_INFO\x12\x14\n\x0cmail_seq_key\x18\x01 \x01(\r\x12 \n\tmail_info\x18\x02 \x01(\x0b\x32\r.GM_MAIL_INFO\x12\x35\n\x0email_condition\x18\x03 \x01(\x0b\x32\x1d.GM_GAMESERVER_MAIL_CONDITION\"p\n\x1fGM_GET_GAMESERVER_MAIL_INFO_RES\x12\x0e\n\x06result\x18\x01 \x01(\r\x12\x10\n\x08world_id\x18\x02 \x01(\r\x12+\n\tmail_info\x18\x03 \x03(\x0b\x32\x18.GM_GAMESERVER_MAIL_INFO\"D\n\x1aGM_DEL_GAMESERVER_MAIL_REQ\x12\x10\n\x08world_id\x18\x01 \x01(\r\x12\x14\n\x0cmail_seq_key\x18\x02 \x01(\r\">\n\x1aGM_DEL_GAMESERVER_MAIL_RES\x12\x0e\n\x06result\x18\x01 \x01(\r\x12\x10\n\x08world_id\x18\x02 \x01(\r\"y\n\x16GM_CHG_PLAYER_ATTR_REQ\x12\x10\n\x08world_id\x18\x01 \x01(\r\x12\x0b\n\x03uid\x18\x02 \x01(\r\x12\x0b\n\x03uin\x18\x03 \x01(\t\x12\x10\n\x08res_type\x18\x04 \x01(\r\x12\x0e\n\x06res_id\x18\x05 \x01(\r\x12\x11\n\tchg_count\x18\x06 \x01(\x05\"5\n\x16GM_CHG_PLAYER_ATTR_RES\x12\x0e\n\x06result\x18\x01 \x01(\x05\x12\x0b\n\x03uid\x18\x02 \x01(\r\"p\n\x1fGM_DEL_PLAYER_EQUIPED_EQUIP_REQ\x12\x10\n\x08world_id\x18\x01 \x01(\r\x12\x0b\n\x03uid\x18\x02 \x01(\r\x12\x0b\n\x03uin\x18\x03 \x01(\t\x12\x0f\n\x07hero_id\x18\x04 \x01(\r\x12\x10\n\x08\x65quip_id\x18\x05 \x01(\r\">\n\x1fGM_DEL_PLAYER_EQUIPED_EQUIP_RES\x12\x0e\n\x06result\x18\x01 \x01(\x05\x12\x0b\n\x03uid\x18\x02 \x01(\r\"~\n\x1cGM_CHG_PLAYER_HERO_LEVEL_REQ\x12\x10\n\x08world_id\x18\x01 \x01(\r\x12\x0b\n\x03uid\x18\x02 \x01(\r\x12\x0b\n\x03uin\x18\x03 \x01(\t\x12\x0f\n\x07hero_id\x18\x04 \x01(\r\x12\x0f\n\x07hero_lv\x18\x05 \x01(\r\x12\x10\n\x08hero_exp\x18\x06 \x01(\r\";\n\x1cGM_CHG_PLAYER_HERO_LEVEL_RES\x12\x0e\n\x06result\x18\x01 \x01(\x05\x12\x0b\n\x03uid\x18\x02 \x01(\r\"T\n\x1bGM_CHG_PLAYER_VIP_LEVEL_REQ\x12\x10\n\x08world_id\x18\x01 \x01(\r\x12\x0b\n\x03uid\x18\x02 \x01(\r\x12\x16\n\x0etotal_recharge\x18\x03 \x01(\r\":\n\x1bGM_CHG_PLAYER_VIP_LEVEL_RES\x12\x0e\n\x06result\x18\x01 \x01(\x05\x12\x0b\n\x03uid\x18\x02 \x01(\r\"m\n GM_CHG_PLAYER_UNLOCK_DUNGEON_REQ\x12\x10\n\x08world_id\x18\x01 \x01(\r\x12\x0b\n\x03uid\x18\x02 \x01(\r\x12\x0b\n\x03uin\x18\x03 \x01(\t\x12\x1d\n\x15unlock_til_dungeon_id\x18\x04 \x01(\r\"?\n GM_CHG_PLAYER_UNLOCK_DUNGEON_RES\x12\x0e\n\x06result\x18\x01 \x01(\x05\x12\x0b\n\x03uid\x18\x02 \x01(\r\"=\n\x1cGM_GET_PLAYER_MONTH_CARD_REQ\x12\x0b\n\x03uid\x18\x01 \x01(\r\x12\x10\n\x08world_id\x18\x02 \x01(\r\"\xbc\x01\n\x1cGM_GET_PLAYER_MONTH_CARD_RES\x12\x0e\n\x06result\x18\x01 \x01(\x05\x12\x0b\n\x03uid\x18\x02 \x01(\r\x12\x15\n\rmonth_card_id\x18\x03 \x01(\x05\x12\x16\n\x0emonth_end_time\x18\x04 \x01(\r\x12\x19\n\x11month_remain_days\x18\x05 \x01(\x05\x12\x19\n\x11permanent_card_id\x18\x06 \x01(\r\x12\x1a\n\x12permanent_buy_time\x18\x07 \x01(\r\"c\n\x1cGM_CHG_PLAYER_MONTH_CARD_REQ\x12\x0b\n\x03uid\x18\x01 \x01(\r\x12\x10\n\x08world_id\x18\x02 \x01(\r\x12\x0f\n\x07\x63\x61rd_id\x18\x03 \x01(\x05\x12\x13\n\x0b\x63hange_days\x18\x04 \x01(\x05\"L\n\x1cGM_CHG_PLAYER_MONTH_CARD_RES\x12\x0e\n\x06result\x18\x01 \x01(\x05\x12\x0b\n\x03uid\x18\x02 \x01(\r\x12\x0f\n\x07\x63\x61rd_id\x18\x03 \x01(\x05\"X\n\x12GUARD_MSG_GAME_SVR\x12\x0c\n\x04type\x18\x01 \x02(\r\x12\x10\n\x08msg_data\x18\x02 \x02(\x0c\x12\x12\n\nclient_pos\x18\x03 \x02(\r\x12\x0e\n\x06seq_no\x18\x04 \x02(\r\"d\n\x16GUARD_COPY_GM_TEXT_REQ\x12\x0f\n\x07gm_text\x18\x01 \x01(\t\x12\r\n\x05param\x18\x02 \x03(\x05\x12\x10\n\x08world_id\x18\x03 \x01(\r\x12\x0b\n\x03uid\x18\x04 \x01(\r\x12\x0b\n\x03uin\x18\x05 \x01(\t\"(\n\x16GUARD_COPY_GM_TEXT_RES\x12\x0e\n\x06result\x18\x01 \x01(\x05*\xe1\x01\n\x10GUARD_PROTOCONST\x12\x11\n\rGUARD_SUCCESS\x10\x00\x12\x0f\n\x0bGUARD_ERROR\x10\x01\x12\x17\n\x12GUARD_MAIL_MAX_NUM\x10\xe8\x07\x12\x16\n\x12GUARD_MAX_RANK_NUM\x10\x64\x12(\n$GUARD_GAME_SERVER_MAIL_NO_NEW_PLAYER\x10\x00\x12#\n\x1fGUARD_GAME_SERVER_MAIL_ONLY_NEW\x10\x01\x12%\n!GUARD_GAME_SERVER_MAIL_ALL_PLAYER\x10\x02\x1a\x02\x10\x01')
+  serialized_pb=_b('\n\x11guard_proto.proto\x1a\x0csproto.proto\"6\n!GM_GET_PLAYER_ACCOUNT_BY_NAME_REQ\x12\x11\n\trole_name\x18\x01 \x01(\t\"G\n\x18PLAYER_ACCOUNT_NAME_INFO\x12\x11\n\trole_name\x18\x01 \x01(\t\x12\x0b\n\x03uid\x18\x02 \x01(\r\x12\x0b\n\x03uin\x18\x03 \x01(\t\"a\n!GM_GET_PLAYER_ACCOUNT_BY_NAME_RES\x12,\n\tname_info\x18\x01 \x03(\x0b\x32\x19.PLAYER_ACCOUNT_NAME_INFO\x12\x0e\n\x06result\x18\x02 \x01(\x05\"/\n GM_GET_PLAYER_ACCOUNT_BY_UID_REQ\x12\x0b\n\x03uid\x18\x01 \x01(\r\"_\n GM_GET_PLAYER_ACCOUNT_BY_UID_RES\x12\x0b\n\x03uid\x18\x01 \x01(\r\x12\x11\n\trole_name\x18\x02 \x01(\t\x12\x0b\n\x03uin\x18\x03 \x01(\t\x12\x0e\n\x06result\x18\x04 \x01(\x05\"+\n\x1cGM_GET_PLAYER_WORLD_INFO_REQ\x12\x0b\n\x03uin\x18\x01 \x01(\t\"\x85\x01\n\x11PLAYER_WORLD_INFO\x12\x0b\n\x03uid\x18\x01 \x01(\r\x12\x0c\n\x04name\x18\x02 \x01(\t\x12\x10\n\x08world_id\x18\x03 \x01(\r\x12\x18\n\x10\x61\x63\x63ount_ban_time\x18\x04 \x01(\r\x12\x15\n\rchat_ban_time\x18\x05 \x01(\r\x12\x12\n\nchannel_id\x18\x06 \x01(\r\"c\n\x1cGM_GET_PLAYER_WORLD_INFO_RES\x12\x0b\n\x03uin\x18\x01 \x01(\t\x12&\n\nworld_info\x18\x02 \x03(\x0b\x32\x12.PLAYER_WORLD_INFO\x12\x0e\n\x06result\x18\x03 \x01(\x05\"<\n\x1bGM_GET_PLAYER_BASE_INFO_REQ\x12\x0b\n\x03uid\x18\x01 \x01(\r\x12\x10\n\x08world_id\x18\x02 \x01(\r\"L\n\x10HERO_EMBLEM_INFO\x12\x11\n\temblem_id\x18\x01 \x01(\r\x12\x11\n\temblem_lv\x18\x02 \x01(\r\x12\x12\n\nemblem_exp\x18\x03 \x01(\r\"\x84\x01\n\x0eHERO_BASE_INFO\x12\x0f\n\x07hero_id\x18\x01 \x01(\r\x12\r\n\x05level\x18\x02 \x01(\r\x12\x0b\n\x03\x65xp\x18\x03 \x01(\r\x12\x0e\n\x06growup\x18\x04 \x01(\r\x12&\n\x0b\x65mblem_info\x18\x05 \x03(\x0b\x32\x11.HERO_EMBLEM_INFO\x12\r\n\x05skill\x18\x06 \x03(\r\"\xe1\x04\n\x1bGM_GET_PLAYER_BASE_INFO_RES\x12\x0e\n\x06result\x18\x01 \x01(\x05\x12\x0b\n\x03uin\x18\x02 \x01(\t\x12\x0b\n\x03uid\x18\x03 \x01(\r\x12\x10\n\x08world_id\x18\x04 \x01(\r\x12\x0c\n\x04name\x18\x05 \x01(\t\x12\x11\n\tis_online\x18\x06 \x01(\r\x12\x13\n\x0b\x63reate_time\x18\x07 \x01(\r\x12\x17\n\x0flast_login_time\x18\x08 \x01(\r\x12\x18\n\x10last_logout_time\x18\t \x01(\r\x12\x19\n\x11total_online_time\x18\n \x01(\r\x12\x10\n\x08gold_cnt\x18\x0b \x01(\r\x12\x16\n\x0egold_buy_times\x18\x0c \x01(\r\x12\x13\n\x0b\x63rystal_cnt\x18\r \x01(\r\x12\x19\n\x11\x63rystal_buy_times\x18\x0e \x01(\r\x12\x11\n\tmoney_cnt\x18\x0f \x01(\r\x12\x11\n\tpower_cnt\x18\x10 \x01(\r\x12\x17\n\x0fpower_buy_times\x18\x11 \x01(\r\x12\x16\n\x0eskillpoint_cnt\x18\x12 \x01(\r\x12\x1c\n\x14skillpoint_buy_times\x18\x13 \x01(\r\x12\x15\n\rendless_floor\x18\x14 \x01(\r\x12\x15\n\rendless_score\x18\x15 \x01(\r\x12\x11\n\tpvp_score\x18\x16 \x01(\r\x12\x19\n\x11rank_battle_score\x18\x17 \x01(\r\x12\x12\n\ngrowup_cnt\x18\x18 \x01(\r\x12\"\n\thero_info\x18\x19 \x03(\x0b\x32\x0f.HERO_BASE_INFO\x12\x1f\n\x17online_battle_win_point\x18\x1a \x01(\r\"_\n\x14GM_GET_RANK_LIST_REQ\x12\x10\n\x08world_id\x18\x01 \x01(\r\x12\x0f\n\x07rank_id\x18\x02 \x01(\r\x12\x11\n\tstart_pos\x18\x03 \x01(\r\x12\x11\n\tget_count\x18\x04 \x01(\r\"p\n\x14GM_GET_RANK_LIST_RES\x12\x0e\n\x06result\x18\x01 \x01(\r\x12\x0f\n\x07rank_id\x18\x02 \x01(\r\x12\x13\n\x0btotal_count\x18\x03 \x01(\r\x12\"\n\trank_list\x18\x04 \x03(\x0b\x32\x0f.SSDT_RANK_DATA\"L\n\x1aGM_GET_RANK_POS_BY_UID_REQ\x12\x10\n\x08world_id\x18\x01 \x01(\r\x12\x0f\n\x07rank_id\x18\x02 \x01(\r\x12\x0b\n\x03uid\x18\x03 \x01(\r\"b\n\x1aGM_GET_RANK_POS_BY_UID_RES\x12\x0e\n\x06result\x18\x01 \x01(\r\x12\x10\n\x08rank_pos\x18\x02 \x01(\r\x12\"\n\trank_info\x18\x03 \x01(\x0b\x32\x0f.SSDT_RANK_DATA\"Q\n\x1bGM_DEL_PLAYER_FROM_RANK_REQ\x12\x0f\n\x07role_id\x18\x01 \x01(\r\x12\x0f\n\x07rank_id\x18\x02 \x01(\r\x12\x10\n\x08world_id\x18\x03 \x01(\r\"a\n\x1bGM_DEL_PLAYER_FROM_RANK_RES\x12\x0e\n\x06result\x18\x01 \x01(\r\x12\x0f\n\x07role_id\x18\x02 \x01(\r\x12\x0f\n\x07rank_id\x18\x03 \x01(\r\x12\x10\n\x08world_id\x18\x04 \x01(\r\"@\n\x1bGM_DEL_PLAYER_FROM_GANG_REQ\x12\x0f\n\x07role_id\x18\x01 \x01(\r\x12\x10\n\x08world_id\x18\x02 \x01(\r\"P\n\x1bGM_DEL_PLAYER_FROM_GANG_RES\x12\x0e\n\x06result\x18\x01 \x01(\r\x12\x0f\n\x07role_id\x18\x02 \x01(\r\x12\x10\n\x08world_id\x18\x03 \x01(\r\"\x81\x01\n\x11GM_GANG_BASE_INFO\x12\x11\n\tgang_name\x18\x01 \x01(\t\x12\x13\n\x0bgang_notify\x18\x02 \x01(\t\x12\x12\n\ngang_score\x18\x03 \x01(\r\x12\x16\n\x0egang_condition\x18\x04 \x01(\r\x12\x18\n\x10gang_create_time\x18\x05 \x01(\r\"Q\n\x15GM_GANG_MEM_BASE_INFO\x12\x0f\n\x07role_id\x18\x01 \x01(\r\x12\x11\n\trole_name\x18\x02 \x01(\t\x12\x14\n\x0cmem_position\x18\x03 \x01(\r\">\n\x19GM_GET_GANG_BASE_INFO_REQ\x12\x0f\n\x07gang_id\x18\x01 \x01(\r\x12\x10\n\x08world_id\x18\x02 \x01(\r\"\xa9\x01\n\x19GM_GET_GANG_BASE_INFO_RES\x12\x0e\n\x06result\x18\x01 \x01(\r\x12\x0f\n\x07gang_id\x18\x02 \x01(\r\x12\x10\n\x08world_id\x18\x03 \x01(\r\x12*\n\x0egang_base_info\x18\x04 \x01(\x0b\x32\x12.GM_GANG_BASE_INFO\x12-\n\rgang_mem_list\x18\x05 \x03(\x0b\x32\x16.GM_GANG_MEM_BASE_INFO\"m\n\x1cGM_MODIFY_GANG_BASE_INFO_REQ\x12\x0f\n\x07gang_id\x18\x01 \x01(\r\x12\x10\n\x08world_id\x18\x02 \x01(\r\x12*\n\x0egang_base_info\x18\x04 \x01(\x0b\x32\x12.GM_GANG_BASE_INFO\"}\n\x1cGM_MODIFY_GANG_BASE_INFO_RES\x12\x0e\n\x06result\x18\x01 \x01(\r\x12\x0f\n\x07gang_id\x18\x02 \x01(\r\x12\x10\n\x08world_id\x18\x03 \x01(\r\x12*\n\x0egang_base_info\x18\x04 \x01(\x0b\x32\x12.GM_GANG_BASE_INFO\";\n\x1aGM_GET_PLAYER_PVE_INFO_REQ\x12\x10\n\x08world_id\x18\x01 \x01(\r\x12\x0b\n\x03uid\x18\x02 \x01(\r\"\x91\x01\n\x12GM_PLAYER_PVE_INFO\x12\x12\n\ndungeon_id\x18\x01 \x01(\r\x12\x11\n\tdun_level\x18\x02 \x01(\r\x12\x0c\n\x04stat\x18\x03 \x01(\r\x12\x16\n\x0e\x63hallenge_time\x18\x04 \x01(\r\x12\x15\n\rchallenge_cnt\x18\x05 \x01(\r\x12\x17\n\x0f\x62\x65st_evaluation\x18\x06 \x01(\r\"\x94\x01\n\x1aGM_GET_PLAYER_PVE_INFO_RES\x12\x0e\n\x06result\x18\x01 \x01(\r\x12\x0b\n\x03uid\x18\x02 \x01(\r\x12%\n\x08pve_info\x18\x03 \x03(\x0b\x32\x13.GM_PLAYER_PVE_INFO\x12\x32\n\x11hero_endless_info\x18\x04 \x01(\x0b\x32\x17.DBBLOB_TOWER_HERO_INFO\"G\n&GM_GET_PLAYER_BUILDING_AND_PACKAGE_REQ\x12\x10\n\x08world_id\x18\x01 \x01(\r\x12\x0b\n\x03uid\x18\x02 \x01(\r\"N\n\x1cGM_GET_PLAYER_FIRST_PURCHASE\x12\x10\n\x08world_id\x18\x01 \x01(\r\x12\x0b\n\x03uid\x18\x02 \x01(\r\x12\x0f\n\x07\x63hannel\x18\x03 \x01(\r\"F\n GM_GET_PLAYER_FIRST_PURCHASE_RES\x12\x0e\n\x06result\x18\x01 \x01(\r\x12\x12\n\nproduct_id\x18\x02 \x03(\t\"v\n&GM_GET_PLAYER_BUILDING_AND_PACKAGE_RES\x12\x0e\n\x06result\x18\x01 \x01(\r\x12\x0b\n\x03uid\x18\x02 \x01(\r\x12/\n\rbuilding_info\x18\x03 \x01(\x0b\x32\x18.DBBLOB_BUILDING_DATASET\"A\n GM_GET_PLAYER_TOTAL_RECHARGE_REQ\x12\x10\n\x08world_id\x18\x01 \x01(\r\x12\x0b\n\x03uid\x18\x02 \x01(\r\"W\n GM_GET_PLAYER_TOTAL_RECHARGE_RES\x12\x0e\n\x06result\x18\x01 \x01(\r\x12\x0b\n\x03uid\x18\x02 \x01(\r\x12\x16\n\x0etotal_recharge\x18\x03 \x01(\r\"4\n\x12GM_LOCK_PLAYER_REQ\x12\x0b\n\x03uid\x18\x01 \x01(\r\x12\x11\n\tlock_time\x18\x02 \x01(\r\"1\n\x12GM_LOCK_PLAYER_RES\x12\x0e\n\x06result\x18\x01 \x01(\x05\x12\x0b\n\x03uid\x18\x02 \x01(\r\"V\n\x16GM_BAN_PLAYER_CHAT_REQ\x12\x0b\n\x03uid\x18\x01 \x01(\r\x12\x0b\n\x03uin\x18\x02 \x01(\t\x12\x10\n\x08world_id\x18\x03 \x01(\r\x12\x10\n\x08\x62\x61n_time\x18\x04 \x01(\r\"j\n\x16GM_BAN_PLAYER_CHAT_RES\x12\x0e\n\x06result\x18\x01 \x01(\x05\x12\x0b\n\x03uid\x18\x02 \x01(\r\x12\x0b\n\x03uin\x18\x03 \x01(\t\x12\x10\n\x08world_id\x18\x04 \x01(\r\x12\x14\n\x0c\x62\x61n_end_time\x18\x05 \x01(\r\"@\n\x12GM_KICK_PLAYER_REQ\x12\x0b\n\x03uid\x18\x01 \x01(\r\x12\x0b\n\x03uin\x18\x02 \x01(\t\x12\x10\n\x08world_id\x18\x03 \x01(\r\"1\n\x12GM_KICK_PLAYER_RES\x12\x0e\n\x06result\x18\x01 \x01(\x05\x12\x0b\n\x03uid\x18\x02 \x01(\r\"\x96\x01\n\x0bGM_MAIL_ACC\x12\x10\n\x08res_type\x18\x01 \x01(\r\x12\x0e\n\x06res_id\x18\x02 \x01(\r\x12\x11\n\tres_count\x18\x03 \x01(\r\x12\x1a\n\x12res_extern_param_1\x18\x04 \x01(\r\x12\x1a\n\x12res_extern_param_2\x18\x05 \x01(\r\x12\x1a\n\x12res_extern_param_3\x18\x06 \x01(\r\"o\n\x0cGM_MAIL_INFO\x12\x12\n\nmail_title\x18\x01 \x01(\t\x12\x14\n\x0cmail_content\x18\x02 \x01(\t\x12\x15\n\rmail_interval\x18\x03 \x01(\r\x12\x1e\n\x08mail_acc\x18\x04 \x03(\x0b\x32\x0c.GM_MAIL_ACC\"S\n\x10GM_SEND_MAIL_REQ\x12\x10\n\x08world_id\x18\x01 \x01(\r\x12\x0b\n\x03uid\x18\x02 \x03(\r\x12 \n\tmail_info\x18\x03 \x01(\x0b\x32\r.GM_MAIL_INFO\"0\n\x10GM_MAIL_RES_INFO\x12\x0b\n\x03uid\x18\x01 \x01(\r\x12\x0f\n\x07mail_id\x18\x02 \x01(\x04\"P\n\x10GM_SEND_MAIL_RES\x12\x12\n\nfailed_uid\x18\x01 \x03(\r\x12(\n\rsucess_result\x18\x02 \x03(\x0b\x32\x11.GM_MAIL_RES_INFO\"\xa6\x01\n\x1cGM_GAMESERVER_MAIL_CONDITION\x12\x19\n\x11\x65\x66\x66\x65\x63t_begin_time\x18\x01 \x01(\r\x12\x17\n\x0f\x65\x66\x66\x65\x63t_end_time\x18\x02 \x01(\r\x12\x1a\n\x12\x65\x66\x66\x65\x63t_clt_version\x18\x03 \x01(\t\x12\x19\n\x11\x65\x66\x66\x65\x63t_channel_id\x18\x04 \x01(\r\x12\x1b\n\x13\x65\x66\x66\x65\x63t_player_state\x18\x05 \x01(\r\"\xa0\x01\n\x1bGM_SEND_GAMESERVER_MAIL_REQ\x12\x10\n\x08world_id\x18\x01 \x01(\r\x12 \n\tmail_info\x18\x02 \x01(\x0b\x32\r.GM_MAIL_INFO\x12\x35\n\x0email_condition\x18\x03 \x01(\x0b\x32\x1d.GM_GAMESERVER_MAIL_CONDITION\x12\x16\n\x0eis_send_online\x18\x04 \x01(\x08\"\xc6\x01\n\x1bGM_SEND_GAMESERVER_MAIL_RES\x12\x0e\n\x06result\x18\x01 \x01(\r\x12\x10\n\x08world_id\x18\x02 \x01(\r\x12\x14\n\x0cmail_seq_key\x18\x03 \x01(\r\x12 \n\tmail_info\x18\x04 \x01(\x0b\x32\r.GM_MAIL_INFO\x12\x35\n\x0email_condition\x18\x05 \x01(\x0b\x32\x1d.GM_GAMESERVER_MAIL_CONDITION\x12\x16\n\x0eis_send_online\x18\x06 \x01(\x08\"3\n\x1fGM_GET_GAMESERVER_MAIL_INFO_REQ\x12\x10\n\x08world_id\x18\x01 \x01(\r\"\x88\x01\n\x17GM_GAMESERVER_MAIL_INFO\x12\x14\n\x0cmail_seq_key\x18\x01 \x01(\r\x12 \n\tmail_info\x18\x02 \x01(\x0b\x32\r.GM_MAIL_INFO\x12\x35\n\x0email_condition\x18\x03 \x01(\x0b\x32\x1d.GM_GAMESERVER_MAIL_CONDITION\"p\n\x1fGM_GET_GAMESERVER_MAIL_INFO_RES\x12\x0e\n\x06result\x18\x01 \x01(\r\x12\x10\n\x08world_id\x18\x02 \x01(\r\x12+\n\tmail_info\x18\x03 \x03(\x0b\x32\x18.GM_GAMESERVER_MAIL_INFO\"D\n\x1aGM_DEL_GAMESERVER_MAIL_REQ\x12\x10\n\x08world_id\x18\x01 \x01(\r\x12\x14\n\x0cmail_seq_key\x18\x02 \x01(\r\">\n\x1aGM_DEL_GAMESERVER_MAIL_RES\x12\x0e\n\x06result\x18\x01 \x01(\r\x12\x10\n\x08world_id\x18\x02 \x01(\r\"y\n\x16GM_CHG_PLAYER_ATTR_REQ\x12\x10\n\x08world_id\x18\x01 \x01(\r\x12\x0b\n\x03uid\x18\x02 \x01(\r\x12\x0b\n\x03uin\x18\x03 \x01(\t\x12\x10\n\x08res_type\x18\x04 \x01(\r\x12\x0e\n\x06res_id\x18\x05 \x01(\r\x12\x11\n\tchg_count\x18\x06 \x01(\x05\"5\n\x16GM_CHG_PLAYER_ATTR_RES\x12\x0e\n\x06result\x18\x01 \x01(\x05\x12\x0b\n\x03uid\x18\x02 \x01(\r\"p\n\x1fGM_DEL_PLAYER_EQUIPED_EQUIP_REQ\x12\x10\n\x08world_id\x18\x01 \x01(\r\x12\x0b\n\x03uid\x18\x02 \x01(\r\x12\x0b\n\x03uin\x18\x03 \x01(\t\x12\x0f\n\x07hero_id\x18\x04 \x01(\r\x12\x10\n\x08\x65quip_id\x18\x05 \x01(\r\">\n\x1fGM_DEL_PLAYER_EQUIPED_EQUIP_RES\x12\x0e\n\x06result\x18\x01 \x01(\x05\x12\x0b\n\x03uid\x18\x02 \x01(\r\"~\n\x1cGM_CHG_PLAYER_HERO_LEVEL_REQ\x12\x10\n\x08world_id\x18\x01 \x01(\r\x12\x0b\n\x03uid\x18\x02 \x01(\r\x12\x0b\n\x03uin\x18\x03 \x01(\t\x12\x0f\n\x07hero_id\x18\x04 \x01(\r\x12\x0f\n\x07hero_lv\x18\x05 \x01(\r\x12\x10\n\x08hero_exp\x18\x06 \x01(\r\";\n\x1cGM_CHG_PLAYER_HERO_LEVEL_RES\x12\x0e\n\x06result\x18\x01 \x01(\x05\x12\x0b\n\x03uid\x18\x02 \x01(\r\"T\n\x1bGM_CHG_PLAYER_VIP_LEVEL_REQ\x12\x10\n\x08world_id\x18\x01 \x01(\r\x12\x0b\n\x03uid\x18\x02 \x01(\r\x12\x16\n\x0etotal_recharge\x18\x03 \x01(\r\":\n\x1bGM_CHG_PLAYER_VIP_LEVEL_RES\x12\x0e\n\x06result\x18\x01 \x01(\x05\x12\x0b\n\x03uid\x18\x02 \x01(\r\"m\n GM_CHG_PLAYER_UNLOCK_DUNGEON_REQ\x12\x10\n\x08world_id\x18\x01 \x01(\r\x12\x0b\n\x03uid\x18\x02 \x01(\r\x12\x0b\n\x03uin\x18\x03 \x01(\t\x12\x1d\n\x15unlock_til_dungeon_id\x18\x04 \x01(\r\"?\n GM_CHG_PLAYER_UNLOCK_DUNGEON_RES\x12\x0e\n\x06result\x18\x01 \x01(\x05\x12\x0b\n\x03uid\x18\x02 \x01(\r\";\n\x17GM_MODIFY_DUN_DATA_INFO\x12\x0e\n\x06\x64un_id\x18\x01 \x01(\r\x12\x10\n\x08\x64un_star\x18\x02 \x01(\r\"s\n\x16GM_MODIFY_DUN_DATA_REQ\x12\x10\n\x08world_id\x18\x01 \x01(\r\x12\x0b\n\x03uid\x18\x02 \x01(\r\x12\x0e\n\x06is_del\x18\x03 \x01(\r\x12*\n\x08\x64un_info\x18\x04 \x03(\x0b\x32\x18.GM_MODIFY_DUN_DATA_INFO\"5\n\x16GM_MODIFY_DUN_DATA_RES\x12\x0e\n\x06result\x18\x01 \x01(\x05\x12\x0b\n\x03uid\x18\x02 \x01(\r\"=\n\x1cGM_GET_PLAYER_MONTH_CARD_REQ\x12\x0b\n\x03uid\x18\x01 \x01(\r\x12\x10\n\x08world_id\x18\x02 \x01(\r\"\xbc\x01\n\x1cGM_GET_PLAYER_MONTH_CARD_RES\x12\x0e\n\x06result\x18\x01 \x01(\x05\x12\x0b\n\x03uid\x18\x02 \x01(\r\x12\x15\n\rmonth_card_id\x18\x03 \x01(\x05\x12\x16\n\x0emonth_end_time\x18\x04 \x01(\r\x12\x19\n\x11month_remain_days\x18\x05 \x01(\x05\x12\x19\n\x11permanent_card_id\x18\x06 \x01(\r\x12\x1a\n\x12permanent_buy_time\x18\x07 \x01(\r\"c\n\x1cGM_CHG_PLAYER_MONTH_CARD_REQ\x12\x0b\n\x03uid\x18\x01 \x01(\r\x12\x10\n\x08world_id\x18\x02 \x01(\r\x12\x0f\n\x07\x63\x61rd_id\x18\x03 \x01(\x05\x12\x13\n\x0b\x63hange_days\x18\x04 \x01(\x05\"L\n\x1cGM_CHG_PLAYER_MONTH_CARD_RES\x12\x0e\n\x06result\x18\x01 \x01(\x05\x12\x0b\n\x03uid\x18\x02 \x01(\r\x12\x0f\n\x07\x63\x61rd_id\x18\x03 \x01(\x05\"X\n\x12GUARD_MSG_GAME_SVR\x12\x0c\n\x04type\x18\x01 \x02(\r\x12\x10\n\x08msg_data\x18\x02 \x02(\x0c\x12\x12\n\nclient_pos\x18\x03 \x02(\r\x12\x0e\n\x06seq_no\x18\x04 \x02(\r\"d\n\x16GUARD_COPY_GM_TEXT_REQ\x12\x0f\n\x07gm_text\x18\x01 \x01(\t\x12\r\n\x05param\x18\x02 \x03(\x05\x12\x10\n\x08world_id\x18\x03 \x01(\r\x12\x0b\n\x03uid\x18\x04 \x01(\r\x12\x0b\n\x03uin\x18\x05 \x01(\t\"(\n\x16GUARD_COPY_GM_TEXT_RES\x12\x0e\n\x06result\x18\x01 \x01(\x05*\xe1\x01\n\x10GUARD_PROTOCONST\x12\x11\n\rGUARD_SUCCESS\x10\x00\x12\x0f\n\x0bGUARD_ERROR\x10\x01\x12\x17\n\x12GUARD_MAIL_MAX_NUM\x10\xe8\x07\x12\x16\n\x12GUARD_MAX_RANK_NUM\x10\x64\x12(\n$GUARD_GAME_SERVER_MAIL_NO_NEW_PLAYER\x10\x00\x12#\n\x1fGUARD_GAME_SERVER_MAIL_ONLY_NEW\x10\x01\x12%\n!GUARD_GAME_SERVER_MAIL_ALL_PLAYER\x10\x02\x1a\x02\x10\x01')
   ,
   dependencies=[sproto_pb2.DESCRIPTOR,])
 _sym_db.RegisterFileDescriptor(DESCRIPTOR)
@@ -62,8 +62,8 @@ _GUARD_PROTOCONST = _descriptor.EnumDescriptor(
   ],
   containing_type=None,
   options=_descriptor._ParseOptions(descriptor_pb2.EnumOptions(), _b('\020\001')),
-  serialized_start=7256,
-  serialized_end=7481,
+  serialized_start=7489,
+  serialized_end=7714,
 )
 _sym_db.RegisterEnumDescriptor(_GUARD_PROTOCONST)
 
@@ -3146,6 +3146,131 @@ _GM_CHG_PLAYER_UNLOCK_DUNGEON_RES = _descriptor.Descriptor(
 )
 
 
+_GM_MODIFY_DUN_DATA_INFO = _descriptor.Descriptor(
+  name='GM_MODIFY_DUN_DATA_INFO',
+  full_name='GM_MODIFY_DUN_DATA_INFO',
+  filename=None,
+  file=DESCRIPTOR,
+  containing_type=None,
+  fields=[
+    _descriptor.FieldDescriptor(
+      name='dun_id', full_name='GM_MODIFY_DUN_DATA_INFO.dun_id', index=0,
+      number=1, type=13, cpp_type=3, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    _descriptor.FieldDescriptor(
+      name='dun_star', full_name='GM_MODIFY_DUN_DATA_INFO.dun_star', index=1,
+      number=2, type=13, cpp_type=3, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+  ],
+  extensions=[
+  ],
+  nested_types=[],
+  enum_types=[
+  ],
+  options=None,
+  is_extendable=False,
+  extension_ranges=[],
+  oneofs=[
+  ],
+  serialized_start=6588,
+  serialized_end=6647,
+)
+
+
+_GM_MODIFY_DUN_DATA_REQ = _descriptor.Descriptor(
+  name='GM_MODIFY_DUN_DATA_REQ',
+  full_name='GM_MODIFY_DUN_DATA_REQ',
+  filename=None,
+  file=DESCRIPTOR,
+  containing_type=None,
+  fields=[
+    _descriptor.FieldDescriptor(
+      name='world_id', full_name='GM_MODIFY_DUN_DATA_REQ.world_id', index=0,
+      number=1, type=13, cpp_type=3, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    _descriptor.FieldDescriptor(
+      name='uid', full_name='GM_MODIFY_DUN_DATA_REQ.uid', index=1,
+      number=2, type=13, cpp_type=3, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    _descriptor.FieldDescriptor(
+      name='is_del', full_name='GM_MODIFY_DUN_DATA_REQ.is_del', index=2,
+      number=3, type=13, cpp_type=3, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    _descriptor.FieldDescriptor(
+      name='dun_info', full_name='GM_MODIFY_DUN_DATA_REQ.dun_info', index=3,
+      number=4, type=11, cpp_type=10, label=3,
+      has_default_value=False, default_value=[],
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+  ],
+  extensions=[
+  ],
+  nested_types=[],
+  enum_types=[
+  ],
+  options=None,
+  is_extendable=False,
+  extension_ranges=[],
+  oneofs=[
+  ],
+  serialized_start=6649,
+  serialized_end=6764,
+)
+
+
+_GM_MODIFY_DUN_DATA_RES = _descriptor.Descriptor(
+  name='GM_MODIFY_DUN_DATA_RES',
+  full_name='GM_MODIFY_DUN_DATA_RES',
+  filename=None,
+  file=DESCRIPTOR,
+  containing_type=None,
+  fields=[
+    _descriptor.FieldDescriptor(
+      name='result', full_name='GM_MODIFY_DUN_DATA_RES.result', index=0,
+      number=1, type=5, cpp_type=1, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    _descriptor.FieldDescriptor(
+      name='uid', full_name='GM_MODIFY_DUN_DATA_RES.uid', index=1,
+      number=2, type=13, cpp_type=3, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+  ],
+  extensions=[
+  ],
+  nested_types=[],
+  enum_types=[
+  ],
+  options=None,
+  is_extendable=False,
+  extension_ranges=[],
+  oneofs=[
+  ],
+  serialized_start=6766,
+  serialized_end=6819,
+)
+
+
 _GM_GET_PLAYER_MONTH_CARD_REQ = _descriptor.Descriptor(
   name='GM_GET_PLAYER_MONTH_CARD_REQ',
   full_name='GM_GET_PLAYER_MONTH_CARD_REQ',
@@ -3178,8 +3303,8 @@ _GM_GET_PLAYER_MONTH_CARD_REQ = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=6588,
-  serialized_end=6649,
+  serialized_start=6821,
+  serialized_end=6882,
 )
 
 
@@ -3250,8 +3375,8 @@ _GM_GET_PLAYER_MONTH_CARD_RES = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=6652,
-  serialized_end=6840,
+  serialized_start=6885,
+  serialized_end=7073,
 )
 
 
@@ -3301,8 +3426,8 @@ _GM_CHG_PLAYER_MONTH_CARD_REQ = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=6842,
-  serialized_end=6941,
+  serialized_start=7075,
+  serialized_end=7174,
 )
 
 
@@ -3345,8 +3470,8 @@ _GM_CHG_PLAYER_MONTH_CARD_RES = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=6943,
-  serialized_end=7019,
+  serialized_start=7176,
+  serialized_end=7252,
 )
 
 
@@ -3396,8 +3521,8 @@ _GUARD_MSG_GAME_SVR = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=7021,
-  serialized_end=7109,
+  serialized_start=7254,
+  serialized_end=7342,
 )
 
 
@@ -3454,8 +3579,8 @@ _GUARD_COPY_GM_TEXT_REQ = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=7111,
-  serialized_end=7211,
+  serialized_start=7344,
+  serialized_end=7444,
 )
 
 
@@ -3484,8 +3609,8 @@ _GUARD_COPY_GM_TEXT_RES = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=7213,
-  serialized_end=7253,
+  serialized_start=7446,
+  serialized_end=7486,
 )
 
 _GM_GET_PLAYER_ACCOUNT_BY_NAME_RES.fields_by_name['name_info'].message_type = _PLAYER_ACCOUNT_NAME_INFO
@@ -3511,6 +3636,7 @@ _GM_SEND_GAMESERVER_MAIL_RES.fields_by_name['mail_condition'].message_type = _GM
 _GM_GAMESERVER_MAIL_INFO.fields_by_name['mail_info'].message_type = _GM_MAIL_INFO
 _GM_GAMESERVER_MAIL_INFO.fields_by_name['mail_condition'].message_type = _GM_GAMESERVER_MAIL_CONDITION
 _GM_GET_GAMESERVER_MAIL_INFO_RES.fields_by_name['mail_info'].message_type = _GM_GAMESERVER_MAIL_INFO
+_GM_MODIFY_DUN_DATA_REQ.fields_by_name['dun_info'].message_type = _GM_MODIFY_DUN_DATA_INFO
 DESCRIPTOR.message_types_by_name['GM_GET_PLAYER_ACCOUNT_BY_NAME_REQ'] = _GM_GET_PLAYER_ACCOUNT_BY_NAME_REQ
 DESCRIPTOR.message_types_by_name['PLAYER_ACCOUNT_NAME_INFO'] = _PLAYER_ACCOUNT_NAME_INFO
 DESCRIPTOR.message_types_by_name['GM_GET_PLAYER_ACCOUNT_BY_NAME_RES'] = _GM_GET_PLAYER_ACCOUNT_BY_NAME_RES
@@ -3575,6 +3701,9 @@ DESCRIPTOR.message_types_by_name['GM_CHG_PLAYER_VIP_LEVEL_REQ'] = _GM_CHG_PLAYER
 DESCRIPTOR.message_types_by_name['GM_CHG_PLAYER_VIP_LEVEL_RES'] = _GM_CHG_PLAYER_VIP_LEVEL_RES
 DESCRIPTOR.message_types_by_name['GM_CHG_PLAYER_UNLOCK_DUNGEON_REQ'] = _GM_CHG_PLAYER_UNLOCK_DUNGEON_REQ
 DESCRIPTOR.message_types_by_name['GM_CHG_PLAYER_UNLOCK_DUNGEON_RES'] = _GM_CHG_PLAYER_UNLOCK_DUNGEON_RES
+DESCRIPTOR.message_types_by_name['GM_MODIFY_DUN_DATA_INFO'] = _GM_MODIFY_DUN_DATA_INFO
+DESCRIPTOR.message_types_by_name['GM_MODIFY_DUN_DATA_REQ'] = _GM_MODIFY_DUN_DATA_REQ
+DESCRIPTOR.message_types_by_name['GM_MODIFY_DUN_DATA_RES'] = _GM_MODIFY_DUN_DATA_RES
 DESCRIPTOR.message_types_by_name['GM_GET_PLAYER_MONTH_CARD_REQ'] = _GM_GET_PLAYER_MONTH_CARD_REQ
 DESCRIPTOR.message_types_by_name['GM_GET_PLAYER_MONTH_CARD_RES'] = _GM_GET_PLAYER_MONTH_CARD_RES
 DESCRIPTOR.message_types_by_name['GM_CHG_PLAYER_MONTH_CARD_REQ'] = _GM_CHG_PLAYER_MONTH_CARD_REQ
@@ -4031,6 +4160,27 @@ GM_CHG_PLAYER_UNLOCK_DUNGEON_RES = _reflection.GeneratedProtocolMessageType('GM_
   # @@protoc_insertion_point(class_scope:GM_CHG_PLAYER_UNLOCK_DUNGEON_RES)
   ))
 _sym_db.RegisterMessage(GM_CHG_PLAYER_UNLOCK_DUNGEON_RES)
+
+GM_MODIFY_DUN_DATA_INFO = _reflection.GeneratedProtocolMessageType('GM_MODIFY_DUN_DATA_INFO', (_message.Message,), dict(
+  DESCRIPTOR = _GM_MODIFY_DUN_DATA_INFO,
+  __module__ = 'guard_proto_pb2'
+  # @@protoc_insertion_point(class_scope:GM_MODIFY_DUN_DATA_INFO)
+  ))
+_sym_db.RegisterMessage(GM_MODIFY_DUN_DATA_INFO)
+
+GM_MODIFY_DUN_DATA_REQ = _reflection.GeneratedProtocolMessageType('GM_MODIFY_DUN_DATA_REQ', (_message.Message,), dict(
+  DESCRIPTOR = _GM_MODIFY_DUN_DATA_REQ,
+  __module__ = 'guard_proto_pb2'
+  # @@protoc_insertion_point(class_scope:GM_MODIFY_DUN_DATA_REQ)
+  ))
+_sym_db.RegisterMessage(GM_MODIFY_DUN_DATA_REQ)
+
+GM_MODIFY_DUN_DATA_RES = _reflection.GeneratedProtocolMessageType('GM_MODIFY_DUN_DATA_RES', (_message.Message,), dict(
+  DESCRIPTOR = _GM_MODIFY_DUN_DATA_RES,
+  __module__ = 'guard_proto_pb2'
+  # @@protoc_insertion_point(class_scope:GM_MODIFY_DUN_DATA_RES)
+  ))
+_sym_db.RegisterMessage(GM_MODIFY_DUN_DATA_RES)
 
 GM_GET_PLAYER_MONTH_CARD_REQ = _reflection.GeneratedProtocolMessageType('GM_GET_PLAYER_MONTH_CARD_REQ', (_message.Message,), dict(
   DESCRIPTOR = _GM_GET_PLAYER_MONTH_CARD_REQ,

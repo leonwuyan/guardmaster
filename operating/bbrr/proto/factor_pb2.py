@@ -13,16 +13,13 @@ from google.protobuf import descriptor_pb2
 _sym_db = _symbol_database.Default()
 
 
-import rescommon_pb2
-import protocommon_pb2
 
 
 DESCRIPTOR = _descriptor.FileDescriptor(
   name='factor.proto',
   package='',
-  serialized_pb=_b('\n\x0c\x66\x61\x63tor.proto\x1a\x0frescommon.proto\x1a\x11protocommon.proto\";\n\x17SCDT_NOTIFY_FACTOR_DATA\x12\x11\n\tfactor_id\x18\x01 \x02(\r\x12\r\n\x05\x63ount\x18\x02 \x02(\r\"O\n\x17SCPKG_NTF_FACTOR_CHANGE\x12\x0c\n\x04type\x18\x01 \x02(\r\x12&\n\x04info\x18\x02 \x03(\x0b\x32\x18.SCDT_NOTIFY_FACTOR_DATA\"\xb5\x01\n\x1cSCDT_NOTIFY_HERO_FACTOR_DATA\x12\x0f\n\x07hero_id\x18\x01 \x02(\r\x12\x18\n\x10\x66\x61\x63tor_slot_info\x18\x02 \x03(\r\x12\x17\n\x0f\x66\x61\x63tor_skill_id\x18\x03 \x02(\r\x12\x16\n\x0e\x66\x61\x63tor_attr_id\x18\x04 \x03(\r\x12\x1a\n\x12\x66\x61\x63tor_skill_ratio\x18\x05 \x01(\r\x12\x1d\n\x15\x66\x61\x63tor_skill_cooldown\x18\x06 \x01(\r\"D\n\x15SCPKG_NTF_HERO_FACTOR\x12+\n\x04info\x18\x01 \x03(\x0b\x32\x1d.SCDT_NOTIFY_HERO_FACTOR_DATA\"B\n\x1b\x43SPKG_REMOVE_EMBEDED_FACTOR\x12\x0f\n\x07hero_id\x18\x01 \x02(\r\x12\x12\n\nslot_index\x18\x02 \x02(\r\"8\n\x12\x43SPKG_EMBED_FACTOR\x12\x0f\n\x07hero_id\x18\x01 \x02(\r\x12\x11\n\tfactor_id\x18\x02 \x02(\r\"3\n CSPKG_REMOVE_ALL_EMBEDED_FACTORS\x12\x0f\n\x07hero_id\x18\x01 \x02(\r\"\x1b\n\x19\x43SPKG_UPGRADE_ALL_FACTORS\"9\n\x14\x43SPKG_UPGRADE_FACTOR\x12\x11\n\tfactor_id\x18\x01 \x02(\r\x12\x0e\n\x06\x61mount\x18\x02 \x02(\r')
-  ,
-  dependencies=[rescommon_pb2.DESCRIPTOR,protocommon_pb2.DESCRIPTOR,])
+  serialized_pb=_b('\n\x0c\x66\x61\x63tor.proto\";\n\x17SCDT_NOTIFY_FACTOR_DATA\x12\x11\n\tfactor_id\x18\x01 \x02(\r\x12\r\n\x05\x63ount\x18\x02 \x02(\r\"O\n\x17SCPKG_NTF_FACTOR_CHANGE\x12\x0c\n\x04type\x18\x01 \x02(\r\x12&\n\x04info\x18\x02 \x03(\x0b\x32\x18.SCDT_NOTIFY_FACTOR_DATA\"\xb5\x01\n\x1cSCDT_NOTIFY_HERO_FACTOR_DATA\x12\x0f\n\x07hero_id\x18\x01 \x02(\r\x12\x18\n\x10\x66\x61\x63tor_slot_info\x18\x02 \x03(\r\x12\x17\n\x0f\x66\x61\x63tor_skill_id\x18\x03 \x02(\r\x12\x16\n\x0e\x66\x61\x63tor_attr_id\x18\x04 \x03(\r\x12\x1a\n\x12\x66\x61\x63tor_skill_ratio\x18\x05 \x01(\r\x12\x1d\n\x15\x66\x61\x63tor_skill_cooldown\x18\x06 \x01(\r\"D\n\x15SCPKG_NTF_HERO_FACTOR\x12+\n\x04info\x18\x01 \x03(\x0b\x32\x1d.SCDT_NOTIFY_HERO_FACTOR_DATA\"B\n\x1b\x43SPKG_REMOVE_EMBEDED_FACTOR\x12\x0f\n\x07hero_id\x18\x01 \x02(\r\x12\x12\n\nslot_index\x18\x02 \x02(\r\"8\n\x12\x43SPKG_EMBED_FACTOR\x12\x0f\n\x07hero_id\x18\x01 \x02(\r\x12\x11\n\tfactor_id\x18\x02 \x02(\r\"3\n CSPKG_REMOVE_ALL_EMBEDED_FACTORS\x12\x0f\n\x07hero_id\x18\x01 \x02(\r\"\x1b\n\x19\x43SPKG_UPGRADE_ALL_FACTORS\"9\n\x14\x43SPKG_UPGRADE_FACTOR\x12\x11\n\tfactor_id\x18\x01 \x02(\r\x12\x0e\n\x06\x61mount\x18\x02 \x02(\r')
+)
 _sym_db.RegisterFileDescriptor(DESCRIPTOR)
 
 
@@ -60,8 +57,8 @@ _SCDT_NOTIFY_FACTOR_DATA = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=52,
-  serialized_end=111,
+  serialized_start=16,
+  serialized_end=75,
 )
 
 
@@ -97,8 +94,8 @@ _SCPKG_NTF_FACTOR_CHANGE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=113,
-  serialized_end=192,
+  serialized_start=77,
+  serialized_end=156,
 )
 
 
@@ -162,8 +159,8 @@ _SCDT_NOTIFY_HERO_FACTOR_DATA = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=195,
-  serialized_end=376,
+  serialized_start=159,
+  serialized_end=340,
 )
 
 
@@ -192,8 +189,8 @@ _SCPKG_NTF_HERO_FACTOR = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=378,
-  serialized_end=446,
+  serialized_start=342,
+  serialized_end=410,
 )
 
 
@@ -229,8 +226,8 @@ _CSPKG_REMOVE_EMBEDED_FACTOR = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=448,
-  serialized_end=514,
+  serialized_start=412,
+  serialized_end=478,
 )
 
 
@@ -266,8 +263,8 @@ _CSPKG_EMBED_FACTOR = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=516,
-  serialized_end=572,
+  serialized_start=480,
+  serialized_end=536,
 )
 
 
@@ -296,8 +293,8 @@ _CSPKG_REMOVE_ALL_EMBEDED_FACTORS = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=574,
-  serialized_end=625,
+  serialized_start=538,
+  serialized_end=589,
 )
 
 
@@ -319,8 +316,8 @@ _CSPKG_UPGRADE_ALL_FACTORS = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=627,
-  serialized_end=654,
+  serialized_start=591,
+  serialized_end=618,
 )
 
 
@@ -356,8 +353,8 @@ _CSPKG_UPGRADE_FACTOR = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=656,
-  serialized_end=713,
+  serialized_start=620,
+  serialized_end=677,
 )
 
 _SCPKG_NTF_FACTOR_CHANGE.fields_by_name['info'].message_type = _SCDT_NOTIFY_FACTOR_DATA

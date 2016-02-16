@@ -20,7 +20,7 @@ import protocommon_pb2
 DESCRIPTOR = _descriptor.FileDescriptor(
   name='equip.proto',
   package='',
-  serialized_pb=_b('\n\x0b\x65quip.proto\x1a\x0frescommon.proto\x1a\x11protocommon.proto\"\x9d\x01\n\x13\x43SDT_EQUIP_CHG_INFO\x12\x10\n\x08item_pos\x18\x01 \x02(\r\x12\x0f\n\x07\x62\x61se_id\x18\x02 \x02(\r\x12\r\n\x05\x63ount\x18\x03 \x02(\r\x12\x0f\n\x07\x63ur_exp\x18\x04 \x02(\r\x12\r\n\x05level\x18\x05 \x02(\r\x12\x0e\n\x06wakeup\x18\x06 \x02(\r\x12\x0e\n\x06growup\x18\x07 \x02(\r\x12\x14\n\x0c\x62ind_to_hero\x18\x08 \x02(\r\"J\n\x0fSCPKG_EQUIP_ALL\x12\x0c\n\x04type\x18\x01 \x02(\r\x12)\n\x0b\x63hange_info\x18\x02 \x03(\x0b\x32\x14.CSDT_EQUIP_CHG_INFO\"J\n\x0fSCPKG_EQUIP_CHG\x12\x0c\n\x04type\x18\x01 \x02(\r\x12)\n\x0b\x63hange_info\x18\x02 \x03(\x0b\x32\x14.CSDT_EQUIP_CHG_INFO\"E\n\x16SCPKG_EQUIP_GOT_RECORD\x12\x17\n\x0fgot_record_used\x18\x01 \x02(\r\x12\x12\n\ngot_record\x18\x02 \x03(\r\"T\n\x1d\x43SPKG_EQUIP_WEAR_FROM_PACKAGE\x12\x0f\n\x07hero_id\x18\x01 \x02(\r\x12\x11\n\tequip_pos\x18\x02 \x02(\r\x12\x0f\n\x07\x65\x61t_old\x18\x03 \x01(\x08\":\n\x12\x43SPKG_EQUIP_UNWEAR\x12\x0f\n\x07hero_id\x18\x01 \x02(\r\x12\x13\n\x0b\x65quiped_pos\x18\x02 \x02(\r\"@\n\x13SCPKG_NTF_HERO_ATTR\x12\x0f\n\x07hero_id\x18\x01 \x02(\r\x12\x18\n\x05\x61ttrs\x18\x02 \x03(\x0b\x32\t.HeroAttr\"\x17\n\x15\x43SPKG_EQUIP_REARRANGE\"K\n\x13\x43SPKG_EQUIP_LEVELUP\x12\x0f\n\x07hero_id\x18\x01 \x02(\r\x12\x11\n\tequip_pos\x18\x02 \x02(\r\x12\x10\n\x08pack_pos\x18\x03 \x03(\r\"8\n\x12\x43SPKG_EQUIP_WAKEUP\x12\x0f\n\x07hero_id\x18\x01 \x02(\r\x12\x11\n\tequip_pos\x18\x02 \x02(\r\"0\n\x1b\x43SPKG_EQUIP_GROWUP_MATERIAL\x12\x11\n\tequip_pos\x18\x01 \x03(\r\"h\n\x12\x43SPKG_EQUIP_GROWUP\x12\x0f\n\x07hero_id\x18\x01 \x02(\r\x12\x11\n\tequip_pos\x18\x02 \x02(\r\x12.\n\x08material\x18\x03 \x03(\x0b\x32\x1c.CSPKG_EQUIP_GROWUP_MATERIAL\"4\n\x10\x43SPKG_EQUIP_SELL\x12\r\n\x05\x63ount\x18\x01 \x02(\r\x12\x11\n\tequip_pos\x18\x02 \x02(\r\"-\n\x16\x43SPKG_EQUIP_BATCH_SELL\x12\x13\n\x0b\x65quip_color\x18\x01 \x02(\r\"O\n\x12\x43SPKG_EQUIPED_INFO\x12\x0f\n\x07hero_id\x18\x01 \x02(\r\x12(\n\x0c\x65quiped_info\x18\x02 \x03(\x0b\x32\x12.CSDT_EQUIPED_INFO\"6\n\x13\x43SPKG_USE_EQUIP_BOX\x12\x0f\n\x07hero_id\x18\x01 \x02(\r\x12\x0e\n\x06\x62ox_id\x18\x02 \x02(\r\"j\n\x13SCPKG_USE_EQUIP_BOX\x12\x0e\n\x06result\x18\x01 \x01(\r\x12\x0f\n\x07hero_id\x18\x02 \x02(\r\x12\x0e\n\x06\x62ox_id\x18\x03 \x02(\r\x12\"\n\tdrop_info\x18\x04 \x01(\x0b\x32\x0f.CSDT_DROP_INFO\"6\n\x13\x43SDT_EQUIP_POS_INFO\x12\x10\n\x08pack_pos\x18\x01 \x02(\r\x12\r\n\x05\x63ount\x18\x02 \x02(\r\"f\n\x16\x43SPKG_PURIFY_EQUIP_POS\x12\x0f\n\x07hero_id\x18\x01 \x02(\r\x12\x11\n\tequip_pos\x18\x02 \x02(\r\x12(\n\nequip_info\x18\x03 \x03(\x0b\x32\x14.CSDT_EQUIP_POS_INFO\"h\n\x16SCPKG_PURIFY_EQUIP_POS\x12\x0e\n\x06result\x18\x01 \x01(\r\x12\x0f\n\x07hero_id\x18\x02 \x02(\r\x12\x11\n\tequip_pos\x18\x03 \x02(\r\x12\r\n\x05level\x18\x04 \x01(\r\x12\x0b\n\x03\x65xp\x18\x05 \x01(\r\"`\n\x16\x43SPKG_EQUIP_FUSION_REQ\x12\x1a\n\x12material_equip_pos\x18\x01 \x03(\x05\x12\x0f\n\x07hero_id\x18\x02 \x01(\r\x12\x19\n\x11\x61\x64\x64tional_use_cnt\x18\x03 \x03(\r\"H\n\x16SCPKG_EQUIP_FUSION_RES\x12\x0e\n\x06result\x18\x01 \x01(\x05\x12\x1e\n\x08gen_info\x18\x02 \x01(\x0b\x32\x0c.ResMaterial\"d\n\"CSPKG_BUY_EQUIP_FUSION_ADDTION_REQ\x12\x14\n\x0ctarget_price\x18\x01 \x01(\r\x12\x17\n\x0f\x61\x64\x64tional_index\x18\x02 \x01(\x05\x12\x0f\n\x07\x62uy_cnt\x18\x03 \x01(\r\"T\n\"SCPKG_BUY_EQUIP_FUSION_ADDTION_RES\x12\x0e\n\x06result\x18\x01 \x01(\x05\x12\x1e\n\x08gen_info\x18\x02 \x01(\x0b\x32\x0c.ResMaterial\"1\n\x1c\x43SPKG_EQUIP_RESET_RESULT_REQ\x12\x11\n\tequip_pos\x18\x01 \x02(\r\"M\n\x1cSCPKG_EQUIP_RESET_RESULT_RES\x12\x1e\n\x06result\x18\x01 \x03(\x0b\x32\x0e.ST_REWARD_RES\x12\r\n\x05price\x18\x02 \x02(\r\"2\n\x1d\x43SPKG_EQUIP_RESET_CONFIRM_REQ\x12\x11\n\tequip_pos\x18\x01 \x02(\r\"/\n\x1dSCPKG_EQUIP_RESET_CONFIRM_RES\x12\x0e\n\x06result\x18\x01 \x02(\r')
+  serialized_pb=_b('\n\x0b\x65quip.proto\x1a\x0frescommon.proto\x1a\x11protocommon.proto\"\x9d\x01\n\x13\x43SDT_EQUIP_CHG_INFO\x12\x10\n\x08item_pos\x18\x01 \x02(\r\x12\x0f\n\x07\x62\x61se_id\x18\x02 \x02(\r\x12\r\n\x05\x63ount\x18\x03 \x02(\r\x12\x0f\n\x07\x63ur_exp\x18\x04 \x02(\r\x12\r\n\x05level\x18\x05 \x02(\r\x12\x0e\n\x06wakeup\x18\x06 \x02(\r\x12\x0e\n\x06growup\x18\x07 \x02(\r\x12\x14\n\x0c\x62ind_to_hero\x18\x08 \x02(\r\"J\n\x0fSCPKG_EQUIP_ALL\x12\x0c\n\x04type\x18\x01 \x02(\r\x12)\n\x0b\x63hange_info\x18\x02 \x03(\x0b\x32\x14.CSDT_EQUIP_CHG_INFO\"J\n\x0fSCPKG_EQUIP_CHG\x12\x0c\n\x04type\x18\x01 \x02(\r\x12)\n\x0b\x63hange_info\x18\x02 \x03(\x0b\x32\x14.CSDT_EQUIP_CHG_INFO\"E\n\x16SCPKG_EQUIP_GOT_RECORD\x12\x17\n\x0fgot_record_used\x18\x01 \x02(\r\x12\x12\n\ngot_record\x18\x02 \x03(\r\"T\n\x1d\x43SPKG_EQUIP_WEAR_FROM_PACKAGE\x12\x0f\n\x07hero_id\x18\x01 \x02(\r\x12\x11\n\tequip_pos\x18\x02 \x02(\r\x12\x0f\n\x07\x65\x61t_old\x18\x03 \x01(\x08\":\n\x12\x43SPKG_EQUIP_UNWEAR\x12\x0f\n\x07hero_id\x18\x01 \x02(\r\x12\x13\n\x0b\x65quiped_pos\x18\x02 \x02(\r\"@\n\x13SCPKG_NTF_HERO_ATTR\x12\x0f\n\x07hero_id\x18\x01 \x02(\r\x12\x18\n\x05\x61ttrs\x18\x02 \x03(\x0b\x32\t.HeroAttr\"\x17\n\x15\x43SPKG_EQUIP_REARRANGE\"K\n\x13\x43SPKG_EQUIP_LEVELUP\x12\x0f\n\x07hero_id\x18\x01 \x02(\r\x12\x11\n\tequip_pos\x18\x02 \x02(\r\x12\x10\n\x08pack_pos\x18\x03 \x03(\r\"8\n\x12\x43SPKG_EQUIP_WAKEUP\x12\x0f\n\x07hero_id\x18\x01 \x02(\r\x12\x11\n\tequip_pos\x18\x02 \x02(\r\"0\n\x1b\x43SPKG_EQUIP_GROWUP_MATERIAL\x12\x11\n\tequip_pos\x18\x01 \x03(\r\"h\n\x12\x43SPKG_EQUIP_GROWUP\x12\x0f\n\x07hero_id\x18\x01 \x02(\r\x12\x11\n\tequip_pos\x18\x02 \x02(\r\x12.\n\x08material\x18\x03 \x03(\x0b\x32\x1c.CSPKG_EQUIP_GROWUP_MATERIAL\"4\n\x10\x43SPKG_EQUIP_SELL\x12\r\n\x05\x63ount\x18\x01 \x02(\r\x12\x11\n\tequip_pos\x18\x02 \x02(\r\"-\n\x16\x43SPKG_EQUIP_BATCH_SELL\x12\x13\n\x0b\x65quip_color\x18\x01 \x02(\r\"O\n\x12\x43SPKG_EQUIPED_INFO\x12\x0f\n\x07hero_id\x18\x01 \x02(\r\x12(\n\x0c\x65quiped_info\x18\x02 \x03(\x0b\x32\x12.CSDT_EQUIPED_INFO\"Z\n\x13\x43SPKG_USE_EQUIP_BOX\x12\x0f\n\x07hero_id\x18\x01 \x02(\r\x12\x0e\n\x06\x62ox_id\x18\x02 \x02(\r\x12\x13\n\x0bpackage_pos\x18\x03 \x01(\x05\x12\r\n\x05\x63ount\x18\x04 \x01(\x05\"|\n\x13SCPKG_USE_EQUIP_BOX\x12\x0e\n\x06result\x18\x01 \x01(\r\x12\x0f\n\x07hero_id\x18\x02 \x02(\r\x12\x0e\n\x06\x62ox_id\x18\x03 \x02(\r\x12\"\n\tdrop_info\x18\x04 \x01(\x0b\x32\x0f.CSDT_DROP_INFO\x12\x10\n\x08open_cnt\x18\x05 \x01(\x05\"6\n\x13\x43SDT_EQUIP_POS_INFO\x12\x10\n\x08pack_pos\x18\x01 \x02(\r\x12\r\n\x05\x63ount\x18\x02 \x02(\r\"f\n\x16\x43SPKG_PURIFY_EQUIP_POS\x12\x0f\n\x07hero_id\x18\x01 \x02(\r\x12\x11\n\tequip_pos\x18\x02 \x02(\r\x12(\n\nequip_info\x18\x03 \x03(\x0b\x32\x14.CSDT_EQUIP_POS_INFO\"h\n\x16SCPKG_PURIFY_EQUIP_POS\x12\x0e\n\x06result\x18\x01 \x01(\r\x12\x0f\n\x07hero_id\x18\x02 \x02(\r\x12\x11\n\tequip_pos\x18\x03 \x02(\r\x12\r\n\x05level\x18\x04 \x01(\r\x12\x0b\n\x03\x65xp\x18\x05 \x01(\r\"`\n\x16\x43SPKG_EQUIP_FUSION_REQ\x12\x1a\n\x12material_equip_pos\x18\x01 \x03(\x05\x12\x0f\n\x07hero_id\x18\x02 \x01(\r\x12\x19\n\x11\x61\x64\x64tional_use_cnt\x18\x03 \x03(\r\"H\n\x16SCPKG_EQUIP_FUSION_RES\x12\x0e\n\x06result\x18\x01 \x01(\x05\x12\x1e\n\x08gen_info\x18\x02 \x01(\x0b\x32\x0c.ResMaterial\"d\n\"CSPKG_BUY_EQUIP_FUSION_ADDTION_REQ\x12\x14\n\x0ctarget_price\x18\x01 \x01(\r\x12\x17\n\x0f\x61\x64\x64tional_index\x18\x02 \x01(\x05\x12\x0f\n\x07\x62uy_cnt\x18\x03 \x01(\r\"T\n\"SCPKG_BUY_EQUIP_FUSION_ADDTION_RES\x12\x0e\n\x06result\x18\x01 \x01(\x05\x12\x1e\n\x08gen_info\x18\x02 \x01(\x0b\x32\x0c.ResMaterial\"1\n\x1c\x43SPKG_EQUIP_RESET_RESULT_REQ\x12\x11\n\tequip_pos\x18\x01 \x02(\r\"M\n\x1cSCPKG_EQUIP_RESET_RESULT_RES\x12\x1e\n\x06result\x18\x01 \x03(\x0b\x32\x0e.ST_REWARD_RES\x12\r\n\x05price\x18\x02 \x02(\r\"2\n\x1d\x43SPKG_EQUIP_RESET_CONFIRM_REQ\x12\x11\n\tequip_pos\x18\x01 \x02(\r\"/\n\x1dSCPKG_EQUIP_RESET_CONFIRM_RES\x12\x0e\n\x06result\x18\x01 \x02(\r')
   ,
   dependencies=[rescommon_pb2.DESCRIPTOR,protocommon_pb2.DESCRIPTOR,])
 _sym_db.RegisterFileDescriptor(DESCRIPTOR)
@@ -639,6 +639,20 @@ _CSPKG_USE_EQUIP_BOX = _descriptor.Descriptor(
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
+    _descriptor.FieldDescriptor(
+      name='package_pos', full_name='CSPKG_USE_EQUIP_BOX.package_pos', index=2,
+      number=3, type=5, cpp_type=1, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    _descriptor.FieldDescriptor(
+      name='count', full_name='CSPKG_USE_EQUIP_BOX.count', index=3,
+      number=4, type=5, cpp_type=1, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
   ],
   extensions=[
   ],
@@ -651,7 +665,7 @@ _CSPKG_USE_EQUIP_BOX = _descriptor.Descriptor(
   oneofs=[
   ],
   serialized_start=1144,
-  serialized_end=1198,
+  serialized_end=1234,
 )
 
 
@@ -690,6 +704,13 @@ _SCPKG_USE_EQUIP_BOX = _descriptor.Descriptor(
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
+    _descriptor.FieldDescriptor(
+      name='open_cnt', full_name='SCPKG_USE_EQUIP_BOX.open_cnt', index=4,
+      number=5, type=5, cpp_type=1, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
   ],
   extensions=[
   ],
@@ -701,8 +722,8 @@ _SCPKG_USE_EQUIP_BOX = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=1200,
-  serialized_end=1306,
+  serialized_start=1236,
+  serialized_end=1360,
 )
 
 
@@ -738,8 +759,8 @@ _CSDT_EQUIP_POS_INFO = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=1308,
-  serialized_end=1362,
+  serialized_start=1362,
+  serialized_end=1416,
 )
 
 
@@ -782,8 +803,8 @@ _CSPKG_PURIFY_EQUIP_POS = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=1364,
-  serialized_end=1466,
+  serialized_start=1418,
+  serialized_end=1520,
 )
 
 
@@ -840,8 +861,8 @@ _SCPKG_PURIFY_EQUIP_POS = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=1468,
-  serialized_end=1572,
+  serialized_start=1522,
+  serialized_end=1626,
 )
 
 
@@ -884,8 +905,8 @@ _CSPKG_EQUIP_FUSION_REQ = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=1574,
-  serialized_end=1670,
+  serialized_start=1628,
+  serialized_end=1724,
 )
 
 
@@ -921,8 +942,8 @@ _SCPKG_EQUIP_FUSION_RES = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=1672,
-  serialized_end=1744,
+  serialized_start=1726,
+  serialized_end=1798,
 )
 
 
@@ -965,8 +986,8 @@ _CSPKG_BUY_EQUIP_FUSION_ADDTION_REQ = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=1746,
-  serialized_end=1846,
+  serialized_start=1800,
+  serialized_end=1900,
 )
 
 
@@ -1002,8 +1023,8 @@ _SCPKG_BUY_EQUIP_FUSION_ADDTION_RES = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=1848,
-  serialized_end=1932,
+  serialized_start=1902,
+  serialized_end=1986,
 )
 
 
@@ -1032,8 +1053,8 @@ _CSPKG_EQUIP_RESET_RESULT_REQ = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=1934,
-  serialized_end=1983,
+  serialized_start=1988,
+  serialized_end=2037,
 )
 
 
@@ -1069,8 +1090,8 @@ _SCPKG_EQUIP_RESET_RESULT_RES = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=1985,
-  serialized_end=2062,
+  serialized_start=2039,
+  serialized_end=2116,
 )
 
 
@@ -1099,8 +1120,8 @@ _CSPKG_EQUIP_RESET_CONFIRM_REQ = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=2064,
-  serialized_end=2114,
+  serialized_start=2118,
+  serialized_end=2168,
 )
 
 
@@ -1129,8 +1150,8 @@ _SCPKG_EQUIP_RESET_CONFIRM_RES = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=2116,
-  serialized_end=2163,
+  serialized_start=2170,
+  serialized_end=2217,
 )
 
 _SCPKG_EQUIP_ALL.fields_by_name['change_info'].message_type = _CSDT_EQUIP_CHG_INFO

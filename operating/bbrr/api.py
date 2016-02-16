@@ -441,3 +441,44 @@ class ServerSocket(object):
             'param': param,
             'uin': uin}
         return self._get(p, r)
+
+    def get_gang_base_info(self, gang_id, world_id):
+        if world_id is None or gang_id is None:
+            return self.empty
+        p = 'GM_GET_GANG_BASE_INFO_REQ'
+        r = {'world_id': world_id, 'gang_id': gang_id}
+        return self._get(p, r)
+
+    def modify_gang_base_info(self, gang_id, world_id, gang_base_info):
+        if world_id is None or gang_id is None or gang_base_info is None:
+            return self.empty
+        p = 'GM_MODIFY_GANG_BASE_INFO_REQ'
+        r = {'world_id': world_id, 'gang_id': gang_id}
+        (phash_gang, pb_gang) = self.create_pb(p, r)
+        if gang_base_info.get('gang_score'):
+            pb_gang.gang_base_info.gang_score = gang_base_info.get('gang_score')
+        if gang_base_info.get('gang_notify'):
+            pb_gang.gang_base_info.gang_notify = gang_base_info.get('gang_notify')
+        pkggg = self.serialize_pkg(phash_gang, pb_gang.SerializeToString())
+        pb = self.connect_server(self.ip, self.port, pkggg)
+        if pb.__class__ is dict:
+            return self.timeout
+        return self.res(pb)
+
+    def modify_dun_data(self, uid, world_id, is_del, dun_data_info):
+        if world_id is None or uid is None or is_del is None:
+            return self.empty
+        if dun_data_info is None:
+            return self.empty
+        p = 'GM_MODIFY_DUN_DATA_REQ'
+        r = {'world_id': world_id, 'uid': uid, 'is_del': is_del}
+        (phash_dun, pb_dun) = self.create_pb(p, r)
+        for dun_data in dun_data_info:
+            pb_dun.dun_info.add(
+                dun_id=dun_data.get('dun_id'),
+                dun_star=dun_data.get('dun_star'))
+        pkggg = self.serialize_pkg(phash_dun, pb_dun.SerializeToString())
+        pb = self.connect_server(self.ip, self.port, pkggg)
+        if pb.__class__ is dict:
+            return self.timeout
+        return self.res(pb)

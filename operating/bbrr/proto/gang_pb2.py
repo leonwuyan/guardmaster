@@ -19,7 +19,7 @@ import rescommon_pb2
 DESCRIPTOR = _descriptor.FileDescriptor(
   name='gang.proto',
   package='',
-  serialized_pb=_b('\n\ngang.proto\x1a\x0frescommon.proto\"r\n#ST_GANG_CITY_STRONG_POINT_HERO_INFO\x12\x0f\n\x07role_id\x18\x01 \x01(\r\x12\x11\n\trole_name\x18\x03 \x01(\t\x12\'\n\thero_info\x18\x02 \x01(\x0b\x32\x14.ST_HERO_BATTLE_INFO\"i\n\x19ST_GANG_CITY_STRONG_POINT\x12\x13\n\x0bpoint_state\x18\x01 \x01(\r\x12\x37\n\thero_info\x18\x02 \x03(\x0b\x32$.ST_GANG_CITY_STRONG_POINT_HERO_INFO\"j\n\x11ST_GANG_CITY_INFO\x12\n\n\x02id\x18\x01 \x01(\r\x12\x12\n\ncity_state\x18\x02 \x01(\r\x12\x35\n\x11strong_point_info\x18\x03 \x03(\x0b\x32\x1a.ST_GANG_CITY_STRONG_POINT\"\x87\x01\n\x0cST_GANG_CITY\x12&\n\nsmall_city\x18\x01 \x03(\x0b\x32\x12.ST_GANG_CITY_INFO\x12)\n\rmoderate_city\x18\x02 \x03(\x0b\x32\x12.ST_GANG_CITY_INFO\x12$\n\x08\x62ig_city\x18\x03 \x03(\x0b\x32\x12.ST_GANG_CITY_INFO\"c\n\x17ST_GANG_BATTLE_MEM_INFO\x12\x13\n\x0bmem_role_id\x18\x01 \x01(\r\x12\x15\n\rmem_role_name\x18\x02 \x01(\t\x12\x1c\n\x14\x63umulate_recharge_id\x18\x03 \x01(\r\"E\n\x17ST_GANG_BATTLE_MEM_LIST\x12*\n\x08mem_info\x18\x01 \x03(\x0b\x32\x18.ST_GANG_BATTLE_MEM_INFO\"O\n ST_GANG_BATTLE_ATTACK_POINT_INFO\x12\x0f\n\x07\x63ity_id\x18\x01 \x01(\r\x12\x1a\n\x12strong_point_index\x18\x02 \x01(\x05\"\xa2\x01\n\x1eST_GANG_BATTLE_MEM_ATTACK_INFO\x12\x13\n\x0bmem_role_id\x18\x01 \x01(\r\x12\x15\n\rmem_role_name\x18\x02 \x01(\t\x12\x1b\n\x13mem_total_fight_cnt\x18\x03 \x01(\r\x12\x19\n\x11mem_win_fight_cnt\x18\x04 \x01(\r\x12\x1c\n\x14\x63umulate_recharge_id\x18\x05 \x01(\r\"S\n\x1eST_GANG_BATTLE_MEM_ATTACK_LIST\x12\x31\n\x08mem_info\x18\x01 \x03(\x0b\x32\x1f.ST_GANG_BATTLE_MEM_ATTACK_INFO\"\xbe\x01\n\x18\x43SDT_GANG_APPLYLIST_INFO\x12\x10\n\x08mem_name\x18\x01 \x01(\t\x12\x13\n\x0bmem_role_id\x18\x02 \x01(\r\x12\x12\n\napply_time\x18\x03 \x01(\r\x12\x14\n\x0cmem_rank_pos\x18\x04 \x01(\r\x12\x1f\n\x17mem_gang_battle_win_cnt\x18\x05 \x01(\r\x12\x1c\n\x14\x63umulate_recharge_id\x18\x06 \x01(\r\x12\x12\n\nhead_photo\x18\x07 \x01(\r\"\xf8\x01\n\x14\x43SDT_GANGSIMPLE_INFO\x12\x11\n\tgang_name\x18\x01 \x01(\t\x12\x0f\n\x07gang_id\x18\x02 \x01(\r\x12\x18\n\x10gang_leader_name\x18\x03 \x01(\t\x12\x18\n\x10gang_apply_state\x18\x04 \x01(\r\x12\x15\n\rcond_rank_pos\x18\x05 \x01(\r\x12\x16\n\x0egang_mem_count\x18\x06 \x01(\r\x12\x12\n\ngang_level\x18\x07 \x01(\r\x12\x12\n\ngang_score\x18\x08 \x01(\r\x12\x13\n\x0bgang_notify\x18\t \x01(\t\x12\x1c\n\x14is_auto_apply_battle\x18\n \x01(\r\"\xe3\x01\n\x12\x43SDT_GANGLIST_INFO\x12\x0f\n\x07gang_id\x18\x01 \x01(\r\x12\x11\n\tgang_name\x18\x02 \x01(\t\x12\x18\n\x10gang_apply_state\x18\x03 \x01(\r\x12\x12\n\ngang_level\x18\x04 \x01(\r\x12\x12\n\ngang_score\x18\x05 \x01(\r\x12\x16\n\x0egang_mem_count\x18\x06 \x01(\r\x12\x1a\n\x12gang_cond_rank_pos\x18\x07 \x01(\r\x12\x18\n\x10is_in_apply_list\x18\x08 \x01(\r\x12\x19\n\x11gang_avg_rank_pos\x18\t \x01(\r\"\xfc\x01\n\x11\x43SDT_GANGMEM_INFO\x12\x13\n\x0bmem_role_id\x18\x01 \x01(\r\x12\x10\n\x08mem_name\x18\x02 \x01(\t\x12\x13\n\x0bmem_postion\x18\x03 \x01(\r\x12!\n\x19mem_gang_battle_win_score\x18\x04 \x01(\r\x12\x14\n\x0cmem_rank_pos\x18\x05 \x01(\r\x12\x17\n\x0flast_leave_time\x18\x06 \x01(\r\x12\x1c\n\x14\x63umulate_recharge_id\x18\x07 \x01(\r\x12\'\n\x0fgang_bless_info\x18\x08 \x01(\x0b\x32\x0e.ST_BLESS_INFO\x12\x12\n\nhead_photo\x18\t \x01(\r\"\'\n\x13\x43SDT_GANG_SELF_INFO\x12\x10\n\x08position\x18\x01 \x01(\r\"\x94\x01\n!CSDT_GANG_BATTLE_HISTORY_MEM_INFO\x12\x13\n\x0bmem_role_id\x18\x01 \x01(\r\x12\x10\n\x08mem_name\x18\x02 \x01(\t\x12\x13\n\x0bmem_win_cnt\x18\x03 \x01(\r\x12\x15\n\rmem_total_cnt\x18\x04 \x01(\r\x12\x1c\n\x14\x63umulate_recharge_id\x18\x05 \x01(\r\"^\n!CSDT_GANG_BATTLE_HISTORY_MEM_LIST\x12\x39\n\rgang_mem_list\x18\x01 \x03(\x0b\x32\".CSDT_GANG_BATTLE_HISTORY_MEM_INFO\"\x8c\x02\n\x1d\x43SDT_GANG_BATTLE_HISTORY_INFO\x12\x13\n\x0b\x62\x61ttle_time\x18\x01 \x01(\r\x12\x12\n\ngang_level\x18\x02 \x01(\r\x12\x17\n\x0f\x64\x65\x66\x65nse_gang_id\x18\x03 \x01(\r\x12\x19\n\x11\x64\x65\x66\x65nse_gang_name\x18\x04 \x01(\t\x12\x1a\n\x12\x64\x65\x66\x65nse_gang_level\x18\x05 \x01(\r\x12\x19\n\x11self_battle_score\x18\x06 \x01(\r\x12\x1c\n\x14\x64\x65\x66\x65nse_battle_score\x18\x07 \x01(\r\x12\x39\n\rmem_list_info\x18\x08 \x01(\x0b\x32\".CSDT_GANG_BATTLE_HISTORY_MEM_LIST\"p\n\x18\x43SPKG_CMD_CREATEGANG_REQ\x12\x11\n\tgang_name\x18\x01 \x01(\t\x12\x13\n\x0bgang_notify\x18\x02 \x01(\t\x12\x15\n\ris_auto_apply\x18\x03 \x01(\r\x12\x15\n\rcond_rank_pos\x18\x04 \x01(\r\"\x97\x01\n\x18SCPKG_CMD_CREATEGANG_RES\x12\x0e\n\x06result\x18\x01 \x01(\x05\x12/\n\x10gang_simple_info\x18\x02 \x01(\x0b\x32\x15.CSDT_GANGSIMPLE_INFO\x12\'\n\tself_info\x18\x03 \x01(\x0b\x32\x14.CSDT_GANG_SELF_INFO\x12\x11\n\tleft_time\x18\x05 \x01(\r\"C\n\x16\x43SPKG_CMD_GANGLIST_REQ\x12\x15\n\rpage_start_id\x18\x01 \x01(\r\x12\x12\n\npage_count\x18\x02 \x01(\r\"S\n\x16SCPKG_CMD_GANGLIST_RES\x12&\n\tgang_list\x18\x01 \x03(\x0b\x32\x13.CSDT_GANGLIST_INFO\x12\x11\n\ttotal_cnt\x18\x02 \x01(\r\"\xa4\x01\n\x18SCPKG_CMD_ROLELOGIN_GANG\x12\x14\n\x0cis_have_gang\x18\x01 \x01(\r\x12\x18\n\x10\x61pply_list_count\x18\x02 \x01(\r\x12/\n\x10gang_simple_info\x18\x03 \x01(\x0b\x32\x15.CSDT_GANGSIMPLE_INFO\x12\'\n\tself_info\x18\x04 \x01(\x0b\x32\x14.CSDT_GANG_SELF_INFO\">\n\x18\x43SPKG_CMD_APPLY_GANG_REQ\x12\x11\n\tgang_name\x18\x01 \x01(\t\x12\x0f\n\x07gang_id\x18\x02 \x01(\r\"z\n\x18SCPKG_CMD_APPLY_GANG_RES\x12\x0e\n\x06result\x18\x01 \x01(\x05\x12\x0f\n\x07gang_id\x18\x02 \x01(\r\x12\x10\n\x08mem_name\x18\x03 \x01(\t\x12\x18\n\x10\x61pply_list_count\x18\x04 \x01(\r\x12\x11\n\tleft_time\x18\x05 \x01(\r\"*\n\x17\x43SPKG_CMD_QUIT_GANG_REQ\x12\x0f\n\x07reverse\x18\x01 \x01(\r\")\n\x17SCPKG_CMD_QUIT_GANG_RES\x12\x0e\n\x06result\x18\x01 \x01(\x05\"8\n\x1e\x43SPKG_TRANSFER_GANG_LEADER_REQ\x12\x16\n\x0etarget_role_id\x18\x01 \x01(\r\"0\n\x1eSCPKG_TRANSFER_GANG_LEADER_RES\x12\x0e\n\x06result\x18\x01 \x01(\x05\"-\n\x1a\x43SPKG_CMD_GANG_MEMLIST_REQ\x12\x0f\n\x07gang_id\x18\x01 \x01(\r\"d\n\x1aSCPKG_CMD_GANG_MEMLIST_RES\x12\x0e\n\x06result\x18\x01 \x01(\x05\x12\x0f\n\x07gang_id\x18\x02 \x01(\r\x12%\n\tlist_info\x18\x03 \x03(\x0b\x32\x12.CSDT_GANGMEM_INFO\",\n\x19\x43SPKG_CMD_GANG_DETAIL_REQ\x12\x0f\n\x07gang_id\x18\x01 \x01(\r\"\x94\x01\n\x19SCPKG_CMD_GANG_DETAIL_RES\x12\x0e\n\x06result\x18\x01 \x01(\x05\x12\x0f\n\x07gang_id\x18\x02 \x01(\r\x12/\n\x10gang_simple_info\x18\x03 \x01(\x0b\x32\x15.CSDT_GANGSIMPLE_INFO\x12%\n\tlist_info\x18\x04 \x03(\x0b\x32\x12.CSDT_GANGMEM_INFO\"\x89\x01\n\x1fSCPKG_CMD_GANG_MEM_LIST_CHG_RES\x12\x0b\n\x03\x64\x65l\x18\x01 \x01(\r\x12\x10\n\x08\x64\x65l_type\x18\x02 \x01(\r\x12\x0b\n\x03\x61\x64\x64\x18\x03 \x01(\r\x12$\n\x08mem_info\x18\x04 \x01(\x0b\x32\x12.CSDT_GANGMEM_INFO\x12\x14\n\x0cgang_mem_cnt\x18\x05 \x01(\r\"2\n\x1fSCPKG_GANG_BLESS_RANK_CLEAR_RES\x12\x0f\n\x07gang_id\x18\x01 \x01(\r\"i\n$CSPKG_CMD_GANG_UPDATE_BASIC_INFO_REQ\x12\x13\n\x0bgang_notify\x18\x01 \x01(\t\x12\x15\n\ris_auto_apply\x18\x02 \x01(\r\x12\x15\n\rcond_rank_pos\x18\x03 \x01(\r\",\n\x19\x43SPKG_CMD_SEARCH_GANG_REQ\x12\x0f\n\x07gang_id\x18\x01 \x01(\r\"d\n\x19SCPKG_CMD_SEARCH_GANG_RES\x12\x0e\n\x06result\x18\x01 \x01(\x05\x12\x0f\n\x07gang_id\x18\x02 \x01(\r\x12&\n\tgang_info\x18\x03 \x01(\x0b\x32\x13.CSDT_GANGLIST_INFO\"6\n$SCPKG_CMD_GANG_UPDATE_BASIC_INFO_RES\x12\x0e\n\x06result\x18\x01 \x01(\x05\"A\n\x1a\x43SPKG_CMD_GANG_APPROVE_REQ\x12\x0e\n\x06result\x18\x01 \x01(\x05\x12\x13\n\x0bmem_role_id\x18\x02 \x01(\r\"m\n\x1aSCPKG_CMD_GANG_APPROVE_RES\x12\x0e\n\x06result\x18\x01 \x01(\x05\x12\x10\n\x08mem_name\x18\x02 \x01(\t\x12\x13\n\x0bmem_role_id\x18\x03 \x01(\r\x12\x18\n\x10\x61pply_list_count\x18\x04 \x01(\r\"&\n\x17\x43SPKG_CMD_GANG_CHAT_REQ\x12\x0b\n\x03msg\x18\x01 \x01(\t\"\x87\x01\n\x17SCPKG_CMD_GANG_CHAT_RES\x12\x11\n\tfrom_name\x18\x01 \x01(\t\x12\x0b\n\x03msg\x18\x02 \x01(\t\x12\x14\n\x0c\x66rom_role_id\x18\x04 \x01(\r\x12#\n\x1bsender_cumulate_recharge_id\x18\x05 \x01(\r\x12\x11\n\tsend_time\x18\x03 \x01(\r\".\n\x1c\x43SPKG_CMD_GANG_APPLYLIST_REQ\x12\x0e\n\x06result\x18\x01 \x01(\x05\"M\n\x1cSCPKG_CMD_GANG_APPLYLIST_RES\x12-\n\napply_list\x18\x01 \x03(\x0b\x32\x19.CSDT_GANG_APPLYLIST_INFO\"\x8b\x01\n\x1fSCPKG_CMD_GANG_APPROVETOMEM_RES\x12\x0e\n\x06result\x18\x01 \x01(\x05\x12/\n\x10gang_simple_info\x18\x02 \x01(\x0b\x32\x15.CSDT_GANGSIMPLE_INFO\x12\'\n\tself_info\x18\x03 \x01(\x0b\x32\x14.CSDT_GANG_SELF_INFO\"\x91\x01\n!SCPKG_CMD_GANG_BASIC_INFO_CHG_RES\x12\x13\n\x0bgang_notify\x18\x01 \x01(\t\x12\x18\n\x10gang_apply_state\x18\x02 \x01(\r\x12\x15\n\rcond_rank_pos\x18\x03 \x01(\r\x12\x12\n\ngang_score\x18\x04 \x01(\r\x12\x12\n\ngang_level\x18\x05 \x01(\r\"7\n\x1b\x43SPKG_CMD_GANG_KICK_MEM_REQ\x12\x18\n\x10kick_mem_role_id\x18\x01 \x01(\r\"B\n\x1bSCPKG_CMD_GANG_KICK_MEM_RES\x12\x0e\n\x06result\x18\x01 \x01(\x05\x12\x13\n\x0bmem_role_id\x18\x02 \x01(\r\"J\n\x1c\x43SPKG_CMD_GANG_SET_ELDER_REQ\x12\x13\n\x0bmem_role_id\x18\x01 \x01(\r\x12\x15\n\rset_or_cancle\x18\x02 \x01(\r\"C\n\x1cSCPKG_CMD_GANG_SET_ELDER_RES\x12\x0e\n\x06result\x18\x01 \x01(\x05\x12\x13\n\x0bmem_role_id\x18\x02 \x01(\r\"\'\n\x14\x43SPKG_GANG_BLESS_REQ\x12\x0f\n\x07reverse\x18\x01 \x01(\x05\"\x86\x01\n\x14SCPKG_GANG_BLESS_RES\x12\x0e\n\x06result\x18\x01 \x01(\x05\x12%\n\rnormal_reward\x18\x02 \x01(\x0b\x32\x0e.ST_REWARD_RES\x12%\n\rextern_reward\x18\x03 \x01(\x0b\x32\x0e.ST_REWARD_RES\x12\x10\n\x08\x62less_id\x18\x04 \x01(\r\"1\n\x1e\x43SPKG_BUY_GANG_BLESS_COUNT_REQ\x12\x0f\n\x07reverse\x18\x01 \x01(\x05\"\x81\x01\n!SCPKG_REFRESH_GANG_BLESS_INFO_RES\x12\x18\n\x10gang_bless_count\x18\x01 \x01(\r\x12\x1c\n\x14\x62uy_gang_bless_count\x18\x02 \x01(\r\x12$\n\x1cleft_extern_gang_bless_count\x18\x03 \x01(\r\"=\n)CSPKG_SET_GANG_AUTO_APPLY_GANG_BATTLE_REQ\x12\x10\n\x08rerverse\x18\x01 \x01(\r\"I\n)SCPKG_SET_GANG_AUTO_APPLY_GANG_BATTLE_RES\x12\x1c\n\x14is_auto_apply_battle\x18\x01 \x01(\x05\"\x94\x01\n)CSPKG_SET_GANG_CITY_STRONG_POINT_HERO_REQ\x12\x10\n\x08\x63hg_type\x18\x01 \x01(\x05\x12\x0f\n\x07hero_id\x18\x02 \x01(\r\x12\x0f\n\x07\x63ity_id\x18\x03 \x01(\r\x12\x1a\n\x12strong_point_index\x18\x04 \x01(\x05\x12\x17\n\x0fhero_slot_index\x18\x05 \x01(\x05\";\n)SCPKG_SET_GANG_CITY_STRONG_POINT_HERO_RES\x12\x0e\n\x06result\x18\x01 \x01(\x05\"\xbc\x01\n)SCPKG_GANG_CITY_STRONG_POINT_HERO_CHG_RES\x12\x10\n\x08\x63hg_type\x18\x01 \x01(\x05\x12\x0f\n\x07\x63ity_id\x18\x02 \x01(\r\x12\x1a\n\x12strong_point_index\x18\x03 \x01(\x05\x12\x17\n\x0fhero_slot_index\x18\x04 \x01(\x05\x12\x37\n\thero_info\x18\x05 \x01(\x0b\x32$.ST_GANG_CITY_STRONG_POINT_HERO_INFO\"0\n\x1c\x43SPKG_GET_GANG_CITY_INFO_REQ\x12\x10\n\x08rerverse\x18\x01 \x01(\r\"P\n\x1cSCPKG_GET_GANG_CITY_INFO_RES\x12\x0e\n\x06result\x18\x01 \x01(\x05\x12 \n\tcity_info\x18\x02 \x01(\x0b\x32\r.ST_GANG_CITY\"/\n\x1b\x43SPKG_APPLY_GANG_BATTLE_REQ\x12\x10\n\x08rerverse\x18\x01 \x01(\r\"-\n\x1bSCPKG_APPLY_GANG_BATTLE_RES\x12\x0e\n\x06result\x18\x01 \x01(\r\".\n\x1dSCPKG_GANG_BATTLE_STATE_BROAD\x12\r\n\x05state\x18\x01 \x01(\r\"5\n\x1e\x43SPKG_GET_GANG_BATTLE_CITY_REQ\x12\x13\n\x0bis_get_self\x18\x01 \x01(\x08\"\xe4\x01\n\x1eSCPKG_GET_GANG_BATTLE_CITY_RES\x12\x0e\n\x06result\x18\x01 \x01(\x05\x12\x13\n\x0bis_get_self\x18\x02 \x01(\x08\x12\x12\n\nself_score\x18\x03 \x01(\r\x12\x14\n\x0ctarget_score\x18\x04 \x01(\r\x12\x18\n\x10target_gang_name\x18\x05 \x01(\t\x12\x19\n\x11target_gang_level\x18\x06 \x01(\r\x12 \n\tcity_info\x18\x07 \x01(\x0b\x32\r.ST_GANG_CITY\x12\x1c\n\x14target_gang_world_id\x18\x08 \x01(\x05\"\xa2\x01\n\x1eSCPKG_GANG_BATTTLE_POINT_BROAD\x12\x12\n\nself_score\x18\x01 \x01(\r\x12\x14\n\x0ctarget_score\x18\x02 \x01(\r\x12\x14\n\x0cis_self_city\x18\x03 \x01(\x08\x12\x0f\n\x07\x63ity_id\x18\x04 \x01(\r\x12\x1a\n\x12strong_point_index\x18\x05 \x01(\x05\x12\x13\n\x0bpoint_state\x18\x06 \x01(\r\"v\n#CSPKG_ENTER_GANG_BATTLE_DUNGEON_REQ\x12\x14\n\x0cself_hero_id\x18\x01 \x01(\r\x12\x16\n\x0etarget_city_id\x18\x02 \x01(\r\x12!\n\x19target_strong_point_index\x18\x03 \x01(\x05\"j\n ST_GANG_BATTLE_DEFENSE_HERO_INFO\x12\x16\n\x0etarget_role_id\x18\x01 \x01(\r\x12.\n\x0btarget_hero\x18\x02 \x01(\x0b\x32\x19.ST_BATTLE_HERO_ATTR_INFO\"\x98\x01\n#SCPKG_ENTER_GANG_BATTLE_DUNGEON_RES\x12\x0e\n\x06result\x18\x01 \x01(\x05\x12\x0e\n\x06\x64un_id\x18\x02 \x01(\r\x12\x14\n\x0cself_hero_id\x18\x03 \x01(\r\x12;\n\x10target_hero_info\x18\x04 \x03(\x0b\x32!.ST_GANG_BATTLE_DEFENSE_HERO_INFO\";\n)CSPKG_GANG_BATTLE_DUNGEON_ROUND_BEGIN_REQ\x12\x0e\n\x06\x64un_id\x18\x02 \x01(\r\"Q\n)SCPKG_GANG_BATTLE_DUNGEON_ROUND_BEGIN_RES\x12\x12\n\nbegin_time\x18\x01 \x01(\r\x12\x10\n\x08interval\x18\x02 \x01(\x05\"\x90\x01\n\x1d\x43SPKG_GANG_BATTLE_BALANCE_REQ\x12\x0e\n\x06\x64un_id\x18\x01 \x01(\r\x12\x14\n\x0cself_hero_id\x18\x02 \x01(\r\x12\x16\n\x0etarget_city_id\x18\x03 \x01(\r\x12!\n\x19target_strong_point_index\x18\x04 \x01(\x05\x12\x0e\n\x06is_win\x18\x05 \x01(\x08\"\\\n\x1dSCPKG_GANG_BATTLE_BALANCE_RES\x12\x0e\n\x06result\x18\x01 \x01(\x05\x12\x13\n\x0breward_gold\x18\x02 \x01(\r\x12\x16\n\x0ereward_crystal\x18\x03 \x01(\r\"7\n#CSPKG_CMD_GET_GANG_BATTLE_STATE_REQ\x12\x10\n\x08rerverse\x18\x01 \x01(\r\"\xc4\x01\n#SCPKG_CMD_GET_GANG_BATTLE_STATE_RES\x12\r\n\x05state\x18\x01 \x01(\r\x12\x11\n\tsub_state\x18\x02 \x01(\r\x12\x14\n\x0cpre_get_gold\x18\x03 \x01(\r\x12\x17\n\x0fpre_get_crystal\x18\x04 \x01(\r\x12\x13\n\x0b\x61ttack_hero\x18\x05 \x03(\r\x12\x37\n\x0c\x61ttack_point\x18\x06 \x03(\x0b\x32!.ST_GANG_BATTLE_ATTACK_POINT_INFO\"9\n%CSPKG_CMD_GET_GANG_BATTLE_HISTORY_REQ\x12\x10\n\x08rerverse\x18\x01 \x01(\r\"]\n%SCPKG_CMD_GET_GANG_BATTLE_HISTORY_RES\x12\x34\n\x0chistory_info\x18\x01 \x03(\x0b\x32\x1e.CSDT_GANG_BATTLE_HISTORY_INFO\"=\n)CSPKG_GET_GANG_BATTLE_MEM_ATTACK_INFO_REQ\x12\x10\n\x08rerverse\x18\x01 \x01(\r\"t\n)SCPKG_GET_GANG_BATTLE_MEM_ATTACK_INFO_RES\x12\x0e\n\x06result\x18\x01 \x01(\x05\x12\x37\n\x0emem_attck_info\x18\x02 \x01(\x0b\x32\x1f.ST_GANG_BATTLE_MEM_ATTACK_LIST\"7\n$CSPKG_GET_GANG_BATTLE_STATE_INFO_REQ\x12\x0f\n\x07reverse\x18\x01 \x01(\x05\"v\n$SCPKG_GET_GANG_BATTLE_STATE_INFO_RES\x12\x17\n\x0fis_battle_start\x18\x01 \x01(\x08\x12\x17\n\x0f\x61ttack_hero_num\x18\x02 \x01(\r\x12\x1c\n\x14has_can_attack_point\x18\x03 \x01(\x08')
+  serialized_pb=_b('\n\ngang.proto\x1a\x0frescommon.proto\"r\n#ST_GANG_CITY_STRONG_POINT_HERO_INFO\x12\x0f\n\x07role_id\x18\x01 \x01(\r\x12\x11\n\trole_name\x18\x03 \x01(\t\x12\'\n\thero_info\x18\x02 \x01(\x0b\x32\x14.ST_HERO_BATTLE_INFO\"\xc6\x01\n\x19ST_GANG_POINT_REPLAY_INFO\x12\x17\n\x0flast_attack_uid\x18\x01 \x01(\r\x12\x18\n\x10last_attack_name\x18\x02 \x01(\t\x12\x18\n\x10last_attack_time\x18\x03 \x01(\r\x12\x18\n\x10replay_unique_id\x18\x04 \x01(\x04\x12\x12\n\npoint_stat\x18\x05 \x01(\r\x12\x16\n\x0e\x66ile_byte_size\x18\x06 \x01(\r\x12\x16\n\x0e\x63lient_version\x18\x07 \x01(\t\"b\n\x18ST_GANG_CITY_REPLAY_INFO\x12\x0f\n\x07\x63ity_id\x18\x01 \x01(\r\x12\x35\n\x11point_replay_info\x18\x02 \x03(\x0b\x32\x1a.ST_GANG_POINT_REPLAY_INFO\"\\\n\x19ST_CHAMPION_LEAGUE_RECORD\x12\x0f\n\x07gang_id\x18\x01 \x01(\r\x12.\n\x0brecord_info\x18\x02 \x03(\x0b\x32\x19.ST_GANG_CITY_REPLAY_INFO\"Q\n\x1eST_CHAMPION_LEAGUE_RECORD_BLOB\x12/\n\x0bgang_record\x18\x01 \x03(\x0b\x32\x1a.ST_CHAMPION_LEAGUE_RECORD\"\xc7\x01\n\x13ST_GANG_REPLAY_INFO\x12\x39\n\x16small_city_replay_info\x18\x01 \x03(\x0b\x32\x19.ST_GANG_CITY_REPLAY_INFO\x12<\n\x19moderate_city_replay_info\x18\x02 \x03(\x0b\x32\x19.ST_GANG_CITY_REPLAY_INFO\x12\x37\n\x14\x62ig_city_replay_info\x18\x03 \x03(\x0b\x32\x19.ST_GANG_CITY_REPLAY_INFO\"\xa0\x01\n\x19ST_GANG_CITY_STRONG_POINT\x12\x13\n\x0bpoint_state\x18\x01 \x01(\r\x12\x37\n\thero_info\x18\x02 \x03(\x0b\x32$.ST_GANG_CITY_STRONG_POINT_HERO_INFO\x12\x35\n\x11point_replay_info\x18\x03 \x01(\x0b\x32\x1a.ST_GANG_POINT_REPLAY_INFO\"{\n\x11ST_GANG_CITY_INFO\x12\n\n\x02id\x18\x01 \x01(\r\x12\x12\n\ncity_state\x18\x02 \x01(\r\x12\x35\n\x11strong_point_info\x18\x03 \x03(\x0b\x32\x1a.ST_GANG_CITY_STRONG_POINT\x12\x0f\n\x07is_auto\x18\x04 \x01(\x08\"\x87\x01\n\x0cST_GANG_CITY\x12&\n\nsmall_city\x18\x01 \x03(\x0b\x32\x12.ST_GANG_CITY_INFO\x12)\n\rmoderate_city\x18\x02 \x03(\x0b\x32\x12.ST_GANG_CITY_INFO\x12$\n\x08\x62ig_city\x18\x03 \x03(\x0b\x32\x12.ST_GANG_CITY_INFO\"_\n\x17ST_CHAMPION_LEAGUE_CITY\x12 \n\tauto_zone\x18\x01 \x01(\x0b\x32\r.ST_GANG_CITY\x12\"\n\x0bmanual_zone\x18\x02 \x01(\x0b\x32\r.ST_GANG_CITY\"c\n\x17ST_GANG_BATTLE_MEM_INFO\x12\x13\n\x0bmem_role_id\x18\x01 \x01(\r\x12\x15\n\rmem_role_name\x18\x02 \x01(\t\x12\x1c\n\x14\x63umulate_recharge_id\x18\x03 \x01(\r\"E\n\x17ST_GANG_BATTLE_MEM_LIST\x12*\n\x08mem_info\x18\x01 \x03(\x0b\x32\x18.ST_GANG_BATTLE_MEM_INFO\"O\n ST_GANG_BATTLE_ATTACK_POINT_INFO\x12\x0f\n\x07\x63ity_id\x18\x01 \x01(\r\x12\x1a\n\x12strong_point_index\x18\x02 \x01(\x05\"\xa2\x01\n\x1eST_GANG_BATTLE_MEM_ATTACK_INFO\x12\x13\n\x0bmem_role_id\x18\x01 \x01(\r\x12\x15\n\rmem_role_name\x18\x02 \x01(\t\x12\x1b\n\x13mem_total_fight_cnt\x18\x03 \x01(\r\x12\x19\n\x11mem_win_fight_cnt\x18\x04 \x01(\r\x12\x1c\n\x14\x63umulate_recharge_id\x18\x05 \x01(\r\"S\n\x1eST_GANG_BATTLE_MEM_ATTACK_LIST\x12\x31\n\x08mem_info\x18\x01 \x03(\x0b\x32\x1f.ST_GANG_BATTLE_MEM_ATTACK_INFO\"\xbe\x01\n\x18\x43SDT_GANG_APPLYLIST_INFO\x12\x10\n\x08mem_name\x18\x01 \x01(\t\x12\x13\n\x0bmem_role_id\x18\x02 \x01(\r\x12\x12\n\napply_time\x18\x03 \x01(\r\x12\x14\n\x0cmem_rank_pos\x18\x04 \x01(\r\x12\x1f\n\x17mem_gang_battle_win_cnt\x18\x05 \x01(\r\x12\x1c\n\x14\x63umulate_recharge_id\x18\x06 \x01(\r\x12\x12\n\nhead_photo\x18\x07 \x01(\r\"\xf8\x01\n\x14\x43SDT_GANGSIMPLE_INFO\x12\x11\n\tgang_name\x18\x01 \x01(\t\x12\x0f\n\x07gang_id\x18\x02 \x01(\r\x12\x18\n\x10gang_leader_name\x18\x03 \x01(\t\x12\x18\n\x10gang_apply_state\x18\x04 \x01(\r\x12\x15\n\rcond_rank_pos\x18\x05 \x01(\r\x12\x16\n\x0egang_mem_count\x18\x06 \x01(\r\x12\x12\n\ngang_level\x18\x07 \x01(\r\x12\x12\n\ngang_score\x18\x08 \x01(\r\x12\x13\n\x0bgang_notify\x18\t \x01(\t\x12\x1c\n\x14is_auto_apply_battle\x18\n \x01(\r\"\xe3\x01\n\x12\x43SDT_GANGLIST_INFO\x12\x0f\n\x07gang_id\x18\x01 \x01(\r\x12\x11\n\tgang_name\x18\x02 \x01(\t\x12\x18\n\x10gang_apply_state\x18\x03 \x01(\r\x12\x12\n\ngang_level\x18\x04 \x01(\r\x12\x12\n\ngang_score\x18\x05 \x01(\r\x12\x16\n\x0egang_mem_count\x18\x06 \x01(\r\x12\x1a\n\x12gang_cond_rank_pos\x18\x07 \x01(\r\x12\x18\n\x10is_in_apply_list\x18\x08 \x01(\r\x12\x19\n\x11gang_avg_rank_pos\x18\t \x01(\r\"\xfc\x01\n\x11\x43SDT_GANGMEM_INFO\x12\x13\n\x0bmem_role_id\x18\x01 \x01(\r\x12\x10\n\x08mem_name\x18\x02 \x01(\t\x12\x13\n\x0bmem_postion\x18\x03 \x01(\r\x12!\n\x19mem_gang_battle_win_score\x18\x04 \x01(\r\x12\x14\n\x0cmem_rank_pos\x18\x05 \x01(\r\x12\x17\n\x0flast_leave_time\x18\x06 \x01(\r\x12\x1c\n\x14\x63umulate_recharge_id\x18\x07 \x01(\r\x12\'\n\x0fgang_bless_info\x18\x08 \x01(\x0b\x32\x0e.ST_BLESS_INFO\x12\x12\n\nhead_photo\x18\t \x01(\r\"\'\n\x13\x43SDT_GANG_SELF_INFO\x12\x10\n\x08position\x18\x01 \x01(\r\"\x94\x01\n!CSDT_GANG_BATTLE_HISTORY_MEM_INFO\x12\x13\n\x0bmem_role_id\x18\x01 \x01(\r\x12\x10\n\x08mem_name\x18\x02 \x01(\t\x12\x13\n\x0bmem_win_cnt\x18\x03 \x01(\r\x12\x15\n\rmem_total_cnt\x18\x04 \x01(\r\x12\x1c\n\x14\x63umulate_recharge_id\x18\x05 \x01(\r\"^\n!CSDT_GANG_BATTLE_HISTORY_MEM_LIST\x12\x39\n\rgang_mem_list\x18\x01 \x03(\x0b\x32\".CSDT_GANG_BATTLE_HISTORY_MEM_INFO\"\x8c\x02\n\x1d\x43SDT_GANG_BATTLE_HISTORY_INFO\x12\x13\n\x0b\x62\x61ttle_time\x18\x01 \x01(\r\x12\x12\n\ngang_level\x18\x02 \x01(\r\x12\x17\n\x0f\x64\x65\x66\x65nse_gang_id\x18\x03 \x01(\r\x12\x19\n\x11\x64\x65\x66\x65nse_gang_name\x18\x04 \x01(\t\x12\x1a\n\x12\x64\x65\x66\x65nse_gang_level\x18\x05 \x01(\r\x12\x19\n\x11self_battle_score\x18\x06 \x01(\r\x12\x1c\n\x14\x64\x65\x66\x65nse_battle_score\x18\x07 \x01(\r\x12\x39\n\rmem_list_info\x18\x08 \x01(\x0b\x32\".CSDT_GANG_BATTLE_HISTORY_MEM_LIST\"p\n\x18\x43SPKG_CMD_CREATEGANG_REQ\x12\x11\n\tgang_name\x18\x01 \x01(\t\x12\x13\n\x0bgang_notify\x18\x02 \x01(\t\x12\x15\n\ris_auto_apply\x18\x03 \x01(\r\x12\x15\n\rcond_rank_pos\x18\x04 \x01(\r\"\x97\x01\n\x18SCPKG_CMD_CREATEGANG_RES\x12\x0e\n\x06result\x18\x01 \x01(\x05\x12/\n\x10gang_simple_info\x18\x02 \x01(\x0b\x32\x15.CSDT_GANGSIMPLE_INFO\x12\'\n\tself_info\x18\x03 \x01(\x0b\x32\x14.CSDT_GANG_SELF_INFO\x12\x11\n\tleft_time\x18\x05 \x01(\r\"C\n\x16\x43SPKG_CMD_GANGLIST_REQ\x12\x15\n\rpage_start_id\x18\x01 \x01(\r\x12\x12\n\npage_count\x18\x02 \x01(\r\"S\n\x16SCPKG_CMD_GANGLIST_RES\x12&\n\tgang_list\x18\x01 \x03(\x0b\x32\x13.CSDT_GANGLIST_INFO\x12\x11\n\ttotal_cnt\x18\x02 \x01(\r\"\xa4\x01\n\x18SCPKG_CMD_ROLELOGIN_GANG\x12\x14\n\x0cis_have_gang\x18\x01 \x01(\r\x12\x18\n\x10\x61pply_list_count\x18\x02 \x01(\r\x12/\n\x10gang_simple_info\x18\x03 \x01(\x0b\x32\x15.CSDT_GANGSIMPLE_INFO\x12\'\n\tself_info\x18\x04 \x01(\x0b\x32\x14.CSDT_GANG_SELF_INFO\">\n\x18\x43SPKG_CMD_APPLY_GANG_REQ\x12\x11\n\tgang_name\x18\x01 \x01(\t\x12\x0f\n\x07gang_id\x18\x02 \x01(\r\"z\n\x18SCPKG_CMD_APPLY_GANG_RES\x12\x0e\n\x06result\x18\x01 \x01(\x05\x12\x0f\n\x07gang_id\x18\x02 \x01(\r\x12\x10\n\x08mem_name\x18\x03 \x01(\t\x12\x18\n\x10\x61pply_list_count\x18\x04 \x01(\r\x12\x11\n\tleft_time\x18\x05 \x01(\r\"*\n\x17\x43SPKG_CMD_QUIT_GANG_REQ\x12\x0f\n\x07reverse\x18\x01 \x01(\r\")\n\x17SCPKG_CMD_QUIT_GANG_RES\x12\x0e\n\x06result\x18\x01 \x01(\x05\"8\n\x1e\x43SPKG_TRANSFER_GANG_LEADER_REQ\x12\x16\n\x0etarget_role_id\x18\x01 \x01(\r\"0\n\x1eSCPKG_TRANSFER_GANG_LEADER_RES\x12\x0e\n\x06result\x18\x01 \x01(\x05\"-\n\x1a\x43SPKG_CMD_GANG_MEMLIST_REQ\x12\x0f\n\x07gang_id\x18\x01 \x01(\r\"d\n\x1aSCPKG_CMD_GANG_MEMLIST_RES\x12\x0e\n\x06result\x18\x01 \x01(\x05\x12\x0f\n\x07gang_id\x18\x02 \x01(\r\x12%\n\tlist_info\x18\x03 \x03(\x0b\x32\x12.CSDT_GANGMEM_INFO\",\n\x19\x43SPKG_CMD_GANG_DETAIL_REQ\x12\x0f\n\x07gang_id\x18\x01 \x01(\r\"\x94\x01\n\x19SCPKG_CMD_GANG_DETAIL_RES\x12\x0e\n\x06result\x18\x01 \x01(\x05\x12\x0f\n\x07gang_id\x18\x02 \x01(\r\x12/\n\x10gang_simple_info\x18\x03 \x01(\x0b\x32\x15.CSDT_GANGSIMPLE_INFO\x12%\n\tlist_info\x18\x04 \x03(\x0b\x32\x12.CSDT_GANGMEM_INFO\"\x89\x01\n\x1fSCPKG_CMD_GANG_MEM_LIST_CHG_RES\x12\x0b\n\x03\x64\x65l\x18\x01 \x01(\r\x12\x10\n\x08\x64\x65l_type\x18\x02 \x01(\r\x12\x0b\n\x03\x61\x64\x64\x18\x03 \x01(\r\x12$\n\x08mem_info\x18\x04 \x01(\x0b\x32\x12.CSDT_GANGMEM_INFO\x12\x14\n\x0cgang_mem_cnt\x18\x05 \x01(\r\"2\n\x1fSCPKG_GANG_BLESS_RANK_CLEAR_RES\x12\x0f\n\x07gang_id\x18\x01 \x01(\r\"i\n$CSPKG_CMD_GANG_UPDATE_BASIC_INFO_REQ\x12\x13\n\x0bgang_notify\x18\x01 \x01(\t\x12\x15\n\ris_auto_apply\x18\x02 \x01(\r\x12\x15\n\rcond_rank_pos\x18\x03 \x01(\r\",\n\x19\x43SPKG_CMD_SEARCH_GANG_REQ\x12\x0f\n\x07gang_id\x18\x01 \x01(\r\"d\n\x19SCPKG_CMD_SEARCH_GANG_RES\x12\x0e\n\x06result\x18\x01 \x01(\x05\x12\x0f\n\x07gang_id\x18\x02 \x01(\r\x12&\n\tgang_info\x18\x03 \x01(\x0b\x32\x13.CSDT_GANGLIST_INFO\"6\n$SCPKG_CMD_GANG_UPDATE_BASIC_INFO_RES\x12\x0e\n\x06result\x18\x01 \x01(\x05\"A\n\x1a\x43SPKG_CMD_GANG_APPROVE_REQ\x12\x0e\n\x06result\x18\x01 \x01(\x05\x12\x13\n\x0bmem_role_id\x18\x02 \x01(\r\"m\n\x1aSCPKG_CMD_GANG_APPROVE_RES\x12\x0e\n\x06result\x18\x01 \x01(\x05\x12\x10\n\x08mem_name\x18\x02 \x01(\t\x12\x13\n\x0bmem_role_id\x18\x03 \x01(\r\x12\x18\n\x10\x61pply_list_count\x18\x04 \x01(\r\".\n\x1c\x43SPKG_CMD_GANG_APPLYLIST_REQ\x12\x0e\n\x06result\x18\x01 \x01(\x05\"M\n\x1cSCPKG_CMD_GANG_APPLYLIST_RES\x12-\n\napply_list\x18\x01 \x03(\x0b\x32\x19.CSDT_GANG_APPLYLIST_INFO\"\x8b\x01\n\x1fSCPKG_CMD_GANG_APPROVETOMEM_RES\x12\x0e\n\x06result\x18\x01 \x01(\x05\x12/\n\x10gang_simple_info\x18\x02 \x01(\x0b\x32\x15.CSDT_GANGSIMPLE_INFO\x12\'\n\tself_info\x18\x03 \x01(\x0b\x32\x14.CSDT_GANG_SELF_INFO\"\x91\x01\n!SCPKG_CMD_GANG_BASIC_INFO_CHG_RES\x12\x13\n\x0bgang_notify\x18\x01 \x01(\t\x12\x18\n\x10gang_apply_state\x18\x02 \x01(\r\x12\x15\n\rcond_rank_pos\x18\x03 \x01(\r\x12\x12\n\ngang_score\x18\x04 \x01(\r\x12\x12\n\ngang_level\x18\x05 \x01(\r\"7\n\x1b\x43SPKG_CMD_GANG_KICK_MEM_REQ\x12\x18\n\x10kick_mem_role_id\x18\x01 \x01(\r\"B\n\x1bSCPKG_CMD_GANG_KICK_MEM_RES\x12\x0e\n\x06result\x18\x01 \x01(\x05\x12\x13\n\x0bmem_role_id\x18\x02 \x01(\r\"J\n\x1c\x43SPKG_CMD_GANG_SET_ELDER_REQ\x12\x13\n\x0bmem_role_id\x18\x01 \x01(\r\x12\x15\n\rset_or_cancle\x18\x02 \x01(\r\"C\n\x1cSCPKG_CMD_GANG_SET_ELDER_RES\x12\x0e\n\x06result\x18\x01 \x01(\x05\x12\x13\n\x0bmem_role_id\x18\x02 \x01(\r\"\'\n\x14\x43SPKG_GANG_BLESS_REQ\x12\x0f\n\x07reverse\x18\x01 \x01(\x05\"\x86\x01\n\x14SCPKG_GANG_BLESS_RES\x12\x0e\n\x06result\x18\x01 \x01(\x05\x12%\n\rnormal_reward\x18\x02 \x01(\x0b\x32\x0e.ST_REWARD_RES\x12%\n\rextern_reward\x18\x03 \x01(\x0b\x32\x0e.ST_REWARD_RES\x12\x10\n\x08\x62less_id\x18\x04 \x01(\r\"1\n\x1e\x43SPKG_BUY_GANG_BLESS_COUNT_REQ\x12\x0f\n\x07reverse\x18\x01 \x01(\x05\"\x81\x01\n!SCPKG_REFRESH_GANG_BLESS_INFO_RES\x12\x18\n\x10gang_bless_count\x18\x01 \x01(\r\x12\x1c\n\x14\x62uy_gang_bless_count\x18\x02 \x01(\r\x12$\n\x1cleft_extern_gang_bless_count\x18\x03 \x01(\r\"=\n)CSPKG_SET_GANG_AUTO_APPLY_GANG_BATTLE_REQ\x12\x10\n\x08rerverse\x18\x01 \x01(\r\"I\n)SCPKG_SET_GANG_AUTO_APPLY_GANG_BATTLE_RES\x12\x1c\n\x14is_auto_apply_battle\x18\x01 \x01(\x05\"\xb0\x01\n)CSPKG_SET_GANG_CITY_STRONG_POINT_HERO_REQ\x12\x10\n\x08\x63hg_type\x18\x01 \x01(\x05\x12\x0f\n\x07hero_id\x18\x02 \x01(\r\x12\x0f\n\x07\x63ity_id\x18\x03 \x01(\r\x12\x1a\n\x12strong_point_index\x18\x04 \x01(\x05\x12\x17\n\x0fhero_slot_index\x18\x05 \x01(\x05\x12\x1a\n\x12is_champion_league\x18\x06 \x01(\x08\";\n)SCPKG_SET_GANG_CITY_STRONG_POINT_HERO_RES\x12\x0e\n\x06result\x18\x01 \x01(\x05\"\xd8\x01\n)SCPKG_GANG_CITY_STRONG_POINT_HERO_CHG_RES\x12\x10\n\x08\x63hg_type\x18\x01 \x01(\x05\x12\x0f\n\x07\x63ity_id\x18\x02 \x01(\r\x12\x1a\n\x12strong_point_index\x18\x03 \x01(\x05\x12\x17\n\x0fhero_slot_index\x18\x04 \x01(\x05\x12\x37\n\thero_info\x18\x05 \x01(\x0b\x32$.ST_GANG_CITY_STRONG_POINT_HERO_INFO\x12\x1a\n\x12is_champion_league\x18\x06 \x01(\x08\"L\n\x1c\x43SPKG_GET_GANG_CITY_INFO_REQ\x12\x10\n\x08rerverse\x18\x01 \x01(\r\x12\x1a\n\x12is_champion_league\x18\x02 \x01(\x08\"l\n\x1cSCPKG_GET_GANG_CITY_INFO_RES\x12\x0e\n\x06result\x18\x01 \x01(\x05\x12 \n\tcity_info\x18\x02 \x01(\x0b\x32\r.ST_GANG_CITY\x12\x1a\n\x12is_champion_league\x18\x03 \x01(\x08\"/\n\x1b\x43SPKG_APPLY_GANG_BATTLE_REQ\x12\x10\n\x08rerverse\x18\x01 \x01(\r\"-\n\x1bSCPKG_APPLY_GANG_BATTLE_RES\x12\x0e\n\x06result\x18\x01 \x01(\r\"J\n\x1dSCPKG_GANG_BATTLE_STATE_BROAD\x12\r\n\x05state\x18\x01 \x01(\r\x12\x1a\n\x12is_champion_league\x18\x02 \x01(\x08\"Q\n\x1e\x43SPKG_GET_GANG_BATTLE_CITY_REQ\x12\x13\n\x0bis_get_self\x18\x01 \x01(\x08\x12\x1a\n\x12is_champion_league\x18\x02 \x01(\x08\"\x80\x02\n\x1eSCPKG_GET_GANG_BATTLE_CITY_RES\x12\x0e\n\x06result\x18\x01 \x01(\x05\x12\x13\n\x0bis_get_self\x18\x02 \x01(\x08\x12\x12\n\nself_score\x18\x03 \x01(\r\x12\x14\n\x0ctarget_score\x18\x04 \x01(\r\x12\x18\n\x10target_gang_name\x18\x05 \x01(\t\x12\x19\n\x11target_gang_level\x18\x06 \x01(\r\x12 \n\tcity_info\x18\x07 \x01(\x0b\x32\r.ST_GANG_CITY\x12\x1c\n\x14target_gang_world_id\x18\x08 \x01(\x05\x12\x1a\n\x12is_champion_league\x18\t \x01(\x08\"\xbe\x01\n\x1eSCPKG_GANG_BATTTLE_POINT_BROAD\x12\x12\n\nself_score\x18\x01 \x01(\r\x12\x14\n\x0ctarget_score\x18\x02 \x01(\r\x12\x14\n\x0cis_self_city\x18\x03 \x01(\x08\x12\x0f\n\x07\x63ity_id\x18\x04 \x01(\r\x12\x1a\n\x12strong_point_index\x18\x05 \x01(\x05\x12\x13\n\x0bpoint_state\x18\x06 \x01(\r\x12\x1a\n\x12is_champion_league\x18\x07 \x01(\x08\"v\n#CSPKG_ENTER_GANG_BATTLE_DUNGEON_REQ\x12\x14\n\x0cself_hero_id\x18\x01 \x01(\r\x12\x16\n\x0etarget_city_id\x18\x02 \x01(\r\x12!\n\x19target_strong_point_index\x18\x03 \x01(\x05\"j\n ST_GANG_BATTLE_DEFENSE_HERO_INFO\x12\x16\n\x0etarget_role_id\x18\x01 \x01(\r\x12.\n\x0btarget_hero\x18\x02 \x01(\x0b\x32\x19.ST_BATTLE_HERO_ATTR_INFO\"\x98\x01\n#SCPKG_ENTER_GANG_BATTLE_DUNGEON_RES\x12\x0e\n\x06result\x18\x01 \x01(\x05\x12\x0e\n\x06\x64un_id\x18\x02 \x01(\r\x12\x14\n\x0cself_hero_id\x18\x03 \x01(\r\x12;\n\x10target_hero_info\x18\x04 \x03(\x0b\x32!.ST_GANG_BATTLE_DEFENSE_HERO_INFO\";\n)CSPKG_GANG_BATTLE_DUNGEON_ROUND_BEGIN_REQ\x12\x0e\n\x06\x64un_id\x18\x02 \x01(\r\"Q\n)SCPKG_GANG_BATTLE_DUNGEON_ROUND_BEGIN_RES\x12\x12\n\nbegin_time\x18\x01 \x01(\r\x12\x10\n\x08interval\x18\x02 \x01(\x05\"\x90\x01\n\x1d\x43SPKG_GANG_BATTLE_BALANCE_REQ\x12\x0e\n\x06\x64un_id\x18\x01 \x01(\r\x12\x14\n\x0cself_hero_id\x18\x02 \x01(\r\x12\x16\n\x0etarget_city_id\x18\x03 \x01(\r\x12!\n\x19target_strong_point_index\x18\x04 \x01(\x05\x12\x0e\n\x06is_win\x18\x05 \x01(\x08\"\\\n\x1dSCPKG_GANG_BATTLE_BALANCE_RES\x12\x0e\n\x06result\x18\x01 \x01(\x05\x12\x13\n\x0breward_gold\x18\x02 \x01(\r\x12\x16\n\x0ereward_crystal\x18\x03 \x01(\r\"7\n#CSPKG_CMD_GET_GANG_BATTLE_STATE_REQ\x12\x10\n\x08rerverse\x18\x01 \x01(\r\"\xc4\x01\n#SCPKG_CMD_GET_GANG_BATTLE_STATE_RES\x12\r\n\x05state\x18\x01 \x01(\r\x12\x11\n\tsub_state\x18\x02 \x01(\r\x12\x14\n\x0cpre_get_gold\x18\x03 \x01(\r\x12\x17\n\x0fpre_get_crystal\x18\x04 \x01(\r\x12\x13\n\x0b\x61ttack_hero\x18\x05 \x03(\r\x12\x37\n\x0c\x61ttack_point\x18\x06 \x03(\x0b\x32!.ST_GANG_BATTLE_ATTACK_POINT_INFO\"9\n%CSPKG_CMD_GET_GANG_BATTLE_HISTORY_REQ\x12\x10\n\x08rerverse\x18\x01 \x01(\r\"]\n%SCPKG_CMD_GET_GANG_BATTLE_HISTORY_RES\x12\x34\n\x0chistory_info\x18\x01 \x03(\x0b\x32\x1e.CSDT_GANG_BATTLE_HISTORY_INFO\"Y\n)CSPKG_GET_GANG_BATTLE_MEM_ATTACK_INFO_REQ\x12\x10\n\x08rerverse\x18\x01 \x01(\r\x12\x1a\n\x12is_champion_league\x18\x02 \x01(\x08\"\x90\x01\n)SCPKG_GET_GANG_BATTLE_MEM_ATTACK_INFO_RES\x12\x0e\n\x06result\x18\x01 \x01(\x05\x12\x37\n\x0emem_attck_info\x18\x02 \x01(\x0b\x32\x1f.ST_GANG_BATTLE_MEM_ATTACK_LIST\x12\x1a\n\x12is_champion_league\x18\x03 \x01(\x08\"S\n$CSPKG_GET_GANG_BATTLE_STATE_INFO_REQ\x12\x0f\n\x07reverse\x18\x01 \x01(\x05\x12\x1a\n\x12is_champion_league\x18\x02 \x01(\x08\"\x92\x01\n$SCPKG_GET_GANG_BATTLE_STATE_INFO_RES\x12\x17\n\x0fis_battle_start\x18\x01 \x01(\x08\x12\x17\n\x0f\x61ttack_hero_num\x18\x02 \x01(\r\x12\x1c\n\x14has_can_attack_point\x18\x03 \x01(\x08\x12\x1a\n\x12is_champion_league\x18\x04 \x01(\x08\"2\n\x1f\x43SPKG_CHAMPION_LEAGUE_APPLY_REQ\x12\x0f\n\x07reverse\x18\x01 \x01(\x05\"1\n\x1fSCPKG_CHAMPION_LEAGUE_APPLY_RES\x12\x0e\n\x06result\x18\x01 \x01(\x05\"6\n#CSPKG_CHAMPION_LEAGUE_GET_STATE_REQ\x12\x0f\n\x07reverse\x18\x01 \x01(\x05\"\xf3\x01\n#SCPKG_CHAMPION_LEAGUE_GET_STATE_RES\x12\r\n\x05state\x18\x01 \x01(\x05\x12\x11\n\tsub_state\x18\x02 \x01(\x05\x12\x10\n\x08round_id\x18\x03 \x01(\x05\x12\x16\n\x0e\x61pply_end_time\x18\x04 \x01(\r\x12\x19\n\x11season_begin_time\x18\x05 \x01(\r\x12\x17\n\x0fseason_end_time\x18\x06 \x01(\r\x12\x13\n\x0b\x61ttack_hero\x18\x07 \x03(\r\x12\x37\n\x0c\x61ttack_point\x18\x08 \x03(\x0b\x32!.ST_GANG_BATTLE_ATTACK_POINT_INFO\"4\n#SCPKG_CHAMPION_LEAGUE_STATE_REFRESH\x12\r\n\x05state\x18\x01 \x01(\r\"<\n)CSPKG_CHAMPION_LEAGUE_GET_BATTLE_PAIR_REQ\x12\x0f\n\x07reverse\x18\x01 \x01(\x05\"d\n)SCPKG_CHAMPION_LEAGUE_GET_BATTLE_PAIR_RES\x12\x37\n\x10\x62\x61ttle_pair_info\x18\x01 \x03(\x0b\x32\x1d.ST_CHAMPION_LEAGUE_PAIR_LIST\"5\n\"CSPKG_CHAMPION_LEAGUE_GET_RANK_REQ\x12\x0f\n\x07reverse\x18\x01 \x01(\x05\"n\n\"SCPKG_CHAMPION_LEAGUE_GET_RANK_RES\x12\x16\n\x0etotal_gang_num\x18\x01 \x01(\r\x12\x30\n\trank_list\x18\x02 \x03(\x0b\x32\x1d.ST_CHAMPION_LEAGUE_TEAM_INFO\"r\n\x1f\x43SPKG_ENTER_CHAMPION_LEAGUE_REQ\x12\x14\n\x0cself_hero_id\x18\x01 \x03(\r\x12\x16\n\x0etarget_city_id\x18\x02 \x01(\r\x12!\n\x19target_strong_point_index\x18\x03 \x01(\x05\"\xa5\x01\n\x1fSCPKG_ENTER_CHAMPION_LEAGUE_RES\x12\x0e\n\x06result\x18\x01 \x01(\x05\x12\x0e\n\x06\x64un_id\x18\x02 \x01(\r\x12\x14\n\x0cself_hero_id\x18\x03 \x03(\r\x12;\n\x10target_hero_info\x18\x04 \x03(\x0b\x32!.ST_GANG_BATTLE_DEFENSE_HERO_INFO\x12\x0f\n\x07is_auto\x18\x05 \x01(\x08\"7\n%CSPKG_CHAMPION_LEAGUE_ROUND_BEGIN_REQ\x12\x0e\n\x06\x64un_id\x18\x02 \x01(\r\"M\n%SCPKG_CHAMPION_LEAGUE_ROUND_BEGIN_RES\x12\x12\n\nbegin_time\x18\x01 \x01(\r\x12\x10\n\x08interval\x18\x02 \x01(\x05\"\x94\x01\n!CSPKG_CHAMPION_LEAGUE_BALANCE_REQ\x12\x0e\n\x06\x64un_id\x18\x01 \x01(\r\x12\x14\n\x0cself_hero_id\x18\x02 \x03(\r\x12\x16\n\x0etarget_city_id\x18\x03 \x01(\r\x12!\n\x19target_strong_point_index\x18\x04 \x01(\x05\x12\x0e\n\x06is_win\x18\x05 \x01(\x08\"`\n!SCPKG_CHAMPION_LEAGUE_BALANCE_RES\x12\x0e\n\x06result\x18\x01 \x01(\x05\x12\x13\n\x0breward_gold\x18\x02 \x01(\r\x12\x16\n\x0ereward_crystal\x18\x03 \x01(\r\"d\n CSPKG_GET_GANG_BATTLE_REPLAY_REQ\x12\x16\n\x0eis_get_history\x18\x01 \x01(\r\x12\x13\n\x0bis_get_self\x18\x02 \x01(\r\x12\x13\n\x0b\x62\x61ttle_time\x18\x03 \x01(\r\"\x9d\x01\n SCPKG_GET_GANG_BATTLE_REPLAY_RES\x12\x0e\n\x06result\x18\x01 \x01(\x05\x12\x16\n\x0eis_get_history\x18\x02 \x01(\r\x12\x13\n\x0bis_get_self\x18\x03 \x01(\r\x12)\n\x0breplay_info\x18\x04 \x01(\x0b\x32\x14.ST_GANG_REPLAY_INFO\x12\x11\n\tgang_name\x18\x05 \x01(\t\"I\n$CSPKG_GET_CHAMPION_LEAGUE_RECORD_REQ\x12\x10\n\x08round_id\x18\x01 \x01(\r\x12\x0f\n\x07gang_id\x18\x02 \x01(\r\"\x91\x01\n$SCPKG_GET_CHAMPION_LEAGUE_RECORD_RES\x12\x0e\n\x06result\x18\x01 \x01(\x05\x12/\n\x0brecord_info\x18\x02 \x01(\x0b\x32\x1a.ST_CHAMPION_LEAGUE_RECORD\x12\x12\n\nself_score\x18\x03 \x01(\r\x12\x14\n\x0ctarget_score\x18\x04 \x01(\r')
   ,
   dependencies=[rescommon_pb2.DESCRIPTOR,])
 _sym_db.RegisterFileDescriptor(DESCRIPTOR)
@@ -71,6 +71,226 @@ _ST_GANG_CITY_STRONG_POINT_HERO_INFO = _descriptor.Descriptor(
 )
 
 
+_ST_GANG_POINT_REPLAY_INFO = _descriptor.Descriptor(
+  name='ST_GANG_POINT_REPLAY_INFO',
+  full_name='ST_GANG_POINT_REPLAY_INFO',
+  filename=None,
+  file=DESCRIPTOR,
+  containing_type=None,
+  fields=[
+    _descriptor.FieldDescriptor(
+      name='last_attack_uid', full_name='ST_GANG_POINT_REPLAY_INFO.last_attack_uid', index=0,
+      number=1, type=13, cpp_type=3, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    _descriptor.FieldDescriptor(
+      name='last_attack_name', full_name='ST_GANG_POINT_REPLAY_INFO.last_attack_name', index=1,
+      number=2, type=9, cpp_type=9, label=1,
+      has_default_value=False, default_value=_b("").decode('utf-8'),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    _descriptor.FieldDescriptor(
+      name='last_attack_time', full_name='ST_GANG_POINT_REPLAY_INFO.last_attack_time', index=2,
+      number=3, type=13, cpp_type=3, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    _descriptor.FieldDescriptor(
+      name='replay_unique_id', full_name='ST_GANG_POINT_REPLAY_INFO.replay_unique_id', index=3,
+      number=4, type=4, cpp_type=4, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    _descriptor.FieldDescriptor(
+      name='point_stat', full_name='ST_GANG_POINT_REPLAY_INFO.point_stat', index=4,
+      number=5, type=13, cpp_type=3, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    _descriptor.FieldDescriptor(
+      name='file_byte_size', full_name='ST_GANG_POINT_REPLAY_INFO.file_byte_size', index=5,
+      number=6, type=13, cpp_type=3, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    _descriptor.FieldDescriptor(
+      name='client_version', full_name='ST_GANG_POINT_REPLAY_INFO.client_version', index=6,
+      number=7, type=9, cpp_type=9, label=1,
+      has_default_value=False, default_value=_b("").decode('utf-8'),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+  ],
+  extensions=[
+  ],
+  nested_types=[],
+  enum_types=[
+  ],
+  options=None,
+  is_extendable=False,
+  extension_ranges=[],
+  oneofs=[
+  ],
+  serialized_start=148,
+  serialized_end=346,
+)
+
+
+_ST_GANG_CITY_REPLAY_INFO = _descriptor.Descriptor(
+  name='ST_GANG_CITY_REPLAY_INFO',
+  full_name='ST_GANG_CITY_REPLAY_INFO',
+  filename=None,
+  file=DESCRIPTOR,
+  containing_type=None,
+  fields=[
+    _descriptor.FieldDescriptor(
+      name='city_id', full_name='ST_GANG_CITY_REPLAY_INFO.city_id', index=0,
+      number=1, type=13, cpp_type=3, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    _descriptor.FieldDescriptor(
+      name='point_replay_info', full_name='ST_GANG_CITY_REPLAY_INFO.point_replay_info', index=1,
+      number=2, type=11, cpp_type=10, label=3,
+      has_default_value=False, default_value=[],
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+  ],
+  extensions=[
+  ],
+  nested_types=[],
+  enum_types=[
+  ],
+  options=None,
+  is_extendable=False,
+  extension_ranges=[],
+  oneofs=[
+  ],
+  serialized_start=348,
+  serialized_end=446,
+)
+
+
+_ST_CHAMPION_LEAGUE_RECORD = _descriptor.Descriptor(
+  name='ST_CHAMPION_LEAGUE_RECORD',
+  full_name='ST_CHAMPION_LEAGUE_RECORD',
+  filename=None,
+  file=DESCRIPTOR,
+  containing_type=None,
+  fields=[
+    _descriptor.FieldDescriptor(
+      name='gang_id', full_name='ST_CHAMPION_LEAGUE_RECORD.gang_id', index=0,
+      number=1, type=13, cpp_type=3, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    _descriptor.FieldDescriptor(
+      name='record_info', full_name='ST_CHAMPION_LEAGUE_RECORD.record_info', index=1,
+      number=2, type=11, cpp_type=10, label=3,
+      has_default_value=False, default_value=[],
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+  ],
+  extensions=[
+  ],
+  nested_types=[],
+  enum_types=[
+  ],
+  options=None,
+  is_extendable=False,
+  extension_ranges=[],
+  oneofs=[
+  ],
+  serialized_start=448,
+  serialized_end=540,
+)
+
+
+_ST_CHAMPION_LEAGUE_RECORD_BLOB = _descriptor.Descriptor(
+  name='ST_CHAMPION_LEAGUE_RECORD_BLOB',
+  full_name='ST_CHAMPION_LEAGUE_RECORD_BLOB',
+  filename=None,
+  file=DESCRIPTOR,
+  containing_type=None,
+  fields=[
+    _descriptor.FieldDescriptor(
+      name='gang_record', full_name='ST_CHAMPION_LEAGUE_RECORD_BLOB.gang_record', index=0,
+      number=1, type=11, cpp_type=10, label=3,
+      has_default_value=False, default_value=[],
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+  ],
+  extensions=[
+  ],
+  nested_types=[],
+  enum_types=[
+  ],
+  options=None,
+  is_extendable=False,
+  extension_ranges=[],
+  oneofs=[
+  ],
+  serialized_start=542,
+  serialized_end=623,
+)
+
+
+_ST_GANG_REPLAY_INFO = _descriptor.Descriptor(
+  name='ST_GANG_REPLAY_INFO',
+  full_name='ST_GANG_REPLAY_INFO',
+  filename=None,
+  file=DESCRIPTOR,
+  containing_type=None,
+  fields=[
+    _descriptor.FieldDescriptor(
+      name='small_city_replay_info', full_name='ST_GANG_REPLAY_INFO.small_city_replay_info', index=0,
+      number=1, type=11, cpp_type=10, label=3,
+      has_default_value=False, default_value=[],
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    _descriptor.FieldDescriptor(
+      name='moderate_city_replay_info', full_name='ST_GANG_REPLAY_INFO.moderate_city_replay_info', index=1,
+      number=2, type=11, cpp_type=10, label=3,
+      has_default_value=False, default_value=[],
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    _descriptor.FieldDescriptor(
+      name='big_city_replay_info', full_name='ST_GANG_REPLAY_INFO.big_city_replay_info', index=2,
+      number=3, type=11, cpp_type=10, label=3,
+      has_default_value=False, default_value=[],
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+  ],
+  extensions=[
+  ],
+  nested_types=[],
+  enum_types=[
+  ],
+  options=None,
+  is_extendable=False,
+  extension_ranges=[],
+  oneofs=[
+  ],
+  serialized_start=626,
+  serialized_end=825,
+)
+
+
 _ST_GANG_CITY_STRONG_POINT = _descriptor.Descriptor(
   name='ST_GANG_CITY_STRONG_POINT',
   full_name='ST_GANG_CITY_STRONG_POINT',
@@ -92,6 +312,13 @@ _ST_GANG_CITY_STRONG_POINT = _descriptor.Descriptor(
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
+    _descriptor.FieldDescriptor(
+      name='point_replay_info', full_name='ST_GANG_CITY_STRONG_POINT.point_replay_info', index=2,
+      number=3, type=11, cpp_type=10, label=1,
+      has_default_value=False, default_value=None,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
   ],
   extensions=[
   ],
@@ -103,8 +330,8 @@ _ST_GANG_CITY_STRONG_POINT = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=147,
-  serialized_end=252,
+  serialized_start=828,
+  serialized_end=988,
 )
 
 
@@ -136,6 +363,13 @@ _ST_GANG_CITY_INFO = _descriptor.Descriptor(
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
+    _descriptor.FieldDescriptor(
+      name='is_auto', full_name='ST_GANG_CITY_INFO.is_auto', index=3,
+      number=4, type=8, cpp_type=7, label=1,
+      has_default_value=False, default_value=False,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
   ],
   extensions=[
   ],
@@ -147,8 +381,8 @@ _ST_GANG_CITY_INFO = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=254,
-  serialized_end=360,
+  serialized_start=990,
+  serialized_end=1113,
 )
 
 
@@ -191,8 +425,45 @@ _ST_GANG_CITY = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=363,
-  serialized_end=498,
+  serialized_start=1116,
+  serialized_end=1251,
+)
+
+
+_ST_CHAMPION_LEAGUE_CITY = _descriptor.Descriptor(
+  name='ST_CHAMPION_LEAGUE_CITY',
+  full_name='ST_CHAMPION_LEAGUE_CITY',
+  filename=None,
+  file=DESCRIPTOR,
+  containing_type=None,
+  fields=[
+    _descriptor.FieldDescriptor(
+      name='auto_zone', full_name='ST_CHAMPION_LEAGUE_CITY.auto_zone', index=0,
+      number=1, type=11, cpp_type=10, label=1,
+      has_default_value=False, default_value=None,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    _descriptor.FieldDescriptor(
+      name='manual_zone', full_name='ST_CHAMPION_LEAGUE_CITY.manual_zone', index=1,
+      number=2, type=11, cpp_type=10, label=1,
+      has_default_value=False, default_value=None,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+  ],
+  extensions=[
+  ],
+  nested_types=[],
+  enum_types=[
+  ],
+  options=None,
+  is_extendable=False,
+  extension_ranges=[],
+  oneofs=[
+  ],
+  serialized_start=1253,
+  serialized_end=1348,
 )
 
 
@@ -235,8 +506,8 @@ _ST_GANG_BATTLE_MEM_INFO = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=500,
-  serialized_end=599,
+  serialized_start=1350,
+  serialized_end=1449,
 )
 
 
@@ -265,8 +536,8 @@ _ST_GANG_BATTLE_MEM_LIST = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=601,
-  serialized_end=670,
+  serialized_start=1451,
+  serialized_end=1520,
 )
 
 
@@ -302,8 +573,8 @@ _ST_GANG_BATTLE_ATTACK_POINT_INFO = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=672,
-  serialized_end=751,
+  serialized_start=1522,
+  serialized_end=1601,
 )
 
 
@@ -360,8 +631,8 @@ _ST_GANG_BATTLE_MEM_ATTACK_INFO = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=754,
-  serialized_end=916,
+  serialized_start=1604,
+  serialized_end=1766,
 )
 
 
@@ -390,8 +661,8 @@ _ST_GANG_BATTLE_MEM_ATTACK_LIST = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=918,
-  serialized_end=1001,
+  serialized_start=1768,
+  serialized_end=1851,
 )
 
 
@@ -462,8 +733,8 @@ _CSDT_GANG_APPLYLIST_INFO = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=1004,
-  serialized_end=1194,
+  serialized_start=1854,
+  serialized_end=2044,
 )
 
 
@@ -555,8 +826,8 @@ _CSDT_GANGSIMPLE_INFO = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=1197,
-  serialized_end=1445,
+  serialized_start=2047,
+  serialized_end=2295,
 )
 
 
@@ -641,8 +912,8 @@ _CSDT_GANGLIST_INFO = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=1448,
-  serialized_end=1675,
+  serialized_start=2298,
+  serialized_end=2525,
 )
 
 
@@ -727,8 +998,8 @@ _CSDT_GANGMEM_INFO = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=1678,
-  serialized_end=1930,
+  serialized_start=2528,
+  serialized_end=2780,
 )
 
 
@@ -757,8 +1028,8 @@ _CSDT_GANG_SELF_INFO = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=1932,
-  serialized_end=1971,
+  serialized_start=2782,
+  serialized_end=2821,
 )
 
 
@@ -815,8 +1086,8 @@ _CSDT_GANG_BATTLE_HISTORY_MEM_INFO = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=1974,
-  serialized_end=2122,
+  serialized_start=2824,
+  serialized_end=2972,
 )
 
 
@@ -845,8 +1116,8 @@ _CSDT_GANG_BATTLE_HISTORY_MEM_LIST = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=2124,
-  serialized_end=2218,
+  serialized_start=2974,
+  serialized_end=3068,
 )
 
 
@@ -924,8 +1195,8 @@ _CSDT_GANG_BATTLE_HISTORY_INFO = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=2221,
-  serialized_end=2489,
+  serialized_start=3071,
+  serialized_end=3339,
 )
 
 
@@ -975,8 +1246,8 @@ _CSPKG_CMD_CREATEGANG_REQ = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=2491,
-  serialized_end=2603,
+  serialized_start=3341,
+  serialized_end=3453,
 )
 
 
@@ -1026,8 +1297,8 @@ _SCPKG_CMD_CREATEGANG_RES = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=2606,
-  serialized_end=2757,
+  serialized_start=3456,
+  serialized_end=3607,
 )
 
 
@@ -1063,8 +1334,8 @@ _CSPKG_CMD_GANGLIST_REQ = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=2759,
-  serialized_end=2826,
+  serialized_start=3609,
+  serialized_end=3676,
 )
 
 
@@ -1100,8 +1371,8 @@ _SCPKG_CMD_GANGLIST_RES = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=2828,
-  serialized_end=2911,
+  serialized_start=3678,
+  serialized_end=3761,
 )
 
 
@@ -1151,8 +1422,8 @@ _SCPKG_CMD_ROLELOGIN_GANG = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=2914,
-  serialized_end=3078,
+  serialized_start=3764,
+  serialized_end=3928,
 )
 
 
@@ -1188,8 +1459,8 @@ _CSPKG_CMD_APPLY_GANG_REQ = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=3080,
-  serialized_end=3142,
+  serialized_start=3930,
+  serialized_end=3992,
 )
 
 
@@ -1246,8 +1517,8 @@ _SCPKG_CMD_APPLY_GANG_RES = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=3144,
-  serialized_end=3266,
+  serialized_start=3994,
+  serialized_end=4116,
 )
 
 
@@ -1276,8 +1547,8 @@ _CSPKG_CMD_QUIT_GANG_REQ = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=3268,
-  serialized_end=3310,
+  serialized_start=4118,
+  serialized_end=4160,
 )
 
 
@@ -1306,8 +1577,8 @@ _SCPKG_CMD_QUIT_GANG_RES = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=3312,
-  serialized_end=3353,
+  serialized_start=4162,
+  serialized_end=4203,
 )
 
 
@@ -1336,8 +1607,8 @@ _CSPKG_TRANSFER_GANG_LEADER_REQ = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=3355,
-  serialized_end=3411,
+  serialized_start=4205,
+  serialized_end=4261,
 )
 
 
@@ -1366,8 +1637,8 @@ _SCPKG_TRANSFER_GANG_LEADER_RES = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=3413,
-  serialized_end=3461,
+  serialized_start=4263,
+  serialized_end=4311,
 )
 
 
@@ -1396,8 +1667,8 @@ _CSPKG_CMD_GANG_MEMLIST_REQ = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=3463,
-  serialized_end=3508,
+  serialized_start=4313,
+  serialized_end=4358,
 )
 
 
@@ -1440,8 +1711,8 @@ _SCPKG_CMD_GANG_MEMLIST_RES = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=3510,
-  serialized_end=3610,
+  serialized_start=4360,
+  serialized_end=4460,
 )
 
 
@@ -1470,8 +1741,8 @@ _CSPKG_CMD_GANG_DETAIL_REQ = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=3612,
-  serialized_end=3656,
+  serialized_start=4462,
+  serialized_end=4506,
 )
 
 
@@ -1521,8 +1792,8 @@ _SCPKG_CMD_GANG_DETAIL_RES = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=3659,
-  serialized_end=3807,
+  serialized_start=4509,
+  serialized_end=4657,
 )
 
 
@@ -1579,8 +1850,8 @@ _SCPKG_CMD_GANG_MEM_LIST_CHG_RES = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=3810,
-  serialized_end=3947,
+  serialized_start=4660,
+  serialized_end=4797,
 )
 
 
@@ -1609,8 +1880,8 @@ _SCPKG_GANG_BLESS_RANK_CLEAR_RES = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=3949,
-  serialized_end=3999,
+  serialized_start=4799,
+  serialized_end=4849,
 )
 
 
@@ -1653,8 +1924,8 @@ _CSPKG_CMD_GANG_UPDATE_BASIC_INFO_REQ = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=4001,
-  serialized_end=4106,
+  serialized_start=4851,
+  serialized_end=4956,
 )
 
 
@@ -1683,8 +1954,8 @@ _CSPKG_CMD_SEARCH_GANG_REQ = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=4108,
-  serialized_end=4152,
+  serialized_start=4958,
+  serialized_end=5002,
 )
 
 
@@ -1727,8 +1998,8 @@ _SCPKG_CMD_SEARCH_GANG_RES = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=4154,
-  serialized_end=4254,
+  serialized_start=5004,
+  serialized_end=5104,
 )
 
 
@@ -1757,8 +2028,8 @@ _SCPKG_CMD_GANG_UPDATE_BASIC_INFO_RES = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=4256,
-  serialized_end=4310,
+  serialized_start=5106,
+  serialized_end=5160,
 )
 
 
@@ -1794,8 +2065,8 @@ _CSPKG_CMD_GANG_APPROVE_REQ = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=4312,
-  serialized_end=4377,
+  serialized_start=5162,
+  serialized_end=5227,
 )
 
 
@@ -1845,96 +2116,8 @@ _SCPKG_CMD_GANG_APPROVE_RES = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=4379,
-  serialized_end=4488,
-)
-
-
-_CSPKG_CMD_GANG_CHAT_REQ = _descriptor.Descriptor(
-  name='CSPKG_CMD_GANG_CHAT_REQ',
-  full_name='CSPKG_CMD_GANG_CHAT_REQ',
-  filename=None,
-  file=DESCRIPTOR,
-  containing_type=None,
-  fields=[
-    _descriptor.FieldDescriptor(
-      name='msg', full_name='CSPKG_CMD_GANG_CHAT_REQ.msg', index=0,
-      number=1, type=9, cpp_type=9, label=1,
-      has_default_value=False, default_value=_b("").decode('utf-8'),
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      options=None),
-  ],
-  extensions=[
-  ],
-  nested_types=[],
-  enum_types=[
-  ],
-  options=None,
-  is_extendable=False,
-  extension_ranges=[],
-  oneofs=[
-  ],
-  serialized_start=4490,
-  serialized_end=4528,
-)
-
-
-_SCPKG_CMD_GANG_CHAT_RES = _descriptor.Descriptor(
-  name='SCPKG_CMD_GANG_CHAT_RES',
-  full_name='SCPKG_CMD_GANG_CHAT_RES',
-  filename=None,
-  file=DESCRIPTOR,
-  containing_type=None,
-  fields=[
-    _descriptor.FieldDescriptor(
-      name='from_name', full_name='SCPKG_CMD_GANG_CHAT_RES.from_name', index=0,
-      number=1, type=9, cpp_type=9, label=1,
-      has_default_value=False, default_value=_b("").decode('utf-8'),
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      options=None),
-    _descriptor.FieldDescriptor(
-      name='msg', full_name='SCPKG_CMD_GANG_CHAT_RES.msg', index=1,
-      number=2, type=9, cpp_type=9, label=1,
-      has_default_value=False, default_value=_b("").decode('utf-8'),
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      options=None),
-    _descriptor.FieldDescriptor(
-      name='from_role_id', full_name='SCPKG_CMD_GANG_CHAT_RES.from_role_id', index=2,
-      number=4, type=13, cpp_type=3, label=1,
-      has_default_value=False, default_value=0,
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      options=None),
-    _descriptor.FieldDescriptor(
-      name='sender_cumulate_recharge_id', full_name='SCPKG_CMD_GANG_CHAT_RES.sender_cumulate_recharge_id', index=3,
-      number=5, type=13, cpp_type=3, label=1,
-      has_default_value=False, default_value=0,
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      options=None),
-    _descriptor.FieldDescriptor(
-      name='send_time', full_name='SCPKG_CMD_GANG_CHAT_RES.send_time', index=4,
-      number=3, type=13, cpp_type=3, label=1,
-      has_default_value=False, default_value=0,
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      options=None),
-  ],
-  extensions=[
-  ],
-  nested_types=[],
-  enum_types=[
-  ],
-  options=None,
-  is_extendable=False,
-  extension_ranges=[],
-  oneofs=[
-  ],
-  serialized_start=4531,
-  serialized_end=4666,
+  serialized_start=5229,
+  serialized_end=5338,
 )
 
 
@@ -1963,8 +2146,8 @@ _CSPKG_CMD_GANG_APPLYLIST_REQ = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=4668,
-  serialized_end=4714,
+  serialized_start=5340,
+  serialized_end=5386,
 )
 
 
@@ -1993,8 +2176,8 @@ _SCPKG_CMD_GANG_APPLYLIST_RES = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=4716,
-  serialized_end=4793,
+  serialized_start=5388,
+  serialized_end=5465,
 )
 
 
@@ -2037,8 +2220,8 @@ _SCPKG_CMD_GANG_APPROVETOMEM_RES = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=4796,
-  serialized_end=4935,
+  serialized_start=5468,
+  serialized_end=5607,
 )
 
 
@@ -2095,8 +2278,8 @@ _SCPKG_CMD_GANG_BASIC_INFO_CHG_RES = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=4938,
-  serialized_end=5083,
+  serialized_start=5610,
+  serialized_end=5755,
 )
 
 
@@ -2125,8 +2308,8 @@ _CSPKG_CMD_GANG_KICK_MEM_REQ = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=5085,
-  serialized_end=5140,
+  serialized_start=5757,
+  serialized_end=5812,
 )
 
 
@@ -2162,8 +2345,8 @@ _SCPKG_CMD_GANG_KICK_MEM_RES = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=5142,
-  serialized_end=5208,
+  serialized_start=5814,
+  serialized_end=5880,
 )
 
 
@@ -2199,8 +2382,8 @@ _CSPKG_CMD_GANG_SET_ELDER_REQ = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=5210,
-  serialized_end=5284,
+  serialized_start=5882,
+  serialized_end=5956,
 )
 
 
@@ -2236,8 +2419,8 @@ _SCPKG_CMD_GANG_SET_ELDER_RES = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=5286,
-  serialized_end=5353,
+  serialized_start=5958,
+  serialized_end=6025,
 )
 
 
@@ -2266,8 +2449,8 @@ _CSPKG_GANG_BLESS_REQ = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=5355,
-  serialized_end=5394,
+  serialized_start=6027,
+  serialized_end=6066,
 )
 
 
@@ -2317,8 +2500,8 @@ _SCPKG_GANG_BLESS_RES = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=5397,
-  serialized_end=5531,
+  serialized_start=6069,
+  serialized_end=6203,
 )
 
 
@@ -2347,8 +2530,8 @@ _CSPKG_BUY_GANG_BLESS_COUNT_REQ = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=5533,
-  serialized_end=5582,
+  serialized_start=6205,
+  serialized_end=6254,
 )
 
 
@@ -2391,8 +2574,8 @@ _SCPKG_REFRESH_GANG_BLESS_INFO_RES = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=5585,
-  serialized_end=5714,
+  serialized_start=6257,
+  serialized_end=6386,
 )
 
 
@@ -2421,8 +2604,8 @@ _CSPKG_SET_GANG_AUTO_APPLY_GANG_BATTLE_REQ = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=5716,
-  serialized_end=5777,
+  serialized_start=6388,
+  serialized_end=6449,
 )
 
 
@@ -2451,8 +2634,8 @@ _SCPKG_SET_GANG_AUTO_APPLY_GANG_BATTLE_RES = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=5779,
-  serialized_end=5852,
+  serialized_start=6451,
+  serialized_end=6524,
 )
 
 
@@ -2498,6 +2681,13 @@ _CSPKG_SET_GANG_CITY_STRONG_POINT_HERO_REQ = _descriptor.Descriptor(
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
+    _descriptor.FieldDescriptor(
+      name='is_champion_league', full_name='CSPKG_SET_GANG_CITY_STRONG_POINT_HERO_REQ.is_champion_league', index=5,
+      number=6, type=8, cpp_type=7, label=1,
+      has_default_value=False, default_value=False,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
   ],
   extensions=[
   ],
@@ -2509,8 +2699,8 @@ _CSPKG_SET_GANG_CITY_STRONG_POINT_HERO_REQ = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=5855,
-  serialized_end=6003,
+  serialized_start=6527,
+  serialized_end=6703,
 )
 
 
@@ -2539,8 +2729,8 @@ _SCPKG_SET_GANG_CITY_STRONG_POINT_HERO_RES = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=6005,
-  serialized_end=6064,
+  serialized_start=6705,
+  serialized_end=6764,
 )
 
 
@@ -2586,6 +2776,13 @@ _SCPKG_GANG_CITY_STRONG_POINT_HERO_CHG_RES = _descriptor.Descriptor(
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
+    _descriptor.FieldDescriptor(
+      name='is_champion_league', full_name='SCPKG_GANG_CITY_STRONG_POINT_HERO_CHG_RES.is_champion_league', index=5,
+      number=6, type=8, cpp_type=7, label=1,
+      has_default_value=False, default_value=False,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
   ],
   extensions=[
   ],
@@ -2597,8 +2794,8 @@ _SCPKG_GANG_CITY_STRONG_POINT_HERO_CHG_RES = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=6067,
-  serialized_end=6255,
+  serialized_start=6767,
+  serialized_end=6983,
 )
 
 
@@ -2616,6 +2813,13 @@ _CSPKG_GET_GANG_CITY_INFO_REQ = _descriptor.Descriptor(
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
+    _descriptor.FieldDescriptor(
+      name='is_champion_league', full_name='CSPKG_GET_GANG_CITY_INFO_REQ.is_champion_league', index=1,
+      number=2, type=8, cpp_type=7, label=1,
+      has_default_value=False, default_value=False,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
   ],
   extensions=[
   ],
@@ -2627,8 +2831,8 @@ _CSPKG_GET_GANG_CITY_INFO_REQ = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=6257,
-  serialized_end=6305,
+  serialized_start=6985,
+  serialized_end=7061,
 )
 
 
@@ -2653,6 +2857,13 @@ _SCPKG_GET_GANG_CITY_INFO_RES = _descriptor.Descriptor(
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
+    _descriptor.FieldDescriptor(
+      name='is_champion_league', full_name='SCPKG_GET_GANG_CITY_INFO_RES.is_champion_league', index=2,
+      number=3, type=8, cpp_type=7, label=1,
+      has_default_value=False, default_value=False,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
   ],
   extensions=[
   ],
@@ -2664,8 +2875,8 @@ _SCPKG_GET_GANG_CITY_INFO_RES = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=6307,
-  serialized_end=6387,
+  serialized_start=7063,
+  serialized_end=7171,
 )
 
 
@@ -2694,8 +2905,8 @@ _CSPKG_APPLY_GANG_BATTLE_REQ = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=6389,
-  serialized_end=6436,
+  serialized_start=7173,
+  serialized_end=7220,
 )
 
 
@@ -2724,8 +2935,8 @@ _SCPKG_APPLY_GANG_BATTLE_RES = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=6438,
-  serialized_end=6483,
+  serialized_start=7222,
+  serialized_end=7267,
 )
 
 
@@ -2743,6 +2954,13 @@ _SCPKG_GANG_BATTLE_STATE_BROAD = _descriptor.Descriptor(
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
+    _descriptor.FieldDescriptor(
+      name='is_champion_league', full_name='SCPKG_GANG_BATTLE_STATE_BROAD.is_champion_league', index=1,
+      number=2, type=8, cpp_type=7, label=1,
+      has_default_value=False, default_value=False,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
   ],
   extensions=[
   ],
@@ -2754,8 +2972,8 @@ _SCPKG_GANG_BATTLE_STATE_BROAD = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=6485,
-  serialized_end=6531,
+  serialized_start=7269,
+  serialized_end=7343,
 )
 
 
@@ -2773,6 +2991,13 @@ _CSPKG_GET_GANG_BATTLE_CITY_REQ = _descriptor.Descriptor(
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
+    _descriptor.FieldDescriptor(
+      name='is_champion_league', full_name='CSPKG_GET_GANG_BATTLE_CITY_REQ.is_champion_league', index=1,
+      number=2, type=8, cpp_type=7, label=1,
+      has_default_value=False, default_value=False,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
   ],
   extensions=[
   ],
@@ -2784,8 +3009,8 @@ _CSPKG_GET_GANG_BATTLE_CITY_REQ = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=6533,
-  serialized_end=6586,
+  serialized_start=7345,
+  serialized_end=7426,
 )
 
 
@@ -2852,6 +3077,13 @@ _SCPKG_GET_GANG_BATTLE_CITY_RES = _descriptor.Descriptor(
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
+    _descriptor.FieldDescriptor(
+      name='is_champion_league', full_name='SCPKG_GET_GANG_BATTLE_CITY_RES.is_champion_league', index=8,
+      number=9, type=8, cpp_type=7, label=1,
+      has_default_value=False, default_value=False,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
   ],
   extensions=[
   ],
@@ -2863,8 +3095,8 @@ _SCPKG_GET_GANG_BATTLE_CITY_RES = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=6589,
-  serialized_end=6817,
+  serialized_start=7429,
+  serialized_end=7685,
 )
 
 
@@ -2917,6 +3149,13 @@ _SCPKG_GANG_BATTTLE_POINT_BROAD = _descriptor.Descriptor(
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
+    _descriptor.FieldDescriptor(
+      name='is_champion_league', full_name='SCPKG_GANG_BATTTLE_POINT_BROAD.is_champion_league', index=6,
+      number=7, type=8, cpp_type=7, label=1,
+      has_default_value=False, default_value=False,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
   ],
   extensions=[
   ],
@@ -2928,8 +3167,8 @@ _SCPKG_GANG_BATTTLE_POINT_BROAD = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=6820,
-  serialized_end=6982,
+  serialized_start=7688,
+  serialized_end=7878,
 )
 
 
@@ -2972,8 +3211,8 @@ _CSPKG_ENTER_GANG_BATTLE_DUNGEON_REQ = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=6984,
-  serialized_end=7102,
+  serialized_start=7880,
+  serialized_end=7998,
 )
 
 
@@ -3009,8 +3248,8 @@ _ST_GANG_BATTLE_DEFENSE_HERO_INFO = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=7104,
-  serialized_end=7210,
+  serialized_start=8000,
+  serialized_end=8106,
 )
 
 
@@ -3060,8 +3299,8 @@ _SCPKG_ENTER_GANG_BATTLE_DUNGEON_RES = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=7213,
-  serialized_end=7365,
+  serialized_start=8109,
+  serialized_end=8261,
 )
 
 
@@ -3090,8 +3329,8 @@ _CSPKG_GANG_BATTLE_DUNGEON_ROUND_BEGIN_REQ = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=7367,
-  serialized_end=7426,
+  serialized_start=8263,
+  serialized_end=8322,
 )
 
 
@@ -3127,8 +3366,8 @@ _SCPKG_GANG_BATTLE_DUNGEON_ROUND_BEGIN_RES = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=7428,
-  serialized_end=7509,
+  serialized_start=8324,
+  serialized_end=8405,
 )
 
 
@@ -3185,8 +3424,8 @@ _CSPKG_GANG_BATTLE_BALANCE_REQ = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=7512,
-  serialized_end=7656,
+  serialized_start=8408,
+  serialized_end=8552,
 )
 
 
@@ -3229,8 +3468,8 @@ _SCPKG_GANG_BATTLE_BALANCE_RES = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=7658,
-  serialized_end=7750,
+  serialized_start=8554,
+  serialized_end=8646,
 )
 
 
@@ -3259,8 +3498,8 @@ _CSPKG_CMD_GET_GANG_BATTLE_STATE_REQ = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=7752,
-  serialized_end=7807,
+  serialized_start=8648,
+  serialized_end=8703,
 )
 
 
@@ -3324,8 +3563,8 @@ _SCPKG_CMD_GET_GANG_BATTLE_STATE_RES = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=7810,
-  serialized_end=8006,
+  serialized_start=8706,
+  serialized_end=8902,
 )
 
 
@@ -3354,8 +3593,8 @@ _CSPKG_CMD_GET_GANG_BATTLE_HISTORY_REQ = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=8008,
-  serialized_end=8065,
+  serialized_start=8904,
+  serialized_end=8961,
 )
 
 
@@ -3384,8 +3623,8 @@ _SCPKG_CMD_GET_GANG_BATTLE_HISTORY_RES = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=8067,
-  serialized_end=8160,
+  serialized_start=8963,
+  serialized_end=9056,
 )
 
 
@@ -3403,6 +3642,13 @@ _CSPKG_GET_GANG_BATTLE_MEM_ATTACK_INFO_REQ = _descriptor.Descriptor(
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
+    _descriptor.FieldDescriptor(
+      name='is_champion_league', full_name='CSPKG_GET_GANG_BATTLE_MEM_ATTACK_INFO_REQ.is_champion_league', index=1,
+      number=2, type=8, cpp_type=7, label=1,
+      has_default_value=False, default_value=False,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
   ],
   extensions=[
   ],
@@ -3414,8 +3660,8 @@ _CSPKG_GET_GANG_BATTLE_MEM_ATTACK_INFO_REQ = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=8162,
-  serialized_end=8223,
+  serialized_start=9058,
+  serialized_end=9147,
 )
 
 
@@ -3440,6 +3686,13 @@ _SCPKG_GET_GANG_BATTLE_MEM_ATTACK_INFO_RES = _descriptor.Descriptor(
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
+    _descriptor.FieldDescriptor(
+      name='is_champion_league', full_name='SCPKG_GET_GANG_BATTLE_MEM_ATTACK_INFO_RES.is_champion_league', index=2,
+      number=3, type=8, cpp_type=7, label=1,
+      has_default_value=False, default_value=False,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
   ],
   extensions=[
   ],
@@ -3451,8 +3704,8 @@ _SCPKG_GET_GANG_BATTLE_MEM_ATTACK_INFO_RES = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=8225,
-  serialized_end=8341,
+  serialized_start=9150,
+  serialized_end=9294,
 )
 
 
@@ -3470,6 +3723,13 @@ _CSPKG_GET_GANG_BATTLE_STATE_INFO_REQ = _descriptor.Descriptor(
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
+    _descriptor.FieldDescriptor(
+      name='is_champion_league', full_name='CSPKG_GET_GANG_BATTLE_STATE_INFO_REQ.is_champion_league', index=1,
+      number=2, type=8, cpp_type=7, label=1,
+      has_default_value=False, default_value=False,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
   ],
   extensions=[
   ],
@@ -3481,8 +3741,8 @@ _CSPKG_GET_GANG_BATTLE_STATE_INFO_REQ = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=8343,
-  serialized_end=8398,
+  serialized_start=9296,
+  serialized_end=9379,
 )
 
 
@@ -3514,6 +3774,13 @@ _SCPKG_GET_GANG_BATTLE_STATE_INFO_RES = _descriptor.Descriptor(
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
+    _descriptor.FieldDescriptor(
+      name='is_champion_league', full_name='SCPKG_GET_GANG_BATTLE_STATE_INFO_RES.is_champion_league', index=3,
+      number=4, type=8, cpp_type=7, label=1,
+      has_default_value=False, default_value=False,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
   ],
   extensions=[
   ],
@@ -3525,16 +3792,812 @@ _SCPKG_GET_GANG_BATTLE_STATE_INFO_RES = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=8400,
-  serialized_end=8518,
+  serialized_start=9382,
+  serialized_end=9528,
+)
+
+
+_CSPKG_CHAMPION_LEAGUE_APPLY_REQ = _descriptor.Descriptor(
+  name='CSPKG_CHAMPION_LEAGUE_APPLY_REQ',
+  full_name='CSPKG_CHAMPION_LEAGUE_APPLY_REQ',
+  filename=None,
+  file=DESCRIPTOR,
+  containing_type=None,
+  fields=[
+    _descriptor.FieldDescriptor(
+      name='reverse', full_name='CSPKG_CHAMPION_LEAGUE_APPLY_REQ.reverse', index=0,
+      number=1, type=5, cpp_type=1, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+  ],
+  extensions=[
+  ],
+  nested_types=[],
+  enum_types=[
+  ],
+  options=None,
+  is_extendable=False,
+  extension_ranges=[],
+  oneofs=[
+  ],
+  serialized_start=9530,
+  serialized_end=9580,
+)
+
+
+_SCPKG_CHAMPION_LEAGUE_APPLY_RES = _descriptor.Descriptor(
+  name='SCPKG_CHAMPION_LEAGUE_APPLY_RES',
+  full_name='SCPKG_CHAMPION_LEAGUE_APPLY_RES',
+  filename=None,
+  file=DESCRIPTOR,
+  containing_type=None,
+  fields=[
+    _descriptor.FieldDescriptor(
+      name='result', full_name='SCPKG_CHAMPION_LEAGUE_APPLY_RES.result', index=0,
+      number=1, type=5, cpp_type=1, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+  ],
+  extensions=[
+  ],
+  nested_types=[],
+  enum_types=[
+  ],
+  options=None,
+  is_extendable=False,
+  extension_ranges=[],
+  oneofs=[
+  ],
+  serialized_start=9582,
+  serialized_end=9631,
+)
+
+
+_CSPKG_CHAMPION_LEAGUE_GET_STATE_REQ = _descriptor.Descriptor(
+  name='CSPKG_CHAMPION_LEAGUE_GET_STATE_REQ',
+  full_name='CSPKG_CHAMPION_LEAGUE_GET_STATE_REQ',
+  filename=None,
+  file=DESCRIPTOR,
+  containing_type=None,
+  fields=[
+    _descriptor.FieldDescriptor(
+      name='reverse', full_name='CSPKG_CHAMPION_LEAGUE_GET_STATE_REQ.reverse', index=0,
+      number=1, type=5, cpp_type=1, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+  ],
+  extensions=[
+  ],
+  nested_types=[],
+  enum_types=[
+  ],
+  options=None,
+  is_extendable=False,
+  extension_ranges=[],
+  oneofs=[
+  ],
+  serialized_start=9633,
+  serialized_end=9687,
+)
+
+
+_SCPKG_CHAMPION_LEAGUE_GET_STATE_RES = _descriptor.Descriptor(
+  name='SCPKG_CHAMPION_LEAGUE_GET_STATE_RES',
+  full_name='SCPKG_CHAMPION_LEAGUE_GET_STATE_RES',
+  filename=None,
+  file=DESCRIPTOR,
+  containing_type=None,
+  fields=[
+    _descriptor.FieldDescriptor(
+      name='state', full_name='SCPKG_CHAMPION_LEAGUE_GET_STATE_RES.state', index=0,
+      number=1, type=5, cpp_type=1, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    _descriptor.FieldDescriptor(
+      name='sub_state', full_name='SCPKG_CHAMPION_LEAGUE_GET_STATE_RES.sub_state', index=1,
+      number=2, type=5, cpp_type=1, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    _descriptor.FieldDescriptor(
+      name='round_id', full_name='SCPKG_CHAMPION_LEAGUE_GET_STATE_RES.round_id', index=2,
+      number=3, type=5, cpp_type=1, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    _descriptor.FieldDescriptor(
+      name='apply_end_time', full_name='SCPKG_CHAMPION_LEAGUE_GET_STATE_RES.apply_end_time', index=3,
+      number=4, type=13, cpp_type=3, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    _descriptor.FieldDescriptor(
+      name='season_begin_time', full_name='SCPKG_CHAMPION_LEAGUE_GET_STATE_RES.season_begin_time', index=4,
+      number=5, type=13, cpp_type=3, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    _descriptor.FieldDescriptor(
+      name='season_end_time', full_name='SCPKG_CHAMPION_LEAGUE_GET_STATE_RES.season_end_time', index=5,
+      number=6, type=13, cpp_type=3, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    _descriptor.FieldDescriptor(
+      name='attack_hero', full_name='SCPKG_CHAMPION_LEAGUE_GET_STATE_RES.attack_hero', index=6,
+      number=7, type=13, cpp_type=3, label=3,
+      has_default_value=False, default_value=[],
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    _descriptor.FieldDescriptor(
+      name='attack_point', full_name='SCPKG_CHAMPION_LEAGUE_GET_STATE_RES.attack_point', index=7,
+      number=8, type=11, cpp_type=10, label=3,
+      has_default_value=False, default_value=[],
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+  ],
+  extensions=[
+  ],
+  nested_types=[],
+  enum_types=[
+  ],
+  options=None,
+  is_extendable=False,
+  extension_ranges=[],
+  oneofs=[
+  ],
+  serialized_start=9690,
+  serialized_end=9933,
+)
+
+
+_SCPKG_CHAMPION_LEAGUE_STATE_REFRESH = _descriptor.Descriptor(
+  name='SCPKG_CHAMPION_LEAGUE_STATE_REFRESH',
+  full_name='SCPKG_CHAMPION_LEAGUE_STATE_REFRESH',
+  filename=None,
+  file=DESCRIPTOR,
+  containing_type=None,
+  fields=[
+    _descriptor.FieldDescriptor(
+      name='state', full_name='SCPKG_CHAMPION_LEAGUE_STATE_REFRESH.state', index=0,
+      number=1, type=13, cpp_type=3, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+  ],
+  extensions=[
+  ],
+  nested_types=[],
+  enum_types=[
+  ],
+  options=None,
+  is_extendable=False,
+  extension_ranges=[],
+  oneofs=[
+  ],
+  serialized_start=9935,
+  serialized_end=9987,
+)
+
+
+_CSPKG_CHAMPION_LEAGUE_GET_BATTLE_PAIR_REQ = _descriptor.Descriptor(
+  name='CSPKG_CHAMPION_LEAGUE_GET_BATTLE_PAIR_REQ',
+  full_name='CSPKG_CHAMPION_LEAGUE_GET_BATTLE_PAIR_REQ',
+  filename=None,
+  file=DESCRIPTOR,
+  containing_type=None,
+  fields=[
+    _descriptor.FieldDescriptor(
+      name='reverse', full_name='CSPKG_CHAMPION_LEAGUE_GET_BATTLE_PAIR_REQ.reverse', index=0,
+      number=1, type=5, cpp_type=1, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+  ],
+  extensions=[
+  ],
+  nested_types=[],
+  enum_types=[
+  ],
+  options=None,
+  is_extendable=False,
+  extension_ranges=[],
+  oneofs=[
+  ],
+  serialized_start=9989,
+  serialized_end=10049,
+)
+
+
+_SCPKG_CHAMPION_LEAGUE_GET_BATTLE_PAIR_RES = _descriptor.Descriptor(
+  name='SCPKG_CHAMPION_LEAGUE_GET_BATTLE_PAIR_RES',
+  full_name='SCPKG_CHAMPION_LEAGUE_GET_BATTLE_PAIR_RES',
+  filename=None,
+  file=DESCRIPTOR,
+  containing_type=None,
+  fields=[
+    _descriptor.FieldDescriptor(
+      name='battle_pair_info', full_name='SCPKG_CHAMPION_LEAGUE_GET_BATTLE_PAIR_RES.battle_pair_info', index=0,
+      number=1, type=11, cpp_type=10, label=3,
+      has_default_value=False, default_value=[],
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+  ],
+  extensions=[
+  ],
+  nested_types=[],
+  enum_types=[
+  ],
+  options=None,
+  is_extendable=False,
+  extension_ranges=[],
+  oneofs=[
+  ],
+  serialized_start=10051,
+  serialized_end=10151,
+)
+
+
+_CSPKG_CHAMPION_LEAGUE_GET_RANK_REQ = _descriptor.Descriptor(
+  name='CSPKG_CHAMPION_LEAGUE_GET_RANK_REQ',
+  full_name='CSPKG_CHAMPION_LEAGUE_GET_RANK_REQ',
+  filename=None,
+  file=DESCRIPTOR,
+  containing_type=None,
+  fields=[
+    _descriptor.FieldDescriptor(
+      name='reverse', full_name='CSPKG_CHAMPION_LEAGUE_GET_RANK_REQ.reverse', index=0,
+      number=1, type=5, cpp_type=1, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+  ],
+  extensions=[
+  ],
+  nested_types=[],
+  enum_types=[
+  ],
+  options=None,
+  is_extendable=False,
+  extension_ranges=[],
+  oneofs=[
+  ],
+  serialized_start=10153,
+  serialized_end=10206,
+)
+
+
+_SCPKG_CHAMPION_LEAGUE_GET_RANK_RES = _descriptor.Descriptor(
+  name='SCPKG_CHAMPION_LEAGUE_GET_RANK_RES',
+  full_name='SCPKG_CHAMPION_LEAGUE_GET_RANK_RES',
+  filename=None,
+  file=DESCRIPTOR,
+  containing_type=None,
+  fields=[
+    _descriptor.FieldDescriptor(
+      name='total_gang_num', full_name='SCPKG_CHAMPION_LEAGUE_GET_RANK_RES.total_gang_num', index=0,
+      number=1, type=13, cpp_type=3, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    _descriptor.FieldDescriptor(
+      name='rank_list', full_name='SCPKG_CHAMPION_LEAGUE_GET_RANK_RES.rank_list', index=1,
+      number=2, type=11, cpp_type=10, label=3,
+      has_default_value=False, default_value=[],
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+  ],
+  extensions=[
+  ],
+  nested_types=[],
+  enum_types=[
+  ],
+  options=None,
+  is_extendable=False,
+  extension_ranges=[],
+  oneofs=[
+  ],
+  serialized_start=10208,
+  serialized_end=10318,
+)
+
+
+_CSPKG_ENTER_CHAMPION_LEAGUE_REQ = _descriptor.Descriptor(
+  name='CSPKG_ENTER_CHAMPION_LEAGUE_REQ',
+  full_name='CSPKG_ENTER_CHAMPION_LEAGUE_REQ',
+  filename=None,
+  file=DESCRIPTOR,
+  containing_type=None,
+  fields=[
+    _descriptor.FieldDescriptor(
+      name='self_hero_id', full_name='CSPKG_ENTER_CHAMPION_LEAGUE_REQ.self_hero_id', index=0,
+      number=1, type=13, cpp_type=3, label=3,
+      has_default_value=False, default_value=[],
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    _descriptor.FieldDescriptor(
+      name='target_city_id', full_name='CSPKG_ENTER_CHAMPION_LEAGUE_REQ.target_city_id', index=1,
+      number=2, type=13, cpp_type=3, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    _descriptor.FieldDescriptor(
+      name='target_strong_point_index', full_name='CSPKG_ENTER_CHAMPION_LEAGUE_REQ.target_strong_point_index', index=2,
+      number=3, type=5, cpp_type=1, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+  ],
+  extensions=[
+  ],
+  nested_types=[],
+  enum_types=[
+  ],
+  options=None,
+  is_extendable=False,
+  extension_ranges=[],
+  oneofs=[
+  ],
+  serialized_start=10320,
+  serialized_end=10434,
+)
+
+
+_SCPKG_ENTER_CHAMPION_LEAGUE_RES = _descriptor.Descriptor(
+  name='SCPKG_ENTER_CHAMPION_LEAGUE_RES',
+  full_name='SCPKG_ENTER_CHAMPION_LEAGUE_RES',
+  filename=None,
+  file=DESCRIPTOR,
+  containing_type=None,
+  fields=[
+    _descriptor.FieldDescriptor(
+      name='result', full_name='SCPKG_ENTER_CHAMPION_LEAGUE_RES.result', index=0,
+      number=1, type=5, cpp_type=1, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    _descriptor.FieldDescriptor(
+      name='dun_id', full_name='SCPKG_ENTER_CHAMPION_LEAGUE_RES.dun_id', index=1,
+      number=2, type=13, cpp_type=3, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    _descriptor.FieldDescriptor(
+      name='self_hero_id', full_name='SCPKG_ENTER_CHAMPION_LEAGUE_RES.self_hero_id', index=2,
+      number=3, type=13, cpp_type=3, label=3,
+      has_default_value=False, default_value=[],
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    _descriptor.FieldDescriptor(
+      name='target_hero_info', full_name='SCPKG_ENTER_CHAMPION_LEAGUE_RES.target_hero_info', index=3,
+      number=4, type=11, cpp_type=10, label=3,
+      has_default_value=False, default_value=[],
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    _descriptor.FieldDescriptor(
+      name='is_auto', full_name='SCPKG_ENTER_CHAMPION_LEAGUE_RES.is_auto', index=4,
+      number=5, type=8, cpp_type=7, label=1,
+      has_default_value=False, default_value=False,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+  ],
+  extensions=[
+  ],
+  nested_types=[],
+  enum_types=[
+  ],
+  options=None,
+  is_extendable=False,
+  extension_ranges=[],
+  oneofs=[
+  ],
+  serialized_start=10437,
+  serialized_end=10602,
+)
+
+
+_CSPKG_CHAMPION_LEAGUE_ROUND_BEGIN_REQ = _descriptor.Descriptor(
+  name='CSPKG_CHAMPION_LEAGUE_ROUND_BEGIN_REQ',
+  full_name='CSPKG_CHAMPION_LEAGUE_ROUND_BEGIN_REQ',
+  filename=None,
+  file=DESCRIPTOR,
+  containing_type=None,
+  fields=[
+    _descriptor.FieldDescriptor(
+      name='dun_id', full_name='CSPKG_CHAMPION_LEAGUE_ROUND_BEGIN_REQ.dun_id', index=0,
+      number=2, type=13, cpp_type=3, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+  ],
+  extensions=[
+  ],
+  nested_types=[],
+  enum_types=[
+  ],
+  options=None,
+  is_extendable=False,
+  extension_ranges=[],
+  oneofs=[
+  ],
+  serialized_start=10604,
+  serialized_end=10659,
+)
+
+
+_SCPKG_CHAMPION_LEAGUE_ROUND_BEGIN_RES = _descriptor.Descriptor(
+  name='SCPKG_CHAMPION_LEAGUE_ROUND_BEGIN_RES',
+  full_name='SCPKG_CHAMPION_LEAGUE_ROUND_BEGIN_RES',
+  filename=None,
+  file=DESCRIPTOR,
+  containing_type=None,
+  fields=[
+    _descriptor.FieldDescriptor(
+      name='begin_time', full_name='SCPKG_CHAMPION_LEAGUE_ROUND_BEGIN_RES.begin_time', index=0,
+      number=1, type=13, cpp_type=3, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    _descriptor.FieldDescriptor(
+      name='interval', full_name='SCPKG_CHAMPION_LEAGUE_ROUND_BEGIN_RES.interval', index=1,
+      number=2, type=5, cpp_type=1, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+  ],
+  extensions=[
+  ],
+  nested_types=[],
+  enum_types=[
+  ],
+  options=None,
+  is_extendable=False,
+  extension_ranges=[],
+  oneofs=[
+  ],
+  serialized_start=10661,
+  serialized_end=10738,
+)
+
+
+_CSPKG_CHAMPION_LEAGUE_BALANCE_REQ = _descriptor.Descriptor(
+  name='CSPKG_CHAMPION_LEAGUE_BALANCE_REQ',
+  full_name='CSPKG_CHAMPION_LEAGUE_BALANCE_REQ',
+  filename=None,
+  file=DESCRIPTOR,
+  containing_type=None,
+  fields=[
+    _descriptor.FieldDescriptor(
+      name='dun_id', full_name='CSPKG_CHAMPION_LEAGUE_BALANCE_REQ.dun_id', index=0,
+      number=1, type=13, cpp_type=3, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    _descriptor.FieldDescriptor(
+      name='self_hero_id', full_name='CSPKG_CHAMPION_LEAGUE_BALANCE_REQ.self_hero_id', index=1,
+      number=2, type=13, cpp_type=3, label=3,
+      has_default_value=False, default_value=[],
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    _descriptor.FieldDescriptor(
+      name='target_city_id', full_name='CSPKG_CHAMPION_LEAGUE_BALANCE_REQ.target_city_id', index=2,
+      number=3, type=13, cpp_type=3, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    _descriptor.FieldDescriptor(
+      name='target_strong_point_index', full_name='CSPKG_CHAMPION_LEAGUE_BALANCE_REQ.target_strong_point_index', index=3,
+      number=4, type=5, cpp_type=1, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    _descriptor.FieldDescriptor(
+      name='is_win', full_name='CSPKG_CHAMPION_LEAGUE_BALANCE_REQ.is_win', index=4,
+      number=5, type=8, cpp_type=7, label=1,
+      has_default_value=False, default_value=False,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+  ],
+  extensions=[
+  ],
+  nested_types=[],
+  enum_types=[
+  ],
+  options=None,
+  is_extendable=False,
+  extension_ranges=[],
+  oneofs=[
+  ],
+  serialized_start=10741,
+  serialized_end=10889,
+)
+
+
+_SCPKG_CHAMPION_LEAGUE_BALANCE_RES = _descriptor.Descriptor(
+  name='SCPKG_CHAMPION_LEAGUE_BALANCE_RES',
+  full_name='SCPKG_CHAMPION_LEAGUE_BALANCE_RES',
+  filename=None,
+  file=DESCRIPTOR,
+  containing_type=None,
+  fields=[
+    _descriptor.FieldDescriptor(
+      name='result', full_name='SCPKG_CHAMPION_LEAGUE_BALANCE_RES.result', index=0,
+      number=1, type=5, cpp_type=1, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    _descriptor.FieldDescriptor(
+      name='reward_gold', full_name='SCPKG_CHAMPION_LEAGUE_BALANCE_RES.reward_gold', index=1,
+      number=2, type=13, cpp_type=3, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    _descriptor.FieldDescriptor(
+      name='reward_crystal', full_name='SCPKG_CHAMPION_LEAGUE_BALANCE_RES.reward_crystal', index=2,
+      number=3, type=13, cpp_type=3, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+  ],
+  extensions=[
+  ],
+  nested_types=[],
+  enum_types=[
+  ],
+  options=None,
+  is_extendable=False,
+  extension_ranges=[],
+  oneofs=[
+  ],
+  serialized_start=10891,
+  serialized_end=10987,
+)
+
+
+_CSPKG_GET_GANG_BATTLE_REPLAY_REQ = _descriptor.Descriptor(
+  name='CSPKG_GET_GANG_BATTLE_REPLAY_REQ',
+  full_name='CSPKG_GET_GANG_BATTLE_REPLAY_REQ',
+  filename=None,
+  file=DESCRIPTOR,
+  containing_type=None,
+  fields=[
+    _descriptor.FieldDescriptor(
+      name='is_get_history', full_name='CSPKG_GET_GANG_BATTLE_REPLAY_REQ.is_get_history', index=0,
+      number=1, type=13, cpp_type=3, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    _descriptor.FieldDescriptor(
+      name='is_get_self', full_name='CSPKG_GET_GANG_BATTLE_REPLAY_REQ.is_get_self', index=1,
+      number=2, type=13, cpp_type=3, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    _descriptor.FieldDescriptor(
+      name='battle_time', full_name='CSPKG_GET_GANG_BATTLE_REPLAY_REQ.battle_time', index=2,
+      number=3, type=13, cpp_type=3, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+  ],
+  extensions=[
+  ],
+  nested_types=[],
+  enum_types=[
+  ],
+  options=None,
+  is_extendable=False,
+  extension_ranges=[],
+  oneofs=[
+  ],
+  serialized_start=10989,
+  serialized_end=11089,
+)
+
+
+_SCPKG_GET_GANG_BATTLE_REPLAY_RES = _descriptor.Descriptor(
+  name='SCPKG_GET_GANG_BATTLE_REPLAY_RES',
+  full_name='SCPKG_GET_GANG_BATTLE_REPLAY_RES',
+  filename=None,
+  file=DESCRIPTOR,
+  containing_type=None,
+  fields=[
+    _descriptor.FieldDescriptor(
+      name='result', full_name='SCPKG_GET_GANG_BATTLE_REPLAY_RES.result', index=0,
+      number=1, type=5, cpp_type=1, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    _descriptor.FieldDescriptor(
+      name='is_get_history', full_name='SCPKG_GET_GANG_BATTLE_REPLAY_RES.is_get_history', index=1,
+      number=2, type=13, cpp_type=3, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    _descriptor.FieldDescriptor(
+      name='is_get_self', full_name='SCPKG_GET_GANG_BATTLE_REPLAY_RES.is_get_self', index=2,
+      number=3, type=13, cpp_type=3, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    _descriptor.FieldDescriptor(
+      name='replay_info', full_name='SCPKG_GET_GANG_BATTLE_REPLAY_RES.replay_info', index=3,
+      number=4, type=11, cpp_type=10, label=1,
+      has_default_value=False, default_value=None,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    _descriptor.FieldDescriptor(
+      name='gang_name', full_name='SCPKG_GET_GANG_BATTLE_REPLAY_RES.gang_name', index=4,
+      number=5, type=9, cpp_type=9, label=1,
+      has_default_value=False, default_value=_b("").decode('utf-8'),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+  ],
+  extensions=[
+  ],
+  nested_types=[],
+  enum_types=[
+  ],
+  options=None,
+  is_extendable=False,
+  extension_ranges=[],
+  oneofs=[
+  ],
+  serialized_start=11092,
+  serialized_end=11249,
+)
+
+
+_CSPKG_GET_CHAMPION_LEAGUE_RECORD_REQ = _descriptor.Descriptor(
+  name='CSPKG_GET_CHAMPION_LEAGUE_RECORD_REQ',
+  full_name='CSPKG_GET_CHAMPION_LEAGUE_RECORD_REQ',
+  filename=None,
+  file=DESCRIPTOR,
+  containing_type=None,
+  fields=[
+    _descriptor.FieldDescriptor(
+      name='round_id', full_name='CSPKG_GET_CHAMPION_LEAGUE_RECORD_REQ.round_id', index=0,
+      number=1, type=13, cpp_type=3, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    _descriptor.FieldDescriptor(
+      name='gang_id', full_name='CSPKG_GET_CHAMPION_LEAGUE_RECORD_REQ.gang_id', index=1,
+      number=2, type=13, cpp_type=3, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+  ],
+  extensions=[
+  ],
+  nested_types=[],
+  enum_types=[
+  ],
+  options=None,
+  is_extendable=False,
+  extension_ranges=[],
+  oneofs=[
+  ],
+  serialized_start=11251,
+  serialized_end=11324,
+)
+
+
+_SCPKG_GET_CHAMPION_LEAGUE_RECORD_RES = _descriptor.Descriptor(
+  name='SCPKG_GET_CHAMPION_LEAGUE_RECORD_RES',
+  full_name='SCPKG_GET_CHAMPION_LEAGUE_RECORD_RES',
+  filename=None,
+  file=DESCRIPTOR,
+  containing_type=None,
+  fields=[
+    _descriptor.FieldDescriptor(
+      name='result', full_name='SCPKG_GET_CHAMPION_LEAGUE_RECORD_RES.result', index=0,
+      number=1, type=5, cpp_type=1, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    _descriptor.FieldDescriptor(
+      name='record_info', full_name='SCPKG_GET_CHAMPION_LEAGUE_RECORD_RES.record_info', index=1,
+      number=2, type=11, cpp_type=10, label=1,
+      has_default_value=False, default_value=None,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    _descriptor.FieldDescriptor(
+      name='self_score', full_name='SCPKG_GET_CHAMPION_LEAGUE_RECORD_RES.self_score', index=2,
+      number=3, type=13, cpp_type=3, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    _descriptor.FieldDescriptor(
+      name='target_score', full_name='SCPKG_GET_CHAMPION_LEAGUE_RECORD_RES.target_score', index=3,
+      number=4, type=13, cpp_type=3, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+  ],
+  extensions=[
+  ],
+  nested_types=[],
+  enum_types=[
+  ],
+  options=None,
+  is_extendable=False,
+  extension_ranges=[],
+  oneofs=[
+  ],
+  serialized_start=11327,
+  serialized_end=11472,
 )
 
 _ST_GANG_CITY_STRONG_POINT_HERO_INFO.fields_by_name['hero_info'].message_type = rescommon_pb2._ST_HERO_BATTLE_INFO
+_ST_GANG_CITY_REPLAY_INFO.fields_by_name['point_replay_info'].message_type = _ST_GANG_POINT_REPLAY_INFO
+_ST_CHAMPION_LEAGUE_RECORD.fields_by_name['record_info'].message_type = _ST_GANG_CITY_REPLAY_INFO
+_ST_CHAMPION_LEAGUE_RECORD_BLOB.fields_by_name['gang_record'].message_type = _ST_CHAMPION_LEAGUE_RECORD
+_ST_GANG_REPLAY_INFO.fields_by_name['small_city_replay_info'].message_type = _ST_GANG_CITY_REPLAY_INFO
+_ST_GANG_REPLAY_INFO.fields_by_name['moderate_city_replay_info'].message_type = _ST_GANG_CITY_REPLAY_INFO
+_ST_GANG_REPLAY_INFO.fields_by_name['big_city_replay_info'].message_type = _ST_GANG_CITY_REPLAY_INFO
 _ST_GANG_CITY_STRONG_POINT.fields_by_name['hero_info'].message_type = _ST_GANG_CITY_STRONG_POINT_HERO_INFO
+_ST_GANG_CITY_STRONG_POINT.fields_by_name['point_replay_info'].message_type = _ST_GANG_POINT_REPLAY_INFO
 _ST_GANG_CITY_INFO.fields_by_name['strong_point_info'].message_type = _ST_GANG_CITY_STRONG_POINT
 _ST_GANG_CITY.fields_by_name['small_city'].message_type = _ST_GANG_CITY_INFO
 _ST_GANG_CITY.fields_by_name['moderate_city'].message_type = _ST_GANG_CITY_INFO
 _ST_GANG_CITY.fields_by_name['big_city'].message_type = _ST_GANG_CITY_INFO
+_ST_CHAMPION_LEAGUE_CITY.fields_by_name['auto_zone'].message_type = _ST_GANG_CITY
+_ST_CHAMPION_LEAGUE_CITY.fields_by_name['manual_zone'].message_type = _ST_GANG_CITY
 _ST_GANG_BATTLE_MEM_LIST.fields_by_name['mem_info'].message_type = _ST_GANG_BATTLE_MEM_INFO
 _ST_GANG_BATTLE_MEM_ATTACK_LIST.fields_by_name['mem_info'].message_type = _ST_GANG_BATTLE_MEM_ATTACK_INFO
 _CSDT_GANGMEM_INFO.fields_by_name['gang_bless_info'].message_type = rescommon_pb2._ST_BLESS_INFO
@@ -3563,10 +4626,22 @@ _SCPKG_ENTER_GANG_BATTLE_DUNGEON_RES.fields_by_name['target_hero_info'].message_
 _SCPKG_CMD_GET_GANG_BATTLE_STATE_RES.fields_by_name['attack_point'].message_type = _ST_GANG_BATTLE_ATTACK_POINT_INFO
 _SCPKG_CMD_GET_GANG_BATTLE_HISTORY_RES.fields_by_name['history_info'].message_type = _CSDT_GANG_BATTLE_HISTORY_INFO
 _SCPKG_GET_GANG_BATTLE_MEM_ATTACK_INFO_RES.fields_by_name['mem_attck_info'].message_type = _ST_GANG_BATTLE_MEM_ATTACK_LIST
+_SCPKG_CHAMPION_LEAGUE_GET_STATE_RES.fields_by_name['attack_point'].message_type = _ST_GANG_BATTLE_ATTACK_POINT_INFO
+_SCPKG_CHAMPION_LEAGUE_GET_BATTLE_PAIR_RES.fields_by_name['battle_pair_info'].message_type = rescommon_pb2._ST_CHAMPION_LEAGUE_PAIR_LIST
+_SCPKG_CHAMPION_LEAGUE_GET_RANK_RES.fields_by_name['rank_list'].message_type = rescommon_pb2._ST_CHAMPION_LEAGUE_TEAM_INFO
+_SCPKG_ENTER_CHAMPION_LEAGUE_RES.fields_by_name['target_hero_info'].message_type = _ST_GANG_BATTLE_DEFENSE_HERO_INFO
+_SCPKG_GET_GANG_BATTLE_REPLAY_RES.fields_by_name['replay_info'].message_type = _ST_GANG_REPLAY_INFO
+_SCPKG_GET_CHAMPION_LEAGUE_RECORD_RES.fields_by_name['record_info'].message_type = _ST_CHAMPION_LEAGUE_RECORD
 DESCRIPTOR.message_types_by_name['ST_GANG_CITY_STRONG_POINT_HERO_INFO'] = _ST_GANG_CITY_STRONG_POINT_HERO_INFO
+DESCRIPTOR.message_types_by_name['ST_GANG_POINT_REPLAY_INFO'] = _ST_GANG_POINT_REPLAY_INFO
+DESCRIPTOR.message_types_by_name['ST_GANG_CITY_REPLAY_INFO'] = _ST_GANG_CITY_REPLAY_INFO
+DESCRIPTOR.message_types_by_name['ST_CHAMPION_LEAGUE_RECORD'] = _ST_CHAMPION_LEAGUE_RECORD
+DESCRIPTOR.message_types_by_name['ST_CHAMPION_LEAGUE_RECORD_BLOB'] = _ST_CHAMPION_LEAGUE_RECORD_BLOB
+DESCRIPTOR.message_types_by_name['ST_GANG_REPLAY_INFO'] = _ST_GANG_REPLAY_INFO
 DESCRIPTOR.message_types_by_name['ST_GANG_CITY_STRONG_POINT'] = _ST_GANG_CITY_STRONG_POINT
 DESCRIPTOR.message_types_by_name['ST_GANG_CITY_INFO'] = _ST_GANG_CITY_INFO
 DESCRIPTOR.message_types_by_name['ST_GANG_CITY'] = _ST_GANG_CITY
+DESCRIPTOR.message_types_by_name['ST_CHAMPION_LEAGUE_CITY'] = _ST_CHAMPION_LEAGUE_CITY
 DESCRIPTOR.message_types_by_name['ST_GANG_BATTLE_MEM_INFO'] = _ST_GANG_BATTLE_MEM_INFO
 DESCRIPTOR.message_types_by_name['ST_GANG_BATTLE_MEM_LIST'] = _ST_GANG_BATTLE_MEM_LIST
 DESCRIPTOR.message_types_by_name['ST_GANG_BATTLE_ATTACK_POINT_INFO'] = _ST_GANG_BATTLE_ATTACK_POINT_INFO
@@ -3603,8 +4678,6 @@ DESCRIPTOR.message_types_by_name['SCPKG_CMD_SEARCH_GANG_RES'] = _SCPKG_CMD_SEARC
 DESCRIPTOR.message_types_by_name['SCPKG_CMD_GANG_UPDATE_BASIC_INFO_RES'] = _SCPKG_CMD_GANG_UPDATE_BASIC_INFO_RES
 DESCRIPTOR.message_types_by_name['CSPKG_CMD_GANG_APPROVE_REQ'] = _CSPKG_CMD_GANG_APPROVE_REQ
 DESCRIPTOR.message_types_by_name['SCPKG_CMD_GANG_APPROVE_RES'] = _SCPKG_CMD_GANG_APPROVE_RES
-DESCRIPTOR.message_types_by_name['CSPKG_CMD_GANG_CHAT_REQ'] = _CSPKG_CMD_GANG_CHAT_REQ
-DESCRIPTOR.message_types_by_name['SCPKG_CMD_GANG_CHAT_RES'] = _SCPKG_CMD_GANG_CHAT_RES
 DESCRIPTOR.message_types_by_name['CSPKG_CMD_GANG_APPLYLIST_REQ'] = _CSPKG_CMD_GANG_APPLYLIST_REQ
 DESCRIPTOR.message_types_by_name['SCPKG_CMD_GANG_APPLYLIST_RES'] = _SCPKG_CMD_GANG_APPLYLIST_RES
 DESCRIPTOR.message_types_by_name['SCPKG_CMD_GANG_APPROVETOMEM_RES'] = _SCPKG_CMD_GANG_APPROVETOMEM_RES
@@ -3645,6 +4718,25 @@ DESCRIPTOR.message_types_by_name['CSPKG_GET_GANG_BATTLE_MEM_ATTACK_INFO_REQ'] = 
 DESCRIPTOR.message_types_by_name['SCPKG_GET_GANG_BATTLE_MEM_ATTACK_INFO_RES'] = _SCPKG_GET_GANG_BATTLE_MEM_ATTACK_INFO_RES
 DESCRIPTOR.message_types_by_name['CSPKG_GET_GANG_BATTLE_STATE_INFO_REQ'] = _CSPKG_GET_GANG_BATTLE_STATE_INFO_REQ
 DESCRIPTOR.message_types_by_name['SCPKG_GET_GANG_BATTLE_STATE_INFO_RES'] = _SCPKG_GET_GANG_BATTLE_STATE_INFO_RES
+DESCRIPTOR.message_types_by_name['CSPKG_CHAMPION_LEAGUE_APPLY_REQ'] = _CSPKG_CHAMPION_LEAGUE_APPLY_REQ
+DESCRIPTOR.message_types_by_name['SCPKG_CHAMPION_LEAGUE_APPLY_RES'] = _SCPKG_CHAMPION_LEAGUE_APPLY_RES
+DESCRIPTOR.message_types_by_name['CSPKG_CHAMPION_LEAGUE_GET_STATE_REQ'] = _CSPKG_CHAMPION_LEAGUE_GET_STATE_REQ
+DESCRIPTOR.message_types_by_name['SCPKG_CHAMPION_LEAGUE_GET_STATE_RES'] = _SCPKG_CHAMPION_LEAGUE_GET_STATE_RES
+DESCRIPTOR.message_types_by_name['SCPKG_CHAMPION_LEAGUE_STATE_REFRESH'] = _SCPKG_CHAMPION_LEAGUE_STATE_REFRESH
+DESCRIPTOR.message_types_by_name['CSPKG_CHAMPION_LEAGUE_GET_BATTLE_PAIR_REQ'] = _CSPKG_CHAMPION_LEAGUE_GET_BATTLE_PAIR_REQ
+DESCRIPTOR.message_types_by_name['SCPKG_CHAMPION_LEAGUE_GET_BATTLE_PAIR_RES'] = _SCPKG_CHAMPION_LEAGUE_GET_BATTLE_PAIR_RES
+DESCRIPTOR.message_types_by_name['CSPKG_CHAMPION_LEAGUE_GET_RANK_REQ'] = _CSPKG_CHAMPION_LEAGUE_GET_RANK_REQ
+DESCRIPTOR.message_types_by_name['SCPKG_CHAMPION_LEAGUE_GET_RANK_RES'] = _SCPKG_CHAMPION_LEAGUE_GET_RANK_RES
+DESCRIPTOR.message_types_by_name['CSPKG_ENTER_CHAMPION_LEAGUE_REQ'] = _CSPKG_ENTER_CHAMPION_LEAGUE_REQ
+DESCRIPTOR.message_types_by_name['SCPKG_ENTER_CHAMPION_LEAGUE_RES'] = _SCPKG_ENTER_CHAMPION_LEAGUE_RES
+DESCRIPTOR.message_types_by_name['CSPKG_CHAMPION_LEAGUE_ROUND_BEGIN_REQ'] = _CSPKG_CHAMPION_LEAGUE_ROUND_BEGIN_REQ
+DESCRIPTOR.message_types_by_name['SCPKG_CHAMPION_LEAGUE_ROUND_BEGIN_RES'] = _SCPKG_CHAMPION_LEAGUE_ROUND_BEGIN_RES
+DESCRIPTOR.message_types_by_name['CSPKG_CHAMPION_LEAGUE_BALANCE_REQ'] = _CSPKG_CHAMPION_LEAGUE_BALANCE_REQ
+DESCRIPTOR.message_types_by_name['SCPKG_CHAMPION_LEAGUE_BALANCE_RES'] = _SCPKG_CHAMPION_LEAGUE_BALANCE_RES
+DESCRIPTOR.message_types_by_name['CSPKG_GET_GANG_BATTLE_REPLAY_REQ'] = _CSPKG_GET_GANG_BATTLE_REPLAY_REQ
+DESCRIPTOR.message_types_by_name['SCPKG_GET_GANG_BATTLE_REPLAY_RES'] = _SCPKG_GET_GANG_BATTLE_REPLAY_RES
+DESCRIPTOR.message_types_by_name['CSPKG_GET_CHAMPION_LEAGUE_RECORD_REQ'] = _CSPKG_GET_CHAMPION_LEAGUE_RECORD_REQ
+DESCRIPTOR.message_types_by_name['SCPKG_GET_CHAMPION_LEAGUE_RECORD_RES'] = _SCPKG_GET_CHAMPION_LEAGUE_RECORD_RES
 
 ST_GANG_CITY_STRONG_POINT_HERO_INFO = _reflection.GeneratedProtocolMessageType('ST_GANG_CITY_STRONG_POINT_HERO_INFO', (_message.Message,), dict(
   DESCRIPTOR = _ST_GANG_CITY_STRONG_POINT_HERO_INFO,
@@ -3652,6 +4744,41 @@ ST_GANG_CITY_STRONG_POINT_HERO_INFO = _reflection.GeneratedProtocolMessageType('
   # @@protoc_insertion_point(class_scope:ST_GANG_CITY_STRONG_POINT_HERO_INFO)
   ))
 _sym_db.RegisterMessage(ST_GANG_CITY_STRONG_POINT_HERO_INFO)
+
+ST_GANG_POINT_REPLAY_INFO = _reflection.GeneratedProtocolMessageType('ST_GANG_POINT_REPLAY_INFO', (_message.Message,), dict(
+  DESCRIPTOR = _ST_GANG_POINT_REPLAY_INFO,
+  __module__ = 'gang_pb2'
+  # @@protoc_insertion_point(class_scope:ST_GANG_POINT_REPLAY_INFO)
+  ))
+_sym_db.RegisterMessage(ST_GANG_POINT_REPLAY_INFO)
+
+ST_GANG_CITY_REPLAY_INFO = _reflection.GeneratedProtocolMessageType('ST_GANG_CITY_REPLAY_INFO', (_message.Message,), dict(
+  DESCRIPTOR = _ST_GANG_CITY_REPLAY_INFO,
+  __module__ = 'gang_pb2'
+  # @@protoc_insertion_point(class_scope:ST_GANG_CITY_REPLAY_INFO)
+  ))
+_sym_db.RegisterMessage(ST_GANG_CITY_REPLAY_INFO)
+
+ST_CHAMPION_LEAGUE_RECORD = _reflection.GeneratedProtocolMessageType('ST_CHAMPION_LEAGUE_RECORD', (_message.Message,), dict(
+  DESCRIPTOR = _ST_CHAMPION_LEAGUE_RECORD,
+  __module__ = 'gang_pb2'
+  # @@protoc_insertion_point(class_scope:ST_CHAMPION_LEAGUE_RECORD)
+  ))
+_sym_db.RegisterMessage(ST_CHAMPION_LEAGUE_RECORD)
+
+ST_CHAMPION_LEAGUE_RECORD_BLOB = _reflection.GeneratedProtocolMessageType('ST_CHAMPION_LEAGUE_RECORD_BLOB', (_message.Message,), dict(
+  DESCRIPTOR = _ST_CHAMPION_LEAGUE_RECORD_BLOB,
+  __module__ = 'gang_pb2'
+  # @@protoc_insertion_point(class_scope:ST_CHAMPION_LEAGUE_RECORD_BLOB)
+  ))
+_sym_db.RegisterMessage(ST_CHAMPION_LEAGUE_RECORD_BLOB)
+
+ST_GANG_REPLAY_INFO = _reflection.GeneratedProtocolMessageType('ST_GANG_REPLAY_INFO', (_message.Message,), dict(
+  DESCRIPTOR = _ST_GANG_REPLAY_INFO,
+  __module__ = 'gang_pb2'
+  # @@protoc_insertion_point(class_scope:ST_GANG_REPLAY_INFO)
+  ))
+_sym_db.RegisterMessage(ST_GANG_REPLAY_INFO)
 
 ST_GANG_CITY_STRONG_POINT = _reflection.GeneratedProtocolMessageType('ST_GANG_CITY_STRONG_POINT', (_message.Message,), dict(
   DESCRIPTOR = _ST_GANG_CITY_STRONG_POINT,
@@ -3673,6 +4800,13 @@ ST_GANG_CITY = _reflection.GeneratedProtocolMessageType('ST_GANG_CITY', (_messag
   # @@protoc_insertion_point(class_scope:ST_GANG_CITY)
   ))
 _sym_db.RegisterMessage(ST_GANG_CITY)
+
+ST_CHAMPION_LEAGUE_CITY = _reflection.GeneratedProtocolMessageType('ST_CHAMPION_LEAGUE_CITY', (_message.Message,), dict(
+  DESCRIPTOR = _ST_CHAMPION_LEAGUE_CITY,
+  __module__ = 'gang_pb2'
+  # @@protoc_insertion_point(class_scope:ST_CHAMPION_LEAGUE_CITY)
+  ))
+_sym_db.RegisterMessage(ST_CHAMPION_LEAGUE_CITY)
 
 ST_GANG_BATTLE_MEM_INFO = _reflection.GeneratedProtocolMessageType('ST_GANG_BATTLE_MEM_INFO', (_message.Message,), dict(
   DESCRIPTOR = _ST_GANG_BATTLE_MEM_INFO,
@@ -3925,20 +5059,6 @@ SCPKG_CMD_GANG_APPROVE_RES = _reflection.GeneratedProtocolMessageType('SCPKG_CMD
   # @@protoc_insertion_point(class_scope:SCPKG_CMD_GANG_APPROVE_RES)
   ))
 _sym_db.RegisterMessage(SCPKG_CMD_GANG_APPROVE_RES)
-
-CSPKG_CMD_GANG_CHAT_REQ = _reflection.GeneratedProtocolMessageType('CSPKG_CMD_GANG_CHAT_REQ', (_message.Message,), dict(
-  DESCRIPTOR = _CSPKG_CMD_GANG_CHAT_REQ,
-  __module__ = 'gang_pb2'
-  # @@protoc_insertion_point(class_scope:CSPKG_CMD_GANG_CHAT_REQ)
-  ))
-_sym_db.RegisterMessage(CSPKG_CMD_GANG_CHAT_REQ)
-
-SCPKG_CMD_GANG_CHAT_RES = _reflection.GeneratedProtocolMessageType('SCPKG_CMD_GANG_CHAT_RES', (_message.Message,), dict(
-  DESCRIPTOR = _SCPKG_CMD_GANG_CHAT_RES,
-  __module__ = 'gang_pb2'
-  # @@protoc_insertion_point(class_scope:SCPKG_CMD_GANG_CHAT_RES)
-  ))
-_sym_db.RegisterMessage(SCPKG_CMD_GANG_CHAT_RES)
 
 CSPKG_CMD_GANG_APPLYLIST_REQ = _reflection.GeneratedProtocolMessageType('CSPKG_CMD_GANG_APPLYLIST_REQ', (_message.Message,), dict(
   DESCRIPTOR = _CSPKG_CMD_GANG_APPLYLIST_REQ,
@@ -4219,6 +5339,139 @@ SCPKG_GET_GANG_BATTLE_STATE_INFO_RES = _reflection.GeneratedProtocolMessageType(
   # @@protoc_insertion_point(class_scope:SCPKG_GET_GANG_BATTLE_STATE_INFO_RES)
   ))
 _sym_db.RegisterMessage(SCPKG_GET_GANG_BATTLE_STATE_INFO_RES)
+
+CSPKG_CHAMPION_LEAGUE_APPLY_REQ = _reflection.GeneratedProtocolMessageType('CSPKG_CHAMPION_LEAGUE_APPLY_REQ', (_message.Message,), dict(
+  DESCRIPTOR = _CSPKG_CHAMPION_LEAGUE_APPLY_REQ,
+  __module__ = 'gang_pb2'
+  # @@protoc_insertion_point(class_scope:CSPKG_CHAMPION_LEAGUE_APPLY_REQ)
+  ))
+_sym_db.RegisterMessage(CSPKG_CHAMPION_LEAGUE_APPLY_REQ)
+
+SCPKG_CHAMPION_LEAGUE_APPLY_RES = _reflection.GeneratedProtocolMessageType('SCPKG_CHAMPION_LEAGUE_APPLY_RES', (_message.Message,), dict(
+  DESCRIPTOR = _SCPKG_CHAMPION_LEAGUE_APPLY_RES,
+  __module__ = 'gang_pb2'
+  # @@protoc_insertion_point(class_scope:SCPKG_CHAMPION_LEAGUE_APPLY_RES)
+  ))
+_sym_db.RegisterMessage(SCPKG_CHAMPION_LEAGUE_APPLY_RES)
+
+CSPKG_CHAMPION_LEAGUE_GET_STATE_REQ = _reflection.GeneratedProtocolMessageType('CSPKG_CHAMPION_LEAGUE_GET_STATE_REQ', (_message.Message,), dict(
+  DESCRIPTOR = _CSPKG_CHAMPION_LEAGUE_GET_STATE_REQ,
+  __module__ = 'gang_pb2'
+  # @@protoc_insertion_point(class_scope:CSPKG_CHAMPION_LEAGUE_GET_STATE_REQ)
+  ))
+_sym_db.RegisterMessage(CSPKG_CHAMPION_LEAGUE_GET_STATE_REQ)
+
+SCPKG_CHAMPION_LEAGUE_GET_STATE_RES = _reflection.GeneratedProtocolMessageType('SCPKG_CHAMPION_LEAGUE_GET_STATE_RES', (_message.Message,), dict(
+  DESCRIPTOR = _SCPKG_CHAMPION_LEAGUE_GET_STATE_RES,
+  __module__ = 'gang_pb2'
+  # @@protoc_insertion_point(class_scope:SCPKG_CHAMPION_LEAGUE_GET_STATE_RES)
+  ))
+_sym_db.RegisterMessage(SCPKG_CHAMPION_LEAGUE_GET_STATE_RES)
+
+SCPKG_CHAMPION_LEAGUE_STATE_REFRESH = _reflection.GeneratedProtocolMessageType('SCPKG_CHAMPION_LEAGUE_STATE_REFRESH', (_message.Message,), dict(
+  DESCRIPTOR = _SCPKG_CHAMPION_LEAGUE_STATE_REFRESH,
+  __module__ = 'gang_pb2'
+  # @@protoc_insertion_point(class_scope:SCPKG_CHAMPION_LEAGUE_STATE_REFRESH)
+  ))
+_sym_db.RegisterMessage(SCPKG_CHAMPION_LEAGUE_STATE_REFRESH)
+
+CSPKG_CHAMPION_LEAGUE_GET_BATTLE_PAIR_REQ = _reflection.GeneratedProtocolMessageType('CSPKG_CHAMPION_LEAGUE_GET_BATTLE_PAIR_REQ', (_message.Message,), dict(
+  DESCRIPTOR = _CSPKG_CHAMPION_LEAGUE_GET_BATTLE_PAIR_REQ,
+  __module__ = 'gang_pb2'
+  # @@protoc_insertion_point(class_scope:CSPKG_CHAMPION_LEAGUE_GET_BATTLE_PAIR_REQ)
+  ))
+_sym_db.RegisterMessage(CSPKG_CHAMPION_LEAGUE_GET_BATTLE_PAIR_REQ)
+
+SCPKG_CHAMPION_LEAGUE_GET_BATTLE_PAIR_RES = _reflection.GeneratedProtocolMessageType('SCPKG_CHAMPION_LEAGUE_GET_BATTLE_PAIR_RES', (_message.Message,), dict(
+  DESCRIPTOR = _SCPKG_CHAMPION_LEAGUE_GET_BATTLE_PAIR_RES,
+  __module__ = 'gang_pb2'
+  # @@protoc_insertion_point(class_scope:SCPKG_CHAMPION_LEAGUE_GET_BATTLE_PAIR_RES)
+  ))
+_sym_db.RegisterMessage(SCPKG_CHAMPION_LEAGUE_GET_BATTLE_PAIR_RES)
+
+CSPKG_CHAMPION_LEAGUE_GET_RANK_REQ = _reflection.GeneratedProtocolMessageType('CSPKG_CHAMPION_LEAGUE_GET_RANK_REQ', (_message.Message,), dict(
+  DESCRIPTOR = _CSPKG_CHAMPION_LEAGUE_GET_RANK_REQ,
+  __module__ = 'gang_pb2'
+  # @@protoc_insertion_point(class_scope:CSPKG_CHAMPION_LEAGUE_GET_RANK_REQ)
+  ))
+_sym_db.RegisterMessage(CSPKG_CHAMPION_LEAGUE_GET_RANK_REQ)
+
+SCPKG_CHAMPION_LEAGUE_GET_RANK_RES = _reflection.GeneratedProtocolMessageType('SCPKG_CHAMPION_LEAGUE_GET_RANK_RES', (_message.Message,), dict(
+  DESCRIPTOR = _SCPKG_CHAMPION_LEAGUE_GET_RANK_RES,
+  __module__ = 'gang_pb2'
+  # @@protoc_insertion_point(class_scope:SCPKG_CHAMPION_LEAGUE_GET_RANK_RES)
+  ))
+_sym_db.RegisterMessage(SCPKG_CHAMPION_LEAGUE_GET_RANK_RES)
+
+CSPKG_ENTER_CHAMPION_LEAGUE_REQ = _reflection.GeneratedProtocolMessageType('CSPKG_ENTER_CHAMPION_LEAGUE_REQ', (_message.Message,), dict(
+  DESCRIPTOR = _CSPKG_ENTER_CHAMPION_LEAGUE_REQ,
+  __module__ = 'gang_pb2'
+  # @@protoc_insertion_point(class_scope:CSPKG_ENTER_CHAMPION_LEAGUE_REQ)
+  ))
+_sym_db.RegisterMessage(CSPKG_ENTER_CHAMPION_LEAGUE_REQ)
+
+SCPKG_ENTER_CHAMPION_LEAGUE_RES = _reflection.GeneratedProtocolMessageType('SCPKG_ENTER_CHAMPION_LEAGUE_RES', (_message.Message,), dict(
+  DESCRIPTOR = _SCPKG_ENTER_CHAMPION_LEAGUE_RES,
+  __module__ = 'gang_pb2'
+  # @@protoc_insertion_point(class_scope:SCPKG_ENTER_CHAMPION_LEAGUE_RES)
+  ))
+_sym_db.RegisterMessage(SCPKG_ENTER_CHAMPION_LEAGUE_RES)
+
+CSPKG_CHAMPION_LEAGUE_ROUND_BEGIN_REQ = _reflection.GeneratedProtocolMessageType('CSPKG_CHAMPION_LEAGUE_ROUND_BEGIN_REQ', (_message.Message,), dict(
+  DESCRIPTOR = _CSPKG_CHAMPION_LEAGUE_ROUND_BEGIN_REQ,
+  __module__ = 'gang_pb2'
+  # @@protoc_insertion_point(class_scope:CSPKG_CHAMPION_LEAGUE_ROUND_BEGIN_REQ)
+  ))
+_sym_db.RegisterMessage(CSPKG_CHAMPION_LEAGUE_ROUND_BEGIN_REQ)
+
+SCPKG_CHAMPION_LEAGUE_ROUND_BEGIN_RES = _reflection.GeneratedProtocolMessageType('SCPKG_CHAMPION_LEAGUE_ROUND_BEGIN_RES', (_message.Message,), dict(
+  DESCRIPTOR = _SCPKG_CHAMPION_LEAGUE_ROUND_BEGIN_RES,
+  __module__ = 'gang_pb2'
+  # @@protoc_insertion_point(class_scope:SCPKG_CHAMPION_LEAGUE_ROUND_BEGIN_RES)
+  ))
+_sym_db.RegisterMessage(SCPKG_CHAMPION_LEAGUE_ROUND_BEGIN_RES)
+
+CSPKG_CHAMPION_LEAGUE_BALANCE_REQ = _reflection.GeneratedProtocolMessageType('CSPKG_CHAMPION_LEAGUE_BALANCE_REQ', (_message.Message,), dict(
+  DESCRIPTOR = _CSPKG_CHAMPION_LEAGUE_BALANCE_REQ,
+  __module__ = 'gang_pb2'
+  # @@protoc_insertion_point(class_scope:CSPKG_CHAMPION_LEAGUE_BALANCE_REQ)
+  ))
+_sym_db.RegisterMessage(CSPKG_CHAMPION_LEAGUE_BALANCE_REQ)
+
+SCPKG_CHAMPION_LEAGUE_BALANCE_RES = _reflection.GeneratedProtocolMessageType('SCPKG_CHAMPION_LEAGUE_BALANCE_RES', (_message.Message,), dict(
+  DESCRIPTOR = _SCPKG_CHAMPION_LEAGUE_BALANCE_RES,
+  __module__ = 'gang_pb2'
+  # @@protoc_insertion_point(class_scope:SCPKG_CHAMPION_LEAGUE_BALANCE_RES)
+  ))
+_sym_db.RegisterMessage(SCPKG_CHAMPION_LEAGUE_BALANCE_RES)
+
+CSPKG_GET_GANG_BATTLE_REPLAY_REQ = _reflection.GeneratedProtocolMessageType('CSPKG_GET_GANG_BATTLE_REPLAY_REQ', (_message.Message,), dict(
+  DESCRIPTOR = _CSPKG_GET_GANG_BATTLE_REPLAY_REQ,
+  __module__ = 'gang_pb2'
+  # @@protoc_insertion_point(class_scope:CSPKG_GET_GANG_BATTLE_REPLAY_REQ)
+  ))
+_sym_db.RegisterMessage(CSPKG_GET_GANG_BATTLE_REPLAY_REQ)
+
+SCPKG_GET_GANG_BATTLE_REPLAY_RES = _reflection.GeneratedProtocolMessageType('SCPKG_GET_GANG_BATTLE_REPLAY_RES', (_message.Message,), dict(
+  DESCRIPTOR = _SCPKG_GET_GANG_BATTLE_REPLAY_RES,
+  __module__ = 'gang_pb2'
+  # @@protoc_insertion_point(class_scope:SCPKG_GET_GANG_BATTLE_REPLAY_RES)
+  ))
+_sym_db.RegisterMessage(SCPKG_GET_GANG_BATTLE_REPLAY_RES)
+
+CSPKG_GET_CHAMPION_LEAGUE_RECORD_REQ = _reflection.GeneratedProtocolMessageType('CSPKG_GET_CHAMPION_LEAGUE_RECORD_REQ', (_message.Message,), dict(
+  DESCRIPTOR = _CSPKG_GET_CHAMPION_LEAGUE_RECORD_REQ,
+  __module__ = 'gang_pb2'
+  # @@protoc_insertion_point(class_scope:CSPKG_GET_CHAMPION_LEAGUE_RECORD_REQ)
+  ))
+_sym_db.RegisterMessage(CSPKG_GET_CHAMPION_LEAGUE_RECORD_REQ)
+
+SCPKG_GET_CHAMPION_LEAGUE_RECORD_RES = _reflection.GeneratedProtocolMessageType('SCPKG_GET_CHAMPION_LEAGUE_RECORD_RES', (_message.Message,), dict(
+  DESCRIPTOR = _SCPKG_GET_CHAMPION_LEAGUE_RECORD_RES,
+  __module__ = 'gang_pb2'
+  # @@protoc_insertion_point(class_scope:SCPKG_GET_CHAMPION_LEAGUE_RECORD_RES)
+  ))
+_sym_db.RegisterMessage(SCPKG_GET_CHAMPION_LEAGUE_RECORD_RES)
 
 
 # @@protoc_insertion_point(module_scope)

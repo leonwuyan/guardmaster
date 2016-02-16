@@ -19,7 +19,7 @@ import rescommon_pb2
 DESCRIPTOR = _descriptor.FileDescriptor(
   name='rankbattle.proto',
   package='',
-  serialized_pb=_b('\n\x10rankbattle.proto\x1a\x0frescommon.proto\"\xa2\x01\n\x1c\x43SDT_PLAYER_RANK_BATTLE_INFO\x12\x1d\n\x15last_rank_battle_time\x18\x01 \x01(\r\x12\x1e\n\x16left_rank_battle_count\x18\x02 \x01(\r\x12\x1d\n\x15\x62uy_rank_battle_count\x18\x03 \x01(\r\x12$\n\x1clast_refresh_left_count_time\x18\x04 \x01(\r\"@\n\x1f\x43SPKG_CMD_SET_RANK_BATTLE_ORDER\x12\x0c\n\x04type\x18\x01 \x01(\r\x12\x0f\n\x07hero_id\x18\x02 \x03(\r\"?\n\x1fSCPKG_CMD_SET_RANK_BATTLE_ORDER\x12\x0c\n\x04type\x18\x01 \x01(\r\x12\x0e\n\x06result\x18\x02 \x01(\r\"\\\n\x1b\x43SDT_RANK_BATTLE_LEFT_COUNT\x12\x1e\n\x16left_rank_battle_count\x18\x01 \x01(\r\x12\x1d\n\x15\x62uy_rank_battle_count\x18\x02 \x01(\r\"K\n\x1b\x43S_RANK_BATTLE_DEFENSE_DATA\x12,\n\thero_info\x18\x01 \x03(\x0b\x32\x19.ST_BATTLE_HERO_ATTR_INFO\"/\n\x1c\x43SPKG_RANK_BATTLE_POS_UPDATE\x12\x0f\n\x07reverse\x18\x01 \x01(\x05\"]\n\x1cSCPKG_RANK_BATTLE_POS_UPDATE\x12\x17\n\x0frank_battle_pos\x18\x01 \x01(\x05\x12$\n\x1crank_battle_high_history_pos\x18\x02 \x01(\x05\"9\n&CSPKG_RANK_BATTLE_GET_FIGHT_TARGET_REQ\x12\x0f\n\x07reverse\x18\x01 \x01(\r\"\xbf\x01\n\"CSDT_RANK_BATTLE_FIGHT_TARGET_INFO\x12\x0f\n\x07role_id\x18\x01 \x01(\r\x12\x11\n\trole_name\x18\x02 \x01(\t\x12\x10\n\x08rank_pos\x18\x03 \x01(\x05\x12\x37\n\x11\x64\x65\x66\x65nse_hero_info\x18\x04 \x01(\x0b\x32\x1c.CS_RANK_BATTLE_DEFENSE_DATA\x12\x12\n\nhead_photo\x18\x05 \x01(\r\x12\x16\n\x0e\x66ight_capacity\x18\x06 \x01(\r\"r\n&SCPKG_RANK_BATTLE_GET_FIGHT_TARGET_RES\x12\x0e\n\x06result\x18\x01 \x01(\x05\x12\x38\n\x0btarget_info\x18\x02 \x03(\x0b\x32#.CSDT_RANK_BATTLE_FIGHT_TARGET_INFO\"R\n#CSPKG_RANK_BATTLE_ENTER_DUNGEON_REQ\x12\x17\n\x0f\x64\x65\x66\x65nse_role_id\x18\x01 \x01(\r\x12\x12\n\ndungeon_id\x18\x02 \x01(\r\"\xdf\x01\n#SCPKG_RANK_BATTLE_ENTER_DUNGEON_RES\x12\x0e\n\x06result\x18\x01 \x01(\x05\x12\x12\n\ndungeon_id\x18\x02 \x01(\r\x12\x14\n\x0c\x64ungeon_type\x18\x03 \x01(\r\x12\x13\n\x0bround_count\x18\x04 \x01(\r\x12\x16\n\x0e\x61ttack_hero_id\x18\x05 \x03(\r\x12\x37\n\x11\x64\x65\x66\x65nse_hero_info\x18\x06 \x01(\x0b\x32\x1c.CS_RANK_BATTLE_DEFENSE_DATA\x12\x18\n\x10\x61ttack_role_name\x18\x07 \x01(\t\"7\n!CSPKG_RANK_BATTLE_ROUND_BEGIN_REQ\x12\x12\n\ndungeon_id\x18\x01 \x01(\r\"\x90\x01\n!SCPKG_RANK_BATTLE_ROUND_BEGIN_RES\x12\x0e\n\x06result\x18\x01 \x01(\x05\x12\x12\n\ndungeon_id\x18\x02 \x01(\r\x12\x10\n\x08round_no\x18\x03 \x01(\r\x12\x18\n\x10round_begin_time\x18\x04 \x01(\r\x12\x1b\n\x13round_interval_time\x18\x05 \x01(\x05\"\xac\x01\n&CSPKG_RANK_BATTLE_BALANCE_ONEROUND_REQ\x12\x12\n\ndungeon_id\x18\x01 \x01(\r\x12\x10\n\x08round_no\x18\x02 \x01(\r\x12\x14\n\x0c\x66ight_result\x18\x03 \x01(\r\x12\x1b\n\x13\x64\x65\x66\x65nse_mem_role_id\x18\x04 \x01(\r\x12)\n\x05\x62rief\x18\x05 \x01(\x0b\x32\x1a.CSDT_DUNGEON_COMBAT_BRIEF\"8\n&SCPKG_RANK_BATTLE_BALANCE_ONEROUND_RES\x12\x0e\n\x06result\x18\x01 \x01(\x05\"\xb5\x02\n\x1dSCPKG_RANK_BATTLE_BALANCE_RES\x12\x0e\n\x06result\x18\x01 \x01(\x05\x12\x1b\n\x13\x64\x65\x66\x65nse_mem_role_id\x18\x02 \x01(\r\x12\x15\n\rattack_result\x18\x03 \x03(\r\x12\x0f\n\x07old_pos\x18\x04 \x01(\x05\x12\x0f\n\x07new_pos\x18\x05 \x01(\x05\x12\x13\n\x0breward_gold\x18\x06 \x01(\r\x12\x16\n\x0ereward_crystal\x18\x07 \x01(\r\x12\x30\n\nleft_count\x18\x08 \x01(\x0b\x32\x1c.CSDT_RANK_BATTLE_LEFT_COUNT\x12\x12\n\nis_promote\x18\t \x01(\r\x12\x13\n\x0bhistory_pos\x18\n \x01(\x05\x12&\n\x0epromote_reward\x18\x0b \x03(\x0b\x32\x0e.ST_REWARD_RES\"2\n\x1f\x43SPKG_RANK_BATTLE_BUY_COUNT_REQ\x12\x0f\n\x07reverse\x18\x01 \x01(\r\"W\n#SCPKG_RANK_BATTLE_REFRESH_COUNT_RES\x12\x30\n\nleft_count\x18\x01 \x01(\x0b\x32\x1c.CSDT_RANK_BATTLE_LEFT_COUNT')
+  serialized_pb=_b('\n\x10rankbattle.proto\x1a\x0frescommon.proto\"\xa2\x01\n\x1c\x43SDT_PLAYER_RANK_BATTLE_INFO\x12\x1d\n\x15last_rank_battle_time\x18\x01 \x01(\r\x12\x1e\n\x16left_rank_battle_count\x18\x02 \x01(\r\x12\x1d\n\x15\x62uy_rank_battle_count\x18\x03 \x01(\r\x12$\n\x1clast_refresh_left_count_time\x18\x04 \x01(\r\"@\n\x1f\x43SPKG_CMD_SET_RANK_BATTLE_ORDER\x12\x0c\n\x04type\x18\x01 \x01(\r\x12\x0f\n\x07hero_id\x18\x02 \x03(\r\"?\n\x1fSCPKG_CMD_SET_RANK_BATTLE_ORDER\x12\x0c\n\x04type\x18\x01 \x01(\r\x12\x0e\n\x06result\x18\x02 \x01(\r\"\\\n\x1b\x43SDT_RANK_BATTLE_LEFT_COUNT\x12\x1e\n\x16left_rank_battle_count\x18\x01 \x01(\r\x12\x1d\n\x15\x62uy_rank_battle_count\x18\x02 \x01(\r\"K\n\x1b\x43S_RANK_BATTLE_DEFENSE_DATA\x12,\n\thero_info\x18\x01 \x03(\x0b\x32\x19.ST_BATTLE_HERO_ATTR_INFO\"/\n\x1c\x43SPKG_RANK_BATTLE_POS_UPDATE\x12\x0f\n\x07reverse\x18\x01 \x01(\x05\"]\n\x1cSCPKG_RANK_BATTLE_POS_UPDATE\x12\x17\n\x0frank_battle_pos\x18\x01 \x01(\x05\x12$\n\x1crank_battle_high_history_pos\x18\x02 \x01(\x05\"9\n&CSPKG_RANK_BATTLE_GET_FIGHT_TARGET_REQ\x12\x0f\n\x07reverse\x18\x01 \x01(\r\"\xbf\x01\n\"CSDT_RANK_BATTLE_FIGHT_TARGET_INFO\x12\x0f\n\x07role_id\x18\x01 \x01(\r\x12\x11\n\trole_name\x18\x02 \x01(\t\x12\x10\n\x08rank_pos\x18\x03 \x01(\x05\x12\x37\n\x11\x64\x65\x66\x65nse_hero_info\x18\x04 \x01(\x0b\x32\x1c.CS_RANK_BATTLE_DEFENSE_DATA\x12\x12\n\nhead_photo\x18\x05 \x01(\r\x12\x16\n\x0e\x66ight_capacity\x18\x06 \x01(\r\"r\n&SCPKG_RANK_BATTLE_GET_FIGHT_TARGET_RES\x12\x0e\n\x06result\x18\x01 \x01(\x05\x12\x38\n\x0btarget_info\x18\x02 \x03(\x0b\x32#.CSDT_RANK_BATTLE_FIGHT_TARGET_INFO\"R\n#CSPKG_RANK_BATTLE_ENTER_DUNGEON_REQ\x12\x17\n\x0f\x64\x65\x66\x65nse_role_id\x18\x01 \x01(\r\x12\x12\n\ndungeon_id\x18\x02 \x01(\r\"\xdf\x01\n#SCPKG_RANK_BATTLE_ENTER_DUNGEON_RES\x12\x0e\n\x06result\x18\x01 \x01(\x05\x12\x12\n\ndungeon_id\x18\x02 \x01(\r\x12\x14\n\x0c\x64ungeon_type\x18\x03 \x01(\r\x12\x13\n\x0bround_count\x18\x04 \x01(\r\x12\x16\n\x0e\x61ttack_hero_id\x18\x05 \x03(\r\x12\x37\n\x11\x64\x65\x66\x65nse_hero_info\x18\x06 \x01(\x0b\x32\x1c.CS_RANK_BATTLE_DEFENSE_DATA\x12\x18\n\x10\x61ttack_role_name\x18\x07 \x01(\t\"7\n!CSPKG_RANK_BATTLE_ROUND_BEGIN_REQ\x12\x12\n\ndungeon_id\x18\x01 \x01(\r\"\xad\x01\n!SCPKG_RANK_BATTLE_ROUND_BEGIN_RES\x12\x0e\n\x06result\x18\x01 \x01(\x05\x12\x12\n\ndungeon_id\x18\x02 \x01(\r\x12\x10\n\x08round_no\x18\x03 \x01(\r\x12\x18\n\x10round_begin_time\x18\x04 \x01(\r\x12\x1b\n\x13round_interval_time\x18\x05 \x01(\x05\x12\x1b\n\x13heart_beat_interval\x18\x06 \x01(\x05\"\xac\x01\n&CSPKG_RANK_BATTLE_BALANCE_ONEROUND_REQ\x12\x12\n\ndungeon_id\x18\x01 \x01(\r\x12\x10\n\x08round_no\x18\x02 \x01(\r\x12\x14\n\x0c\x66ight_result\x18\x03 \x01(\r\x12\x1b\n\x13\x64\x65\x66\x65nse_mem_role_id\x18\x04 \x01(\r\x12)\n\x05\x62rief\x18\x05 \x01(\x0b\x32\x1a.CSDT_DUNGEON_COMBAT_BRIEF\"N\n&SCPKG_RANK_BATTLE_BALANCE_ONEROUND_RES\x12\x0e\n\x06result\x18\x01 \x01(\x05\x12\x14\n\x0c\x66ight_result\x18\x02 \x01(\x08\"P\n\x1d\x43SPKG_RANK_BATTLE_BALANCE_REQ\x12\x12\n\ndungeon_id\x18\x01 \x01(\r\x12\x1b\n\x13\x64\x65\x66\x65nse_mem_role_id\x18\x02 \x01(\r\"\xb5\x02\n\x1dSCPKG_RANK_BATTLE_BALANCE_RES\x12\x0e\n\x06result\x18\x01 \x01(\x05\x12\x1b\n\x13\x64\x65\x66\x65nse_mem_role_id\x18\x02 \x01(\r\x12\x15\n\rattack_result\x18\x03 \x03(\r\x12\x0f\n\x07old_pos\x18\x04 \x01(\x05\x12\x0f\n\x07new_pos\x18\x05 \x01(\x05\x12\x13\n\x0breward_gold\x18\x06 \x01(\r\x12\x16\n\x0ereward_crystal\x18\x07 \x01(\r\x12\x30\n\nleft_count\x18\x08 \x01(\x0b\x32\x1c.CSDT_RANK_BATTLE_LEFT_COUNT\x12\x12\n\nis_promote\x18\t \x01(\r\x12\x13\n\x0bhistory_pos\x18\n \x01(\x05\x12&\n\x0epromote_reward\x18\x0b \x03(\x0b\x32\x0e.ST_REWARD_RES\"2\n\x1f\x43SPKG_RANK_BATTLE_BUY_COUNT_REQ\x12\x0f\n\x07reverse\x18\x01 \x01(\r\"W\n#SCPKG_RANK_BATTLE_REFRESH_COUNT_RES\x12\x30\n\nleft_count\x18\x01 \x01(\x0b\x32\x1c.CSDT_RANK_BATTLE_LEFT_COUNT\"p\n\x1cPKG_BATTLE_HISTORY_HERO_INFO\x12\x0f\n\x07hero_id\x18\x01 \x01(\r\x12\x0f\n\x07hero_lv\x18\x02 \x01(\r\x12\x14\n\x0chero_ability\x18\x03 \x01(\r\x12\x18\n\x10hero_equip_color\x18\x04 \x01(\r\"\x9b\x01\n\x1dPKG_BATTLE_HISTORY_ROUND_INFO\x12\x34\n\rattacker_hero\x18\x01 \x03(\x0b\x32\x1d.PKG_BATTLE_HISTORY_HERO_INFO\x12\x34\n\rdefender_hero\x18\x02 \x03(\x0b\x32\x1d.PKG_BATTLE_HISTORY_HERO_INFO\x12\x0e\n\x06result\x18\x03 \x01(\r\"\xcb\x04\n\x17PKG_BATTLE_HISTORY_INFO\x12\x0c\n\x04time\x18\x01 \x01(\r\x12\x14\n\x0c\x64ungeon_type\x18\x02 \x01(\r\x12\x14\n\x0c\x61ttacker_uid\x18\x03 \x01(\r\x12\x15\n\rattacker_name\x18\x04 \x01(\t\x12\x1a\n\x12\x61ttacker_vip_level\x18\x05 \x01(\r\x12\x14\n\x0c\x64\x65\x66\x65nder_uid\x18\x06 \x01(\r\x12\x15\n\rdefender_name\x18\x07 \x01(\t\x12\x1a\n\x12\x64\x65\x66\x65nder_vip_level\x18\x08 \x01(\r\x12\x1a\n\x12\x61ttacker_score_new\x18\t \x01(\r\x12\x1a\n\x12\x61ttacker_score_old\x18\n \x01(\r\x12\x1a\n\x12\x64\x65\x66\x65nder_score_new\x18\x0b \x01(\r\x12\x1a\n\x12\x64\x65\x66\x65nder_score_old\x18\x0c \x01(\r\x12\x18\n\x10replay_unique_id\x18\r \x01(\x04\x12\x32\n\nround_info\x18\x0e \x03(\x0b\x32\x1e.PKG_BATTLE_HISTORY_ROUND_INFO\x12\x19\n\x11\x61ttacker_world_id\x18\x0f \x01(\r\x12\x19\n\x11\x64\x65\x66\x65nder_world_id\x18\x10 \x01(\r\x12\x1d\n\x15replay_client_version\x18\x11 \x01(\t\x12\x1d\n\x15replay_file_byte_size\x18\x12 \x01(\r\x12\x18\n\x10\x61ttacker_gang_id\x18\x13 \x01(\r\x12\x18\n\x10\x64\x65\x66\x65nder_gang_id\x18\x14 \x01(\r\x12\x14\n\x0c\x61ttacker_win\x18\x15 \x01(\x08\"h\n\x1d\x43SPKG_BATTLE_HISTORY_INFO_REQ\x12\x11\n\tapply_uid\x18\x01 \x01(\r\x12\x1e\n\x16\x66irst_replay_unique_id\x18\x02 \x01(\x04\x12\x14\n\x0c\x64ungeon_type\x18\x03 \x01(\r\"\x99\x01\n\x1dSCPKG_BATTLE_HISTORY_INFO_RES\x12\x14\n\x0c\x64ungeon_type\x18\x01 \x01(\r\x12\x35\n\x13\x62\x61ttle_history_info\x18\x02 \x03(\x0b\x32\x18.PKG_BATTLE_HISTORY_INFO\x12\x18\n\x10is_server_notify\x18\x03 \x01(\x08\x12\x11\n\tapply_uid\x18\x04 \x01(\r')
   ,
   dependencies=[rescommon_pb2.DESCRIPTOR,])
 _sym_db.RegisterFileDescriptor(DESCRIPTOR)
@@ -599,6 +599,13 @@ _SCPKG_RANK_BATTLE_ROUND_BEGIN_RES = _descriptor.Descriptor(
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
+    _descriptor.FieldDescriptor(
+      name='heart_beat_interval', full_name='SCPKG_RANK_BATTLE_ROUND_BEGIN_RES.heart_beat_interval', index=5,
+      number=6, type=5, cpp_type=1, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
   ],
   extensions=[
   ],
@@ -611,7 +618,7 @@ _SCPKG_RANK_BATTLE_ROUND_BEGIN_RES = _descriptor.Descriptor(
   oneofs=[
   ],
   serialized_start=1385,
-  serialized_end=1529,
+  serialized_end=1558,
 )
 
 
@@ -668,8 +675,8 @@ _CSPKG_RANK_BATTLE_BALANCE_ONEROUND_REQ = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=1532,
-  serialized_end=1704,
+  serialized_start=1561,
+  serialized_end=1733,
 )
 
 
@@ -687,6 +694,13 @@ _SCPKG_RANK_BATTLE_BALANCE_ONEROUND_RES = _descriptor.Descriptor(
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
+    _descriptor.FieldDescriptor(
+      name='fight_result', full_name='SCPKG_RANK_BATTLE_BALANCE_ONEROUND_RES.fight_result', index=1,
+      number=2, type=8, cpp_type=7, label=1,
+      has_default_value=False, default_value=False,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
   ],
   extensions=[
   ],
@@ -698,8 +712,45 @@ _SCPKG_RANK_BATTLE_BALANCE_ONEROUND_RES = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=1706,
-  serialized_end=1762,
+  serialized_start=1735,
+  serialized_end=1813,
+)
+
+
+_CSPKG_RANK_BATTLE_BALANCE_REQ = _descriptor.Descriptor(
+  name='CSPKG_RANK_BATTLE_BALANCE_REQ',
+  full_name='CSPKG_RANK_BATTLE_BALANCE_REQ',
+  filename=None,
+  file=DESCRIPTOR,
+  containing_type=None,
+  fields=[
+    _descriptor.FieldDescriptor(
+      name='dungeon_id', full_name='CSPKG_RANK_BATTLE_BALANCE_REQ.dungeon_id', index=0,
+      number=1, type=13, cpp_type=3, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    _descriptor.FieldDescriptor(
+      name='defense_mem_role_id', full_name='CSPKG_RANK_BATTLE_BALANCE_REQ.defense_mem_role_id', index=1,
+      number=2, type=13, cpp_type=3, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+  ],
+  extensions=[
+  ],
+  nested_types=[],
+  enum_types=[
+  ],
+  options=None,
+  is_extendable=False,
+  extension_ranges=[],
+  oneofs=[
+  ],
+  serialized_start=1815,
+  serialized_end=1895,
 )
 
 
@@ -798,8 +849,8 @@ _SCPKG_RANK_BATTLE_BALANCE_RES = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=1765,
-  serialized_end=2074,
+  serialized_start=1898,
+  serialized_end=2207,
 )
 
 
@@ -828,8 +879,8 @@ _CSPKG_RANK_BATTLE_BUY_COUNT_REQ = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=2076,
-  serialized_end=2126,
+  serialized_start=2209,
+  serialized_end=2259,
 )
 
 
@@ -858,8 +909,368 @@ _SCPKG_RANK_BATTLE_REFRESH_COUNT_RES = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=2128,
-  serialized_end=2215,
+  serialized_start=2261,
+  serialized_end=2348,
+)
+
+
+_PKG_BATTLE_HISTORY_HERO_INFO = _descriptor.Descriptor(
+  name='PKG_BATTLE_HISTORY_HERO_INFO',
+  full_name='PKG_BATTLE_HISTORY_HERO_INFO',
+  filename=None,
+  file=DESCRIPTOR,
+  containing_type=None,
+  fields=[
+    _descriptor.FieldDescriptor(
+      name='hero_id', full_name='PKG_BATTLE_HISTORY_HERO_INFO.hero_id', index=0,
+      number=1, type=13, cpp_type=3, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    _descriptor.FieldDescriptor(
+      name='hero_lv', full_name='PKG_BATTLE_HISTORY_HERO_INFO.hero_lv', index=1,
+      number=2, type=13, cpp_type=3, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    _descriptor.FieldDescriptor(
+      name='hero_ability', full_name='PKG_BATTLE_HISTORY_HERO_INFO.hero_ability', index=2,
+      number=3, type=13, cpp_type=3, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    _descriptor.FieldDescriptor(
+      name='hero_equip_color', full_name='PKG_BATTLE_HISTORY_HERO_INFO.hero_equip_color', index=3,
+      number=4, type=13, cpp_type=3, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+  ],
+  extensions=[
+  ],
+  nested_types=[],
+  enum_types=[
+  ],
+  options=None,
+  is_extendable=False,
+  extension_ranges=[],
+  oneofs=[
+  ],
+  serialized_start=2350,
+  serialized_end=2462,
+)
+
+
+_PKG_BATTLE_HISTORY_ROUND_INFO = _descriptor.Descriptor(
+  name='PKG_BATTLE_HISTORY_ROUND_INFO',
+  full_name='PKG_BATTLE_HISTORY_ROUND_INFO',
+  filename=None,
+  file=DESCRIPTOR,
+  containing_type=None,
+  fields=[
+    _descriptor.FieldDescriptor(
+      name='attacker_hero', full_name='PKG_BATTLE_HISTORY_ROUND_INFO.attacker_hero', index=0,
+      number=1, type=11, cpp_type=10, label=3,
+      has_default_value=False, default_value=[],
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    _descriptor.FieldDescriptor(
+      name='defender_hero', full_name='PKG_BATTLE_HISTORY_ROUND_INFO.defender_hero', index=1,
+      number=2, type=11, cpp_type=10, label=3,
+      has_default_value=False, default_value=[],
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    _descriptor.FieldDescriptor(
+      name='result', full_name='PKG_BATTLE_HISTORY_ROUND_INFO.result', index=2,
+      number=3, type=13, cpp_type=3, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+  ],
+  extensions=[
+  ],
+  nested_types=[],
+  enum_types=[
+  ],
+  options=None,
+  is_extendable=False,
+  extension_ranges=[],
+  oneofs=[
+  ],
+  serialized_start=2465,
+  serialized_end=2620,
+)
+
+
+_PKG_BATTLE_HISTORY_INFO = _descriptor.Descriptor(
+  name='PKG_BATTLE_HISTORY_INFO',
+  full_name='PKG_BATTLE_HISTORY_INFO',
+  filename=None,
+  file=DESCRIPTOR,
+  containing_type=None,
+  fields=[
+    _descriptor.FieldDescriptor(
+      name='time', full_name='PKG_BATTLE_HISTORY_INFO.time', index=0,
+      number=1, type=13, cpp_type=3, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    _descriptor.FieldDescriptor(
+      name='dungeon_type', full_name='PKG_BATTLE_HISTORY_INFO.dungeon_type', index=1,
+      number=2, type=13, cpp_type=3, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    _descriptor.FieldDescriptor(
+      name='attacker_uid', full_name='PKG_BATTLE_HISTORY_INFO.attacker_uid', index=2,
+      number=3, type=13, cpp_type=3, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    _descriptor.FieldDescriptor(
+      name='attacker_name', full_name='PKG_BATTLE_HISTORY_INFO.attacker_name', index=3,
+      number=4, type=9, cpp_type=9, label=1,
+      has_default_value=False, default_value=_b("").decode('utf-8'),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    _descriptor.FieldDescriptor(
+      name='attacker_vip_level', full_name='PKG_BATTLE_HISTORY_INFO.attacker_vip_level', index=4,
+      number=5, type=13, cpp_type=3, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    _descriptor.FieldDescriptor(
+      name='defender_uid', full_name='PKG_BATTLE_HISTORY_INFO.defender_uid', index=5,
+      number=6, type=13, cpp_type=3, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    _descriptor.FieldDescriptor(
+      name='defender_name', full_name='PKG_BATTLE_HISTORY_INFO.defender_name', index=6,
+      number=7, type=9, cpp_type=9, label=1,
+      has_default_value=False, default_value=_b("").decode('utf-8'),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    _descriptor.FieldDescriptor(
+      name='defender_vip_level', full_name='PKG_BATTLE_HISTORY_INFO.defender_vip_level', index=7,
+      number=8, type=13, cpp_type=3, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    _descriptor.FieldDescriptor(
+      name='attacker_score_new', full_name='PKG_BATTLE_HISTORY_INFO.attacker_score_new', index=8,
+      number=9, type=13, cpp_type=3, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    _descriptor.FieldDescriptor(
+      name='attacker_score_old', full_name='PKG_BATTLE_HISTORY_INFO.attacker_score_old', index=9,
+      number=10, type=13, cpp_type=3, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    _descriptor.FieldDescriptor(
+      name='defender_score_new', full_name='PKG_BATTLE_HISTORY_INFO.defender_score_new', index=10,
+      number=11, type=13, cpp_type=3, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    _descriptor.FieldDescriptor(
+      name='defender_score_old', full_name='PKG_BATTLE_HISTORY_INFO.defender_score_old', index=11,
+      number=12, type=13, cpp_type=3, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    _descriptor.FieldDescriptor(
+      name='replay_unique_id', full_name='PKG_BATTLE_HISTORY_INFO.replay_unique_id', index=12,
+      number=13, type=4, cpp_type=4, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    _descriptor.FieldDescriptor(
+      name='round_info', full_name='PKG_BATTLE_HISTORY_INFO.round_info', index=13,
+      number=14, type=11, cpp_type=10, label=3,
+      has_default_value=False, default_value=[],
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    _descriptor.FieldDescriptor(
+      name='attacker_world_id', full_name='PKG_BATTLE_HISTORY_INFO.attacker_world_id', index=14,
+      number=15, type=13, cpp_type=3, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    _descriptor.FieldDescriptor(
+      name='defender_world_id', full_name='PKG_BATTLE_HISTORY_INFO.defender_world_id', index=15,
+      number=16, type=13, cpp_type=3, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    _descriptor.FieldDescriptor(
+      name='replay_client_version', full_name='PKG_BATTLE_HISTORY_INFO.replay_client_version', index=16,
+      number=17, type=9, cpp_type=9, label=1,
+      has_default_value=False, default_value=_b("").decode('utf-8'),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    _descriptor.FieldDescriptor(
+      name='replay_file_byte_size', full_name='PKG_BATTLE_HISTORY_INFO.replay_file_byte_size', index=17,
+      number=18, type=13, cpp_type=3, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    _descriptor.FieldDescriptor(
+      name='attacker_gang_id', full_name='PKG_BATTLE_HISTORY_INFO.attacker_gang_id', index=18,
+      number=19, type=13, cpp_type=3, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    _descriptor.FieldDescriptor(
+      name='defender_gang_id', full_name='PKG_BATTLE_HISTORY_INFO.defender_gang_id', index=19,
+      number=20, type=13, cpp_type=3, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    _descriptor.FieldDescriptor(
+      name='attacker_win', full_name='PKG_BATTLE_HISTORY_INFO.attacker_win', index=20,
+      number=21, type=8, cpp_type=7, label=1,
+      has_default_value=False, default_value=False,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+  ],
+  extensions=[
+  ],
+  nested_types=[],
+  enum_types=[
+  ],
+  options=None,
+  is_extendable=False,
+  extension_ranges=[],
+  oneofs=[
+  ],
+  serialized_start=2623,
+  serialized_end=3210,
+)
+
+
+_CSPKG_BATTLE_HISTORY_INFO_REQ = _descriptor.Descriptor(
+  name='CSPKG_BATTLE_HISTORY_INFO_REQ',
+  full_name='CSPKG_BATTLE_HISTORY_INFO_REQ',
+  filename=None,
+  file=DESCRIPTOR,
+  containing_type=None,
+  fields=[
+    _descriptor.FieldDescriptor(
+      name='apply_uid', full_name='CSPKG_BATTLE_HISTORY_INFO_REQ.apply_uid', index=0,
+      number=1, type=13, cpp_type=3, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    _descriptor.FieldDescriptor(
+      name='first_replay_unique_id', full_name='CSPKG_BATTLE_HISTORY_INFO_REQ.first_replay_unique_id', index=1,
+      number=2, type=4, cpp_type=4, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    _descriptor.FieldDescriptor(
+      name='dungeon_type', full_name='CSPKG_BATTLE_HISTORY_INFO_REQ.dungeon_type', index=2,
+      number=3, type=13, cpp_type=3, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+  ],
+  extensions=[
+  ],
+  nested_types=[],
+  enum_types=[
+  ],
+  options=None,
+  is_extendable=False,
+  extension_ranges=[],
+  oneofs=[
+  ],
+  serialized_start=3212,
+  serialized_end=3316,
+)
+
+
+_SCPKG_BATTLE_HISTORY_INFO_RES = _descriptor.Descriptor(
+  name='SCPKG_BATTLE_HISTORY_INFO_RES',
+  full_name='SCPKG_BATTLE_HISTORY_INFO_RES',
+  filename=None,
+  file=DESCRIPTOR,
+  containing_type=None,
+  fields=[
+    _descriptor.FieldDescriptor(
+      name='dungeon_type', full_name='SCPKG_BATTLE_HISTORY_INFO_RES.dungeon_type', index=0,
+      number=1, type=13, cpp_type=3, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    _descriptor.FieldDescriptor(
+      name='battle_history_info', full_name='SCPKG_BATTLE_HISTORY_INFO_RES.battle_history_info', index=1,
+      number=2, type=11, cpp_type=10, label=3,
+      has_default_value=False, default_value=[],
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    _descriptor.FieldDescriptor(
+      name='is_server_notify', full_name='SCPKG_BATTLE_HISTORY_INFO_RES.is_server_notify', index=2,
+      number=3, type=8, cpp_type=7, label=1,
+      has_default_value=False, default_value=False,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    _descriptor.FieldDescriptor(
+      name='apply_uid', full_name='SCPKG_BATTLE_HISTORY_INFO_RES.apply_uid', index=3,
+      number=4, type=13, cpp_type=3, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+  ],
+  extensions=[
+  ],
+  nested_types=[],
+  enum_types=[
+  ],
+  options=None,
+  is_extendable=False,
+  extension_ranges=[],
+  oneofs=[
+  ],
+  serialized_start=3319,
+  serialized_end=3472,
 )
 
 _CS_RANK_BATTLE_DEFENSE_DATA.fields_by_name['hero_info'].message_type = rescommon_pb2._ST_BATTLE_HERO_ATTR_INFO
@@ -870,6 +1281,10 @@ _CSPKG_RANK_BATTLE_BALANCE_ONEROUND_REQ.fields_by_name['brief'].message_type = r
 _SCPKG_RANK_BATTLE_BALANCE_RES.fields_by_name['left_count'].message_type = _CSDT_RANK_BATTLE_LEFT_COUNT
 _SCPKG_RANK_BATTLE_BALANCE_RES.fields_by_name['promote_reward'].message_type = rescommon_pb2._ST_REWARD_RES
 _SCPKG_RANK_BATTLE_REFRESH_COUNT_RES.fields_by_name['left_count'].message_type = _CSDT_RANK_BATTLE_LEFT_COUNT
+_PKG_BATTLE_HISTORY_ROUND_INFO.fields_by_name['attacker_hero'].message_type = _PKG_BATTLE_HISTORY_HERO_INFO
+_PKG_BATTLE_HISTORY_ROUND_INFO.fields_by_name['defender_hero'].message_type = _PKG_BATTLE_HISTORY_HERO_INFO
+_PKG_BATTLE_HISTORY_INFO.fields_by_name['round_info'].message_type = _PKG_BATTLE_HISTORY_ROUND_INFO
+_SCPKG_BATTLE_HISTORY_INFO_RES.fields_by_name['battle_history_info'].message_type = _PKG_BATTLE_HISTORY_INFO
 DESCRIPTOR.message_types_by_name['CSDT_PLAYER_RANK_BATTLE_INFO'] = _CSDT_PLAYER_RANK_BATTLE_INFO
 DESCRIPTOR.message_types_by_name['CSPKG_CMD_SET_RANK_BATTLE_ORDER'] = _CSPKG_CMD_SET_RANK_BATTLE_ORDER
 DESCRIPTOR.message_types_by_name['SCPKG_CMD_SET_RANK_BATTLE_ORDER'] = _SCPKG_CMD_SET_RANK_BATTLE_ORDER
@@ -886,9 +1301,15 @@ DESCRIPTOR.message_types_by_name['CSPKG_RANK_BATTLE_ROUND_BEGIN_REQ'] = _CSPKG_R
 DESCRIPTOR.message_types_by_name['SCPKG_RANK_BATTLE_ROUND_BEGIN_RES'] = _SCPKG_RANK_BATTLE_ROUND_BEGIN_RES
 DESCRIPTOR.message_types_by_name['CSPKG_RANK_BATTLE_BALANCE_ONEROUND_REQ'] = _CSPKG_RANK_BATTLE_BALANCE_ONEROUND_REQ
 DESCRIPTOR.message_types_by_name['SCPKG_RANK_BATTLE_BALANCE_ONEROUND_RES'] = _SCPKG_RANK_BATTLE_BALANCE_ONEROUND_RES
+DESCRIPTOR.message_types_by_name['CSPKG_RANK_BATTLE_BALANCE_REQ'] = _CSPKG_RANK_BATTLE_BALANCE_REQ
 DESCRIPTOR.message_types_by_name['SCPKG_RANK_BATTLE_BALANCE_RES'] = _SCPKG_RANK_BATTLE_BALANCE_RES
 DESCRIPTOR.message_types_by_name['CSPKG_RANK_BATTLE_BUY_COUNT_REQ'] = _CSPKG_RANK_BATTLE_BUY_COUNT_REQ
 DESCRIPTOR.message_types_by_name['SCPKG_RANK_BATTLE_REFRESH_COUNT_RES'] = _SCPKG_RANK_BATTLE_REFRESH_COUNT_RES
+DESCRIPTOR.message_types_by_name['PKG_BATTLE_HISTORY_HERO_INFO'] = _PKG_BATTLE_HISTORY_HERO_INFO
+DESCRIPTOR.message_types_by_name['PKG_BATTLE_HISTORY_ROUND_INFO'] = _PKG_BATTLE_HISTORY_ROUND_INFO
+DESCRIPTOR.message_types_by_name['PKG_BATTLE_HISTORY_INFO'] = _PKG_BATTLE_HISTORY_INFO
+DESCRIPTOR.message_types_by_name['CSPKG_BATTLE_HISTORY_INFO_REQ'] = _CSPKG_BATTLE_HISTORY_INFO_REQ
+DESCRIPTOR.message_types_by_name['SCPKG_BATTLE_HISTORY_INFO_RES'] = _SCPKG_BATTLE_HISTORY_INFO_RES
 
 CSDT_PLAYER_RANK_BATTLE_INFO = _reflection.GeneratedProtocolMessageType('CSDT_PLAYER_RANK_BATTLE_INFO', (_message.Message,), dict(
   DESCRIPTOR = _CSDT_PLAYER_RANK_BATTLE_INFO,
@@ -1002,6 +1423,13 @@ SCPKG_RANK_BATTLE_BALANCE_ONEROUND_RES = _reflection.GeneratedProtocolMessageTyp
   ))
 _sym_db.RegisterMessage(SCPKG_RANK_BATTLE_BALANCE_ONEROUND_RES)
 
+CSPKG_RANK_BATTLE_BALANCE_REQ = _reflection.GeneratedProtocolMessageType('CSPKG_RANK_BATTLE_BALANCE_REQ', (_message.Message,), dict(
+  DESCRIPTOR = _CSPKG_RANK_BATTLE_BALANCE_REQ,
+  __module__ = 'rankbattle_pb2'
+  # @@protoc_insertion_point(class_scope:CSPKG_RANK_BATTLE_BALANCE_REQ)
+  ))
+_sym_db.RegisterMessage(CSPKG_RANK_BATTLE_BALANCE_REQ)
+
 SCPKG_RANK_BATTLE_BALANCE_RES = _reflection.GeneratedProtocolMessageType('SCPKG_RANK_BATTLE_BALANCE_RES', (_message.Message,), dict(
   DESCRIPTOR = _SCPKG_RANK_BATTLE_BALANCE_RES,
   __module__ = 'rankbattle_pb2'
@@ -1022,6 +1450,41 @@ SCPKG_RANK_BATTLE_REFRESH_COUNT_RES = _reflection.GeneratedProtocolMessageType('
   # @@protoc_insertion_point(class_scope:SCPKG_RANK_BATTLE_REFRESH_COUNT_RES)
   ))
 _sym_db.RegisterMessage(SCPKG_RANK_BATTLE_REFRESH_COUNT_RES)
+
+PKG_BATTLE_HISTORY_HERO_INFO = _reflection.GeneratedProtocolMessageType('PKG_BATTLE_HISTORY_HERO_INFO', (_message.Message,), dict(
+  DESCRIPTOR = _PKG_BATTLE_HISTORY_HERO_INFO,
+  __module__ = 'rankbattle_pb2'
+  # @@protoc_insertion_point(class_scope:PKG_BATTLE_HISTORY_HERO_INFO)
+  ))
+_sym_db.RegisterMessage(PKG_BATTLE_HISTORY_HERO_INFO)
+
+PKG_BATTLE_HISTORY_ROUND_INFO = _reflection.GeneratedProtocolMessageType('PKG_BATTLE_HISTORY_ROUND_INFO', (_message.Message,), dict(
+  DESCRIPTOR = _PKG_BATTLE_HISTORY_ROUND_INFO,
+  __module__ = 'rankbattle_pb2'
+  # @@protoc_insertion_point(class_scope:PKG_BATTLE_HISTORY_ROUND_INFO)
+  ))
+_sym_db.RegisterMessage(PKG_BATTLE_HISTORY_ROUND_INFO)
+
+PKG_BATTLE_HISTORY_INFO = _reflection.GeneratedProtocolMessageType('PKG_BATTLE_HISTORY_INFO', (_message.Message,), dict(
+  DESCRIPTOR = _PKG_BATTLE_HISTORY_INFO,
+  __module__ = 'rankbattle_pb2'
+  # @@protoc_insertion_point(class_scope:PKG_BATTLE_HISTORY_INFO)
+  ))
+_sym_db.RegisterMessage(PKG_BATTLE_HISTORY_INFO)
+
+CSPKG_BATTLE_HISTORY_INFO_REQ = _reflection.GeneratedProtocolMessageType('CSPKG_BATTLE_HISTORY_INFO_REQ', (_message.Message,), dict(
+  DESCRIPTOR = _CSPKG_BATTLE_HISTORY_INFO_REQ,
+  __module__ = 'rankbattle_pb2'
+  # @@protoc_insertion_point(class_scope:CSPKG_BATTLE_HISTORY_INFO_REQ)
+  ))
+_sym_db.RegisterMessage(CSPKG_BATTLE_HISTORY_INFO_REQ)
+
+SCPKG_BATTLE_HISTORY_INFO_RES = _reflection.GeneratedProtocolMessageType('SCPKG_BATTLE_HISTORY_INFO_RES', (_message.Message,), dict(
+  DESCRIPTOR = _SCPKG_BATTLE_HISTORY_INFO_RES,
+  __module__ = 'rankbattle_pb2'
+  # @@protoc_insertion_point(class_scope:SCPKG_BATTLE_HISTORY_INFO_RES)
+  ))
+_sym_db.RegisterMessage(SCPKG_BATTLE_HISTORY_INFO_RES)
 
 
 # @@protoc_insertion_point(module_scope)

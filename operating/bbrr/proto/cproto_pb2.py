@@ -19,7 +19,7 @@ _sym_db = _symbol_database.Default()
 DESCRIPTOR = _descriptor.FileDescriptor(
   name='cproto.proto',
   package='',
-  serialized_pb=_b('\n\x0c\x63proto.proto\"S\n\x1a\x43S_3RD_PLAFFORM_FRIEND_GET\x12\x10\n\x08platform\x18\x01 \x02(\r\x12\x0f\n\x07uid_3rd\x18\x02 \x03(\t\x12\x12\n\ntime_stamp\x18\x03 \x02(\r\"<\n\x17\x43S_BIND_3RD_PLATFORM_ID\x12\x0f\n\x07uid_3rd\x18\x01 \x02(\t\x12\x10\n\x08platform\x18\x02 \x02(\r\"H\n\x0bMessageData\x12\x11\n\ttype_hash\x18\x01 \x02(\r\x12\x0f\n\x07msg_str\x18\x02 \x02(\x0c\x12\x15\n\x06is_zip\x18\x03 \x01(\x08:\x05\x66\x61lse\")\n\x0bMessagePack\x12\x1a\n\x04msgs\x18\x01 \x03(\x0b\x32\x0c.MessageData\"\"\n\x12SCPKG_CONNECT_KEEP\x12\x0c\n\x04text\x18\x01 \x01(\t\"4\n\x1c\x43SPKG_CMD_CLT_SETBITMARK_REQ\x12\x14\n\x0c\x63lt_bit_mark\x18\x01 \x01(\x04\"?\n\x1a\x43SPKG_CMD_SET_STORYBIT_REQ\x12\x0e\n\x06\x64un_id\x18\x01 \x01(\r\x12\x11\n\tstory_bit\x18\x02 \x01(\r\" \n\x10\x43SPKG_CMD_GM_REQ\x12\x0c\n\x04type\x18\x01 \x01(\r\"7\n\x15\x43SPKG_CMD_GM_TEXT_REQ\x12\x0f\n\x07gm_text\x18\x01 \x01(\t\x12\r\n\x05param\x18\x02 \x03(\x05\"&\n\x10\x43SDT_GM_PARAMOBJ\x12\x12\n\nparam_info\x18\x01 \x01(\t\"\xac\x02\n\x1f\x43SPKG_VERIFY_ROOM_COMPLETE_TIME\x12\x0e\n\x06result\x18\x01 \x01(\r\x12\x0e\n\x06\x64un_id\x18\x02 \x01(\r\x12\x10\n\x08\x64un_type\x18\x03 \x01(\r\x12\x0f\n\x07room_id\x18\x04 \x01(\r\x12\x13\n\x0b\x61\x63tual_time\x18\x05 \x01(\r\x12\x1d\n\x15limited_complete_time\x18\x06 \x01(\r\x12\x14\n\x0chero_ability\x18\x07 \x01(\r\x12\x19\n\x11room_base_ability\x18\x08 \x01(\r\x12 \n\x18\x63omplete_time_base_value\x18\t \x01(\r\x12\x0f\n\x07hero_id\x18\n \x01(\r\x12\x12\n\nhero_level\x18\x0b \x01(\r\x12\x1a\n\x12hero_buffer_dun_id\x18\x0c \x01(\r\"5\n#SCPKG_VERIFY_ROOM_COMPLETE_TIME_RES\x12\x0e\n\x06result\x18\x01 \x01(\r\"#\n\x13\x43SPKG_CMD_HEARTBEAT\x12\x0c\n\x04text\x18\x01 \x01(\t\"%\n\x0fSCPKG_NTF_ERROR\x12\x12\n\nerror_code\x18\x01 \x01(\x05\"6\n\x0fSCPKG_ERROR_MSG\x12\x11\n\terror_msg\x18\x01 \x01(\t\x12\x10\n\x08msg_hash\x18\x02 \x01(\r\"@\n\x10SCDT_NOTIFY_DATA\x12\r\n\x05title\x18\x01 \x01(\t\x12\x0c\n\x04link\x18\x02 \x01(\t\x12\x0f\n\x07\x63ontent\x18\x03 \x01(\t\"\x8e\x01\n\x10SCDT_NOTIFY_INFO\x12\x11\n\tnotify_id\x18\x01 \x01(\r\x12\x0c\n\x04name\x18\x02 \x01(\t\x12\x10\n\x08\x62\x65g_time\x18\x03 \x01(\r\x12\x10\n\x08\x65nd_time\x18\x04 \x01(\r\x12\x12\n\nis_display\x18\x05 \x01(\r\x12!\n\x06notify\x18\x06 \x01(\x0b\x32\x11.SCDT_NOTIFY_DATA\"-\n\x1bSCPKG_CMD_UNLOCKDUN_UNTILID\x12\x0e\n\x06\x64un_id\x18\x01 \x01(\r\"H\n\x12\x43SPKG_CMD_USE_ITEM\x12\x0f\n\x07hero_id\x18\x01 \x01(\r\x12\x0f\n\x07item_id\x18\x02 \x01(\r\x12\x10\n\x08item_cnt\x18\x03 \x01(\r\"\x89\x01\n\x15\x43SDT_PACKOBJ_CHG_INFO\x12\x0f\n\x07tab_pos\x18\x01 \x01(\r\x12\x10\n\x08item_pos\x18\x02 \x01(\r\x12\x0c\n\x04type\x18\x03 \x01(\r\x12\x0c\n\x04stat\x18\x04 \x01(\r\x12\x0f\n\x07\x62\x61se_id\x18\x05 \x01(\r\x12\r\n\x05\x63ount\x18\x06 \x01(\r\x12\x11\n\tfunc_type\x18\x07 \x01(\r\"X\n\x15SCPKG_ACT_PACKOBJ_CHG\x12\x0c\n\x04type\x18\x01 \x02(\r\x12\x31\n\x11pack_obj_chg_info\x18\x02 \x03(\x0b\x32\x16.CSDT_PACKOBJ_CHG_INFO\"1\n\x13\x43SDT_POS_COUNT_INFO\x12\x0b\n\x03pos\x18\x01 \x01(\x05\x12\r\n\x05\x63ount\x18\x02 \x01(\x05\"T\n\x15\x43SDT_PACKAGE_POS_INFO\x12\x0f\n\x07tab_pos\x18\x01 \x01(\x05\x12*\n\x0cst_pos_count\x18\x02 \x03(\x0b\x32\x14.CSDT_POS_COUNT_INFO\"@\n\x0e\x43SDT_POS_COUNT\x12.\n\x0est_package_pos\x18\x01 \x03(\x0b\x32\x16.CSDT_PACKAGE_POS_INFO\"4\n\x13SCPKG_CMD_SLOT_OPEN\x12\x0f\n\x07slot_id\x18\x01 \x03(\r\x12\x0c\n\x04type\x18\x02 \x01(\r\"K\n\x14SCPKG_CMD_EXP_CHANGE\x12\x0f\n\x07hero_id\x18\x01 \x01(\r\x12\x11\n\tcur_level\x18\x02 \x01(\r\x12\x0f\n\x07\x63ur_exp\x18\x03 \x01(\r\"n\n\x0c\x43S_RECONNECT\x12\x15\n\rreconnect_key\x18\x01 \x02(\r\x12\x15\n\rreconnect_pos\x18\x02 \x02(\r\x12\x17\n\x0f\x63lient_send_seq\x18\x03 \x02(\r\x12\x17\n\x0f\x63lient_recv_seq\x18\x04 \x02(\r\"\xb7\x01\n\x17SCNOTIFY_RECONNECT_INFO\x12\x13\n\x0b\x63\x61n_connect\x18\x01 \x02(\x08\x12\x15\n\rcan_reconnect\x18\x02 \x02(\x08\x12\x15\n\rreconnect_pos\x18\x03 \x02(\r\x12\x15\n\rreconnect_key\x18\x04 \x02(\r\x12\x10\n\x08game_key\x18\x05 \x02(\r\x12\x17\n\x0fserver_send_seq\x18\x06 \x02(\r\x12\x17\n\x0fserver_recv_seq\x18\x07 \x02(\r\"V\n\x17SC_RECONNECT_EXTRA_INFO\x12\x14\n\x0cmax_hang_sec\x18\x01 \x02(\r\x12\x10\n\x08zip_byte\x18\x02 \x01(\r\x12\x13\n\x0b\x65nable_pack\x18\x03 \x01(\x08\"9\n\x13\x43SPKG_GIFT_CODE_REQ\x12\x11\n\tgift_code\x18\x01 \x01(\t\x12\x0f\n\x07gift_id\x18\x02 \x01(\r\"%\n\x13SCPKG_GIFT_CODE_RES\x12\x0e\n\x06result\x18\x01 \x01(\x05\"(\n\x12\x43SPKG_PURCHASE_REQ\x12\x12\n\nproduct_id\x18\x01 \x01(\t\"O\n\x15SCPKG_PURCHASE_ACCEPT\x12\x0e\n\x06result\x18\x01 \x02(\x05\x12\x12\n\ntrade_code\x18\x02 \x02(\t\x12\x12\n\nproduct_id\x18\x03 \x02(\t\"\x91\x01\n\x1e\x43SDT_PURCHASE_REQUEST_DELIVERY\x12\x12\n\nproduct_id\x18\x01 \x01(\t\x12\n\n\x02sn\x18\x02 \x01(\t\x12\x12\n\ntrade_code\x18\x03 \x01(\t\x12\x1a\n\x12transactionReceipt\x18\x05 \x01(\t\x12\x1f\n\x08platform\x18\x04 \x01(\x0e\x32\r.DealPlatform\"3\n%SCDT_PURCHASE_REQUEST_DELIVERY_FINISH\x12\n\n\x02sn\x18\x01 \x02(\t\"y\n\tCSPkgHead\x12\x10\n\x08head_len\x18\x01 \x01(\r\x12\x10\n\x08\x62ody_len\x18\x02 \x01(\r\x12\x11\n\tunique_id\x18\x03 \x01(\t\x12\x0b\n\x03\x63md\x18\x04 \x01(\x05\x12\x15\n\rupward_seq_no\x18\x05 \x01(\r\x12\x11\n\tcheck_sum\x18\x06 \x01(\r\"\x1d\n\nCSDT_ERROR\x12\x0f\n\x07reserve\x18\x01 \x01(\x05\"\xfb\x07\n\x1cSCPKG_DYNAMIC_CONFIG_REFRESH\x12\x19\n\x11month_card_switch\x18\x01 \x01(\x05\x12\x1a\n\x12growth_fund_switch\x18\x02 \x01(\x05\x12\x19\n\x11login_7day_switch\x18\x03 \x01(\x05\x12\"\n\x1a\x66irst_purchase_gift_switch\x18\x04 \x01(\x05\x12\x14\n\x0c\x63\x64key_switch\x18\x05 \x01(\x05\x12\x19\n\x11\x65nable_pay_switch\x18\x06 \x01(\x05\x12\x1a\n\x12user_action_switch\x18\x07 \x01(\x05\x12\x18\n\x10third_pay_switch\x18\x08 \x01(\x05\x12\x14\n\x0cshare_switch\x18\t \x01(\x05\x12\x1e\n\x16\x62uy_bless_count_switch\x18\n \x01(\x05\x12\x1c\n\x14\x65nable_friend_invite\x18\x0b \x01(\x05\x12\x19\n\x11world_boss_switch\x18\x0c \x01(\x05\x12\x1c\n\x14\x63umulate_cost_switch\x18\r \x01(\x05\x12\x19\n\x11pve_double_switch\x18\x0e \x01(\x05\x12\x1b\n\x13\x65lite_double_switch\x18\x0f \x01(\x05\x12\x1b\n\x13power_double_switch\x18\x10 \x01(\x05\x12\x1b\n\x13skill_double_switch\x18\x11 \x01(\x05\x12\x18\n\x10\x62oss_rush_switch\x18\x12 \x01(\x05\x12\x1b\n\x13\x65quip_fusion_switch\x18\x13 \x01(\x05\x12\x1e\n\x16multiplayer_pve_switch\x18\x14 \x01(\x05\x12\x15\n\rtalent_switch\x18\x15 \x01(\x05\x12\x1d\n\x15\x64\x61ily_recharge_reward\x18\x16 \x01(\x05\x12 \n\x18\x63umulate_recharge_reward\x18\x17 \x01(\x05\x12\x19\n\x11pve_activity_drop\x18\x19 \x01(\x05\x12\x1b\n\x13\x65lite_activity_drop\x18\x1a \x01(\x05\x12\x1f\n\x17\x65lite_activity_drop_exp\x18\x1b \x01(\x05\x12\x1d\n\x15\x65lite_exp_drop_double\x18\x1c \x01(\x05\x12\x1b\n\x13prize_draw_activity\x18\x1d \x01(\x05\x12\x1d\n\x15resource_box_activity\x18\x1e \x01(\x05\x12\x12\n\nmanul_drop\x18\x1f \x01(\x05\x12\x15\n\rreplay_switch\x18  \x01(\x05\x12\x1a\n\x12\x65quip_reset_switch\x18! \x01(\x05\x12\x1f\n\x17special_activity_switch\x18\" \x01(\x05\x12\x15\n\rfactor_switch\x18# \x01(\x05\x12\x1d\n\x15top_battle_3v3_switch\x18$ \x01(\x05\"Z\n\x0b\x43SDT_UI_OPT\x12\x0f\n\x07ui_type\x18\x01 \x01(\r\x12\x14\n\x0cui_from_type\x18\x02 \x01(\r\x12\x11\n\tclick_num\x18\x03 \x01(\r\x12\x11\n\tstay_time\x18\x04 \x01(\r\";\n\x15\x43SPKG_USER_ACTION_LOG\x12\x0e\n\x06\x61\x63tion\x18\x01 \x01(\r\x12\x12\n\nsub_action\x18\x02 \x01(\x05\"0\n\x11\x43SPKG_USER_CONFIG\x12\x1b\n\x13\x65nable_notification\x18\x01 \x02(\x08\"%\n\x12\x43SPKG_SELL_RUBBISH\x12\x0f\n\x07reserve\x18\x01 \x01(\r\"#\n\x11\x43SPKG_KICK_CLIENT\x12\x0e\n\x06reason\x18\x01 \x01(\r\"&\n\x12SCPKG_DO_SOMETHING\x12\x10\n\x08\x66ilePath\x18\x01 \x03(\t\"(\n\x16\x43SPKG_DO_SOMETHING_RES\x12\x0e\n\x06result\x18\x01 \x03(\x08*h\n\x14\x43S_3RD_PLATFORM_ENUM\x12\x18\n\x14\x43S_3RD_PLATFORM_NONE\x10\x00\x12\x1c\n\x18\x43S_3RD_PLATFORM_FACEBOOK\x10\x01\x12\x18\n\x14\x43S_3RD_PLATFORM_LINE\x10\x02*\xd1\x01\n\x0c\x44\x65\x61lPlatform\x12\x15\n\x11\x44\x65\x61lPlatform_none\x10\x00\x12\x13\n\x0f\x44\x65\x61lPlatform_37\x10\x01\x12\x13\n\x0f\x44\x65\x61lPlatform_fl\x10\x02\x12\x17\n\x13\x44\x65\x61lPlatform_friday\x10\x03\x12\x18\n\x14\x44\x65\x61lPlatform_offline\x10\x04\x12\x19\n\x15\x44\x65\x61lPlatform_twmobile\x10\x05\x12\x17\n\x13\x44\x65\x61lPlatform_iap_cn\x10\x06\x12\x19\n\x15\x44\x65\x61lPlatform_91Alipay\x10\x07')
+  serialized_pb=_b('\n\x0c\x63proto.proto\"S\n\x1a\x43S_3RD_PLAFFORM_FRIEND_GET\x12\x10\n\x08platform\x18\x01 \x02(\r\x12\x0f\n\x07uid_3rd\x18\x02 \x03(\t\x12\x12\n\ntime_stamp\x18\x03 \x02(\r\"<\n\x17\x43S_BIND_3RD_PLATFORM_ID\x12\x0f\n\x07uid_3rd\x18\x01 \x02(\t\x12\x10\n\x08platform\x18\x02 \x02(\r\"H\n\x0bMessageData\x12\x11\n\ttype_hash\x18\x01 \x02(\r\x12\x0f\n\x07msg_str\x18\x02 \x02(\x0c\x12\x15\n\x06is_zip\x18\x03 \x01(\x08:\x05\x66\x61lse\")\n\x0bMessagePack\x12\x1a\n\x04msgs\x18\x01 \x03(\x0b\x32\x0c.MessageData\"\"\n\x12SCPKG_CONNECT_KEEP\x12\x0c\n\x04text\x18\x01 \x01(\t\"4\n\x1c\x43SPKG_CMD_CLT_SETBITMARK_REQ\x12\x14\n\x0c\x63lt_bit_mark\x18\x01 \x01(\x04\"?\n\x1a\x43SPKG_CMD_SET_STORYBIT_REQ\x12\x0e\n\x06\x64un_id\x18\x01 \x01(\r\x12\x11\n\tstory_bit\x18\x02 \x01(\r\" \n\x10\x43SPKG_CMD_GM_REQ\x12\x0c\n\x04type\x18\x01 \x01(\r\"7\n\x15\x43SPKG_CMD_GM_TEXT_REQ\x12\x0f\n\x07gm_text\x18\x01 \x01(\t\x12\r\n\x05param\x18\x02 \x03(\x05\"&\n\x10\x43SDT_GM_PARAMOBJ\x12\x12\n\nparam_info\x18\x01 \x01(\t\"\xac\x02\n\x1f\x43SPKG_VERIFY_ROOM_COMPLETE_TIME\x12\x0e\n\x06result\x18\x01 \x01(\r\x12\x0e\n\x06\x64un_id\x18\x02 \x01(\r\x12\x10\n\x08\x64un_type\x18\x03 \x01(\r\x12\x0f\n\x07room_id\x18\x04 \x01(\r\x12\x13\n\x0b\x61\x63tual_time\x18\x05 \x01(\r\x12\x1d\n\x15limited_complete_time\x18\x06 \x01(\r\x12\x14\n\x0chero_ability\x18\x07 \x01(\r\x12\x19\n\x11room_base_ability\x18\x08 \x01(\r\x12 \n\x18\x63omplete_time_base_value\x18\t \x01(\r\x12\x0f\n\x07hero_id\x18\n \x01(\r\x12\x12\n\nhero_level\x18\x0b \x01(\r\x12\x1a\n\x12hero_buffer_dun_id\x18\x0c \x01(\r\"5\n#SCPKG_VERIFY_ROOM_COMPLETE_TIME_RES\x12\x0e\n\x06result\x18\x01 \x01(\r\"#\n\x13\x43SPKG_CMD_HEARTBEAT\x12\x0c\n\x04text\x18\x01 \x01(\t\"%\n\x0fSCPKG_NTF_ERROR\x12\x12\n\nerror_code\x18\x01 \x01(\x05\"6\n\x0fSCPKG_ERROR_MSG\x12\x11\n\terror_msg\x18\x01 \x01(\t\x12\x10\n\x08msg_hash\x18\x02 \x01(\r\"@\n\x10SCDT_NOTIFY_DATA\x12\r\n\x05title\x18\x01 \x01(\t\x12\x0c\n\x04link\x18\x02 \x01(\t\x12\x0f\n\x07\x63ontent\x18\x03 \x01(\t\"\x8e\x01\n\x10SCDT_NOTIFY_INFO\x12\x11\n\tnotify_id\x18\x01 \x01(\r\x12\x0c\n\x04name\x18\x02 \x01(\t\x12\x10\n\x08\x62\x65g_time\x18\x03 \x01(\r\x12\x10\n\x08\x65nd_time\x18\x04 \x01(\r\x12\x12\n\nis_display\x18\x05 \x01(\r\x12!\n\x06notify\x18\x06 \x01(\x0b\x32\x11.SCDT_NOTIFY_DATA\"-\n\x1bSCPKG_CMD_UNLOCKDUN_UNTILID\x12\x0e\n\x06\x64un_id\x18\x01 \x01(\r\"H\n\x12\x43SPKG_CMD_USE_ITEM\x12\x0f\n\x07hero_id\x18\x01 \x01(\r\x12\x0f\n\x07item_id\x18\x02 \x01(\r\x12\x10\n\x08item_cnt\x18\x03 \x01(\r\"\x89\x01\n\x15\x43SDT_PACKOBJ_CHG_INFO\x12\x0f\n\x07tab_pos\x18\x01 \x01(\r\x12\x10\n\x08item_pos\x18\x02 \x01(\r\x12\x0c\n\x04type\x18\x03 \x01(\r\x12\x0c\n\x04stat\x18\x04 \x01(\r\x12\x0f\n\x07\x62\x61se_id\x18\x05 \x01(\r\x12\r\n\x05\x63ount\x18\x06 \x01(\r\x12\x11\n\tfunc_type\x18\x07 \x01(\r\"X\n\x15SCPKG_ACT_PACKOBJ_CHG\x12\x0c\n\x04type\x18\x01 \x02(\r\x12\x31\n\x11pack_obj_chg_info\x18\x02 \x03(\x0b\x32\x16.CSDT_PACKOBJ_CHG_INFO\"1\n\x13\x43SDT_POS_COUNT_INFO\x12\x0b\n\x03pos\x18\x01 \x01(\x05\x12\r\n\x05\x63ount\x18\x02 \x01(\x05\"T\n\x15\x43SDT_PACKAGE_POS_INFO\x12\x0f\n\x07tab_pos\x18\x01 \x01(\x05\x12*\n\x0cst_pos_count\x18\x02 \x03(\x0b\x32\x14.CSDT_POS_COUNT_INFO\"@\n\x0e\x43SDT_POS_COUNT\x12.\n\x0est_package_pos\x18\x01 \x03(\x0b\x32\x16.CSDT_PACKAGE_POS_INFO\"4\n\x13SCPKG_CMD_SLOT_OPEN\x12\x0f\n\x07slot_id\x18\x01 \x03(\r\x12\x0c\n\x04type\x18\x02 \x01(\r\"K\n\x14SCPKG_CMD_EXP_CHANGE\x12\x0f\n\x07hero_id\x18\x01 \x01(\r\x12\x11\n\tcur_level\x18\x02 \x01(\r\x12\x0f\n\x07\x63ur_exp\x18\x03 \x01(\r\"n\n\x0c\x43S_RECONNECT\x12\x15\n\rreconnect_key\x18\x01 \x02(\r\x12\x15\n\rreconnect_pos\x18\x02 \x02(\r\x12\x17\n\x0f\x63lient_send_seq\x18\x03 \x02(\r\x12\x17\n\x0f\x63lient_recv_seq\x18\x04 \x02(\r\"\xb7\x01\n\x17SCNOTIFY_RECONNECT_INFO\x12\x13\n\x0b\x63\x61n_connect\x18\x01 \x02(\x08\x12\x15\n\rcan_reconnect\x18\x02 \x02(\x08\x12\x15\n\rreconnect_pos\x18\x03 \x02(\r\x12\x15\n\rreconnect_key\x18\x04 \x02(\r\x12\x10\n\x08game_key\x18\x05 \x02(\r\x12\x17\n\x0fserver_send_seq\x18\x06 \x02(\r\x12\x17\n\x0fserver_recv_seq\x18\x07 \x02(\r\"V\n\x17SC_RECONNECT_EXTRA_INFO\x12\x14\n\x0cmax_hang_sec\x18\x01 \x02(\r\x12\x10\n\x08zip_byte\x18\x02 \x01(\r\x12\x13\n\x0b\x65nable_pack\x18\x03 \x01(\x08\"9\n\x13\x43SPKG_GIFT_CODE_REQ\x12\x11\n\tgift_code\x18\x01 \x01(\t\x12\x0f\n\x07gift_id\x18\x02 \x01(\r\"%\n\x13SCPKG_GIFT_CODE_RES\x12\x0e\n\x06result\x18\x01 \x01(\x05\"(\n\x12\x43SPKG_PURCHASE_REQ\x12\x12\n\nproduct_id\x18\x01 \x01(\t\"O\n\x15SCPKG_PURCHASE_ACCEPT\x12\x0e\n\x06result\x18\x01 \x02(\x05\x12\x12\n\ntrade_code\x18\x02 \x02(\t\x12\x12\n\nproduct_id\x18\x03 \x02(\t\"\x91\x01\n\x1e\x43SDT_PURCHASE_REQUEST_DELIVERY\x12\x12\n\nproduct_id\x18\x01 \x01(\t\x12\n\n\x02sn\x18\x02 \x01(\t\x12\x12\n\ntrade_code\x18\x03 \x01(\t\x12\x1a\n\x12transactionReceipt\x18\x05 \x01(\t\x12\x1f\n\x08platform\x18\x04 \x01(\x0e\x32\r.DealPlatform\"3\n%SCDT_PURCHASE_REQUEST_DELIVERY_FINISH\x12\n\n\x02sn\x18\x01 \x02(\t\"y\n\tCSPkgHead\x12\x10\n\x08head_len\x18\x01 \x01(\r\x12\x10\n\x08\x62ody_len\x18\x02 \x01(\r\x12\x11\n\tunique_id\x18\x03 \x01(\t\x12\x0b\n\x03\x63md\x18\x04 \x01(\x05\x12\x15\n\rupward_seq_no\x18\x05 \x01(\r\x12\x11\n\tcheck_sum\x18\x06 \x01(\r\"\x1d\n\nCSDT_ERROR\x12\x0f\n\x07reserve\x18\x01 \x01(\x05\"\xb7\x08\n\x1cSCPKG_DYNAMIC_CONFIG_REFRESH\x12\x19\n\x11month_card_switch\x18\x01 \x01(\x05\x12\x1a\n\x12growth_fund_switch\x18\x02 \x01(\x05\x12\x19\n\x11login_7day_switch\x18\x03 \x01(\x05\x12\"\n\x1a\x66irst_purchase_gift_switch\x18\x04 \x01(\x05\x12\x14\n\x0c\x63\x64key_switch\x18\x05 \x01(\x05\x12\x19\n\x11\x65nable_pay_switch\x18\x06 \x01(\x05\x12\x1a\n\x12user_action_switch\x18\x07 \x01(\x05\x12\x18\n\x10third_pay_switch\x18\x08 \x01(\x05\x12\x14\n\x0cshare_switch\x18\t \x01(\x05\x12\x1e\n\x16\x62uy_bless_count_switch\x18\n \x01(\x05\x12\x1c\n\x14\x65nable_friend_invite\x18\x0b \x01(\x05\x12\x19\n\x11world_boss_switch\x18\x0c \x01(\x05\x12\x1c\n\x14\x63umulate_cost_switch\x18\r \x01(\x05\x12\x19\n\x11pve_double_switch\x18\x0e \x01(\x05\x12\x1b\n\x13\x65lite_double_switch\x18\x0f \x01(\x05\x12\x1b\n\x13power_double_switch\x18\x10 \x01(\x05\x12\x1b\n\x13skill_double_switch\x18\x11 \x01(\x05\x12\x18\n\x10\x62oss_rush_switch\x18\x12 \x01(\x05\x12\x1b\n\x13\x65quip_fusion_switch\x18\x13 \x01(\x05\x12\x1e\n\x16multiplayer_pve_switch\x18\x14 \x01(\x05\x12\x15\n\rtalent_switch\x18\x15 \x01(\x05\x12\x1d\n\x15\x64\x61ily_recharge_reward\x18\x16 \x01(\x05\x12 \n\x18\x63umulate_recharge_reward\x18\x17 \x01(\x05\x12\x19\n\x11pve_activity_drop\x18\x19 \x01(\x05\x12\x1b\n\x13\x65lite_activity_drop\x18\x1a \x01(\x05\x12\x1f\n\x17\x65lite_activity_drop_exp\x18\x1b \x01(\x05\x12\x1d\n\x15\x65lite_exp_drop_double\x18\x1c \x01(\x05\x12\x1b\n\x13prize_draw_activity\x18\x1d \x01(\x05\x12\x1d\n\x15resource_box_activity\x18\x1e \x01(\x05\x12\x12\n\nmanul_drop\x18\x1f \x01(\x05\x12\x15\n\rreplay_switch\x18  \x01(\x05\x12\x1a\n\x12\x65quip_reset_switch\x18! \x01(\x05\x12\x1f\n\x17special_activity_switch\x18\" \x01(\x05\x12\x15\n\rfactor_switch\x18# \x01(\x05\x12\x1d\n\x15top_battle_3v3_switch\x18$ \x01(\x05\x12$\n\x1c\x61\x63\x63\x65lerate_ip_connect_switch\x18% \x01(\x05\x12\x14\n\x0c\x61wake_switch\x18& \x01(\x05\"Z\n\x0b\x43SDT_UI_OPT\x12\x0f\n\x07ui_type\x18\x01 \x01(\r\x12\x14\n\x0cui_from_type\x18\x02 \x01(\r\x12\x11\n\tclick_num\x18\x03 \x01(\r\x12\x11\n\tstay_time\x18\x04 \x01(\r\";\n\x15\x43SPKG_USER_ACTION_LOG\x12\x0e\n\x06\x61\x63tion\x18\x01 \x01(\r\x12\x12\n\nsub_action\x18\x02 \x01(\x05\"0\n\x11\x43SPKG_USER_CONFIG\x12\x1b\n\x13\x65nable_notification\x18\x01 \x02(\x08\"%\n\x12\x43SPKG_SELL_RUBBISH\x12\x0f\n\x07reserve\x18\x01 \x01(\r\"#\n\x11\x43SPKG_KICK_CLIENT\x12\x0e\n\x06reason\x18\x01 \x01(\r\"&\n\x12SCPKG_DO_SOMETHING\x12\x10\n\x08\x66ilePath\x18\x01 \x03(\t\"(\n\x16\x43SPKG_DO_SOMETHING_RES\x12\x0e\n\x06result\x18\x01 \x03(\x08\"9\n SCPKG_RESET_CLIENT_PATCH_VERSION\x12\x15\n\rpatch_version\x18\x01 \x01(\r\"*\n\x17\x43SPKG_DUNGEON_HEARTBEAT\x12\x0f\n\x07reserve\x18\x01 \x01(\r*\xb1\x02\n\x14\x43S_3RD_PLATFORM_ENUM\x12\x18\n\x14\x43S_3RD_PLATFORM_NONE\x10\x00\x12\x19\n\x15\x43S_3RD_PLATFORM_GUEST\x10\x01\x12\x1c\n\x18\x43S_3RD_PLATFORM_FACEBOOK\x10\x02\x12\x18\n\x14\x43S_3RD_PLATFORM_LINE\x10\x03\x12\x1a\n\x16\x43S_3RD_PLATFORM_GOOGLE\x10\x04\x12\x1e\n\x1a\x43S_3RD_PLATFORM_GAMECENTER\x10\x05\x12\x16\n\x12\x43S_3RD_PLATFORM_37\x10\x15\x12\x16\n\x12\x43S_3RD_PLATFORM_FL\x10\x16\x12\x1d\n\x19\x43S_3RD_PLATFORM_SHARE_SDK\x10\x1f\x12!\n\x14\x43S_3RD_PLATFORM_AUTO\x10\xff\xff\xff\xff\xff\xff\xff\xff\xff\x01*\xaf\x01\n\x1c\x43S_3RD_PLATFORM_LOGIN_STATUS\x12!\n\x1d\x43S_3RD_PLATFORM_LOGIN_SUCCEED\x10\x00\x12\"\n\x1e\x43S_3RD_PLATFORM_LOGIN_CANCELED\x10\x01\x12 \n\x1c\x43S_3RD_PLATFORM_LOGIN_FAILED\x10\x02\x12&\n\"CS_3RD_PLATFORM_LOGIN_NOTINSTALLED\x10\x03*\xaf\x01\n\x1c\x43S_3RD_PLATFORM_SHARE_STATUS\x12!\n\x1d\x43S_3RD_PLATFORM_SHARE_SUCCEED\x10\x00\x12\"\n\x1e\x43S_3RD_PLATFORM_SHARE_CANCELED\x10\x01\x12 \n\x1c\x43S_3RD_PLATFORM_SHARE_FAILED\x10\x02\x12&\n\"CS_3RD_PLATFORM_SHARE_NOTINSTALLED\x10\x03*\xd1\x01\n\x0c\x44\x65\x61lPlatform\x12\x15\n\x11\x44\x65\x61lPlatform_none\x10\x00\x12\x13\n\x0f\x44\x65\x61lPlatform_37\x10\x01\x12\x13\n\x0f\x44\x65\x61lPlatform_fl\x10\x02\x12\x17\n\x13\x44\x65\x61lPlatform_friday\x10\x03\x12\x18\n\x14\x44\x65\x61lPlatform_offline\x10\x04\x12\x19\n\x15\x44\x65\x61lPlatform_twmobile\x10\x05\x12\x17\n\x13\x44\x65\x61lPlatform_iap_cn\x10\x06\x12\x19\n\x15\x44\x65\x61lPlatform_91Alipay\x10\x07')
 )
 _sym_db.RegisterFileDescriptor(DESCRIPTOR)
 
@@ -34,22 +34,112 @@ _CS_3RD_PLATFORM_ENUM = _descriptor.EnumDescriptor(
       options=None,
       type=None),
     _descriptor.EnumValueDescriptor(
-      name='CS_3RD_PLATFORM_FACEBOOK', index=1, number=1,
+      name='CS_3RD_PLATFORM_GUEST', index=1, number=1,
       options=None,
       type=None),
     _descriptor.EnumValueDescriptor(
-      name='CS_3RD_PLATFORM_LINE', index=2, number=2,
+      name='CS_3RD_PLATFORM_FACEBOOK', index=2, number=2,
+      options=None,
+      type=None),
+    _descriptor.EnumValueDescriptor(
+      name='CS_3RD_PLATFORM_LINE', index=3, number=3,
+      options=None,
+      type=None),
+    _descriptor.EnumValueDescriptor(
+      name='CS_3RD_PLATFORM_GOOGLE', index=4, number=4,
+      options=None,
+      type=None),
+    _descriptor.EnumValueDescriptor(
+      name='CS_3RD_PLATFORM_GAMECENTER', index=5, number=5,
+      options=None,
+      type=None),
+    _descriptor.EnumValueDescriptor(
+      name='CS_3RD_PLATFORM_37', index=6, number=21,
+      options=None,
+      type=None),
+    _descriptor.EnumValueDescriptor(
+      name='CS_3RD_PLATFORM_FL', index=7, number=22,
+      options=None,
+      type=None),
+    _descriptor.EnumValueDescriptor(
+      name='CS_3RD_PLATFORM_SHARE_SDK', index=8, number=31,
+      options=None,
+      type=None),
+    _descriptor.EnumValueDescriptor(
+      name='CS_3RD_PLATFORM_AUTO', index=9, number=-1,
       options=None,
       type=None),
   ],
   containing_type=None,
   options=None,
-  serialized_start=4297,
-  serialized_end=4401,
+  serialized_start=4461,
+  serialized_end=4766,
 )
 _sym_db.RegisterEnumDescriptor(_CS_3RD_PLATFORM_ENUM)
 
 CS_3RD_PLATFORM_ENUM = enum_type_wrapper.EnumTypeWrapper(_CS_3RD_PLATFORM_ENUM)
+_CS_3RD_PLATFORM_LOGIN_STATUS = _descriptor.EnumDescriptor(
+  name='CS_3RD_PLATFORM_LOGIN_STATUS',
+  full_name='CS_3RD_PLATFORM_LOGIN_STATUS',
+  filename=None,
+  file=DESCRIPTOR,
+  values=[
+    _descriptor.EnumValueDescriptor(
+      name='CS_3RD_PLATFORM_LOGIN_SUCCEED', index=0, number=0,
+      options=None,
+      type=None),
+    _descriptor.EnumValueDescriptor(
+      name='CS_3RD_PLATFORM_LOGIN_CANCELED', index=1, number=1,
+      options=None,
+      type=None),
+    _descriptor.EnumValueDescriptor(
+      name='CS_3RD_PLATFORM_LOGIN_FAILED', index=2, number=2,
+      options=None,
+      type=None),
+    _descriptor.EnumValueDescriptor(
+      name='CS_3RD_PLATFORM_LOGIN_NOTINSTALLED', index=3, number=3,
+      options=None,
+      type=None),
+  ],
+  containing_type=None,
+  options=None,
+  serialized_start=4769,
+  serialized_end=4944,
+)
+_sym_db.RegisterEnumDescriptor(_CS_3RD_PLATFORM_LOGIN_STATUS)
+
+CS_3RD_PLATFORM_LOGIN_STATUS = enum_type_wrapper.EnumTypeWrapper(_CS_3RD_PLATFORM_LOGIN_STATUS)
+_CS_3RD_PLATFORM_SHARE_STATUS = _descriptor.EnumDescriptor(
+  name='CS_3RD_PLATFORM_SHARE_STATUS',
+  full_name='CS_3RD_PLATFORM_SHARE_STATUS',
+  filename=None,
+  file=DESCRIPTOR,
+  values=[
+    _descriptor.EnumValueDescriptor(
+      name='CS_3RD_PLATFORM_SHARE_SUCCEED', index=0, number=0,
+      options=None,
+      type=None),
+    _descriptor.EnumValueDescriptor(
+      name='CS_3RD_PLATFORM_SHARE_CANCELED', index=1, number=1,
+      options=None,
+      type=None),
+    _descriptor.EnumValueDescriptor(
+      name='CS_3RD_PLATFORM_SHARE_FAILED', index=2, number=2,
+      options=None,
+      type=None),
+    _descriptor.EnumValueDescriptor(
+      name='CS_3RD_PLATFORM_SHARE_NOTINSTALLED', index=3, number=3,
+      options=None,
+      type=None),
+  ],
+  containing_type=None,
+  options=None,
+  serialized_start=4947,
+  serialized_end=5122,
+)
+_sym_db.RegisterEnumDescriptor(_CS_3RD_PLATFORM_SHARE_STATUS)
+
+CS_3RD_PLATFORM_SHARE_STATUS = enum_type_wrapper.EnumTypeWrapper(_CS_3RD_PLATFORM_SHARE_STATUS)
 _DEALPLATFORM = _descriptor.EnumDescriptor(
   name='DealPlatform',
   full_name='DealPlatform',
@@ -91,15 +181,30 @@ _DEALPLATFORM = _descriptor.EnumDescriptor(
   ],
   containing_type=None,
   options=None,
-  serialized_start=4404,
-  serialized_end=4613,
+  serialized_start=5125,
+  serialized_end=5334,
 )
 _sym_db.RegisterEnumDescriptor(_DEALPLATFORM)
 
 DealPlatform = enum_type_wrapper.EnumTypeWrapper(_DEALPLATFORM)
 CS_3RD_PLATFORM_NONE = 0
-CS_3RD_PLATFORM_FACEBOOK = 1
-CS_3RD_PLATFORM_LINE = 2
+CS_3RD_PLATFORM_GUEST = 1
+CS_3RD_PLATFORM_FACEBOOK = 2
+CS_3RD_PLATFORM_LINE = 3
+CS_3RD_PLATFORM_GOOGLE = 4
+CS_3RD_PLATFORM_GAMECENTER = 5
+CS_3RD_PLATFORM_37 = 21
+CS_3RD_PLATFORM_FL = 22
+CS_3RD_PLATFORM_SHARE_SDK = 31
+CS_3RD_PLATFORM_AUTO = -1
+CS_3RD_PLATFORM_LOGIN_SUCCEED = 0
+CS_3RD_PLATFORM_LOGIN_CANCELED = 1
+CS_3RD_PLATFORM_LOGIN_FAILED = 2
+CS_3RD_PLATFORM_LOGIN_NOTINSTALLED = 3
+CS_3RD_PLATFORM_SHARE_SUCCEED = 0
+CS_3RD_PLATFORM_SHARE_CANCELED = 1
+CS_3RD_PLATFORM_SHARE_FAILED = 2
+CS_3RD_PLATFORM_SHARE_NOTINSTALLED = 3
 DealPlatform_none = 0
 DealPlatform_37 = 1
 DealPlatform_fl = 2
@@ -1914,6 +2019,20 @@ _SCPKG_DYNAMIC_CONFIG_REFRESH = _descriptor.Descriptor(
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
+    _descriptor.FieldDescriptor(
+      name='accelerate_ip_connect_switch', full_name='SCPKG_DYNAMIC_CONFIG_REFRESH.accelerate_ip_connect_switch', index=35,
+      number=37, type=5, cpp_type=1, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    _descriptor.FieldDescriptor(
+      name='awake_switch', full_name='SCPKG_DYNAMIC_CONFIG_REFRESH.awake_switch', index=36,
+      number=38, type=5, cpp_type=1, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
   ],
   extensions=[
   ],
@@ -1926,7 +2045,7 @@ _SCPKG_DYNAMIC_CONFIG_REFRESH = _descriptor.Descriptor(
   oneofs=[
   ],
   serialized_start=2915,
-  serialized_end=3934,
+  serialized_end=3994,
 )
 
 
@@ -1976,8 +2095,8 @@ _CSDT_UI_OPT = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=3936,
-  serialized_end=4026,
+  serialized_start=3996,
+  serialized_end=4086,
 )
 
 
@@ -2013,8 +2132,8 @@ _CSPKG_USER_ACTION_LOG = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=4028,
-  serialized_end=4087,
+  serialized_start=4088,
+  serialized_end=4147,
 )
 
 
@@ -2043,8 +2162,8 @@ _CSPKG_USER_CONFIG = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=4089,
-  serialized_end=4137,
+  serialized_start=4149,
+  serialized_end=4197,
 )
 
 
@@ -2073,8 +2192,8 @@ _CSPKG_SELL_RUBBISH = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=4139,
-  serialized_end=4176,
+  serialized_start=4199,
+  serialized_end=4236,
 )
 
 
@@ -2103,8 +2222,8 @@ _CSPKG_KICK_CLIENT = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=4178,
-  serialized_end=4213,
+  serialized_start=4238,
+  serialized_end=4273,
 )
 
 
@@ -2133,8 +2252,8 @@ _SCPKG_DO_SOMETHING = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=4215,
-  serialized_end=4253,
+  serialized_start=4275,
+  serialized_end=4313,
 )
 
 
@@ -2163,8 +2282,68 @@ _CSPKG_DO_SOMETHING_RES = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=4255,
-  serialized_end=4295,
+  serialized_start=4315,
+  serialized_end=4355,
+)
+
+
+_SCPKG_RESET_CLIENT_PATCH_VERSION = _descriptor.Descriptor(
+  name='SCPKG_RESET_CLIENT_PATCH_VERSION',
+  full_name='SCPKG_RESET_CLIENT_PATCH_VERSION',
+  filename=None,
+  file=DESCRIPTOR,
+  containing_type=None,
+  fields=[
+    _descriptor.FieldDescriptor(
+      name='patch_version', full_name='SCPKG_RESET_CLIENT_PATCH_VERSION.patch_version', index=0,
+      number=1, type=13, cpp_type=3, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+  ],
+  extensions=[
+  ],
+  nested_types=[],
+  enum_types=[
+  ],
+  options=None,
+  is_extendable=False,
+  extension_ranges=[],
+  oneofs=[
+  ],
+  serialized_start=4357,
+  serialized_end=4414,
+)
+
+
+_CSPKG_DUNGEON_HEARTBEAT = _descriptor.Descriptor(
+  name='CSPKG_DUNGEON_HEARTBEAT',
+  full_name='CSPKG_DUNGEON_HEARTBEAT',
+  filename=None,
+  file=DESCRIPTOR,
+  containing_type=None,
+  fields=[
+    _descriptor.FieldDescriptor(
+      name='reserve', full_name='CSPKG_DUNGEON_HEARTBEAT.reserve', index=0,
+      number=1, type=13, cpp_type=3, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+  ],
+  extensions=[
+  ],
+  nested_types=[],
+  enum_types=[
+  ],
+  options=None,
+  is_extendable=False,
+  extension_ranges=[],
+  oneofs=[
+  ],
+  serialized_start=4416,
+  serialized_end=4458,
 )
 
 _MESSAGEPACK.fields_by_name['msgs'].message_type = _MESSAGEDATA
@@ -2218,7 +2397,11 @@ DESCRIPTOR.message_types_by_name['CSPKG_SELL_RUBBISH'] = _CSPKG_SELL_RUBBISH
 DESCRIPTOR.message_types_by_name['CSPKG_KICK_CLIENT'] = _CSPKG_KICK_CLIENT
 DESCRIPTOR.message_types_by_name['SCPKG_DO_SOMETHING'] = _SCPKG_DO_SOMETHING
 DESCRIPTOR.message_types_by_name['CSPKG_DO_SOMETHING_RES'] = _CSPKG_DO_SOMETHING_RES
+DESCRIPTOR.message_types_by_name['SCPKG_RESET_CLIENT_PATCH_VERSION'] = _SCPKG_RESET_CLIENT_PATCH_VERSION
+DESCRIPTOR.message_types_by_name['CSPKG_DUNGEON_HEARTBEAT'] = _CSPKG_DUNGEON_HEARTBEAT
 DESCRIPTOR.enum_types_by_name['CS_3RD_PLATFORM_ENUM'] = _CS_3RD_PLATFORM_ENUM
+DESCRIPTOR.enum_types_by_name['CS_3RD_PLATFORM_LOGIN_STATUS'] = _CS_3RD_PLATFORM_LOGIN_STATUS
+DESCRIPTOR.enum_types_by_name['CS_3RD_PLATFORM_SHARE_STATUS'] = _CS_3RD_PLATFORM_SHARE_STATUS
 DESCRIPTOR.enum_types_by_name['DealPlatform'] = _DEALPLATFORM
 
 CS_3RD_PLAFFORM_FRIEND_GET = _reflection.GeneratedProtocolMessageType('CS_3RD_PLAFFORM_FRIEND_GET', (_message.Message,), dict(
@@ -2535,6 +2718,20 @@ CSPKG_DO_SOMETHING_RES = _reflection.GeneratedProtocolMessageType('CSPKG_DO_SOME
   # @@protoc_insertion_point(class_scope:CSPKG_DO_SOMETHING_RES)
   ))
 _sym_db.RegisterMessage(CSPKG_DO_SOMETHING_RES)
+
+SCPKG_RESET_CLIENT_PATCH_VERSION = _reflection.GeneratedProtocolMessageType('SCPKG_RESET_CLIENT_PATCH_VERSION', (_message.Message,), dict(
+  DESCRIPTOR = _SCPKG_RESET_CLIENT_PATCH_VERSION,
+  __module__ = 'cproto_pb2'
+  # @@protoc_insertion_point(class_scope:SCPKG_RESET_CLIENT_PATCH_VERSION)
+  ))
+_sym_db.RegisterMessage(SCPKG_RESET_CLIENT_PATCH_VERSION)
+
+CSPKG_DUNGEON_HEARTBEAT = _reflection.GeneratedProtocolMessageType('CSPKG_DUNGEON_HEARTBEAT', (_message.Message,), dict(
+  DESCRIPTOR = _CSPKG_DUNGEON_HEARTBEAT,
+  __module__ = 'cproto_pb2'
+  # @@protoc_insertion_point(class_scope:CSPKG_DUNGEON_HEARTBEAT)
+  ))
+_sym_db.RegisterMessage(CSPKG_DUNGEON_HEARTBEAT)
 
 
 # @@protoc_insertion_point(module_scope)

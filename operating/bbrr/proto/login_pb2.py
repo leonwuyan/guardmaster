@@ -28,7 +28,7 @@ import rescommon_pb2
 DESCRIPTOR = _descriptor.FileDescriptor(
   name='login.proto',
   package='',
-  serialized_pb=_b('\n\x0blogin.proto\x1a\x11protocommon.proto\x1a\x0bquest.proto\x1a\x0e\x62usiness.proto\x1a\x0e\x62uilding.proto\x1a\rdungeon.proto\x1a\rendless.proto\x1a\x0epvpsteal.proto\x1a\x10rankbattle.proto\x1a\x11multiplayer.proto\x1a\x0frescommon.proto\"O\n\x18\x43SPKG_CMD_PLAYER_LEVELUP\x12\x0e\n\x06obj_id\x18\x01 \x01(\r\x12\x10\n\x08obj_type\x18\x02 \x01(\r\x12\x11\n\tcur_level\x18\x03 \x01(\r\"q\n\x18SCPKG_CMD_PLAYER_LEVELUP\x12\x0e\n\x06obj_id\x18\x01 \x01(\r\x12\x10\n\x08obj_type\x18\x02 \x01(\r\x12\x0e\n\x06result\x18\x03 \x01(\x05\x12\x10\n\x08\x62\x65g_time\x18\x04 \x01(\r\x12\x11\n\tcost_time\x18\x05 \x01(\r\"F\n\rSCDT_ATT_INFO\x12$\n\x08hero_att\x18\x01 \x01(\x0b\x32\x12.SCDT_HERO_ATTINFO\x12\x0f\n\x07reserve\x18\x03 \x01(\x05\"\xd3\x01\n\x1bSCPKG_CMD_PLAYER_LEVELUPEDN\x12\x0e\n\x06obj_id\x18\x01 \x01(\r\x12\x10\n\x08obj_type\x18\x02 \x01(\r\x12\x13\n\x0bis_directly\x18\x03 \x01(\r\x12\x12\n\ndest_level\x18\x04 \x01(\r\x12\x14\n\x0creward_power\x18\x05 \x01(\r\x12 \n\x08\x61tt_info\x18\x06 \x01(\x0b\x32\x0e.SCDT_ATT_INFO\x12\x31\n\x11passive_hero_info\x18\x07 \x03(\x0b\x32\x16.SCDT_PASSIVEHERO_INFO\"\xae\x02\n\x15\x43SDT_PLAYER_BEHAVIOUR\x12\x1b\n\x13total_skilllvup_cnt\x18\x01 \x01(\r\x12\x1a\n\x12total_archlvup_cnt\x18\x02 \x01(\r\x12\x18\n\x10total_growup_cnt\x18\x03 \x01(\r\x12\x1b\n\x13total_endless_score\x18\x04 \x01(\r\x12\x1e\n\x16total_buildinglvup_cnt\x18\x05 \x01(\r\x12\"\n\x1atotal_equip_level_up_level\x18\x06 \x01(\r\x12\x1f\n\x17total_equip_grow_up_cnt\x18\x07 \x01(\r\x12\x1f\n\x17total_equip_wake_up_cnt\x18\x08 \x01(\r\x12\x1f\n\x17total_world_boss_damage\x18\t \x01(\r\"\xfd\x01\n\x0e\x43SDT_MISC_DATA\x12&\n\x05quest\x18\x01 \x01(\x0b\x32\x17.CSDT_PLAYER_QUEST_INFO\x12)\n\tbehaviour\x18\x02 \x01(\x0b\x32\x16.CSDT_PLAYER_BEHAVIOUR\x12\x36\n\x13offline_battle_info\x18\x03 \x01(\x0b\x32\x19.CSDT_OFFLINE_BATTLE_INFO\x12\x34\n\x12online_battle_info\x18\x04 \x01(\x0b\x32\x18.CSDT_ONLINE_BATTLE_INFO\x12*\n\rbusiness_info\x18\x05 \x01(\x0b\x32\x13.CSDT_BUSINESS_INFO\"F\n\x15SCDT_PASSIVEHERO_INFO\x12\x0f\n\x07hero_id\x18\x01 \x01(\r\x12\n\n\x02hp\x18\x02 \x01(\r\x12\x10\n\x08strength\x18\x03 \x01(\r\"\x85\x01\n\x11SCDT_HERO_ATTINFO\x12\x0e\n\x06max_hp\x18\x01 \x01(\r\x12\x0e\n\x06\x63ur_hp\x18\x02 \x01(\r\x12\x0e\n\x06max_sp\x18\x03 \x01(\r\x12\x0e\n\x06\x63ur_sp\x18\x04 \x01(\r\x12\x10\n\x08strength\x18\x05 \x01(\r\x12\x0f\n\x07grow_up\x18\x06 \x01(\r\x12\r\n\x05level\x18\x07 \x01(\r\"\x8a\x02\n\x15SCPKG_CMD_UNLOCK_HERO\x12\x0e\n\x06result\x18\x01 \x01(\x05\x12\x13\n\x0bunlock_type\x18\x02 \x01(\r\x12\x0f\n\x07hero_id\x18\x03 \x01(\r\x12\x0b\n\x03pos\x18\x04 \x01(\x05\x12$\n\x08hero_att\x18\x05 \x01(\x0b\x32\x12.SCDT_HERO_ATTINFO\x12,\n\rinit_skill_id\x18\x06 \x03(\x0b\x32\x15.CSDT_SKILL_INFO_DATA\x12\x31\n\x11passive_hero_info\x18\x07 \x03(\x0b\x32\x16.SCDT_PASSIVEHERO_INFO\x12\'\n\x1fgreatest_dungeon_id_when_unlock\x18\x08 \x01(\r\"=\n\x14\x43SDT_SKILL_INFO_DATA\x12\x10\n\x08skill_id\x18\x01 \x01(\r\x12\x13\n\x0bskill_index\x18\x02 \x01(\r\"\xfe\x02\n\x13\x43SDT_HERO_INFO_DATA\x12\x0f\n\x07hero_id\x18\x01 \x01(\r\x12\x0f\n\x07grow_up\x18\x02 \x01(\r\x12\r\n\x05level\x18\x03 \x01(\r\x12\x0b\n\x03\x65xp\x18\x04 \x01(\r\x12\x0e\n\x06\x63ur_hp\x18\x05 \x01(\r\x12\x0e\n\x06\x63ur_sp\x18\x06 \x01(\r\x12\x0e\n\x06max_hp\x18\x07 \x01(\r\x12\x10\n\x08strength\x18\x08 \x01(\r\x12)\n\nskill_info\x18\t \x03(\x0b\x32\x15.CSDT_SKILL_INFO_DATA\x12*\n\x0b\x65mblem_info\x18\n \x03(\x0b\x32\x15.CSDT_EMBLEMINFO_DATA\x12\'\n\x1fgreatest_dungeon_id_when_unlock\x18\x0b \x01(\r\x12\x13\n\x0btalent_info\x18\x0c \x01(\x04\x12:\n\x10talent_hide_info\x18\r \x03(\x0b\x32 .ST_HERO_BATTLE_TALENT_HIDE_INFO\x12\x16\n\x0etalent_lv_info\x18\x0e \x03(\r\"9\n\x0e\x43SDT_HERO_INFO\x12\'\n\thero_info\x18\x01 \x03(\x0b\x32\x14.CSDT_HERO_INFO_DATA\"\xed\x04\n\x10\x43SDT_ROLE_ONLINE\x12\r\n\x05money\x18\x01 \x01(\r\x12\x11\n\tmax_power\x18\x02 \x01(\r\x12\x11\n\tcur_power\x18\x03 \x01(\r\x12\x1e\n\x16power_recover_beg_time\x18\x04 \x01(\r\x12 \n\x18power_recover_total_time\x18\x05 \x01(\r\x12\x1f\n\x17power_last_refresh_time\x18\x06 \x01(\r\x12\x17\n\x0f\x62uy_power_times\x18\x07 \x01(\r\x12\x16\n\x0e\x63ur_achi_point\x18\x08 \x01(\r\x12\x13\n\x0b\x63ur_crystal\x18\t \x01(\r\x12\x10\n\x08\x63ur_gold\x18\n \x01(\r\x12\x1d\n\x15\x63ur_rank_battle_score\x18\x14 \x01(\r\x12\x0e\n\x06max_sp\x18\x0b \x01(\r\x12\x0e\n\x06\x63ur_sp\x18\x0c \x01(\r\x12\x1b\n\x13\x63ur_spborn_beg_time\x18\r \x01(\r\x12\x1d\n\x15\x63ur_spborn_total_time\x18\x0e \x01(\r\x12\x19\n\x11max_endless_score\x18\x0f \x01(\r\x12\x19\n\x11max_endless_floor\x18\x10 \x01(\r\x12\x14\n\x0c\x63lt_bit_mark\x18\x11 \x01(\x04\x12\x1b\n\x13\x63ur_notify_beg_time\x18\x12 \x01(\r\x12\x1d\n\x15\x62uy_skill_point_times\x18\x13 \x01(\r\x12\x19\n\x11\x62uy_crystal_times\x18\x15 \x01(\r\x12\x16\n\x0e\x62uy_gold_times\x18\x16 \x01(\r\x12\x12\n\nhead_photo\x18\x17 \x01(\r\x12\x1f\n\x17online_battle_win_point\x18\x18 \x01(\r\"\xbd\x02\n\x1aSCPKG_CMD_ROLELOGIN_ONLINE\x12\x11\n\tresult_id\x18\x01 \x01(\x05\x12\x0f\n\x07zone_id\x18\x02 \x01(\r\x12\x0e\n\x06obj_id\x18\x03 \x01(\r\x12\x15\n\rzone_time_sec\x18\x04 \x01(\r\x12\x16\n\x0ezone_time_msec\x18\x05 \x01(\r\x12\x0b\n\x03uid\x18\x06 \x01(\r\x12\x0c\n\x04name\x18\x07 \x01(\t\x12\x11\n\tclient_ip\x18\x08 \x01(\r\x12\x13\n\x0b\x63lient_port\x18\t \x01(\r\x12+\n\x10role_online_info\x18\n \x01(\x0b\x32\x11.CSDT_ROLE_ONLINE\x12\x15\n\rleft_ban_time\x18\x0b \x01(\r\x12\x18\n\x10server_open_time\x18\x0c \x01(\r\x12\x1b\n\x13zone_time_zone_diff\x18\r \x01(\x05\"J\n\x1cSCPKG_CMD_ROLELOGIN_BUILDING\x12*\n\rbuilding_info\x18\x01 \x01(\x0b\x32\x13.CSDT_BUILDING_INFO\">\n\x18SCPKG_CMD_ROLELOGIN_HERO\x12\"\n\thero_info\x18\x01 \x01(\x0b\x32\x0f.CSDT_HERO_INFO\"8\n\x16\x43SDT_SELFDUN_HERO_INFO\x12\r\n\x05state\x18\x01 \x01(\r\x12\x0f\n\x07hero_id\x18\x02 \x01(\r\"\xf8\x01\n\x12\x43SDT_SELF_DUN_DATA\x12\x32\n\x11\x64\x65\x66\x65nse_hero_info\x18\x01 \x03(\x0b\x32\x17.CSDT_SELFDUN_HERO_INFO\x12\x31\n\x10\x61ttack_hero_info\x18\x02 \x03(\x0b\x32\x17.CSDT_SELFDUN_HERO_INFO\x12=\n\x1ctop_battle_defense_hero_info\x18\x03 \x03(\x0b\x32\x17.CSDT_SELFDUN_HERO_INFO\x12<\n\x1btop_battle_attack_hero_info\x18\x04 \x03(\x0b\x32\x17.CSDT_SELFDUN_HERO_INFO\"\xe3\x01\n\x1bSCPKG_CMD_ROLE_DUNGEON_INFO\x12\x34\n\x12pve_challenge_data\x18\x01 \x01(\x0b\x32\x18.CSDT_PVE_CHALLENGE_DATA\x12\x38\n\x14tower_challenge_data\x18\x02 \x01(\x0b\x32\x1a.CSDT_TOWER_CHALLENGE_DATA\x12*\n\rself_dun_data\x18\x03 \x01(\x0b\x32\x13.CSDT_SELF_DUN_DATA\x12(\n\x0cpvp_dun_data\x18\x04 \x01(\x0b\x32\x12.CSDT_PVP_DUN_DATA\"[\n#SCPKG_CMD_ROLELOGIN_GANGBATTLE_HERO\x12\x34\n\x10gang_battle_info\x18\x01 \x01(\x0b\x32\x1a.CSDT_GANGBATTLE_HERO_INFO\"_\n$SCPKG_CMD_ROLELOGIN_RANK_BATTLE_INFO\x12\x37\n\x10rank_battle_info\x18\x01 \x01(\x0b\x32\x1d.CSDT_PLAYER_RANK_BATTLE_INFO\">\n\x18SCPKG_CMD_ROLELOGIN_MISC\x12\"\n\tmisc_data\x18\x01 \x01(\x0b\x32\x0f.CSDT_MISC_DATA\"-\n\x1aSCPKG_CMD_ROLELOGIN_FINISH\x12\x0f\n\x07succeed\x18\x01 \x01(\x08\",\n\x1aSCPKG_CMD_ROLELOGIN_ACCEPT\x12\x0e\n\x06result\x18\x01 \x01(\x05')
+  serialized_pb=_b('\n\x0blogin.proto\x1a\x11protocommon.proto\x1a\x0bquest.proto\x1a\x0e\x62usiness.proto\x1a\x0e\x62uilding.proto\x1a\rdungeon.proto\x1a\rendless.proto\x1a\x0epvpsteal.proto\x1a\x10rankbattle.proto\x1a\x11multiplayer.proto\x1a\x0frescommon.proto\"O\n\x18\x43SPKG_CMD_PLAYER_LEVELUP\x12\x0e\n\x06obj_id\x18\x01 \x01(\r\x12\x10\n\x08obj_type\x18\x02 \x01(\r\x12\x11\n\tcur_level\x18\x03 \x01(\r\"q\n\x18SCPKG_CMD_PLAYER_LEVELUP\x12\x0e\n\x06obj_id\x18\x01 \x01(\r\x12\x10\n\x08obj_type\x18\x02 \x01(\r\x12\x0e\n\x06result\x18\x03 \x01(\x05\x12\x10\n\x08\x62\x65g_time\x18\x04 \x01(\r\x12\x11\n\tcost_time\x18\x05 \x01(\r\"F\n\rSCDT_ATT_INFO\x12$\n\x08hero_att\x18\x01 \x01(\x0b\x32\x12.SCDT_HERO_ATTINFO\x12\x0f\n\x07reserve\x18\x03 \x01(\x05\"\xd3\x01\n\x1bSCPKG_CMD_PLAYER_LEVELUPEDN\x12\x0e\n\x06obj_id\x18\x01 \x01(\r\x12\x10\n\x08obj_type\x18\x02 \x01(\r\x12\x13\n\x0bis_directly\x18\x03 \x01(\r\x12\x12\n\ndest_level\x18\x04 \x01(\r\x12\x14\n\x0creward_power\x18\x05 \x01(\r\x12 \n\x08\x61tt_info\x18\x06 \x01(\x0b\x32\x0e.SCDT_ATT_INFO\x12\x31\n\x11passive_hero_info\x18\x07 \x03(\x0b\x32\x16.SCDT_PASSIVEHERO_INFO\"\xae\x02\n\x15\x43SDT_PLAYER_BEHAVIOUR\x12\x1b\n\x13total_skilllvup_cnt\x18\x01 \x01(\r\x12\x1a\n\x12total_archlvup_cnt\x18\x02 \x01(\r\x12\x18\n\x10total_growup_cnt\x18\x03 \x01(\r\x12\x1b\n\x13total_endless_score\x18\x04 \x01(\r\x12\x1e\n\x16total_buildinglvup_cnt\x18\x05 \x01(\r\x12\"\n\x1atotal_equip_level_up_level\x18\x06 \x01(\r\x12\x1f\n\x17total_equip_grow_up_cnt\x18\x07 \x01(\r\x12\x1f\n\x17total_equip_wake_up_cnt\x18\x08 \x01(\r\x12\x1f\n\x17total_world_boss_damage\x18\t \x01(\r\"\xfd\x01\n\x0e\x43SDT_MISC_DATA\x12&\n\x05quest\x18\x01 \x01(\x0b\x32\x17.CSDT_PLAYER_QUEST_INFO\x12)\n\tbehaviour\x18\x02 \x01(\x0b\x32\x16.CSDT_PLAYER_BEHAVIOUR\x12\x36\n\x13offline_battle_info\x18\x03 \x01(\x0b\x32\x19.CSDT_OFFLINE_BATTLE_INFO\x12\x34\n\x12online_battle_info\x18\x04 \x01(\x0b\x32\x18.CSDT_ONLINE_BATTLE_INFO\x12*\n\rbusiness_info\x18\x05 \x01(\x0b\x32\x13.CSDT_BUSINESS_INFO\"F\n\x15SCDT_PASSIVEHERO_INFO\x12\x0f\n\x07hero_id\x18\x01 \x01(\r\x12\n\n\x02hp\x18\x02 \x01(\r\x12\x10\n\x08strength\x18\x03 \x01(\r\"\x85\x01\n\x11SCDT_HERO_ATTINFO\x12\x0e\n\x06max_hp\x18\x01 \x01(\r\x12\x0e\n\x06\x63ur_hp\x18\x02 \x01(\r\x12\x0e\n\x06max_sp\x18\x03 \x01(\r\x12\x0e\n\x06\x63ur_sp\x18\x04 \x01(\r\x12\x10\n\x08strength\x18\x05 \x01(\r\x12\x0f\n\x07grow_up\x18\x06 \x01(\r\x12\r\n\x05level\x18\x07 \x01(\r\"\x8a\x02\n\x15SCPKG_CMD_UNLOCK_HERO\x12\x0e\n\x06result\x18\x01 \x01(\x05\x12\x13\n\x0bunlock_type\x18\x02 \x01(\r\x12\x0f\n\x07hero_id\x18\x03 \x01(\r\x12\x0b\n\x03pos\x18\x04 \x01(\x05\x12$\n\x08hero_att\x18\x05 \x01(\x0b\x32\x12.SCDT_HERO_ATTINFO\x12,\n\rinit_skill_id\x18\x06 \x03(\x0b\x32\x15.CSDT_SKILL_INFO_DATA\x12\x31\n\x11passive_hero_info\x18\x07 \x03(\x0b\x32\x16.SCDT_PASSIVEHERO_INFO\x12\'\n\x1fgreatest_dungeon_id_when_unlock\x18\x08 \x01(\r\"=\n\x14\x43SDT_SKILL_INFO_DATA\x12\x10\n\x08skill_id\x18\x01 \x01(\r\x12\x13\n\x0bskill_index\x18\x02 \x01(\r\"\xfe\x02\n\x13\x43SDT_HERO_INFO_DATA\x12\x0f\n\x07hero_id\x18\x01 \x01(\r\x12\x0f\n\x07grow_up\x18\x02 \x01(\r\x12\r\n\x05level\x18\x03 \x01(\r\x12\x0b\n\x03\x65xp\x18\x04 \x01(\r\x12\x0e\n\x06\x63ur_hp\x18\x05 \x01(\r\x12\x0e\n\x06\x63ur_sp\x18\x06 \x01(\r\x12\x0e\n\x06max_hp\x18\x07 \x01(\r\x12\x10\n\x08strength\x18\x08 \x01(\r\x12)\n\nskill_info\x18\t \x03(\x0b\x32\x15.CSDT_SKILL_INFO_DATA\x12*\n\x0b\x65mblem_info\x18\n \x03(\x0b\x32\x15.CSDT_EMBLEMINFO_DATA\x12\'\n\x1fgreatest_dungeon_id_when_unlock\x18\x0b \x01(\r\x12\x13\n\x0btalent_info\x18\x0c \x01(\x04\x12:\n\x10talent_hide_info\x18\r \x03(\x0b\x32 .ST_HERO_BATTLE_TALENT_HIDE_INFO\x12\x16\n\x0etalent_lv_info\x18\x0e \x03(\r\"9\n\x0e\x43SDT_HERO_INFO\x12\'\n\thero_info\x18\x01 \x03(\x0b\x32\x14.CSDT_HERO_INFO_DATA\"\xed\x04\n\x10\x43SDT_ROLE_ONLINE\x12\r\n\x05money\x18\x01 \x01(\r\x12\x11\n\tmax_power\x18\x02 \x01(\r\x12\x11\n\tcur_power\x18\x03 \x01(\r\x12\x1e\n\x16power_recover_beg_time\x18\x04 \x01(\r\x12 \n\x18power_recover_total_time\x18\x05 \x01(\r\x12\x1f\n\x17power_last_refresh_time\x18\x06 \x01(\r\x12\x17\n\x0f\x62uy_power_times\x18\x07 \x01(\r\x12\x16\n\x0e\x63ur_achi_point\x18\x08 \x01(\r\x12\x13\n\x0b\x63ur_crystal\x18\t \x01(\r\x12\x10\n\x08\x63ur_gold\x18\n \x01(\r\x12\x1d\n\x15\x63ur_rank_battle_score\x18\x14 \x01(\r\x12\x0e\n\x06max_sp\x18\x0b \x01(\r\x12\x0e\n\x06\x63ur_sp\x18\x0c \x01(\r\x12\x1b\n\x13\x63ur_spborn_beg_time\x18\r \x01(\r\x12\x1d\n\x15\x63ur_spborn_total_time\x18\x0e \x01(\r\x12\x19\n\x11max_endless_score\x18\x0f \x01(\r\x12\x19\n\x11max_endless_floor\x18\x10 \x01(\r\x12\x14\n\x0c\x63lt_bit_mark\x18\x11 \x01(\x04\x12\x1b\n\x13\x63ur_notify_beg_time\x18\x12 \x01(\r\x12\x1d\n\x15\x62uy_skill_point_times\x18\x13 \x01(\r\x12\x19\n\x11\x62uy_crystal_times\x18\x15 \x01(\r\x12\x16\n\x0e\x62uy_gold_times\x18\x16 \x01(\r\x12\x12\n\nhead_photo\x18\x17 \x01(\r\x12\x1f\n\x17online_battle_win_point\x18\x18 \x01(\r\"\xbd\x02\n\x1aSCPKG_CMD_ROLELOGIN_ONLINE\x12\x11\n\tresult_id\x18\x01 \x01(\x05\x12\x0f\n\x07zone_id\x18\x02 \x01(\r\x12\x0e\n\x06obj_id\x18\x03 \x01(\r\x12\x15\n\rzone_time_sec\x18\x04 \x01(\r\x12\x16\n\x0ezone_time_msec\x18\x05 \x01(\r\x12\x0b\n\x03uid\x18\x06 \x01(\r\x12\x0c\n\x04name\x18\x07 \x01(\t\x12\x11\n\tclient_ip\x18\x08 \x01(\r\x12\x13\n\x0b\x63lient_port\x18\t \x01(\r\x12+\n\x10role_online_info\x18\n \x01(\x0b\x32\x11.CSDT_ROLE_ONLINE\x12\x15\n\rleft_ban_time\x18\x0b \x01(\r\x12\x18\n\x10server_open_time\x18\x0c \x01(\r\x12\x1b\n\x13zone_time_zone_diff\x18\r \x01(\x05\"J\n\x1cSCPKG_CMD_ROLELOGIN_BUILDING\x12*\n\rbuilding_info\x18\x01 \x01(\x0b\x32\x13.CSDT_BUILDING_INFO\">\n\x18SCPKG_CMD_ROLELOGIN_HERO\x12\"\n\thero_info\x18\x01 \x01(\x0b\x32\x0f.CSDT_HERO_INFO\"8\n\x16\x43SDT_SELFDUN_HERO_INFO\x12\r\n\x05state\x18\x01 \x01(\r\x12\x0f\n\x07hero_id\x18\x02 \x01(\r\"\xf8\x01\n\x12\x43SDT_SELF_DUN_DATA\x12\x32\n\x11\x64\x65\x66\x65nse_hero_info\x18\x01 \x03(\x0b\x32\x17.CSDT_SELFDUN_HERO_INFO\x12\x31\n\x10\x61ttack_hero_info\x18\x02 \x03(\x0b\x32\x17.CSDT_SELFDUN_HERO_INFO\x12=\n\x1ctop_battle_defense_hero_info\x18\x03 \x03(\x0b\x32\x17.CSDT_SELFDUN_HERO_INFO\x12<\n\x1btop_battle_attack_hero_info\x18\x04 \x03(\x0b\x32\x17.CSDT_SELFDUN_HERO_INFO\"\xe3\x01\n\x1bSCPKG_CMD_ROLE_DUNGEON_INFO\x12\x34\n\x12pve_challenge_data\x18\x01 \x01(\x0b\x32\x18.CSDT_PVE_CHALLENGE_DATA\x12\x38\n\x14tower_challenge_data\x18\x02 \x01(\x0b\x32\x1a.CSDT_TOWER_CHALLENGE_DATA\x12*\n\rself_dun_data\x18\x03 \x01(\x0b\x32\x13.CSDT_SELF_DUN_DATA\x12(\n\x0cpvp_dun_data\x18\x04 \x01(\x0b\x32\x12.CSDT_PVP_DUN_DATA\"[\n#SCPKG_CMD_ROLELOGIN_GANGBATTLE_HERO\x12\x34\n\x10gang_battle_info\x18\x01 \x01(\x0b\x32\x1a.CSDT_GANGBATTLE_HERO_INFO\"_\n$SCPKG_CMD_ROLELOGIN_RANK_BATTLE_INFO\x12\x37\n\x10rank_battle_info\x18\x01 \x01(\x0b\x32\x1d.CSDT_PLAYER_RANK_BATTLE_INFO\">\n\x18SCPKG_CMD_ROLELOGIN_MISC\x12\"\n\tmisc_data\x18\x01 \x01(\x0b\x32\x0f.CSDT_MISC_DATA\"-\n\x1aSCPKG_CMD_ROLELOGIN_FINISH\x12\x0f\n\x07succeed\x18\x01 \x01(\x08\",\n\x1aSCPKG_CMD_ROLELOGIN_ACCEPT\x12\x0e\n\x06result\x18\x01 \x01(\x05\"\xa5\x01\n\x16SCPKG_APOLLO_AUTH_INFO\x12\x10\n\x08\x61uth_key\x18\x01 \x01(\x0c\x12\x13\n\x0bserver_ip_1\x18\x02 \x01(\r\x12\x13\n\x0bserver_ip_2\x18\x03 \x01(\r\x12\x13\n\x0bserver_ip_3\x18\x04 \x01(\r\x12\x13\n\x0bserver_ip_4\x18\x05 \x01(\r\x12\x13\n\x0bserver_port\x18\x06 \x01(\r\x12\x10\n\x08time_out\x18\x07 \x01(\r\"2\n\x1eSCPKG_CMD_GET_APOLLO_AUTO_INFO\x12\x10\n\x08reserved\x18\x01 \x01(\r')
   ,
   dependencies=[protocommon_pb2.DESCRIPTOR,quest_pb2.DESCRIPTOR,business_pb2.DESCRIPTOR,building_pb2.DESCRIPTOR,dungeon_pb2.DESCRIPTOR,endless_pb2.DESCRIPTOR,pvpsteal_pb2.DESCRIPTOR,rankbattle_pb2.DESCRIPTOR,multiplayer_pb2.DESCRIPTOR,rescommon_pb2.DESCRIPTOR,])
 _sym_db.RegisterFileDescriptor(DESCRIPTOR)
@@ -1427,6 +1427,108 @@ _SCPKG_CMD_ROLELOGIN_ACCEPT = _descriptor.Descriptor(
   serialized_end=4174,
 )
 
+
+_SCPKG_APOLLO_AUTH_INFO = _descriptor.Descriptor(
+  name='SCPKG_APOLLO_AUTH_INFO',
+  full_name='SCPKG_APOLLO_AUTH_INFO',
+  filename=None,
+  file=DESCRIPTOR,
+  containing_type=None,
+  fields=[
+    _descriptor.FieldDescriptor(
+      name='auth_key', full_name='SCPKG_APOLLO_AUTH_INFO.auth_key', index=0,
+      number=1, type=12, cpp_type=9, label=1,
+      has_default_value=False, default_value=_b(""),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    _descriptor.FieldDescriptor(
+      name='server_ip_1', full_name='SCPKG_APOLLO_AUTH_INFO.server_ip_1', index=1,
+      number=2, type=13, cpp_type=3, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    _descriptor.FieldDescriptor(
+      name='server_ip_2', full_name='SCPKG_APOLLO_AUTH_INFO.server_ip_2', index=2,
+      number=3, type=13, cpp_type=3, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    _descriptor.FieldDescriptor(
+      name='server_ip_3', full_name='SCPKG_APOLLO_AUTH_INFO.server_ip_3', index=3,
+      number=4, type=13, cpp_type=3, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    _descriptor.FieldDescriptor(
+      name='server_ip_4', full_name='SCPKG_APOLLO_AUTH_INFO.server_ip_4', index=4,
+      number=5, type=13, cpp_type=3, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    _descriptor.FieldDescriptor(
+      name='server_port', full_name='SCPKG_APOLLO_AUTH_INFO.server_port', index=5,
+      number=6, type=13, cpp_type=3, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    _descriptor.FieldDescriptor(
+      name='time_out', full_name='SCPKG_APOLLO_AUTH_INFO.time_out', index=6,
+      number=7, type=13, cpp_type=3, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+  ],
+  extensions=[
+  ],
+  nested_types=[],
+  enum_types=[
+  ],
+  options=None,
+  is_extendable=False,
+  extension_ranges=[],
+  oneofs=[
+  ],
+  serialized_start=4177,
+  serialized_end=4342,
+)
+
+
+_SCPKG_CMD_GET_APOLLO_AUTO_INFO = _descriptor.Descriptor(
+  name='SCPKG_CMD_GET_APOLLO_AUTO_INFO',
+  full_name='SCPKG_CMD_GET_APOLLO_AUTO_INFO',
+  filename=None,
+  file=DESCRIPTOR,
+  containing_type=None,
+  fields=[
+    _descriptor.FieldDescriptor(
+      name='reserved', full_name='SCPKG_CMD_GET_APOLLO_AUTO_INFO.reserved', index=0,
+      number=1, type=13, cpp_type=3, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+  ],
+  extensions=[
+  ],
+  nested_types=[],
+  enum_types=[
+  ],
+  options=None,
+  is_extendable=False,
+  extension_ranges=[],
+  oneofs=[
+  ],
+  serialized_start=4344,
+  serialized_end=4394,
+)
+
 _SCDT_ATT_INFO.fields_by_name['hero_att'].message_type = _SCDT_HERO_ATTINFO
 _SCPKG_CMD_PLAYER_LEVELUPEDN.fields_by_name['att_info'].message_type = _SCDT_ATT_INFO
 _SCPKG_CMD_PLAYER_LEVELUPEDN.fields_by_name['passive_hero_info'].message_type = _SCDT_PASSIVEHERO_INFO
@@ -1480,6 +1582,8 @@ DESCRIPTOR.message_types_by_name['SCPKG_CMD_ROLELOGIN_RANK_BATTLE_INFO'] = _SCPK
 DESCRIPTOR.message_types_by_name['SCPKG_CMD_ROLELOGIN_MISC'] = _SCPKG_CMD_ROLELOGIN_MISC
 DESCRIPTOR.message_types_by_name['SCPKG_CMD_ROLELOGIN_FINISH'] = _SCPKG_CMD_ROLELOGIN_FINISH
 DESCRIPTOR.message_types_by_name['SCPKG_CMD_ROLELOGIN_ACCEPT'] = _SCPKG_CMD_ROLELOGIN_ACCEPT
+DESCRIPTOR.message_types_by_name['SCPKG_APOLLO_AUTH_INFO'] = _SCPKG_APOLLO_AUTH_INFO
+DESCRIPTOR.message_types_by_name['SCPKG_CMD_GET_APOLLO_AUTO_INFO'] = _SCPKG_CMD_GET_APOLLO_AUTO_INFO
 
 CSPKG_CMD_PLAYER_LEVELUP = _reflection.GeneratedProtocolMessageType('CSPKG_CMD_PLAYER_LEVELUP', (_message.Message,), dict(
   DESCRIPTOR = _CSPKG_CMD_PLAYER_LEVELUP,
@@ -1648,6 +1752,20 @@ SCPKG_CMD_ROLELOGIN_ACCEPT = _reflection.GeneratedProtocolMessageType('SCPKG_CMD
   # @@protoc_insertion_point(class_scope:SCPKG_CMD_ROLELOGIN_ACCEPT)
   ))
 _sym_db.RegisterMessage(SCPKG_CMD_ROLELOGIN_ACCEPT)
+
+SCPKG_APOLLO_AUTH_INFO = _reflection.GeneratedProtocolMessageType('SCPKG_APOLLO_AUTH_INFO', (_message.Message,), dict(
+  DESCRIPTOR = _SCPKG_APOLLO_AUTH_INFO,
+  __module__ = 'login_pb2'
+  # @@protoc_insertion_point(class_scope:SCPKG_APOLLO_AUTH_INFO)
+  ))
+_sym_db.RegisterMessage(SCPKG_APOLLO_AUTH_INFO)
+
+SCPKG_CMD_GET_APOLLO_AUTO_INFO = _reflection.GeneratedProtocolMessageType('SCPKG_CMD_GET_APOLLO_AUTO_INFO', (_message.Message,), dict(
+  DESCRIPTOR = _SCPKG_CMD_GET_APOLLO_AUTO_INFO,
+  __module__ = 'login_pb2'
+  # @@protoc_insertion_point(class_scope:SCPKG_CMD_GET_APOLLO_AUTO_INFO)
+  ))
+_sym_db.RegisterMessage(SCPKG_CMD_GET_APOLLO_AUTO_INFO)
 
 
 # @@protoc_insertion_point(module_scope)

@@ -22,7 +22,7 @@ import multiplayer_pb2
 DESCRIPTOR = _descriptor.FileDescriptor(
   name='dungeon.proto',
   package='',
-  serialized_pb=_b('\n\rdungeon.proto\x1a\x0frescommon.proto\x1a\x11protocommon.proto\x1a\x11multiplayer.proto\"\xdd\x01\n\x14\x43SDT_DUN_UNLOCK_DATA\x12\x12\n\ndungeon_id\x18\x01 \x01(\r\x12\x11\n\tdun_level\x18\x02 \x01(\r\x12\x0c\n\x04stat\x18\x03 \x01(\r\x12\x15\n\rchallenge_cnt\x18\x04 \x01(\r\x12\x16\n\x0e\x63hallenge_time\x18\x05 \x01(\r\x12\x11\n\tstory_bit\x18\x06 \x01(\r\x12\x17\n\x0f\x62\x65st_evaluation\x18\x07 \x01(\r\x12\x1d\n\x15\x65lite_challenge_count\x18\x08 \x01(\r\x12\x16\n\x0e\x65lite_drop_exp\x18\t \x01(\r\"\x83\x01\n\x17\x43SDT_PVE_CHALLENGE_DATA\x12\x0f\n\x07npc_cnt\x18\x01 \x01(\r\x12\x12\n\nplayer_cnt\x18\x02 \x01(\r\x12*\n\x0bunlock_data\x18\x03 \x03(\x0b\x32\x15.CSDT_DUN_UNLOCK_DATA\x12\x17\n\x0f\x65lite_buy_count\x18\x04 \x01(\r\"7\n\x14\x43SPKG_CMD_RELIVE_REQ\x12\x0f\n\x07hero_id\x18\x01 \x01(\r\x12\x0e\n\x06\x64un_id\x18\x02 \x01(\r\"G\n\x14SCPKG_CMD_RELIVE_RES\x12\x0e\n\x06result\x18\x01 \x01(\r\x12\x0f\n\x07hero_id\x18\x02 \x01(\r\x12\x0e\n\x06\x64un_id\x18\x03 \x01(\r\"\\\n\x14\x43SPKG_CMD_PAUSE_GAME\x12\x0f\n\x07hero_id\x18\x01 \x01(\r\x12\x0e\n\x06\x64un_id\x18\x02 \x01(\r\x12\x0f\n\x07room_id\x18\x03 \x01(\r\x12\x12\n\npause_tick\x18\x04 \x01(\r\"_\n\x17\x43SPKG_CMD_CONTINUE_GAME\x12\x0f\n\x07hero_id\x18\x01 \x01(\r\x12\x0e\n\x06\x64un_id\x18\x02 \x01(\r\x12\x0f\n\x07room_id\x18\x03 \x01(\r\x12\x12\n\npause_tick\x18\x04 \x01(\r\"Z\n\x17SCPKG_CMD_CONTINUE_GAME\x12\x0e\n\x06\x64un_id\x18\x01 \x01(\r\x12\x0f\n\x07room_id\x18\x02 \x01(\r\x12\x1e\n\x16\x63ur_room_interval_time\x18\x03 \x01(\x05\"c\n\x14\x43SPKG_CMD_ENTER_ROOM\x12\x0f\n\x07hero_id\x18\x01 \x01(\r\x12\x0e\n\x06\x64un_id\x18\x02 \x01(\r\x12\x0f\n\x07room_id\x18\x03 \x01(\r\x12\x19\n\x11\x63lt_room_interval\x18\x04 \x01(\r\"\x81\x01\n\x14SCPKG_CMD_ENTER_ROOM\x12\x0e\n\x06result\x18\x01 \x01(\r\x12\x0f\n\x07hero_id\x18\x02 \x01(\r\x12\x0e\n\x06\x64un_id\x18\x03 \x01(\r\x12\x0f\n\x07room_id\x18\x04 \x01(\r\x12\x10\n\x08\x62\x65g_time\x18\x05 \x01(\r\x12\x15\n\rinterval_time\x18\x06 \x01(\x05\"]\n\x16SCPKG_CMD_ROOM_TIMEOUT\x12\x0e\n\x06\x64un_id\x18\x01 \x01(\r\x12\x0f\n\x07room_id\x18\x02 \x01(\r\x12\x10\n\x08\x62\x65g_time\x18\x03 \x01(\r\x12\x10\n\x08\x63ur_time\x18\x04 \x01(\r\"\'\n\x14\x43SPKG_DUNGEON_UNLOCK\x12\x0f\n\x07\x63ity_id\x18\x01 \x02(\r\"B\n\x14SCPKG_UNLOCK_DUNGEON\x12*\n\x0bunlock_data\x18\x01 \x02(\x0b\x32\x15.CSDT_DUN_UNLOCK_DATA\"Y\n\x1e\x43SPKG_WIPE_OUT_PVE_DUNGEON_REQ\x12\x0e\n\x06\x64un_id\x18\x01 \x01(\r\x12\x16\n\x0ewipe_out_count\x18\x02 \x01(\r\x12\x0f\n\x07hero_id\x18\x03 \x01(\r\"\xbd\x02\n\x1eSCPKG_WIPE_OUT_PVE_DUNGEON_RES\x12\x0e\n\x06result\x18\x01 \x01(\x05\x12\x0e\n\x06\x64un_id\x18\x02 \x01(\r\x12\x13\n\x0breward_gold\x18\x03 \x01(\r\x12\x16\n\x0ereward_crystal\x18\x04 \x01(\r\x12)\n\x10normal_drop_info\x18\x05 \x01(\x0b\x32\x0f.CSDT_DROP_INFO\x12(\n\x0f\x65xtra_drop_info\x18\x06 \x01(\x0b\x32\x0f.CSDT_DROP_INFO\x12\x16\n\x0e\x65lite_drop_exp\x18\x07 \x01(\r\x12+\n\x12\x61\x63tivity_drop_info\x18\x08 \x01(\x0b\x32\x0f.CSDT_DROP_INFO\x12\x0f\n\x07hero_id\x18\t \x01(\r\x12\x0f\n\x07hero_lv\x18\n \x01(\r\x12\x12\n\nreward_exp\x18\x0c \x01(\r\"2\n\x1b\x43SPKG_BUY_WIPE_OUT_ITEM_REQ\x12\x13\n\x0blevel_Index\x18\x01 \x01(\x05\"-\n\x1bSCPKG_BUY_WIPE_OUT_ITEM_RES\x12\x0e\n\x06result\x18\x01 \x01(\x05\">\n\x13SCDT_PVEUNLOCK_INFO\x12\x0c\n\x04type\x18\x01 \x01(\r\x12\n\n\x02id\x18\x02 \x01(\r\x12\r\n\x05level\x18\x03 \x01(\r\"P\n\x13SCPKG_CMD_PVEUNLOCK\x12\x0e\n\x06\x64un_id\x18\x01 \x01(\r\x12)\n\x0bunlock_info\x18\x02 \x03(\x0b\x32\x14.SCDT_PVEUNLOCK_INFO\"M\n\x1cST_ELITE_DUNGEON_CHANCE_INFO\x12\x0e\n\x06\x64un_id\x18\x01 \x01(\r\x12\x1d\n\x15\x65lite_challenge_count\x18\x02 \x01(\r\"v\n SCPKG_REFRESH_ELITE_DUNGEON_INFO\x12\x17\n\x0f\x65lite_buy_count\x18\x01 \x01(\r\x12\x39\n\x12\x65lite_dungeon_info\x18\x02 \x03(\x0b\x32\x1d.ST_ELITE_DUNGEON_CHANCE_INFO\"+\n\x19\x43SPKG_BUY_ELITE_COUNT_REQ\x12\x0e\n\x06\x64un_id\x18\x01 \x01(\r\"\x81\x01\n\"CSDT_ENTER_ONLINE_BATTLE_DUN_PARAM\x12\x0f\n\x07is_host\x18\x01 \x01(\x08\x12\x19\n\x11host_player_score\x18\x02 \x01(\r\x12\x1a\n\x12guest_player_score\x18\x03 \x01(\r\x12\x13\n\x0bscene_index\x18\x04 \x01(\r\"3\n\x1c\x43SDT_ENTER_ENDLESS_DUN_PARAM\x12\x13\n\x0bmatch_index\x18\x01 \x01(\r\"_\n$CSDT_ENTER_MULTIPLAYER_PVE_DUN_PARAM\x12\x37\n\x07res_msg\x18\x01 \x01(\x0b\x32&.SCPKG_MULTIPLAYER_PVE_DUN_ROOM_OP_RES\"\xe0\x01\n\x14\x43SDT_ENTER_DUN_PARAM\x12\x38\n\x11\x65ndless_dun_param\x18\x01 \x01(\x0b\x32\x1d.CSDT_ENTER_ENDLESS_DUN_PARAM\x12H\n\x19multiplayer_pve_dun_param\x18\x02 \x01(\x0b\x32%.CSDT_ENTER_MULTIPLAYER_PVE_DUN_PARAM\x12\x44\n\x17online_battle_dun_param\x18\x03 \x01(\x0b\x32#.CSDT_ENTER_ONLINE_BATTLE_DUN_PARAM\"~\n\x19\x43SPKG_CMD_PLAYER_ENTERDUN\x12\x10\n\x08\x64un_type\x18\x01 \x01(\r\x12\x0e\n\x06\x64un_id\x18\x02 \x01(\r\x12\x0f\n\x07hero_id\x18\x03 \x03(\r\x12.\n\x0f\x65nter_dun_param\x18\x04 \x01(\x0b\x32\x15.CSDT_ENTER_DUN_PARAM\"1\n\x1f\x43SPKG_CMD_PLAYER_ENTERDUN_INDUN\x12\x0e\n\x06\x64un_id\x18\x01 \x01(\r\"8\n\x12\x43SPKG_CMD_QUIT_DUN\x12\x0e\n\x06\x64un_id\x18\x01 \x01(\r\x12\x12\n\npve_result\x18\x02 \x01(\r\"E\n\x12SCPKG_CMD_QUIT_DUN\x12\x0e\n\x06result\x18\x01 \x01(\r\x12\x0f\n\x07hero_id\x18\x02 \x01(\r\x12\x0e\n\x06\x64un_id\x18\x03 \x01(\r\"m\n\x1b\x43SPKG_CMD_ENTER_PRACTICEDUN\x12\x0f\n\x07hero_id\x18\x01 \x01(\r\x12\x12\n\nchapter_id\x18\x02 \x01(\r\x12\x12\n\nsection_id\x18\x03 \x01(\r\x12\x15\n\renter_hero_id\x18\x04 \x01(\r\"\x8d\x01\n\x1bSCPKG_CMD_ENTER_PRACTICEDUN\x12\x0e\n\x06result\x18\x01 \x01(\r\x12\x0f\n\x07hero_id\x18\x02 \x01(\r\x12\x12\n\nchapter_id\x18\x03 \x01(\r\x12\x12\n\nsection_id\x18\x04 \x01(\r\x12\x0e\n\x06\x64un_id\x18\x05 \x01(\r\x12\x15\n\renter_hero_id\x18\x06 \x01(\r\"W\n\x19\x43SDT_CMD_DUN_EVALUATEINFO\x12\x10\n\x08\x64un_time\x18\x01 \x01(\r\x12\x15\n\rremain_hprate\x18\x02 \x01(\r\x12\x11\n\tmax_combo\x18\x03 \x01(\r\"\xff\x01\n\x1a\x43SDT_PLAYER_PVE_DUNBALANCE\x12\x0e\n\x06\x64un_id\x18\x01 \x01(\r\x12\x1b\n\x13pick_money_over_hit\x18\x02 \x01(\r\x12\x19\n\x11pick_res_over_hit\x18\x03 \x01(\r\x12\x1b\n\x13pick_money_kill_mst\x18\x04 \x01(\r\x12\x19\n\x11pick_res_kill_mst\x18\x05 \x01(\r\x12\x19\n\x11style_total_count\x18\x06 \x01(\r\x12\x13\n\x0bstyle_times\x18\x07 \x01(\r\x12\x31\n\revaluate_info\x18\x08 \x01(\x0b\x32\x1a.CSDT_CMD_DUN_EVALUATEINFO\"\xc5\x02\n\x1f\x43SDT_PLAYER_BOSSRUSH_DUNBALANCE\x12\x0e\n\x06\x64un_id\x18\x01 \x01(\r\x12\x1b\n\x13pick_money_over_hit\x18\x02 \x01(\r\x12\x19\n\x11pick_res_over_hit\x18\x03 \x01(\r\x12\x1b\n\x13pick_money_kill_mst\x18\x04 \x01(\r\x12\x19\n\x11pick_res_kill_mst\x18\x05 \x01(\r\x12\x19\n\x11style_total_count\x18\x06 \x01(\r\x12\x13\n\x0bstyle_times\x18\x07 \x01(\r\x12\x31\n\revaluate_info\x18\x08 \x01(\x0b\x32\x1a.CSDT_CMD_DUN_EVALUATEINFO\x12\x0f\n\x07hero_hp\x18\t \x03(\r\x12.\n\thp_remain\x18\n \x01(\x0b\x32\x1b.ST_BOSSRUSH_HERO_HP_REMAIN\"\xa3\x01\n\x1e\x43SDT_PLAYER_ENDLESS_DUNBALANCE\x12\x0e\n\x06\x64un_id\x18\x01 \x01(\r\x12\x16\n\x0ekill_mst_score\x18\x02 \x01(\r\x12\x15\n\roverhit_score\x18\x03 \x01(\r\x12\x12\n\ntime_score\x18\x04 \x01(\r\x12\x19\n\x11style_total_count\x18\x05 \x01(\r\x12\x13\n\x0bstyle_times\x18\x06 \x01(\r\"z\n\x1f\x43SDT_PLAYER_PRACTICE_DUNBALANCE\x12\x0e\n\x06result\x18\x01 \x01(\r\x12\x0e\n\x06\x64un_id\x18\x02 \x01(\r\x12\x0f\n\x07hero_id\x18\x03 \x01(\r\x12\x12\n\nchapter_id\x18\x04 \x01(\r\x12\x12\n\nsection_id\x18\x05 \x01(\r\"E\n$CSDT_PLAYER_ONLINE_BATTLE_DUNBALANCE\x12\x0e\n\x06result\x18\x01 \x01(\r\x12\r\n\x05param\x18\x03 \x03(\r\"M\n!CSDT_PLAYER_WORLD_BOSS_DUNBALANCE\x12\x10\n\x08week_day\x18\x01 \x01(\r\x12\x16\n\x0e\x63ur_boss_index\x18\x02 \x01(\r\"9\n&CSDT_PLAYER_MULTIPLAYER_PVE_DUNBALANCE\x12\x0f\n\x07succeed\x18\x01 \x01(\x08\"4\n\x1bSCPKG_DUNGEON_COMBAT_SWITCH\x12\x15\n\rcombat_switch\x18\x01 \x02(\r\"*\n\x1a\x43SDT_DUNGEON_COMBAT_RECORD\x12\x0c\n\x04\x64\x61ta\x18\x01 \x03(\r\"J\n\x1b\x43SPKG_DUNGEON_COMBAT_REPORT\x12+\n\x06record\x18\x01 \x03(\x0b\x32\x1b.CSDT_DUNGEON_COMBAT_RECORD\"\xf7\x03\n\x16\x43SDT_PLAYER_DUNBALANCE\x12\x30\n\x0bpve_balance\x18\x01 \x01(\x0b\x32\x1b.CSDT_PLAYER_PVE_DUNBALANCE\x12\x38\n\x0f\x65ndless_balance\x18\x02 \x01(\x0b\x32\x1f.CSDT_PLAYER_ENDLESS_DUNBALANCE\x12:\n\x10practice_balance\x18\x03 \x01(\x0b\x32 .CSDT_PLAYER_PRACTICE_DUNBALANCE\x12\x44\n\x15online_battle_balance\x18\x04 \x01(\x0b\x32%.CSDT_PLAYER_ONLINE_BATTLE_DUNBALANCE\x12>\n\x12world_boss_balance\x18\x05 \x01(\x0b\x32\".CSDT_PLAYER_WORLD_BOSS_DUNBALANCE\x12:\n\x10\x62ossrush_balance\x18\x06 \x01(\x0b\x32 .CSDT_PLAYER_BOSSRUSH_DUNBALANCE\x12H\n\x17multiplayer_pve_balance\x18\x07 \x01(\x0b\x32\'.CSDT_PLAYER_MULTIPLAYER_PVE_DUNBALANCE\x12)\n\x05\x62rief\x18\x08 \x01(\x0b\x32\x1a.CSDT_DUNGEON_COMBAT_BRIEF\"\x8b\x01\n\x1b\x43SPKG_CMD_PLAYER_DUNBALANCE\x12\x10\n\x08\x64un_type\x18\x01 \x01(\r\x12-\n\x0c\x62\x61lance_info\x18\x02 \x01(\x0b\x32\x17.CSDT_PLAYER_DUNBALANCE\x12\x15\n\rchange_reason\x18\x03 \x01(\r\x12\x14\n\x0c\x63hange_param\x18\x04 \x01(\r\"\x9b\x01\n\x1dSCPKG_CMD_PRACTICE_DUNBALANCE\x12\x10\n\x08quest_id\x18\x01 \x01(\r\x12\x0e\n\x06\x64un_id\x18\x02 \x01(\r\x12\x0f\n\x07hero_id\x18\x03 \x01(\r\x12\x12\n\nchapter_id\x18\x04 \x01(\r\x12\x12\n\nsection_id\x18\x05 \x01(\r\x12\x1f\n\x0breward_info\x18\x06 \x03(\x0b\x32\n.ResReward\"\xe8\x01\n#SCPKG_CMD_PLAYER_DUNBALANCE_ENDLESS\x12\x0e\n\x06\x64un_id\x18\x01 \x01(\r\x12\x16\n\x0ereward_crystal\x18\x02 \x01(\r\x12\r\n\x05score\x18\x03 \x01(\r\x12\x0e\n\x06\x66loors\x18\x04 \x01(\r\x12\x16\n\x0ekill_mst_score\x18\x05 \x01(\r\x12\x15\n\roverhit_score\x18\x06 \x01(\r\x12\x12\n\ntime_score\x18\x07 \x01(\r\x12\x13\n\x0bstyle_score\x18\x08 \x01(\r\x12\"\n\tdrop_info\x18\t \x01(\x0b\x32\x0f.CSDT_DROP_INFO\"\xa6\x01\n)SCPKG_CMD_PLAYER_DUNBALANCE_ONLINE_BATTLE\x12\x10\n\x08\x66inished\x18\x01 \x01(\x08\x12\x34\n\x12online_battle_info\x18\x02 \x01(\x0b\x32\x18.CSDT_ONLINE_BATTLE_INFO\x12\x18\n\x10win_point_before\x18\x03 \x01(\r\x12\x17\n\x0fwin_point_after\x18\x04 \x01(\r\"\xac\x04\n\x1bSCPKG_CMD_PLAYER_DUNBALANCE\x12\x0f\n\x07hero_id\x18\x01 \x01(\r\x12\x12\n\nhero_level\x18\x02 \x01(\r\x12\x0e\n\x06\x64un_id\x18\x03 \x01(\r\x12\x10\n\x08\x64un_time\x18\x04 \x01(\r\x12\x14\n\x0c\x64un_evaluate\x18\x05 \x01(\r\x12\x31\n\revaluate_info\x18\x06 \x01(\x0b\x32\x1a.CSDT_CMD_DUN_EVALUATEINFO\x12\x1a\n\x12pick_money_overhit\x18\x07 \x01(\r\x12\x18\n\x10pick_res_overhit\x18\x08 \x01(\r\x12\x1b\n\x13pick_money_kill_mst\x18\t \x01(\r\x12\x19\n\x11pick_res_kill_mst\x18\n \x01(\r\x12\x18\n\x10reward_gold_time\x18\x0b \x01(\r\x12\x1c\n\x14style_reward_crystal\x18\x0c \x01(\r\x12\x13\n\x0breward_gold\x18\r \x01(\r\x12\x16\n\x0ereward_crystal\x18\x0e \x01(\r\x12\x12\n\nreward_exp\x18\x0f \x01(\r\x12\x15\n\runlock_dun_id\x18\x10 \x03(\r\x12.\n\x0f\x64un_unlock_info\x18\x11 \x01(\x0b\x32\x15.CSDT_DUN_UNLOCK_DATA\x12\"\n\tdrop_info\x18\x12 \x01(\x0b\x32\x0f.CSDT_DROP_INFO\x12+\n\x12\x61\x63tivity_drop_info\x18\x13 \x01(\x0b\x32\x0f.CSDT_DROP_INFO\"m\n\x19SCPKG_CMD_PLAYER_ENTERDUN\x12\x0f\n\x07hero_id\x18\x01 \x01(\r\x12\x0e\n\x06\x64un_id\x18\x02 \x01(\r\x12\x0e\n\x06result\x18\x03 \x01(\x05\x12\r\n\x05level\x18\x04 \x01(\r\x12\x10\n\x08\x64un_type\x18\x05 \x01(\r*\xbf\x01\n\x1c\x45NUM_END_STATE_CHANGE_REASON\x12 \n\x1c\x45ND_STATE_CHANGE_REASON_NONE\x10\x00\x12%\n!END_STATE_CHANGE_REASON_HERO_DEAD\x10\x01\x12*\n&END_STATE_CHANGE_REASON_STAGE_FINISHED\x10\x02\x12*\n&END_STATE_CHANGE_REASON_ROUND_FINISHED\x10\x03')
+  serialized_pb=_b('\n\rdungeon.proto\x1a\x0frescommon.proto\x1a\x11protocommon.proto\x1a\x11multiplayer.proto\"\xdd\x01\n\x14\x43SDT_DUN_UNLOCK_DATA\x12\x12\n\ndungeon_id\x18\x01 \x01(\r\x12\x11\n\tdun_level\x18\x02 \x01(\r\x12\x0c\n\x04stat\x18\x03 \x01(\r\x12\x15\n\rchallenge_cnt\x18\x04 \x01(\r\x12\x16\n\x0e\x63hallenge_time\x18\x05 \x01(\r\x12\x11\n\tstory_bit\x18\x06 \x01(\r\x12\x17\n\x0f\x62\x65st_evaluation\x18\x07 \x01(\r\x12\x1d\n\x15\x65lite_challenge_count\x18\x08 \x01(\r\x12\x16\n\x0e\x65lite_drop_exp\x18\t \x01(\r\"\x83\x01\n\x17\x43SDT_PVE_CHALLENGE_DATA\x12\x0f\n\x07npc_cnt\x18\x01 \x01(\r\x12\x12\n\nplayer_cnt\x18\x02 \x01(\r\x12*\n\x0bunlock_data\x18\x03 \x03(\x0b\x32\x15.CSDT_DUN_UNLOCK_DATA\x12\x17\n\x0f\x65lite_buy_count\x18\x04 \x01(\r\"7\n\x14\x43SPKG_CMD_RELIVE_REQ\x12\x0f\n\x07hero_id\x18\x01 \x01(\r\x12\x0e\n\x06\x64un_id\x18\x02 \x01(\r\"G\n\x14SCPKG_CMD_RELIVE_RES\x12\x0e\n\x06result\x18\x01 \x01(\r\x12\x0f\n\x07hero_id\x18\x02 \x01(\r\x12\x0e\n\x06\x64un_id\x18\x03 \x01(\r\"\\\n\x14\x43SPKG_CMD_PAUSE_GAME\x12\x0f\n\x07hero_id\x18\x01 \x01(\r\x12\x0e\n\x06\x64un_id\x18\x02 \x01(\r\x12\x0f\n\x07room_id\x18\x03 \x01(\r\x12\x12\n\npause_tick\x18\x04 \x01(\r\"_\n\x17\x43SPKG_CMD_CONTINUE_GAME\x12\x0f\n\x07hero_id\x18\x01 \x01(\r\x12\x0e\n\x06\x64un_id\x18\x02 \x01(\r\x12\x0f\n\x07room_id\x18\x03 \x01(\r\x12\x12\n\npause_tick\x18\x04 \x01(\r\"Z\n\x17SCPKG_CMD_CONTINUE_GAME\x12\x0e\n\x06\x64un_id\x18\x01 \x01(\r\x12\x0f\n\x07room_id\x18\x02 \x01(\r\x12\x1e\n\x16\x63ur_room_interval_time\x18\x03 \x01(\x05\"c\n\x14\x43SPKG_CMD_ENTER_ROOM\x12\x0f\n\x07hero_id\x18\x01 \x01(\r\x12\x0e\n\x06\x64un_id\x18\x02 \x01(\r\x12\x0f\n\x07room_id\x18\x03 \x01(\r\x12\x19\n\x11\x63lt_room_interval\x18\x04 \x01(\r\"\x81\x01\n\x14SCPKG_CMD_ENTER_ROOM\x12\x0e\n\x06result\x18\x01 \x01(\r\x12\x0f\n\x07hero_id\x18\x02 \x01(\r\x12\x0e\n\x06\x64un_id\x18\x03 \x01(\r\x12\x0f\n\x07room_id\x18\x04 \x01(\r\x12\x10\n\x08\x62\x65g_time\x18\x05 \x01(\r\x12\x15\n\rinterval_time\x18\x06 \x01(\x05\"]\n\x16SCPKG_CMD_ROOM_TIMEOUT\x12\x0e\n\x06\x64un_id\x18\x01 \x01(\r\x12\x0f\n\x07room_id\x18\x02 \x01(\r\x12\x10\n\x08\x62\x65g_time\x18\x03 \x01(\r\x12\x10\n\x08\x63ur_time\x18\x04 \x01(\r\"\'\n\x14\x43SPKG_DUNGEON_UNLOCK\x12\x0f\n\x07\x63ity_id\x18\x01 \x02(\r\"B\n\x14SCPKG_UNLOCK_DUNGEON\x12*\n\x0bunlock_data\x18\x01 \x02(\x0b\x32\x15.CSDT_DUN_UNLOCK_DATA\"Y\n\x1e\x43SPKG_WIPE_OUT_PVE_DUNGEON_REQ\x12\x0e\n\x06\x64un_id\x18\x01 \x01(\r\x12\x16\n\x0ewipe_out_count\x18\x02 \x01(\r\x12\x0f\n\x07hero_id\x18\x03 \x01(\r\"\xbd\x02\n\x1eSCPKG_WIPE_OUT_PVE_DUNGEON_RES\x12\x0e\n\x06result\x18\x01 \x01(\x05\x12\x0e\n\x06\x64un_id\x18\x02 \x01(\r\x12\x13\n\x0breward_gold\x18\x03 \x01(\r\x12\x16\n\x0ereward_crystal\x18\x04 \x01(\r\x12)\n\x10normal_drop_info\x18\x05 \x01(\x0b\x32\x0f.CSDT_DROP_INFO\x12(\n\x0f\x65xtra_drop_info\x18\x06 \x01(\x0b\x32\x0f.CSDT_DROP_INFO\x12\x16\n\x0e\x65lite_drop_exp\x18\x07 \x01(\r\x12+\n\x12\x61\x63tivity_drop_info\x18\x08 \x01(\x0b\x32\x0f.CSDT_DROP_INFO\x12\x0f\n\x07hero_id\x18\t \x01(\r\x12\x0f\n\x07hero_lv\x18\n \x01(\r\x12\x12\n\nreward_exp\x18\x0c \x01(\r\"2\n\x1b\x43SPKG_BUY_WIPE_OUT_ITEM_REQ\x12\x13\n\x0blevel_Index\x18\x01 \x01(\x05\"-\n\x1bSCPKG_BUY_WIPE_OUT_ITEM_RES\x12\x0e\n\x06result\x18\x01 \x01(\x05\">\n\x13SCDT_PVEUNLOCK_INFO\x12\x0c\n\x04type\x18\x01 \x01(\r\x12\n\n\x02id\x18\x02 \x01(\r\x12\r\n\x05level\x18\x03 \x01(\r\"P\n\x13SCPKG_CMD_PVEUNLOCK\x12\x0e\n\x06\x64un_id\x18\x01 \x01(\r\x12)\n\x0bunlock_info\x18\x02 \x03(\x0b\x32\x14.SCDT_PVEUNLOCK_INFO\"M\n\x1cST_ELITE_DUNGEON_CHANCE_INFO\x12\x0e\n\x06\x64un_id\x18\x01 \x01(\r\x12\x1d\n\x15\x65lite_challenge_count\x18\x02 \x01(\r\"v\n SCPKG_REFRESH_ELITE_DUNGEON_INFO\x12\x17\n\x0f\x65lite_buy_count\x18\x01 \x01(\r\x12\x39\n\x12\x65lite_dungeon_info\x18\x02 \x03(\x0b\x32\x1d.ST_ELITE_DUNGEON_CHANCE_INFO\"+\n\x19\x43SPKG_BUY_ELITE_COUNT_REQ\x12\x0e\n\x06\x64un_id\x18\x01 \x01(\r\"\x81\x01\n\"CSDT_ENTER_ONLINE_BATTLE_DUN_PARAM\x12\x0f\n\x07is_host\x18\x01 \x01(\x08\x12\x19\n\x11host_player_score\x18\x02 \x01(\r\x12\x1a\n\x12guest_player_score\x18\x03 \x01(\r\x12\x13\n\x0bscene_index\x18\x04 \x01(\r\"3\n\x1c\x43SDT_ENTER_ENDLESS_DUN_PARAM\x12\x13\n\x0bmatch_index\x18\x01 \x01(\r\"_\n$CSDT_ENTER_MULTIPLAYER_PVE_DUN_PARAM\x12\x37\n\x07res_msg\x18\x01 \x01(\x0b\x32&.SCPKG_MULTIPLAYER_PVE_DUN_ROOM_OP_RES\"\xe0\x01\n\x14\x43SDT_ENTER_DUN_PARAM\x12\x38\n\x11\x65ndless_dun_param\x18\x01 \x01(\x0b\x32\x1d.CSDT_ENTER_ENDLESS_DUN_PARAM\x12H\n\x19multiplayer_pve_dun_param\x18\x02 \x01(\x0b\x32%.CSDT_ENTER_MULTIPLAYER_PVE_DUN_PARAM\x12\x44\n\x17online_battle_dun_param\x18\x03 \x01(\x0b\x32#.CSDT_ENTER_ONLINE_BATTLE_DUN_PARAM\"~\n\x19\x43SPKG_CMD_PLAYER_ENTERDUN\x12\x10\n\x08\x64un_type\x18\x01 \x01(\r\x12\x0e\n\x06\x64un_id\x18\x02 \x01(\r\x12\x0f\n\x07hero_id\x18\x03 \x03(\r\x12.\n\x0f\x65nter_dun_param\x18\x04 \x01(\x0b\x32\x15.CSDT_ENTER_DUN_PARAM\"1\n\x1f\x43SPKG_CMD_PLAYER_ENTERDUN_INDUN\x12\x0e\n\x06\x64un_id\x18\x01 \x01(\r\"8\n\x12\x43SPKG_CMD_QUIT_DUN\x12\x0e\n\x06\x64un_id\x18\x01 \x01(\r\x12\x12\n\npve_result\x18\x02 \x01(\r\"E\n\x12SCPKG_CMD_QUIT_DUN\x12\x0e\n\x06result\x18\x01 \x01(\r\x12\x0f\n\x07hero_id\x18\x02 \x01(\r\x12\x0e\n\x06\x64un_id\x18\x03 \x01(\r\"m\n\x1b\x43SPKG_CMD_ENTER_PRACTICEDUN\x12\x0f\n\x07hero_id\x18\x01 \x01(\r\x12\x12\n\nchapter_id\x18\x02 \x01(\r\x12\x12\n\nsection_id\x18\x03 \x01(\r\x12\x15\n\renter_hero_id\x18\x04 \x01(\r\"\x8d\x01\n\x1bSCPKG_CMD_ENTER_PRACTICEDUN\x12\x0e\n\x06result\x18\x01 \x01(\r\x12\x0f\n\x07hero_id\x18\x02 \x01(\r\x12\x12\n\nchapter_id\x18\x03 \x01(\r\x12\x12\n\nsection_id\x18\x04 \x01(\r\x12\x0e\n\x06\x64un_id\x18\x05 \x01(\r\x12\x15\n\renter_hero_id\x18\x06 \x01(\r\"W\n\x19\x43SDT_CMD_DUN_EVALUATEINFO\x12\x10\n\x08\x64un_time\x18\x01 \x01(\r\x12\x15\n\rremain_hprate\x18\x02 \x01(\r\x12\x11\n\tmax_combo\x18\x03 \x01(\r\"\xff\x01\n\x1a\x43SDT_PLAYER_PVE_DUNBALANCE\x12\x0e\n\x06\x64un_id\x18\x01 \x01(\r\x12\x1b\n\x13pick_money_over_hit\x18\x02 \x01(\r\x12\x19\n\x11pick_res_over_hit\x18\x03 \x01(\r\x12\x1b\n\x13pick_money_kill_mst\x18\x04 \x01(\r\x12\x19\n\x11pick_res_kill_mst\x18\x05 \x01(\r\x12\x19\n\x11style_total_count\x18\x06 \x01(\r\x12\x13\n\x0bstyle_times\x18\x07 \x01(\r\x12\x31\n\revaluate_info\x18\x08 \x01(\x0b\x32\x1a.CSDT_CMD_DUN_EVALUATEINFO\"\xc5\x02\n\x1f\x43SDT_PLAYER_BOSSRUSH_DUNBALANCE\x12\x0e\n\x06\x64un_id\x18\x01 \x01(\r\x12\x1b\n\x13pick_money_over_hit\x18\x02 \x01(\r\x12\x19\n\x11pick_res_over_hit\x18\x03 \x01(\r\x12\x1b\n\x13pick_money_kill_mst\x18\x04 \x01(\r\x12\x19\n\x11pick_res_kill_mst\x18\x05 \x01(\r\x12\x19\n\x11style_total_count\x18\x06 \x01(\r\x12\x13\n\x0bstyle_times\x18\x07 \x01(\r\x12\x31\n\revaluate_info\x18\x08 \x01(\x0b\x32\x1a.CSDT_CMD_DUN_EVALUATEINFO\x12\x0f\n\x07hero_hp\x18\t \x03(\r\x12.\n\thp_remain\x18\n \x01(\x0b\x32\x1b.ST_BOSSRUSH_HERO_HP_REMAIN\"\xa3\x01\n\x1e\x43SDT_PLAYER_ENDLESS_DUNBALANCE\x12\x0e\n\x06\x64un_id\x18\x01 \x01(\r\x12\x16\n\x0ekill_mst_score\x18\x02 \x01(\r\x12\x15\n\roverhit_score\x18\x03 \x01(\r\x12\x12\n\ntime_score\x18\x04 \x01(\r\x12\x19\n\x11style_total_count\x18\x05 \x01(\r\x12\x13\n\x0bstyle_times\x18\x06 \x01(\r\"z\n\x1f\x43SDT_PLAYER_PRACTICE_DUNBALANCE\x12\x0e\n\x06result\x18\x01 \x01(\r\x12\x0e\n\x06\x64un_id\x18\x02 \x01(\r\x12\x0f\n\x07hero_id\x18\x03 \x01(\r\x12\x12\n\nchapter_id\x18\x04 \x01(\r\x12\x12\n\nsection_id\x18\x05 \x01(\r\"E\n$CSDT_PLAYER_ONLINE_BATTLE_DUNBALANCE\x12\x0e\n\x06result\x18\x01 \x01(\r\x12\r\n\x05param\x18\x03 \x03(\r\"M\n!CSDT_PLAYER_WORLD_BOSS_DUNBALANCE\x12\x10\n\x08week_day\x18\x01 \x01(\r\x12\x16\n\x0e\x63ur_boss_index\x18\x02 \x01(\r\"9\n&CSDT_PLAYER_MULTIPLAYER_PVE_DUNBALANCE\x12\x0f\n\x07succeed\x18\x01 \x01(\x08\"5\n&CSDT_PLAYER_CHAMPION_LEAGUE_DUNBALANCE\x12\x0b\n\x03win\x18\x01 \x01(\x08\"1\n\"CSDT_PLAYER_GANG_BATTLE_DUNBALANCE\x12\x0b\n\x03win\x18\x01 \x01(\x08\"4\n\x1bSCPKG_DUNGEON_COMBAT_SWITCH\x12\x15\n\rcombat_switch\x18\x01 \x02(\r\"*\n\x1a\x43SDT_DUNGEON_COMBAT_RECORD\x12\x0c\n\x04\x64\x61ta\x18\x01 \x03(\r\"J\n\x1b\x43SPKG_DUNGEON_COMBAT_REPORT\x12+\n\x06record\x18\x01 \x03(\x0b\x32\x1b.CSDT_DUNGEON_COMBAT_RECORD\"\x83\x05\n\x16\x43SDT_PLAYER_DUNBALANCE\x12\x30\n\x0bpve_balance\x18\x01 \x01(\x0b\x32\x1b.CSDT_PLAYER_PVE_DUNBALANCE\x12\x38\n\x0f\x65ndless_balance\x18\x02 \x01(\x0b\x32\x1f.CSDT_PLAYER_ENDLESS_DUNBALANCE\x12:\n\x10practice_balance\x18\x03 \x01(\x0b\x32 .CSDT_PLAYER_PRACTICE_DUNBALANCE\x12\x44\n\x15online_battle_balance\x18\x04 \x01(\x0b\x32%.CSDT_PLAYER_ONLINE_BATTLE_DUNBALANCE\x12>\n\x12world_boss_balance\x18\x05 \x01(\x0b\x32\".CSDT_PLAYER_WORLD_BOSS_DUNBALANCE\x12:\n\x10\x62ossrush_balance\x18\x06 \x01(\x0b\x32 .CSDT_PLAYER_BOSSRUSH_DUNBALANCE\x12H\n\x17multiplayer_pve_balance\x18\x07 \x01(\x0b\x32\'.CSDT_PLAYER_MULTIPLAYER_PVE_DUNBALANCE\x12)\n\x05\x62rief\x18\x08 \x01(\x0b\x32\x1a.CSDT_DUNGEON_COMBAT_BRIEF\x12@\n\x13gang_battle_balance\x18\t \x01(\x0b\x32#.CSDT_PLAYER_GANG_BATTLE_DUNBALANCE\x12H\n\x17\x63hampion_league_balance\x18\n \x01(\x0b\x32\'.CSDT_PLAYER_CHAMPION_LEAGUE_DUNBALANCE\"\x8b\x01\n\x1b\x43SPKG_CMD_PLAYER_DUNBALANCE\x12\x10\n\x08\x64un_type\x18\x01 \x01(\r\x12-\n\x0c\x62\x61lance_info\x18\x02 \x01(\x0b\x32\x17.CSDT_PLAYER_DUNBALANCE\x12\x15\n\rchange_reason\x18\x03 \x01(\r\x12\x14\n\x0c\x63hange_param\x18\x04 \x01(\r\"\x9b\x01\n\x1dSCPKG_CMD_PRACTICE_DUNBALANCE\x12\x10\n\x08quest_id\x18\x01 \x01(\r\x12\x0e\n\x06\x64un_id\x18\x02 \x01(\r\x12\x0f\n\x07hero_id\x18\x03 \x01(\r\x12\x12\n\nchapter_id\x18\x04 \x01(\r\x12\x12\n\nsection_id\x18\x05 \x01(\r\x12\x1f\n\x0breward_info\x18\x06 \x03(\x0b\x32\n.ResReward\"\xe8\x01\n#SCPKG_CMD_PLAYER_DUNBALANCE_ENDLESS\x12\x0e\n\x06\x64un_id\x18\x01 \x01(\r\x12\x16\n\x0ereward_crystal\x18\x02 \x01(\r\x12\r\n\x05score\x18\x03 \x01(\r\x12\x0e\n\x06\x66loors\x18\x04 \x01(\r\x12\x16\n\x0ekill_mst_score\x18\x05 \x01(\r\x12\x15\n\roverhit_score\x18\x06 \x01(\r\x12\x12\n\ntime_score\x18\x07 \x01(\r\x12\x13\n\x0bstyle_score\x18\x08 \x01(\r\x12\"\n\tdrop_info\x18\t \x01(\x0b\x32\x0f.CSDT_DROP_INFO\"\xa6\x01\n)SCPKG_CMD_PLAYER_DUNBALANCE_ONLINE_BATTLE\x12\x10\n\x08\x66inished\x18\x01 \x01(\x08\x12\x34\n\x12online_battle_info\x18\x02 \x01(\x0b\x32\x18.CSDT_ONLINE_BATTLE_INFO\x12\x18\n\x10win_point_before\x18\x03 \x01(\r\x12\x17\n\x0fwin_point_after\x18\x04 \x01(\r\"\xac\x04\n\x1bSCPKG_CMD_PLAYER_DUNBALANCE\x12\x0f\n\x07hero_id\x18\x01 \x01(\r\x12\x12\n\nhero_level\x18\x02 \x01(\r\x12\x0e\n\x06\x64un_id\x18\x03 \x01(\r\x12\x10\n\x08\x64un_time\x18\x04 \x01(\r\x12\x14\n\x0c\x64un_evaluate\x18\x05 \x01(\r\x12\x31\n\revaluate_info\x18\x06 \x01(\x0b\x32\x1a.CSDT_CMD_DUN_EVALUATEINFO\x12\x1a\n\x12pick_money_overhit\x18\x07 \x01(\r\x12\x18\n\x10pick_res_overhit\x18\x08 \x01(\r\x12\x1b\n\x13pick_money_kill_mst\x18\t \x01(\r\x12\x19\n\x11pick_res_kill_mst\x18\n \x01(\r\x12\x18\n\x10reward_gold_time\x18\x0b \x01(\r\x12\x1c\n\x14style_reward_crystal\x18\x0c \x01(\r\x12\x13\n\x0breward_gold\x18\r \x01(\r\x12\x16\n\x0ereward_crystal\x18\x0e \x01(\r\x12\x12\n\nreward_exp\x18\x0f \x01(\r\x12\x15\n\runlock_dun_id\x18\x10 \x03(\r\x12.\n\x0f\x64un_unlock_info\x18\x11 \x01(\x0b\x32\x15.CSDT_DUN_UNLOCK_DATA\x12\"\n\tdrop_info\x18\x12 \x01(\x0b\x32\x0f.CSDT_DROP_INFO\x12+\n\x12\x61\x63tivity_drop_info\x18\x13 \x01(\x0b\x32\x0f.CSDT_DROP_INFO\"m\n\x19SCPKG_CMD_PLAYER_ENTERDUN\x12\x0f\n\x07hero_id\x18\x01 \x01(\r\x12\x0e\n\x06\x64un_id\x18\x02 \x01(\r\x12\x0e\n\x06result\x18\x03 \x01(\x05\x12\r\n\x05level\x18\x04 \x01(\r\x12\x10\n\x08\x64un_type\x18\x05 \x01(\r*\xbf\x01\n\x1c\x45NUM_END_STATE_CHANGE_REASON\x12 \n\x1c\x45ND_STATE_CHANGE_REASON_NONE\x10\x00\x12%\n!END_STATE_CHANGE_REASON_HERO_DEAD\x10\x01\x12*\n&END_STATE_CHANGE_REASON_STAGE_FINISHED\x10\x02\x12*\n&END_STATE_CHANGE_REASON_ROUND_FINISHED\x10\x03')
   ,
   dependencies=[rescommon_pb2.DESCRIPTOR,protocommon_pb2.DESCRIPTOR,multiplayer_pb2.DESCRIPTOR,])
 _sym_db.RegisterFileDescriptor(DESCRIPTOR)
@@ -52,8 +52,8 @@ _ENUM_END_STATE_CHANGE_REASON = _descriptor.EnumDescriptor(
   ],
   containing_type=None,
   options=None,
-  serialized_start=6481,
-  serialized_end=6672,
+  serialized_start=6727,
+  serialized_end=6918,
 )
 _sym_db.RegisterEnumDescriptor(_ENUM_END_STATE_CHANGE_REASON)
 
@@ -1921,6 +1921,66 @@ _CSDT_PLAYER_MULTIPLAYER_PVE_DUNBALANCE = _descriptor.Descriptor(
 )
 
 
+_CSDT_PLAYER_CHAMPION_LEAGUE_DUNBALANCE = _descriptor.Descriptor(
+  name='CSDT_PLAYER_CHAMPION_LEAGUE_DUNBALANCE',
+  full_name='CSDT_PLAYER_CHAMPION_LEAGUE_DUNBALANCE',
+  filename=None,
+  file=DESCRIPTOR,
+  containing_type=None,
+  fields=[
+    _descriptor.FieldDescriptor(
+      name='win', full_name='CSDT_PLAYER_CHAMPION_LEAGUE_DUNBALANCE.win', index=0,
+      number=1, type=8, cpp_type=7, label=1,
+      has_default_value=False, default_value=False,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+  ],
+  extensions=[
+  ],
+  nested_types=[],
+  enum_types=[
+  ],
+  options=None,
+  is_extendable=False,
+  extension_ranges=[],
+  oneofs=[
+  ],
+  serialized_start=4426,
+  serialized_end=4479,
+)
+
+
+_CSDT_PLAYER_GANG_BATTLE_DUNBALANCE = _descriptor.Descriptor(
+  name='CSDT_PLAYER_GANG_BATTLE_DUNBALANCE',
+  full_name='CSDT_PLAYER_GANG_BATTLE_DUNBALANCE',
+  filename=None,
+  file=DESCRIPTOR,
+  containing_type=None,
+  fields=[
+    _descriptor.FieldDescriptor(
+      name='win', full_name='CSDT_PLAYER_GANG_BATTLE_DUNBALANCE.win', index=0,
+      number=1, type=8, cpp_type=7, label=1,
+      has_default_value=False, default_value=False,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+  ],
+  extensions=[
+  ],
+  nested_types=[],
+  enum_types=[
+  ],
+  options=None,
+  is_extendable=False,
+  extension_ranges=[],
+  oneofs=[
+  ],
+  serialized_start=4481,
+  serialized_end=4530,
+)
+
+
 _SCPKG_DUNGEON_COMBAT_SWITCH = _descriptor.Descriptor(
   name='SCPKG_DUNGEON_COMBAT_SWITCH',
   full_name='SCPKG_DUNGEON_COMBAT_SWITCH',
@@ -1946,8 +2006,8 @@ _SCPKG_DUNGEON_COMBAT_SWITCH = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=4426,
-  serialized_end=4478,
+  serialized_start=4532,
+  serialized_end=4584,
 )
 
 
@@ -1976,8 +2036,8 @@ _CSDT_DUNGEON_COMBAT_RECORD = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=4480,
-  serialized_end=4522,
+  serialized_start=4586,
+  serialized_end=4628,
 )
 
 
@@ -2006,8 +2066,8 @@ _CSPKG_DUNGEON_COMBAT_REPORT = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=4524,
-  serialized_end=4598,
+  serialized_start=4630,
+  serialized_end=4704,
 )
 
 
@@ -2074,6 +2134,20 @@ _CSDT_PLAYER_DUNBALANCE = _descriptor.Descriptor(
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
+    _descriptor.FieldDescriptor(
+      name='gang_battle_balance', full_name='CSDT_PLAYER_DUNBALANCE.gang_battle_balance', index=8,
+      number=9, type=11, cpp_type=10, label=1,
+      has_default_value=False, default_value=None,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    _descriptor.FieldDescriptor(
+      name='champion_league_balance', full_name='CSDT_PLAYER_DUNBALANCE.champion_league_balance', index=9,
+      number=10, type=11, cpp_type=10, label=1,
+      has_default_value=False, default_value=None,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
   ],
   extensions=[
   ],
@@ -2085,8 +2159,8 @@ _CSDT_PLAYER_DUNBALANCE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=4601,
-  serialized_end=5104,
+  serialized_start=4707,
+  serialized_end=5350,
 )
 
 
@@ -2136,8 +2210,8 @@ _CSPKG_CMD_PLAYER_DUNBALANCE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=5107,
-  serialized_end=5246,
+  serialized_start=5353,
+  serialized_end=5492,
 )
 
 
@@ -2201,8 +2275,8 @@ _SCPKG_CMD_PRACTICE_DUNBALANCE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=5249,
-  serialized_end=5404,
+  serialized_start=5495,
+  serialized_end=5650,
 )
 
 
@@ -2287,8 +2361,8 @@ _SCPKG_CMD_PLAYER_DUNBALANCE_ENDLESS = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=5407,
-  serialized_end=5639,
+  serialized_start=5653,
+  serialized_end=5885,
 )
 
 
@@ -2338,8 +2412,8 @@ _SCPKG_CMD_PLAYER_DUNBALANCE_ONLINE_BATTLE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=5642,
-  serialized_end=5808,
+  serialized_start=5888,
+  serialized_end=6054,
 )
 
 
@@ -2494,8 +2568,8 @@ _SCPKG_CMD_PLAYER_DUNBALANCE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=5811,
-  serialized_end=6367,
+  serialized_start=6057,
+  serialized_end=6613,
 )
 
 
@@ -2552,8 +2626,8 @@ _SCPKG_CMD_PLAYER_ENTERDUN = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=6369,
-  serialized_end=6478,
+  serialized_start=6615,
+  serialized_end=6724,
 )
 
 _CSDT_PVE_CHALLENGE_DATA.fields_by_name['unlock_data'].message_type = _CSDT_DUN_UNLOCK_DATA
@@ -2580,6 +2654,8 @@ _CSDT_PLAYER_DUNBALANCE.fields_by_name['world_boss_balance'].message_type = _CSD
 _CSDT_PLAYER_DUNBALANCE.fields_by_name['bossrush_balance'].message_type = _CSDT_PLAYER_BOSSRUSH_DUNBALANCE
 _CSDT_PLAYER_DUNBALANCE.fields_by_name['multiplayer_pve_balance'].message_type = _CSDT_PLAYER_MULTIPLAYER_PVE_DUNBALANCE
 _CSDT_PLAYER_DUNBALANCE.fields_by_name['brief'].message_type = rescommon_pb2._CSDT_DUNGEON_COMBAT_BRIEF
+_CSDT_PLAYER_DUNBALANCE.fields_by_name['gang_battle_balance'].message_type = _CSDT_PLAYER_GANG_BATTLE_DUNBALANCE
+_CSDT_PLAYER_DUNBALANCE.fields_by_name['champion_league_balance'].message_type = _CSDT_PLAYER_CHAMPION_LEAGUE_DUNBALANCE
 _CSPKG_CMD_PLAYER_DUNBALANCE.fields_by_name['balance_info'].message_type = _CSDT_PLAYER_DUNBALANCE
 _SCPKG_CMD_PRACTICE_DUNBALANCE.fields_by_name['reward_info'].message_type = rescommon_pb2._RESREWARD
 _SCPKG_CMD_PLAYER_DUNBALANCE_ENDLESS.fields_by_name['drop_info'].message_type = protocommon_pb2._CSDT_DROP_INFO
@@ -2627,6 +2703,8 @@ DESCRIPTOR.message_types_by_name['CSDT_PLAYER_PRACTICE_DUNBALANCE'] = _CSDT_PLAY
 DESCRIPTOR.message_types_by_name['CSDT_PLAYER_ONLINE_BATTLE_DUNBALANCE'] = _CSDT_PLAYER_ONLINE_BATTLE_DUNBALANCE
 DESCRIPTOR.message_types_by_name['CSDT_PLAYER_WORLD_BOSS_DUNBALANCE'] = _CSDT_PLAYER_WORLD_BOSS_DUNBALANCE
 DESCRIPTOR.message_types_by_name['CSDT_PLAYER_MULTIPLAYER_PVE_DUNBALANCE'] = _CSDT_PLAYER_MULTIPLAYER_PVE_DUNBALANCE
+DESCRIPTOR.message_types_by_name['CSDT_PLAYER_CHAMPION_LEAGUE_DUNBALANCE'] = _CSDT_PLAYER_CHAMPION_LEAGUE_DUNBALANCE
+DESCRIPTOR.message_types_by_name['CSDT_PLAYER_GANG_BATTLE_DUNBALANCE'] = _CSDT_PLAYER_GANG_BATTLE_DUNBALANCE
 DESCRIPTOR.message_types_by_name['SCPKG_DUNGEON_COMBAT_SWITCH'] = _SCPKG_DUNGEON_COMBAT_SWITCH
 DESCRIPTOR.message_types_by_name['CSDT_DUNGEON_COMBAT_RECORD'] = _CSDT_DUNGEON_COMBAT_RECORD
 DESCRIPTOR.message_types_by_name['CSPKG_DUNGEON_COMBAT_REPORT'] = _CSPKG_DUNGEON_COMBAT_REPORT
@@ -2911,6 +2989,20 @@ CSDT_PLAYER_MULTIPLAYER_PVE_DUNBALANCE = _reflection.GeneratedProtocolMessageTyp
   # @@protoc_insertion_point(class_scope:CSDT_PLAYER_MULTIPLAYER_PVE_DUNBALANCE)
   ))
 _sym_db.RegisterMessage(CSDT_PLAYER_MULTIPLAYER_PVE_DUNBALANCE)
+
+CSDT_PLAYER_CHAMPION_LEAGUE_DUNBALANCE = _reflection.GeneratedProtocolMessageType('CSDT_PLAYER_CHAMPION_LEAGUE_DUNBALANCE', (_message.Message,), dict(
+  DESCRIPTOR = _CSDT_PLAYER_CHAMPION_LEAGUE_DUNBALANCE,
+  __module__ = 'dungeon_pb2'
+  # @@protoc_insertion_point(class_scope:CSDT_PLAYER_CHAMPION_LEAGUE_DUNBALANCE)
+  ))
+_sym_db.RegisterMessage(CSDT_PLAYER_CHAMPION_LEAGUE_DUNBALANCE)
+
+CSDT_PLAYER_GANG_BATTLE_DUNBALANCE = _reflection.GeneratedProtocolMessageType('CSDT_PLAYER_GANG_BATTLE_DUNBALANCE', (_message.Message,), dict(
+  DESCRIPTOR = _CSDT_PLAYER_GANG_BATTLE_DUNBALANCE,
+  __module__ = 'dungeon_pb2'
+  # @@protoc_insertion_point(class_scope:CSDT_PLAYER_GANG_BATTLE_DUNBALANCE)
+  ))
+_sym_db.RegisterMessage(CSDT_PLAYER_GANG_BATTLE_DUNBALANCE)
 
 SCPKG_DUNGEON_COMBAT_SWITCH = _reflection.GeneratedProtocolMessageType('SCPKG_DUNGEON_COMBAT_SWITCH', (_message.Message,), dict(
   DESCRIPTOR = _SCPKG_DUNGEON_COMBAT_SWITCH,

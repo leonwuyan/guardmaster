@@ -19,7 +19,7 @@ _sym_db = _symbol_database.Default()
 DESCRIPTOR = _descriptor.FileDescriptor(
   name='chat.proto',
   package='',
-  serialized_pb=_b('\n\nchat.proto\".\n\x18\x43SPKG_REMOVE_PRIVATE_MSG\x12\x12\n\ntarget_uid\x18\x01 \x01(\r\"K\n\x11\x43SPKG_CMD_CHATMSG\x12\x10\n\x08msg_data\x18\x01 \x01(\t\x12\x10\n\x08msg_type\x18\x02 \x01(\r\x12\x12\n\ntarget_uid\x18\x03 \x01(\r\"\xb9\x01\n\x11SCPKG_CMD_CHATMSG\x12\x14\n\x0c\x66rom_role_id\x18\x01 \x01(\r\x12\x0c\n\x04\x66rom\x18\x02 \x01(\t\x12\x10\n\x08msg_data\x18\x03 \x01(\t\x12\x10\n\x08msg_type\x18\x04 \x01(\r\x12\x10\n\x08msg_time\x18\x05 \x01(\r\x12#\n\x1bsender_cumulate_recharge_id\x18\x06 \x01(\r\x12\x12\n\nto_role_id\x18\x07 \x01(\r\x12\x11\n\tis_system\x18\x08 \x01(\x08\"2\n\x14SCPKG_CHAT_BAN_ERROR\x12\x1a\n\x12left_chat_ban_time\x18\x01 \x01(\r\"*\n\x15SCPKG_CHAT_FAST_ERROR\x12\x11\n\tleft_time\x18\x01 \x01(\r\"/\n\x1c\x43SPKG_REPORT_PLAYER_CHAT_REQ\x12\x0f\n\x07role_id\x18\x01 \x01(\r*\x94\x01\n\x11\x45NUM_CHAT_CHANNEL\x12\x16\n\x12\x43HAT_CHANNEL_WORLD\x10\x01\x12\x15\n\x11\x43HAT_CHANNEL_GANG\x10\x02\x12\x18\n\x14\x43HAT_CHANNEL_PRIVATE\x10\x03\x12 \n\x1c\x43HAT_CHANNEL_MULTIPLAYER_PVE\x10\x04\x12\x14\n\x10\x43HAT_CHANNEL_MAX\x10\x05')
+  serialized_pb=_b('\n\nchat.proto\".\n\x18\x43SPKG_REMOVE_PRIVATE_MSG\x12\x12\n\ntarget_uid\x18\x01 \x01(\r\"\xd7\x01\n\x0cPKG_CHAT_MSG\x12\x10\n\x08msg_data\x18\x01 \x01(\x0c\x12\x10\n\x08msg_type\x18\x02 \x01(\r\x12\x13\n\x0bmsg_channel\x18\x03 \x01(\r\x12\x12\n\ntarget_uid\x18\x04 \x01(\r\x12\x16\n\x0esender_gang_id\x18\x05 \x01(\r\x12\x16\n\x0esender_role_id\x18\x06 \x01(\r\x12\x13\n\x0bsender_name\x18\x07 \x01(\t\x12#\n\x1bsender_cumulate_recharge_id\x18\x08 \x01(\r\x12\x10\n\x08msg_time\x18\t \x01(\r\"G\n\x14SCDT_CHAT_VOICE_DATA\x12\x0f\n\x07\x66ile_id\x18\x01 \x01(\x0c\x12\x0c\n\x04size\x18\x02 \x01(\r\x12\x10\n\x08\x64uration\x18\x03 \x01(\x02\":\n\x16\x43SPKG_CMD_CHAT_MSG_REQ\x12 \n\tchat_info\x18\x01 \x01(\x0b\x32\r.PKG_CHAT_MSG\":\n\x16SCPKG_CMD_CHAT_MSG_RES\x12 \n\tchat_info\x18\x01 \x01(\x0b\x32\r.PKG_CHAT_MSG\"2\n\x14SCPKG_CHAT_BAN_ERROR\x12\x1a\n\x12left_chat_ban_time\x18\x01 \x01(\r\"*\n\x15SCPKG_CHAT_FAST_ERROR\x12\x11\n\tleft_time\x18\x01 \x01(\r\"/\n\x1c\x43SPKG_REPORT_PLAYER_CHAT_REQ\x12\x0f\n\x07role_id\x18\x01 \x01(\r\"K\n\x11\x43SPKG_CMD_CHATMSG\x12\x10\n\x08msg_data\x18\x01 \x01(\t\x12\x10\n\x08msg_type\x18\x02 \x01(\r\x12\x12\n\ntarget_uid\x18\x03 \x01(\r\"\xb9\x01\n\x11SCPKG_CMD_CHATMSG\x12\x14\n\x0c\x66rom_role_id\x18\x01 \x01(\r\x12\x0c\n\x04\x66rom\x18\x02 \x01(\t\x12\x10\n\x08msg_data\x18\x03 \x01(\t\x12\x10\n\x08msg_type\x18\x04 \x01(\r\x12\x10\n\x08msg_time\x18\x05 \x01(\r\x12#\n\x1bsender_cumulate_recharge_id\x18\x06 \x01(\r\x12\x12\n\nto_role_id\x18\x07 \x01(\r\x12\x11\n\tis_system\x18\x08 \x01(\x08\"9\n\x17\x43SPKG_CMD_GANG_CHAT_REQ\x12\x0b\n\x03msg\x18\x01 \x01(\t\x12\x11\n\tis_system\x18\x02 \x01(\x08\"\x9a\x01\n\x17SCPKG_CMD_GANG_CHAT_RES\x12\x11\n\tfrom_name\x18\x01 \x01(\t\x12\x0b\n\x03msg\x18\x02 \x01(\t\x12\x11\n\tsend_time\x18\x03 \x01(\r\x12\x14\n\x0c\x66rom_role_id\x18\x04 \x01(\r\x12#\n\x1bsender_cumulate_recharge_id\x18\x05 \x01(\r\x12\x11\n\tis_system\x18\x06 \x01(\x08*\xab\x01\n\x11\x45NUM_CHAT_CHANNEL\x12\x15\n\x11\x43HAT_CHANNEL_NONE\x10\x00\x12\x16\n\x12\x43HAT_CHANNEL_WORLD\x10\x01\x12\x15\n\x11\x43HAT_CHANNEL_GANG\x10\x02\x12\x18\n\x14\x43HAT_CHANNEL_PRIVATE\x10\x03\x12 \n\x1c\x43HAT_CHANNEL_MULTIPLAYER_PVE\x10\x04\x12\x14\n\x10\x43HAT_CHANNEL_MAX\x10\x05*\x90\x01\n\x0e\x45NUM_CHAT_TYPE\x12\x14\n\x10\x43HAT_TYPE_SYSTEM\x10\x01\x12\x1a\n\x16\x43HAT_TYPE_REPLAY_SHARE\x10\x02\x12\x17\n\x13\x43HAT_TYPE_USER_CHAT\x10\x03\x12\x13\n\x0f\x43HAT_TYPE_VOICE\x10\x04\x12\x1e\n\x11\x43HAT_TYPE_INVALID\x10\xff\xff\xff\xff\xff\xff\xff\xff\xff\x01')
 )
 _sym_db.RegisterFileDescriptor(DESCRIPTOR)
 
@@ -30,39 +30,84 @@ _ENUM_CHAT_CHANNEL = _descriptor.EnumDescriptor(
   file=DESCRIPTOR,
   values=[
     _descriptor.EnumValueDescriptor(
-      name='CHAT_CHANNEL_WORLD', index=0, number=1,
+      name='CHAT_CHANNEL_NONE', index=0, number=0,
       options=None,
       type=None),
     _descriptor.EnumValueDescriptor(
-      name='CHAT_CHANNEL_GANG', index=1, number=2,
+      name='CHAT_CHANNEL_WORLD', index=1, number=1,
       options=None,
       type=None),
     _descriptor.EnumValueDescriptor(
-      name='CHAT_CHANNEL_PRIVATE', index=2, number=3,
+      name='CHAT_CHANNEL_GANG', index=2, number=2,
       options=None,
       type=None),
     _descriptor.EnumValueDescriptor(
-      name='CHAT_CHANNEL_MULTIPLAYER_PVE', index=3, number=4,
+      name='CHAT_CHANNEL_PRIVATE', index=3, number=3,
       options=None,
       type=None),
     _descriptor.EnumValueDescriptor(
-      name='CHAT_CHANNEL_MAX', index=4, number=5,
+      name='CHAT_CHANNEL_MULTIPLAYER_PVE', index=4, number=4,
+      options=None,
+      type=None),
+    _descriptor.EnumValueDescriptor(
+      name='CHAT_CHANNEL_MAX', index=5, number=5,
       options=None,
       type=None),
   ],
   containing_type=None,
   options=None,
-  serialized_start=473,
-  serialized_end=621,
+  serialized_start=1100,
+  serialized_end=1271,
 )
 _sym_db.RegisterEnumDescriptor(_ENUM_CHAT_CHANNEL)
 
 ENUM_CHAT_CHANNEL = enum_type_wrapper.EnumTypeWrapper(_ENUM_CHAT_CHANNEL)
+_ENUM_CHAT_TYPE = _descriptor.EnumDescriptor(
+  name='ENUM_CHAT_TYPE',
+  full_name='ENUM_CHAT_TYPE',
+  filename=None,
+  file=DESCRIPTOR,
+  values=[
+    _descriptor.EnumValueDescriptor(
+      name='CHAT_TYPE_SYSTEM', index=0, number=1,
+      options=None,
+      type=None),
+    _descriptor.EnumValueDescriptor(
+      name='CHAT_TYPE_REPLAY_SHARE', index=1, number=2,
+      options=None,
+      type=None),
+    _descriptor.EnumValueDescriptor(
+      name='CHAT_TYPE_USER_CHAT', index=2, number=3,
+      options=None,
+      type=None),
+    _descriptor.EnumValueDescriptor(
+      name='CHAT_TYPE_VOICE', index=3, number=4,
+      options=None,
+      type=None),
+    _descriptor.EnumValueDescriptor(
+      name='CHAT_TYPE_INVALID', index=4, number=-1,
+      options=None,
+      type=None),
+  ],
+  containing_type=None,
+  options=None,
+  serialized_start=1274,
+  serialized_end=1418,
+)
+_sym_db.RegisterEnumDescriptor(_ENUM_CHAT_TYPE)
+
+ENUM_CHAT_TYPE = enum_type_wrapper.EnumTypeWrapper(_ENUM_CHAT_TYPE)
+CHAT_CHANNEL_NONE = 0
 CHAT_CHANNEL_WORLD = 1
 CHAT_CHANNEL_GANG = 2
 CHAT_CHANNEL_PRIVATE = 3
 CHAT_CHANNEL_MULTIPLAYER_PVE = 4
 CHAT_CHANNEL_MAX = 5
+CHAT_TYPE_SYSTEM = 1
+CHAT_TYPE_REPLAY_SHARE = 2
+CHAT_TYPE_USER_CHAT = 3
+CHAT_TYPE_VOICE = 4
+CHAT_TYPE_INVALID = -1
 
 
 
@@ -93,6 +138,286 @@ _CSPKG_REMOVE_PRIVATE_MSG = _descriptor.Descriptor(
   ],
   serialized_start=14,
   serialized_end=60,
+)
+
+
+_PKG_CHAT_MSG = _descriptor.Descriptor(
+  name='PKG_CHAT_MSG',
+  full_name='PKG_CHAT_MSG',
+  filename=None,
+  file=DESCRIPTOR,
+  containing_type=None,
+  fields=[
+    _descriptor.FieldDescriptor(
+      name='msg_data', full_name='PKG_CHAT_MSG.msg_data', index=0,
+      number=1, type=12, cpp_type=9, label=1,
+      has_default_value=False, default_value=_b(""),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    _descriptor.FieldDescriptor(
+      name='msg_type', full_name='PKG_CHAT_MSG.msg_type', index=1,
+      number=2, type=13, cpp_type=3, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    _descriptor.FieldDescriptor(
+      name='msg_channel', full_name='PKG_CHAT_MSG.msg_channel', index=2,
+      number=3, type=13, cpp_type=3, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    _descriptor.FieldDescriptor(
+      name='target_uid', full_name='PKG_CHAT_MSG.target_uid', index=3,
+      number=4, type=13, cpp_type=3, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    _descriptor.FieldDescriptor(
+      name='sender_gang_id', full_name='PKG_CHAT_MSG.sender_gang_id', index=4,
+      number=5, type=13, cpp_type=3, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    _descriptor.FieldDescriptor(
+      name='sender_role_id', full_name='PKG_CHAT_MSG.sender_role_id', index=5,
+      number=6, type=13, cpp_type=3, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    _descriptor.FieldDescriptor(
+      name='sender_name', full_name='PKG_CHAT_MSG.sender_name', index=6,
+      number=7, type=9, cpp_type=9, label=1,
+      has_default_value=False, default_value=_b("").decode('utf-8'),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    _descriptor.FieldDescriptor(
+      name='sender_cumulate_recharge_id', full_name='PKG_CHAT_MSG.sender_cumulate_recharge_id', index=7,
+      number=8, type=13, cpp_type=3, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    _descriptor.FieldDescriptor(
+      name='msg_time', full_name='PKG_CHAT_MSG.msg_time', index=8,
+      number=9, type=13, cpp_type=3, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+  ],
+  extensions=[
+  ],
+  nested_types=[],
+  enum_types=[
+  ],
+  options=None,
+  is_extendable=False,
+  extension_ranges=[],
+  oneofs=[
+  ],
+  serialized_start=63,
+  serialized_end=278,
+)
+
+
+_SCDT_CHAT_VOICE_DATA = _descriptor.Descriptor(
+  name='SCDT_CHAT_VOICE_DATA',
+  full_name='SCDT_CHAT_VOICE_DATA',
+  filename=None,
+  file=DESCRIPTOR,
+  containing_type=None,
+  fields=[
+    _descriptor.FieldDescriptor(
+      name='file_id', full_name='SCDT_CHAT_VOICE_DATA.file_id', index=0,
+      number=1, type=12, cpp_type=9, label=1,
+      has_default_value=False, default_value=_b(""),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    _descriptor.FieldDescriptor(
+      name='size', full_name='SCDT_CHAT_VOICE_DATA.size', index=1,
+      number=2, type=13, cpp_type=3, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    _descriptor.FieldDescriptor(
+      name='duration', full_name='SCDT_CHAT_VOICE_DATA.duration', index=2,
+      number=3, type=2, cpp_type=6, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+  ],
+  extensions=[
+  ],
+  nested_types=[],
+  enum_types=[
+  ],
+  options=None,
+  is_extendable=False,
+  extension_ranges=[],
+  oneofs=[
+  ],
+  serialized_start=280,
+  serialized_end=351,
+)
+
+
+_CSPKG_CMD_CHAT_MSG_REQ = _descriptor.Descriptor(
+  name='CSPKG_CMD_CHAT_MSG_REQ',
+  full_name='CSPKG_CMD_CHAT_MSG_REQ',
+  filename=None,
+  file=DESCRIPTOR,
+  containing_type=None,
+  fields=[
+    _descriptor.FieldDescriptor(
+      name='chat_info', full_name='CSPKG_CMD_CHAT_MSG_REQ.chat_info', index=0,
+      number=1, type=11, cpp_type=10, label=1,
+      has_default_value=False, default_value=None,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+  ],
+  extensions=[
+  ],
+  nested_types=[],
+  enum_types=[
+  ],
+  options=None,
+  is_extendable=False,
+  extension_ranges=[],
+  oneofs=[
+  ],
+  serialized_start=353,
+  serialized_end=411,
+)
+
+
+_SCPKG_CMD_CHAT_MSG_RES = _descriptor.Descriptor(
+  name='SCPKG_CMD_CHAT_MSG_RES',
+  full_name='SCPKG_CMD_CHAT_MSG_RES',
+  filename=None,
+  file=DESCRIPTOR,
+  containing_type=None,
+  fields=[
+    _descriptor.FieldDescriptor(
+      name='chat_info', full_name='SCPKG_CMD_CHAT_MSG_RES.chat_info', index=0,
+      number=1, type=11, cpp_type=10, label=1,
+      has_default_value=False, default_value=None,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+  ],
+  extensions=[
+  ],
+  nested_types=[],
+  enum_types=[
+  ],
+  options=None,
+  is_extendable=False,
+  extension_ranges=[],
+  oneofs=[
+  ],
+  serialized_start=413,
+  serialized_end=471,
+)
+
+
+_SCPKG_CHAT_BAN_ERROR = _descriptor.Descriptor(
+  name='SCPKG_CHAT_BAN_ERROR',
+  full_name='SCPKG_CHAT_BAN_ERROR',
+  filename=None,
+  file=DESCRIPTOR,
+  containing_type=None,
+  fields=[
+    _descriptor.FieldDescriptor(
+      name='left_chat_ban_time', full_name='SCPKG_CHAT_BAN_ERROR.left_chat_ban_time', index=0,
+      number=1, type=13, cpp_type=3, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+  ],
+  extensions=[
+  ],
+  nested_types=[],
+  enum_types=[
+  ],
+  options=None,
+  is_extendable=False,
+  extension_ranges=[],
+  oneofs=[
+  ],
+  serialized_start=473,
+  serialized_end=523,
+)
+
+
+_SCPKG_CHAT_FAST_ERROR = _descriptor.Descriptor(
+  name='SCPKG_CHAT_FAST_ERROR',
+  full_name='SCPKG_CHAT_FAST_ERROR',
+  filename=None,
+  file=DESCRIPTOR,
+  containing_type=None,
+  fields=[
+    _descriptor.FieldDescriptor(
+      name='left_time', full_name='SCPKG_CHAT_FAST_ERROR.left_time', index=0,
+      number=1, type=13, cpp_type=3, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+  ],
+  extensions=[
+  ],
+  nested_types=[],
+  enum_types=[
+  ],
+  options=None,
+  is_extendable=False,
+  extension_ranges=[],
+  oneofs=[
+  ],
+  serialized_start=525,
+  serialized_end=567,
+)
+
+
+_CSPKG_REPORT_PLAYER_CHAT_REQ = _descriptor.Descriptor(
+  name='CSPKG_REPORT_PLAYER_CHAT_REQ',
+  full_name='CSPKG_REPORT_PLAYER_CHAT_REQ',
+  filename=None,
+  file=DESCRIPTOR,
+  containing_type=None,
+  fields=[
+    _descriptor.FieldDescriptor(
+      name='role_id', full_name='CSPKG_REPORT_PLAYER_CHAT_REQ.role_id', index=0,
+      number=1, type=13, cpp_type=3, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+  ],
+  extensions=[
+  ],
+  nested_types=[],
+  enum_types=[
+  ],
+  options=None,
+  is_extendable=False,
+  extension_ranges=[],
+  oneofs=[
+  ],
+  serialized_start=569,
+  serialized_end=616,
 )
 
 
@@ -135,8 +460,8 @@ _CSPKG_CMD_CHATMSG = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=62,
-  serialized_end=137,
+  serialized_start=618,
+  serialized_end=693,
 )
 
 
@@ -214,22 +539,29 @@ _SCPKG_CMD_CHATMSG = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=140,
-  serialized_end=325,
+  serialized_start=696,
+  serialized_end=881,
 )
 
 
-_SCPKG_CHAT_BAN_ERROR = _descriptor.Descriptor(
-  name='SCPKG_CHAT_BAN_ERROR',
-  full_name='SCPKG_CHAT_BAN_ERROR',
+_CSPKG_CMD_GANG_CHAT_REQ = _descriptor.Descriptor(
+  name='CSPKG_CMD_GANG_CHAT_REQ',
+  full_name='CSPKG_CMD_GANG_CHAT_REQ',
   filename=None,
   file=DESCRIPTOR,
   containing_type=None,
   fields=[
     _descriptor.FieldDescriptor(
-      name='left_chat_ban_time', full_name='SCPKG_CHAT_BAN_ERROR.left_chat_ban_time', index=0,
-      number=1, type=13, cpp_type=3, label=1,
-      has_default_value=False, default_value=0,
+      name='msg', full_name='CSPKG_CMD_GANG_CHAT_REQ.msg', index=0,
+      number=1, type=9, cpp_type=9, label=1,
+      has_default_value=False, default_value=_b("").decode('utf-8'),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    _descriptor.FieldDescriptor(
+      name='is_system', full_name='CSPKG_CMD_GANG_CHAT_REQ.is_system', index=1,
+      number=2, type=8, cpp_type=7, label=1,
+      has_default_value=False, default_value=False,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
@@ -244,22 +576,57 @@ _SCPKG_CHAT_BAN_ERROR = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=327,
-  serialized_end=377,
+  serialized_start=883,
+  serialized_end=940,
 )
 
 
-_SCPKG_CHAT_FAST_ERROR = _descriptor.Descriptor(
-  name='SCPKG_CHAT_FAST_ERROR',
-  full_name='SCPKG_CHAT_FAST_ERROR',
+_SCPKG_CMD_GANG_CHAT_RES = _descriptor.Descriptor(
+  name='SCPKG_CMD_GANG_CHAT_RES',
+  full_name='SCPKG_CMD_GANG_CHAT_RES',
   filename=None,
   file=DESCRIPTOR,
   containing_type=None,
   fields=[
     _descriptor.FieldDescriptor(
-      name='left_time', full_name='SCPKG_CHAT_FAST_ERROR.left_time', index=0,
-      number=1, type=13, cpp_type=3, label=1,
+      name='from_name', full_name='SCPKG_CMD_GANG_CHAT_RES.from_name', index=0,
+      number=1, type=9, cpp_type=9, label=1,
+      has_default_value=False, default_value=_b("").decode('utf-8'),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    _descriptor.FieldDescriptor(
+      name='msg', full_name='SCPKG_CMD_GANG_CHAT_RES.msg', index=1,
+      number=2, type=9, cpp_type=9, label=1,
+      has_default_value=False, default_value=_b("").decode('utf-8'),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    _descriptor.FieldDescriptor(
+      name='send_time', full_name='SCPKG_CMD_GANG_CHAT_RES.send_time', index=2,
+      number=3, type=13, cpp_type=3, label=1,
       has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    _descriptor.FieldDescriptor(
+      name='from_role_id', full_name='SCPKG_CMD_GANG_CHAT_RES.from_role_id', index=3,
+      number=4, type=13, cpp_type=3, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    _descriptor.FieldDescriptor(
+      name='sender_cumulate_recharge_id', full_name='SCPKG_CMD_GANG_CHAT_RES.sender_cumulate_recharge_id', index=4,
+      number=5, type=13, cpp_type=3, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    _descriptor.FieldDescriptor(
+      name='is_system', full_name='SCPKG_CMD_GANG_CHAT_RES.is_system', index=5,
+      number=6, type=8, cpp_type=7, label=1,
+      has_default_value=False, default_value=False,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
@@ -274,47 +641,26 @@ _SCPKG_CHAT_FAST_ERROR = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=379,
-  serialized_end=421,
+  serialized_start=943,
+  serialized_end=1097,
 )
 
-
-_CSPKG_REPORT_PLAYER_CHAT_REQ = _descriptor.Descriptor(
-  name='CSPKG_REPORT_PLAYER_CHAT_REQ',
-  full_name='CSPKG_REPORT_PLAYER_CHAT_REQ',
-  filename=None,
-  file=DESCRIPTOR,
-  containing_type=None,
-  fields=[
-    _descriptor.FieldDescriptor(
-      name='role_id', full_name='CSPKG_REPORT_PLAYER_CHAT_REQ.role_id', index=0,
-      number=1, type=13, cpp_type=3, label=1,
-      has_default_value=False, default_value=0,
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      options=None),
-  ],
-  extensions=[
-  ],
-  nested_types=[],
-  enum_types=[
-  ],
-  options=None,
-  is_extendable=False,
-  extension_ranges=[],
-  oneofs=[
-  ],
-  serialized_start=423,
-  serialized_end=470,
-)
-
+_CSPKG_CMD_CHAT_MSG_REQ.fields_by_name['chat_info'].message_type = _PKG_CHAT_MSG
+_SCPKG_CMD_CHAT_MSG_RES.fields_by_name['chat_info'].message_type = _PKG_CHAT_MSG
 DESCRIPTOR.message_types_by_name['CSPKG_REMOVE_PRIVATE_MSG'] = _CSPKG_REMOVE_PRIVATE_MSG
-DESCRIPTOR.message_types_by_name['CSPKG_CMD_CHATMSG'] = _CSPKG_CMD_CHATMSG
-DESCRIPTOR.message_types_by_name['SCPKG_CMD_CHATMSG'] = _SCPKG_CMD_CHATMSG
+DESCRIPTOR.message_types_by_name['PKG_CHAT_MSG'] = _PKG_CHAT_MSG
+DESCRIPTOR.message_types_by_name['SCDT_CHAT_VOICE_DATA'] = _SCDT_CHAT_VOICE_DATA
+DESCRIPTOR.message_types_by_name['CSPKG_CMD_CHAT_MSG_REQ'] = _CSPKG_CMD_CHAT_MSG_REQ
+DESCRIPTOR.message_types_by_name['SCPKG_CMD_CHAT_MSG_RES'] = _SCPKG_CMD_CHAT_MSG_RES
 DESCRIPTOR.message_types_by_name['SCPKG_CHAT_BAN_ERROR'] = _SCPKG_CHAT_BAN_ERROR
 DESCRIPTOR.message_types_by_name['SCPKG_CHAT_FAST_ERROR'] = _SCPKG_CHAT_FAST_ERROR
 DESCRIPTOR.message_types_by_name['CSPKG_REPORT_PLAYER_CHAT_REQ'] = _CSPKG_REPORT_PLAYER_CHAT_REQ
+DESCRIPTOR.message_types_by_name['CSPKG_CMD_CHATMSG'] = _CSPKG_CMD_CHATMSG
+DESCRIPTOR.message_types_by_name['SCPKG_CMD_CHATMSG'] = _SCPKG_CMD_CHATMSG
+DESCRIPTOR.message_types_by_name['CSPKG_CMD_GANG_CHAT_REQ'] = _CSPKG_CMD_GANG_CHAT_REQ
+DESCRIPTOR.message_types_by_name['SCPKG_CMD_GANG_CHAT_RES'] = _SCPKG_CMD_GANG_CHAT_RES
 DESCRIPTOR.enum_types_by_name['ENUM_CHAT_CHANNEL'] = _ENUM_CHAT_CHANNEL
+DESCRIPTOR.enum_types_by_name['ENUM_CHAT_TYPE'] = _ENUM_CHAT_TYPE
 
 CSPKG_REMOVE_PRIVATE_MSG = _reflection.GeneratedProtocolMessageType('CSPKG_REMOVE_PRIVATE_MSG', (_message.Message,), dict(
   DESCRIPTOR = _CSPKG_REMOVE_PRIVATE_MSG,
@@ -323,19 +669,33 @@ CSPKG_REMOVE_PRIVATE_MSG = _reflection.GeneratedProtocolMessageType('CSPKG_REMOV
   ))
 _sym_db.RegisterMessage(CSPKG_REMOVE_PRIVATE_MSG)
 
-CSPKG_CMD_CHATMSG = _reflection.GeneratedProtocolMessageType('CSPKG_CMD_CHATMSG', (_message.Message,), dict(
-  DESCRIPTOR = _CSPKG_CMD_CHATMSG,
+PKG_CHAT_MSG = _reflection.GeneratedProtocolMessageType('PKG_CHAT_MSG', (_message.Message,), dict(
+  DESCRIPTOR = _PKG_CHAT_MSG,
   __module__ = 'chat_pb2'
-  # @@protoc_insertion_point(class_scope:CSPKG_CMD_CHATMSG)
+  # @@protoc_insertion_point(class_scope:PKG_CHAT_MSG)
   ))
-_sym_db.RegisterMessage(CSPKG_CMD_CHATMSG)
+_sym_db.RegisterMessage(PKG_CHAT_MSG)
 
-SCPKG_CMD_CHATMSG = _reflection.GeneratedProtocolMessageType('SCPKG_CMD_CHATMSG', (_message.Message,), dict(
-  DESCRIPTOR = _SCPKG_CMD_CHATMSG,
+SCDT_CHAT_VOICE_DATA = _reflection.GeneratedProtocolMessageType('SCDT_CHAT_VOICE_DATA', (_message.Message,), dict(
+  DESCRIPTOR = _SCDT_CHAT_VOICE_DATA,
   __module__ = 'chat_pb2'
-  # @@protoc_insertion_point(class_scope:SCPKG_CMD_CHATMSG)
+  # @@protoc_insertion_point(class_scope:SCDT_CHAT_VOICE_DATA)
   ))
-_sym_db.RegisterMessage(SCPKG_CMD_CHATMSG)
+_sym_db.RegisterMessage(SCDT_CHAT_VOICE_DATA)
+
+CSPKG_CMD_CHAT_MSG_REQ = _reflection.GeneratedProtocolMessageType('CSPKG_CMD_CHAT_MSG_REQ', (_message.Message,), dict(
+  DESCRIPTOR = _CSPKG_CMD_CHAT_MSG_REQ,
+  __module__ = 'chat_pb2'
+  # @@protoc_insertion_point(class_scope:CSPKG_CMD_CHAT_MSG_REQ)
+  ))
+_sym_db.RegisterMessage(CSPKG_CMD_CHAT_MSG_REQ)
+
+SCPKG_CMD_CHAT_MSG_RES = _reflection.GeneratedProtocolMessageType('SCPKG_CMD_CHAT_MSG_RES', (_message.Message,), dict(
+  DESCRIPTOR = _SCPKG_CMD_CHAT_MSG_RES,
+  __module__ = 'chat_pb2'
+  # @@protoc_insertion_point(class_scope:SCPKG_CMD_CHAT_MSG_RES)
+  ))
+_sym_db.RegisterMessage(SCPKG_CMD_CHAT_MSG_RES)
 
 SCPKG_CHAT_BAN_ERROR = _reflection.GeneratedProtocolMessageType('SCPKG_CHAT_BAN_ERROR', (_message.Message,), dict(
   DESCRIPTOR = _SCPKG_CHAT_BAN_ERROR,
@@ -357,6 +717,34 @@ CSPKG_REPORT_PLAYER_CHAT_REQ = _reflection.GeneratedProtocolMessageType('CSPKG_R
   # @@protoc_insertion_point(class_scope:CSPKG_REPORT_PLAYER_CHAT_REQ)
   ))
 _sym_db.RegisterMessage(CSPKG_REPORT_PLAYER_CHAT_REQ)
+
+CSPKG_CMD_CHATMSG = _reflection.GeneratedProtocolMessageType('CSPKG_CMD_CHATMSG', (_message.Message,), dict(
+  DESCRIPTOR = _CSPKG_CMD_CHATMSG,
+  __module__ = 'chat_pb2'
+  # @@protoc_insertion_point(class_scope:CSPKG_CMD_CHATMSG)
+  ))
+_sym_db.RegisterMessage(CSPKG_CMD_CHATMSG)
+
+SCPKG_CMD_CHATMSG = _reflection.GeneratedProtocolMessageType('SCPKG_CMD_CHATMSG', (_message.Message,), dict(
+  DESCRIPTOR = _SCPKG_CMD_CHATMSG,
+  __module__ = 'chat_pb2'
+  # @@protoc_insertion_point(class_scope:SCPKG_CMD_CHATMSG)
+  ))
+_sym_db.RegisterMessage(SCPKG_CMD_CHATMSG)
+
+CSPKG_CMD_GANG_CHAT_REQ = _reflection.GeneratedProtocolMessageType('CSPKG_CMD_GANG_CHAT_REQ', (_message.Message,), dict(
+  DESCRIPTOR = _CSPKG_CMD_GANG_CHAT_REQ,
+  __module__ = 'chat_pb2'
+  # @@protoc_insertion_point(class_scope:CSPKG_CMD_GANG_CHAT_REQ)
+  ))
+_sym_db.RegisterMessage(CSPKG_CMD_GANG_CHAT_REQ)
+
+SCPKG_CMD_GANG_CHAT_RES = _reflection.GeneratedProtocolMessageType('SCPKG_CMD_GANG_CHAT_RES', (_message.Message,), dict(
+  DESCRIPTOR = _SCPKG_CMD_GANG_CHAT_RES,
+  __module__ = 'chat_pb2'
+  # @@protoc_insertion_point(class_scope:SCPKG_CMD_GANG_CHAT_RES)
+  ))
+_sym_db.RegisterMessage(SCPKG_CMD_GANG_CHAT_RES)
 
 
 # @@protoc_insertion_point(module_scope)
