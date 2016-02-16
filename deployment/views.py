@@ -185,7 +185,7 @@ def control(request, panel_id, url):
     else:
         d['servers'] = filter(lambda x: x.server_type == 'all', tmp)
     d['ciwps'] = panel.ciwp_set.all()
-    d['servercontrolworkorders'] = panel.servercontrolworkorder_set.all()[:20]
+    d['servercontrolworkorders'] = panel.servercontrolworkorder_set.all()[:200]
     d['sco'] = panel.serverconfigorder_set.all()
     if request.method == 'POST':
         server_id = int(request.POST['server'])
