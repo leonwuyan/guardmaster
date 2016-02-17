@@ -138,11 +138,9 @@
       <div class="form-group">
         <label>{{ t_channel }}</label>&emsp;
           {% for channel in channels %}
-          {% if channel.EnumCd != '0' %}
           <label class="checkbox-inline">
             <input type="checkbox" id="channel-{{channel.EnumCd}}" value="{{channel.EnumCd}}" name="channel" {% if channel.EnumCd|list_find:notify.channel %} checked{% endif %}> {{channel.EnumDes}}
           </label>
-          {% endif %}
           {% endfor %}
       </div>
       <div class="form-group">
@@ -172,7 +170,7 @@
           <div class="col-md-8">
             <div class="input-group">
               <span class="input-group-addon" id="version-addon">{{t_version}}</span>
-              <input type="text" class="form-control" value="{{ notify.version|default:'1.1.0.0'}}" aria-describedby="version-addon" name="version">
+              <input type="text" class="form-control" value="{{ notify.version|default:'.*'}}" aria-describedby="version-addon" name="version">
             </div>
           </div>
         </div>
