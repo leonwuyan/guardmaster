@@ -22,6 +22,7 @@
 {% trans "Seq ID" as t_seqid %}
 {% trans "Other Options" as t_other_options %}
 {% trans "Add" as t_add %}
+{% trans "View" as t_view %}
 {% trans "Success" as t_success %}
 {% trans "Please Check The Notify Info" as t_p_c_t_n_i %}
 {% trans "Fail" as t_fail %}
@@ -35,6 +36,9 @@
 {% trans "Attention" as t_attention %}
 {% trans "Please Edit The Notify" as t_p_e_t_n %}
 {% trans "Back" as t_back %}
+    <style>
+    .bgblack{background: #000000};
+    </style>
 <script type="text/javascript">
  $(document).ready(function() {
    $('.input-datepicker > input').datetimepicker({
@@ -46,6 +50,20 @@
     pickerPosition: "bottom-left"
   });
  });
+
+function viewpre()
+{
+    var viewcontent = $('#content').val();
+    //$('#viewfrom').show().html(content);
+    layer.open({
+        title: '预览效果',
+        type:1,
+        area:['460px','320px'],
+        skin: 'bgblack',
+        shadeClose: true,
+        content: viewcontent
+    })
+}
 </script>
 <div class="container-fluid white-bg">
   <div class="row">
@@ -181,6 +199,7 @@
       {% else %}
       <button type="submit" class="btn btn-primary btn-sm">{{ t_add }}</button>
       {% endif %}
+      <button type="button" class="btn btn-primary btn-sm" onclick="viewpre()">{{ t_view }}</button>
       &emsp;<span class="text-success">{{ t_a_r_e_n_w_s }}</span>
     </form>
   {% if not notify %}
@@ -245,6 +264,7 @@
   </div>
   <center style='color: #999; padding-top: 20px; font-family: "arial","NSimSun","SimSun","STSong","AR PL SungtiL GB","TW\-Sung","WenQuanYi Bitmap Song"; font-size: 14px; font-weight: bold;'>{{excuse}}</center>
 </div>
+    <div id="viewfrom" style="display: none; position: absolute; top:0px; right: 50px; width: 440px; background: #000; text-indent: 10px;"></div>
 <script type="text/javascript">
  $(document).ready(function() {
   management.numberOnly("input[name='seqid']");
