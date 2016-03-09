@@ -712,3 +712,38 @@ class Tabel(object):
             'vals': vals,
         }
         ret = self.insert(panel, condition)
+
+    @classmethod
+    def get_recharge_rank(self, sub_menu, panel, request_get):
+        condition = ()
+        if 'start' in request_get:
+            r = "StDate >= '" + request_get.get('start') + "'"
+            condition = condition + (r,)
+        if 'end' in request_get:
+            r = "StDate <= '" + request_get.get('end') + " 24:00:00'"
+            condition = condition + (r,)
+        if 'zone_id[]' in request_get:
+            r = ",".join(request_get.getlist('zone_id[]'))
+            if r != '0':
+                r = "ZoneID IN (" + r + ")"
+                condition = condition + (r,)
+        if 'channel_id[]' in request_get:
+            r = ",".join(request_get.getlist('channel_id[]'))
+            if r != '0':
+                r = "ChannelID IN (" + r + ")"
+                condition = condition + (r,)
+        if len(condition) > 0:
+            condition = " AND ".join(condition)
+        if condition:
+            sql = "SELECT @RowNum:=@RowNum+1  as Rank, A.UID,A.Uin,A.`NAME`, ChannelID,ZoneID,A.amount,date(B.CreateTime)as createTime,date(A.minDealTime)as minDealTime,date(A.maxDealTime)as maxDealTime,B.LastLeaveTime FROM " \
+              "(select ChannelID,ZoneID,UID,NAME,Uin,Min(CreateTime) as minDealTime,Max(CreateTime) as maxDealTime,sum(money) as amount from tbDeal_total WHERE " + condition + " group by UID) A," \
+              " tbRole_total B,( select @RowNum:=0) c WHERE A.UID=B.UID order by amount desc"
+        else:
+            sql = "SELECT @RowNum:=@RowNum+1  as Rank, A.UID,A.Uin,A.`NAME`, ChannelID,ZoneID,A.amount,date(B.CreateTime)as createTime,date(A.minDealTime)as minDealTime,date(A.maxDealTime)as maxDealTime,B.LastLeaveTime FROM " \
+              "(select ChannelID,ZoneID,UID,NAME,Uin,Min(CreateTime) as minDealTime,Max(CreateTime) as maxDealTime,sum(money) as amount from tbDeal_total group by UID) A," \
+              " tbRole_total B,( select @RowNum:=0) c WHERE A.UID=B.UID order by amount DESC "
+        cursor = connections[panel.db_aliases].cursor()
+        logger = logging.getLogger(__name__)
+        logger.info(sql)
+        cursor.execute(sql)
+        return cursor.fetchall()

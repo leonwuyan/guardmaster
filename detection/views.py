@@ -9,6 +9,7 @@ import json
 import decimal
 import logging
 import time
+import MySQLdb
 
 
 def view_init():
@@ -182,7 +183,10 @@ def json_template(request, panel_id, t_p, url=Common.URL):
     vf = ValueFormat(sub_menu.get_col_map_vals('col_type'), panel_id)
     ret = None
     if t_p == 'count':
-        ret = Tabel.count_select(sub_menu, panel, request.GET)
+        if url == 'RechargeRank':
+            ret = Tabel.get_recharge_rank(sub_menu, panel, request.GET)
+        else:
+            ret = Tabel.count_select(sub_menu, panel, request.GET)
     if t_p == 'count_without_time':
         ret = Tabel.count_without_time_select(sub_menu, panel, request.GET)
     if t_p == 'count_only_time':
